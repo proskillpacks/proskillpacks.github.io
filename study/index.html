@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>State of Agent-Ready Shopify</title>
+<meta name="description" content="How well can AI shopping agents find, read and buy from Shopify stores? Aggregate results from an audit of a sample of Shopify stores.">
+<!--
+  TEMPLATE. Contains no numbers. Every figure is read from the study.json block below.
+  Build the published page with:
+    python3 gtm/study/launch/render_report.py gtm/study/launch/study.json > report-published.html
+  (or serve this file next to study.json; it fetches ./study.json if the block is empty).
+  No external JS. Inline JS only renders numbers from the data; nulls show as "not measurable".
+-->
+<style>
+:root{--bg:#fbfaf7;--surface:#fff;--ink:#15201b;--muted:#56635c;--line:#e3e0d8;--brand:#0f3d2e;--brand-ink:#fff;
+  --accent:#d9f26b;--bar:#0f3d2e;--bar2:#9fb8ab;--warn:#d9a441;--fail:#c4553f;--soft:#eef3ea;--radius:14px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1512;--surface:#161e1a;--ink:#e9efe9;--muted:#a3b1a9;
+  --line:#2a3530;--brand:#cdeb5a;--brand-ink:#0f1512;--accent:#cdeb5a;--bar:#cdeb5a;--bar2:#5d7468;--soft:#1b2621}}
+:root[data-theme="dark"]{--bg:#0f1512;--surface:#161e1a;--ink:#e9efe9;--muted:#a3b1a9;--line:#2a3530;--brand:#cdeb5a;
+  --brand-ink:#0f1512;--accent:#cdeb5a;--bar:#cdeb5a;--bar2:#5d7468;--soft:#1b2621}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+header.wrap{padding:48px 16px 24px}
+.brandline{display:flex;align-items:center;gap:8px}
+.eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(2rem,7vw,3rem);line-height:1.1;letter-spacing:-.02em;margin:.3em 0 .4em}
+h2{font-size:clamp(1.4rem,4.5vw,1.8rem);line-height:1.2;margin:0 0 .4em;letter-spacing:-.01em}
+p{margin:0 0 1em}.muted{color:var(--muted)}
+section{padding:36px 0;border-top:1px solid var(--line)}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.kpi b{display:block;font-size:2rem;line-height:1.1;letter-spacing:-.02em}
+.kpi span{color:var(--muted);font-size:.9rem}
+.chart{display:grid;gap:10px;margin:16px 0}
+.row{display:grid;grid-template-columns:1fr auto;gap:4px 10px;align-items:center}
+.row .lbl{font-size:.95rem}
+.row .val{font-weight:700;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.row .track{grid-column:1/-1}
+.track{height:14px;background:var(--soft);border-radius:999px;overflow:hidden;display:flex}
+.fill{height:100%;background:var(--bar)}
+.fill.warn{background:var(--warn)}.fill.fail{background:var(--fail)}.fill.na{background:var(--bar2)}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:.85rem;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:middle}
+.why{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-top:12px;font-size:.95rem}
+.pending{background:var(--soft);border-radius:var(--radius);padding:16px;font-weight:600}
+.cta{background:var(--brand);color:var(--brand-ink);border-radius:20px;padding:28px 20px;margin:12px 0 48px}
+.cta a.btn{display:inline-block;background:var(--accent);color:#15201b;font-weight:750;text-decoration:none;border-radius:12px;padding:12px 18px;margin-top:8px}
+footer.wrap{padding:24px 16px 48px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+ol li,ul li{margin:.35em 0}
+@media (min-width:720px){.kpis{grid-template-columns:repeat(4,1fr)}.row{grid-template-columns:250px 84px 1fr}.row .track{grid-column:auto}.cta{padding:36px}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="eyebrow brandline"><svg viewBox="0 0 40 32" width="30" height="24" aria-hidden="true"><rect x="12" y="1" width="26" height="18" rx="3.5" fill="#155540"/><rect x="8" y="5" width="26" height="18" rx="3.5" fill="#2c6b55"/><rect x="2" y="11" width="26" height="18" rx="3.5" fill="#d9f26b" stroke="#0f3d2e" stroke-width="1"/><text x="15" y="23.5" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="800" font-size="8.5" fill="#0f3d2e">PSP</text></svg> Pro Skill Packs · Study, October 2026</div>
+  <h1>State of Agent-Ready Shopify</h1>
+  <p class="muted">How well can AI shopping agents (ChatGPT, Gemini, Copilot, Perplexity) find, read and buy from Shopify stores? We audited a sample of stores using public data only. Aggregate results; no store is named.</p>
+  <div id="pending" class="pending" hidden>Results pending: this page fills in automatically from the study data.</div>
+  <div class="kpis">
+    <div class="kpi"><b data-k="summary.stores_audited">–</b><span>measurable stores (of <span data-k="summary.stores_in_list">–</span> sampled)</span></div>
+    <div class="kpi"><b data-k="summary.score.median">–</b><span>median score / 100</span></div>
+    <div class="kpi"><b data-k="summary.facts_pct.any_ai_search_or_user_agent_blocked.pct" data-suffix="%">–</b><span>block an AI search or shopping agent in robots.txt</span></div>
+    <div class="kpi"><b data-k="summary.checks.ld_ship_return.fail_pct" data-suffix="%">–</b><span>have no shipping or return terms in product structured data</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>Score distribution</h2>
+    <p class="muted">Number of stores in each score band (0–100).</p>
+    <div class="chart" id="c-buckets"></div>
+  </section>
+
+  <section>
+    <h2>By store size</h2>
+    <p class="muted">Median score per size tier. Tiers are our classification (large brands, mid-size brands, small independents), not measured revenue. Tiers with fewer than 10 audited stores are not shown.</p>
+    <div class="chart" id="c-tier"></div>
+  </section>
+
+  <section>
+    <h2>The most common gaps</h2>
+    <p class="muted">Share of measurable stores where the check is a gap (partial or fail), %. n = stores where the check could run. The door is open: agents are allowed in almost everywhere. The gaps are in the product data behind it.</p>
+    <div class="chart" id="c-gaps"></div>
+  </section>
+
+  <section>
+    <h2>What agents can and can't see</h2>
+    <p class="muted">Share of measurable stores, %.</p>
+    <div class="chart" id="c-share"></div>
+    <div class="why"><b>Search vs training.</b> Blocking AI <em>training</em> crawlers (GPTBot, Google-Extended, CCBot) is a separate choice and doesn't remove a store from AI answers. Blocking <em>search and user</em> agents (OAI-SearchBot, ChatGPT-User, PerplexityBot, Claude-SearchBot, Claude-User, Googlebot, Bingbot, Amazonbot) does.</div>
+  </section>
+
+  <section>
+    <h2>Every check, pass / partial / fail</h2>
+    <p class="muted">Number of stores per check. "n/a" means the check couldn't run on that store (not measurable). It never counts as a fail.</p>
+    <div class="chart" id="c-checks"></div>
+    <div class="legend"><span><i style="background:var(--bar)"></i>pass</span><span><i style="background:var(--warn)"></i>partial</span><span><i style="background:var(--fail)"></i>fail</span><span><i style="background:var(--bar2)"></i>n/a</span></div>
+  </section>
+
+  <section>
+    <h2>Check your own store</h2>
+    <ol>
+      <li><b>Shipping and returns:</b> one plain line on each product page (only what your policy says), real Shipping and Refund policy text, and <code>shippingDetails</code> / <code>hasMerchantReturnPolicy</code> in your product schema.</li>
+      <li><b>Descriptions:</b> 80+ words on your main products: materials, sizes, who it's for, care.</li>
+      <li><b>Ratings:</b> view the page source. If the star rating isn't in the HTML, turn on your reviews app's structured-data / rich-snippet setting.</li>
+      <li><b>Identifiers:</b> fill in variant barcodes (GTIN/UPC/EAN) and make sure brand and GTIN appear in the product schema.</li>
+      <li><b>Access:</b> check <code>yourstore.com/robots.txt</code> doesn't disallow AI search agents from <code>/products/</code>, and that bot-protection apps don't challenge them.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Method</h2>
+    <ul class="muted">
+      <li><b>Sample:</b> <span data-k="summary.stores_in_list">–</span> Shopify stores (<span data-k="summary.stores_audited">–</span> measurable), chosen by hand. About 30 large brands, 40 mid-size and 30 small independents across the US, UK, EU, Australia/NZ and Canada, in 16 categories. It isn't a random sample of all Shopify stores, so read every figure as "in this sample".</li>
+      <li><b>Data:</b> public storefront data only (robots.txt, product pages and JSON, structured data, policies). No logins, no orders, rate-limited requests.</li>
+      <li><b>Audit:</b> run on <span data-k="meta.audit_date">–</span> from a UK IP address. Checks read the server-rendered HTML and structured data, which is what agents that don't run JavaScript see. We didn't test firewalls or bot protection. Each store was scored out of 100 across access, structured data, product content, policies and path to purchase. Checks that couldn't run are excluded from that store's score.</li>
+      <li><b>Publishing:</b> aggregate results only. No store is named. Slices under 10 stores aren't shown.</li>
+    </ul>
+  </section>
+
+  <div class="cta">
+    <h2>Want your store checked?</h2>
+    <p>We'll run the same audit on your store and send you the top fixes, free. Reply to our post on X with your store URL, or use the free Agent Skills to check it yourself with Claude.</p>
+    <a class="btn" href="https://x.com/KaiVenturaBuild">Ask for a free audit on X →</a>
+    <a class="btn" href="https://github.com/proskillpacks/shopify-store-skills">Free skills →</a>
+  </div>
+</main>
+
+<footer class="wrap">State of Agent-Ready Shopify · Pro Skill Packs · Not affiliated with or endorsed by Shopify Inc. Product names and trademarks belong to their owners.</footer>
+
+<script type="application/json" id="study">{"meta":{"built_at":"2026-10-03T23:34:58Z","sample_size":100,"source":"summary.json","min_slice":10,"audit_date":"3 October 2026"},"summary":{"not_measurable_stores":[{"tier":"large","reason":"homepage redirected to a checkout subdomain from our UK IP (geo redirect); storefront not measurable"}],"stores_in_list":100,"stores_attempted":100,"stores_audited":99,"errors":0,"excluded_not_measurable":1,"score":{"n":99,"mean":80.7,"median":83,"p25":76,"p75":88,"min":44,"max":94},"score_bands":{"0-39":0,"40-59":5,"60-79":31,"80-100":63},"unmatched_results":0,"slice_rule":"slices with <10 stores folded into other; other dropped if still <10","category_merge":{"apparel":"apparel","beauty & cosmetics":"beauty & health","health & supplements":"beauty & health","jewellery & watches":"jewellery, accessories & footwear","accessories":"jewellery, accessories & footwear","footwear":"jewellery, accessories & footwear","home & kitchen":"home, kids & pets","kids & baby":"home, kids & pets","pets":"home, kids & pets","stationery & art":"stationery, books & crafts","books & media":"stationery, books & crafts","crafts & hobbies":"stationery, books & crafts"},"by_tier":{"large":{"n":29,"mean":79.1,"median":81,"p25":72,"p75":86,"min":51,"max":92,"gap_pct_ld_product":7,"gap_pct_ld_rating":62,"gap_pct_ld_ship_return":97,"gap_pct_desc_depth":85,"gap_pct_pdp_ship_returns":52,"gap_pct_image_alt":76,"gap_pct_ld_identifiers":66},"mid":{"n":40,"mean":81.0,"median":82.0,"p25":78,"p75":88,"min":44,"max":91,"gap_pct_ld_product":8,"gap_pct_ld_rating":62,"gap_pct_ld_ship_return":92,"gap_pct_desc_depth":95,"gap_pct_pdp_ship_returns":35,"gap_pct_image_alt":75,"gap_pct_ld_identifiers":60},"small":{"n":30,"mean":81.8,"median":83.0,"p25":77,"p75":88,"min":59,"max":94,"gap_pct_ld_product":10,"gap_pct_ld_rating":93,"gap_pct_ld_ship_return":90,"gap_pct_desc_depth":57,"gap_pct_pdp_ship_returns":53,"gap_pct_image_alt":50,"gap_pct_ld_identifiers":90}},"by_category":{"apparel":{"n":20,"mean":82.9,"median":84.5,"p25":80,"p75":88,"min":71,"max":92,"gap_pct_ld_product":0,"gap_pct_ld_rating":70,"gap_pct_ld_ship_return":95,"gap_pct_desc_depth":63,"gap_pct_pdp_ship_returns":50,"gap_pct_image_alt":70,"gap_pct_ld_identifiers":65},"beauty & health":{"n":14,"mean":79.5,"median":81.0,"p25":76,"p75":85,"min":59,"max":90,"gap_pct_ld_product":29,"gap_pct_ld_rating":79,"gap_pct_ld_ship_return":93,"gap_pct_desc_depth":86,"gap_pct_pdp_ship_returns":50,"gap_pct_image_alt":57,"gap_pct_ld_identifiers":86},"home, kids & pets":{"n":20,"mean":79.3,"median":83.0,"p25":78,"p75":88,"min":44,"max":91,"gap_pct_ld_product":15,"gap_pct_ld_rating":70,"gap_pct_ld_ship_return":90,"gap_pct_desc_depth":75,"gap_pct_pdp_ship_returns":40,"gap_pct_image_alt":65,"gap_pct_ld_identifiers":80},"jewellery, accessories & footwear":{"n":14,"mean":81,"median":81.0,"p25":75,"p75":86,"min":72,"max":92,"gap_pct_ld_product":7,"gap_pct_ld_rating":79,"gap_pct_ld_ship_return":100,"gap_pct_desc_depth":93,"gap_pct_pdp_ship_returns":36,"gap_pct_image_alt":71,"gap_pct_ld_identifiers":57},"other":{"n":20,"mean":80.2,"median":82.5,"p25":75,"p75":88,"min":55,"max":94,"gap_pct_ld_product":0,"gap_pct_ld_rating":55,"gap_pct_ld_ship_return":90,"gap_pct_desc_depth":89,"gap_pct_pdp_ship_returns":50,"gap_pct_image_alt":75,"gap_pct_ld_identifiers":70},"stationery, books & crafts":{"n":11,"mean":81.4,"median":80,"p25":73,"p75":89,"min":73,"max":93,"gap_pct_ld_product":0,"gap_pct_ld_rating":91,"gap_pct_ld_ship_return":91,"gap_pct_desc_depth":82,"gap_pct_pdp_ship_returns":45,"gap_pct_image_alt":64,"gap_pct_ld_identifiers":64}},"by_region":{"AU":{"n":17,"mean":83,"median":86,"p25":80,"p75":89,"min":59,"max":91,"gap_pct_ld_product":6,"gap_pct_ld_rating":59,"gap_pct_ld_ship_return":94,"gap_pct_desc_depth":81,"gap_pct_pdp_ship_returns":41,"gap_pct_image_alt":65,"gap_pct_ld_identifiers":65},"EU":{"n":22,"mean":82.2,"median":81.5,"p25":79,"p75":85,"min":72,"max":92,"gap_pct_ld_product":0,"gap_pct_ld_rating":73,"gap_pct_ld_ship_return":91,"gap_pct_desc_depth":82,"gap_pct_pdp_ship_returns":50,"gap_pct_image_alt":59,"gap_pct_ld_identifiers":64},"UK":{"n":21,"mean":80.2,"median":85,"p25":73,"p75":88,"min":44,"max":94,"gap_pct_ld_product":10,"gap_pct_ld_rating":67,"gap_pct_ld_ship_return":86,"gap_pct_desc_depth":75,"gap_pct_pdp_ship_returns":48,"gap_pct_image_alt":76,"gap_pct_ld_identifiers":81},"US":{"n":36,"mean":79.3,"median":80.0,"p25":74,"p75":86,"min":51,"max":92,"gap_pct_ld_product":11,"gap_pct_ld_rating":78,"gap_pct_ld_ship_return":97,"gap_pct_desc_depth":86,"gap_pct_pdp_ship_returns":44,"gap_pct_image_alt":72,"gap_pct_ld_identifiers":72}},"checks":{"robots_ai_access":{"title":"robots.txt lets AI search & user agents reach products","pass":99,"warn":0,"fail":0,"n/a":0,"n_checked":99,"gap_pct":0,"fail_pct":0,"not_measurable":0},"waf_ai_ua":{"title":"Firewall/bot protection lets AI agents load the store","pass":0,"warn":0,"fail":0,"n/a":99,"n_checked":0,"gap_pct":null,"fail_pct":null,"not_measurable":99},"sitemap":{"title":"Sitemap lists products","pass":94,"warn":0,"fail":5,"n/a":0,"n_checked":99,"gap_pct":5,"fail_pct":5,"not_measurable":0},"llms_txt":{"title":"llms.txt present (with store-specific facts)","pass":93,"warn":1,"fail":5,"n/a":0,"n_checked":99,"gap_pct":6,"fail_pct":5,"not_measurable":0},"ucp":{"title":"Agent commerce endpoint (UCP manifest + MCP catalog/checkout tools)","pass":97,"warn":1,"fail":1,"n/a":0,"n_checked":99,"gap_pct":2,"fail_pct":1,"not_measurable":0},"ld_product":{"title":"Product JSON-LD on product pages","pass":91,"warn":4,"fail":4,"n/a":0,"n_checked":99,"gap_pct":8,"fail_pct":4,"not_measurable":0},"ld_offer":{"title":"Offers carry price, currency and availability (matching the live price)","pass":87,"warn":7,"fail":5,"n/a":0,"n_checked":99,"gap_pct":12,"fail_pct":5,"not_measurable":0},"ld_variants":{"title":"Every variant is described (one Offer per variant or ProductGroup/hasVariant)","pass":87,"warn":4,"fail":8,"n/a":0,"n_checked":99,"gap_pct":12,"fail_pct":8,"not_measurable":0},"ld_identifiers":{"title":"Brand + product identifiers (GTIN/barcode, SKU/MPN)","pass":29,"warn":49,"fail":21,"n/a":0,"n_checked":99,"gap_pct":71,"fail_pct":21,"not_measurable":0},"ld_rating":{"title":"Review ratings exposed as AggregateRating","pass":28,"warn":6,"fail":65,"n/a":0,"n_checked":99,"gap_pct":72,"fail_pct":66,"not_measurable":0},"ld_ship_return":{"title":"Shipping & return policy in structured data","pass":7,"warn":5,"fail":87,"n/a":0,"n_checked":99,"gap_pct":93,"fail_pct":88,"not_measurable":0},"ld_org":{"title":"Organization/WebSite schema on homepage","pass":88,"warn":0,"fail":11,"n/a":0,"n_checked":99,"gap_pct":11,"fail_pct":11,"not_measurable":0},"desc_depth":{"title":"Descriptions have enough facts for an agent (80+ words)","pass":19,"warn":26,"fail":52,"n/a":2,"n_checked":97,"gap_pct":80,"fail_pct":54,"not_measurable":2},"option_names":{"title":"Variant option names are meaningful","pass":85,"warn":0,"fail":12,"n/a":0,"n_checked":97,"gap_pct":12,"fail_pct":12,"not_measurable":0},"product_type":{"title":"Product type / category set","pass":81,"warn":4,"fail":12,"n/a":0,"n_checked":97,"gap_pct":16,"fail_pct":12,"not_measurable":0},"price_visible":{"title":"Price visible in the page HTML (not only via JavaScript)","pass":84,"warn":5,"fail":10,"n/a":0,"n_checked":99,"gap_pct":15,"fail_pct":10,"not_measurable":0},"image_alt":{"title":"Product images have alt text","pass":32,"warn":13,"fail":54,"n/a":0,"n_checked":99,"gap_pct":68,"fail_pct":55,"not_measurable":0},"barcodes":{"title":"Variants have barcodes (GTIN/UPC/EAN)","pass":40,"warn":25,"fail":34,"n/a":0,"n_checked":99,"gap_pct":60,"fail_pct":34,"not_measurable":0},"refund-policy":{"title":"Refund Policy has real content","pass":62,"warn":6,"fail":4,"n/a":27,"n_checked":72,"gap_pct":14,"fail_pct":6,"not_measurable":27},"shipping-policy":{"title":"Shipping Policy has real content","pass":45,"warn":4,"fail":21,"n/a":29,"n_checked":70,"gap_pct":36,"fail_pct":30,"not_measurable":29},"pdp_ship_returns":{"title":"Product pages state shipping & returns","pass":54,"warn":24,"fail":21,"n/a":0,"n_checked":99,"gap_pct":45,"fail_pct":21,"not_measurable":0},"contact":{"title":"Contact details findable","pass":96,"warn":0,"fail":3,"n/a":0,"n_checked":99,"gap_pct":3,"fail_pct":3,"not_measurable":0},"atc_form":{"title":"Standard add-to-cart form with variant IDs","pass":80,"warn":4,"fail":10,"n/a":5,"n_checked":94,"gap_pct":15,"fail_pct":11,"not_measurable":5},"accelerated":{"title":"Accelerated checkout (Shop Pay etc.) on product pages","pass":92,"warn":1,"fail":1,"n/a":5,"n_checked":94,"gap_pct":2,"fail_pct":1,"not_measurable":5},"no_gates":{"title":"No password page, age gate or storefront challenge","pass":98,"warn":0,"fail":1,"n/a":0,"n_checked":99,"gap_pct":1,"fail_pct":1,"not_measurable":0}},"top_gaps":[{"id":"ld_ship_return","title":"Shipping & return policy in structured data","gap_pct":93,"fail_pct":88,"n":99},{"id":"desc_depth","title":"Descriptions have enough facts for an agent (80+ words)","gap_pct":80,"fail_pct":54,"n":97},{"id":"ld_rating","title":"Review ratings exposed as AggregateRating","gap_pct":72,"fail_pct":66,"n":99},{"id":"ld_identifiers","title":"Brand + product identifiers (GTIN/barcode, SKU/MPN)","gap_pct":71,"fail_pct":21,"n":99},{"id":"image_alt","title":"Product images have alt text","gap_pct":68,"fail_pct":55,"n":99},{"id":"barcodes","title":"Variants have barcodes (GTIN/UPC/EAN)","gap_pct":60,"fail_pct":34,"n":99},{"id":"pdp_ship_returns","title":"Product pages state shipping & returns","gap_pct":45,"fail_pct":21,"n":99},{"id":"shipping-policy","title":"Shipping Policy has real content","gap_pct":36,"fail_pct":30,"n":70},{"id":"product_type","title":"Product type / category set","gap_pct":16,"fail_pct":12,"n":97},{"id":"price_visible","title":"Price visible in the page HTML (not only via JavaScript)","gap_pct":15,"fail_pct":10,"n":99}],"facts_pct":{"ucp_manifest":{"pct":99,"n":99},"llms_txt_present":{"pct":95,"n":99},"llms_txt_shopify_default":{"pct":89,"n":94},"policies_disallowed_generic_crawlers":{"pct":25,"n":99},"any_ai_search_or_user_agent_blocked":{"pct":0,"n":99},"any_training_bot_blocked":{"pct":0,"n":99},"product_jsonld_on_all_sampled":{"pct":92,"n":99},"no_product_jsonld_any_sampled":{"pct":4,"n":99},"aggregate_rating_full_where_reviews_visible":{"pct":55,"n":51},"gtin_in_schema_any":{"pct":48,"n":99},"shipping_or_return_schema_any":{"pct":12,"n":99},"price_in_server_html_all":{"pct":86,"n":99},"returns_on_majority_of_pdps":{"pct":57,"n":99},"desc_80plus_on_majority":{"pct":43,"n":97},"image_alt_avg_under_50":{"pct":57,"n":98},"ld_price_mismatch_any":{"pct":4,"n":99}},"rating_status":{"zero_reviews":6,"reviews_shown_no_schema":17,"no_reviews_app":21,"partial":6,"schema_ok":28,"js_only":21},"headless_stores":5,"policy_pages_error_on_storefront":3,"policies_not_read_robots":27,"no_product_page_sampled":0,"catalog_medians":{"desc_words_median_of_store_medians":69,"n":97},"conversion_blockers_pct":{"Popup/capture apps present":80,"No visible reviews / social proof":48,"Returns not mentioned on product pages":43,"Thin product descriptions":41,"Shipping cost/time not on product pages":22,"Empty or near-empty shipping policy":21,"Few product images":17,"Very heavy product page HTML":15,"Lots of sold-out variants":13,"Empty or near-empty refund policy":4,"No obvious contact route":3,"Policy pages return an error on the storefront":3,"No express checkout buttons on product pages":1,"Slow product page response":1},"quick_check_benchmarks":{"n_stores":99,"pass_pct":{"ai_access":95,"ship_returns_schema":12,"rating_schema":28,"gtin_schema":48,"descriptions":43,"alt_text":35},"n":{"ai_access":99,"ship_returns_schema":99,"rating_schema":99,"gtin_schema":99,"descriptions":97,"alt_text":98},"checks_passed_of_6":{"median":3,"p25":2,"p75":3,"distribution":{"0":3,"1":14,"2":31,"3":27,"4":19,"5":5,"6":0}},"median_pct_products_80plus_words":36,"p25_pct_products_80plus_words":9,"p75_pct_products_80plus_words":77,"median_store_median_description_words":69,"p25_store_median_description_words":49,"p75_store_median_description_words":125,"median_avg_image_alt_pct":20.0,"p25_avg_image_alt_pct":0,"p75_avg_image_alt_pct":100}}}</script>
+<script>
+(function(){
+  var TIERS={large:"Large brands",mid:"Mid-size brands",small:"Small independents"};
+  var SHARES=[
+    ["summary.facts_pct.any_ai_search_or_user_agent_blocked.pct","Block an AI search/shopping agent (robots.txt)"],
+    ["summary.facts_pct.any_training_bot_blocked.pct","Block an AI training crawler (robots.txt)"],
+    ["summary.facts_pct.ucp_manifest.pct","Agent-commerce endpoint (UCP)"],
+    ["summary.facts_pct.product_jsonld_on_all_sampled.pct","Product schema on every sampled page"],
+    ["summary.facts_pct.price_in_server_html_all.pct","Price in the HTML on every sampled page"],
+    ["summary.facts_pct.gtin_in_schema_any.pct","GTIN in product schema"],
+    ["summary.facts_pct.shipping_or_return_schema_any.pct","Any shipping or return terms in schema"],
+    ["summary.facts_pct.returns_on_majority_of_pdps.pct","Returns mentioned on most product pages"],
+    ["summary.facts_pct.desc_80plus_on_majority.pct","Most products have 80+ word descriptions"],
+    ["summary.facts_pct.policies_disallowed_generic_crawlers.pct","/policies/ disallowed in robots.txt"],
+    ["summary.facts_pct.llms_txt_present.pct","llms.txt present (mostly Shopify's default)"]
+  ];
+  function get(d,p){return p.split(".").reduce(function(o,k){return (o&&typeof o==="object"&&k in o)?o[k]:null;},d);}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function row(label,val,max,suffix){
+    var ok=typeof val==="number";
+    var w=ok&&max?Math.max(0,Math.min(100,100*val/max)):0;
+    return '<div class="row"><div class="lbl">'+esc(label)+'</div><div class="val">'+(ok?esc(val)+(suffix||""):"not measurable")+'</div>'+
+      '<div class="track" role="img" aria-label="'+esc(label)+': '+(ok?esc(val)+(suffix||""):"not measurable")+'"><div class="fill" style="width:'+w+'%"></div></div></div>';
+  }
+  function render(d){
+    if(!d||!d.summary||!d.summary.stores_audited){document.getElementById("pending").hidden=false;return;}
+    document.querySelectorAll("[data-k]").forEach(function(el){
+      var v=get(d,el.getAttribute("data-k"));
+      el.textContent=(v===null||v===undefined||typeof v==="object")?"n/m":(v+(el.getAttribute("data-suffix")||""));
+    });
+    var b=get(d,"summary.score_bands")||get(d,"summary.score.buckets")||{},bk=Object.keys(b),bm=Math.max.apply(null,bk.map(function(k){return b[k];}).concat([1]));
+    document.getElementById("c-buckets").innerHTML=bk.map(function(k){return row(k,b[k],bm," stores");}).join("");
+    var t=get(d,"summary.by_tier")||d.by_tier||{},th="";
+    Object.keys(TIERS).forEach(function(k){var s=t[k];if(s&&!s.suppressed&&s.n>=10){th+=row(TIERS[k]+" (n="+s.n+")",(s.median!==undefined?s.median:s.score_median),100,"");}});
+    document.getElementById("c-tier").innerHTML=th||'<p class="muted">Not enough stores per tier to show.</p>';
+    var GAP={ld_ship_return:"Shipping & return terms missing or partial in schema",desc_depth:"Under 85% of products have 80+ word descriptions",
+      ld_rating:"Ratings not (fully) in structured data, or no reviews",ld_identifiers:"Brand / GTIN / SKU incomplete in schema",
+      image_alt:"Product images missing alt text",barcodes:"Variant barcodes incomplete",pdp_ship_returns:"Product pages don't clearly state shipping & returns",
+      "shipping-policy":"Shipping policy empty or thin",product_type:"Product type not set",price_visible:"Price not in the HTML on every sampled page"};
+    var g=get(d,"summary.top_gaps")||[];
+    document.getElementById("c-gaps").innerHTML=g.map(function(x){return row((GAP[x.id]||x.title)+" (n="+x.n+")",x.gap_pct,100,"%");}).join("");
+    document.getElementById("c-share").innerHTML=SHARES.map(function(s){return row(s[1],get(d,s[0]),100,"%");}).join("");
+    var c=get(d,"summary.checks")||{},ch="";
+    Object.keys(c).forEach(function(id){
+      var x=c[id],n=(x.pass||0)+(x.warn||0)+(x.fail||0)+(x["n/a"]||0);if(!n)return;
+      var seg=function(v,cls){return v?'<div class="fill '+cls+'" style="width:'+(100*v/n)+'%"></div>':"";};
+      ch+='<div class="row"><div class="lbl">'+esc(x.title)+'</div><div class="val">'+(x.pass||0)+'/'+n+' pass</div><div class="track" role="img" aria-label="'+esc(x.title)+': '+
+        (x.pass||0)+' pass, '+(x.warn||0)+' partial, '+(x.fail||0)+' fail, '+(x["n/a"]||0)+' n/a">'+seg(x.pass,"")+seg(x.warn,"warn")+seg(x.fail,"fail")+seg(x["n/a"],"na")+'</div></div>';
+    });
+    document.getElementById("c-checks").innerHTML=ch;
+  }
+  var raw=document.getElementById("study").textContent.trim(),data={};
+  try{data=JSON.parse(raw||"{}");}catch(e){}
+  if(data.summary){render(data);}
+  else if(location.protocol!=="file:"){fetch("study.json").then(function(r){return r.ok?r.json():{};}).then(render).catch(function(){render({});});}
+  else{render({});}
+})();
+</script>
+</body>
+</html>
