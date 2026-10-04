@@ -114,6 +114,21 @@ a.card:hover, a.card:focus-visible { border-color: var(--pine); box-shadow: 0 10
 .filters input, .filters select { font: inherit; font-size: 1rem; padding: 0.6rem 0.8rem; border: 1px solid #b9c4bd; border-radius: 10px; background: #fff; color: var(--ink); min-width: 12rem; }
 .filters input { min-width: 16rem; }
 .count { color: var(--slate); margin: 0 0 1rem; }
+.hero-filters { margin: 1.5rem 0 0.9rem; }
+.hero-filters label { color: var(--mist); }
+.hero-filters .grow { flex: 1 1 22rem; }
+.hero-filters .grow input { width: 100%; }
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chips a { text-decoration: none; padding: 0.4rem 0.9rem; border: 1px solid var(--sage); border-radius: 999px; color: var(--cream); font-size: 0.95rem; }
+.chips a i { font-style: normal; color: var(--mist); margin-left: 0.2rem; }
+.chips a:hover, .chips a:focus-visible { border-color: var(--lime); }
+.chips a.on { background: var(--lime); color: var(--pine); border-color: var(--lime); font-weight: 700; }
+.chips a.on i { color: var(--pine); }
+.countbar { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.linkbtn { font: inherit; background: none; border: 0; color: var(--moss); text-decoration: underline; cursor: pointer; padding: 0.3rem 0; }
+.catlinks { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; margin-bottom: 1rem; font-size: 0.95rem; }
+.catlinks b { color: var(--lime); }
+.card[hidden] { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; }
 .tile { display: block; background: var(--pine); color: var(--cream); border-radius: 16px; padding: 1.2rem 1.3rem; text-decoration: none; }
 .tile b { display: block; font-size: 1.15rem; margin-bottom: 0.3rem; }
@@ -147,9 +162,9 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
       <a class="name" href="/">PRO SKILL PACKS</a>
-      <nav aria-label="Main"><a href="/catalog/">All skills</a><a href="/for/shopify/" aria-current="page">Shopify stores</a><a href="/free/">Free skills</a><a href="/guides/">Guides</a><a href="/study/">Study</a></nav>
+      <nav aria-label="Main"><a href="/">All skills</a><a href="/free/">Free skills</a><a href="/guides/">Guides</a><a href="/study/">Study</a></nav>
     </div>
-    <p class="crumbs"><a href="/catalog/">All skills</a> / <a href="/for/shopify/">Shopify store owners</a></p>
+    <p class="crumbs"><a href="/">All skills</a> / <a href="/for/shopify/">Shopify store owners</a></p>
     <h1>Alt Text Writer</h1>
     <p class="lead">Alt text for every product image, written while looking at the photo, as an import CSV.</p>
     <div class="cta"><a class="btn btn-lime" href="https://proskillpacks.gumroad.com/l/free-shopify-skills">Download free</a> <a class="btn btn-line" href="https://github.com/proskillpacks/shopify-store-skills/tree/main/skills/shopify-alt-text-writer" rel="noopener">View on GitHub</a></div><p class="note-light">The download is the free bundle on Gumroad (pay what you want, from $0), which holds all the free skills for this category. The same files are on GitHub under the MIT licence.</p>
@@ -166,23 +181,25 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <p>We checked each &quot;after&quot; against the actual photo.</p></div></section>
 <section><h2>How it was tested</h2><div class="prose"><p><strong>Tested on 6 real cases from public Shopify stores, including three product export CSVs. Final scores: 10, 10, 9, 10, 9 and 10 out of 10.</strong></p><p>Every skill runs on real public data, never made-up cases, and is scored against a written rubric. A skill ships only when every test scores 8/10 or more.</p></div></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It describes what it can see and what your product data says. It won&#x27;t invent materials or features.</li><li>Importing alt text by CSV re-imports your images. Test on one product first. For products with variant images (the photo changes per colour), paste the alt text by hand. The skill lists those products for you.</li></ul></div></section>
-<section><h2>Works with</h2><div class="prose"><p>Works with any AI assistant that reads SKILL.md: Claude, OpenAI Codex, Gemini CLI, Cursor, GitHub Copilot and others. We run our release tests on Claude Sonnet and Opus. Use your assistant&#x27;s strongest model: in our tests, a small, fast model added facts that were not in the source data. The helper scripts need Python 3 (standard library only). Reading a live store needs web access; otherwise attach your product export CSV.</p></div></section>
-<section><h2>Install</h2><div class="prose"><ol><li>Unzip the free download. It holds the free skill folders, including <code>shopify-alt-text-writer</code>, ready-made zips for claude.ai in a <code>claude-ai</code> folder, and a README. Or copy the folder from GitHub.</li><li>Put the <code>shopify-alt-text-writer</code> folder where your assistant looks for skills:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex: <code>~/.agents/skills/</code> (or <code>.agents/skills/</code> inside one project)</li><li>claude.ai: Settings, Capabilities, Skills, then upload the zip from the <code>claude-ai</code> folder without unzipping it</li><li>Other assistants that read SKILL.md: the skills folder their docs name</li></ul></li><li>Ask for the job in plain words. The skill loads by itself.</li></ol></div></section>
+<section><h2>Works with</h2><div class="prose"><p>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot. We run our release tests on Claude Sonnet and Opus. Use your assistant&#x27;s strongest model: in our tests, a small, fast model added facts that were not in the source data. The helper scripts need Python 3 (standard library only). Reading a live store needs web access; otherwise attach your product export CSV.</p></div></section>
+<section><h2>Install</h2><div class="prose"><ol><li>Unzip the free download. It holds the free skill folders, including <code>shopify-alt-text-writer</code>, ready-made zips for claude.ai in a <code>claude-ai</code> folder, and a README. Or copy the folder from GitHub.</li><li>Put the <code>shopify-alt-text-writer</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: Settings, Capabilities, Skills, then upload the zip from the <code>claude-ai</code> folder without unzipping it</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li></ul></li><li>Ask for the job in plain words. The skill loads by itself.</li></ol></div></section>
 <section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">Free</span><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/l/free-shopify-skills">Download free</a><a class="btn btn-ghost" href="/packs/store-ops-pack/">See the Store Ops Pack, $29</a></div><p>MIT licence. Use it, change it, share it.</p></div></section>
 </div></main>
 <footer>
   <div class="wrap">
+    
     <div class="row">
       <nav aria-label="Footer">
-        <a href="/catalog/">All skills</a>
+        <a href="/">All skills</a>
         <a href="/free/">Free skills</a>
         <a href="/guides/">Guides</a>
         <a href="/study/">Study</a>
+        <a href="/helpers/">Helpers</a>
         <a href="https://proskillpacks.gumroad.com" rel="noopener">Gumroad store</a>
         <a href="https://github.com/proskillpacks/shopify-store-skills" rel="noopener">GitHub</a>
         <a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a>
       </nav>
-      <div>Works with any AI assistant that reads SKILL.md: Claude, Codex, Gemini CLI, Cursor, Copilot and more.</div>
+      <div>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot.</div>
     </div>
     <small>Pro Skill Packs. Not affiliated with or endorsed by Shopify Inc.</small>
   </div>

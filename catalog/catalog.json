@@ -17,6 +17,7 @@
    "give": "",
    "get": "",
    "jobs": [],
+   "tags": [],
    "tested": "Every skill in the pack was tested on real public Shopify stores or real public merchant cases and scored against a written rubric. Each ships only when every test scores 8/10 or more.",
    "includes": [
     "Agent-Ready Store Audit",
@@ -45,6 +46,7 @@
    "jobs": [
     "audit and fix"
    ],
+   "tags": [],
    "tested": "Tested on 4 real public Shopify stores. Final runs: 9, 9, 9.5 and 9 out of 10.",
    "includes": []
   },
@@ -66,6 +68,7 @@
    "jobs": [
     "plan and launch"
    ],
+   "tags": [],
    "tested": "Tested on 4 real public Shopify stores (US and UK, low to high price points). Final version: 9/10 on all four.",
    "includes": []
   },
@@ -87,6 +90,7 @@
    "jobs": [
     "money and disputes"
    ],
+   "tags": [],
    "tested": "Tested on 6 real dispute scenarios from the Shopify Community forum. Every final run scored 9/10 or more, with no invented evidence.",
    "includes": []
   },
@@ -108,6 +112,7 @@
    "jobs": [
     "write copy"
    ],
+   "tags": [],
    "tested": "Tested on 4 real public Shopify stores and one product export CSV. Final scores: 9, 9, 10, 10 and 9 out of 10.",
    "includes": []
   },
@@ -130,6 +135,7 @@
     "audit and fix",
     "write copy"
    ],
+   "tags": [],
    "tested": "Tested on 5 real public Shopify stores across all three modes. Final runs scored 9 to 10 out of 10.",
    "includes": []
   },
@@ -151,6 +157,7 @@
    "jobs": [
     "reply to customers"
    ],
+   "tags": [],
    "tested": "Tested on 4 real public Shopify stores with Gorgias, Zendesk, Shopify Inbox and neutral output, scored against a written rubric. Every policy fact in the macros was checked against the stores' own policy text.",
    "includes": []
   },
@@ -172,6 +179,7 @@
    "jobs": [
     "audit and fix"
    ],
+   "tags": [],
    "tested": "Tested on 4 real public Shopify stores. Final runs: 9.5/10 on all four.",
    "includes": []
   },
@@ -193,6 +201,7 @@
    "jobs": [
     "write copy"
    ],
+   "tags": [],
    "tested": "Tested on 6 real cases from public Shopify stores, including three product export CSVs. Final scores: 10, 10, 9, 10, 9 and 10 out of 10.",
    "includes": []
   },
@@ -214,6 +223,7 @@
    "jobs": [
     "audit and fix"
    ],
+   "tags": [],
    "tested": "Tested on 4 real public Shopify stores. Final scores: 10, 10, 9 and 9 out of 10.",
    "includes": []
   },
@@ -235,6 +245,7 @@
    "jobs": [
     "audit and fix"
    ],
+   "tags": [],
    "tested": "Tested on 3 real public Shopify catalogues, up to 490 products. Final scores: 10, 9 and 10 out of 10.",
    "includes": []
   },
@@ -256,7 +267,52 @@
    "jobs": [
     "reply to customers"
    ],
+   "tags": [],
    "tested": "Tested on 3 real public review sets (Judge.me and Trustpilot). Final runs: 9, 9.5 and 9 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "host-ops-pack",
+   "title": "Host Ops Pack",
+   "kind": "Pack",
+   "type": "pack",
+   "category": "short-term-rental-hosts",
+   "category_name": "Short-term rental hosts",
+   "price_usd": 29,
+   "price_label": "$29",
+   "free": false,
+   "url": "/packs/host-ops-pack/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/host-ops-pack",
+   "summary": "Six skills for the listing, review and house-rules jobs of hosts who run their own listings.",
+   "give": "",
+   "get": "",
+   "jobs": [],
+   "tags": [],
+   "tested": "Each of the six skills has 4 tests on real public data, scored by hand against a written rubric. On the latest Claude Sonnet run of each test, every score is 8.5 or 9 out of 10. An independent reviewer re-scored 12 tests and ran 10 fresh cases from another city; every defect it listed as required is fixed in this version. No host has used the output on a live listing yet.",
+   "includes": [
+    "Listing Rewriter"
+   ]
+  },
+  {
+   "id": "listing-rewriter",
+   "title": "Listing Rewriter",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "short-term-rental-hosts",
+   "category_name": "Short-term rental hosts",
+   "price_usd": 5,
+   "price_label": "$5",
+   "free": false,
+   "url": "/skills/listing-rewriter/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/listing-rewriter",
+   "summary": "Three titles under 50 characters and a description within 500, built only from your own facts.",
+   "give": "Paste your listing title, description and amenities.",
+   "get": "Three titles under 50 characters, a description within 500 characters and the section fields, built only from your own facts, plus a list of anything to confirm.",
+   "jobs": [
+    "write copy"
+   ],
+   "tags": [],
+   "tested": "Tested on 4 real public listings. Final Claude Sonnet scores: 9, 8.5, 9 and 8.5 out of 10.",
    "includes": []
   }
  ]

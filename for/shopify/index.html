@@ -94,6 +94,21 @@ a.card:hover, a.card:focus-visible { border-color: var(--pine); box-shadow: 0 10
 .filters input, .filters select { font: inherit; font-size: 1rem; padding: 0.6rem 0.8rem; border: 1px solid #b9c4bd; border-radius: 10px; background: #fff; color: var(--ink); min-width: 12rem; }
 .filters input { min-width: 16rem; }
 .count { color: var(--slate); margin: 0 0 1rem; }
+.hero-filters { margin: 1.5rem 0 0.9rem; }
+.hero-filters label { color: var(--mist); }
+.hero-filters .grow { flex: 1 1 22rem; }
+.hero-filters .grow input { width: 100%; }
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chips a { text-decoration: none; padding: 0.4rem 0.9rem; border: 1px solid var(--sage); border-radius: 999px; color: var(--cream); font-size: 0.95rem; }
+.chips a i { font-style: normal; color: var(--mist); margin-left: 0.2rem; }
+.chips a:hover, .chips a:focus-visible { border-color: var(--lime); }
+.chips a.on { background: var(--lime); color: var(--pine); border-color: var(--lime); font-weight: 700; }
+.chips a.on i { color: var(--pine); }
+.countbar { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.linkbtn { font: inherit; background: none; border: 0; color: var(--moss); text-decoration: underline; cursor: pointer; padding: 0.3rem 0; }
+.catlinks { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; margin-bottom: 1rem; font-size: 0.95rem; }
+.catlinks b { color: var(--lime); }
+.card[hidden] { display: none; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; }
 .tile { display: block; background: var(--pine); color: var(--cream); border-radius: 16px; padding: 1.2rem 1.3rem; text-decoration: none; }
 .tile b { display: block; font-size: 1.15rem; margin-bottom: 0.3rem; }
@@ -126,16 +141,16 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
       <a class="name" href="/">PRO SKILL PACKS</a>
-      <nav aria-label="Main"><a href="/catalog/">All skills</a><a href="/for/shopify/" aria-current="page">Shopify stores</a><a href="/free/">Free skills</a><a href="/guides/">Guides</a><a href="/study/">Study</a></nav>
+      <nav aria-label="Main"><a href="/">All skills</a><a href="/free/">Free skills</a><a href="/guides/">Guides</a><a href="/study/">Study</a></nav>
     </div>
-    <p class="crumbs"><a href="/catalog/">All skills</a> / Shopify store owners</p>
+    <p class="crumbs"><a href="/">All skills</a> / Shopify store owners</p>
     <h1>Agent Skills for Shopify store owners</h1>
     <p class="lead">Skills for the weekly jobs of running a Shopify store: product copy, SEO fields, support replies, chargebacks, Black Friday and how AI shopping agents read your store. Give your assistant a store or product URL, or paste text, and get work you can paste into Shopify.</p>
-    <p class="note-light">11 skills: 6 paid, 5 free, and 1 pack.</p>
+    <p class="note-light">11 skills: 6 paid and 5 free, plus 1 pack.</p>
   </div>
 </header>
 <main><div class="wrap">
-<section><h2>The pack</h2><p class="sub">Every paid skill for this role in one download.</p><div class="grid"><a class="card" href="/packs/store-ops-pack/" data-id="store-ops-pack" data-role="shopify" data-price="paid">
+<section><h2>The pack</h2><p class="sub">Every paid skill for this role in one download.</p><div class="grid"><a class="card" href="/packs/store-ops-pack/" data-id="store-ops-pack" data-role="shopify" data-price="paid" data-type="pack" data-s="store ops pack six skills for the shopify jobs that eat the week, in one download. shopify store owners shopify pack agent-ready store audit support macro writer product description rewriter product seo fixer chargeback response writer bfcm campaign kit">
   <img src="/assets/cover-store-ops-pack.png" alt="" width="1280" height="720"><div class="body">
     <div class="tags"><span class="tag pack">Pack</span><span class="tag">Shopify stores</span></div>
     <h3>Store Ops Pack</h3>
@@ -144,7 +159,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <div class="foot"><span class="price">$29</span><span class="go">See details</span></div>
   </div>
 </a></div></section>
-<section><h2>Single skills</h2><p class="sub">Each paid skill on its own, with its own page and test results.</p><div class="grid"><a class="card" href="/skills/agent-ready-store-audit/" data-id="agent-ready-store-audit" data-role="shopify" data-price="paid">
+<section><h2>Single skills</h2><p class="sub">Each paid skill on its own, with its own page and test results.</p><div class="grid"><a class="card" href="/skills/agent-ready-store-audit/" data-id="agent-ready-store-audit" data-role="shopify" data-price="paid" data-type="single" data-s="agent-ready store audit a 0 to 100 score for how ai shopping agents read your store, with the top 7 fixes. shopify store owners shopify single skill your store url. a score out of 100 for how well ai shopping agents (chatgpt, gemini, copilot and others) can find, understand and buy from your store, an agent&#x27;s-eye test of real buyer questions, and a ranked fix list. audit and fix">
   <img src="/assets/cover-agent-ready-store-audit.png" alt="" width="1280" height="720" loading="lazy"><div class="body">
     <div class="tags"><span class="tag">Single skill</span><span class="tag">Shopify stores</span></div>
     <h3>Agent-Ready Store Audit</h3>
@@ -152,7 +167,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <p class="tested">Tested on 4 real public Shopify stores.</p>
     <div class="foot"><span class="price">$5</span><span class="go">See details</span></div>
   </div>
-</a><a class="card" href="/skills/bfcm-campaign-kit/" data-id="bfcm-campaign-kit" data-role="shopify" data-price="paid">
+</a><a class="card" href="/skills/bfcm-campaign-kit/" data-id="bfcm-campaign-kit" data-role="shopify" data-price="paid" data-type="single" data-s="bfcm campaign kit offer maths on your real prices, a dated calendar, 5 emails, 3 sms and an ops checklist. shopify store owners shopify single skill your store url (plus your margin, if you know it). a black friday / cyber monday plan: offer maths on your real prices, a dated us/uk calendar, 5 emails, 3 sms, banners and an ops checklist. no fake urgency. plan and launch">
   <img src="/assets/cover-bfcm-campaign-kit.png" alt="" width="1280" height="720" loading="lazy"><div class="body">
     <div class="tags"><span class="tag">Single skill</span><span class="tag">Shopify stores</span></div>
     <h3>BFCM Campaign Kit</h3>
@@ -160,7 +175,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <p class="tested">Tested on 4 real public Shopify stores (US and UK, low to high price points).</p>
     <div class="foot"><span class="price">$5</span><span class="go">See details</span></div>
   </div>
-</a><a class="card" href="/skills/chargeback-response-writer/" data-id="chargeback-response-writer" data-role="shopify" data-price="paid">
+</a><a class="card" href="/skills/chargeback-response-writer/" data-id="chargeback-response-writer" data-role="shopify" data-price="paid" data-type="single" data-s="chargeback response writer a dispute response matched to the reason code. it never invents evidence. shopify store owners shopify single skill the dispute details plus the evidence you actually have. a response matched to the reason code, a checklist of what to attach, and a list of gaps. it never invents evidence, and it tells you when accepting is cheaper. money and disputes">
   <img src="/assets/cover-chargeback-response-writer.png" alt="" width="1280" height="720" loading="lazy"><div class="body">
     <div class="tags"><span class="tag">Single skill</span><span class="tag">Shopify stores</span></div>
     <h3>Chargeback Response Writer</h3>
@@ -168,7 +183,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <p class="tested">Tested on 6 real dispute scenarios from the Shopify Community forum.</p>
     <div class="foot"><span class="price">$5</span><span class="go">See details</span></div>
   </div>
-</a><a class="card" href="/skills/product-description-rewriter/" data-id="product-description-rewriter" data-role="shopify" data-price="paid">
+</a><a class="card" href="/skills/product-description-rewriter/" data-id="product-description-rewriter" data-role="shopify" data-price="paid" data-type="single" data-s="product description rewriter clean shopify html descriptions with an seo title and meta description, for one product or a collection. shopify store owners shopify single skill a product url, pasted text, a collection, or your product export csv. clean shopify html descriptions with an seo title (≤ 60 characters) and meta description (≤ 155). bulk runs produce an import csv. write copy">
   <img src="/assets/cover-product-description-rewriter.png" alt="" width="1280" height="720" loading="lazy"><div class="body">
     <div class="tags"><span class="tag">Single skill</span><span class="tag">Shopify stores</span></div>
     <h3>Product Description Rewriter</h3>
@@ -176,7 +191,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <p class="tested">Tested on 4 real public Shopify stores and one product export CSV.</p>
     <div class="foot"><span class="price">$5</span><span class="go">See details</span></div>
   </div>
-</a><a class="card" href="/skills/product-seo-fixer/" data-id="product-seo-fixer" data-role="shopify" data-price="paid">
+</a><a class="card" href="/skills/product-seo-fixer/" data-id="product-seo-fixer" data-role="shopify" data-price="paid" data-type="single" data-s="product seo fixer a prioritised fix list with the exact text to paste, for a product, a collection or a product export csv. shopify store owners shopify single skill a product url, a collection url, or your product export csv. a prioritised seo fix list with the exact text to paste and where. collection mode also writes the collection intro and seo fields; csv mode returns a re-importable csv. audit and fix write copy">
   <img src="/assets/cover-product-seo-fixer.png" alt="" width="1280" height="720" loading="lazy"><div class="body">
     <div class="tags"><span class="tag">Single skill</span><span class="tag">Shopify stores</span></div>
     <h3>Product SEO Fixer</h3>
@@ -184,7 +199,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <p class="tested">Tested on 5 real public Shopify stores across all three modes.</p>
     <div class="foot"><span class="price">$5</span><span class="go">See details</span></div>
   </div>
-</a><a class="card" href="/skills/support-macro-writer/" data-id="support-macro-writer" data-role="shopify" data-price="paid">
+</a><a class="card" href="/skills/support-macro-writer/" data-id="support-macro-writer" data-role="shopify" data-price="paid" data-type="single" data-s="support macro writer ready-to-import replies built from your real shipping and returns policies. shopify store owners shopify single skill your store url. it reads your real refund and shipping policies and writes ready-to-import support replies, starting with the hard cases: stuck in transit, &quot;delivered&quot; but not received, address changes, cancellations. reply to customers">
   <img src="/assets/cover-support-macro-writer.png" alt="" width="1280" height="720" loading="lazy"><div class="body">
     <div class="tags"><span class="tag">Single skill</span><span class="tag">Shopify stores</span></div>
     <h3>Support Macro Writer</h3>
@@ -193,7 +208,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <div class="foot"><span class="price">$5</span><span class="go">See details</span></div>
   </div>
 </a></div></section>
-<section><h2>Free skills</h2><p class="sub">Free and MIT-licensed. Download them together on Gumroad or take them from GitHub.</p><div class="grid"><a class="card" href="/skills/agent-ready-quick-check/" data-id="agent-ready-quick-check" data-role="shopify" data-price="free">
+<section><h2>Free skills</h2><p class="sub">Free and MIT-licensed. Download them together on Gumroad or take them from GitHub.</p><div class="grid"><a class="card" href="/skills/agent-ready-quick-check/" data-id="agent-ready-quick-check" data-role="shopify" data-price="free" data-type="single" data-s="agent-ready quick check six checks on how ai shopping agents read your store, compared with 99 stores we audited. shopify store owners shopify free skill your store url. a 6-check scorecard of how well ai shopping agents (chatgpt, perplexity, gemini, copilot, claude) can read your store. each check is compared with 99 shopify stores we audited in october 2026. audit and fix">
   <div class="body">
     <div class="tags"><span class="tag free">Free skill</span><span class="tag">Shopify stores</span></div>
     <h3>Agent-Ready Quick Check</h3>
@@ -201,7 +216,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <p class="tested">Tested on 4 real public Shopify stores.</p>
     <div class="foot"><span class="price">Free</span><span class="go">See details</span></div>
   </div>
-</a><a class="card" href="/skills/product-title-cleaner/" data-id="product-title-cleaner" data-role="shopify" data-price="free">
+</a><a class="card" href="/skills/product-title-cleaner/" data-id="product-title-cleaner" data-role="shopify" data-price="free" data-type="single" data-s="product title cleaner one consistent title pattern across the catalogue, as an import csv of changed rows only. shopify store owners shopify free skill your store, a collection url, or a product export csv. one consistent title pattern across your catalogue, as a `url handle,title` import csv (changed rows only). it never creates duplicate titles. audit and fix">
   <div class="body">
     <div class="tags"><span class="tag free">Free skill</span><span class="tag">Shopify stores</span></div>
     <h3>Product Title Cleaner</h3>
@@ -209,7 +224,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <p class="tested">Tested on 3 real public Shopify catalogues, up to 490 products.</p>
     <div class="foot"><span class="price">Free</span><span class="go">See details</span></div>
   </div>
-</a><a class="card" href="/skills/review-reply-drafter/" data-id="review-reply-drafter" data-role="shopify" data-price="free">
+</a><a class="card" href="/skills/review-reply-drafter/" data-id="review-reply-drafter" data-role="shopify" data-price="free" data-type="single" data-s="review reply drafter a reply for every review, matched to its tone, with the risky ones flagged for you. shopify store owners shopify free skill your reviews (pasted, csv, or a public review page). a reply for each review, matched to its tone. it never promises refunds you didn&#x27;t approve, and it flags reviews that need you personally. reply to customers">
   <div class="body">
     <div class="tags"><span class="tag free">Free skill</span><span class="tag">Shopify stores</span></div>
     <h3>Review Reply Drafter</h3>
@@ -217,7 +232,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <p class="tested">Tested on 3 real public review sets (Judge.me and Trustpilot).</p>
     <div class="foot"><span class="price">Free</span><span class="go">See details</span></div>
   </div>
-</a><a class="card" href="/skills/shopify-alt-text-writer/" data-id="shopify-alt-text-writer" data-role="shopify" data-price="free">
+</a><a class="card" href="/skills/shopify-alt-text-writer/" data-id="shopify-alt-text-writer" data-role="shopify" data-price="free" data-type="single" data-s="alt text writer alt text for every product image, written while looking at the photo, as an import csv. shopify store owners shopify free skill your store url, a product url, or your product export csv. alt text for every product image, written while looking at the photo. comes as a shopify import csv, a review sheet, and a paste-by-hand list for products with variant images. write copy">
   <div class="body">
     <div class="tags"><span class="tag free">Free skill</span><span class="tag">Shopify stores</span></div>
     <h3>Alt Text Writer</h3>
@@ -225,7 +240,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <p class="tested">Tested on 6 real cases from public Shopify stores, including three product export CSVs.</p>
     <div class="foot"><span class="price">Free</span><span class="go">See details</span></div>
   </div>
-</a><a class="card" href="/skills/shopify-policy-checker/" data-id="shopify-policy-checker" data-role="shopify" data-price="free">
+</a><a class="card" href="/skills/shopify-policy-checker/" data-id="shopify-policy-checker" data-role="shopify" data-price="free" data-type="single" data-s="policy checker policy gaps and contradictions across refund, shipping, privacy and terms, with fixes to paste. shopify store owners shopify free skill your store url. a scored audit of your refund, shipping, privacy, terms and contact policies. it flags missing items and contradictions with your faq and banners, and gives fixes you can paste. audit and fix">
   <div class="body">
     <div class="tags"><span class="tag free">Free skill</span><span class="tag">Shopify stores</span></div>
     <h3>Policy Checker</h3>
@@ -238,17 +253,19 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 </div></main>
 <footer>
   <div class="wrap">
+    <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/short-term-rental-hosts/">Rental hosts</a></nav>
     <div class="row">
       <nav aria-label="Footer">
-        <a href="/catalog/">All skills</a>
+        <a href="/">All skills</a>
         <a href="/free/">Free skills</a>
         <a href="/guides/">Guides</a>
         <a href="/study/">Study</a>
+        <a href="/helpers/">Helpers</a>
         <a href="https://proskillpacks.gumroad.com" rel="noopener">Gumroad store</a>
         <a href="https://github.com/proskillpacks/shopify-store-skills" rel="noopener">GitHub</a>
         <a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a>
       </nav>
-      <div>Works with any AI assistant that reads SKILL.md: Claude, Codex, Gemini CLI, Cursor, Copilot and more.</div>
+      <div>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot.</div>
     </div>
     <small>Pro Skill Packs. Not affiliated with or endorsed by Shopify Inc.</small>
   </div>
