@@ -153,6 +153,9 @@ th { background: #eef2ee; }
 .kitbox { background: #fff; border: 2px solid var(--pine); border-radius: 14px; padding: 1rem 1.2rem; margin: 1.2rem 0; max-width: 52rem; }
 .kitbox img, img.kitimg { display: block; width: 100%; max-width: 40rem; height: auto; border-radius: 10px; margin: 0 0 0.8rem; }
 .kitbox p { margin: 0 0 0.8rem; }
+.svc td[data-l]::before { display: none; }
+@media (max-width: 640px) { .svc table, .svc tbody, .svc tr, .svc td { display: block; width: 100%; } .svc thead { display: none; } .svc tr { border: 1px solid var(--rule); border-radius: 10px; margin: 0 0 0.8rem; padding: 0.4rem 0.8rem; background: #fff; }
+  .svc td { border: 0; padding: 0.25rem 0; } .svc td[data-l]::before { display: block; content: attr(data-l); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--mist, #5b6b63); } }
 .assure { margin: 0.6rem 0 0; font-size: 0.95rem; max-width: 46rem; }
 .assure b { font-weight: 700; }
 .buybox .expect { margin: 0.9rem 0 0; padding-left: 1.1rem; color: var(--slate); font-size: 0.95rem; }
