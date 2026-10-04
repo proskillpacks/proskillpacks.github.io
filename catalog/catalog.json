@@ -151,7 +151,7 @@
    "jobs": [
     "reply to customers"
    ],
-   "tested": "Tested on 5 real public Shopify stores with Gorgias, Zendesk, Shopify Inbox and neutral output. 15 runs, each scored 9 or 9.5 out of 10.",
+   "tested": "Tested on 4 real public Shopify stores with Gorgias, Zendesk, Shopify Inbox and neutral output, scored against a written rubric. Every policy fact in the macros was checked against the stores' own policy text.",
    "includes": []
   },
   {
