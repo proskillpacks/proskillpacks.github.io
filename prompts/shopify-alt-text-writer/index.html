@@ -49,7 +49,7 @@ body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe U
 a { color: inherit; }
 img { max-width: 100%; }
 .wrap { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem; }
-.hero { background: var(--pine); color: var(--cream); padding: 1.5rem 0 2.75rem; }
+.hero { background: var(--pine); color: var(--cream); padding: 1.5rem 0 2.75rem; border-bottom: 4px solid var(--lime); }
 .brand { display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
 .brand img { width: 2.75rem; height: 2.75rem; border-radius: 10px; }
 .brand .name { color: var(--lime); font-weight: 800; letter-spacing: 0.06em; font-size: 0.95rem; text-decoration: none; }
@@ -59,7 +59,8 @@ img { max-width: 100%; }
 .crumbs { color: var(--mist); font-size: 0.9rem; margin: 2.25rem 0 0.6rem; }
 .crumbs a { color: var(--lime); text-decoration: none; font-weight: 700; }
 h1 { font-size: clamp(1.9rem, 4.6vw, 3rem); line-height: 1.1; letter-spacing: -0.02em; font-weight: 800; margin: 0 0 1rem; max-width: 46rem; overflow-wrap: break-word; }
-.lead { font-size: 1.1rem; color: var(--mist); max-width: 42rem; margin: 0 0 1.5rem; }
+.lead { font-size: 1.1rem; color: var(--mist); max-width: 40rem; margin: 0 0 1.5rem; text-wrap: pretty; }
+h1, h2, h3 { text-wrap: balance; }
 .cta { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
 .btn { display: inline-block; padding: 0.8rem 1.4rem; border-radius: 999px; font-weight: 700; text-decoration: none; border: 2px solid transparent; }
 .btn-lime { background: var(--lime); color: var(--pine); border-color: var(--lime); }
@@ -74,7 +75,7 @@ section { margin: 0 0 2.75rem; }
 h2 { font-size: clamp(1.4rem, 3vw, 1.8rem); letter-spacing: -0.015em; line-height: 1.2; margin: 0 0 0.75rem; font-weight: 800; }
 h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; }
 .sub { color: var(--slate); max-width: 44rem; margin: 0 0 1.5rem; }
-.prose { max-width: 46rem; font-size: 1.03rem; }
+.prose { max-width: 44rem; font-size: 1.06rem; line-height: 1.65; }
 .prose p { margin: 0 0 1rem; }
 .prose ul, .prose ol { margin: 0 0 1.1rem; padding-left: 1.3rem; }
 .prose li { margin-bottom: 0.4rem; }
@@ -117,10 +118,14 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .latest .when { color: var(--slate); font-size: 0.85rem; }
 .latest .go { background: none; padding: 0; color: var(--moss); text-decoration: underline; font-size: 0.92rem; }
 .demo { margin: 0; max-width: 40rem; position: relative; }
+.demorow { display: grid; gap: 1.5rem 2.5rem; grid-template-columns: minmax(0, 40rem) minmax(0, 1fr); align-items: center; margin: 0 0 2.75rem; }
+.demorow h2 { margin-top: 0; }
+@media (max-width: 860px) { .demorow { grid-template-columns: 1fr; } }
 .card > img.thumb { aspect-ratio: 16 / 9; border-bottom: 1px solid var(--rule); }
 .demo img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 14px; }
 .demobtn { position: absolute; left: 1rem; bottom: 1rem; font: inherit; font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 999px; border: 0; background: var(--lime); color: var(--pine); cursor: pointer; }
-.starthere { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 1.75rem 0 0; }
+.starthere { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 1.75rem 0 1.1rem; align-items: start; }
+.starthere + .sub { margin: 0 0 2.5rem; font-size: 0.98rem; }
 .starthere > div { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.1rem 1.3rem; }
 .starthere h2 { font-size: 1.05rem; margin: 0 0 0.6rem; }
 .starthere pre { margin: 0 0 0.7rem; font-size: 0.85rem; padding: 0.6rem 0.8rem; }
@@ -315,7 +320,7 @@ Here is my product data:</code></pre></div></section>
   <ul class="links">
     <li><a href="/feed.xml">RSS feed</a> for any feed reader</li>
     <li><a href="https://github.com/proskillpacks/skills" rel="noopener">Watch the free skills repo on GitHub</a></li>
-    <li><a href="https://proskillpacks.gumroad.com/subscribe" rel="noopener">Follow on Gumroad</a></li>
+    <li><a href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=prompt&amp;utm_campaign=subscribe" rel="noopener">Follow on Gumroad</a></li>
   </ul>
 </section>
 </div></main>
@@ -343,7 +348,7 @@ document.querySelectorAll('.prose pre').forEach(function (pre) {
         <a href="/works-with/">Works with</a>
         <a href="/faq/">FAQ</a>
         <a href="mailto:kaiventura.founder@gmail.com">Contact</a>
-        <a href="https://proskillpacks.gumroad.com" rel="noopener">Gumroad store</a>
+        <a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=prompt&amp;utm_campaign=store" rel="noopener">Gumroad store</a>
         <a href="https://github.com/proskillpacks/skills" rel="noopener">GitHub</a>
         <a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a>
       </nav>
