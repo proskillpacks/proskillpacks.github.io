@@ -101,7 +101,7 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .card.soon .go, .featured .go { background: none; padding: 0; color: var(--moss); text-decoration: underline; }
 .explain ul { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
 .explain li { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.8rem 1rem; font-size: 0.95rem; }
-.featured { display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin: 2rem 0 0; padding: 1.4rem 1.6rem; border-radius: 18px; background: var(--pine); color: var(--cream); text-decoration: none; }
+.featured { display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin: 2rem 0; padding: 1.4rem 1.6rem; border-radius: 18px; background: var(--pine); color: var(--cream); text-decoration: none; }
 .featured h2 { margin: 0.4rem 0 0.3rem; font-size: 1.5rem; color: var(--cream); }
 .featured p { margin: 0; color: var(--mist); max-width: 36rem; }
 .featured .side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
@@ -118,7 +118,8 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .latest li { font-size: 0.95rem; }
 .latest .when { color: var(--slate); font-size: 0.85rem; }
 .latest .go { background: none; padding: 0; color: var(--moss); text-decoration: underline; font-size: 0.92rem; }
-.demo { margin: 0; max-width: 46rem; position: relative; }
+.demo { margin: 0; max-width: 40rem; position: relative; }
+.card > img.thumb { aspect-ratio: 16 / 9; border-bottom: 1px solid var(--rule); }
 .demo img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 14px; }
 .demobtn { position: absolute; left: 1rem; bottom: 1rem; font: inherit; font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 999px; border: 0; background: var(--lime); color: var(--pine); cursor: pointer; }
 .starthere { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 1.75rem 0 0; }
@@ -191,6 +192,8 @@ a.card:hover, a.card:focus-visible { border-color: var(--pine); box-shadow: 0 10
 .tile span { color: var(--mist); font-size: 0.95rem; }
 .tile:hover, .tile:focus-visible { background: var(--moss); }
 .links { padding-left: 1.2rem; }
+.links li { margin: 0 0 0.45rem; line-height: 1.5; }
+.links ul { margin-top: 0.35rem; }
 .links a { color: var(--pine); font-weight: 700; }
 footer { background: var(--pine); color: var(--mist); padding: 2.5rem 0; font-size: 0.92rem; }
 footer .row { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; justify-content: space-between; }
@@ -265,6 +268,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   <div class="box"><b>What you give it</b><p>Your store URL.</p></div>
   <div class="box"><b>What you get</b><p>A 6-check scorecard of how well AI shopping agents (ChatGPT, Perplexity, Gemini, Copilot, Claude) can read your store. Each check is compared with 99 Shopify stores we audited in October 2026.</p></div>
 </div></section>
+<section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/agent-ready-quick-check-last.png" data-gif="/assets/demos/agent-ready-quick-check.gif" alt="Animated demo of Agent-Ready Quick Check on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Agent-Ready Quick Check">Play demo</button></figure></section>
 <section><h2>What it does</h2><div class="prose"><p>A free Agent Skill that checks, in about 30 seconds, how well AI shopping agents (ChatGPT, Perplexity, Gemini and Google AI Mode, Copilot, Claude) can read your Shopify store, and compares your store with 99 other Shopify stores.</p>
 <p>Give it your store URL. That&#x27;s all it needs.</p></div></section>
 <section><h2>Before and after</h2><p class="sub">Real public store, anonymised. Taken from the skill&#x27;s README.</p><div class="prose"><p>An outdoor-apparel brand&#x27;s store looks fine in a browser. The quick check says:</p>
@@ -276,6 +280,12 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">Free</span><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/l/free-shopify-skills">Download free</a><a class="btn btn-ghost" href="/packs/store-ops-pack/">See the Store Ops Pack, $29</a></div><p>MIT licence. Use it, change it, share it.</p></div></section>
 <section><h2>Related</h2><ul class="links"><li>Free paste-in prompt for any chatbot: <a href="/prompts/agent-ready-quick-check/">Can AI agents read my Shopify store? Free prompt</a></li><li><a href="/skills/bfcm-campaign-kit/">BFCM Campaign Kit</a> ($5): Offer maths on your real prices, a dated calendar, 5 emails, 3 SMS and an ops checklist.</li><li><a href="/skills/chargeback-evidence-checklist/">Chargeback Evidence Checklist</a> (Free): Got a chargeback? The evidence to gather for your dispute reason, what you already have, and where to find each piece in Shopify.</li><li><a href="/skills/chargeback-response-writer/">Chargeback Response Writer</a> ($5): A dispute response matched to the reason code. It never invents evidence.</li><li>More for Shopify store owners: <a href="/for/shopify/">Shopify store owners</a></li></ul></section>
 </div></main>
+<script>
+document.querySelectorAll('.demo').forEach(function (f) {
+  var b = f.querySelector('.demobtn'), i = f.querySelector('img');
+  b.addEventListener('click', function () { i.src = i.dataset.gif; b.hidden = true; });
+});
+</script>
 <footer>
   <div class="wrap">
     <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers and agencies</a><a href="/for/developers/">Developers</a><a href="/for/data-and-spreadsheets/">Spreadsheets</a><a href="/for/careers/">Careers</a><a href="/for/sales-and-outreach/">Sales and outreach</a><a href="/for/content-and-writing/">Writing</a><a href="/for/finance-and-admin/">Finance and admin</a><a href="/for/customer-support/">Support</a></nav>

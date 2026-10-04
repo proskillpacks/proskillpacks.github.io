@@ -101,7 +101,7 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .card.soon .go, .featured .go { background: none; padding: 0; color: var(--moss); text-decoration: underline; }
 .explain ul { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
 .explain li { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.8rem 1rem; font-size: 0.95rem; }
-.featured { display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin: 2rem 0 0; padding: 1.4rem 1.6rem; border-radius: 18px; background: var(--pine); color: var(--cream); text-decoration: none; }
+.featured { display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin: 2rem 0; padding: 1.4rem 1.6rem; border-radius: 18px; background: var(--pine); color: var(--cream); text-decoration: none; }
 .featured h2 { margin: 0.4rem 0 0.3rem; font-size: 1.5rem; color: var(--cream); }
 .featured p { margin: 0; color: var(--mist); max-width: 36rem; }
 .featured .side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
@@ -118,7 +118,8 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .latest li { font-size: 0.95rem; }
 .latest .when { color: var(--slate); font-size: 0.85rem; }
 .latest .go { background: none; padding: 0; color: var(--moss); text-decoration: underline; font-size: 0.92rem; }
-.demo { margin: 0; max-width: 46rem; position: relative; }
+.demo { margin: 0; max-width: 40rem; position: relative; }
+.card > img.thumb { aspect-ratio: 16 / 9; border-bottom: 1px solid var(--rule); }
 .demo img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 14px; }
 .demobtn { position: absolute; left: 1rem; bottom: 1rem; font: inherit; font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 999px; border: 0; background: var(--lime); color: var(--pine); cursor: pointer; }
 .starthere { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 1.75rem 0 0; }
@@ -191,6 +192,8 @@ a.card:hover, a.card:focus-visible { border-color: var(--pine); box-shadow: 0 10
 .tile span { color: var(--mist); font-size: 0.95rem; }
 .tile:hover, .tile:focus-visible { background: var(--moss); }
 .links { padding-left: 1.2rem; }
+.links li { margin: 0 0 0.45rem; line-height: 1.5; }
+.links ul { margin-top: 0.35rem; }
 .links a { color: var(--pine); font-weight: 700; }
 footer { background: var(--pine); color: var(--mist); padding: 2.5rem 0; font-size: 0.92rem; }
 footer .row { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; justify-content: space-between; }
@@ -265,6 +268,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   <div class="box"><b>What you give it</b><p>A CSV.</p></div>
   <div class="box"><b>What you get</b><p>It runs a small read-only script (Python 3 standard library) and reports rows, columns, each column&#x27;s type, blanks, distinct values, ranges, duplicates, mixed formats, stray spaces, case variants and outliers, then lists questions to ask the data&#x27;s owner. Without code execution it profiles a pasted sample and says so.</p></div>
 </div></section>
+<section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/csv-profile-and-sanity-check-last.png" data-gif="/assets/demos/csv-profile-and-sanity-check.gif" alt="Animated demo of CSV Profile and Sanity Check on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for CSV Profile and Sanity Check">Play demo</button></figure></section>
 <section><h2>What it does</h2><div class="prose"><p>Give it a CSV. It runs a small read-only script (Python 3 standard library) and reports rows, columns, each column&#x27;s type, blanks, distinct values, ranges, duplicates, mixed formats, stray spaces, case variants and outliers, then lists questions to ask the data&#x27;s owner. Without code execution it profiles a pasted sample and says so.</p></div></section>
 <section><h2>Before and after</h2><p class="sub">Taken from the skill&#x27;s README.</p><div class="prose"><blockquote><p><strong>Before:</strong> Opening a 891-row export and scrolling for a few minutes to see if it looks fine.</p>
 <p><strong>After (skill output, from a real test run):</strong> Test run on a public 891-row passenger CSV. It reported 19% blank in Age (177 rows) and 77% blank in Cabin, 15 zero fares, 53 high fare outliers, a Ticket column that should be read as text, trailing spaces in names and 2 blank Embarked values, named the two rows, and asked the owner eight questions, such as whether Fare is per person or per ticket. It changed nothing in the file.</p></blockquote></div></section>
@@ -275,6 +279,12 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">Free</span><a class="btn btn-pine" href="https://github.com/proskillpacks/skills/tree/main/skills/data/csv-profile-and-sanity-check">Get it on GitHub</a></div><p>MIT licence. Use it, change it, share it.</p></div></section>
 <section><h2>Related</h2><ul class="links"><li>Free paste-in prompt for any chatbot: <a href="/prompts/csv-profile-and-sanity-check/">CSV sanity check prompt for ChatGPT or Claude</a></li><li>More for people who work in spreadsheets: <a href="/for/data-and-spreadsheets/">Data and spreadsheets</a></li></ul></section>
 </div></main>
+<script>
+document.querySelectorAll('.demo').forEach(function (f) {
+  var b = f.querySelector('.demobtn'), i = f.querySelector('img');
+  b.addEventListener('click', function () { i.src = i.dataset.gif; b.hidden = true; });
+});
+</script>
 <footer>
   <div class="wrap">
     <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers and agencies</a><a href="/for/developers/">Developers</a><a href="/for/data-and-spreadsheets/">Spreadsheets</a><a href="/for/careers/">Careers</a><a href="/for/sales-and-outreach/">Sales and outreach</a><a href="/for/content-and-writing/">Writing</a><a href="/for/finance-and-admin/">Finance and admin</a><a href="/for/customer-support/">Support</a></nav>
