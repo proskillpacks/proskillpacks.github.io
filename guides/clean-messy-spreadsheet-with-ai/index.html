@@ -116,12 +116,13 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .demorow { display: grid; gap: 1.5rem 2.5rem; grid-template-columns: minmax(0, 40rem) minmax(0, 1fr); align-items: center; margin: 0 0 2.75rem; }
 .demorow h2 { margin-top: 0; }
 @media (max-width: 860px) { .demorow { grid-template-columns: 1fr; } }
-.chead { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem; padding: 0.7rem 1.25rem; background: linear-gradient(135deg, hsl(var(--h) 38% 20%), hsl(var(--h) 34% 28%)); color: var(--cream); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.chead { display: flex; align-items: center; flex-wrap: nowrap; min-height: 2.9rem; gap: 0.4rem; padding: 0.7rem 1.25rem; background: linear-gradient(135deg, hsl(var(--h) 38% 20%), hsl(var(--h) 34% 28%)); color: var(--cream); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
 .chead .ck { padding: 0.18rem 0.6rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); }
 .chead .ck.free { background: var(--lime); color: var(--pine); border-color: var(--lime); }
 .chead .ck.pack { background: var(--cream); color: var(--pine); border-color: var(--cream); }
 .chead .ck.soonk { border-style: dashed; }
-.chead .cc { margin-left: auto; opacity: 0.85; }
+.chead .cc { margin-left: auto; opacity: 0.85; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chead .ck { white-space: nowrap; }
 .card > img.thumb { aspect-ratio: 16 / 9; border-bottom: 1px solid var(--rule); }
 .demo img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 14px; }
 .demo::before { content: ""; position: absolute; inset: 0; border-radius: 14px; background: rgba(8, 24, 18, 0.38); pointer-events: none; transition: opacity 0.2s; }
@@ -314,7 +315,7 @@ DATA:
 <ul><li>Count the rows before and after. The difference should equal the duplicates you agreed to remove.</li><li>Compare totals for any number column, such as sum of revenue, before and after. Changes should be explainable from the log.</li><li>Sort each column and look at the first and last values.</li><li>Spot-check 10 rows from the change log against the original.</li><li>Open the &quot;needs review&quot; list and fix those by hand.</li></ul>
 <h2>Limits</h2>
 <ul><li>An assistant can miscount or drop rows in long pastes. That is why you check the counts and totals.</li><li>It does not know your business. It cannot tell which duplicate is the right one or whether a strange value is an error.</li><li>Dates like 03/04/2025 are ambiguous. Tell it whether you use day first or month first.</li><li>A sample may not show every kind of mess. Run the rules on the full sheet and look again.</li><li>For anything financial or legal, keep the original and the change log.</li></ul>
-<p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/clean-a-messy-csv-export/">How to clean a messy CSV export without losing data</a></li><li><a href="/guides/summarise-survey-results-without-overclaiming/">How do I summarise survey results without overclaiming?</a></li><li>All skills for people who work in spreadsheets: <a href="/for/data-and-spreadsheets/">Data and spreadsheets</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
+<p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/clean-a-messy-csv-export/">How to clean a messy CSV export without losing data</a></li><li><a href="/guides/how-to-check-a-csv-file-before-you-use-it/">How do I check a CSV file before I use it?</a></li><li>All skills for people who work in spreadsheets: <a href="/for/data-and-spreadsheets/">Data and spreadsheets</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Follow for new free skills</h2>
   <p>New free skills and guides appear in all of these as we publish them. Pick whichever you already use.</p>
   <ul class="links">

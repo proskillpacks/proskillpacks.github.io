@@ -116,12 +116,13 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .demorow { display: grid; gap: 1.5rem 2.5rem; grid-template-columns: minmax(0, 40rem) minmax(0, 1fr); align-items: center; margin: 0 0 2.75rem; }
 .demorow h2 { margin-top: 0; }
 @media (max-width: 860px) { .demorow { grid-template-columns: 1fr; } }
-.chead { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem; padding: 0.7rem 1.25rem; background: linear-gradient(135deg, hsl(var(--h) 38% 20%), hsl(var(--h) 34% 28%)); color: var(--cream); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.chead { display: flex; align-items: center; flex-wrap: nowrap; min-height: 2.9rem; gap: 0.4rem; padding: 0.7rem 1.25rem; background: linear-gradient(135deg, hsl(var(--h) 38% 20%), hsl(var(--h) 34% 28%)); color: var(--cream); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
 .chead .ck { padding: 0.18rem 0.6rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); }
 .chead .ck.free { background: var(--lime); color: var(--pine); border-color: var(--lime); }
 .chead .ck.pack { background: var(--cream); color: var(--pine); border-color: var(--cream); }
 .chead .ck.soonk { border-style: dashed; }
-.chead .cc { margin-left: auto; opacity: 0.85; }
+.chead .cc { margin-left: auto; opacity: 0.85; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chead .ck { white-space: nowrap; }
 .card > img.thumb { aspect-ratio: 16 / 9; border-bottom: 1px solid var(--rule); }
 .demo img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 14px; }
 .demo::before { content: ""; position: absolute; inset: 0; border-radius: 14px; background: rgba(8, 24, 18, 0.38); pointer-events: none; transition: opacity 0.2s; }
@@ -313,7 +314,7 @@ CODE:
 <p>Try an empty form, a very long string, a repeated click, a logged-out visit to a logged-in page, and the app with the network off. These are where generated code most often falls over.</p>
 <h2>Limits</h2>
 <ul><li>A review prompt reads only what you paste. It cannot see your servers, your cloud settings or code in files you left out.</li><li>It can miss real bugs and report ones that are not there. Passing a review does not mean the code is safe.</li><li>It does not replace automated tests, a dependency audit tool or a human review for payments, health or personal data.</li><li>If you cannot read the code at all, get someone who can to look before real users do.</li></ul>
-<p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/write-a-blameless-postmortem-after-an-outage/">How do I write a blameless postmortem after an outage?</a></li><li><a href="/guides/write-a-skill-md-that-works-when-a-tool-is-missing/">How to write a SKILL.md that still works when a tool is missing</a></li><li>All skills for developers: <a href="/for/developers/">Developers</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
+<p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/check-your-readme-setup-steps-actually-work/">How do I check that my README&#x27;s setup steps actually work?</a></li><li><a href="/guides/find-which-tests-your-change-is-missing/">How do I find which tests my change is missing?</a></li><li>All skills for developers: <a href="/for/developers/">Developers</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Follow for new free skills</h2>
   <p>New free skills and guides appear in all of these as we publish them. Pick whichever you already use.</p>
   <ul class="links">

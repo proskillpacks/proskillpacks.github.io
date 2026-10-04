@@ -116,12 +116,13 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .demorow { display: grid; gap: 1.5rem 2.5rem; grid-template-columns: minmax(0, 40rem) minmax(0, 1fr); align-items: center; margin: 0 0 2.75rem; }
 .demorow h2 { margin-top: 0; }
 @media (max-width: 860px) { .demorow { grid-template-columns: 1fr; } }
-.chead { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem; padding: 0.7rem 1.25rem; background: linear-gradient(135deg, hsl(var(--h) 38% 20%), hsl(var(--h) 34% 28%)); color: var(--cream); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.chead { display: flex; align-items: center; flex-wrap: nowrap; min-height: 2.9rem; gap: 0.4rem; padding: 0.7rem 1.25rem; background: linear-gradient(135deg, hsl(var(--h) 38% 20%), hsl(var(--h) 34% 28%)); color: var(--cream); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
 .chead .ck { padding: 0.18rem 0.6rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); }
 .chead .ck.free { background: var(--lime); color: var(--pine); border-color: var(--lime); }
 .chead .ck.pack { background: var(--cream); color: var(--pine); border-color: var(--cream); }
 .chead .ck.soonk { border-style: dashed; }
-.chead .cc { margin-left: auto; opacity: 0.85; }
+.chead .cc { margin-left: auto; opacity: 0.85; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chead .ck { white-space: nowrap; }
 .card > img.thumb { aspect-ratio: 16 / 9; border-bottom: 1px solid var(--rule); }
 .demo img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 14px; }
 .demo::before { content: ""; position: absolute; inset: 0; border-radius: 14px; background: rgba(8, 24, 18, 0.38); pointer-events: none; transition: opacity 0.2s; }
@@ -313,7 +314,7 @@ Produce:
 <p>Give each interviewer their competencies and the notes boxes. Ask them to write evidence first and score second, and to score alone before the debrief. Then discuss competency by competency, not candidate by candidate.</p>
 <h2>Limits</h2>
 <ul><li>It builds the tool. It does not score candidates or tell you who to hire.</li><li>A vague post gives a vague scorecard. The gaps list tells you what to settle with the hiring manager.</li><li>Weights are a suggestion. The hiring manager decides.</li><li>The fairness note is general and not legal advice. Rules on hiring questions differ by country.</li><li>A scorecard reduces guesswork. It does not remove bias, so keep the panel mixed and the questions the same for everyone.</li></ul>
-<p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/rewrite-resume-bullets-without-inventing-numbers/">How to rewrite resume bullets without inventing numbers</a></li><li><a href="/guides/shopify-chargeback-response-template/">Chargeback response template for Shopify</a></li><li>All skills for job seekers: <a href="/for/careers/">Job seekers and careers</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
+<p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/how-to-answer-tell-me-about-a-time-with-your-own-experience/">How do I answer &quot;tell me about a time when&quot; using my own experience?</a></li><li><a href="/guides/how-to-tell-what-a-job-post-really-asks-for/">How do I tell what a job post really asks for?</a></li><li>All skills for job seekers: <a href="/for/careers/">Job seekers and careers</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Follow for new free skills</h2>
   <p>New free skills and guides appear in all of these as we publish them. Pick whichever you already use.</p>
   <ul class="links">

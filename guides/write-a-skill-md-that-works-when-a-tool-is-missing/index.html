@@ -116,12 +116,13 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .demorow { display: grid; gap: 1.5rem 2.5rem; grid-template-columns: minmax(0, 40rem) minmax(0, 1fr); align-items: center; margin: 0 0 2.75rem; }
 .demorow h2 { margin-top: 0; }
 @media (max-width: 860px) { .demorow { grid-template-columns: 1fr; } }
-.chead { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem; padding: 0.7rem 1.25rem; background: linear-gradient(135deg, hsl(var(--h) 38% 20%), hsl(var(--h) 34% 28%)); color: var(--cream); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.chead { display: flex; align-items: center; flex-wrap: nowrap; min-height: 2.9rem; gap: 0.4rem; padding: 0.7rem 1.25rem; background: linear-gradient(135deg, hsl(var(--h) 38% 20%), hsl(var(--h) 34% 28%)); color: var(--cream); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
 .chead .ck { padding: 0.18rem 0.6rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); }
 .chead .ck.free { background: var(--lime); color: var(--pine); border-color: var(--lime); }
 .chead .ck.pack { background: var(--cream); color: var(--pine); border-color: var(--cream); }
 .chead .ck.soonk { border-style: dashed; }
-.chead .cc { margin-left: auto; opacity: 0.85; }
+.chead .cc { margin-left: auto; opacity: 0.85; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chead .ck { white-space: nowrap; }
 .card > img.thumb { aspect-ratio: 16 / 9; border-bottom: 1px solid var(--rule); }
 .demo img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 14px; }
 .demo::before { content: ""; position: absolute; inset: 0; border-radius: 14px; background: rgba(8, 24, 18, 0.38); pointer-events: none; transition: opacity 0.2s; }
@@ -313,7 +314,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <h2>Limits</h2>
 <ul><li>Fallback phrases are a measurable proxy, not proof. A fallback can be present and badly written.</li><li>We tested our own skills on one family of models, so we cannot say how every assistant reacts to these lines. Read what yours does.</li><li>A fallback adds length. Keep it to a line or two, and keep <code>SKILL.md</code> short.</li><li>The three &quot;before&quot; lines are our illustrations of a common pattern. They are not quotes from any skill in the study.</li></ul>
 <p>We make agent skills. The free ones quoted here are at <a href="https://github.com/proskillpacks/skills" rel="noopener">proskillpacks/skills</a> and the study data is at <a href="/study/portability/">the portability study</a>.</p>
-<p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/check-ai-written-code-before-launch/">How to check AI-written code before you launch it</a></li><li><a href="/guides/write-a-blameless-postmortem-after-an-outage/">How do I write a blameless postmortem after an outage?</a></li><li>All skills for developers: <a href="/for/developers/">Developers</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
+<p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/check-ai-written-code-before-launch/">How to check AI-written code before you launch it</a></li><li><a href="/guides/check-your-readme-setup-steps-actually-work/">How do I check that my README&#x27;s setup steps actually work?</a></li><li>All skills for developers: <a href="/for/developers/">Developers</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Follow for new free skills</h2>
   <p>New free skills and guides appear in all of these as we publish them. Pick whichever you already use.</p>
   <ul class="links">
