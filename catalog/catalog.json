@@ -429,6 +429,28 @@
    "includes": []
   },
   {
+   "id": "changelog-from-commits",
+   "title": "Changelog from Commits",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "developers",
+   "category_name": "Developers",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/changelog-from-commits/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/changelog-from-commits",
+   "summary": "Give it a commit range or a pasted git log. Get a user-facing changelog with the commit behind every line, and the vague commits flagged.",
+   "give": "A commit range or a pasted git log.",
+   "get": "Get a user-facing changelog with the commit behind every line, and the vague commits flagged.",
+   "jobs": [
+    "review code"
+   ],
+   "tags": [],
+   "tested": "1 real-data run on the public Express repository (Claude Sonnet, 15 commits). Every entry matched a commit message; the one vague commit was flagged.",
+   "includes": []
+  },
+  {
    "id": "pr-description-and-review-prep",
    "title": "PR Description and Review Prep",
    "kind": "Free skill",
@@ -449,6 +471,50 @@
    ],
    "tags": [],
    "tested": "1 real-data run on four public commits (Claude Sonnet).",
+   "includes": []
+  },
+  {
+   "id": "readme-first-run-check",
+   "title": "README First-Run Check",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "developers",
+   "category_name": "Developers",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/readme-first-run-check/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/readme-first-run-check",
+   "summary": "Point it at a repo. It follows the README like a new user and checks every step against the repo: OK, BROKEN, MISSING or UNVERIFIED, with evidence and the README edits that fix it.",
+   "give": "Point it at a repo.",
+   "get": "It follows the README like a new user and checks every step against the repo: OK, BROKEN, MISSING or UNVERIFIED, with evidence and the README edits that fix it.",
+   "jobs": [
+    "review code"
+   ],
+   "tags": [],
+   "tested": "1 real-data run on a public MDN tutorial repository (Claude Sonnet). The missing start script, the .nvmrc version and the stale Create React App text were all real.",
+   "includes": []
+  },
+  {
+   "id": "test-gap-finder",
+   "title": "Test Gap Finder",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "developers",
+   "category_name": "Developers",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/test-gap-finder/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/test-gap-finder",
+   "summary": "Give it a diff and the tests. Get each behaviour the change adds marked Covered, Not covered or Unknown, and ranked test cases for the gaps.",
+   "give": "A diff and the tests.",
+   "get": "Get each behaviour the change adds marked Covered, Not covered or Unknown, and ranked test cases for the gaps.",
+   "jobs": [
+    "review code"
+   ],
+   "tags": [],
+   "tested": "1 real-data run on a public multi-hunk change in the Express repository (Claude Sonnet). We checked each Covered and Not covered claim against the tests ourselves.",
    "includes": []
   },
   {

@@ -1,0 +1,173 @@
+{
+ "conc3_lark_merged": {
+  "skills": 71,
+  "installs_pct": 69.9,
+  "publishers": [
+   "lark (open.feishu.cn + larksuite)",
+   "mattpocock",
+   "microsoft"
+  ]
+ },
+ "listed": 100,
+ "fetched": 71,
+ "not_fetched": 29,
+ "not_fetched_reasons": {
+  "source is a vendor domain, not a GitHub repo; same skill id fetched from a GitHub source": 3,
+  "source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere": 24,
+  "removed from the repo (a removal changeset exists)": 1,
+  "no SKILL.md folder or name matches this id in the repo tree": 1
+ },
+ "category_counts": {
+  "Workspace apps (mail, calendar, docs, tasks)": 30,
+  "Cloud, database and vendor platforms": 22,
+  "Dev workflow: review, testing, planning": 20,
+  "Image, video and audio generation": 12,
+  "Agent, browser and skill tooling": 9,
+  "UI and frontend design": 5,
+  "Marketing, SEO and sales": 2
+ },
+ "audience_counts": {
+  "developer": 56,
+  "creative": 12,
+  "business": 32
+ },
+ "classified_by_name": 98,
+ "classified_by_description": 2,
+ "other": 0,
+ "publishers": 14,
+ "top_publishers": [
+  [
+   "open.feishu.cn",
+   27,
+   27.7
+  ],
+  [
+   "mattpocock",
+   21,
+   23.6
+  ],
+  [
+   "microsoft",
+   20,
+   16.7
+  ],
+  [
+   "heygen-com",
+   8,
+   7.4
+  ],
+  [
+   "google",
+   7,
+   4.6
+  ],
+  [
+   "vercel-labs",
+   4,
+   8.7
+  ],
+  [
+   "101-skills",
+   4,
+   3.7
+  ],
+  [
+   "larksuite",
+   3,
+   2.0
+  ],
+  [
+   "anthropics",
+   1,
+   1.3
+  ],
+  [
+   "flowkit-labs",
+   1,
+   1.1
+  ]
+ ],
+ "conc3": {
+  "skills": 68,
+  "installs_pct": 67.9
+ },
+ "conc5": {
+  "skills": 83,
+  "installs_pct": 84.1
+ },
+ "conc10": {
+  "skills": 96,
+  "installs_pct": 96.8
+ },
+ "installs_total": 70931048,
+ "installs_rank1": 3692279,
+ "installs_rank10": 882849,
+ "installs_rank50": 655185,
+ "installs_rank100": 460312,
+ "installs_median": 654433,
+ "head_ratio_rank1_to_rank100": 8.0,
+ "share_top1": 5.2,
+ "share_top10": 18.1,
+ "share_top20": 29.0,
+ "share_top50": 59.7,
+ "over_1m": 6,
+ "between_500k_1m": 80,
+ "under_500k": 14,
+ "lines_median": 108,
+ "lines_buckets": [
+  [
+   "up to 50",
+   12
+  ],
+  [
+   "50-100",
+   22
+  ],
+  [
+   "100-200",
+   23
+  ],
+  [
+   "200-500",
+   12
+  ],
+  [
+   "over 500",
+   2
+  ]
+ ],
+ "lines_max": 1206,
+ "desc_median": 368,
+ "desc_buckets": [
+  [
+   "up to 150",
+   11
+  ],
+  [
+   "150-300",
+   19
+  ],
+  [
+   "300-500",
+   14
+  ],
+  [
+   "500-1024",
+   27
+  ],
+  [
+   "over 1024",
+   0
+  ]
+ ],
+ "says_when_to_use": 42,
+ "has_script": 14,
+ "script_langs": {
+  "JavaScript": 5,
+  "shell": 7,
+  "Python": 4,
+  "PowerShell": 7,
+  "TypeScript": 1
+ },
+ "vendor_authored_share_note": "publisher = owner part of the skills.sh source id"
+}

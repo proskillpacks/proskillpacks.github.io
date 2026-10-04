@@ -1,0 +1,101 @@
+rank,source,publisher,skill,installs,fetched,not_fetched_reason,category,audience,lines,description_chars,says_when_to_use,has_script,script_langs,class_basis
+1,vercel-labs/skills,vercel-labs,find-skills,3692279,1,,"Agent, browser and skill tooling",developer,141,303,1,0,,name
+2,mattpocock/skills,mattpocock,grill-me,1279869,1,,"Dev workflow: review, testing, planning",developer,7,51,0,0,,name
+3,mattpocock/skills,mattpocock,grill-with-docs,1094069,1,,"Dev workflow: review, testing, planning",developer,7,106,0,0,,name
+4,mattpocock/skills,mattpocock,improve-codebase-architecture,1041102,1,,"Dev workflow: review, testing, planning",developer,71,125,0,0,,name
+5,vercel-labs/agent-browser,vercel-labs,agent-browser,1023850,1,,"Agent, browser and skill tooling",developer,52,925,1,0,,name
+6,mattpocock/skills,mattpocock,tdd,1013060,1,,"Dev workflow: review, testing, planning",developer,38,149,1,0,,name
+7,anthropics/skills,anthropics,frontend-design,951840,1,,UI and frontend design,developer,71,204,0,0,,name
+8,mattpocock/skills,mattpocock,setup-matt-pocock-skills,934812,1,,"Agent, browser and skill tooling",developer,116,180,0,0,,name
+9,mattpocock/skills,mattpocock,handoff,912898,1,,"Dev workflow: review, testing, planning",developer,16,86,0,0,,name
+10,mattpocock/skills,mattpocock,triage,882849,1,,"Dev workflow: review, testing, planning",developer,112,136,0,0,,name
+11,mattpocock/skills,mattpocock,prototype,879741,1,,"Dev workflow: review, testing, planning",developer,26,179,1,0,,name
+12,mattpocock/skills,mattpocock,grilling,828582,1,,"Dev workflow: review, testing, planning",developer,28,152,1,0,,name
+13,heygen-com/hyperframes,heygen-com,hyperframes-cli,786151,1,,"Image, video and audio generation",creative,188,576,1,0,,name
+14,flowkit-labs/skills,flowkit-labs,reddit-automation,772394,1,,"Marketing, SEO and sales",business,120,928,1,0,,name
+15,vercel-labs/agent-skills,vercel-labs,vercel-react-best-practices,768665,1,,UI and frontend design,developer,149,329,1,0,,name
+16,heygen-com/hyperframes,heygen-com,hyperframes,753300,1,,"Image, video and audio generation",creative,143,792,1,1,JavaScript,name
+17,mattpocock/skills,mattpocock,teach,750263,1,,"Dev workflow: review, testing, planning",developer,140,61,0,0,,name
+18,mattpocock/skills,mattpocock,domain-modeling,748768,1,,"Dev workflow: review, testing, planning",developer,74,151,1,0,,name
+19,open.feishu.cn,open.feishu.cn,lark-doc,744145,0,"source is a vendor domain, not a GitHub repo; same skill id fetched from a GitHub source","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+20,open.feishu.cn,open.feishu.cn,lark-base,743817,0,"source is a vendor domain, not a GitHub repo; same skill id fetched from a GitHub source","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+21,open.feishu.cn,open.feishu.cn,lark-drive,743749,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+22,open.feishu.cn,open.feishu.cn,lark-shared,743344,0,"source is a vendor domain, not a GitHub repo; same skill id fetched from a GitHub source","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+23,open.feishu.cn,open.feishu.cn,lark-im,743078,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+24,open.feishu.cn,open.feishu.cn,lark-approval,742911,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+25,open.feishu.cn,open.feishu.cn,lark-calendar,742856,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+26,open.feishu.cn,open.feishu.cn,lark-sheets,742628,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+27,open.feishu.cn,open.feishu.cn,lark-wiki,742408,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+28,open.feishu.cn,open.feishu.cn,lark-contact,742052,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+29,open.feishu.cn,open.feishu.cn,lark-task,741815,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+30,open.feishu.cn,open.feishu.cn,lark-slides,741810,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+31,open.feishu.cn,open.feishu.cn,lark-mail,741790,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+32,open.feishu.cn,open.feishu.cn,lark-event,741647,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+33,open.feishu.cn,open.feishu.cn,lark-whiteboard,741643,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+34,open.feishu.cn,open.feishu.cn,lark-attendance,741460,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+35,open.feishu.cn,open.feishu.cn,lark-minutes,741435,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+36,open.feishu.cn,open.feishu.cn,lark-openapi-explorer,741412,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+37,open.feishu.cn,open.feishu.cn,lark-skill-maker,741047,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+38,open.feishu.cn,open.feishu.cn,lark-workflow-meeting-summary,740922,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+39,open.feishu.cn,open.feishu.cn,lark-vc,740743,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+40,open.feishu.cn,open.feishu.cn,lark-workflow-standup-report,740708,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+41,mattpocock/skills,mattpocock,codebase-design,725842,1,,"Dev workflow: review, testing, planning",developer,114,265,1,0,,name
+42,open.feishu.cn,open.feishu.cn,lark-okr,722248,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+43,mattpocock/skills,mattpocock,diagnosing-bugs,710360,1,,"Dev workflow: review, testing, planning",developer,138,156,1,1,shell,name
+44,open.feishu.cn,open.feishu.cn,lark-markdown,707816,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+45,vercel-labs/agent-skills,vercel-labs,web-design-guidelines,697124,1,,UI and frontend design,developer,39,184,1,0,,name
+46,open.feishu.cn,open.feishu.cn,lark-vc-agent,685280,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+47,heygen-com/hyperframes,heygen-com,hyperframes-registry,678708,1,,"Image, video and audio generation",creative,147,892,1,0,,name
+48,mattpocock/skills,mattpocock,code-review,661982,1,,"Dev workflow: review, testing, planning",developer,87,419,1,0,,name
+49,heygen-com/hyperframes,heygen-com,media-use,661449,1,,"Image, video and audio generation",creative,100,632,1,1,JavaScript;Python,description
+50,mattpocock/skills,mattpocock,implement,655185,1,,"Dev workflow: review, testing, planning",developer,15,60,0,0,,name
+51,mattpocock/skills,mattpocock,ask-matt,654433,1,,"Dev workflow: review, testing, planning",developer,95,83,0,0,,name
+52,open.feishu.cn,open.feishu.cn,lark-apps,652517,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+53,101-skills/superpowers,101-skills,ai-video-generation,650387,1,,"Image, video and audio generation",creative,252,753,1,0,,name
+54,101-skills/superpowers,101-skills,ai-image-generation,649862,1,,"Image, video and audio generation",creative,171,746,1,0,,name
+55,101-skills/superpowers,101-skills,twitter-automation,649836,1,,"Marketing, SEO and sales",business,157,588,1,0,,name
+56,101-skills/superpowers,101-skills,ai-avatar-video,649554,1,,"Image, video and audio generation",creative,267,768,1,0,,name
+57,heygen-com/hyperframes,heygen-com,hyperframes-core,648960,1,,"Image, video and audio generation",creative,100,298,1,0,,name
+58,heygen-com/hyperframes,heygen-com,hyperframes-animation,638572,1,,"Image, video and audio generation",creative,88,623,1,1,JavaScript,name
+59,microsoft/azure-skills,microsoft,microsoft-foundry,629064,1,,"Cloud, database and vendor platforms",developer,293,1001,1,1,PowerShell;Python;shell,name
+60,microsoft/azure-skills,microsoft,azure-diagnostics,619250,1,,"Cloud, database and vendor platforms",developer,155,770,0,1,PowerShell;shell,name
+61,microsoft/azure-skills,microsoft,azure-prepare,618827,1,,"Cloud, database and vendor platforms",developer,155,723,1,1,PowerShell;shell,name
+62,microsoft/azure-skills,microsoft,azure-ai,618587,1,,"Cloud, database and vendor platforms",developer,71,308,1,0,,name
+63,microsoft/azure-skills,microsoft,azure-deploy,618480,1,,"Cloud, database and vendor platforms",developer,97,840,1,1,PowerShell;shell,name
+64,microsoft/azure-skills,microsoft,azure-validate,617907,1,,"Cloud, database and vendor platforms",developer,67,634,0,1,PowerShell;shell,name
+65,microsoft/azure-skills,microsoft,azure-storage,617350,1,,"Cloud, database and vendor platforms",developer,100,753,1,0,,name
+66,microsoft/azure-skills,microsoft,entra-app-registration,617112,1,,"Cloud, database and vendor platforms",developer,191,425,1,0,,name
+67,microsoft/azure-skills,microsoft,azure-compliance,616946,1,,"Cloud, database and vendor platforms",developer,87,408,0,0,,name
+68,microsoft/azure-skills,microsoft,appinsights-instrumentation,616829,1,,"Cloud, database and vendor platforms",developer,76,303,0,1,PowerShell,description
+69,microsoft/azure-skills,microsoft,azure-resource-lookup,616792,1,,"Cloud, database and vendor platforms",developer,108,786,1,0,,name
+70,microsoft/azure-skills,microsoft,azure-resource-visualizer,616758,1,,"Cloud, database and vendor platforms",developer,183,373,0,0,,name
+71,microsoft/azure-skills,microsoft,azure-aigateway,616497,1,,"Cloud, database and vendor platforms",developer,129,395,0,0,,name
+72,microsoft/azure-skills,microsoft,azure-kusto,616408,1,,"Cloud, database and vendor platforms",developer,231,268,0,0,,name
+73,heygen-com/hyperframes,heygen-com,hyperframes-creative,609900,1,,"Image, video and audio generation",creative,73,310,1,1,JavaScript;Python,name
+74,microsoft/azure-skills,microsoft,azure-messaging,606115,1,,"Cloud, database and vendor platforms",developer,57,917,0,0,,name
+75,mattpocock/skills,mattpocock,wayfinder,605716,1,,"Dev workflow: review, testing, planning",developer,128,197,0,0,,name
+76,mattpocock/skills,mattpocock,to-spec,604028,1,,"Dev workflow: review, testing, planning",developer,75,149,0,0,,name
+77,mattpocock/skills,mattpocock,research,602746,1,,"Dev workflow: review, testing, planning",developer,12,238,1,0,,name
+78,designed-by-ai/skills,designed-by-ai,design-mobile-apps,599145,1,,UI and frontend design,developer,564,190,1,0,,name
+79,mattpocock/skills,mattpocock,to-tickets,592967,1,,"Dev workflow: review, testing, planning",developer,105,247,0,0,,name
+80,remotion-dev/skills,remotion-dev,remotion-best-practices,570218,1,,"Image, video and audio generation",creative,109,30,0,1,JavaScript;TypeScript,name
+81,microsoft/azure-skills,microsoft,azure-compute,560051,1,,"Cloud, database and vendor platforms",developer,32,651,0,0,,name
+82,leonxlnx/taste-skill,leonxlnx,design-taste-frontend,559166,1,,UI and frontend design,developer,1206,269,0,0,,name
+83,mattpocock/skills,mattpocock,resolving-merge-conflicts,559151,0,removed from the repo (a removal changeset exists),"Dev workflow: review, testing, planning",developer,,,,,,name
+84,juliusbrussee/caveman,juliusbrussee,caveman,556688,1,,"Agent, browser and skill tooling",developer,88,203,1,0,,name
+85,microsoft/azure-skills,microsoft,azure-cloud-migrate,550059,1,,"Cloud, database and vendor platforms",developer,52,445,0,0,,name
+86,open.feishu.cn,open.feishu.cn,lark-note,525121,0,"source is a vendor domain, not a GitHub repo; same skill id not fetched elsewhere","Workspace apps (mail, calendar, docs, tasks)",business,,,,,,name
+87,heygen-com/hyperframes,heygen-com,hyperframes-keyframes,495753,1,,"Image, video and audio generation",creative,264,424,1,0,,name
+88,microsoft/azure-skills,microsoft,azure-rbac,493376,0,no SKILL.md folder or name matches this id in the repo tree,"Cloud, database and vendor platforms",developer,,,,,,name
+89,microsoft/azure-skills,microsoft,azure-quotas,486105,1,,"Cloud, database and vendor platforms",developer,276,368,0,1,PowerShell;shell,name
+90,microsoft/azure-skills,microsoft,azure-upgrade,478207,1,,"Cloud, database and vendor platforms",developer,91,412,0,1,Python,name
+91,google/agents-cli,google,google-agents-cli-adk-code,470883,1,,"Cloud, database and vendor platforms",developer,73,538,1,0,,name
+92,google/agents-cli,google,google-agents-cli-deploy,470334,1,,"Cloud, database and vendor platforms",developer,432,639,1,0,,name
+93,google/agents-cli,google,google-agents-cli-workflow,470292,1,,"Agent, browser and skill tooling",developer,337,548,1,0,,name
+94,google/agents-cli,google,google-agents-cli-eval,470271,1,,"Agent, browser and skill tooling",developer,391,633,1,0,,name
+95,google/agents-cli,google,google-agents-cli-scaffold,470193,1,,"Agent, browser and skill tooling",developer,277,555,1,0,,name
+96,google/agents-cli,google,google-agents-cli-observability,470160,1,,"Agent, browser and skill tooling",developer,164,558,1,0,,name
+97,google/agents-cli,google,google-agents-cli-publish,470145,1,,"Agent, browser and skill tooling",developer,208,655,1,0,,name
+98,larksuite/cli,larksuite,lark-doc,463650,1,,"Workspace apps (mail, calendar, docs, tasks)",business,49,212,0,0,,name
+99,larksuite/cli,larksuite,lark-base,461462,1,,"Workspace apps (mail, calendar, docs, tasks)",business,285,241,0,0,,name
+100,larksuite/cli,larksuite,lark-shared,460312,1,,"Workspace apps (mail, calendar, docs, tasks)",business,48,214,1,0,,name
