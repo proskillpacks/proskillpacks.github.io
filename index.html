@@ -294,7 +294,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <li><a href="/prompts/">Free prompts to copy and paste</a> (21 so far)</li>
 <li><a href="/guides/install-skills-chatgpt-paste-in-prompt/">How the paste-in route works</a></li>
 <li><a href="/guides/skills-vs-prompts-vs-custom-gpts/">Skills, prompts or custom GPTs?</a></li></ul></div>
-<div><h2>I want a job done</h2><div class="minichips"><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers and agencies</a><a href="/for/developers/">Developers</a><a href="/for/data-and-spreadsheets/">Spreadsheets</a><a href="/for/careers/">Careers</a><a href="/for/sales-and-outreach/">Sales and outreach</a><a href="/for/content-and-writing/">Writing</a><a href="/for/finance-and-admin/">Finance and admin</a><a href="/for/customer-support/">Support</a></div></div>
+<div><h2>I want a job done</h2><div class="minichips"><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers and agencies</a><a href="/for/developers/">Developers</a><a href="/for/data-and-spreadsheets/">Spreadsheets</a><a href="/for/careers/">Careers</a><a href="/for/sales-and-outreach/">Sales and outreach</a><a href="/for/content-and-writing/">Writing</a><a href="/for/finance-and-admin/">Finance and admin</a><a href="/for/customer-support/">Support</a></div><p class="sub" style="margin:0.8rem 0 0;font-size:0.92rem">Not here? <a href="/request/">Ask for it</a>.</p></div>
 </section>
 <p class="sub">A skill is a short instruction file your assistant follows for one job. You paste in your text or a link and get work back, with a before and after on each page.</p>
 <section class="demorow"><figure class="demo"><img src="/assets/demos/skill-portability-check-last.png" data-gif="/assets/demos/skill-portability-check.gif" alt="Animated demo of Skill Portability Check on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Skill Portability Check">Play</button></figure><div><h2>See one run</h2><p class="sub">Skill Portability Check on a real example: what goes in, what comes out. Press play, or <a href="/skills/skill-portability-check/">open the skill page</a> for the full before and after.</p></div></section><script>
@@ -523,7 +523,7 @@ document.querySelectorAll('.demo').forEach(function (f) {
     <div class="foot"><span class="price">$5</span><span class="go">See details</span></div>
   </div>
 </a></div>
-<p id="empty" hidden>Nothing matches. Try fewer words, or clear the filters.</p></section>
+<p id="empty" hidden>No match. Try fewer words, or clear the filters. <a id="reqlink" href="/request/">Request this skill</a>.</p></section>
 <section id="soon-section"><h2>Arriving this week</h2><p class="sub">Not for sale yet. Dates are targets and prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon" data-id="ai-code-launch-safety-review" data-role="developers" data-price="paid" data-type="single" data-s="ai-code launch safety review point it at a project before launch. get findings with file and line proof, a fix for each, and a plain list of what it did not check. developers developers single skill audit and fix review code">
   <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 5 Oct</span><span class="cc">Developers</span></div><div class="body">
     <h3>AI-Code Launch Safety Review</h3>
@@ -831,6 +831,7 @@ document.querySelectorAll('.demo').forEach(function (f) {
 </div></main>
 <script>
 (function () {
+  var REQ = 'https://github.com/proskillpacks/skills/issues/new?template=request-skill.yml&title=';
   var grid = document.getElementById('grid');
   var q = document.getElementById('q'), price = document.getElementById('price'), type = document.getElementById('type');
   var chips = Array.prototype.slice.call(document.querySelectorAll('.chips a'));
@@ -850,6 +851,7 @@ document.querySelectorAll('.demo').forEach(function (f) {
     count.textContent = n + (n === 1 ? ' skill or pack' : ' skills and packs');
     if (soonsec) soonsec.hidden = soonN === 0;
     empty.hidden = n + soonN !== 0;
+    var rl = document.getElementById('reqlink'); if (rl) rl.href = q.value ? REQ + encodeURIComponent('Skill request: ' + q.value) : '/request/';
     var p = new URLSearchParams();
     if (q.value) p.set('q', q.value); if (cat) p.set('cat', cat); if (pr) p.set('price', pr); if (ty) p.set('type', ty);
     var s = p.toString();
@@ -875,6 +877,7 @@ document.querySelectorAll('.demo').forEach(function (f) {
         <a href="/new/">What's new</a>
         <a href="/changelog/">Changelog</a>
         <a href="/affiliates/">Affiliates</a>
+        <a href="/request/">Request a skill</a>
         <a href="/study/">Study</a>
         <a href="/helpers/">Helpers</a>
         <a href="/about/">About</a>
