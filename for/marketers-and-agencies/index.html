@@ -103,12 +103,12 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .demorow { display: grid; gap: 1.5rem 2.5rem; grid-template-columns: minmax(0, 40rem) minmax(0, 1fr); align-items: center; margin: 0 0 2.75rem; }
 .demorow h2 { margin-top: 0; }
 @media (max-width: 860px) { .demorow { grid-template-columns: 1fr; } }
-.chead { display: flex; align-items: center; flex-wrap: nowrap; min-height: 2.9rem; gap: 0.4rem; padding: 0.7rem 1.25rem; background: linear-gradient(135deg, hsl(var(--h) 38% 20%), hsl(var(--h) 34% 28%)); color: var(--cream); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.chead { display: flex; align-items: center; flex-wrap: nowrap; min-height: 3.1rem; gap: 0.4rem; padding: 0.7rem 1.25rem; background: linear-gradient(135deg, hsl(var(--h) 38% 20%), hsl(var(--h) 34% 28%)); color: var(--cream); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
 .chead .ck { padding: 0.18rem 0.6rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); }
 .chead .ck.free { background: var(--lime); color: var(--pine); border-color: var(--lime); }
 .chead .ck.pack { background: var(--cream); color: var(--pine); border-color: var(--cream); }
 .chead .ck.soonk { border-style: dashed; }
-.chead .cc { margin-left: auto; opacity: 0.85; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chead .cc { margin-left: auto; opacity: 0.85; min-width: 0; text-align: right; line-height: 1.2; font-size: 0.68rem; }
 .chead .ck { white-space: nowrap; }
 .card > img.thumb { aspect-ratio: 16 / 9; border-bottom: 1px solid var(--rule); }
 .demo img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 14px; }
@@ -117,7 +117,8 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .demobtn { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 4.5rem; height: 4.5rem; padding: 0; border-radius: 50%; border: 0; background: var(--lime); color: var(--pine); cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,0.35); font-size: 0; }
 .demobtn::after { content: ""; position: absolute; left: 53%; top: 50%; transform: translate(-50%, -50%); border-style: solid; border-width: 0.8rem 0 0.8rem 1.35rem; border-color: transparent transparent transparent var(--pine); }
 .demobtn:hover, .demobtn:focus-visible { transform: translate(-50%, -50%) scale(1.07); }
-.starthere { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 1.75rem 0 1.1rem; align-items: start; }
+.starthere { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 1.75rem 0 1.1rem; align-items: stretch; }
+@media (min-width: 900px) { .starthere { grid-template-columns: 1fr 1fr 1.35fr; } }
 .starthere + .sub { margin: 0 0 2.5rem; font-size: 0.98rem; }
 .starthere > div { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.1rem 1.3rem; }
 .starthere h2 { font-size: 1.05rem; margin: 0 0 0.6rem; }
@@ -281,7 +282,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   </div>
 </a></div></section>
 <section><h2>Free prompts</h2><p class="sub">Paste into ChatGPT, Claude, Gemini or any chatbot. No install.</p><ul class="links"><li><a href="/prompts/ai-search-readiness-check/">AI search readiness check prompt for any chatbot</a></li><li><a href="/prompts/search-intent-page-brief/">Search intent content brief prompt for any chatbot</a></li></ul></section>
-<section><h2>Guides</h2><p class="sub">Short how-tos you can do by hand, without any skill.</p><ul class="links"><li><a href="/guides/write-a-google-business-profile-description-and-posts/">How do I write a Google Business Profile description and posts?</a></li><li><a href="/guides/write-a-service-page-for-a-local-business/">How do I write a service page for a local business?</a></li><li><a href="/guides/write-ad-copy-variants-you-can-test/">How to write ad copy variants you can actually test</a></li></ul></section>
+<section><h2>Guides</h2><p class="sub">Short how-tos you can do by hand, without any skill.</p><ul class="links"><li><a href="/guides/how-to-brief-a-page-from-what-already-ranks-for-your-keyword/">How do I brief a page from what already ranks for my keyword?</a></li><li><a href="/guides/write-a-google-business-profile-description-and-posts/">How do I write a Google Business Profile description and posts?</a></li><li><a href="/guides/write-a-service-page-for-a-local-business/">How do I write a service page for a local business?</a></li><li><a href="/guides/write-ad-copy-variants-you-can-test/">How to write ad copy variants you can actually test</a></li></ul></section>
 <section><h2>Arriving this week</h2><p class="sub">Not for sale yet. Dates are targets and prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon" data-id="landing-page-copy-rewrite" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="landing page copy rewrite a sharper first screen for a landing page, built only from facts on the page, with every unsupported claim flagged. marketers and agencies marketers-and-agencies single skill write copy">
   <div class="chead" style="--h:335"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 5 Oct</span><span class="cc">Marketers and agencies</span></div><div class="body">
     <h3>Landing Page Copy Rewrite</h3>
@@ -310,7 +311,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   <div class="chead" style="--h:335"><span class="ck pack">Pack</span><span class="ck soonk">Arriving 6 Oct</span><span class="cc">Marketers and agencies</span></div><div class="body">
     <h3>Client Site Fix Kit</h3>
     <p>Five tested fixes for client websites, as prompts and Agent Skills: on-page SEO, local business details and landing page copy, plus a competitor gap brief and an article refresh that are only in the kit.</p>
-    <div class="foot"><span class="price">$49</span><a class="go" href="#notify">Follow for release</a></div>
+    <div class="foot"><span class="price">$49</span><a class="go" href="/packs/client-site-fix-kit/">See what is inside</a> <a class="go" href="#notify">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="google-business-profile-kit" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="google business profile kit give it a local business&#x27;s facts. get a profile description within the limit, services, 10 posts, q&amp;a and honest review requests. marketers and agencies marketers-and-agencies single skill write copy local seo">
   <div class="chead" style="--h:335"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 8 Oct</span><span class="cc">Marketers and agencies</span></div><div class="body">
