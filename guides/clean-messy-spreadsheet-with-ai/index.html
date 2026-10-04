@@ -8,6 +8,7 @@
 <meta name="description" content="A safe routine for cleaning a messy CSV or sheet with an AI assistant: describe the mess, get a rule list, apply it to a copy, and check the totals before you trust it.">
 <link rel="canonical" href="https://proskillpacks.github.io/guides/clean-messy-spreadsheet-with-ai/">
 <link rel="icon" href="/assets/avatar.png">
+<link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/guides/clean-messy-spreadsheet-with-ai/">
@@ -79,6 +80,17 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .copybtn { float: right; margin: -0.3rem -0.3rem 0.4rem 0.6rem; font: inherit; font-size: 0.85rem; padding: 0.3rem 0.8rem; border: 1px solid var(--pine); background: #fff; color: var(--pine); border-radius: 999px; cursor: pointer; }
 .installline { display: inline-block; margin: 1rem 0 1.25rem; background: var(--deep); color: var(--lime); border-color: var(--sage); font-size: 1.05rem; }
 .installline code { color: var(--lime); }
+.signup { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.4rem 1.5rem; margin: 2rem 0; max-width: 40rem; }
+.signup h2 { margin: 0 0 0.4rem; font-size: 1.3rem; }
+.signup p { margin: 0 0 0.8rem; }
+.signup label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--slate); margin-bottom: 0.3rem; }
+.signup .row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.signup input[type=email] { flex: 1 1 14rem; font: inherit; padding: 0.65rem 0.8rem; border: 1px solid #b9c4bd; border-radius: 10px; min-width: 0; }
+.signup button { cursor: pointer; font: inherit; }
+.signup .fine { font-size: 0.85rem; color: var(--slate); margin: 0.7rem 0 0; }
+.card.soon { background: #f3f6f1; border-style: dashed; }
+.tag.soontag { background: var(--lime); color: var(--pine); }
+.card.soon .go { color: var(--moss); text-decoration: underline; }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
@@ -201,7 +213,16 @@ DATA:
 <ul><li>Count the rows before and after. The difference should equal the duplicates you agreed to remove.</li><li>Compare totals for any number column, such as sum of revenue, before and after. Changes should be explainable from the log.</li><li>Sort each column and look at the first and last values.</li><li>Spot-check 10 rows from the change log against the original.</li><li>Open the &quot;needs review&quot; list and fix those by hand.</li></ul>
 <h3>Limits</h3>
 <ul><li>An assistant can miscount or drop rows in long pastes. That is why you check the counts and totals.</li><li>It does not know your business. It cannot tell which duplicate is the right one or whether a strange value is an error.</li><li>Dates like 03/04/2025 are ambiguous. Tell it whether you use day first or month first.</li><li>A sample may not show every kind of mess. Run the rules on the full sheet and look again.</li><li>For anything financial or legal, keep the original and the change log.</li></ul>
-<p>Browse all skills in the catalog</p></div></section></div></main>
+<p>Browse all skills in the catalog</p></div></section><section class="signup" id="notify">
+  <h2>Get new free skills by email</h2>
+  <p>You get new free skills and new guides as we publish them. One email a week at most, nothing else. Unsubscribe any time.</p>
+  <form action="https://app.gumroad.com/follow_from_embed_form" method="post" target="_blank">
+    <input type="hidden" name="seller_id" value="1924028424071">
+    <label for="follow-email">Your email address</label>
+    <div class="row"><input id="follow-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email"><button class="btn btn-pine" type="submit">Subscribe</button></div>
+  </form>
+  <p class="fine">Sent through Gumroad. If the form does not work, subscribe on <a href="https://proskillpacks.gumroad.com/subscribe" rel="noopener">our Gumroad page</a>.</p>
+</section></div></main>
 <script>
 document.querySelectorAll('.prose pre').forEach(function (pre) {
   if (!navigator.clipboard) return;
@@ -212,12 +233,13 @@ document.querySelectorAll('.prose pre').forEach(function (pre) {
 </script>
 <footer>
   <div class="wrap">
-    <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers and agencies</a><a href="/for/developers/">Developers</a></nav>
+    <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers and agencies</a><a href="/for/developers/">Developers</a><a href="/for/data-and-spreadsheets/">Spreadsheets</a><a href="/for/careers/">Careers</a><a href="/for/sales-and-outreach/">Sales and outreach</a><a href="/for/content-and-writing/">Writing</a><a href="/for/finance-and-admin/">Finance and admin</a><a href="/for/customer-support/">Support</a></nav>
     <div class="row">
       <nav aria-label="Footer">
         <a href="/">All skills</a>
         <a href="/free/">Free skills</a>
         <a href="/guides/">Guides</a>
+        <a href="/new/">What's new</a>
         <a href="/study/">Study</a>
         <a href="/helpers/">Helpers</a>
         <a href="https://proskillpacks.gumroad.com" rel="noopener">Gumroad store</a>

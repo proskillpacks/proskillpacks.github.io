@@ -11,6 +11,12 @@
 - [Short-term rental hosts](https://proskillpacks.github.io/for/short-term-rental-hosts/)
 - [Marketers and agencies](https://proskillpacks.github.io/for/marketers-and-agencies/)
 - [Developers](https://proskillpacks.github.io/for/developers/)
+- [Data and spreadsheets](https://proskillpacks.github.io/for/data-and-spreadsheets/)
+- [Job seekers and careers](https://proskillpacks.github.io/for/careers/)
+- [Sales and outreach](https://proskillpacks.github.io/for/sales-and-outreach/)
+- [Content and writing](https://proskillpacks.github.io/for/content-and-writing/)
+- [Finance and small-business admin](https://proskillpacks.github.io/for/finance-and-admin/)
+- [Customer support](https://proskillpacks.github.io/for/customer-support/)
 
 ## Shopify store owners
 - [Agent-Ready Quick Check](https://proskillpacks.github.io/skills/agent-ready-quick-check/) (Free): Six checks on how AI shopping agents read your store, compared with 99 stores we audited.

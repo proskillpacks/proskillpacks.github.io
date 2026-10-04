@@ -115,6 +115,14 @@ article a:focus-visible, .card:focus-visible { outline-color: var(--pine); }
 }
 .catlinks { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; margin-bottom: 1rem; font-size: 0.95rem; }
 .catlinks b { color: #d9f26b; }
+.signup { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.4rem 1.5rem; margin: 2rem 0; max-width: 40rem; }
+.signup h2 { margin: 0 0 0.4rem; font-size: 1.3rem; }
+.signup p { margin: 0 0 0.8rem; }
+.signup label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--slate); margin-bottom: 0.3rem; }
+.signup .row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+.signup input[type=email] { flex: 1 1 14rem; font: inherit; padding: 0.65rem 0.8rem; border: 1px solid #b9c4bd; border-radius: 10px; min-width: 0; }
+.signup button { cursor: pointer; font: inherit; }
+.signup .fine { font-size: 0.85rem; color: var(--slate); margin: 0.7rem 0 0; }
 </style>
 </head>
 <body>
@@ -258,15 +266,26 @@ Exhibit 4: checkout page showing the [refund or cancellation] policy, with the r
 <p class="note">The sources are listed above. Payment rules change: if your dispute page in Shopify says something different, follow it. More guides are on the <a href="../../guides/">guides page</a>.</p>
     </article>
   </div>
+<div class="wrap"><section class="signup" id="notify">
+  <h2>Get new free skills by email</h2>
+  <p>You get new free skills and new guides as we publish them. One email a week at most, nothing else. Unsubscribe any time.</p>
+  <form action="https://app.gumroad.com/follow_from_embed_form" method="post" target="_blank">
+    <input type="hidden" name="seller_id" value="1924028424071">
+    <label for="follow-email">Your email address</label>
+    <div class="row"><input id="follow-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email"><button class="btn btn-pine" type="submit">Subscribe</button></div>
+  </form>
+  <p class="fine">Sent through Gumroad. If the form does not work, subscribe on <a href="https://proskillpacks.gumroad.com/subscribe" rel="noopener">our Gumroad page</a>.</p>
+</section></div>
 </main>
 <footer>
   <div class="wrap">
-    <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers and agencies</a><a href="/for/developers/">Developers</a></nav>
+    <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers and agencies</a><a href="/for/developers/">Developers</a><a href="/for/data-and-spreadsheets/">Spreadsheets</a><a href="/for/careers/">Careers</a><a href="/for/sales-and-outreach/">Sales and outreach</a><a href="/for/content-and-writing/">Writing</a><a href="/for/finance-and-admin/">Finance and admin</a><a href="/for/customer-support/">Support</a></nav>
     <div class="row">
       <nav aria-label="Footer">
         <a href="/">All skills</a>
         <a href="/free/">Free skills</a>
         <a href="/guides/">Guides</a>
+        <a href="/new/">What's new</a>
         <a href="/study/">Study</a>
         <a href="/helpers/">Helpers</a>
         <a href="https://proskillpacks.gumroad.com" rel="noopener">Gumroad store</a>
