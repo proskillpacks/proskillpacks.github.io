@@ -42,9 +42,14 @@
 
 ## Marketers and agencies
 - [AI Search Readiness Check](https://proskillpacks.github.io/skills/ai-search-readiness-check/) (Free): Can ChatGPT, Perplexity and Google read a website? A score out of 100 from 8 checks, the evidence and the fixes in order.
+- [Search Intent Page Brief](https://proskillpacks.github.io/skills/search-intent-page-brief/) (Free): Give it a keyword and the pages that rank. Get the search intent, a coverage table, the gaps and an outline. Free, MIT-licensed.
 
 ## Developers
+- [Accessibility Quick Audit](https://proskillpacks.github.io/skills/accessibility-quick-audit/) (Free): Give it a page's HTML or components. Get accessibility issues ranked by impact, with the WCAG criterion, the code and a fix. Free, MIT-licensed.
 - [PR Description and Review Prep](https://proskillpacks.github.io/skills/pr-description-and-review-prep/) (Free): Run it on your branch. Get a PR title, summary, risk notes and test plan from the diff, plus the questions a reviewer will ask. Free, MIT-licensed.
+
+## Content and writing
+- [Fact-Claim Checker](https://proskillpacks.github.io/skills/fact-claim-checker/) (Free): Paste a draft before you publish. Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.
 
 ## Guides
 - [All guides](https://proskillpacks.github.io/guides/)

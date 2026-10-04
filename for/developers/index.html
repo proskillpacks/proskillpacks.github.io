@@ -78,6 +78,8 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .card.soon { background: #f3f6f1; border-style: dashed; }
 .tag.soontag { background: var(--lime); color: var(--pine); }
 .card.soon .go { color: var(--moss); text-decoration: underline; }
+.explain ul { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.6rem; max-width: 46rem; }
+.explain li { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.7rem 1rem; }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
@@ -164,11 +166,19 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <p class="crumbs"><a href="/">All skills</a> / Developers</p>
     <h1>Agent Skills for developers</h1>
     <p class="lead">Skills for the weekly jobs of shipping software: code review notes, pull request descriptions, release notes and bug reports. Give your assistant a diff or a repo and get text you can paste.</p>
-    <p class="note-light">1 skill: 1 free. 3 arriving this week, not for sale yet.</p>
+    <p class="note-light">2 skills: 2 free. 2 arriving this week, not for sale yet.</p>
   </div>
 </header>
 <main><div class="wrap">
-<section><h2>Free skills</h2><p class="sub">Free and MIT-licensed. Download them together on Gumroad or take them from GitHub.</p><div class="grid"><a class="card" href="/skills/pr-description-and-review-prep/" data-id="pr-description-and-review-prep" data-role="developers" data-price="free" data-type="single" data-s="pr description and review prep run it on your branch. get a pr title, summary, risk notes and test plan from the diff, plus the questions a reviewer will ask. free, mit-licensed. developers developers free skill run it in your repository, or paste a diff. a ready-to-paste pr title and summary, risk notes, a test plan from what is stated, and the questions a reviewer is likely to ask. write docs review code">
+<section><h2>Free skills</h2><p class="sub">Free and MIT-licensed. Download them together on Gumroad or take them from GitHub.</p><div class="grid"><a class="card" href="/skills/accessibility-quick-audit/" data-id="accessibility-quick-audit" data-role="developers" data-price="free" data-type="single" data-s="accessibility quick audit give it a page&#x27;s html or components. get accessibility issues ranked by impact, with the wcag criterion, the code and a fix. free, mit-licensed. developers developers free skill a url, pasted html or component files. it checks text alternatives, form labels, link and button names, headings and landmarks, keyboard and focus, aria, contrast where the colours are visible, media and zoom. audit and fix review code">
+  <div class="body">
+    <div class="tags"><span class="tag free">Free skill</span><span class="tag">Developers</span></div>
+    <h3>Accessibility Quick Audit</h3>
+    <p>Give it a page&#x27;s HTML or components. Get accessibility issues ranked by impact, with the WCAG criterion, the code and a fix. Free, MIT-licensed.</p>
+    <p class="tested">1 real-data run on a public demo page built with known accessibility faults (Claude Sonnet).</p>
+    <div class="foot"><span class="price">Free</span><span class="go">See details</span></div>
+  </div>
+</a><a class="card" href="/skills/pr-description-and-review-prep/" data-id="pr-description-and-review-prep" data-role="developers" data-price="free" data-type="single" data-s="pr description and review prep run it on your branch. get a pr title, summary, risk notes and test plan from the diff, plus the questions a reviewer will ask. free, mit-licensed. developers developers free skill run it in your repository, or paste a diff. a ready-to-paste pr title and summary, risk notes, a test plan from what is stated, and the questions a reviewer is likely to ask. write docs review code">
   <div class="body">
     <div class="tags"><span class="tag free">Free skill</span><span class="tag">Developers</span></div>
     <h3>PR Description and Review Prep</h3>
@@ -183,13 +193,6 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <h3>AI-Code Launch Safety Review</h3>
     <p>Point it at a project before launch. Get findings with file and line proof, a fix for each, and a plain list of what it did not check.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify">Email me when it lands</a></div>
-  </div>
-</div><div class="card soon" data-id="accessibility-quick-audit" data-role="developers" data-price="free" data-type="single" data-s="accessibility quick audit give it a page&#x27;s html or components. get accessibility issues ranked by impact, with the wcag criterion, the code and a fix. free, mit-licensed. developers developers free skill audit and fix review code">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 8 Oct</span><span class="tag">Developers</span><span class="tag">Free skill</span></div>
-    <h3>Accessibility Quick Audit</h3>
-    <p>Give it a page&#x27;s HTML or components. Get accessibility issues ranked by impact, with the WCAG criterion, the code and a fix. Free, MIT-licensed.</p>
-    <div class="foot"><span class="price">Free</span><a class="go" href="#notify">Email me when it lands</a></div>
   </div>
 </div><div class="card soon" data-id="incident-postmortem-writer" data-role="developers" data-price="paid" data-type="single" data-s="incident postmortem writer paste the chat, alerts and timeline. get a blameless postmortem with stated facts separated from inference, and action items tied to causes. developers developers single skill write docs review">
   <div class="body">

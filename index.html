@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tested skills for the jobs you do every week | Pro Skill Packs</title>
-<meta name="description" content="18 tested skills and packs (9 free) for marketing, freelancing, rental hosting, e-commerce and more. Works with any assistant that reads SKILL.md, plus a prompt version for any chatbot.">
+<meta name="description" content="21 tested skills and packs (12 free) for marketing, freelancing, rental hosting, e-commerce and more. Works with any assistant that reads SKILL.md, plus a prompt version for any chatbot.">
 <link rel="canonical" href="https://proskillpacks.github.io/">
 <link rel="icon" href="/assets/avatar.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
@@ -13,12 +13,12 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/">
 <meta property="og:title" content="Tested skills for the jobs you do every week">
-<meta property="og:description" content="18 tested skills and packs (9 free) for marketing, freelancing, rental hosting, e-commerce and more. Works with any assistant that reads SKILL.md, plus a prompt version for any chatbot.">
+<meta property="og:description" content="21 tested skills and packs (12 free) for marketing, freelancing, rental hosting, e-commerce and more. Works with any assistant that reads SKILL.md, plus a prompt version for any chatbot.">
 <meta property="og:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="Tested skills for the jobs you do every week">
-<meta name="twitter:description" content="18 tested skills and packs (9 free) for marketing, freelancing, rental hosting, e-commerce and more. Works with any assistant that reads SKILL.md, plus a prompt version for any chatbot.">
+<meta name="twitter:description" content="21 tested skills and packs (12 free) for marketing, freelancing, rental hosting, e-commerce and more. Works with any assistant that reads SKILL.md, plus a prompt version for any chatbot.">
 <meta name="twitter:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
@@ -86,6 +86,8 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .card.soon { background: #f3f6f1; border-style: dashed; }
 .tag.soontag { background: var(--lime); color: var(--pine); }
 .card.soon .go { color: var(--moss); text-decoration: underline; }
+.explain ul { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.6rem; max-width: 46rem; }
+.explain li { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.7rem 1rem; }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
@@ -177,11 +179,16 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   <label>Price<select id="price"><option value="">Free and paid</option><option value="free">Free</option><option value="paid">Paid</option></select></label>
   <label>Type<select id="type"><option value="">Skills and packs</option><option value="single">Single skills</option><option value="pack">Packs</option></select></label>
 </form>
-<div class="chips" aria-label="Categories"><a href="/" data-cat="" class="on">All</a><a href="/for/shopify/" data-cat="shopify">Shopify stores <i>13</i></a><a href="/for/freelancers/" data-cat="freelancers">Freelancers <i>1</i></a><a href="/for/short-term-rental-hosts/" data-cat="short-term-rental-hosts">Rental hosts <i>2</i></a><a href="/for/marketers-and-agencies/" data-cat="marketers-and-agencies">Marketers and agencies <i>1</i></a><a href="/for/developers/" data-cat="developers">Developers <i>1</i></a><a href="/for/data-and-spreadsheets/" data-cat="data-and-spreadsheets">Spreadsheets <i>soon</i></a><a href="/for/careers/" data-cat="careers">Careers <i>soon</i></a><a href="/for/sales-and-outreach/" data-cat="sales-and-outreach">Sales and outreach <i>soon</i></a><a href="/for/content-and-writing/" data-cat="content-and-writing">Writing <i>soon</i></a><a href="/for/finance-and-admin/" data-cat="finance-and-admin">Finance and admin <i>soon</i></a><a href="/for/customer-support/" data-cat="customer-support">Support <i>soon</i></a></div>
+<div class="chips" aria-label="Categories"><a href="/" data-cat="" class="on">All</a><a href="/for/shopify/" data-cat="shopify">Shopify stores <i>13</i></a><a href="/for/freelancers/" data-cat="freelancers">Freelancers <i>1</i></a><a href="/for/short-term-rental-hosts/" data-cat="short-term-rental-hosts">Rental hosts <i>2</i></a><a href="/for/marketers-and-agencies/" data-cat="marketers-and-agencies">Marketers and agencies <i>2</i></a><a href="/for/developers/" data-cat="developers">Developers <i>2</i></a><a href="/for/data-and-spreadsheets/" data-cat="data-and-spreadsheets">Spreadsheets <i>soon</i></a><a href="/for/careers/" data-cat="careers">Careers <i>soon</i></a><a href="/for/sales-and-outreach/" data-cat="sales-and-outreach">Sales and outreach <i>soon</i></a><a href="/for/content-and-writing/" data-cat="content-and-writing">Writing <i>1</i></a><a href="/for/finance-and-admin/" data-cat="finance-and-admin">Finance and admin <i>soon</i></a><a href="/for/customer-support/" data-cat="customer-support">Support <i>soon</i></a></div>
   </div>
 </header>
 <main><div class="wrap">
-<section class="catalog"><div class="countbar"><p class="count" id="count" aria-live="polite">18 skills and packs</p><button type="button" class="linkbtn" id="reset">Clear filters</button></div>
+<section class="explain"><ul>
+<li><b>What is a skill?</b> A short instruction file your AI assistant follows for one job, like checking a policy or drafting a reply.</li>
+<li><b>What do I get?</b> You paste in your own text or a link and get work back that you can use, with a before and after on each page.</li>
+<li><b>No terminal?</b> Every skill also comes as a prompt you paste into ChatGPT or any chatbot. <a href="/guides/install-skills-chatgpt-paste-in-prompt/">How the paste-in route works</a>.</li>
+</ul></section>
+<section class="catalog"><div class="countbar"><p class="count" id="count" aria-live="polite">21 skills and packs</p><button type="button" class="linkbtn" id="reset">Clear filters</button></div>
 <div class="grid" id="grid"><a class="card" href="/packs/store-ops-pack/" data-id="store-ops-pack" data-role="shopify" data-price="paid" data-type="pack" data-s="store ops pack six skills for the shopify jobs that eat the week, in one download. shopify store owners shopify pack agent-ready store audit support macro writer product description rewriter product seo fixer chargeback response writer bfcm campaign kit">
   <img src="/assets/cover-store-ops-pack.png" alt="" width="1280" height="720" loading="lazy"><div class="body">
     <div class="tags"><span class="tag pack">Pack</span><span class="tag">Shopify stores</span></div>
@@ -318,12 +325,36 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <p class="tested">Tested on 8 real public websites, as a skill and (four of them) as a pasted prompt, two also on a second model, then re-scored after two independent reviews.</p>
     <div class="foot"><span class="price">Free</span><span class="go">See details</span></div>
   </div>
+</a><a class="card" href="/skills/search-intent-page-brief/" data-id="search-intent-page-brief" data-role="marketers-and-agencies" data-price="free" data-type="single" data-s="search intent page brief give it a keyword and the pages that rank. get the search intent, a coverage table, the gaps and an outline. free, mit-licensed. marketers and agencies marketers-and-agencies free skill a target keyword and the three to five pages that rank for it (urls, or pasted headings). it records each page&#x27;s structure, classifies the search intent from what ranks, builds a coverage table with counts, names the gaps as its own judgement, and drafts an outline, questions to answer and a meta description. plan content research">
+  <div class="body">
+    <div class="tags"><span class="tag free">Free skill</span><span class="tag">Marketers and agencies</span></div>
+    <h3>Search Intent Page Brief</h3>
+    <p>Give it a keyword and the pages that rank. Get the search intent, a coverage table, the gaps and an outline. Free, MIT-licensed.</p>
+    <p class="tested">1 real-data run on three public how-to pages (Claude Sonnet).</p>
+    <div class="foot"><span class="price">Free</span><span class="go">See details</span></div>
+  </div>
+</a><a class="card" href="/skills/accessibility-quick-audit/" data-id="accessibility-quick-audit" data-role="developers" data-price="free" data-type="single" data-s="accessibility quick audit give it a page&#x27;s html or components. get accessibility issues ranked by impact, with the wcag criterion, the code and a fix. free, mit-licensed. developers developers free skill a url, pasted html or component files. it checks text alternatives, form labels, link and button names, headings and landmarks, keyboard and focus, aria, contrast where the colours are visible, media and zoom. audit and fix review code">
+  <div class="body">
+    <div class="tags"><span class="tag free">Free skill</span><span class="tag">Developers</span></div>
+    <h3>Accessibility Quick Audit</h3>
+    <p>Give it a page&#x27;s HTML or components. Get accessibility issues ranked by impact, with the WCAG criterion, the code and a fix. Free, MIT-licensed.</p>
+    <p class="tested">1 real-data run on a public demo page built with known accessibility faults (Claude Sonnet).</p>
+    <div class="foot"><span class="price">Free</span><span class="go">See details</span></div>
+  </div>
 </a><a class="card" href="/skills/pr-description-and-review-prep/" data-id="pr-description-and-review-prep" data-role="developers" data-price="free" data-type="single" data-s="pr description and review prep run it on your branch. get a pr title, summary, risk notes and test plan from the diff, plus the questions a reviewer will ask. free, mit-licensed. developers developers free skill run it in your repository, or paste a diff. a ready-to-paste pr title and summary, risk notes, a test plan from what is stated, and the questions a reviewer is likely to ask. write docs review code">
   <div class="body">
     <div class="tags"><span class="tag free">Free skill</span><span class="tag">Developers</span></div>
     <h3>PR Description and Review Prep</h3>
     <p>Run it on your branch. Get a PR title, summary, risk notes and test plan from the diff, plus the questions a reviewer will ask. Free, MIT-licensed.</p>
     <p class="tested">1 real-data run on four public commits (Claude Sonnet).</p>
+    <div class="foot"><span class="price">Free</span><span class="go">See details</span></div>
+  </div>
+</a><a class="card" href="/skills/fact-claim-checker/" data-id="fact-claim-checker" data-role="content-and-writing" data-price="free" data-type="single" data-s="fact-claim checker paste a draft before you publish. get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up. content and writing content-and-writing free skill paste a draft before you publish. get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up. check facts">
+  <div class="body">
+    <div class="tags"><span class="tag free">Free skill</span><span class="tag">Writing</span></div>
+    <h3>Fact-Claim Checker</h3>
+    <p>Paste a draft before you publish. Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.</p>
+    <p class="tested">1 real-data run on a public launch post (Claude Sonnet).</p>
     <div class="foot"><span class="price">Free</span><span class="go">See details</span></div>
   </div>
 </a></div>
@@ -405,13 +436,6 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <p>Give it a bank or card CSV. It groups by merchant, categorises only what is clear, asks about the rest and proves the category totals add up.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify">Email me when it lands</a></div>
   </div>
-</div><div class="card soon" data-id="fact-claim-checker" data-role="content-and-writing" data-price="free" data-type="single" data-s="fact-claim checker paste a draft before you publish. get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up. content and writing content-and-writing free skill check facts">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 6 Oct</span><span class="tag">Writing</span><span class="tag">Free skill</span></div>
-    <h3>Fact-Claim Checker</h3>
-    <p>Paste a draft before you publish. Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.</p>
-    <div class="foot"><span class="price">Free</span><a class="go" href="#notify">Email me when it lands</a></div>
-  </div>
 </div><div class="card soon" data-id="messy-csv-cleaner" data-role="data-and-spreadsheets" data-price="paid" data-type="single" data-s="messy csv cleaner give it a messy csv. it profiles the file, plans every change with a risk label, applies the safe fixes to a copy and proves the result with before and after counts. data and spreadsheets data-and-spreadsheets single skill clean data">
   <div class="body">
     <div class="tags"><span class="tag soontag">Arriving 6 Oct</span><span class="tag">Spreadsheets</span><span class="tag">Single skill</span></div>
@@ -468,13 +492,6 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <p>What guests keep raising, good and bad, with checked counts, exact quotes and a fix list.</p>
     <div class="foot"><span class="price">$5</span><a class="go" href="#notify">Email me when it lands</a></div>
   </div>
-</div><div class="card soon" data-id="accessibility-quick-audit" data-role="developers" data-price="free" data-type="single" data-s="accessibility quick audit give it a page&#x27;s html or components. get accessibility issues ranked by impact, with the wcag criterion, the code and a fix. free, mit-licensed. developers developers free skill audit and fix review code">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 8 Oct</span><span class="tag">Developers</span><span class="tag">Free skill</span></div>
-    <h3>Accessibility Quick Audit</h3>
-    <p>Give it a page&#x27;s HTML or components. Get accessibility issues ranked by impact, with the WCAG criterion, the code and a fix. Free, MIT-licensed.</p>
-    <div class="foot"><span class="price">Free</span><a class="go" href="#notify">Email me when it lands</a></div>
-  </div>
 </div><div class="card soon" data-id="case-study-from-project-notes" data-role="sales-and-outreach" data-price="paid" data-type="single" data-s="case study from project notes paste rough project notes and any real numbers. get a one-page case study that uses only those facts, with a fact sheet and an approvals list. sales and outreach sales-and-outreach single skill write copy win work">
   <div class="body">
     <div class="tags"><span class="tag soontag">Arriving 8 Oct</span><span class="tag">Sales and outreach</span><span class="tag">Single skill</span></div>
@@ -503,13 +520,6 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <p>A visual description for each listing photo, important details first, under 250 characters.</p>
     <div class="foot"><span class="price">$5</span><a class="go" href="#notify">Email me when it lands</a></div>
   </div>
-</div><div class="card soon" data-id="search-intent-page-brief" data-role="marketers-and-agencies" data-price="free" data-type="single" data-s="search intent page brief give it a keyword and the pages that rank. get the search intent, a coverage table, the gaps and an outline. free, mit-licensed. marketers and agencies marketers-and-agencies free skill plan content research">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 8 Oct</span><span class="tag">Marketers and agencies</span><span class="tag">Free skill</span></div>
-    <h3>Search Intent Page Brief</h3>
-    <p>Give it a keyword and the pages that rank. Get the search intent, a coverage table, the gaps and an outline. Free, MIT-licensed.</p>
-    <div class="foot"><span class="price">Free</span><a class="go" href="#notify">Email me when it lands</a></div>
-  </div>
 </div><div class="card soon" data-id="survey-results-summariser" data-role="data-and-spreadsheets" data-price="paid" data-type="single" data-s="survey results summariser paste a survey export. get counts with the base size, themed open-text answers with quotes, and a plain list of what the data cannot support. data and spreadsheets data-and-spreadsheets single skill analyse data report">
   <div class="body">
     <div class="tags"><span class="tag soontag">Arriving 8 Oct</span><span class="tag">Spreadsheets</span><span class="tag">Single skill</span></div>
@@ -524,7 +534,6 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   <p><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/subscribe" target="_blank" rel="noopener">Subscribe by email</a></p>
   <p class="fine">Opens our Gumroad subscribe page: one email field, no account needed. Gumroad sends the emails and handles unsubscribing.</p>
 </section>
-<section><h2>New here?</h2><div class="prose"><p>A skill is a short instruction file your AI assistant loads when a job comes up. You paste in your own text or a link, and you get work you can use. Every skill here was run on real data before release and has a page with a before and after. The <a href="/free/">free skills</a> are the quickest way to try one.</p></div></section>
 </div></main>
 <script>
 (function () {

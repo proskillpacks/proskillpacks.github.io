@@ -383,6 +383,52 @@
    "includes": []
   },
   {
+   "id": "search-intent-page-brief",
+   "title": "Search Intent Page Brief",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "marketers-and-agencies",
+   "category_name": "Marketers and agencies",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/search-intent-page-brief/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/marketing-seo/search-intent-page-brief",
+   "summary": "Give it a keyword and the pages that rank. Get the search intent, a coverage table, the gaps and an outline. Free, MIT-licensed.",
+   "give": "A target keyword and the three to five pages that rank for it (URLs, or pasted headings).",
+   "get": "It records each page's structure, classifies the search intent from what ranks, builds a coverage table with counts, names the gaps as its own judgement, and drafts an outline, questions to answer and a meta description.",
+   "jobs": [
+    "plan content",
+    "research"
+   ],
+   "tags": [],
+   "tested": "1 real-data run on three public how-to pages (Claude Sonnet). One was blocked and the run handled it honestly.",
+   "includes": []
+  },
+  {
+   "id": "accessibility-quick-audit",
+   "title": "Accessibility Quick Audit",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "developers",
+   "category_name": "Developers",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/accessibility-quick-audit/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/accessibility-quick-audit",
+   "summary": "Give it a page's HTML or components. Get accessibility issues ranked by impact, with the WCAG criterion, the code and a fix. Free, MIT-licensed.",
+   "give": "A URL, pasted HTML or component files.",
+   "get": "It checks text alternatives, form labels, link and button names, headings and landmarks, keyboard and focus, ARIA, contrast where the colours are visible, media and zoom.",
+   "jobs": [
+    "audit and fix",
+    "review code"
+   ],
+   "tags": [],
+   "tested": "1 real-data run on a public demo page built with known accessibility faults (Claude Sonnet). Issues traced to quoted lines.",
+   "includes": []
+  },
+  {
    "id": "pr-description-and-review-prep",
    "title": "PR Description and Review Prep",
    "kind": "Free skill",
@@ -403,6 +449,28 @@
    ],
    "tags": [],
    "tested": "1 real-data run on four public commits (Claude Sonnet).",
+   "includes": []
+  },
+  {
+   "id": "fact-claim-checker",
+   "title": "Fact-Claim Checker",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "content-and-writing",
+   "category_name": "Content and writing",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/fact-claim-checker/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker",
+   "summary": "Paste a draft before you publish. Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.",
+   "give": "Paste a draft before you publish.",
+   "get": "Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.",
+   "jobs": [
+    "check facts"
+   ],
+   "tags": [],
+   "tested": "1 real-data run on a public launch post (Claude Sonnet). All 17 flagged claims and both internal conflicts were real.",
    "includes": []
   }
  ]
