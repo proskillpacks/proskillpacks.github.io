@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://proskillpacks.github.io/sitemap.xml

@@ -1,32 +1,250 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pro Skill Packs</title>
-<meta name="description" content="Tested Agent Skills for the work you do every week. Start with the Store Ops Pack for Shopify store owners.">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pro Skill Packs: tested Agent Skills for Shopify store owners</title>
+<meta name="description" content="Agent Skills are instruction files your AI assistant loads when a job comes up. Ours are tested on real public stores before release. 5 free skills for Shopify store owners are available now.">
+<link rel="canonical" href="https://proskillpacks.github.io/">
 <link rel="icon" href="assets/avatar.png">
-<meta property="og:title" content="Pro Skill Packs"><meta property="og:image" content="https://proskillpacks.github.io/assets/banner.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pro Skill Packs">
+<meta property="og:url" content="https://proskillpacks.github.io/">
+<meta property="og:title" content="Pro Skill Packs: tested Agent Skills for Shopify store owners">
+<meta property="og:description" content="Instruction files your AI assistant loads when a job comes up. Tested on real public stores before release. 5 free skills are available now.">
+<meta property="og:image" content="https://proskillpacks.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Pro Skill Packs. Tested Agent Skills for the work you do every week.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@KaiVenturaBuild">
+<meta name="twitter:title" content="Pro Skill Packs: tested Agent Skills for Shopify store owners">
+<meta name="twitter:description" content="Instruction files your AI assistant loads when a job comes up. Tested on real public stores before release. 5 free skills are available now.">
+<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og.png">
+<meta name="twitter:image:alt" content="Pro Skill Packs. Tested Agent Skills for the work you do every week.">
+<meta name="theme-color" content="#0f3d2e">
 <style>
-:root{--bg:#0f3d2e;--ink:#fbfaf7;--muted:#b9cfc4;--lime:#d9f26b;--card:#155540;--line:#2c6b55}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 system-ui,-apple-system,"Segoe UI",Ubuntu,sans-serif}
-main{max-width:760px;margin:0 auto;padding:48px 16px}
-.brand{display:flex;align-items:center;gap:12px;color:var(--lime);font-weight:700;letter-spacing:.04em}
-.brand img{width:44px;height:44px;border-radius:10px}
-h1{font-size:clamp(32px,6vw,52px);line-height:1.1;margin:28px 0 12px}
-p.lead{color:var(--muted);font-size:20px;margin:0 0 32px}
-.cards{display:grid;gap:14px}
-a.card{display:block;padding:20px 22px;background:var(--card);border:1px solid var(--line);border-radius:16px;color:var(--ink);text-decoration:none}
-a.card:hover{border-color:var(--lime)}
-a.card b{display:block;font-size:19px;margin-bottom:4px}a.card span{color:var(--muted)}
-.tag{display:inline-block;font-size:12px;font-weight:700;color:var(--bg);background:var(--lime);border-radius:999px;padding:2px 9px;margin-left:8px;vertical-align:middle}
-footer{margin-top:40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);padding-top:18px}
-footer a{color:var(--lime)}
-</style></head><body><main>
-<div class="brand"><img src="assets/avatar.png" alt="Pro Skill Packs logo">PRO SKILL PACKS</div>
-<h1>Tested Agent Skills for the work you do every week.</h1>
-<p class="lead">Agent Skills are instruction files (SKILL.md) your AI assistant loads when a job comes up. Ours do one real job end to end, and every one is tested on real public data before it ships.</p>
-<div class="cards">
-<a class="card" href="https://proskillpacks.gumroad.com"><b>Store Ops Pack <span class="tag">for Shopify store owners</span></b><span>Six skills: AI-agent readiness audit, support macros for the hard cases, product descriptions, SEO fixes, chargeback responses and a Black Friday kit.</span></a>
-<a class="card" href="https://github.com/proskillpacks/shopify-store-skills"><b>Free skills <span class="tag">MIT</span></b><span>Alt text, policy check, title cleanup, review replies and an agent-readiness quick check. Install from GitHub.</span></a>
-<a class="card" href="study/"><b>State of Agent-Ready Shopify <span class="tag">study</span></b><span>We audited 100 Shopify stores the way AI shopping agents read them. Aggregate results, method and a checklist for your own store.</span></a>
-</div>
-<footer>Pro Skill Packs · Updates on <a href="https://x.com/KaiVenturaBuild">X</a> · <a href="https://github.com/proskillpacks">GitHub</a><br>Not affiliated with or endorsed by Shopify Inc.</footer>
-</main></body></html>
+:root { --pine: #0f3d2e; --deep: #0b241c; --moss: #155540; --sage: #2c6b55; --lime: #d9f26b; --cream: #f6f3ea; --mist: #b9cfc4; --paper: #fbfaf7; --ink: #15201b; --slate: #56635c; --rule: #dfe5e0; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background: var(--paper); color: var(--ink); line-height: 1.55; }
+a { color: inherit; }
+img { max-width: 100%; }
+.wrap { max-width: 68rem; margin: 0 auto; padding: 0 1.25rem; }
+.hero { background: var(--pine); color: var(--cream); padding: 1.5rem 0 3.5rem; }
+.brand { display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+.brand img { width: 2.75rem; height: 2.75rem; border-radius: 10px; }
+.brand span { color: var(--lime); font-weight: 800; letter-spacing: 0.06em; font-size: 0.95rem; }
+.brand nav { margin-left: auto; display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; font-size: 0.95rem; }
+.brand nav a { color: var(--mist); text-decoration: none; padding: 0.35rem 0; }
+.brand nav a:hover, .brand nav a:focus-visible { color: var(--lime); }
+h1 { font-size: clamp(2rem, 5.2vw, 3.6rem); line-height: 1.08; letter-spacing: -0.02em; font-weight: 800; margin: 3rem 0 1rem; max-width: 46rem; }
+.lead { font-size: 1.15rem; color: var(--mist); max-width: 40rem; margin: 0 0 2rem; }
+.cta { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.btn { display: inline-block; padding: 0.8rem 1.4rem; border-radius: 999px; font-weight: 700; text-decoration: none; }
+.btn-lime { background: var(--lime); color: var(--pine); border: 2px solid var(--lime); }
+.btn-line { border: 2px solid var(--sage); color: var(--cream); }
+.btn-line:hover, .btn-line:focus-visible { border-color: var(--lime); }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1rem; margin-top: 2.75rem; }
+.facts div { background: var(--moss); border: 1px solid var(--sage); border-radius: 14px; padding: 1rem 1.2rem; color: var(--mist); font-size: 0.95rem; }
+.facts b { display: block; color: var(--cream); font-size: 1.05rem; margin-bottom: 0.15rem; }
+.facts code { color: var(--lime); }
+section { padding: 3.5rem 0; }
+h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); letter-spacing: -0.015em; line-height: 1.15; margin: 0 0 0.5rem; font-weight: 800; }
+.sub { color: var(--slate); max-width: 42rem; margin: 0 0 2rem; }
+.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1.5rem; }
+.card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--rule); border-radius: 18px; overflow: hidden; text-decoration: none; }
+a.card:hover, a.card:focus-visible { border-color: var(--pine); box-shadow: 0 10px 30px rgba(15, 61, 46, 0.12); }
+.card > img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.card .panel { aspect-ratio: 16 / 9; background: var(--pine); color: var(--cream); padding: 1.1rem 1.2rem; display: flex; flex-direction: column; justify-content: center; gap: 0.6rem; }
+.panel b { font-size: 1.5rem; line-height: 1.15; letter-spacing: -0.01em; }
+.panel ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.panel li { font-size: 0.78rem; border: 1px solid var(--sage); background: var(--moss); border-radius: 999px; padding: 0.12rem 0.6rem; margin: 0; }
+.card .body { padding: 1.3rem 1.4rem 1.5rem; display: flex; flex-direction: column; flex: 1; }
+.tag { align-self: flex-start; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.2rem 0.65rem; border-radius: 999px; background: var(--lime); color: var(--pine); margin-bottom: 0.8rem; }
+.tag.soon { background: #e9eee9; color: var(--slate); }
+.card h3 { margin: 0 0 0.4rem; font-size: 1.25rem; line-height: 1.25; font-weight: 800; letter-spacing: -0.01em; }
+.card p { margin: 0 0 1rem; color: var(--slate); }
+.card .body ul { margin: 0 0 1.4rem; padding-left: 1.1rem; font-size: 0.97rem; }
+.card .body li { margin-bottom: 0.25rem; }
+.foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.price { font-size: 1.3rem; font-weight: 800; }
+.go { background: var(--pine); color: var(--cream); padding: 0.6rem 1.1rem; border-radius: 999px; font-weight: 700; font-size: 0.95rem; white-space: nowrap; }
+.go.muted { background: #e9eee9; color: var(--slate); }
+.also { color: var(--slate); font-size: 0.97rem; margin: 1.5rem 0 0; }
+.also a { color: var(--pine); font-weight: 700; }
+.study { background: var(--deep); color: var(--cream); }
+.study .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 2.5rem; align-items: center; }
+.study p { color: var(--mist); }
+.study img { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--sage); display: block; }
+.eyebrow { color: var(--lime); font-weight: 800; letter-spacing: 0.06em; font-size: 0.85rem; text-transform: uppercase; margin: 0 0 0.6rem; }
+.nums { display: flex; flex-wrap: wrap; gap: 1.25rem 2rem; margin: 1.5rem 0 2rem; }
+.nums div { max-width: 11rem; }
+.nums b { display: block; font-size: 2rem; color: var(--lime); line-height: 1.1; }
+.nums span { color: var(--mist); font-size: 0.92rem; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.25rem; }
+.steps div { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.4rem; }
+.steps i { display: inline-block; font-style: normal; font-weight: 800; color: var(--pine); background: var(--lime); border-radius: 8px; width: 2rem; height: 2rem; line-height: 2rem; text-align: center; margin-bottom: 0.8rem; }
+.steps h3 { margin: 0 0 0.3rem; font-size: 1.05rem; font-weight: 700; }
+.steps p { margin: 0; color: var(--slate); font-size: 0.96rem; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.92em; }
+footer { background: var(--pine); color: var(--mist); padding: 2.5rem 0; font-size: 0.92rem; }
+footer .row { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; justify-content: space-between; }
+footer nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; }
+footer a { color: var(--cream); text-decoration: none; padding: 0.35rem 0; }
+footer a:hover, footer a:focus-visible { color: var(--lime); }
+footer small { display: block; margin-top: 1.25rem; }
+a:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
+@media (max-width: 30rem) {
+  .hero { padding-bottom: 2.5rem; }
+  h1 { margin-top: 2rem; }
+  section { padding: 2.75rem 0; }
+  .btn { width: 100%; text-align: center; }
+  .brand nav { margin-left: 0; width: 100%; }
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <img src="assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44">
+      <span>PRO SKILL PACKS</span>
+      <nav aria-label="Main">
+        <a href="https://proskillpacks.gumroad.com/l/free-shopify-skills" target="_blank" rel="noopener">Free skills</a>
+        <a href="study/">Study</a>
+        <a href="https://github.com/proskillpacks/shopify-store-skills" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://proskillpacks.gumroad.com" target="_blank" rel="noopener">Store</a>
+      </nav>
+    </div>
+    <h1>Tested Agent Skills for the work you do every week.</h1>
+    <p class="lead">Agent Skills are instruction files your AI assistant loads when a job comes up. Give it a store URL and get work you can paste into Shopify. Every skill is tested on real public stores before release.</p>
+    <div class="cta">
+      <a class="btn btn-lime" href="https://proskillpacks.gumroad.com/l/free-shopify-skills" target="_blank" rel="noopener">Get 5 free skills</a>
+      <a class="btn btn-line" href="study/">See the 100-store study</a>
+    </div>
+    <div class="facts">
+      <div><b>Built for Shopify</b>Field names, character limits and HTML the Shopify editor accepts.</div>
+      <div><b>Tested on real stores</b>Scored against a written rubric. A skill ships at 8/10 or better on every test.</div>
+      <div><b>Yours to keep</b>Plain <code>SKILL.md</code> folders for Claude and other agents that read them.</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="products">
+    <div class="wrap">
+      <h2>Products</h2>
+      <p class="sub">The free skills are available now. The Store Ops Pack and its single skills are in final testing and go on sale shortly.</p>
+      <div class="products">
+        <a class="card" href="https://proskillpacks.gumroad.com/l/free-shopify-skills" target="_blank" rel="noopener">
+          <img src="assets/cover-free-skills.png" alt="Free Shopify Skills: 5 tested Agent Skills for Shopify store owners" width="1280" height="720">
+          <div class="body">
+            <span class="tag">Free</span>
+            <h3>5 Free Agent Skills for Shopify store owners</h3>
+            <p>One store chore each, done end to end.</p>
+            <ul>
+              <li>Alt text for product images, as an import CSV</li>
+              <li>Policy gaps and contradictions, with fixes</li>
+              <li>One consistent title pattern across the catalogue</li>
+              <li>A reply for every review</li>
+              <li>A six-check read on AI-agent readiness</li>
+            </ul>
+            <div class="foot"><span class="price">$0+</span><span class="go">Download</span></div>
+          </div>
+        </a>
+        <div class="card">
+          <img src="assets/cover-store-ops-pack.png" alt="Store Ops Pack: 6 tested Agent Skills for Shopify store owners" width="1280" height="720">
+          <div class="body">
+            <span class="tag soon">In final testing</span>
+            <h3>Store Ops Pack for Shopify store owners</h3>
+            <p>Six skills for the jobs that eat the week.</p>
+            <ul>
+              <li>AI-agent readiness audit with a ranked fix list</li>
+              <li>Support macros built from your real policies</li>
+              <li>Product description rewriter</li>
+              <li>SEO fixer with a collection mode</li>
+              <li>Chargeback response writer</li>
+              <li>Black Friday / Cyber Monday campaign kit</li>
+            </ul>
+            <div class="foot"><span class="price">$29</span><span class="go muted">Available shortly</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="panel">
+            <b>Single skills</b>
+            <ul>
+              <li>Store audit</li>
+              <li>Support macros</li>
+              <li>Descriptions</li>
+              <li>SEO fixer</li>
+              <li>Chargebacks</li>
+              <li>BFCM kit</li>
+            </ul>
+          </div>
+          <div class="body">
+            <span class="tag soon">In final testing</span>
+            <h3>Single skills, $5 each</h3>
+            <p>Each skill from the Store Ops Pack, sold on its own as a low-cost way to try one.</p>
+            <ul>
+              <li>The same files and the same tests as the pack</li>
+              <li>Install guide and a ready-made zip for claude.ai</li>
+              <li>30-day refund</li>
+            </ul>
+            <div class="foot"><span class="price">$5</span><span class="go muted">Available shortly</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="also">The free skills are also on <a href="https://github.com/proskillpacks/shopify-store-skills" target="_blank" rel="noopener">GitHub</a> under the MIT licence. New products appear in <a href="https://proskillpacks.gumroad.com" target="_blank" rel="noopener">our Gumroad store</a>.</p>
+    </div>
+  </section>
+
+  <section class="study" id="study">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <p class="eyebrow">Original research</p>
+          <h2>How AI shopping agents read 100 Shopify stores</h2>
+          <p>We audited 100 Shopify stores the way AI shopping agents read them. Access is mostly solved. The gaps are in what agents find once they are inside.</p>
+          <div class="nums">
+            <div><b>83/100</b><span>median score, 99 measurable stores</span></div>
+            <div><b>0%</b><span>block AI agents in robots.txt</span></div>
+            <div><b>88%</b><span>have no shipping or return terms in product schema</span></div>
+          </div>
+          <a class="btn btn-lime" href="study/">Read the full results and method</a>
+        </div>
+        <img src="study/top-gaps.png" alt="Chart: the most common gaps across 99 measurable Shopify stores" width="1600" height="900" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section id="testing">
+    <div class="wrap">
+      <h2>How we test</h2>
+      <p class="sub">A skill is only useful if its output is right. This is the bar every skill has to clear before it goes on sale.</p>
+      <div class="steps">
+        <div><i>1</i><h3>Real data only</h3><p>Each skill runs on real public stores, products, reviews and policies. No made-up cases.</p></div>
+        <div><i>2</i><h3>Scored against a rubric</h3><p>Every run is scored out of 10 on written criteria. Any invented fact is a fail.</p></div>
+        <div><i>3</i><h3>Ships at 8 or better</h3><p>A skill is released only when every test scores 8/10 or more. If one fails, we fix it and test again.</p></div>
+        <div><i>4</i><h3>Fixed for everyone</h3><p>If an output is wrong, tell us what you gave it. Fixes go to every buyer.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <nav aria-label="Footer">
+        <a href="https://proskillpacks.gumroad.com" target="_blank" rel="noopener">Gumroad store</a>
+        <a href="https://github.com/proskillpacks/shopify-store-skills" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://x.com/KaiVenturaBuild" target="_blank" rel="noopener">X</a>
+        <a href="study/">Study</a>
+      </nav>
+      <div>The paid skills require Claude Sonnet or Opus.</div>
+    </div>
+    <small>Pro Skill Packs. Not affiliated with or endorsed by Shopify Inc.</small>
+  </div>
+</footer>
+</body>
+</html>
