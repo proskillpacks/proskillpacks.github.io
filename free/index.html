@@ -167,7 +167,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <p class="crumbs"><a href="/">All skills</a> / Free skills</p>
     <h1>Free Agent Skills</h1>
     <p class="lead">12 free skills in 5 categories, each run on real data before release. Each has its own page with a before and after.</p>
-    <pre class="installline"><code>npx skills add proskillpacks/skills</code></pre><div class="cta"><a class="btn btn-lime" href="https://github.com/proskillpacks/skills" rel="noopener">View the free repo on GitHub</a><a class="btn btn-line" href="https://proskillpacks.gumroad.com/l/free-shopify-skills">Shopify skills as one zip (Gumroad)</a></div><p class="note-light">Free, MIT licence. No sign-up needed to use the repo.</p>
+    <pre class="installline"><code>npx skills add proskillpacks/skills</code></pre><div class="cta"><a class="btn btn-lime" href="https://github.com/proskillpacks/skills" rel="noopener">View the free repo on GitHub</a><a class="btn btn-line" href="https://proskillpacks.gumroad.com/l/free-shopify-skills">All free skills as one zip (Gumroad)</a></div><p class="note-light">Free, MIT licence. No sign-up needed to use the repo.</p>
   </div>
 </header>
 <main><div class="wrap">
@@ -278,11 +278,11 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   <p><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/subscribe" target="_blank" rel="noopener">Subscribe by email</a></p>
   <p class="fine">Opens our Gumroad subscribe page: one email field, no account needed. Gumroad sends the emails and handles unsubscribing.</p>
 </section>
-<section><h2>How to install</h2><div class="prose"><p>Install every free skill with <code>npx skills add proskillpacks/skills</code>, or copy just the folders you want. Step by step for each tool: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a>.</p><ol><li>Unzip the download. It holds one folder per skill, ready-made zips for claude.ai in a <code>claude-ai</code> folder, a README and the licence.</li><li>Put each skill folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: Customize, Skills, then the plus button, Create skill, Upload a skill, and upload the zip from the <code>claude-ai</code> folder without unzipping it (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a></li></ul></li><li>Ask for the job in plain words. The skill loads by itself.</li></ol></div></section>
+<section><h2>How to install</h2><div class="prose"><p>Install every free skill with <code>npx skills add proskillpacks/skills</code>, or copy just the folders you want. Step by step for each tool: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a>.</p><ol><li>Unzip the download. It holds one folder per skill, a README and the licence.</li><li>Put each skill folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a></li></ul></li><li>Ask for the job in plain words. The skill loads by itself.</li></ol></div></section>
 </div></main>
 <footer>
   <div class="wrap">
-    <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers and agencies</a><a href="/for/developers/">Developers</a><a href="/for/data-and-spreadsheets/">Spreadsheets</a><a href="/for/careers/">Careers</a><a href="/for/sales-and-outreach/">Sales and outreach</a><a href="/for/content-and-writing/">Writing</a><a href="/for/finance-and-admin/">Finance and admin</a><a href="/for/customer-support/">Support</a></nav>
+    <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers and agencies</a><a href="/for/developers/">Developers</a><a href="/for/content-and-writing/">Writing</a></nav>
     <div class="row">
       <nav aria-label="Footer">
         <a href="/">All skills</a>
@@ -291,13 +291,15 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
         <a href="/new/">What's new</a>
         <a href="/study/">Study</a>
         <a href="/helpers/">Helpers</a>
+        <a href="/about/">About</a>
+        <a href="mailto:kaiventura.founder@gmail.com">Contact</a>
         <a href="https://proskillpacks.gumroad.com" rel="noopener">Gumroad store</a>
         <a href="https://github.com/proskillpacks/skills" rel="noopener">GitHub</a>
         <a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a>
       </nav>
       <div>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot.</div>
     </div>
-    <small>Pro Skill Packs. Not affiliated with or endorsed by Shopify Inc. Not affiliated with or endorsed by Airbnb or Vrbo.</small>
+    <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>
 </footer>
 </body>
