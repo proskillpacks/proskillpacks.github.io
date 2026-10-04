@@ -98,6 +98,16 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .latest li { font-size: 0.95rem; }
 .latest .when { color: var(--slate); font-size: 0.85rem; }
 .latest .go { background: none; padding: 0; color: var(--moss); text-decoration: underline; font-size: 0.92rem; }
+.demo { margin: 0; max-width: 46rem; position: relative; }
+.demo img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 14px; }
+.demobtn { position: absolute; left: 1rem; bottom: 1rem; font: inherit; font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 999px; border: 0; background: var(--lime); color: var(--pine); cursor: pointer; }
+.starthere { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 1.75rem 0 0; }
+.starthere > div { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.1rem 1.3rem; }
+.starthere h2 { font-size: 1.05rem; margin: 0 0 0.6rem; }
+.starthere pre { margin: 0 0 0.7rem; font-size: 0.85rem; padding: 0.6rem 0.8rem; }
+.starthere ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; }
+.starthere .minichips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.starthere .minichips a { text-decoration: none; padding: 0.35rem 0.8rem; border: 1px solid var(--rule); border-radius: 999px; font-size: 0.92rem; background: var(--paper); }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
@@ -225,6 +235,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <div class="foot"><span class="price">Free</span><span class="go">See details</span></div>
   </div>
 </a></div></section>
+
 <section><h2>Free prompts</h2><p class="sub">Paste into ChatGPT, Claude, Gemini or any chatbot. No install.</p><ul class="links"><li><a href="/prompts/invoice-checker/">Invoice checker prompt for ChatGPT, Claude or Gemini</a></li></ul></section>
 <section><h2>Arriving this week</h2><p class="sub">Not for sale yet. Dates are targets and prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon" data-id="expense-categoriser" data-role="finance-and-admin" data-price="paid" data-type="single" data-s="expense categoriser give it a bank or card csv. it groups by merchant, categorises only what is clear, asks about the rest and proves the category totals add up. finance and small-business admin finance-and-admin single skill bookkeeping">
   <div class="body">
