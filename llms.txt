@@ -80,6 +80,7 @@
 - [How do I write a Google Business Profile description and posts?](https://proskillpacks.github.io/guides/write-a-google-business-profile-description-and-posts/)
 - [How do I write a quote for a job from my rate card?](https://proskillpacks.github.io/guides/write-a-quote-for-a-job-from-your-rate-card/)
 - [How do I write a service page for a local business?](https://proskillpacks.github.io/guides/write-a-service-page-for-a-local-business/)
+- [How to write a SKILL.md that still works when a tool is missing](https://proskillpacks.github.io/guides/write-a-skill-md-that-works-when-a-tool-is-missing/)
 - [How to write ad copy variants you can actually test](https://proskillpacks.github.io/guides/write-ad-copy-variants-you-can-test/)
 
 ## Other
