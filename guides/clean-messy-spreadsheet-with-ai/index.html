@@ -9,6 +9,7 @@
 
 <link rel="canonical" href="https://proskillpacks.github.io/guides/clean-messy-spreadsheet-with-ai/">
 <link rel="icon" href="/assets/avatar.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
@@ -170,6 +171,10 @@ footer small { display: block; margin-top: 1.25rem; }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
+@media (max-width: 40rem) {
+  .brand nav a, footer a { padding: 0.7rem 0.25rem; }
+  .chips a { padding: 0.65rem 1rem; }
+}
 @media (max-width: 30rem) {
   .hero { padding-bottom: 2.25rem; }
   .crumbs { margin-top: 1.75rem; }
@@ -223,10 +228,10 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   </div>
 </header>
 <main><div class="wrap"><section><div class="prose"><p>Duplicate customers, dates in four formats, &quot;N/A&quot; and blank and &quot;-&quot; all meaning the same thing. Cleaning that by hand takes an afternoon. An assistant can do it faster, but it can also change values quietly. The routine below keeps you in charge of what changes.</p>
-<h3>Before you start</h3>
+<h2>Before you start</h2>
 <p>Work on a copy. Keep the original untouched and name the new file with today&#x27;s date. Remove anything private you do not need to share, such as emails or phone numbers, before pasting data into any online tool. If you cannot share the data, ask for the cleaning steps only and run them yourself.</p>
 <p>Pasting a whole large sheet rarely works. Paste the header row and 20 to 40 rows that show the different kinds of mess.</p>
-<h3>Step 1: ask for a diagnosis, not a fix</h3>
+<h2>Step 1: ask for a diagnosis, not a fix</h2>
 <p>Do not ask it to &quot;clean this&quot;. Ask what is wrong first.</p>
 <pre><code>Below are the column headers and a sample of rows from a spreadsheet. Do not change any data yet.
 
@@ -240,9 +245,9 @@ Do not guess what a value should have been. If it is ambiguous, say so.
 
 DATA:
 [paste headers and sample rows]</code></pre>
-<h3>Step 2: decide the rules</h3>
+<h2>Step 2: decide the rules</h2>
 <p>Read the rule list and cross out any you disagree with. Decide the human calls yourself, such as whether &quot;Jon Smith&quot; and &quot;John Smith&quot; are the same person. Write down the final rules. This list is your record of what changed.</p>
-<h3>Step 3: apply the rules, and ask for a change log</h3>
+<h2>Step 3: apply the rules, and ask for a change log</h2>
 <pre><code>Apply exactly these rules to the data below and no others:
 [paste your final rules]
 
@@ -251,9 +256,9 @@ Return: (a) the cleaned data in the same column order, and (b) a change log with
 DATA:
 [paste]</code></pre>
 <p>For a big sheet, ask for a formula, a short script or a find-and-replace list instead of the data, and run it yourself on the copy.</p>
-<h3>Step 4: check it</h3>
+<h2>Step 4: check it</h2>
 <ul><li>Count the rows before and after. The difference should equal the duplicates you agreed to remove.</li><li>Compare totals for any number column, such as sum of revenue, before and after. Changes should be explainable from the log.</li><li>Sort each column and look at the first and last values.</li><li>Spot-check 10 rows from the change log against the original.</li><li>Open the &quot;needs review&quot; list and fix those by hand.</li></ul>
-<h3>Limits</h3>
+<h2>Limits</h2>
 <ul><li>An assistant can miscount or drop rows in long pastes. That is why you check the counts and totals.</li><li>It does not know your business. It cannot tell which duplicate is the right one or whether a strange value is an error.</li><li>Dates like 03/04/2025 are ambiguous. Tell it whether you use day first or month first.</li><li>A sample may not show every kind of mess. Run the rules on the full sheet and look again.</li><li>For anything financial or legal, keep the original and the change log.</li></ul>
 <p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/clean-a-messy-csv-export/">How to clean a messy CSV export without losing data</a></li><li><a href="/guides/summarise-survey-results-without-overclaiming/">How do I summarise survey results without overclaiming?</a></li><li>All skills for people who work in spreadsheets: <a href="/for/data-and-spreadsheets/">Data and spreadsheets</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Get new free skills by email</h2>

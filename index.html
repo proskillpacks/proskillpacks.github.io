@@ -9,6 +9,7 @@
 
 <link rel="canonical" href="https://proskillpacks.github.io/">
 <link rel="icon" href="/assets/avatar.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
@@ -165,6 +166,10 @@ footer small { display: block; margin-top: 1.25rem; }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
+@media (max-width: 40rem) {
+  .brand nav a, footer a { padding: 0.7rem 0.25rem; }
+  .chips a { padding: 0.65rem 1rem; }
+}
 @media (max-width: 30rem) {
   .hero { padding-bottom: 2.25rem; }
   .crumbs { margin-top: 1.75rem; }
@@ -220,9 +225,9 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <h1>Tested skills for the jobs you do every week.</h1>
     <p class="lead">Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot.</p>
     <form class="filters hero-filters" id="filters" role="search" hidden onsubmit="return false">
-  <label class="grow">Search<input id="q" type="search" placeholder="Search skills: chargeback, listing, proposal, SEO" autocomplete="off"></label>
-  <label>Price<select id="price"><option value="">Free and paid</option><option value="free">Free</option><option value="paid">Paid</option></select></label>
-  <label>Type<select id="type"><option value="">Skills and packs</option><option value="single">Single skills</option><option value="pack">Packs</option></select></label>
+  <label class="grow">Search<input id="q" type="search" aria-label="Search skills" placeholder="Search skills: chargeback, listing, proposal, SEO" autocomplete="off"></label>
+  <label>Price<select id="price" aria-label="Price"><option value="">Free and paid</option><option value="free">Free</option><option value="paid">Paid</option></select></label>
+  <label>Type<select id="type" aria-label="Type"><option value="">Skills and packs</option><option value="single">Single skills</option><option value="pack">Packs</option></select></label>
 </form>
 <div class="chips" aria-label="Categories"><a href="/" data-cat="" class="on">All</a><a href="/for/shopify/" data-cat="shopify">Shopify stores <i>13</i></a><a href="/for/freelancers/" data-cat="freelancers">Freelancers <i>1</i></a><a href="/for/short-term-rental-hosts/" data-cat="short-term-rental-hosts">Rental hosts <i>2</i></a><a href="/for/marketers-and-agencies/" data-cat="marketers-and-agencies">Marketers and agencies <i>2</i></a><a href="/for/developers/" data-cat="developers">Developers <i>2</i></a><a href="/for/content-and-writing/" data-cat="content-and-writing">Writing <i>1</i></a></div>
   </div>

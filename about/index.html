@@ -9,6 +9,7 @@
 
 <link rel="canonical" href="https://proskillpacks.github.io/about/">
 <link rel="icon" href="/assets/avatar.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
@@ -157,6 +158,10 @@ footer small { display: block; margin-top: 1.25rem; }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
+@media (max-width: 40rem) {
+  .brand nav a, footer a { padding: 0.7rem 0.25rem; }
+  .chips a { padding: 0.65rem 1rem; }
+}
 @media (max-width: 30rem) {
   .hero { padding-bottom: 2.25rem; }
   .crumbs { margin-top: 1.75rem; }
@@ -203,16 +208,16 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     
   </div>
 </header>
-<main><div class="wrap"><section><div class="prose"><h3>What we make</h3>
+<main><div class="wrap"><section><div class="prose"><h2>What we make</h2>
 <p>Agent Skills: plain-text instruction folders in the open <code>SKILL.md</code> format, for specific jobs such as checking a store&#x27;s policies, drafting a reply to a review, cleaning a CSV or briefing a web page. They work with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others). Each skill also has a paste-in prompt version for ChatGPT or any chatbot.</p>
 <p>Free skills are on GitHub at <a href="https://github.com/proskillpacks/skills" rel="noopener">proskillpacks/skills</a> under the MIT licence. Paid skills and packs are sold on <a href="https://proskillpacks.gumroad.com" rel="noopener">Gumroad</a>. Prices are on each skill&#x27;s page.</p>
-<h3>How skills are tested</h3>
+<h2>How skills are tested</h2>
 <p>Each skill is run on real public examples before release: public pages, reviews, policies, listings and documents. We read the output against the source, fix what is wrong, and show the example on the skill&#x27;s page under Before and after. Some skills were also scored against a written rubric. Each skill page says which kind of testing it had, and what it will not do.</p>
-<h3>Licence and refunds</h3>
+<h2>Licence and refunds</h2>
 <p>Free skills: MIT licence. Use, change and share them.</p>
 <p>Paid skills and packs: a single-buyer licence. You may install, use and change the files for your own work, and the output belongs to you. You may not share, resell or publish the files. Agencies that want to use a skill for several clients should contact us for a multi-client licence. The files come without warranty and are not legal, tax or financial advice.</p>
 <p>Refunds: full refund within 30 days of purchase, as stated on each Gumroad page. Reply to your receipt email, or write to us at the address below.</p>
-<h3>Contact</h3>
+<h2>Contact</h2>
 <p>Questions before you buy, a wrong output, or a licence question: kaiventura.founder@gmail.com.</p>
 <p>Product names and trademarks belong to their owners. We are not affiliated with or endorsed by Shopify, Airbnb, Vrbo or any other company whose products our skills work with.</p></div></section></div></main>
 <footer>

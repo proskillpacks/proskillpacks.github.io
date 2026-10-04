@@ -1,22 +1,36 @@
 # Pro Skill Packs
 
-> Tested skills for the jobs you do every week. Plain-text SKILL.md skills that work with any assistant that reads them (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot.
+> Tested skills for the jobs you do every week. Plain-text SKILL.md skills (the open Agent Skills format) that work with any assistant that reads them (Claude, Codex, Gemini CLI, Cursor, GitHub Copilot and others), plus a paste-in prompt version for ChatGPT or any chatbot. Free skills are on GitHub (MIT); paid skills and packs are sold on Gumroad.
 
-## Catalog
-- [All skills and packs](https://proskillpacks.github.io/): search and filters
-- [Catalog data as JSON](https://proskillpacks.github.io/catalog/catalog.json)
-- [Free skills](https://proskillpacks.github.io/free/)
+## Site structure
+- https://proskillpacks.github.io/ : the catalog (search, category chips, price and type filters)
+- https://proskillpacks.github.io/for/<category>/ : one page per category with its skills, prompts and guides
+- https://proskillpacks.github.io/skills/<skill>/ and https://proskillpacks.github.io/packs/<pack>/ : one page per skill or pack, with a real before and after, limits and install steps
+- https://proskillpacks.github.io/free/ : every free skill, installable with `npx skills add proskillpacks/skills`
+- https://proskillpacks.github.io/prompts/ : free paste-in prompts for ChatGPT, Claude, Gemini or any chatbot
+- https://proskillpacks.github.io/guides/ : how-to guides, grouped by category, including install guides for each tool
+- https://proskillpacks.github.io/study/ : data studies with data files
+- https://proskillpacks.github.io/new/ and https://proskillpacks.github.io/feed.xml : what is new
+- https://proskillpacks.github.io/faq/, https://proskillpacks.github.io/about/ : questions, licence, refunds, contact
+- https://proskillpacks.github.io/catalog/catalog.json : the whole catalog as JSON
+
+## Install guides
+- [How to install Agent Skills in Claude, Codex, Gemini CLI, Cursor and Copilot](https://proskillpacks.github.io/guides/how-to-install-agent-skills/)
+- [How to use a skill in ChatGPT or any chatbot (paste-in prompt)](https://proskillpacks.github.io/guides/install-skills-chatgpt-paste-in-prompt/)
+- [How to install Agent Skills in claude.ai](https://proskillpacks.github.io/guides/install-skills-claude-ai/)
+- [How to install Agent Skills in Claude Code](https://proskillpacks.github.io/guides/install-skills-claude-code/)
+- [How to install Agent Skills in Codex](https://proskillpacks.github.io/guides/install-skills-codex-cli/)
+- [How to install Agent Skills in Cursor](https://proskillpacks.github.io/guides/install-skills-cursor/)
+- [How to install Agent Skills in Gemini CLI](https://proskillpacks.github.io/guides/install-skills-gemini-cli/)
+- [How to install Agent Skills in GitHub Copilot](https://proskillpacks.github.io/guides/install-skills-github-copilot/)
+
+## Categories
 - [Shopify store owners](https://proskillpacks.github.io/for/shopify/)
 - [Freelancers and consultants](https://proskillpacks.github.io/for/freelancers/)
 - [Short-term rental hosts](https://proskillpacks.github.io/for/short-term-rental-hosts/)
 - [Marketers and agencies](https://proskillpacks.github.io/for/marketers-and-agencies/)
 - [Developers](https://proskillpacks.github.io/for/developers/)
-- [Data and spreadsheets](https://proskillpacks.github.io/for/data-and-spreadsheets/)
-- [Job seekers and careers](https://proskillpacks.github.io/for/careers/)
-- [Sales and outreach](https://proskillpacks.github.io/for/sales-and-outreach/)
 - [Content and writing](https://proskillpacks.github.io/for/content-and-writing/)
-- [Finance and small-business admin](https://proskillpacks.github.io/for/finance-and-admin/)
-- [Customer support](https://proskillpacks.github.io/for/customer-support/)
 
 ## Shopify store owners
 - [Agent-Ready Quick Check](https://proskillpacks.github.io/skills/agent-ready-quick-check/) (Free): Six checks on how AI shopping agents read your store, compared with 99 stores we audited.
@@ -51,8 +65,21 @@
 ## Content and writing
 - [Fact-Claim Checker](https://proskillpacks.github.io/skills/fact-claim-checker/) (Free): Paste a draft before you publish. Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.
 
+## Free prompts
+- [Accessibility audit prompt for ChatGPT, Claude or Gemini](https://proskillpacks.github.io/prompts/accessibility-quick-audit/)
+- [Can AI agents read my Shopify store? Free prompt](https://proskillpacks.github.io/prompts/agent-ready-quick-check/)
+- [AI search readiness check prompt for any chatbot](https://proskillpacks.github.io/prompts/ai-search-readiness-check/)
+- [Chargeback evidence checklist prompt for ChatGPT or Claude](https://proskillpacks.github.io/prompts/chargeback-evidence-checklist/)
+- [Fact-check a draft: claim checker prompt for any chatbot](https://proskillpacks.github.io/prompts/fact-claim-checker/)
+- [Late payment interest and chaser email prompt (UK)](https://proskillpacks.github.io/prompts/late-payment-chaser-uk/)
+- [Pull request description prompt for ChatGPT or Claude](https://proskillpacks.github.io/prompts/pr-description-and-review-prep/)
+- [Shopify product title cleaner prompt for any chatbot](https://proskillpacks.github.io/prompts/product-title-cleaner/)
+- [Review reply drafter prompt for ChatGPT, Claude or Gemini](https://proskillpacks.github.io/prompts/review-reply-drafter/)
+- [Search intent content brief prompt for any chatbot](https://proskillpacks.github.io/prompts/search-intent-page-brief/)
+- [Product image alt text prompt for ChatGPT or Claude](https://proskillpacks.github.io/prompts/shopify-alt-text-writer/)
+- [Refund policy checker prompt for ChatGPT, Claude or Gemini](https://proskillpacks.github.io/prompts/shopify-policy-checker/)
+
 ## Guides
-- [All guides](https://proskillpacks.github.io/guides/)
 - [Chargeback response template for Shopify](https://proskillpacks.github.io/guides/shopify-chargeback-response-template/)
 - [Can AI shopping agents read your return policy?](https://proskillpacks.github.io/guides/shipping-returns-ai-agents/)
 - [Star ratings AI agents and Google can read](https://proskillpacks.github.io/guides/star-ratings-aggregaterating-shopify/)
@@ -64,14 +91,6 @@
 - [How to write a cold email from a prospect's website](https://proskillpacks.github.io/guides/cold-email-from-a-prospects-website/)
 - [How to fact-check the claims in an AI-written draft](https://proskillpacks.github.io/guides/fact-check-claims-in-an-ai-written-draft/)
 - [How do I follow up with a client who has gone quiet?](https://proskillpacks.github.io/guides/follow-up-with-a-client-who-has-gone-quiet/)
-- [How to install Agent Skills in Claude, Codex, Gemini CLI, Cursor and Copilot](https://proskillpacks.github.io/guides/how-to-install-agent-skills/)
-- [How to use a skill in ChatGPT or any chatbot (paste-in prompt)](https://proskillpacks.github.io/guides/install-skills-chatgpt-paste-in-prompt/)
-- [How to install Agent Skills in claude.ai](https://proskillpacks.github.io/guides/install-skills-claude-ai/)
-- [How to install Agent Skills in Claude Code](https://proskillpacks.github.io/guides/install-skills-claude-code/)
-- [How to install Agent Skills in Codex](https://proskillpacks.github.io/guides/install-skills-codex-cli/)
-- [How to install Agent Skills in Cursor](https://proskillpacks.github.io/guides/install-skills-cursor/)
-- [How to install Agent Skills in Gemini CLI](https://proskillpacks.github.io/guides/install-skills-gemini-cli/)
-- [How to install Agent Skills in GitHub Copilot](https://proskillpacks.github.io/guides/install-skills-github-copilot/)
 - [How to reply to scope creep without burning the relationship](https://proskillpacks.github.io/guides/reply-to-scope-creep-without-burning-the-relationship/)
 - [How to rewrite resume bullets without inventing numbers](https://proskillpacks.github.io/guides/rewrite-resume-bullets-without-inventing-numbers/)
 - [How do I summarise survey results without overclaiming?](https://proskillpacks.github.io/guides/summarise-survey-results-without-overclaiming/)
@@ -83,6 +102,9 @@
 - [How to write a SKILL.md that still works when a tool is missing](https://proskillpacks.github.io/guides/write-a-skill-md-that-works-when-a-tool-is-missing/)
 - [How to write ad copy variants you can actually test](https://proskillpacks.github.io/guides/write-ad-copy-variants-you-can-test/)
 
+## Studies
+- [How portable are the most-installed agent skills?](https://proskillpacks.github.io/study/portability/)
+- [State of Agent-Ready Shopify](https://proskillpacks.github.io/study/shopify-agent-ready/)
+
 ## Other
-- [State of Agent-Ready Shopify (study)](https://proskillpacks.github.io/study/)
-- [Our site checkers](https://proskillpacks.github.io/helpers/)
+- [Our helper scripts](https://proskillpacks.github.io/helpers/)

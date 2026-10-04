@@ -9,6 +9,7 @@
 
 <link rel="canonical" href="https://proskillpacks.github.io/guides/install-skills-cursor/">
 <link rel="icon" href="/assets/avatar.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
@@ -170,6 +171,10 @@ footer small { display: block; margin-top: 1.25rem; }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
+@media (max-width: 40rem) {
+  .brand nav a, footer a { padding: 0.7rem 0.25rem; }
+  .chips a { padding: 0.65rem 1rem; }
+}
 @media (max-width: 30rem) {
   .hero { padding-bottom: 2.25rem; }
   .crumbs { margin-top: 1.75rem; }
@@ -223,20 +228,20 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   </div>
 </header>
 <main><div class="wrap"><section><div class="prose"><p><strong>Source:</strong> <a href="https://cursor.com/docs/skills" rel="noopener">Agent Skills, Cursor docs</a>. Read on 4 October 2026.</p>
-<h3>Where skills go</h3>
+<h2>Where skills go</h2>
 <p>The Cursor docs say skills are loaded automatically from:</p>
 <ul><li><code>.agents/skills/</code> (project)</li><li><code>.cursor/skills/</code> (project)</li><li><code>~/.agents/skills/</code> (your machine, all projects)</li><li><code>~/.cursor/skills/</code> (your machine, all projects)</li></ul>
 <p>For compatibility, Cursor also loads skills from Claude and Codex folders: <code>.claude/skills/</code>, <code>.codex/skills/</code>, <code>~/.claude/skills/</code> and <code>~/.codex/skills/</code>. Each skill is a folder containing a <code>SKILL.md</code> file. The docs also say a <code>.cursor/skills/</code> or <code>.agents/skills/</code> folder anywhere inside a repository is picked up, so a monorepo can keep skills next to the package they apply to.</p>
 <p>One catch from the docs: skills in your user folders stay on your machine unless you sync them for Cloud Agents or publish them to your team.</p>
-<h3>Install one skill by hand</h3>
+<h2>Install one skill by hand</h2>
 <pre><code>git clone https://github.com/proskillpacks/skills
 mkdir -p .agents/skills
 cp -r skills/skills/ecommerce/shopify-policy-checker .agents/skills/</code></pre>
 <p>Run those from your project folder for a project install. Use <code>~/.agents/skills/</code> for all projects.</p>
-<h3>Or use the npx command</h3>
+<h2>Or use the npx command</h2>
 <pre><code>npx skills add proskillpacks/skills -a cursor</code></pre>
 <p>The <code>skills</code> tool&#x27;s README lists <code>cursor</code> as the name for Cursor. Run <code>npx skills add proskillpacks/skills --list</code> to see what is in the repo first.</p>
-<h3>Limits</h3>
+<h2>Limits</h2>
 <ul><li>We read the docs and checked the paths. We did not run Cursor for this page.</li><li>If a skill does not show up, check the folder holds <code>SKILL.md</code> and reload the window.</li></ul>
 <p><a href="/guides/how-to-install-agent-skills/">Back to all install guides</a> | <a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/how-to-install-agent-skills/">How to install Agent Skills in Claude, Codex, Gemini CLI, Cursor and Copilot</a></li><li><a href="/guides/install-skills-chatgpt-paste-in-prompt/">How to use a skill in ChatGPT or any chatbot (paste-in prompt)</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Get new free skills by email</h2>

@@ -9,6 +9,7 @@
 
 <link rel="canonical" href="https://proskillpacks.github.io/guides/install-skills-claude-code/">
 <link rel="icon" href="/assets/avatar.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
@@ -170,6 +171,10 @@ footer small { display: block; margin-top: 1.25rem; }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
+@media (max-width: 40rem) {
+  .brand nav a, footer a { padding: 0.7rem 0.25rem; }
+  .chips a { padding: 0.65rem 1rem; }
+}
 @media (max-width: 30rem) {
   .hero { padding-bottom: 2.25rem; }
   .crumbs { margin-top: 1.75rem; }
@@ -223,22 +228,22 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   </div>
 </header>
 <main><div class="wrap"><section><div class="prose"><p><strong>Source:</strong> <a href="https://code.claude.com/docs/en/skills" rel="noopener">Extend Claude with skills, Claude Code docs</a>. Read on 4 October 2026.</p>
-<h3>Where skills go</h3>
+<h2>Where skills go</h2>
 <p>The Claude Code docs list these locations:</p>
 <ul><li>Personal skills, for all your projects on this machine: <code>~/.claude/skills/&lt;skill-name&gt;/SKILL.md</code></li><li>Project skills, for sessions in one repository: <code>.claude/skills/&lt;skill-name&gt;/SKILL.md</code>. The docs suggest committing it so your team gets it too.</li><li>Nested skills in a sub-folder: <code>&lt;subdir&gt;/.claude/skills/&lt;skill-name&gt;/SKILL.md</code></li></ul>
 <p>The docs describe <code>.claude/skills/</code> only. They do not mention <code>.agents/skills/</code>, so do not rely on that folder in Claude Code.</p>
-<h3>Install one skill by hand</h3>
+<h2>Install one skill by hand</h2>
 <p>Using our free repo as the example:</p>
 <pre><code>git clone https://github.com/proskillpacks/skills
 mkdir -p ~/.claude/skills
 cp -r skills/skills/ecommerce/shopify-policy-checker ~/.claude/skills/</code></pre>
 <p>For one project only, copy it into <code>.claude/skills/</code> inside that project instead.</p>
-<h3>Or use the npx command</h3>
+<h2>Or use the npx command</h2>
 <pre><code>npx skills add proskillpacks/skills -a claude-code</code></pre>
 <p>The <code>skills</code> tool&#x27;s README documents the <code>-a</code> option for choosing a tool, <code>-g</code> for a machine-wide install and <code>--skill &lt;name&gt;</code> for a single skill. Run <code>npx skills add proskillpacks/skills --list</code> to see what is in the repo.</p>
-<h3>Use it</h3>
+<h2>Use it</h2>
 <p>Ask for the job in plain words. The Claude Code docs say the skill&#x27;s description helps Claude decide when to load it, and that the folder name becomes a command you can type. See the doc for how skills show up in your version.</p>
-<h3>Limits</h3>
+<h2>Limits</h2>
 <ul><li>We read the docs and the folder layout today. We did not test Claude Code itself for this page.</li><li>Start a new session after adding a skill if it does not appear.</li></ul>
 <p><a href="/guides/how-to-install-agent-skills/">Back to all install guides</a> | <a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/how-to-install-agent-skills/">How to install Agent Skills in Claude, Codex, Gemini CLI, Cursor and Copilot</a></li><li><a href="/guides/install-skills-chatgpt-paste-in-prompt/">How to use a skill in ChatGPT or any chatbot (paste-in prompt)</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Get new free skills by email</h2>

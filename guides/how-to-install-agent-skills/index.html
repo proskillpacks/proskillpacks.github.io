@@ -9,6 +9,7 @@
 
 <link rel="canonical" href="https://proskillpacks.github.io/guides/how-to-install-agent-skills/">
 <link rel="icon" href="/assets/avatar.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
@@ -170,6 +171,10 @@ footer small { display: block; margin-top: 1.25rem; }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
+@media (max-width: 40rem) {
+  .brand nav a, footer a { padding: 0.7rem 0.25rem; }
+  .chips a { padding: 0.65rem 1rem; }
+}
 @media (max-width: 30rem) {
   .hero { padding-bottom: 2.25rem; }
   .crumbs { margin-top: 1.75rem; }
@@ -224,19 +229,19 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 </header>
 <main><div class="wrap"><section><div class="prose"><p>An Agent Skill is a folder with a <code>SKILL.md</code> file in it. Installing one means putting that folder where your tool looks for skills. Each tool has its own paths, so we checked the official docs for each one and link them below. Where the docs did not say, we say so and point you to them.</p>
 <p>We use our free repo, <a href="https://github.com/proskillpacks/skills" rel="noopener">proskillpacks/skills</a>, as the worked example throughout.</p>
-<h3>The route that works in most tools</h3>
+<h2>The route that works in most tools</h2>
 <p>Run this in your project folder:</p>
 <pre><code>npx skills add proskillpacks/skills</code></pre>
 <p>It uses the open-source <code>skills</code> command line tool (<a href="https://github.com/vercel-labs/skills" rel="noopener">README</a>), asks which skills and which tools you want, and copies them into the right folders. Add <code>--list</code> to see what is in the repo first, <code>--skill &lt;name&gt;</code> to take one skill, <code>-a &lt;tool&gt;</code> to pick a tool and <code>-g</code> to install for your whole machine instead of one project. It needs Node.js.</p>
 <p>If you do not want to run it, copy the skill&#x27;s folder by hand into your tool&#x27;s skills folder, using the table below.</p>
-<h3>Where each tool looks</h3>
+<h2>Where each tool looks</h2>
 <div class="table"><table><thead><tr><th>Tool</th><th>Project folder</th><th>Your own (all projects)</th><th>Page</th></tr></thead><tbody><tr><td>Claude Code</td><td><code>.claude/skills/</code></td><td><code>~/.claude/skills/</code></td><td><a href="/guides/install-skills-claude-code/">Claude Code</a></td></tr><tr><td>claude.ai</td><td>not a folder: upload a ZIP</td><td>Customize, Skills</td><td><a href="/guides/install-skills-claude-ai/">claude.ai</a></td></tr><tr><td>Codex</td><td><code>.agents/skills/</code></td><td><code>~/.agents/skills/</code></td><td><a href="/guides/install-skills-codex-cli/">Codex</a></td></tr><tr><td>Gemini CLI</td><td><code>.gemini/skills/</code> or <code>.agents/skills/</code></td><td><code>~/.gemini/skills/</code> or <code>~/.agents/skills/</code></td><td><a href="/guides/install-skills-gemini-cli/">Gemini CLI</a></td></tr><tr><td>Cursor</td><td><code>.cursor/skills/</code> or <code>.agents/skills/</code></td><td><code>~/.cursor/skills/</code> or <code>~/.agents/skills/</code></td><td><a href="/guides/install-skills-cursor/">Cursor</a></td></tr><tr><td>GitHub Copilot</td><td><code>.github/skills/</code>, <code>.claude/skills/</code> or <code>.agents/skills/</code></td><td><code>~/.copilot/skills/</code> or <code>~/.agents/skills/</code></td><td><a href="/guides/install-skills-github-copilot/">GitHub Copilot</a></td></tr><tr><td>ChatGPT or any chatbot</td><td>no install</td><td>paste <code>prompt.md</code></td><td><a href="/guides/install-skills-chatgpt-paste-in-prompt/">Paste-in prompt</a></td></tr></tbody></table></div>
 <p>Notice what the docs say about <code>.agents/skills/</code>: Codex, Gemini CLI, Cursor and Copilot all document it. Claude Code&#x27;s skills page lists <code>.claude/skills/</code> and does not mention <code>.agents/skills/</code>, so for Claude Code use the <code>.claude</code> folder or the <code>npx skills</code> command.</p>
-<h3>Worked example: one skill by hand</h3>
+<h2>Worked example: one skill by hand</h2>
 <ol><li>Download the repo: <code>git clone https://github.com/proskillpacks/skills</code>.</li><li>Pick a skill folder, for example <code>skills/ecommerce/shopify-policy-checker</code>.</li><li>Copy that folder into your tool&#x27;s skills folder from the table, keeping the folder name: for example <code>.agents/skills/shopify-policy-checker/</code>.</li><li>Start a new session in your tool, so it picks the skill up.</li><li>Ask for the job in plain words, for example: &quot;Check the refund and shipping policies on https://example-store.com&quot;.</li></ol>
-<h3>If it does not show up</h3>
+<h2>If it does not show up</h2>
 <ul><li>Check the folder holds a file named exactly <code>SKILL.md</code>, one level down: <code>skills/&lt;name&gt;/SKILL.md</code>, not <code>skills/&lt;name&gt;/&lt;name&gt;/SKILL.md</code>.</li><li>Restart the session. Several tools read the skills folder only when a session starts.</li><li>Look at your tool&#x27;s own skill list, if it has one. Gemini CLI has <code>/skills list</code>, for example.</li><li>Some skills run a small script and need Python 3. The skill&#x27;s README says so.</li></ul>
-<h3>Limits</h3>
+<h2>Limits</h2>
 <ul><li>Tools change their paths and commands. This was checked on 4 October 2026. If a path here fails, the linked official doc is the authority.</li><li>We did not run every command on every tool. Each tool page says what we read and what we did not test.</li></ul>
 <p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/install-skills-chatgpt-paste-in-prompt/">How to use a skill in ChatGPT or any chatbot (paste-in prompt)</a></li><li><a href="/guides/install-skills-claude-ai/">How to install Agent Skills in claude.ai</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Get new free skills by email</h2>

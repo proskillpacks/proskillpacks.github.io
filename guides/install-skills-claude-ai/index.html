@@ -9,6 +9,7 @@
 
 <link rel="canonical" href="https://proskillpacks.github.io/guides/install-skills-claude-ai/">
 <link rel="icon" href="/assets/avatar.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
@@ -170,6 +171,10 @@ footer small { display: block; margin-top: 1.25rem; }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
+@media (max-width: 40rem) {
+  .brand nav a, footer a { padding: 0.7rem 0.25rem; }
+  .chips a { padding: 0.65rem 1rem; }
+}
 @media (max-width: 30rem) {
   .hero { padding-bottom: 2.25rem; }
   .crumbs { margin-top: 1.75rem; }
@@ -224,12 +229,12 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 </header>
 <main><div class="wrap"><section><div class="prose"><p><strong>Source:</strong> <a href="https://support.claude.com/en/articles/12512180-use-skills-in-claude" rel="noopener">Use skills in Claude, Claude Help Center</a>. Read on 4 October 2026.</p>
 <p>claude.ai does not read a skills folder on your computer. You upload the skill as a ZIP file.</p>
-<h3>Steps</h3>
+<h2>Steps</h2>
 <ol><li>Check that code execution is on. The help article says that on Free, Pro and Max plans you go to Settings, then Capabilities, and make sure &quot;Code execution and file creation&quot; is enabled. On Team and Enterprise plans an owner controls this in organisation settings.</li><li>Package the skill folder as a ZIP file. The folder should hold <code>SKILL.md</code>.</li><li>Go to Customize, then Skills.</li><li>Click the &quot;+&quot; button, then &quot;Create skill&quot;, then &quot;Upload a skill&quot;.</li><li>Upload the ZIP. The skill appears in your list and you can switch it on or off there.</li></ol>
 <p>The help article notes that skills you upload are not visible to colleagues until you share them, and that on Team and Enterprise plans an organisation owner can turn off skill creation. If the upload option is missing, that is the usual reason.</p>
-<h3>Using our free skills as the example</h3>
+<h2>Using our free skills as the example</h2>
 <p>Take a skill folder from <a href="https://github.com/proskillpacks/skills" rel="noopener">proskillpacks/skills</a>, for example <code>skills/ecommerce/shopify-policy-checker</code>, and ZIP that folder. Upload the ZIP as above. Then ask for the job in plain words.</p>
-<h3>Limits</h3>
+<h2>Limits</h2>
 <ul><li>The menu names are from the help article as of today. Claude&#x27;s settings change, so if you cannot find them, search the help centre for &quot;skills&quot;.</li><li>Skills that need to run a script rely on the code execution environment. Skills that need the web depend on what your plan allows. See each skill&#x27;s README.</li><li>We did not test this page by uploading in a live account today. We read the official article.</li></ul>
 <p><a href="/guides/how-to-install-agent-skills/">Back to all install guides</a> | <a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/how-to-install-agent-skills/">How to install Agent Skills in Claude, Codex, Gemini CLI, Cursor and Copilot</a></li><li><a href="/guides/install-skills-chatgpt-paste-in-prompt/">How to use a skill in ChatGPT or any chatbot (paste-in prompt)</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Get new free skills by email</h2>

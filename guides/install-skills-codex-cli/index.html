@@ -9,6 +9,7 @@
 
 <link rel="canonical" href="https://proskillpacks.github.io/guides/install-skills-codex-cli/">
 <link rel="icon" href="/assets/avatar.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
@@ -170,6 +171,10 @@ footer small { display: block; margin-top: 1.25rem; }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
+@media (max-width: 40rem) {
+  .brand nav a, footer a { padding: 0.7rem 0.25rem; }
+  .chips a { padding: 0.65rem 1rem; }
+}
 @media (max-width: 30rem) {
   .hero { padding-bottom: 2.25rem; }
   .crumbs { margin-top: 1.75rem; }
@@ -223,20 +228,20 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   </div>
 </header>
 <main><div class="wrap"><section><div class="prose"><p><strong>Source:</strong> <a href="https://learn.chatgpt.com/docs/build-skills" rel="noopener">Build skills, OpenAI docs</a> (the Codex skills page at developers.openai.com/codex/skills redirects here). Read on 4 October 2026.</p>
-<h3>Where skills go</h3>
+<h2>Where skills go</h2>
 <p>The docs say Codex reads skills from repository, user, admin and system locations:</p>
 <ul><li>Repository: <code>.agents/skills</code> in the folder where you launch Codex, and in every folder up to the repository root.</li><li>User: <code>$HOME/.agents/skills</code>, for skills that apply in any repository.</li><li>Admin: <code>/etc/codex/skills</code>, a shared location on a machine.</li></ul>
 <p>If two skills share a name, Codex does not merge them.</p>
-<h3>Install one skill by hand</h3>
+<h2>Install one skill by hand</h2>
 <pre><code>git clone https://github.com/proskillpacks/skills
 mkdir -p ~/.agents/skills
 cp -r skills/skills/freelancers/late-payment-chaser-uk ~/.agents/skills/</code></pre>
 <p>For one project only, copy it into <code>.agents/skills/</code> in that project.</p>
-<h3>Or use the npx command</h3>
+<h2>Or use the npx command</h2>
 <pre><code>npx skills add proskillpacks/skills -a codex</code></pre>
-<h3>Or ask Codex to install it</h3>
+<h2>Or ask Codex to install it</h2>
 <p>The docs describe a built-in <code>$skill-installer</code>. Their example installs a curated skill with <code>$skill-installer linear</code>, and say you can also prompt the installer to download skills from other repositories. We did not test the exact wording for a GitHub repo, so see the docs for it. The docs also say Codex detects newly installed skills automatically, and that you should restart Codex if one does not appear.</p>
-<h3>Limits</h3>
+<h2>Limits</h2>
 <ul><li>We read the docs and checked the folder paths. We did not run Codex for this page.</li><li>The docs page covers Codex generally. If your Codex app or version behaves differently, follow the docs.</li></ul>
 <p><a href="/guides/how-to-install-agent-skills/">Back to all install guides</a> | <a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/how-to-install-agent-skills/">How to install Agent Skills in Claude, Codex, Gemini CLI, Cursor and Copilot</a></li><li><a href="/guides/install-skills-chatgpt-paste-in-prompt/">How to use a skill in ChatGPT or any chatbot (paste-in prompt)</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Get new free skills by email</h2>

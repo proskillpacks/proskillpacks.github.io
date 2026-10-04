@@ -9,6 +9,7 @@
 
 <link rel="canonical" href="https://proskillpacks.github.io/guides/write-a-blameless-postmortem-after-an-outage/">
 <link rel="icon" href="/assets/avatar.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
@@ -170,6 +171,10 @@ footer small { display: block; margin-top: 1.25rem; }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
+@media (max-width: 40rem) {
+  .brand nav a, footer a { padding: 0.7rem 0.25rem; }
+  .chips a { padding: 0.65rem 1rem; }
+}
 @media (max-width: 30rem) {
   .hero { padding-bottom: 2.25rem; }
   .crumbs { margin-top: 1.75rem; }
@@ -224,9 +229,9 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 </header>
 <main><div class="wrap"><section><div class="prose"><p>A postmortem is easiest to write in the hour after the incident and hardest a week later. By then the chat has scrolled away and the timeline lives in three people&#x27;s heads. The fix is to write the first draft from the raw material while it still exists, and to mark everything you are unsure about.</p>
 <p>Google&#x27;s SRE book gives the aim in one sentence: document the incident, understand the contributing causes, and put effective preventive actions in place. It also defines the word that matters here. A blameless postmortem <a href="https://sre.google/sre-book/postmortem-culture/" rel="noopener">identifies contributing causes without indicting any individual or team</a>. In practice that means you describe what the system and the process allowed, not who clicked what.</p>
-<h3>What you need</h3>
+<h2>What you need</h2>
 <ul><li>The raw material: the incident chat export, alert text, status page updates, deploy or commit notes, and your own rough notes. Paste it as it is.</li><li>The time zone the timestamps are in. If you do not know, say so.</li><li>Your team&#x27;s postmortem template headings, if you have them.</li></ul>
-<h3>The prompt</h3>
+<h2>The prompt</h2>
 <pre><code>You write a blameless postmortem from the raw material below. Use only what the material says. Never invent a timestamp, metric, customer count, tool name, cause or person.
 
 Service: [name]
@@ -246,13 +251,13 @@ If the material contradicts itself, show both versions. If detection took a long
 
 MATERIAL:
 [paste here]</code></pre>
-<h3>How to check the result</h3>
+<h2>How to check the result</h2>
 <p>Read the timeline against the original chat. Every time should match a line you can find. Then read the &quot;Inferred&quot; tags. These are the sentences the team has to confirm or strike before the document is final.</p>
 <p>Check the arithmetic yourself. Detection time is the one people get wrong, because the status page often opens later than the real start. If the material gives two start times, the draft should show both and say which one it used.</p>
 <p>Then read the action items. A good one has a first step you could do on Monday. &quot;Improve monitoring&quot; is not an action. &quot;Add an alert on review completion rate, starting with the job queue&quot; is.</p>
-<h3>Sharing it</h3>
+<h2>Sharing it</h2>
 <p>Circulate the draft to the people who were on the incident before anyone else sees it. Ask them one thing: is anything in the timeline wrong? Fix those, assign owners in a meeting, and only then publish.</p>
-<h3>Limits</h3>
+<h2>Limits</h2>
 <ul><li>It only knows the material you paste. If the logs and metrics are not in the draft, they are listed under &quot;Not in the material&quot;, and someone has to go and get them.</li><li>It does not decide the root cause. When the evidence does not settle it, the draft says &quot;most likely&quot; and marks it Inferred. Treat that as a question for the team.</li><li>Owners and dates are blank on purpose. Assign them in a meeting.</li><li>A draft is not a review. The blameless part depends on how your team talks about it, not on the wording of a document.</li><li>Do not paste customer data, secrets or personal details into a chatbot you do not control. Redact first.</li></ul>
 <p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/check-ai-written-code-before-launch/">How to check AI-written code before you launch it</a></li><li><a href="/guides/write-a-skill-md-that-works-when-a-tool-is-missing/">How to write a SKILL.md that still works when a tool is missing</a></li><li>All skills for developers: <a href="/for/developers/">Developers</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Get new free skills by email</h2>

@@ -9,6 +9,7 @@
 
 <link rel="canonical" href="https://proskillpacks.github.io/guides/install-skills-gemini-cli/">
 <link rel="icon" href="/assets/avatar.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
@@ -170,6 +171,10 @@ footer small { display: block; margin-top: 1.25rem; }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
+@media (max-width: 40rem) {
+  .brand nav a, footer a { padding: 0.7rem 0.25rem; }
+  .chips a { padding: 0.65rem 1rem; }
+}
 @media (max-width: 30rem) {
   .hero { padding-bottom: 2.25rem; }
   .crumbs { margin-top: 1.75rem; }
@@ -224,22 +229,22 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 </header>
 <main><div class="wrap"><section><div class="prose"><p><strong>Source:</strong> <a href="https://geminicli.com/docs/cli/skills/" rel="noopener">Agent Skills, Gemini CLI docs</a>. Read on 4 October 2026.</p>
 <p>A notice at the top of that page says that Gemini CLI was replaced by Antigravity CLI on 18 June 2026 for unpaid tier and Google One users. If that is you, read the notice and the Antigravity docs. Everything below is from the Gemini CLI page.</p>
-<h3>Where skills go</h3>
+<h2>Where skills go</h2>
 <ul><li>User skills: <code>~/.gemini/skills/</code> or the alias <code>~/.agents/skills/</code></li><li>Workspace skills: <code>.gemini/skills/</code> or the alias <code>.agents/skills/</code>. These are shared with your team through version control.</li></ul>
 <p>The docs say that within the same level, <code>.agents/skills/</code> takes precedence over <code>.gemini/skills/</code>.</p>
-<h3>Install with a command</h3>
+<h2>Install with a command</h2>
 <p>The docs show this form, from the terminal:</p>
 <pre><code>gemini skills install https://github.com/user/repo.git --consent</code></pre>
 <p>Options in the docs: <code>--scope user|workspace</code> (user is the default), <code>--path</code> for the sub-directory in a Git repository that holds the skill, and <code>--consent</code> to skip the security confirmation. For one of our free skills, built from those options (we have not run this exact line):</p>
 <pre><code>gemini skills install https://github.com/proskillpacks/skills.git --path skills/ecommerce/shopify-policy-checker --scope workspace</code></pre>
-<h3>Or copy by hand, or use npx</h3>
+<h2>Or copy by hand, or use npx</h2>
 <pre><code>git clone https://github.com/proskillpacks/skills
 mkdir -p ~/.agents/skills
 cp -r skills/skills/ecommerce/shopify-policy-checker ~/.agents/skills/</code></pre>
 <pre><code>npx skills add proskillpacks/skills -a gemini-cli</code></pre>
-<h3>Check it</h3>
+<h2>Check it</h2>
 <p>Inside a session, <code>/skills list</code> shows discovered skills and <code>/skills reload</code> refreshes the list. From the terminal, <code>gemini skills list --all</code> lists them. The docs say Gemini asks for your confirmation before it uses a skill.</p>
-<h3>Limits</h3>
+<h2>Limits</h2>
 <ul><li>We read the docs. We did not run Gemini CLI for this page.</li><li>The product has changed names for some users, as the notice says. Follow the official page if it differs from this one.</li></ul>
 <p><a href="/guides/how-to-install-agent-skills/">Back to all install guides</a> | <a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/how-to-install-agent-skills/">How to install Agent Skills in Claude, Codex, Gemini CLI, Cursor and Copilot</a></li><li><a href="/guides/install-skills-chatgpt-paste-in-prompt/">How to use a skill in ChatGPT or any chatbot (paste-in prompt)</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Get new free skills by email</h2>

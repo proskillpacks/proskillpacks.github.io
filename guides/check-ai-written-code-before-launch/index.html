@@ -9,6 +9,7 @@
 
 <link rel="canonical" href="https://proskillpacks.github.io/guides/check-ai-written-code-before-launch/">
 <link rel="icon" href="/assets/avatar.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
@@ -170,6 +171,10 @@ footer small { display: block; margin-top: 1.25rem; }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
+@media (max-width: 40rem) {
+  .brand nav a, footer a { padding: 0.7rem 0.25rem; }
+  .chips a { padding: 0.65rem 1rem; }
+}
 @media (max-width: 30rem) {
   .hero { padding-bottom: 2.25rem; }
   .crumbs { margin-top: 1.75rem; }
@@ -224,13 +229,13 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 </header>
 <main><div class="wrap"><section><div class="prose"><p>AI-written code often runs on the first try and still has problems you only meet in production. It tends to look tidy, so it is easy to wave through. This is a short routine to run before you launch anything an assistant wrote for you.</p>
 <p>None of it replaces tests, a second person&#x27;s eyes or a proper security review for anything handling payments or personal data. It catches the common, cheap-to-fix things first.</p>
-<h3>Step 1: run it as a stranger would</h3>
+<h2>Step 1: run it as a stranger would</h2>
 <p>Before reading a line of code, run the app from a clean checkout. Clone it into a new folder, install from the lockfile, and follow your own README. If that fails, the code only worked on the machine that wrote it. Fix this first.</p>
-<h3>Step 2: check the dependencies</h3>
+<h2>Step 2: check the dependencies</h2>
 <p>Assistants sometimes name packages that do not exist or are not what they sound like. For each new dependency, confirm it exists on the official registry, check who maintains it and when it last changed, and make sure you actually need it. Remove anything you cannot justify.</p>
-<h3>Step 3: look for secrets and open doors</h3>
+<h2>Step 3: look for secrets and open doors</h2>
 <p>Search the repo for keys, tokens and passwords, including in config examples and test files. Then check every route or function that takes input: is the user allowed to do this, is the input validated, and what happens with an empty or huge value? Look at anything that builds a query, a shell command or a file path from user input.</p>
-<h3>Step 4: ask the assistant to review, in a fresh chat</h3>
+<h2>Step 4: ask the assistant to review, in a fresh chat</h2>
 <p>Open a new conversation so it is not defending its own work. Paste the code and this prompt.</p>
 <pre><code>Review the code below as a careful senior engineer who did not write it. The code will go to production.
 
@@ -248,11 +253,11 @@ Do not praise the code. Do not suggest style changes. If you are unsure about so
 
 CODE:
 [paste here]</code></pre>
-<h3>Step 5: verify each finding yourself</h3>
+<h2>Step 5: verify each finding yourself</h2>
 <p>Treat the answer as a list of leads. Some will be wrong and some real issues will be missing. For each item, reproduce it or read the code it points to. Write a test for the ones that are real, then fix them.</p>
-<h3>Step 6: test the boring paths</h3>
+<h2>Step 6: test the boring paths</h2>
 <p>Try an empty form, a very long string, a repeated click, a logged-out visit to a logged-in page, and the app with the network off. These are where generated code most often falls over.</p>
-<h3>Limits</h3>
+<h2>Limits</h2>
 <ul><li>A review prompt reads only what you paste. It cannot see your servers, your cloud settings or code in files you left out.</li><li>It can miss real bugs and report ones that are not there. Passing a review does not mean the code is safe.</li><li>It does not replace automated tests, a dependency audit tool or a human review for payments, health or personal data.</li><li>If you cannot read the code at all, get someone who can to look before real users do.</li></ul>
 <p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/write-a-blameless-postmortem-after-an-outage/">How do I write a blameless postmortem after an outage?</a></li><li><a href="/guides/write-a-skill-md-that-works-when-a-tool-is-missing/">How to write a SKILL.md that still works when a tool is missing</a></li><li>All skills for developers: <a href="/for/developers/">Developers</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Get new free skills by email</h2>

@@ -9,6 +9,7 @@
 
 <link rel="canonical" href="https://proskillpacks.github.io/guides/clean-a-messy-csv-export/">
 <link rel="icon" href="/assets/avatar.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
@@ -170,6 +171,10 @@ footer small { display: block; margin-top: 1.25rem; }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
+@media (max-width: 40rem) {
+  .brand nav a, footer a { padding: 0.7rem 0.25rem; }
+  .chips a { padding: 0.65rem 1rem; }
+}
 @media (max-width: 30rem) {
   .hero { padding-bottom: 2.25rem; }
   .crumbs { margin-top: 1.75rem; }
@@ -224,9 +229,9 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 </header>
 <main><div class="wrap"><section><div class="prose"><p>Exports from a shop, a CRM or an accounting tool break in the same few ways. Names turn into &quot;JosÃ©&quot;. A phone number loses its leading zero. A date flips from 03/04 to 04/03. Opening the file in Excel and saving it makes some of these worse, because Excel quietly changes what it thinks it understands.</p>
 <p>The safer way is a short script that reads the original file and writes a new one. You can read it, rerun it next month on the next export, and the original stays untouched.</p>
-<h3>What usually goes wrong</h3>
+<h2>What usually goes wrong</h2>
 <ul><li><strong>Encoding.</strong> Accents and symbols appear as odd characters. The file is probably UTF-8 and was read as something else, or the reverse.</li><li><strong>Delimiter.</strong> Everything lands in one column, or a comma inside an address splits it. Some regions export with semicolons.</li><li><strong>Leading zeros.</strong> Postcodes, phone numbers and product codes lose the zero when treated as numbers.</li><li><strong>Long numbers.</strong> Order and account IDs turn into 1.23E+11 in Excel. The digits are gone once saved.</li><li><strong>Dates.</strong> Day-first and month-first mixed, or text dates that do not sort.</li><li><strong>Headers.</strong> Duplicate column names, trailing spaces, or two header rows.</li><li><strong>Blank and placeholder values.</strong> Empty, &quot;N/A&quot;, &quot;null&quot; and &quot;-&quot; mean the same thing in different rows.</li><li><strong>Duplicates.</strong> The same record exported twice, with small differences.</li></ul>
-<h3>The prompt</h3>
+<h2>The prompt</h2>
 <p>Do not paste the whole file. Paste the header row and about 20 representative rows, with anything private removed or replaced. Then use this.</p>
 <pre><code>I have a CSV export I need to clean. Write a Python 3 script (standard library plus pandas if you need it) that reads the original file and writes a cleaned copy. It must never overwrite the original.
 
@@ -245,10 +250,10 @@ Then write the script. Requirements:
 
 SAMPLE (header and rows):
 [paste here]</code></pre>
-<h3>Run it and check</h3>
+<h2>Run it and check</h2>
 <ol><li>Run the script on a copy of the full export.</li><li>Compare rows in with rows out. The difference should match the duplicates you agreed to drop.</li><li>Total any number column before and after. If the totals differ, the change log should explain why.</li><li>Open the change log and read 20 lines against the original.</li><li>Open needs_review.csv and decide those by hand.</li><li>Import the cleaned file into a test copy of the destination first, not your live data.</li></ol>
 <p>If the assistant cannot run code, it will give you the script to run yourself. Read it before you run it, and be wary of any line that deletes or overwrites files.</p>
-<h3>Limits</h3>
+<h2>Limits</h2>
 <ul><li>The script is only as good as the sample you showed. A rare format that was not in the sample can slip through. That is what the totals and the review file are for.</li><li>Rules like &quot;these two customers are the same person&quot; are your decision, not the script&#x27;s.</li><li>Large files may need chunked reading. Ask for that if the file is bigger than your memory.</li><li>Never send customer data to a tool you are not allowed to send it to. Replace names and emails in the sample with fake ones.</li><li>This does not fix data that was wrong at the source.</li></ul>
 <p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/clean-messy-spreadsheet-with-ai/">How to clean a messy spreadsheet with an AI assistant</a></li><li><a href="/guides/summarise-survey-results-without-overclaiming/">How do I summarise survey results without overclaiming?</a></li><li>All skills for people who work in spreadsheets: <a href="/for/data-and-spreadsheets/">Data and spreadsheets</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Get new free skills by email</h2>

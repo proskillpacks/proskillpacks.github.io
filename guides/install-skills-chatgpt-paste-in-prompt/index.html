@@ -9,6 +9,7 @@
 
 <link rel="canonical" href="https://proskillpacks.github.io/guides/install-skills-chatgpt-paste-in-prompt/">
 <link rel="icon" href="/assets/avatar.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
@@ -170,6 +171,10 @@ footer small { display: block; margin-top: 1.25rem; }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
+@media (max-width: 40rem) {
+  .brand nav a, footer a { padding: 0.7rem 0.25rem; }
+  .chips a { padding: 0.65rem 1rem; }
+}
 @media (max-width: 30rem) {
   .hero { padding-bottom: 2.25rem; }
   .crumbs { margin-top: 1.75rem; }
@@ -223,13 +228,13 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   </div>
 </header>
 <main><div class="wrap"><section><div class="prose"><p><strong>Source:</strong> the README of <a href="https://github.com/proskillpacks/skills" rel="noopener">proskillpacks/skills</a>, our own repo. There is no vendor documentation to cite here because there is nothing to install.</p>
-<h3>Steps</h3>
+<h2>Steps</h2>
 <ol><li>Open the skill&#x27;s folder on GitHub, for example <code>skills/ecommerce/shopify-policy-checker</code>.</li><li>Open <code>prompt.md</code> and copy all of it.</li><li>Start a new chat in ChatGPT, Gemini, Claude or any other chatbot, and paste it in.</li><li>Where the prompt says to add your own material, paste it: the page text, the reviews, the invoice details or the diff.</li><li>Send it, read the answer, and check it against your own facts before using it.</li></ol>
-<h3>What is different from an installed skill</h3>
+<h2>What is different from an installed skill</h2>
 <p>The repo README says the prompt versions have no scripts and no web access. A skill you install can fetch a page or run a helper script. In a chatbot you paste in the text it would have fetched, and if a skill relies on a script for exact figures, the chatbot does the arithmetic itself, so check the working.</p>
-<h3>Tips</h3>
+<h2>Tips</h2>
 <ul><li>Use your assistant&#x27;s strongest model. In our own tests, smaller models were more likely to add facts that were not in the source text.</li><li>Start a new chat for each job so earlier messages do not leak in.</li><li>Keep the answer only if every fact in it traces back to what you pasted.</li></ul>
-<h3>Limits</h3>
+<h2>Limits</h2>
 <ul><li>Chatbots can ignore parts of a long prompt. If the answer skips a step, say which step and ask for it again.</li><li>Do not paste anything private into a tool you are not allowed to use it with.</li></ul>
 <p><a href="/guides/how-to-install-agent-skills/">Back to all install guides</a> | <a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/how-to-install-agent-skills/">How to install Agent Skills in Claude, Codex, Gemini CLI, Cursor and Copilot</a></li><li><a href="/guides/install-skills-claude-ai/">How to install Agent Skills in claude.ai</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Get new free skills by email</h2>
