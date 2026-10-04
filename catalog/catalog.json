@@ -540,6 +540,75 @@
    "includes": []
   },
   {
+   "id": "csv-profile-and-sanity-check",
+   "title": "CSV Profile and Sanity Check",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "data-and-spreadsheets",
+   "category_name": "Data and spreadsheets",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/csv-profile-and-sanity-check/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/data/csv-profile-and-sanity-check",
+   "summary": "Give it a CSV. Get a read-only profile of every column, flags and questions for the data's owner. Free, MIT-licensed.",
+   "give": "A CSV.",
+   "get": "It runs a small read-only script (Python 3 standard library) and reports rows, columns, each column's type, blanks, distinct values, ranges, duplicates, mixed formats, stray spaces, case variants and outliers, then lists questions to ask the data's owner. Without code execution it profiles a pasted sample and says so.",
+   "jobs": [
+    "analyse data",
+    "check"
+   ],
+   "tags": [],
+   "tested": "1 run on a real public CSV (Claude Sonnet) with the script.",
+   "includes": []
+  },
+  {
+   "id": "job-post-decoder",
+   "title": "Job Post Decoder",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "careers",
+   "category_name": "Job seekers and careers",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/job-post-decoder/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/careers/job-post-decoder",
+   "summary": "Paste a job post. Get what the job is, firm and wish requirements, what is missing and questions for the recruiter. Free, MIT-licensed.",
+   "give": "Paste a job post.",
+   "get": "It says in plain words what the job is, sorts the requirements into firm, wish and unclear with quotes, lists what the post leaves out (pay, location, hours, team), points out phrases worth a question, and gives you six to eight questions for the recruiter. If you add your background, it says where the fit is strong or weak and what to lead with. It never says anything about the employer beyond the post.",
+   "jobs": [
+    "job search",
+    "check"
+   ],
+   "tags": [],
+   "tested": "1 run on a real public job post (Claude Sonnet).",
+   "includes": []
+  },
+  {
+   "id": "cold-email-checker",
+   "title": "Cold Email Checker",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "sales-and-outreach",
+   "category_name": "Sales and outreach",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/cold-email-checker/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/sales/cold-email-checker",
+   "summary": "Give it a cold email draft and the prospect's page text. Get a verdict, a claims table and a tightened version. Free, MIT-licensed.",
+   "give": "A cold email draft and the text of the prospect's page.",
+   "get": "It tests every claim about the prospect against that text, flags claims about you that need proof, checks the subject line, the single ask and the length, and lists the commercial email basics from the US FTC's CAN-SPAM guide that the draft is missing. You get a verdict, a claims table, quoted issues and a tightened version with unsupported claims removed.",
+   "jobs": [
+    "write copy",
+    "check"
+   ],
+   "tags": [],
+   "tested": "1 run on a draft we wrote with common flaws and text from a real public homepage (Claude Sonnet).",
+   "includes": []
+  },
+  {
    "id": "fact-claim-checker",
    "title": "Fact-Claim Checker",
    "kind": "Free skill",
@@ -559,6 +628,52 @@
    ],
    "tags": [],
    "tested": "1 real-data run on a public launch post (Claude Sonnet). All 17 flagged claims and both internal conflicts were real.",
+   "includes": []
+  },
+  {
+   "id": "invoice-checker",
+   "title": "Invoice Checker",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "finance-and-admin",
+   "category_name": "Finance and small-business admin",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/invoice-checker/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/finance/invoice-checker",
+   "summary": "Give it an invoice. Get the totals recomputed, every difference, missing fields and consistency flags. No tax advice. Free, MIT-licensed.",
+   "give": "An invoice, yours or one you received.",
+   "get": "A small script (Python 3 standard library, exact decimal arithmetic) recomputes every line, the subtotal, the discount, the tax and the total, and lists every difference. It lists common fields that are missing and flags date, currency and rounding problems. It gives no tax advice.",
+   "jobs": [
+    "check",
+    "admin"
+   ],
+   "tags": [],
+   "tested": "1 run on a sample invoice we wrote with planted errors (Claude Sonnet).",
+   "includes": []
+  },
+  {
+   "id": "angry-customer-reply-check",
+   "title": "Angry Customer Reply Check",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "customer-support",
+   "category_name": "Customer support",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/angry-customer-reply-check/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/support/angry-customer-reply-check",
+   "summary": "Give it the complaint, your draft reply and your policy. Get a check of promises, facts and tone, and a repaired draft. Free, MIT-licensed.",
+   "give": "The customer's message, your draft reply and your policy.",
+   "get": "It lists what the customer raised and whether the draft answers it, tests every promise against your policy, checks the facts, flags blame, defensive phrases and empty apologies with your exact words, checks there is a next step, and returns a repaired draft. Open decisions are marked [DECIDE]. It never adds a refund or timeline you did not give it.",
+   "jobs": [
+    "write replies",
+    "check"
+   ],
+   "tags": [],
+   "tested": "1 run on a complaint, draft and policy we wrote (Claude Sonnet).",
    "includes": []
   }
  ]

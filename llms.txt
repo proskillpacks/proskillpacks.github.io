@@ -30,7 +30,12 @@
 - [Short-term rental hosts](https://proskillpacks.github.io/for/short-term-rental-hosts/)
 - [Marketers and agencies](https://proskillpacks.github.io/for/marketers-and-agencies/)
 - [Developers](https://proskillpacks.github.io/for/developers/)
+- [Data and spreadsheets](https://proskillpacks.github.io/for/data-and-spreadsheets/)
+- [Job seekers and careers](https://proskillpacks.github.io/for/careers/)
+- [Sales and outreach](https://proskillpacks.github.io/for/sales-and-outreach/)
 - [Content and writing](https://proskillpacks.github.io/for/content-and-writing/)
+- [Finance and small-business admin](https://proskillpacks.github.io/for/finance-and-admin/)
+- [Customer support](https://proskillpacks.github.io/for/customer-support/)
 
 ## Shopify store owners
 - [Agent-Ready Quick Check](https://proskillpacks.github.io/skills/agent-ready-quick-check/) (Free): Six checks on how AI shopping agents read your store, compared with 99 stores we audited.
@@ -66,16 +71,36 @@
 - [Skill Portability Check](https://proskillpacks.github.io/skills/skill-portability-check/) (Free): A free checker for SKILL.md folders: strict-YAML trap, portable keys, vendor tool names, missing fallbacks, broken links. One Python file, exit code for CI.
 - [Test Gap Finder](https://proskillpacks.github.io/skills/test-gap-finder/) (Free): Give it a diff and the tests. Get each behaviour the change adds marked Covered, Not covered or Unknown, and ranked test cases for the gaps.
 
+## Data and spreadsheets
+- [CSV Profile and Sanity Check](https://proskillpacks.github.io/skills/csv-profile-and-sanity-check/) (Free): Give it a CSV. Get a read-only profile of every column, flags and questions for the data's owner. Free, MIT-licensed.
+
+## Job seekers and careers
+- [Job Post Decoder](https://proskillpacks.github.io/skills/job-post-decoder/) (Free): Paste a job post. Get what the job is, firm and wish requirements, what is missing and questions for the recruiter. Free, MIT-licensed.
+
+## Sales and outreach
+- [Cold Email Checker](https://proskillpacks.github.io/skills/cold-email-checker/) (Free): Give it a cold email draft and the prospect's page text. Get a verdict, a claims table and a tightened version. Free, MIT-licensed.
+
 ## Content and writing
 - [Fact-Claim Checker](https://proskillpacks.github.io/skills/fact-claim-checker/) (Free): Paste a draft before you publish. Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.
+
+## Finance and small-business admin
+- [Invoice Checker](https://proskillpacks.github.io/skills/invoice-checker/) (Free): Give it an invoice. Get the totals recomputed, every difference, missing fields and consistency flags. No tax advice. Free, MIT-licensed.
+
+## Customer support
+- [Angry Customer Reply Check](https://proskillpacks.github.io/skills/angry-customer-reply-check/) (Free): Give it the complaint, your draft reply and your policy. Get a check of promises, facts and tone, and a repaired draft. Free, MIT-licensed.
 
 ## Free prompts
 - [Accessibility audit prompt for ChatGPT, Claude or Gemini](https://proskillpacks.github.io/prompts/accessibility-quick-audit/)
 - [Can AI agents read my Shopify store? Free prompt](https://proskillpacks.github.io/prompts/agent-ready-quick-check/)
 - [AI search readiness check prompt for any chatbot](https://proskillpacks.github.io/prompts/ai-search-readiness-check/)
+- [Angry customer reply checker prompt for any chatbot](https://proskillpacks.github.io/prompts/angry-customer-reply-check/)
 - [Changelog from commits prompt for ChatGPT or Claude](https://proskillpacks.github.io/prompts/changelog-from-commits/)
 - [Chargeback evidence checklist prompt for ChatGPT or Claude](https://proskillpacks.github.io/prompts/chargeback-evidence-checklist/)
+- [Cold email checker prompt for ChatGPT, Claude or Gemini](https://proskillpacks.github.io/prompts/cold-email-checker/)
+- [CSV sanity check prompt for ChatGPT or Claude](https://proskillpacks.github.io/prompts/csv-profile-and-sanity-check/)
 - [Fact-check a draft: claim checker prompt for any chatbot](https://proskillpacks.github.io/prompts/fact-claim-checker/)
+- [Invoice checker prompt for ChatGPT, Claude or Gemini](https://proskillpacks.github.io/prompts/invoice-checker/)
+- [Job post decoder prompt for ChatGPT, Claude or Gemini](https://proskillpacks.github.io/prompts/job-post-decoder/)
 - [Late payment interest and chaser email prompt (UK)](https://proskillpacks.github.io/prompts/late-payment-chaser-uk/)
 - [Pull request description prompt for ChatGPT or Claude](https://proskillpacks.github.io/prompts/pr-description-and-review-prep/)
 - [Shopify product title cleaner prompt for any chatbot](https://proskillpacks.github.io/prompts/product-title-cleaner/)
