@@ -71,6 +71,7 @@ a.card:hover, a.card:focus-visible { border-color: var(--pine); box-shadow: 0 10
 .price { font-size: 1.3rem; font-weight: 800; }
 .go { background: var(--pine); color: var(--cream); padding: 0.6rem 1.1rem; border-radius: 999px; font-weight: 700; font-size: 0.95rem; white-space: nowrap; }
 .go.muted { background: #e9eee9; color: var(--slate); }
+.row-title { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.01em; margin: 2.5rem 0 0.4rem; }
 .also { color: var(--slate); font-size: 0.97rem; margin: 1.5rem 0 0; }
 .also a { color: var(--pine); font-weight: 700; }
 .study { background: var(--deep); color: var(--cream); }
@@ -136,7 +137,7 @@ a:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
   <section id="products">
     <div class="wrap">
       <h2>Products</h2>
-      <p class="sub">The free skills are available now. The Store Ops Pack and its single skills are in final testing and go on sale shortly.</p>
+      <p class="sub">The free skills and two single skills are available now. The Store Ops Pack and the other four single skills are in final testing and go on sale shortly.</p>
       <div class="products">
         <a class="card" href="https://proskillpacks.gumroad.com/l/free-shopify-skills" target="_blank" rel="noopener">
           <img src="assets/cover-free-skills.png" alt="Free Shopify Skills: 5 tested Agent Skills for Shopify store owners" width="1280" height="720">
@@ -173,20 +174,18 @@ a:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
         </div>
         <div class="card">
           <div class="panel">
-            <b>Single skills</b>
+            <b>More single skills</b>
             <ul>
               <li>Store audit</li>
               <li>Support macros</li>
-              <li>Descriptions</li>
-              <li>SEO fixer</li>
               <li>Chargebacks</li>
               <li>BFCM kit</li>
             </ul>
           </div>
           <div class="body">
             <span class="tag soon">In final testing</span>
-            <h3>Single skills, $5 each</h3>
-            <p>Each skill from the Store Ops Pack, sold on its own as a low-cost way to try one.</p>
+            <h3>Four more single skills, $5 each</h3>
+            <p>The other skills from the Store Ops Pack, each sold on its own once it has passed its tests.</p>
             <ul>
               <li>The same files and the same tests as the pack</li>
               <li>Install guide and a ready-made zip for claude.ai</li>
@@ -195,6 +194,28 @@ a:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
             <div class="foot"><span class="price">$5</span><span class="go muted">Available shortly</span></div>
           </div>
         </div>
+      </div>
+      <h3 class="row-title" id="singles">Single skills, $5</h3>
+      <p class="sub">One skill from the Store Ops Pack, as a low-cost way to try it. The same files and the same tests as the pack, with a 30-day refund.</p>
+      <div class="products">
+        <a class="card" href="https://proskillpacks.gumroad.com/l/product-seo-fixer" target="_blank" rel="noopener">
+          <img src="assets/cover-product-seo-fixer.png" alt="Product SEO Fixer: a tested Agent Skill for Shopify store owners" width="1280" height="720" loading="lazy">
+          <div class="body">
+            <span class="tag">Single skill</span>
+            <h3>Product SEO Fixer</h3>
+            <p>A prioritised fix list with the exact text to paste, for a product, a collection or a product export CSV.</p>
+            <div class="foot"><span class="price">$5</span><span class="go">Get it</span></div>
+          </div>
+        </a>
+        <a class="card" href="https://proskillpacks.gumroad.com/l/product-description-rewriter" target="_blank" rel="noopener">
+          <img src="assets/cover-product-description-rewriter.png" alt="Product Description Rewriter: a tested Agent Skill for Shopify store owners" width="1280" height="720" loading="lazy">
+          <div class="body">
+            <span class="tag">Single skill</span>
+            <h3>Product Description Rewriter</h3>
+            <p>Clean Shopify HTML descriptions with an SEO title and meta description, for one product or a collection.</p>
+            <div class="foot"><span class="price">$5</span><span class="go">Get it</span></div>
+          </div>
+        </a>
       </div>
       <p class="also">The free skills are also on <a href="https://github.com/proskillpacks/shopify-store-skills" target="_blank" rel="noopener">GitHub</a> under the MIT licence. New products appear in <a href="https://proskillpacks.gumroad.com" target="_blank" rel="noopener">our Gumroad store</a>.</p>
     </div>
