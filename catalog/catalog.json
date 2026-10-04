@@ -1,0 +1,263 @@
+{
+ "generated": "2026-10-04",
+ "products": [
+  {
+   "id": "store-ops-pack",
+   "title": "Store Ops Pack",
+   "kind": "Pack",
+   "type": "pack",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 29,
+   "price_label": "$29",
+   "free": false,
+   "url": "/packs/store-ops-pack/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/store-ops-pack",
+   "summary": "Six skills for the Shopify jobs that eat the week, in one download.",
+   "give": "",
+   "get": "",
+   "jobs": [],
+   "tested": "Every skill in the pack was tested on real public Shopify stores or real public merchant cases and scored against a written rubric. Each ships only when every test scores 8/10 or more.",
+   "includes": [
+    "Agent-Ready Store Audit",
+    "Support Macro Writer",
+    "Product Description Rewriter",
+    "Product SEO Fixer",
+    "Chargeback Response Writer",
+    "BFCM Campaign Kit"
+   ]
+  },
+  {
+   "id": "agent-ready-store-audit",
+   "title": "Agent-Ready Store Audit",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 5,
+   "price_label": "$5",
+   "free": false,
+   "url": "/skills/agent-ready-store-audit/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/agent-ready-store-audit",
+   "summary": "A 0 to 100 score for how AI shopping agents read your store, with the top 7 fixes.",
+   "give": "Your store URL.",
+   "get": "A score out of 100 for how well AI shopping agents (ChatGPT, Gemini, Copilot and others) can find, understand and buy from your store, an agent's-eye test of real buyer questions, and a ranked fix list.",
+   "jobs": [
+    "audit and fix"
+   ],
+   "tested": "Tested on 4 real public Shopify stores. Final runs: 9, 9, 9.5 and 9 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "bfcm-campaign-kit",
+   "title": "BFCM Campaign Kit",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 5,
+   "price_label": "$5",
+   "free": false,
+   "url": "/skills/bfcm-campaign-kit/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/bfcm-campaign-kit",
+   "summary": "Offer maths on your real prices, a dated calendar, 5 emails, 3 SMS and an ops checklist.",
+   "give": "Your store URL (plus your margin, if you know it).",
+   "get": "A Black Friday / Cyber Monday plan: offer maths on your real prices, a dated US/UK calendar, 5 emails, 3 SMS, banners and an ops checklist. No fake urgency.",
+   "jobs": [
+    "plan and launch"
+   ],
+   "tested": "Tested on 4 real public Shopify stores (US and UK, low to high price points). Final version: 9/10 on all four.",
+   "includes": []
+  },
+  {
+   "id": "chargeback-response-writer",
+   "title": "Chargeback Response Writer",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 5,
+   "price_label": "$5",
+   "free": false,
+   "url": "/skills/chargeback-response-writer/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/chargeback-response-writer",
+   "summary": "A dispute response matched to the reason code. It never invents evidence.",
+   "give": "The dispute details plus the evidence you actually have.",
+   "get": "A response matched to the reason code, a checklist of what to attach, and a list of gaps. It never invents evidence, and it tells you when accepting is cheaper.",
+   "jobs": [
+    "money and disputes"
+   ],
+   "tested": "Tested on 6 real dispute scenarios from the Shopify Community forum. Every final run scored 9/10 or more, with no invented evidence.",
+   "includes": []
+  },
+  {
+   "id": "product-description-rewriter",
+   "title": "Product Description Rewriter",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 5,
+   "price_label": "$5",
+   "free": false,
+   "url": "/skills/product-description-rewriter/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/product-description-rewriter",
+   "summary": "Clean Shopify HTML descriptions with an SEO title and meta description, for one product or a collection.",
+   "give": "A product URL, pasted text, a collection, or your product export CSV.",
+   "get": "Clean Shopify HTML descriptions with an SEO title (≤ 60 characters) and meta description (≤ 155). Bulk runs produce an import CSV.",
+   "jobs": [
+    "write copy"
+   ],
+   "tested": "Tested on 4 real public Shopify stores and one product export CSV. Final scores: 9, 9, 10, 10 and 9 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "product-seo-fixer",
+   "title": "Product SEO Fixer",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 5,
+   "price_label": "$5",
+   "free": false,
+   "url": "/skills/product-seo-fixer/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/product-seo-fixer",
+   "summary": "A prioritised fix list with the exact text to paste, for a product, a collection or a product export CSV.",
+   "give": "A product URL, a collection URL, or your product export CSV.",
+   "get": "A prioritised SEO fix list with the exact text to paste and where. Collection mode also writes the collection intro and SEO fields; CSV mode returns a re-importable CSV.",
+   "jobs": [
+    "audit and fix",
+    "write copy"
+   ],
+   "tested": "Tested on 5 real public Shopify stores across all three modes. Final runs scored 9 to 10 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "support-macro-writer",
+   "title": "Support Macro Writer",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 5,
+   "price_label": "$5",
+   "free": false,
+   "url": "/skills/support-macro-writer/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/support-macro-writer",
+   "summary": "Ready-to-import replies built from your real shipping and returns policies.",
+   "give": "Your store URL.",
+   "get": "It reads your real refund and shipping policies and writes ready-to-import support replies, starting with the hard cases: stuck in transit, \"delivered\" but not received, address changes, cancellations.",
+   "jobs": [
+    "reply to customers"
+   ],
+   "tested": "Tested on 5 real public Shopify stores with Gorgias, Zendesk, Shopify Inbox and neutral output. 15 runs, each scored 9 or 9.5 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "agent-ready-quick-check",
+   "title": "Agent-Ready Quick Check",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/agent-ready-quick-check/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
+   "summary": "Six checks on how AI shopping agents read your store, compared with 99 stores we audited.",
+   "give": "Your store URL.",
+   "get": "A 6-check scorecard of how well AI shopping agents (ChatGPT, Perplexity, Gemini, Copilot, Claude) can read your store. Each check is compared with 99 Shopify stores we audited in October 2026.",
+   "jobs": [
+    "audit and fix"
+   ],
+   "tested": "Tested on 4 real public Shopify stores. Final runs: 9.5/10 on all four.",
+   "includes": []
+  },
+  {
+   "id": "shopify-alt-text-writer",
+   "title": "Alt Text Writer",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/shopify-alt-text-writer/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
+   "summary": "Alt text for every product image, written while looking at the photo, as an import CSV.",
+   "give": "Your store URL, a product URL, or your product export CSV.",
+   "get": "Alt text for every product image, written while looking at the photo. Comes as a Shopify import CSV, a review sheet, and a paste-by-hand list for products with variant images.",
+   "jobs": [
+    "write copy"
+   ],
+   "tested": "Tested on 6 real cases from public Shopify stores, including three product export CSVs. Final scores: 10, 10, 9, 10, 9 and 10 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "shopify-policy-checker",
+   "title": "Policy Checker",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/shopify-policy-checker/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
+   "summary": "Policy gaps and contradictions across refund, shipping, privacy and terms, with fixes to paste.",
+   "give": "Your store URL.",
+   "get": "A scored audit of your refund, shipping, privacy, terms and contact policies. It flags missing items and contradictions with your FAQ and banners, and gives fixes you can paste.",
+   "jobs": [
+    "audit and fix"
+   ],
+   "tested": "Tested on 4 real public Shopify stores. Final scores: 10, 10, 9 and 9 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "product-title-cleaner",
+   "title": "Product Title Cleaner",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/product-title-cleaner/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
+   "summary": "One consistent title pattern across the catalogue, as an import CSV of changed rows only.",
+   "give": "Your store, a collection URL, or a product export CSV.",
+   "get": "One consistent title pattern across your catalogue, as a `URL handle,Title` import CSV (changed rows only). It never creates duplicate titles.",
+   "jobs": [
+    "audit and fix"
+   ],
+   "tested": "Tested on 3 real public Shopify catalogues, up to 490 products. Final scores: 10, 9 and 10 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "review-reply-drafter",
+   "title": "Review Reply Drafter",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/review-reply-drafter/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
+   "summary": "A reply for every review, matched to its tone, with the risky ones flagged for you.",
+   "give": "Your reviews (pasted, CSV, or a public review page).",
+   "get": "A reply for each review, matched to its tone. It never promises refunds you didn't approve, and it flags reviews that need you personally.",
+   "jobs": [
+    "reply to customers"
+   ],
+   "tested": "Tested on 3 real public review sets (Judge.me and Trustpilot). Final runs: 9, 9.5 and 9 out of 10.",
+   "includes": []
+  }
+ ]
+}
