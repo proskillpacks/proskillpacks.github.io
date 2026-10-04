@@ -116,6 +116,14 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .starthere ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; }
 .starthere .minichips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .starthere .minichips a { text-decoration: none; padding: 0.35rem 0.8rem; border: 1px solid var(--rule); border-radius: 999px; font-size: 0.92rem; background: var(--paper); }
+.searchbar { margin: 1.75rem 0 0; }
+.searchbar .hero-filters { margin: 0 0 0.9rem; }
+.searchbar .hero-filters label { color: var(--slate); }
+.searchbar .chips a { color: var(--ink); border-color: #b9c4bd; background: #fff; }
+.searchbar .chips a i { color: var(--slate); }
+.searchbar .chips a:hover, .searchbar .chips a:focus-visible { border-color: var(--pine); }
+.searchbar .chips a.on { background: var(--pine); color: var(--cream); border-color: var(--pine); }
+.searchbar .chips a.on i { color: var(--mist); }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
@@ -241,12 +249,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     
     <h1>Tested skills for the jobs you do every week.</h1>
     <p class="lead">Plain-text skills for any assistant that reads SKILL.md, and a paste-in prompt for any chatbot.<br>21 free skills, 9 paid skills and packs live, 46 more arriving soon.</p>
-    <form class="filters hero-filters" id="filters" role="search" hidden onsubmit="return false">
-  <label class="grow">Search<input id="q" type="search" aria-label="Search skills" placeholder="Search skills: chargeback, listing, proposal, SEO" autocomplete="off"></label>
-  <label>Price<select id="price" aria-label="Price"><option value="">Free and paid</option><option value="free">Free</option><option value="paid">Paid</option></select></label>
-  <label>Type<select id="type" aria-label="Type"><option value="">Skills and packs</option><option value="single">Single skills</option><option value="pack">Packs</option></select></label>
-</form>
-<div class="chips" aria-label="Categories"><a href="/" data-cat="" class="on">All</a><a href="/for/shopify/" data-cat="shopify">Shopify stores <i>13</i></a><a href="/for/freelancers/" data-cat="freelancers">Freelancers <i>1</i></a><a href="/for/short-term-rental-hosts/" data-cat="short-term-rental-hosts">Rental hosts <i>2</i></a><a href="/for/marketers-and-agencies/" data-cat="marketers-and-agencies">Marketers and agencies <i>2</i></a><a href="/for/developers/" data-cat="developers">Developers <i>6</i></a><a href="/for/data-and-spreadsheets/" data-cat="data-and-spreadsheets">Spreadsheets <i>1</i></a><a href="/for/careers/" data-cat="careers">Careers <i>1</i></a><a href="/for/sales-and-outreach/" data-cat="sales-and-outreach">Sales and outreach <i>1</i></a><a href="/for/content-and-writing/" data-cat="content-and-writing">Writing <i>1</i></a><a href="/for/finance-and-admin/" data-cat="finance-and-admin">Finance and admin <i>1</i></a><a href="/for/customer-support/" data-cat="customer-support">Support <i>1</i></a></div>
+    
   </div>
 </header>
 <main><div class="wrap">
@@ -263,6 +266,12 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 </section>
 <p class="sub">A skill is a short instruction file your assistant follows for one job. You paste in your text or a link and get work back, with a before and after on each page.</p>
 
+<div class="searchbar"><form class="filters hero-filters" id="filters" role="search" hidden onsubmit="return false">
+  <label class="grow">Search<input id="q" type="search" aria-label="Search skills" placeholder="Search skills: chargeback, listing, proposal, SEO" autocomplete="off"></label>
+  <label>Price<select id="price" aria-label="Price"><option value="">Free and paid</option><option value="free">Free</option><option value="paid">Paid</option></select></label>
+  <label>Type<select id="type" aria-label="Type"><option value="">Skills and packs</option><option value="single">Single skills</option><option value="pack">Packs</option></select></label>
+</form>
+<div class="chips" aria-label="Categories"><a href="/" data-cat="" class="on">All</a><a href="/for/shopify/" data-cat="shopify">Shopify stores <i>13</i></a><a href="/for/freelancers/" data-cat="freelancers">Freelancers <i>1</i></a><a href="/for/short-term-rental-hosts/" data-cat="short-term-rental-hosts">Rental hosts <i>2</i></a><a href="/for/marketers-and-agencies/" data-cat="marketers-and-agencies">Marketers and agencies <i>2</i></a><a href="/for/developers/" data-cat="developers">Developers <i>6</i></a><a href="/for/data-and-spreadsheets/" data-cat="data-and-spreadsheets">Spreadsheets <i>1</i></a><a href="/for/careers/" data-cat="careers">Careers <i>1</i></a><a href="/for/sales-and-outreach/" data-cat="sales-and-outreach">Sales and outreach <i>1</i></a><a href="/for/content-and-writing/" data-cat="content-and-writing">Writing <i>1</i></a><a href="/for/finance-and-admin/" data-cat="finance-and-admin">Finance and admin <i>1</i></a><a href="/for/customer-support/" data-cat="customer-support">Support <i>1</i></a></div></div>
 <section class="latest"><h2>Latest</h2><ul><li><span class="tag">Study</span> <a href="/study/top-skills/">What the most-installed agent skills actually do</a> <span class="when">4 Oct</span></li><li><span class="tag">Skill</span> <a href="/skills/test-gap-finder/">Test Gap Finder</a> <span class="when">4 Oct</span></li><li><span class="tag">Skill</span> <a href="/skills/support-macro-writer/">Support Macro Writer</a> <span class="when">4 Oct</span></li></ul><a class="go" href="/new/">Everything new</a></section>
 <div class="featured soon" id="featured"><div><span class="tag soontag">Arriving 8 Oct</span><h2>All-Access Bundle</h2><p>39 skills in 11 categories, in one download, and the skills we add later. Not for sale yet; the date is a target.</p></div><div class="side"><span class="price">$49</span><a class="go" href="#notify">Follow for release</a></div></div>
 <section class="catalog"><div class="countbar"><p class="count" id="count" aria-live="polite">30 skills and packs</p><button type="button" class="linkbtn" id="reset">Clear filters</button></div>
