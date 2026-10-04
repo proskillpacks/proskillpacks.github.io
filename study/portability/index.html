@@ -93,6 +93,12 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .featured.soon p { color: var(--slate); }
 .featured.soon .price { color: var(--pine); }
 .featured.soon .go { color: var(--moss); }
+.latest { margin: 1.5rem 0 0; padding: 0.9rem 1.2rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.5rem; }
+.latest h2 { margin: 0; font-size: 1rem; }
+.latest ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; flex: 1 1 20rem; }
+.latest li { font-size: 0.95rem; }
+.latest .when { color: var(--slate); font-size: 0.85rem; }
+.latest .go { background: none; padding: 0; color: var(--moss); text-decoration: underline; font-size: 0.92rem; }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
@@ -244,7 +250,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <ol><li>Keep frontmatter to <code>name</code> and <code>description</code>. Add <code>license</code>, <code>compatibility</code> or <code>metadata</code> if you want. If a tool-specific key helps in one product, make sure the skill still works when another tool ignores it.</li><li>Name the capability, not the tool: &quot;fetch the page with whatever web tool you have&quot;, not &quot;use WebFetch&quot;.</li><li>For every capability, say what to do without it: no web access, ask the user to paste the text; no code execution, say the counts are unverified.</li><li>Use paths relative to the skill folder. In install notes, give <code>.agents/skills/</code> first and tool-specific folders second.</li><li>Scripts: pick one common language, stick to its standard library, state the runtime in the README, and avoid shell-only or PowerShell-only logic for anything essential.</li><li>Write the description to say what the skill does and when to use it, under 1,024 characters.</li><li>Keep <code>SKILL.md</code> short. Move long reference material into files the skill links to.</li><li>Ship a paste-in prompt version for chat apps that cannot load skills.</li><li>Test by reading the skill as an assistant with no special tools. If any step is impossible, add the fallback.</li></ol>
 <h2>Reproduce</h2>
 <p><code>python3 fetch.py &amp;&amp; python3 analyze.py &amp;&amp; python3 charts.py</code> (needs curl and Python 3; GitHub&#x27;s unauthenticated API allows enough calls for this sample). Data: <code>data.csv</code>, <code>summary.json</code>, <code>fetch_log.csv</code>.</p>
-<p>We make portable skills, with a paste-in prompt for every one. The free ones are at https://github.com/proskillpacks/skills</p><h2>Files</h2><p><a href="/study/portability/data.csv">data.csv</a> <a href="/study/portability/summary.json">summary.json</a> <a href="/study/portability/fetch_log.csv">fetch_log.csv</a> <a href="/study/portability/fetch.py">fetch.py</a> <a href="/study/portability/analyze.py">analyze.py</a> <a href="/study/portability/charts.py">charts.py</a></p></div></section><section class="signup" id="notify">
+<p>We make portable skills, with a paste-in prompt for every one. The free ones are at https://github.com/proskillpacks/skills</p><h2>Check your own skills</h2><p>We turned these checks into a free tool: <a href="/tools/skill-check/">Skill Portability Check</a>.</p><h2>Files</h2><p><a href="/study/portability/data.csv">data.csv</a> <a href="/study/portability/summary.json">summary.json</a> <a href="/study/portability/fetch_log.csv">fetch_log.csv</a> <a href="/study/portability/fetch.py">fetch.py</a> <a href="/study/portability/analyze.py">analyze.py</a> <a href="/study/portability/charts.py">charts.py</a></p></div></section><section class="signup" id="notify">
   <h2>Get new free skills by email</h2>
   <p>You get new free skills and new guides as we publish them. One email a week at most, nothing else. Unsubscribe any time.</p>
   <p><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/subscribe" target="_blank" rel="noopener">Subscribe by email</a></p>

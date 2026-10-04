@@ -63,6 +63,7 @@
 - [Changelog from Commits](https://proskillpacks.github.io/skills/changelog-from-commits/) (Free): Give it a commit range or a pasted git log. Get a user-facing changelog with the commit behind every line, and the vague commits flagged.
 - [PR Description and Review Prep](https://proskillpacks.github.io/skills/pr-description-and-review-prep/) (Free): Run it on your branch. Get a PR title, summary, risk notes and test plan from the diff, plus the questions a reviewer will ask. Free, MIT-licensed.
 - [README First-Run Check](https://proskillpacks.github.io/skills/readme-first-run-check/) (Free): Point it at a repo. It follows the README like a new user and checks every step against the repo: OK, BROKEN, MISSING or UNVERIFIED, with evidence and the README edits that fix it.
+- [Skill Portability Check](https://proskillpacks.github.io/skills/skill-portability-check/) (Free): A free checker for SKILL.md folders: strict-YAML trap, portable keys, vendor tool names, missing fallbacks, broken links. One Python file, exit code for CI.
 - [Test Gap Finder](https://proskillpacks.github.io/skills/test-gap-finder/) (Free): Give it a diff and the tests. Get each behaviour the change adds marked Covered, Not covered or Unknown, and ranked test cases for the gaps.
 
 ## Content and writing
@@ -83,6 +84,7 @@
 - [Search intent content brief prompt for any chatbot](https://proskillpacks.github.io/prompts/search-intent-page-brief/)
 - [Product image alt text prompt for ChatGPT or Claude](https://proskillpacks.github.io/prompts/shopify-alt-text-writer/)
 - [Refund policy checker prompt for ChatGPT, Claude or Gemini](https://proskillpacks.github.io/prompts/shopify-policy-checker/)
+- [Check a SKILL.md for portability problems: free prompt](https://proskillpacks.github.io/prompts/skill-portability-check/)
 - [Find missing tests: test gap finder prompt for any chatbot](https://proskillpacks.github.io/prompts/test-gap-finder/)
 
 ## Guides

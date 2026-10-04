@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Free Agent Skills | Pro Skill Packs</title>
-<meta name="description" content="15 free, tested skills in 5 categories. Install them all with npx skills add proskillpacks/skills, or take one.">
+<meta name="description" content="16 free, tested skills in 5 categories. Install them all with npx skills add proskillpacks/skills, or take one.">
 
 <link rel="canonical" href="https://proskillpacks.github.io/free/">
 <link rel="icon" href="/assets/avatar.png">
@@ -15,12 +15,12 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/free/">
 <meta property="og:title" content="Free Agent Skills">
-<meta property="og:description" content="15 free, tested skills in 5 categories. Install them all with npx skills add proskillpacks/skills, or take one.">
+<meta property="og:description" content="16 free, tested skills in 5 categories. Install them all with npx skills add proskillpacks/skills, or take one.">
 <meta property="og:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="Free Agent Skills">
-<meta name="twitter:description" content="15 free, tested skills in 5 categories. Install them all with npx skills add proskillpacks/skills, or take one.">
+<meta name="twitter:description" content="16 free, tested skills in 5 categories. Install them all with npx skills add proskillpacks/skills, or take one.">
 <meta name="twitter:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="theme-color" content="#0f3d2e">
 <style>
@@ -93,6 +93,12 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .featured.soon p { color: var(--slate); }
 .featured.soon .price { color: var(--pine); }
 .featured.soon .go { color: var(--moss); }
+.latest { margin: 1.5rem 0 0; padding: 0.9rem 1.2rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.5rem; }
+.latest h2 { margin: 0; font-size: 1rem; }
+.latest ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; flex: 1 1 20rem; }
+.latest li { font-size: 0.95rem; }
+.latest .when { color: var(--slate); font-size: 0.85rem; }
+.latest .go { background: none; padding: 0; color: var(--moss); text-decoration: underline; font-size: 0.92rem; }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
@@ -206,7 +212,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     </div>
     <p class="crumbs"><a href="/">All skills</a> / Free skills</p>
     <h1>Free Agent Skills</h1>
-    <p class="lead">15 free skills in 5 categories, each run on real data before release. Each has its own page with a before and after.</p>
+    <p class="lead">16 free skills in 5 categories, each run on real data before release. Each has its own page with a before and after.</p>
     <pre class="installline"><code>npx skills add proskillpacks/skills</code></pre><div class="cta"><a class="btn btn-lime" href="https://github.com/proskillpacks/skills" rel="noopener">View the free repo on GitHub</a><a class="btn btn-line" href="https://proskillpacks.gumroad.com/l/free-shopify-skills">All free skills as one zip (Gumroad)</a></div><p class="note-light">Free, MIT licence. No sign-up needed to use the repo.</p>
   </div>
 </header>
@@ -316,6 +322,14 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <h3>README First-Run Check</h3>
     <p>Point it at a repo. It follows the README like a new user and checks every step against the repo: OK, BROKEN, MISSING or UNVERIFIED, with evidence and the README edits that fix it.</p>
     <p class="tested">1 real-data run on a public MDN tutorial repository (Claude Sonnet).</p>
+    <div class="foot"><span class="price">Free</span><span class="go">See details</span></div>
+  </div>
+</a><a class="card" href="/skills/skill-portability-check/" data-id="skill-portability-check" data-role="developers" data-price="free" data-type="single" data-s="skill portability check a free checker for skill.md folders: strict-yaml trap, portable keys, vendor tool names, missing fallbacks, broken links. one python file, exit code for ci. developers developers free skill point it at a skill folder or a repository of skills. a per-skill table of errors and warnings, and the exact fixes. review code">
+  <div class="body">
+    <div class="tags"><span class="tag free">Free skill</span><span class="tag">Developers</span></div>
+    <h3>Skill Portability Check</h3>
+    <p>A free checker for SKILL.md folders: strict-YAML trap, portable keys, vendor tool names, missing fallbacks, broken links. One Python file, exit code for CI.</p>
+    <p class="tested">Run over our own 57 skills and its four fixtures (5 checks pass).</p>
     <div class="foot"><span class="price">Free</span><span class="go">See details</span></div>
   </div>
 </a><a class="card" href="/skills/test-gap-finder/" data-id="test-gap-finder" data-role="developers" data-price="free" data-type="single" data-s="test gap finder give it a diff and the tests. get each behaviour the change adds marked covered, not covered or unknown, and ranked test cases for the gaps. developers developers free skill a diff and the tests. get each behaviour the change adds marked covered, not covered or unknown, and ranked test cases for the gaps. review code">

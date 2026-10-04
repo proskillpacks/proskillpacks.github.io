@@ -496,6 +496,28 @@
    "includes": []
   },
   {
+   "id": "skill-portability-check",
+   "title": "Skill Portability Check",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "developers",
+   "category_name": "Developers",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/skill-portability-check/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/skill-portability-check",
+   "summary": "A free checker for SKILL.md folders: strict-YAML trap, portable keys, vendor tool names, missing fallbacks, broken links. One Python file, exit code for CI.",
+   "give": "Point it at a skill folder or a repository of skills.",
+   "get": "A per-skill table of errors and warnings, and the exact fixes.",
+   "jobs": [
+    "review code"
+   ],
+   "tags": [],
+   "tested": "Run over our own 57 skills and its four fixtures (5 checks pass). It found 7 descriptions our tools had accepted but strict YAML parsers reject, now fixed. The assistant wrapper was not model-tested.",
+   "includes": []
+  },
+  {
    "id": "test-gap-finder",
    "title": "Test Gap Finder",
    "kind": "Free skill",
