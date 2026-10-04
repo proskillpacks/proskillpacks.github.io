@@ -297,7 +297,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
       <a class="name" href="/">PRO SKILL PACKS</a>
-      <nav aria-label="Main"><a href="/">All skills</a><a href="/free/">Free skills</a><a href="/prompt-book/">Prompt book</a><a href="/prompts/">Prompts</a><a href="/works-with/">Works with</a><a href="/guides/">Guides</a><a href="/study/">Study</a><a href="/helpers/">Helpers</a></nav>
+      <nav aria-label="Main"><a href="/">All products</a><a href="/shopify/">Shopify</a><a href="/free/">Free</a><a href="/guides/">Guides</a></nav>
     </div>
     <p class="crumbs"><a href="/">All skills</a> / <a href="/for/data-and-spreadsheets/">Data and spreadsheets</a></p>
     <h1>CSV Profile and Sanity Check</h1>
@@ -316,10 +316,10 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <section><h2>What it does</h2><div class="prose"><p>Give it a CSV. It runs a small read-only script (Python 3 standard library) and reports rows, columns, each column&#x27;s type, blanks, distinct values, ranges, duplicates, mixed formats, stray spaces, case variants and outliers, then lists questions to ask the data&#x27;s owner. Without code execution it profiles a pasted sample and says so.</p></div></section>
 <section><h2>How it was tested</h2><div class="prose"><p><strong>1 run on a real public CSV (Claude Sonnet) with the script.</strong></p><p>Tested on a real example before release. The example is shown in the Before and after section above.</p><p><a href="/how-we-test/">How we test</a>, what we do not do, and which assistants we ran it on.</p></div></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It reads only. It never edits, sorts or cleans the file.</li><li>A profile cannot tell you whether values are true or whether rows are missing.</li><li>Without code execution it works from the sample you paste and says so. Counts cover only that sample.</li><li>It does not guess what unclear columns mean. It asks.</li></ul></div></section>
-<section><h2>Works with</h2><div class="prose"><p>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot. The profile script needs Python 3 (standard library only). Without code execution it profiles a pasted sample.</p></div></section>
-<section><h2>Install</h2><div class="prose"><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>csv-profile-and-sanity-check</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/data/csv-profile-and-sanity-check).</li><li>Put the <code>csv-profile-and-sanity-check</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Profile this CSV before I use it: [file]. It should contain ...&quot;. The skill loads by itself.</li></ol></div></section>
+<section><h2>Works with</h2><div class="prose"><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. The chargeback kit also has Word letters you can fill in by hand, with no AI. The profile script needs Python 3 (standard library only). Without code execution it profiles a pasted sample.</p></div></section>
+<section><h2>For people who use AI assistants</h2><div class="prose"><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>csv-profile-and-sanity-check</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/data/csv-profile-and-sanity-check).</li><li>Put the <code>csv-profile-and-sanity-check</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Profile this CSV before I use it: [file]. It should contain ...&quot;. The skill loads by itself.</li></ol></div></section>
 <section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">Free</span><a class="btn btn-pine" href="/go/repo/csv-profile-and-sanity-check/?from=skill">Get it on GitHub</a></div><p>MIT licence. Use it, change it, share it.</p></div></section>
-<section><h2>Related</h2><ul class="links"><li>Free guide to do it by hand: <a href="/guides/how-to-check-a-csv-file-before-you-use-it/">How do I check a CSV file before I use it?</a></li><li>Free paste-in prompt for any chatbot: <a href="/prompts/csv-profile-and-sanity-check/">CSV sanity check prompt for ChatGPT or Claude</a></li><li>More for people who work in spreadsheets: <a href="/for/data-and-spreadsheets/">Data and spreadsheets</a></li></ul></section>
+<section><h2>Related</h2><ul class="links"><li>Free guide to do it by hand: <a href="/guides/how-to-check-a-csv-file-before-you-use-it/">How do I check a CSV file before I use it?</a></li><li>Free text to paste into ChatGPT or any chatbot: <a href="/prompts/csv-profile-and-sanity-check/">CSV sanity check prompt for ChatGPT or Claude</a></li><li>More for people who work in spreadsheets: <a href="/for/data-and-spreadsheets/">Data and spreadsheets</a></li></ul></section>
 <p class="sub"><a href="https://github.com/proskillpacks/skills/issues/new?template=report-problem.yml&amp;skill=csv-profile-and-sanity-check" rel="noopener">Report a problem with this skill</a> (GitHub, or write to kaiventura.founder@gmail.com).</p>
 </div></main>
 <script>
@@ -333,25 +333,24 @@ document.querySelectorAll('.demo').forEach(function (f) {
     <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers and agencies</a><a href="/for/developers/">Developers</a><a href="/for/data-and-spreadsheets/">Spreadsheets</a><a href="/for/careers/">Careers</a><a href="/for/sales-and-outreach/">Sales and outreach</a><a href="/for/content-and-writing/">Writing</a><a href="/for/finance-and-admin/">Finance and admin</a><a href="/for/customer-support/">Support</a></nav>
     <div class="row">
       <nav aria-label="Footer">
-        <a href="/">All skills</a>
-        <a href="/free/">Free skills</a>
+        <a href="/">All products</a>
+        <a href="/free/">Free downloads</a>
         <a href="/guides/">Guides</a>
         <a href="/new/">What's new</a>
         <a href="/changelog/">Changelog</a>
         <a href="/go/affiliates/?from=skill">Affiliates</a>
-        <a href="/request/">Request a skill</a>
-        <a href="/study/">Study</a>
-        <a href="/helpers/">Helpers</a>
+        <a href="/request/">Ask for something</a>
+        <a href="/study/">Research</a>
         <a href="/about/">About</a>
         <a href="/how-we-test/">How we test</a>
-        <a href="/works-with/">Works with</a>
+        <a href="/works-with/">For people who use AI assistants</a>
         <a href="/faq/">FAQ</a>
         <a href="mailto:kaiventura.founder@gmail.com">Contact</a>
-        <a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=store" rel="noopener">Gumroad store</a>
-        <a href="/go/install/?from=skill" rel="noopener">GitHub</a>
+        <a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=store" rel="noopener">Shop</a>
+        <a href="/go/install/?from=skill" rel="noopener">For developers</a>
         <a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a>
       </nav>
-      <div>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot.</div>
+      <div>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. The chargeback kit also has Word letters you can fill in by hand, with no AI.</div>
     </div>
     <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>

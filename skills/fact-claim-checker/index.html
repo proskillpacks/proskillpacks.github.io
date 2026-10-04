@@ -297,7 +297,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
       <a class="name" href="/">PRO SKILL PACKS</a>
-      <nav aria-label="Main"><a href="/">All skills</a><a href="/free/">Free skills</a><a href="/prompt-book/">Prompt book</a><a href="/prompts/">Prompts</a><a href="/works-with/">Works with</a><a href="/guides/">Guides</a><a href="/study/">Study</a><a href="/helpers/">Helpers</a></nav>
+      <nav aria-label="Main"><a href="/">All products</a><a href="/shopify/">Shopify</a><a href="/free/">Free</a><a href="/guides/">Guides</a></nav>
     </div>
     <p class="crumbs"><a href="/">All skills</a> / <a href="/for/content-and-writing/">Content and writing</a></p>
     <h1>Fact-Claim Checker</h1>
@@ -316,10 +316,10 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <section><h2>What it does</h2><div class="prose"><p>Paste a draft before you publish it. You get a list of the claims that need a source, ranked by risk, with the kind of source that would settle each one, and safer wording for the high-risk ones you cannot back up. It does not tell you what is true. It tells you what to check.</p></div></section>
 <section><h2>How it was tested</h2><div class="prose"><p><strong>1 real-data run on a public launch post (Claude Sonnet). All 17 flagged claims and both internal conflicts were real.</strong></p><p>1 real-data run on a public launch post (Claude Sonnet). We read every flagged claim against the source text: all 17 were real claims, and the two conflicts it raised were real. Not yet run on other models. A second, harder run (2026-10-04, Claude Sonnet, a draft full of unsourced boasts and a request to say which are true): it refused to rule on truth and listed what would settle each claim, but its summary said 8 high-risk claims when the table showed 7. We added a rule and re-ran: the counts now match the table.</p><p>Tested on a real example before release. The example is shown in the Before and after section above.</p><p><a href="/how-we-test/">How we test</a>, what we do not do, and which assistants we ran it on.</p></div></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It does not look anything up or rule claims true or false.</li><li>It can over-flag low-risk items.</li><li>Not a legal, medical or financial review.</li></ul></div></section>
-<section><h2>Works with</h2><div class="prose"><p>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot. Pasted text only. No code or web access needed.</p></div></section>
-<section><h2>Install</h2><div class="prose"><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>fact-claim-checker</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker).</li><li>Put the <code>fact-claim-checker</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Fact-check my draft before I publish it.&quot;. The skill loads by itself.</li></ol></div></section>
+<section><h2>Works with</h2><div class="prose"><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. The chargeback kit also has Word letters you can fill in by hand, with no AI. Pasted text only. No code or web access needed.</p></div></section>
+<section><h2>For people who use AI assistants</h2><div class="prose"><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>fact-claim-checker</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker).</li><li>Put the <code>fact-claim-checker</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Fact-check my draft before I publish it.&quot;. The skill loads by itself.</li></ol></div></section>
 <section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">Free</span><a class="btn btn-pine" href="/go/repo/fact-claim-checker/?from=skill">Get it on GitHub</a></div><p>MIT licence. Use it, change it, share it.</p></div></section>
-<section><h2>Related</h2><ul class="links"><li>Free guide to do it by hand: <a href="/guides/fact-check-claims-in-an-ai-written-draft/">How to fact-check the claims in an AI-written draft</a></li><li>Free paste-in prompt for any chatbot: <a href="/prompts/fact-claim-checker/">Fact-check a draft: claim checker prompt for any chatbot</a></li><li>More for people who write for a living: <a href="/for/content-and-writing/">Content and writing</a></li></ul></section>
+<section><h2>Related</h2><ul class="links"><li>Free guide to do it by hand: <a href="/guides/fact-check-claims-in-an-ai-written-draft/">How to fact-check the claims in an AI-written draft</a></li><li>Free text to paste into ChatGPT or any chatbot: <a href="/prompts/fact-claim-checker/">Fact-check a draft: claim checker prompt for any chatbot</a></li><li>More for people who write for a living: <a href="/for/content-and-writing/">Content and writing</a></li></ul></section>
 <p class="sub"><a href="https://github.com/proskillpacks/skills/issues/new?template=report-problem.yml&amp;skill=fact-claim-checker" rel="noopener">Report a problem with this skill</a> (GitHub, or write to kaiventura.founder@gmail.com).</p>
 </div></main>
 <script>
@@ -333,25 +333,24 @@ document.querySelectorAll('.demo').forEach(function (f) {
     <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers and agencies</a><a href="/for/developers/">Developers</a><a href="/for/data-and-spreadsheets/">Spreadsheets</a><a href="/for/careers/">Careers</a><a href="/for/sales-and-outreach/">Sales and outreach</a><a href="/for/content-and-writing/">Writing</a><a href="/for/finance-and-admin/">Finance and admin</a><a href="/for/customer-support/">Support</a></nav>
     <div class="row">
       <nav aria-label="Footer">
-        <a href="/">All skills</a>
-        <a href="/free/">Free skills</a>
+        <a href="/">All products</a>
+        <a href="/free/">Free downloads</a>
         <a href="/guides/">Guides</a>
         <a href="/new/">What's new</a>
         <a href="/changelog/">Changelog</a>
         <a href="/go/affiliates/?from=skill">Affiliates</a>
-        <a href="/request/">Request a skill</a>
-        <a href="/study/">Study</a>
-        <a href="/helpers/">Helpers</a>
+        <a href="/request/">Ask for something</a>
+        <a href="/study/">Research</a>
         <a href="/about/">About</a>
         <a href="/how-we-test/">How we test</a>
-        <a href="/works-with/">Works with</a>
+        <a href="/works-with/">For people who use AI assistants</a>
         <a href="/faq/">FAQ</a>
         <a href="mailto:kaiventura.founder@gmail.com">Contact</a>
-        <a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=store" rel="noopener">Gumroad store</a>
-        <a href="/go/install/?from=skill" rel="noopener">GitHub</a>
+        <a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=store" rel="noopener">Shop</a>
+        <a href="/go/install/?from=skill" rel="noopener">For developers</a>
         <a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a>
       </nav>
-      <div>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot.</div>
+      <div>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. The chargeback kit also has Word letters you can fill in by hand, with no AI.</div>
     </div>
     <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>

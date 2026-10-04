@@ -1,0 +1,10 @@
+Thank you for buying Cold Email from a Website.
+
+Fastest way: unzip cold-email-from-a-website-v1.0.zip, open cold-email-from-a-website/prompt.md, copy it into ChatGPT or any chatbot, and add your material where it says.
+
+Or install it as a skill: copy the cold-email-from-a-website folder into .agents/skills/ (inside a project) or ~/.agents/skills/ (all projects). Create the folder if it is not there. Then ask in plain words, for example: "Write a cold email sequence to https://example.com. I sell ... and I can back up this proof point: ..."
+Tool folders: Claude Code ~/.claude/skills/, Codex ~/.agents/skills/, Gemini CLI ~/.gemini/skills/. For Cursor, Copilot and others, see https://agentskills.io/clients
+
+Works with any assistant that reads SKILL.md skills. Tested on Claude Sonnet. Use the strongest model your assistant offers.
+Updates: free for v1 buyers, download again from your Gumroad library.
+Help or refund: reply to this email. Refunds are available for 30 days, no questions asked.
