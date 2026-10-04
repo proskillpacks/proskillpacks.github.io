@@ -151,7 +151,7 @@ article a:focus-visible, .card:focus-visible { outline-color: var(--pine); }
 <p>Some of our Agent Skills include small Python scripts that read public web pages for the person running them, for example a store owner checking their own product pages. They are not crawlers. They run on that person's computer, only when asked, and only for the pages the job needs.</p>
 <h2>How they behave</h2>
 <ul>
-<li>Each one names itself in its user agent, for example <code>product-seo-fixer/1.0 (read-only helper run for a user; +https://proskillpacks.github.io; python-urllib)</code>. None of them pretends to be a browser.</li>
+<li>Each one names itself in its user agent, for example <code>product-seo-fixer/1.0 (read-only helper run for a user; +https://proskillpacks.github.io)</code>. None of them pretends to be a browser.</li>
 <li>They read your robots.txt first and follow it the way RFC 9309 describes. If robots.txt can't be read because of a server error or no answer, they treat the whole site as off limits.</li>
 <li>They wait at least one second between requests to the same site.</li>
 <li>They only read. They never submit forms, log in or change anything.</li>
