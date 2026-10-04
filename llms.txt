@@ -164,6 +164,7 @@
 ## Studies
 - [How portable are the most-installed agent skills?](https://proskillpacks.github.io/study/portability/): We scanned the most-installed agent skills on skills.sh for ties to one assistant: tool names, paths, frontmatter keys and scripts. Data and scripts included.
 - [What the most-installed agent skills actually do](https://proskillpacks.github.io/study/top-skills/): We sorted the top 100 skills on skills.sh by the job they do and by publisher, with the keyword rules published. Data and scripts included.
+- [We re-tested 69 skills on harder inputs. 16 failed. Here is what broke.](https://proskillpacks.github.io/study/retest/): We gave 69 skills a second run on a deliberately hard input. 16 had a defect, mostly unsure input restated as fact. What broke, what we changed, and the limits.
 - [State of Agent-Ready Shopify](https://proskillpacks.github.io/study/shopify-agent-ready/)
 
 ## Other

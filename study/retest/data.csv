@@ -1,0 +1,17 @@
+skill,batch,defect_type,what_broke,fix,rerun
+page-fix-sheet,5 Oct paid,script misread a compressed response,The site sent Brotli even though the script did not ask for it and the checker read garbage,The script retries without compression and says so if the page is still unreadable,pass
+scope-creep-reply,6 Oct paid,unsure input restated as fact,"The client reply stated ""design rounds used"" as fact although the table marked it [CONFIRM]",Keep the [CONFIRM] marker in any reply sentence that depends on one,pass
+follow-up-ladder,8-9 Oct paid,unsure input restated as fact,"An unsure name (""I think Anil"") went into the messages as fact",One rule line,pass
+quote-and-estimate-builder,8-9 Oct paid,unsure input restated as fact,An unconfirmed returning-customer discount was applied in the customer quote,Price without it and show the discount as a separate [CONFIRM] line,pass
+newsletter-issue-from-notes,10-11 Oct paid,unsure input restated as fact,A subject line stated an unsure postage change as fact; a second subject line added an unsupported benefit,Two rules,pass
+meeting-notes-to-decisions-and-actions,10-11 Oct paid,unsure input restated as fact,"""end of Oct? nobody objected"" was listed as a decision",One rule: it goes under open questions,pass
+house-rules-and-guidebook,hosts and free,unsure input restated as fact,"Hedged host words (""I guess"", ""maybe"") became paste-ready rules",Hedged words stay out of paste blocks,pass
+listing-rewriter,live paid,unsure input restated as fact,"A hedged distance (""5 min, maybe 10"") became firm in a title",Hedged facts stay hedged,pass
+interview-answer-builder,10-11 Oct paid,invented or unsupported claim,A motive the notes do not give was added to the answer,One rule,pass
+cover-letter-from-job-post-and-resume,10-11 Oct paid,invented or unsupported claim,"A claim beyond the resume (""my first job in food and drink service"")",One rule,pass
+product-seo-fixer,live paid,invented or unsupported claim,Benefit wording and a sales term the product page did not state,No-embellishment rule,pass
+fact-claim-checker,hosts and free,miscount or arithmetic slip in a summary,The summary said 8 high-risk claims when the table showed 7,Counts must match the table,pass
+changelog-from-commits,free,miscount or arithmetic slip in a summary,A skipped count of 15 for a list of 17 hashes,List each hash once and count the list,pass
+brief-to-proposal,7 Oct paid,conflict in the brief not named,"The brief asked for things that pull against each other (cheap and premium, a donation page with no third-party payment tools); each was answered on its own and the conflict was not named",Conflicts in the brief are named,pass
+scope-of-work-builder,7 Oct paid,conflict in the brief not named,"Same kind of brief (as cheap as possible, something like another charity's site, live before Christmas); the scope did not name the conflicts",Conflicts in the brief are named,pass
+csv-profile-and-sanity-check,hosts and free,wrote a file it should not,The skill is read-only but the run wrote a cleaned copy of the CSV,No cleaned copy even when asked,pass

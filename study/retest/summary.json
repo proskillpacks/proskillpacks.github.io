@@ -1,0 +1,21 @@
+{
+ "skills_tested": 69,
+ "defects": 16,
+ "passed_first_time": 53,
+ "rerun_pass": 16,
+ "by_type": {
+  "script misread a compressed response": 1,
+  "unsure input restated as fact": 7,
+  "invented or unsupported claim": 3,
+  "miscount or arithmetic slip in a summary": 2,
+  "conflict in the brief not named": 2,
+  "wrote a file it should not": 1
+ },
+ "batches": {
+  "paid, released 5 to 9 Oct": 25,
+  "paid, released 7 Oct": 5,
+  "paid, released 10 and 11 Oct": 8,
+  "host and free": 11,
+  "live paid and free": 20
+ }
+}
