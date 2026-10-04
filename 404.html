@@ -80,15 +80,15 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .signup .fine { font-size: 0.85rem; color: var(--slate); margin: 0.7rem 0 0; }
 .card.soon { background: #f3f6f1; border-style: dashed; }
 .tag.soontag { background: var(--lime); color: var(--pine); }
-.card.soon .go { color: var(--moss); text-decoration: underline; }
-.explain ul { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.6rem; max-width: 46rem; }
-.explain li { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.7rem 1rem; }
+.card.soon .go, .featured .go { background: none; padding: 0; color: var(--moss); text-decoration: underline; }
+.explain ul { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+.explain li { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.8rem 1rem; font-size: 0.95rem; }
 .featured { display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin: 2rem 0 0; padding: 1.4rem 1.6rem; border-radius: 18px; background: var(--pine); color: var(--cream); text-decoration: none; }
 .featured h2 { margin: 0.4rem 0 0.3rem; font-size: 1.5rem; color: var(--cream); }
 .featured p { margin: 0; color: var(--mist); max-width: 36rem; }
 .featured .side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
 .featured .price { font-size: 1.6rem; font-weight: 800; color: var(--lime); }
-.featured .go { color: var(--lime); text-decoration: underline; font-weight: 700; }
+.featured .go { background: none; padding: 0; color: var(--lime); text-decoration: underline; font-weight: 700; }
 .featured.soon { background: #f3f6f1; color: var(--ink); border: 2px dashed var(--sage); }
 .featured.soon h2 { color: var(--ink); }
 .featured.soon p { color: var(--slate); }
