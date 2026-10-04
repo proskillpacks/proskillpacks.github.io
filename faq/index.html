@@ -252,6 +252,17 @@ a.card:hover, a.card:focus-visible { border-color: var(--pine); box-shadow: 0 10
 .tile span { color: var(--mist); font-size: 0.95rem; }
 .tile:hover, .tile:focus-visible { background: var(--moss); }
 .links { padding-left: 1.2rem; }
+.stack td[data-l] { vertical-align: top; }
+@media (max-width: 640px) {
+  table.stack, .stack tbody, .stack tr, .stack td { display: block; width: 100%; box-sizing: border-box; }
+  .stack thead { position: absolute; left: -9999px; }
+  .stack tr { border: 1px solid var(--rule); border-radius: 12px; margin: 0 0 0.8rem; padding: 0.6rem 0.9rem; }
+  .stack td { border: 0; padding: 0.25rem 0; }
+  .stack td:first-child { font-weight: 800; font-size: 1.05rem; }
+  .stack td[data-l]:not(:first-child)::before { content: attr(data-l) ": "; font-weight: 700; color: var(--slate); }
+  .stack td:nth-child(2) { color: var(--pine); font-weight: 700; }
+  .stack td:nth-child(2)::before { content: none; }
+}
 .links li { margin: 0 0 0.45rem; line-height: 1.5; }
 .links ul { margin-top: 0.35rem; }
 .links a { color: var(--pine); font-weight: 700; }
