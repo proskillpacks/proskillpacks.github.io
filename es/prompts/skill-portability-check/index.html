@@ -266,9 +266,9 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
       <a class="name" href="/">PRO SKILL PACKS</a>
       <nav aria-label="Main"><a href="/es/prompts/">Prompts gratis</a><a href="/free/">Skills gratis</a><a href="/">Inicio</a></nav>
     </div>
-    <p class="crumbs"><a href="/es/prompts/">Prompts</a> / Revisar si un SKILL.md es portable entre asistentes</p>
+    <p class="crumbs"><a href="/es/prompts/">Prompts</a></p>
     <h1>Revisar si un SKILL.md es portable entre asistentes</h1>
-    <p class="lead">Revisa leyendo el archivo principal de una habilidad (SKILL.md) para detectar errores y problemas de portabilidad; pegas el archivo completo, con su encabezado inicial.</p>
+    <p class="lead">Revisa leyendo el archivo principal de un skill (SKILL.md) para detectar errores y problemas de portabilidad; pegas el archivo completo, con su encabezado inicial.</p>
     <p class="note-light">Idiomas: <a href="/prompts/skill-portability-check/" hreflang="en-GB" lang="en-GB">English</a> · <a href="/de/prompts/skill-portability-check/" hreflang="de" lang="de">Deutsch</a></p>
   </div>
 </header>
@@ -276,20 +276,20 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <section><div class="box"><p><strong>Traducido del prompt en inglés. La versión en inglés es la que probamos.</strong></p></div></section>
 <section><h2>El prompt</h2><div class="prose"><p>Copia el prompt, pégalo en tu chatbot y sustituye los textos entre corchetes por tu material. El asistente responderá en español.</p><pre><code>Escribe toda tu respuesta en español. Mantén en su idioma original cualquier texto citado de las fuentes.
 
-Revisas el archivo principal de una Agent Skill para detectar problemas de portabilidad y errores comunes, solo leyendo. Cita la línea que hay detrás de cada hallazgo. Nunca afirmes que la habilidad es válida o portable y no inventes hallazgos.
+Revisas el archivo principal de una Agent Skill para detectar problemas de portabilidad y errores comunes, solo leyendo. Cita la línea que hay detrás de cada hallazgo. Nunca afirmes que el skill es válida o portable y no inventes hallazgos.
 
 Comprueba:
 1. Errores: encabezado (frontmatter) ausente o sin cerrar; encabezado que un analizador YAML estricto rechazaría (un &quot;: &quot; o &quot; #&quot; sin comillas dentro de la descripción, una comilla sin cerrar, una línea con sangría suelta); falta de name o de description; un name que no sea de letras minúsculas, dígitos y guiones simples o que supere los 64 caracteres (y, si puedes saberlo, que no coincida con el nombre de la carpeta); una descripción de más de 1024 caracteres; enlaces markdown a archivos que probablemente no existen.
-2. Advertencias: claves del encabezado distintas de name y description (license, compatibility y metadata son claves de la especificación: anótalas; allowed-tools y otras son propias de cada herramienta); una descripción que no dice cuándo usar la habilidad (&quot;Úsala cuando el usuario diga ...&quot;); nombres de herramientas de un fabricante (WebFetch, Skill tool, Bash(...), mcp__) y rutas de un fabricante (.claude/, .cursor/); un cuerpo que depende de la web, de una consola o de un script pero nunca dice qué hacer cuando no está disponible; texto como $ARGUMENTS o $0 que algunas herramientas sustituyen; un cuerpo que parece superar las 500 líneas.
+2. Advertencias: claves del encabezado distintas de name y description (license, compatibility y metadata son claves de la especificación: anótalas; allowed-tools y otras son propias de cada herramienta); una descripción que no dice cuándo usar el skill (&quot;Úsala cuando el usuario diga ...&quot;); nombres de herramientas de un fabricante (WebFetch, Skill tool, Bash(...), mcp__) y rutas de un fabricante (.claude/, .cursor/); un cuerpo que depende de la web, de una consola o de un script pero nunca dice qué hacer cuando no está disponible; texto como $ARGUMENTS o $0 que algunas herramientas sustituyen; un cuerpo que parece superar las 500 líneas.
 3. Para cada hallazgo da la línea, por qué importa en una frase y el texto exacto de reemplazo.
-4. Termina con lo que no pudiste comprobar leyendo (si las instrucciones funcionan, si la habilidad se activa, los archivos que no estén en lo que pegué).
+4. Termina con lo que no pudiste comprobar leyendo (si las instrucciones funcionan, si el skill se activa, los archivos que no estén en lo que pegué).
 No edites nada.
 
-Este es mi archivo de la habilidad:</code></pre></div></section>
+Este es mi archivo de el skill:</code></pre></div></section>
 <section lang="en-GB"><h2>Un ejemplo real (en inglés)</h2><p class="sub" lang="es">El ejemplo se queda en inglés porque es el resultado de la prueba original. El prompt traducido responde en español.</p><div class="prose"><p>Our own public skills repository on 2026-10-04: it had grown to 15 skills, and a new one was skipped by <code>npx skills add proskillpacks/skills --list</code> with a YAML error. The same rule, run over our whole tree of 57 skills, found 7 descriptions with an unquoted colon (now fixed), and the checker&#x27;s other warnings led us to add fallback sentences and remove a vendor tool name.</p>
 <blockquote><p><strong>After (skill output, excerpt):</strong><br>$ python3 scripts/skill_check.py proskillpacks-skills/skills --quiet<br>skill                           errors  warnings  lines  scripts<br>accessibility-quick-audit            0         0     39  -<br>changelog-from-commits               0         0     39  -<br>readme-first-run-check               0         0     39  -<br>agent-ready-quick-check              0         0     64  Python<br>late-payment-chaser-uk               0         0    109  Python<br>...<br>15 skill(s): 0 error(s), 0 warning(s)</p>
 <p>$ python3 scripts/skill_check.py examples/bad-yaml-colon/SKILL.md<br>ERROR  frontmatter: line 3: description: unquoted &#x27;: &#x27; inside the value (strict YAML reads it as a nested mapping). Quote the value or reword</p></blockquote></div></section>
-<section><h2>Límites</h2><div class="prose"><ul><li>Lee archivos; no puede saber si las instrucciones de una habilidad funcionan ni si se activa.</li><li>Las advertencias son riesgos de portabilidad, no prueba de que algo falle.</li><li>Las listas de patrones propios de cada fabricante no son exhaustivas.</li></ul></div></section>
+<section><h2>Límites</h2><div class="prose"><ul><li>Lee archivos; no puede saber si las instrucciones de un skill funcionan ni si se activa.</li><li>Las advertencias son riesgos de portabilidad, no prueba de que algo falle.</li><li>Las listas de patrones propios de cada fabricante no son exhaustivas.</li></ul></div></section>
 <section><h2>Más</h2><ul class="links"><li><a href="/prompts/skill-portability-check/" hreflang="en-GB" lang="en-GB">Ver la versión original en inglés (la que probamos)</a></li><li><a href="https://github.com/proskillpacks/skills" rel="noopener">Repositorio gratuito en GitHub (licencia MIT)</a></li><li><a href="/skills/skill-portability-check/" hreflang="en-GB">El mismo trabajo como skill instalable (en inglés)</a></li></ul></section>
 </div></main>
 <script>
