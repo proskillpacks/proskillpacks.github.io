@@ -154,7 +154,6 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .signup p { margin: 0 0 0.8rem; }
 .signup label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--slate); margin-bottom: 0.3rem; }
 .signup .row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
-.signup input[type=email] { flex: 1 1 14rem; font: inherit; padding: 0.65rem 0.8rem; border: 1px solid #b9c4bd; border-radius: 10px; min-width: 0; }
 .signup button { cursor: pointer; font: inherit; }
 .signup .fine { font-size: 0.85rem; color: var(--slate); margin: 0.7rem 0 0; }
 .card.soon { background: #f3f6f1; border-style: dashed; }
@@ -297,10 +296,13 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   </div>
 </header>
 <main><div class="wrap"><section><div class="prose"><h2>What is an Agent Skill?</h2><p>A folder with a plain-text SKILL.md file, in an open format, that tells an AI assistant how to do one job from start to finish. You give it your text or a link and it follows the instructions. Each of our skills also has a prompt.md that you can paste into a chatbot.</p><h2>Which assistants does it work with?</h2><p>Any assistant that reads SKILL.md skills, such as Claude, Codex, Gemini CLI, Cursor and GitHub Copilot, and any chatbot through the paste-in prompt. Our tests ran mostly on Claude Sonnet; each skill page says what it was tested on. A stronger model is less likely to add facts that are not in your text.</p><h2>Can I use it without a terminal?</h2><p>Yes. Open the skill&#x27;s prompt, copy it into ChatGPT, Claude, Gemini or any chatbot, and paste your own material where it says. Our free prompts are at <a href="/prompts/">/prompts/</a>. The prompt version cannot fetch web pages or run scripts, so you paste in the text a skill would have fetched.</p><h2>What is free and what is paid?</h2><p>Free skills are on GitHub under the MIT licence, with a free prompt page for each. Paid skills and packs are sold on Gumroad as one-time payments. Prices are in US dollars; Gumroad shows your local currency and adds VAT where it applies.</p><h2>What does the paid licence allow?</h2><p>You may install, use and change the files for your own work, and the output belongs to you. You may not share, resell or publish the files. Agencies that want to use a skill for several clients should contact us for a multi-client licence.</p><h2>What is the refund policy?</h2><p>Our Gumroad product pages state a 30-day money back guarantee: if the skill does not do what the page says, reply to your receipt within 30 days and you get a full refund, no questions and no forms.</p><h2>Are updates free?</h2><p>Yes. Updates to the version you bought are free: download the new file again from your Gumroad library. When we add skills to the All-Access Bundle, the zip in your library is replaced with a newer version at no cost.</p><h2>How are skills tested?</h2><p>Each skill is run on real public examples before release, and we read the output against the source and fix what is wrong. The example is shown on the skill&#x27;s page. Some skills were also scored against a written rubric, and the page says which.</p><h2>How do I ask a question or report a wrong output?</h2><p>Write to kaiventura.founder@gmail.com, or open an issue on the GitHub repo for a free skill. Include the input you used and what went wrong.</p></div></section><section class="signup" id="notify">
-  <h2>Get new free skills by email</h2>
-  <p>You get new free skills and new guides as we publish them. One email a week at most, nothing else. Unsubscribe any time.</p>
-  <p><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/subscribe" target="_blank" rel="noopener">Subscribe by email</a></p>
-  <p class="fine">Opens our Gumroad subscribe page: one email field, no account needed. Gumroad sends the emails and handles unsubscribing.</p>
+  <h2>Follow for new free skills</h2>
+  <p>New free skills and guides appear in all of these as we publish them. Pick whichever you already use.</p>
+  <ul class="links">
+    <li><a href="/feed.xml">RSS feed</a> for any feed reader</li>
+    <li><a href="https://github.com/proskillpacks/skills" rel="noopener">Watch the free skills repo on GitHub</a></li>
+    <li><a href="https://proskillpacks.gumroad.com/subscribe" rel="noopener">Follow on Gumroad</a></li>
+  </ul>
 </section></div></main>
 <footer>
   <div class="wrap">

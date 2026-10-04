@@ -75,7 +75,6 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .signup p { margin: 0 0 0.8rem; }
 .signup label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--slate); margin-bottom: 0.3rem; }
 .signup .row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
-.signup input[type=email] { flex: 1 1 14rem; font: inherit; padding: 0.65rem 0.8rem; border: 1px solid #b9c4bd; border-radius: 10px; min-width: 0; }
 .signup button { cursor: pointer; font: inherit; }
 .signup .fine { font-size: 0.85rem; color: var(--slate); margin: 0.7rem 0 0; }
 .card.soon { background: #f3f6f1; border-style: dashed; }
@@ -225,10 +224,13 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 </header>
 <main><div class="wrap"><section><h2>What will be in it</h2><p class="sub">Bought one by one, the 4 skills cost $36. The pack is $29, so you save $7.</p><ul class="links"><li><strong>AI-Code Launch Safety Review</strong> (arriving 5 Oct), $9. Point it at a project before launch. Get findings with file and line proof, a fix for each, and a plain list of what it did not check.</li><li><strong>Incident Postmortem Writer</strong> (arriving 8 Oct), $9. Paste the chat, alerts and timeline. Get a blameless postmortem with stated facts separated from inference, and action items tied to causes.</li><li><strong>Dependency Upgrade Risk Brief</strong> (arriving 9 Oct), $9. Give it a dependency upgrade and your code. A script classifies every bump, the skill quotes the release notes, finds the breaking changes that hit your code and gives an upgrade order, tests and a rollback.</li><li><strong>Env and Secrets Leak Check</strong> (arriving 9 Oct), $9. Point it at a repository. A script finds committed secrets and risky env files, in files and recent history, with every value masked. You get a triage and the clean-up in the right order.</li></ul></section>
 <section class="signup" id="notify">
-  <h2>Get new free skills by email</h2>
-  <p>You get new free skills and new guides as we publish them. One email a week at most, nothing else. Unsubscribe any time.</p>
-  <p><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/subscribe" target="_blank" rel="noopener">Subscribe by email</a></p>
-  <p class="fine">Opens our Gumroad subscribe page: one email field, no account needed. Gumroad sends the emails and handles unsubscribing.</p>
+  <h2>Follow for new free skills</h2>
+  <p>New free skills and guides appear in all of these as we publish them. Pick whichever you already use.</p>
+  <ul class="links">
+    <li><a href="/feed.xml">RSS feed</a> for any feed reader</li>
+    <li><a href="https://github.com/proskillpacks/skills" rel="noopener">Watch the free skills repo on GitHub</a></li>
+    <li><a href="https://proskillpacks.gumroad.com/subscribe" rel="noopener">Follow on Gumroad</a></li>
+  </ul>
 </section>
 </div></main>
 <footer>

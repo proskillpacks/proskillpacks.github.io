@@ -74,7 +74,6 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .signup p { margin: 0 0 0.8rem; }
 .signup label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--slate); margin-bottom: 0.3rem; }
 .signup .row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
-.signup input[type=email] { flex: 1 1 14rem; font: inherit; padding: 0.65rem 0.8rem; border: 1px solid #b9c4bd; border-radius: 10px; min-width: 0; }
 .signup button { cursor: pointer; font: inherit; }
 .signup .fine { font-size: 0.85rem; color: var(--slate); margin: 0.7rem 0 0; }
 .card.soon { background: #f3f6f1; border-style: dashed; }
@@ -397,10 +396,13 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   </div>
 </a></div></section>
 <section class="signup" id="notify">
-  <h2>Get new free skills by email</h2>
-  <p>You get new free skills and new guides as we publish them. One email a week at most, nothing else. Unsubscribe any time.</p>
-  <p><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/subscribe" target="_blank" rel="noopener">Subscribe by email</a></p>
-  <p class="fine">Opens our Gumroad subscribe page: one email field, no account needed. Gumroad sends the emails and handles unsubscribing.</p>
+  <h2>Follow for new free skills</h2>
+  <p>New free skills and guides appear in all of these as we publish them. Pick whichever you already use.</p>
+  <ul class="links">
+    <li><a href="/feed.xml">RSS feed</a> for any feed reader</li>
+    <li><a href="https://github.com/proskillpacks/skills" rel="noopener">Watch the free skills repo on GitHub</a></li>
+    <li><a href="https://proskillpacks.gumroad.com/subscribe" rel="noopener">Follow on Gumroad</a></li>
+  </ul>
 </section>
 <section><h2>How to install</h2><div class="prose"><p>Install every free skill with <code>npx skills add proskillpacks/skills</code>, or copy just the folders you want. Step by step for each tool: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a>.</p><ol><li>Unzip the download. It holds one folder per skill, a README and the licence.</li><li>Put each skill folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a></li></ul></li><li>Ask for the job in plain words. The skill loads by itself.</li></ol></div></section>
 </div></main>
