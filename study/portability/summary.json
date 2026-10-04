@@ -1,0 +1,161 @@
+{
+ "sample": 69,
+ "repos": 14,
+ "with_extra_keys": 51,
+ "with_allowed_tools": 5,
+ "vendor_tool_names": 17,
+ "product_names": 6,
+ "vendor_paths": 0,
+ "generic_agents_path": 0,
+ "any_coupling": 29,
+ "no_coupling": 40,
+ "has_script": 14,
+ "fallback_phrase": 17,
+ "coupled_with_fallback": 6,
+ "coupled_without_fallback": 23,
+ "lines_median": 105,
+ "lines_max": 564,
+ "over_500": 1,
+ "over_200": 13,
+ "description_over_1024": 0,
+ "description_median_chars": 375,
+ "installs_total": 48930288,
+ "installs_in_coupled": 20992884,
+ "body_only_coupling": 17,
+ "top3_publishers_skills": 47,
+ "no_extra_keys": 18,
+ "scripts_and_fallback": 4,
+ "with_nonspec_keys": 17,
+ "nonspec_key_names": [
+  [
+   "disable-model-invocation",
+   12
+  ],
+  [
+   "version",
+   3
+  ],
+  [
+   "argument-hint",
+   2
+  ],
+  [
+   "hidden",
+   1
+  ],
+  [
+   "displayName",
+   1
+  ],
+  [
+   "emoji",
+   1
+  ],
+  [
+   "homepage",
+   1
+  ]
+ ],
+ "tool_breakdown": {
+  "WebFetch": 3,
+  "WebSearch": 0,
+  "TodoWrite": 0,
+  "AskUserQuestion": 1,
+  "NotebookEdit": 0,
+  "ExitPlanMode": 0,
+  "Bash(...)": 5,
+  "Task tool": 0,
+  "Skill tool": 7,
+  "mcp__": 1,
+  "named tool (Read/Write/Edit/Glob/Grep tool)": 0
+ },
+ "product_breakdown": {
+  "Claude Code": 4,
+  "claude.ai": 0,
+  "Cursor": 2,
+  "Codex": 4,
+  "Gemini CLI": 0,
+  "Copilot": 0,
+  "CLAUDE.md/GEMINI.md file": 3
+ },
+ "path_breakdown": {
+  "~/.claude or .claude/": 0,
+  "~/.cursor or .cursor/": 0,
+  "~/.codex or .codex/": 0,
+  "~/.gemini or .gemini/": 0,
+  "$CLAUDE_* env var": 0
+ },
+ "extra_key_names": [
+  [
+   "metadata",
+   31
+  ],
+  [
+   "license",
+   21
+  ],
+  [
+   "disable-model-invocation",
+   12
+  ],
+  [
+   "allowed-tools",
+   5
+  ],
+  [
+   "compatibility",
+   3
+  ],
+  [
+   "version",
+   3
+  ],
+  [
+   "argument-hint",
+   2
+  ],
+  [
+   "hidden",
+   1
+  ],
+  [
+   "displayName",
+   1
+  ],
+  [
+   "emoji",
+   1
+  ],
+  [
+   "homepage",
+   1
+  ]
+ ],
+ "script_langs": [
+  [
+   "shell",
+   7
+  ],
+  [
+   "PowerShell",
+   7
+  ],
+  [
+   "JavaScript",
+   5
+  ],
+  [
+   "Python",
+   4
+  ],
+  [
+   "TypeScript",
+   1
+  ]
+ ],
+ "no_frontmatter": 0,
+ "with_references_dir": 35,
+ "repos_with_any_coupling": 10,
+ "repos_all_clean": 4,
+ "skipped_total": 31
+}

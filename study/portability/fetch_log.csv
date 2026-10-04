@@ -1,0 +1,101 @@
+rank,source,skill,installs,status,path
+1,vercel-labs/skills,find-skills,3692279,ok,skills/find-skills/SKILL.md
+2,mattpocock/skills,grill-me,1279869,ok,skills/productivity/grill-me/SKILL.md
+3,mattpocock/skills,grill-with-docs,1094069,ok,skills/engineering/grill-with-docs/SKILL.md
+4,mattpocock/skills,improve-codebase-architecture,1041102,ok,skills/engineering/improve-codebase-architecture/SKILL.md
+5,vercel-labs/agent-browser,agent-browser,1023850,ok,skills/agent-browser/SKILL.md
+6,mattpocock/skills,tdd,1013060,ok,skills/engineering/tdd/SKILL.md
+7,anthropics/skills,frontend-design,951840,ok,skills/frontend-design/SKILL.md
+8,mattpocock/skills,setup-matt-pocock-skills,934812,ok,skills/engineering/setup-matt-pocock-skills/SKILL.md
+9,mattpocock/skills,handoff,912898,ok,skills/productivity/handoff/SKILL.md
+10,mattpocock/skills,triage,882849,ok,skills/engineering/triage/SKILL.md
+11,mattpocock/skills,prototype,879741,ok,skills/engineering/prototype/SKILL.md
+12,mattpocock/skills,grilling,828582,ok,skills/productivity/grilling/SKILL.md
+13,heygen-com/hyperframes,hyperframes-cli,786151,ok,skills/hyperframes-cli/SKILL.md
+14,flowkit-labs/skills,reddit-automation,772394,ok,reddit-automation/SKILL.md
+15,vercel-labs/agent-skills,vercel-react-best-practices,768665,skipped: skill folder not found in repo,
+16,heygen-com/hyperframes,hyperframes,753300,ok,skills/hyperframes/SKILL.md
+17,mattpocock/skills,teach,750263,ok,skills/productivity/teach/SKILL.md
+18,mattpocock/skills,domain-modeling,748768,ok,skills/engineering/domain-modeling/SKILL.md
+19,open.feishu.cn,lark-doc,744145,skipped: not a github owner/repo source,
+20,open.feishu.cn,lark-base,743817,skipped: not a github owner/repo source,
+21,open.feishu.cn,lark-drive,743749,skipped: not a github owner/repo source,
+22,open.feishu.cn,lark-shared,743344,skipped: not a github owner/repo source,
+23,open.feishu.cn,lark-im,743078,skipped: not a github owner/repo source,
+24,open.feishu.cn,lark-approval,742911,skipped: not a github owner/repo source,
+25,open.feishu.cn,lark-calendar,742856,skipped: not a github owner/repo source,
+26,open.feishu.cn,lark-sheets,742628,skipped: not a github owner/repo source,
+27,open.feishu.cn,lark-wiki,742408,skipped: not a github owner/repo source,
+28,open.feishu.cn,lark-contact,742052,skipped: not a github owner/repo source,
+29,open.feishu.cn,lark-task,741815,skipped: not a github owner/repo source,
+30,open.feishu.cn,lark-slides,741810,skipped: not a github owner/repo source,
+31,open.feishu.cn,lark-mail,741790,skipped: not a github owner/repo source,
+32,open.feishu.cn,lark-event,741647,skipped: not a github owner/repo source,
+33,open.feishu.cn,lark-whiteboard,741643,skipped: not a github owner/repo source,
+34,open.feishu.cn,lark-attendance,741460,skipped: not a github owner/repo source,
+35,open.feishu.cn,lark-minutes,741435,skipped: not a github owner/repo source,
+36,open.feishu.cn,lark-openapi-explorer,741412,skipped: not a github owner/repo source,
+37,open.feishu.cn,lark-skill-maker,741047,skipped: not a github owner/repo source,
+38,open.feishu.cn,lark-workflow-meeting-summary,740922,skipped: not a github owner/repo source,
+39,open.feishu.cn,lark-vc,740743,skipped: not a github owner/repo source,
+40,open.feishu.cn,lark-workflow-standup-report,740708,skipped: not a github owner/repo source,
+41,mattpocock/skills,codebase-design,725842,ok,skills/engineering/codebase-design/SKILL.md
+42,open.feishu.cn,lark-okr,722248,skipped: not a github owner/repo source,
+43,mattpocock/skills,diagnosing-bugs,710360,ok,skills/engineering/diagnosing-bugs/SKILL.md
+44,open.feishu.cn,lark-markdown,707816,skipped: not a github owner/repo source,
+45,vercel-labs/agent-skills,web-design-guidelines,697124,ok,skills/web-design-guidelines/SKILL.md
+46,open.feishu.cn,lark-vc-agent,685280,skipped: not a github owner/repo source,
+47,heygen-com/hyperframes,hyperframes-registry,678708,ok,skills/hyperframes-registry/SKILL.md
+48,mattpocock/skills,code-review,661982,ok,skills/engineering/code-review/SKILL.md
+49,heygen-com/hyperframes,media-use,661449,ok,skills/media-use/SKILL.md
+50,mattpocock/skills,implement,655185,ok,skills/engineering/implement/SKILL.md
+51,mattpocock/skills,ask-matt,654433,ok,skills/engineering/ask-matt/SKILL.md
+52,open.feishu.cn,lark-apps,652517,skipped: not a github owner/repo source,
+53,101-skills/superpowers,ai-video-generation,650387,ok,tools/video/ai-video-generation/SKILL.md
+54,101-skills/superpowers,ai-image-generation,649862,ok,tools/image/ai-image-generation/SKILL.md
+55,101-skills/superpowers,twitter-automation,649836,ok,tools/social/twitter-automation/SKILL.md
+56,101-skills/superpowers,ai-avatar-video,649554,ok,tools/video/ai-avatar-video/SKILL.md
+57,heygen-com/hyperframes,hyperframes-core,648960,ok,skills/hyperframes-core/SKILL.md
+58,heygen-com/hyperframes,hyperframes-animation,638572,ok,skills/hyperframes-animation/SKILL.md
+59,microsoft/azure-skills,microsoft-foundry,629064,ok,skills/microsoft-foundry/SKILL.md
+60,microsoft/azure-skills,azure-diagnostics,619250,ok,skills/azure-diagnostics/SKILL.md
+61,microsoft/azure-skills,azure-prepare,618827,ok,skills/azure-prepare/SKILL.md
+62,microsoft/azure-skills,azure-ai,618587,ok,skills/azure-ai/SKILL.md
+63,microsoft/azure-skills,azure-deploy,618480,ok,skills/azure-deploy/SKILL.md
+64,microsoft/azure-skills,azure-validate,617907,ok,skills/azure-validate/SKILL.md
+65,microsoft/azure-skills,azure-storage,617350,ok,skills/azure-storage/SKILL.md
+66,microsoft/azure-skills,entra-app-registration,617112,ok,skills/entra-app-registration/SKILL.md
+67,microsoft/azure-skills,azure-compliance,616946,ok,skills/azure-compliance/SKILL.md
+68,microsoft/azure-skills,appinsights-instrumentation,616829,ok,skills/appinsights-instrumentation/SKILL.md
+69,microsoft/azure-skills,azure-resource-lookup,616792,ok,skills/azure-resource-lookup/SKILL.md
+70,microsoft/azure-skills,azure-resource-visualizer,616758,ok,skills/azure-resource-visualizer/SKILL.md
+71,microsoft/azure-skills,azure-aigateway,616497,ok,skills/azure-aigateway/SKILL.md
+72,microsoft/azure-skills,azure-kusto,616408,ok,skills/azure-kusto/SKILL.md
+73,heygen-com/hyperframes,hyperframes-creative,609900,ok,skills/hyperframes-creative/SKILL.md
+74,microsoft/azure-skills,azure-messaging,606115,ok,skills/azure-messaging/SKILL.md
+75,mattpocock/skills,wayfinder,605716,ok,skills/engineering/wayfinder/SKILL.md
+76,mattpocock/skills,to-spec,604028,ok,skills/engineering/to-spec/SKILL.md
+77,mattpocock/skills,research,602746,ok,skills/engineering/research/SKILL.md
+78,designed-by-ai/skills,design-mobile-apps,599145,ok,skills/design-mobile-apps/SKILL.md
+79,mattpocock/skills,to-tickets,592967,ok,skills/engineering/to-tickets/SKILL.md
+80,remotion-dev/skills,remotion-best-practices,570218,ok,skills/remotion-best-practices/SKILL.md
+81,microsoft/azure-skills,azure-compute,560051,ok,skills/azure-compute/SKILL.md
+82,leonxlnx/taste-skill,design-taste-frontend,559166,skipped: skill folder not found in repo,
+83,mattpocock/skills,resolving-merge-conflicts,559151,skipped: skill folder not found in repo,
+84,juliusbrussee/caveman,caveman,556688,ok,skills/caveman/SKILL.md
+85,microsoft/azure-skills,azure-cloud-migrate,550059,ok,skills/azure-cloud-migrate/SKILL.md
+86,open.feishu.cn,lark-note,525121,skipped: not a github owner/repo source,
+87,heygen-com/hyperframes,hyperframes-keyframes,495753,ok,skills/hyperframes-keyframes/SKILL.md
+88,microsoft/azure-skills,azure-rbac,493376,skipped: skill folder not found in repo,
+89,microsoft/azure-skills,azure-quotas,486105,ok,skills/azure-quotas/SKILL.md
+90,microsoft/azure-skills,azure-upgrade,478207,ok,skills/azure-upgrade/SKILL.md
+91,google/agents-cli,google-agents-cli-adk-code,470883,ok,skills/google-agents-cli-adk-code/SKILL.md
+92,google/agents-cli,google-agents-cli-deploy,470334,ok,skills/google-agents-cli-deploy/SKILL.md
+93,google/agents-cli,google-agents-cli-workflow,470292,ok,skills/google-agents-cli-workflow/SKILL.md
+94,google/agents-cli,google-agents-cli-eval,470271,ok,skills/google-agents-cli-eval/SKILL.md
+95,google/agents-cli,google-agents-cli-scaffold,470193,ok,skills/google-agents-cli-scaffold/SKILL.md
+96,google/agents-cli,google-agents-cli-observability,470160,ok,skills/google-agents-cli-observability/SKILL.md
+97,google/agents-cli,google-agents-cli-publish,470145,ok,skills/google-agents-cli-publish/SKILL.md
+98,larksuite/cli,lark-doc,463650,ok,skills/lark-doc/SKILL.md
+99,larksuite/cli,lark-base,461462,ok,skills/lark-base/SKILL.md
+100,larksuite/cli,lark-shared,460312,ok,skills/lark-shared/SKILL.md
