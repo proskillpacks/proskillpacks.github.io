@@ -23,6 +23,7 @@
 - [How to install Agent Skills in Cursor](https://proskillpacks.github.io/guides/install-skills-cursor/)
 - [How to install Agent Skills in Gemini CLI](https://proskillpacks.github.io/guides/install-skills-gemini-cli/)
 - [How to install Agent Skills in GitHub Copilot](https://proskillpacks.github.io/guides/install-skills-github-copilot/)
+- [Skills vs prompts vs custom GPTs: which one do you need?](https://proskillpacks.github.io/guides/skills-vs-prompts-vs-custom-gpts/)
 
 ## Categories
 - [Shopify store owners](https://proskillpacks.github.io/for/shopify/)
