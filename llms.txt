@@ -7,12 +7,16 @@
 - [Catalog data as JSON](https://proskillpacks.github.io/catalog/catalog.json)
 - [Free skills](https://proskillpacks.github.io/free/)
 - [Shopify store owners](https://proskillpacks.github.io/for/shopify/)
+- [Freelancers and consultants](https://proskillpacks.github.io/for/freelancers/)
 - [Short-term rental hosts](https://proskillpacks.github.io/for/short-term-rental-hosts/)
+- [Marketers and agencies](https://proskillpacks.github.io/for/marketers-and-agencies/)
+- [Developers](https://proskillpacks.github.io/for/developers/)
 
 ## Shopify store owners
 - [Agent-Ready Quick Check](https://proskillpacks.github.io/skills/agent-ready-quick-check/) (Free): Six checks on how AI shopping agents read your store, compared with 99 stores we audited.
 - [Agent-Ready Store Audit](https://proskillpacks.github.io/skills/agent-ready-store-audit/) ($5): A 0 to 100 score for how AI shopping agents read your store, with the top 7 fixes.
 - [BFCM Campaign Kit](https://proskillpacks.github.io/skills/bfcm-campaign-kit/) ($5): Offer maths on your real prices, a dated calendar, 5 emails, 3 SMS and an ops checklist.
+- [Chargeback Evidence Checklist](https://proskillpacks.github.io/skills/chargeback-evidence-checklist/) (Free): Got a chargeback? The evidence to gather for your dispute reason, what you already have, and where to find each piece in Shopify.
 - [Chargeback Response Writer](https://proskillpacks.github.io/skills/chargeback-response-writer/) ($5): A dispute response matched to the reason code. It never invents evidence.
 - [Product Description Rewriter](https://proskillpacks.github.io/skills/product-description-rewriter/) ($5): Clean Shopify HTML descriptions with an SEO title and meta description, for one product or a collection.
 - [Product SEO Fixer](https://proskillpacks.github.io/skills/product-seo-fixer/) ($5): A prioritised fix list with the exact text to paste, for a product, a collection or a product export CSV.
@@ -23,9 +27,18 @@
 - [Store Ops Pack](https://proskillpacks.github.io/packs/store-ops-pack/) ($29): Six skills for the Shopify jobs that eat the week, in one download.
 - [Support Macro Writer](https://proskillpacks.github.io/skills/support-macro-writer/) ($5): Ready-to-import replies built from your real shipping and returns policies.
 
+## Freelancers and consultants
+- [Late Payment Chaser (UK)](https://proskillpacks.github.io/skills/late-payment-chaser-uk/) (Free): One unpaid invoice in. The statutory interest and fixed recovery sum worked out with a script, and three reminder emails out. UK business debts only.
+
 ## Short-term rental hosts
 - [Host Ops Pack](https://proskillpacks.github.io/packs/host-ops-pack/) ($29): Six skills for the listing, review and house-rules jobs of hosts who run their own listings.
 - [Listing Rewriter](https://proskillpacks.github.io/skills/listing-rewriter/) ($5): Three titles under 50 characters and a description within 500, built only from your own facts.
+
+## Marketers and agencies
+- [AI Search Readiness Check](https://proskillpacks.github.io/skills/ai-search-readiness-check/) (Free): Can ChatGPT, Perplexity and Google read a website? A score out of 100 from 8 checks, the evidence and the fixes in order.
+
+## Developers
+- [PR Description and Review Prep](https://proskillpacks.github.io/skills/pr-description-and-review-prep/) (Free): Run it on your branch. Get a PR title, summary, risk notes and test plan from the diff, plus the questions a reviewer will ask. Free, MIT-licensed.
 
 ## Guides
 - [All guides](https://proskillpacks.github.io/guides/)
@@ -34,9 +47,13 @@
 - [Star ratings AI agents and Google can read](https://proskillpacks.github.io/guides/star-ratings-aggregaterating-shopify/)
 - [How long should a product description be?](https://proskillpacks.github.io/guides/product-description-length-shopify/)
 - [How to check AI-written code before you launch it](https://proskillpacks.github.io/guides/check-ai-written-code-before-launch/)
+- [How to clean a messy CSV export without losing data](https://proskillpacks.github.io/guides/clean-a-messy-csv-export/)
 - [How to clean a messy spreadsheet with an AI assistant](https://proskillpacks.github.io/guides/clean-messy-spreadsheet-with-ai/)
 - [How to write a cold email from a prospect's website](https://proskillpacks.github.io/guides/cold-email-from-a-prospects-website/)
+- [How to fact-check the claims in an AI-written draft](https://proskillpacks.github.io/guides/fact-check-claims-in-an-ai-written-draft/)
+- [How to reply to scope creep without burning the relationship](https://proskillpacks.github.io/guides/reply-to-scope-creep-without-burning-the-relationship/)
 - [How to rewrite resume bullets without inventing numbers](https://proskillpacks.github.io/guides/rewrite-resume-bullets-without-inventing-numbers/)
+- [How to write ad copy variants you can actually test](https://proskillpacks.github.io/guides/write-ad-copy-variants-you-can-test/)
 
 ## Other
 - [State of Agent-Ready Shopify (study)](https://proskillpacks.github.io/study/)

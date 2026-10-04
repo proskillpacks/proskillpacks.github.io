@@ -206,6 +206,28 @@
    "includes": []
   },
   {
+   "id": "chargeback-evidence-checklist",
+   "title": "Chargeback Evidence Checklist",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/chargeback-evidence-checklist/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/ecommerce/chargeback-evidence-checklist",
+   "summary": "Got a chargeback? The evidence to gather for your dispute reason, what you already have, and where to find each piece in Shopify.",
+   "give": "The dispute reason.",
+   "get": "The evidence to gather for that reason, what you already have, and where to find each piece in Shopify.",
+   "jobs": [
+    "handle chargebacks"
+   ],
+   "tags": [],
+   "tested": "Tested on 6 real disputes from the Shopify Community forum. Release-version scores: 9, 9, 9.5, 9, 9 and 9.5 out of 10, plus one Opus check at 9. The paste-in prompt scored 8.5 in Claude.",
+   "includes": []
+  },
+  {
    "id": "shopify-policy-checker",
    "title": "Policy Checker",
    "kind": "Free skill",
@@ -272,6 +294,29 @@
    "includes": []
   },
   {
+   "id": "late-payment-chaser-uk",
+   "title": "Late Payment Chaser (UK)",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "freelancers",
+   "category_name": "Freelancers and consultants",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/late-payment-chaser-uk/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/freelancers/late-payment-chaser-uk",
+   "summary": "One unpaid invoice in. The statutory interest and fixed recovery sum worked out with a script, and three reminder emails out. UK business debts only.",
+   "give": "One unpaid business invoice (amount, invoice date, and the due date if you agreed one).",
+   "get": "What you can claim under UK late-payment law, with the working and official sources, and three reminder emails to send.",
+   "jobs": [
+    "money and disputes",
+    "write copy"
+   ],
+   "tags": [],
+   "tested": "3 real tests built on the facts of published UK court judgments. Figures checked by hand against the script and the judgment.",
+   "includes": []
+  },
+  {
    "id": "host-ops-pack",
    "title": "Host Ops Pack",
    "kind": "Pack",
@@ -313,6 +358,51 @@
    ],
    "tags": [],
    "tested": "Tested on 4 real public listings. Final Claude Sonnet scores: 9, 8.5, 9 and 8.5 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "ai-search-readiness-check",
+   "title": "AI Search Readiness Check",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "marketers-and-agencies",
+   "category_name": "Marketers and agencies",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/ai-search-readiness-check/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/marketing-seo/ai-search-readiness-check",
+   "summary": "Can ChatGPT, Perplexity and Google read a website? A score out of 100 from 8 checks, the evidence and the fixes in order.",
+   "give": "A website URL.",
+   "get": "A 0 to 100 score from 8 checks on whether AI search tools can read the site, the evidence for each check, and a fix list in order.",
+   "jobs": [
+    "audit and fix"
+   ],
+   "tags": [],
+   "tested": "Tested on 8 real public websites, as a skill and (four of them) as a pasted prompt, two also on a second model, then re-scored after two independent reviews. The score matched our script in every run. Final scores: 8.5, 8.5, 8.5, 8.5, 9, 9, 9 and 9 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "pr-description-and-review-prep",
+   "title": "PR Description and Review Prep",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "developers",
+   "category_name": "Developers",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/pr-description-and-review-prep/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/pr-description-and-review-prep",
+   "summary": "Run it on your branch. Get a PR title, summary, risk notes and test plan from the diff, plus the questions a reviewer will ask. Free, MIT-licensed.",
+   "give": "Run it in your repository, or paste a diff.",
+   "get": "A ready-to-paste PR title and summary, risk notes, a test plan from what is stated, and the questions a reviewer is likely to ask.",
+   "jobs": [
+    "write docs",
+    "review code"
+   ],
+   "tags": [],
+   "tested": "1 real-data run on four public commits (Claude Sonnet).",
    "includes": []
   }
  ]
