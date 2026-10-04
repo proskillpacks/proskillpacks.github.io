@@ -24,7 +24,7 @@
     "Support Macro Writer",
     "Product Description Rewriter",
     "Product SEO Fixer",
-    "Chargeback Response Writer",
+    "Chargeback Response Kit for Shopify Payments, with notes for PayPal, Stripe and Klarna",
     "BFCM Campaign Kit"
    ]
   },
@@ -568,7 +568,7 @@
   },
   {
    "id": "chargeback-response-writer",
-   "title": "Chargeback Response Writer",
+   "title": "Chargeback Response Kit for Shopify Payments, with notes for PayPal, Stripe and Klarna",
    "kind": "Single skill",
    "type": "single",
    "category": "shopify",
@@ -578,7 +578,7 @@
    "free": false,
    "url": "/skills/chargeback-response-writer/",
    "buy_url": "https://proskillpacks.gumroad.com/l/chargeback-response-writer",
-   "summary": "A dispute response matched to the reason code. It never invents evidence.",
+   "summary": "Six fill-in response letters by reason, evidence checklists, worked examples and a Start-here PDF, plus an AI prompt and skill. One price, $5.",
    "give": "The dispute details plus the evidence you actually have.",
    "get": "A response matched to the reason code, a checklist of what to attach, and a list of gaps. It never invents evidence, and it tells you when accepting is cheaper.",
    "jobs": [
