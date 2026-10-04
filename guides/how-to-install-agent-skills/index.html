@@ -4,21 +4,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How to install Agent Skills in Claude, Codex, Gemini CLI, Cursor and Copilot | Pro Skill Packs</title>
-<meta name="description" content="Where each tool looks for SKILL.md skills, the one command that works across tools, and a step-by-step page for each. Checked against each tool&#x27;s own docs on 4 October 2026.">
+<title>How to install Agent Skills in any assistant</title>
+<meta name="description" content="Where each tool looks for SKILL.md skills, the one command that works across tools, and a step-by-step page for each.">
 <link rel="canonical" href="https://proskillpacks.github.io/guides/how-to-install-agent-skills/">
 <link rel="icon" href="/assets/avatar.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/guides/how-to-install-agent-skills/">
-<meta property="og:title" content="How to install Agent Skills in Claude, Codex, Gemini CLI, Cursor and Copilot">
-<meta property="og:description" content="Where each tool looks for SKILL.md skills, the one command that works across tools, and a step-by-step page for each. Checked against each tool&#x27;s own docs on 4 October 2026.">
+<meta property="og:title" content="How to install Agent Skills in any assistant">
+<meta property="og:description" content="Where each tool looks for SKILL.md skills, the one command that works across tools, and a step-by-step page for each.">
 <meta property="og:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
-<meta name="twitter:title" content="How to install Agent Skills in Claude, Codex, Gemini CLI, Cursor and Copilot">
-<meta name="twitter:description" content="Where each tool looks for SKILL.md skills, the one command that works across tools, and a step-by-step page for each. Checked against each tool&#x27;s own docs on 4 October 2026.">
+<meta name="twitter:title" content="How to install Agent Skills in any assistant">
+<meta name="twitter:description" content="Where each tool looks for SKILL.md skills, the one command that works across tools, and a step-by-step page for each.">
 <meta name="twitter:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
@@ -93,6 +93,17 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .card.soon .go { color: var(--moss); text-decoration: underline; }
 .explain ul { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.6rem; max-width: 46rem; }
 .explain li { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.7rem 1rem; }
+.featured { display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin: 2rem 0 0; padding: 1.4rem 1.6rem; border-radius: 18px; background: var(--pine); color: var(--cream); text-decoration: none; }
+.featured h2 { margin: 0.4rem 0 0.3rem; font-size: 1.5rem; color: var(--cream); }
+.featured p { margin: 0; color: var(--mist); max-width: 36rem; }
+.featured .side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
+.featured .price { font-size: 1.6rem; font-weight: 800; color: var(--lime); }
+.featured .go { color: var(--lime); text-decoration: underline; font-weight: 700; }
+.featured.soon { background: #f3f6f1; color: var(--ink); border: 2px dashed var(--sage); }
+.featured.soon h2 { color: var(--ink); }
+.featured.soon p { color: var(--slate); }
+.featured.soon .price { color: var(--pine); }
+.featured.soon .go { color: var(--moss); }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
@@ -169,6 +180,32 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   .hero-filters label:not(.grow) select { min-width: 0; width: 100%; }
 }
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://proskillpacks.github.io/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Guides",
+   "item": "https://proskillpacks.github.io/guides/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "How to install Agent Skills in Claude, Codex, Gemini CLI, Cursor and Copilot",
+   "item": "https://proskillpacks.github.io/guides/how-to-install-agent-skills/"
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="hero">
@@ -200,7 +237,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <ul><li>Check the folder holds a file named exactly <code>SKILL.md</code>, one level down: <code>skills/&lt;name&gt;/SKILL.md</code>, not <code>skills/&lt;name&gt;/&lt;name&gt;/SKILL.md</code>.</li><li>Restart the session. Several tools read the skills folder only when a session starts.</li><li>Look at your tool&#x27;s own skill list, if it has one. Gemini CLI has <code>/skills list</code>, for example.</li><li>Some skills run a small script and need Python 3. The skill&#x27;s README says so.</li></ul>
 <h3>Limits</h3>
 <ul><li>Tools change their paths and commands. This was checked on 4 October 2026. If a path here fails, the linked official doc is the authority.</li><li>We did not run every command on every tool. Each tool page says what we read and what we did not test.</li></ul>
-<p><a href="/">Browse all skills in the catalog</a></p></div></section><section class="signup" id="notify">
+<p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/install-skills-chatgpt-paste-in-prompt/">How to use a skill in ChatGPT or any chatbot (paste-in prompt)</a></li><li><a href="/guides/install-skills-claude-ai/">How to install Agent Skills in claude.ai</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Get new free skills by email</h2>
   <p>You get new free skills and new guides as we publish them. One email a week at most, nothing else. Unsubscribe any time.</p>
   <p><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/subscribe" target="_blank" rel="noopener">Subscribe by email</a></p>
@@ -236,5 +273,8 @@ document.querySelectorAll('.prose pre').forEach(function (pre) {
     <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>
 </footer>
+<!-- analytics:start -->
+<script src="https://cdn.counter.dev/script.js" data-id="a17e3abc-0819-4937-be25-c683543a2ac8" data-utcoffset="1"></script>
+<!-- analytics:end -->
 </body>
 </html>

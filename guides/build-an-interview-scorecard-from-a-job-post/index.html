@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How do I build an interview scorecard from a job post? | Pro Skill Packs</title>
-<meta name="description" content="A prompt that turns a job post into a structured interview scorecard with competencies, questions, a 1 to 4 rubric and an interview plan. Copy it, paste in the post, check it against the job.">
+<title>How do I build an interview scorecard from a job post?</title>
+<meta name="description" content="A prompt that turns a job post into a structured interview scorecard with competencies, questions, a 1 to 4 rubric and an interview plan.">
 <link rel="canonical" href="https://proskillpacks.github.io/guides/build-an-interview-scorecard-from-a-job-post/">
 <link rel="icon" href="/assets/avatar.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
@@ -13,12 +13,12 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/guides/build-an-interview-scorecard-from-a-job-post/">
 <meta property="og:title" content="How do I build an interview scorecard from a job post?">
-<meta property="og:description" content="A prompt that turns a job post into a structured interview scorecard with competencies, questions, a 1 to 4 rubric and an interview plan. Copy it, paste in the post, check it against the job.">
+<meta property="og:description" content="A prompt that turns a job post into a structured interview scorecard with competencies, questions, a 1 to 4 rubric and an interview plan.">
 <meta property="og:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="How do I build an interview scorecard from a job post?">
-<meta name="twitter:description" content="A prompt that turns a job post into a structured interview scorecard with competencies, questions, a 1 to 4 rubric and an interview plan. Copy it, paste in the post, check it against the job.">
+<meta name="twitter:description" content="A prompt that turns a job post into a structured interview scorecard with competencies, questions, a 1 to 4 rubric and an interview plan.">
 <meta name="twitter:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
@@ -93,6 +93,17 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .card.soon .go { color: var(--moss); text-decoration: underline; }
 .explain ul { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.6rem; max-width: 46rem; }
 .explain li { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.7rem 1rem; }
+.featured { display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin: 2rem 0 0; padding: 1.4rem 1.6rem; border-radius: 18px; background: var(--pine); color: var(--cream); text-decoration: none; }
+.featured h2 { margin: 0.4rem 0 0.3rem; font-size: 1.5rem; color: var(--cream); }
+.featured p { margin: 0; color: var(--mist); max-width: 36rem; }
+.featured .side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
+.featured .price { font-size: 1.6rem; font-weight: 800; color: var(--lime); }
+.featured .go { color: var(--lime); text-decoration: underline; font-weight: 700; }
+.featured.soon { background: #f3f6f1; color: var(--ink); border: 2px dashed var(--sage); }
+.featured.soon h2 { color: var(--ink); }
+.featured.soon p { color: var(--slate); }
+.featured.soon .price { color: var(--pine); }
+.featured.soon .go { color: var(--moss); }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
@@ -169,6 +180,32 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   .hero-filters label:not(.grow) select { min-width: 0; width: 100%; }
 }
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://proskillpacks.github.io/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Guides",
+   "item": "https://proskillpacks.github.io/guides/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "How do I build an interview scorecard from a job post?",
+   "item": "https://proskillpacks.github.io/guides/build-an-interview-scorecard-from-a-job-post/"
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="hero">
@@ -216,7 +253,7 @@ Produce:
 <p>Give each interviewer their competencies and the notes boxes. Ask them to write evidence first and score second, and to score alone before the debrief. Then discuss competency by competency, not candidate by candidate.</p>
 <h3>Limits</h3>
 <ul><li>It builds the tool. It does not score candidates or tell you who to hire.</li><li>A vague post gives a vague scorecard. The gaps list tells you what to settle with the hiring manager.</li><li>Weights are a suggestion. The hiring manager decides.</li><li>The fairness note is general and not legal advice. Rules on hiring questions differ by country.</li><li>A scorecard reduces guesswork. It does not remove bias, so keep the panel mixed and the questions the same for everyone.</li></ul>
-<p><a href="/">Browse all skills in the catalog</a></p></div></section><section class="signup" id="notify">
+<p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/rewrite-resume-bullets-without-inventing-numbers/">How to rewrite resume bullets without inventing numbers</a></li><li><a href="/guides/shopify-chargeback-response-template/">Chargeback response template for Shopify</a></li><li>All skills for job seekers: <a href="/for/careers/">Job seekers and careers</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Get new free skills by email</h2>
   <p>You get new free skills and new guides as we publish them. One email a week at most, nothing else. Unsubscribe any time.</p>
   <p><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/subscribe" target="_blank" rel="noopener">Subscribe by email</a></p>
@@ -252,5 +289,8 @@ document.querySelectorAll('.prose pre').forEach(function (pre) {
     <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>
 </footer>
+<!-- analytics:start -->
+<script src="https://cdn.counter.dev/script.js" data-id="a17e3abc-0819-4937-be25-c683543a2ac8" data-utcoffset="1"></script>
+<!-- analytics:end -->
 </body>
 </html>

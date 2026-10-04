@@ -4,21 +4,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Accessibility Quick Audit: an Agent Skill for developers | Pro Skill Packs</title>
-<meta name="description" content="Give it a page&#x27;s HTML or components. Get accessibility issues ranked by impact, with the WCAG criterion, the code and a fix. Free, MIT-licensed. 1 real-data run on a public demo page built with known accessibility faults (Claude Sonnet).">
+<title>Accessibility Quick Audit: skill + paste-in prompt</title>
+<meta name="description" content="Give it a page&#x27;s HTML or components. Get accessibility issues ranked by impact, with the WCAG criterion, the code and a fix. Free, MIT-licensed.">
 <link rel="canonical" href="https://proskillpacks.github.io/skills/accessibility-quick-audit/">
 <link rel="icon" href="/assets/avatar.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/skills/accessibility-quick-audit/">
-<meta property="og:title" content="Accessibility Quick Audit: an Agent Skill for developers">
-<meta property="og:description" content="Give it a page&#x27;s HTML or components. Get accessibility issues ranked by impact, with the WCAG criterion, the code and a fix. Free, MIT-licensed. 1 real-data run on a public demo page built with known accessibility faults (Claude Sonnet).">
+<meta property="og:title" content="Accessibility Quick Audit: skill + paste-in prompt">
+<meta property="og:description" content="Give it a page&#x27;s HTML or components. Get accessibility issues ranked by impact, with the WCAG criterion, the code and a fix. Free, MIT-licensed.">
 <meta property="og:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
-<meta name="twitter:title" content="Accessibility Quick Audit: an Agent Skill for developers">
-<meta name="twitter:description" content="Give it a page&#x27;s HTML or components. Get accessibility issues ranked by impact, with the WCAG criterion, the code and a fix. Free, MIT-licensed. 1 real-data run on a public demo page built with known accessibility faults (Claude Sonnet).">
+<meta name="twitter:title" content="Accessibility Quick Audit: skill + paste-in prompt">
+<meta name="twitter:description" content="Give it a page&#x27;s HTML or components. Get accessibility issues ranked by impact, with the WCAG criterion, the code and a fix. Free, MIT-licensed.">
 <meta name="twitter:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
@@ -100,6 +100,17 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .card.soon .go { color: var(--moss); text-decoration: underline; }
 .explain ul { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.6rem; max-width: 46rem; }
 .explain li { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.7rem 1rem; }
+.featured { display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin: 2rem 0 0; padding: 1.4rem 1.6rem; border-radius: 18px; background: var(--pine); color: var(--cream); text-decoration: none; }
+.featured h2 { margin: 0.4rem 0 0.3rem; font-size: 1.5rem; color: var(--cream); }
+.featured p { margin: 0; color: var(--mist); max-width: 36rem; }
+.featured .side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
+.featured .price { font-size: 1.6rem; font-weight: 800; color: var(--lime); }
+.featured .go { color: var(--lime); text-decoration: underline; font-weight: 700; }
+.featured.soon { background: #f3f6f1; color: var(--ink); border: 2px dashed var(--sage); }
+.featured.soon h2 { color: var(--ink); }
+.featured.soon p { color: var(--slate); }
+.featured.soon .price { color: var(--pine); }
+.featured.soon .go { color: var(--moss); }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
@@ -177,6 +188,32 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 }
 </style>
 <script src="https://gumroad.com/js/gumroad.js"></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://proskillpacks.github.io/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Developers",
+   "item": "https://proskillpacks.github.io/for/developers/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Accessibility Quick Audit",
+   "item": "https://proskillpacks.github.io/skills/accessibility-quick-audit/"
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="hero">
@@ -205,6 +242,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <section><h2>Works with</h2><div class="prose"><p>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot. Reading a URL needs a web fetch tool, otherwise paste the HTML.</p></div></section>
 <section><h2>Install</h2><div class="prose"><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>accessibility-quick-audit</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/developers/accessibility-quick-audit).</li><li>Put the <code>accessibility-quick-audit</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Audit this page for accessibility, WCAG 2.2 AA: [URL or pasted HTML]&quot;. The skill loads by itself.</li></ol></div></section>
 <section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">Free</span><a class="btn btn-pine" href="https://github.com/proskillpacks/skills/tree/main/skills/developers/accessibility-quick-audit">Get it on GitHub</a></div><p>MIT licence. Use it, change it, share it.</p></div></section>
+<section><h2>Related</h2><ul class="links"><li><a href="/skills/pr-description-and-review-prep/">PR Description and Review Prep</a> (Free): Run it on your branch. Get a PR title, summary, risk notes and test plan from the diff, plus the questions a reviewer will ask. Free, MIT-licensed.</li><li>More for developers: <a href="/for/developers/">Developers</a></li></ul></section>
 </div></main>
 <footer>
   <div class="wrap">
@@ -228,5 +266,8 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>
 </footer>
+<!-- analytics:start -->
+<script src="https://cdn.counter.dev/script.js" data-id="a17e3abc-0819-4937-be25-c683543a2ac8" data-utcoffset="1"></script>
+<!-- analytics:end -->
 </body>
 </html>

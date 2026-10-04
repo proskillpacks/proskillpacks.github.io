@@ -4,21 +4,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Product SEO Fixer: an Agent Skill for Shopify store owners | Pro Skill Packs</title>
-<meta name="description" content="A prioritised fix list with the exact text to paste, for a product, a collection or a product export CSV. Tested on 5 real public Shopify stores across all three modes.">
+<title>Product SEO Fixer: skill + paste-in prompt | Pro Skill Packs</title>
+<meta name="description" content="A prioritised fix list with the exact text to paste, for a product, a collection or a product export CSV. For Shopify store owners.">
 <link rel="canonical" href="https://proskillpacks.github.io/skills/product-seo-fixer/">
 <link rel="icon" href="/assets/avatar.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/skills/product-seo-fixer/">
-<meta property="og:title" content="Product SEO Fixer: an Agent Skill for Shopify store owners">
-<meta property="og:description" content="A prioritised fix list with the exact text to paste, for a product, a collection or a product export CSV. Tested on 5 real public Shopify stores across all three modes.">
+<meta property="og:title" content="Product SEO Fixer: skill + paste-in prompt">
+<meta property="og:description" content="A prioritised fix list with the exact text to paste, for a product, a collection or a product export CSV. For Shopify store owners.">
 <meta property="og:image" content="https://proskillpacks.github.io/assets/cover-product-seo-fixer.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
-<meta name="twitter:title" content="Product SEO Fixer: an Agent Skill for Shopify store owners">
-<meta name="twitter:description" content="A prioritised fix list with the exact text to paste, for a product, a collection or a product export CSV. Tested on 5 real public Shopify stores across all three modes.">
+<meta name="twitter:title" content="Product SEO Fixer: skill + paste-in prompt">
+<meta name="twitter:description" content="A prioritised fix list with the exact text to paste, for a product, a collection or a product export CSV. For Shopify store owners.">
 <meta name="twitter:image" content="https://proskillpacks.github.io/assets/cover-product-seo-fixer.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
@@ -101,6 +101,17 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .card.soon .go { color: var(--moss); text-decoration: underline; }
 .explain ul { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.6rem; max-width: 46rem; }
 .explain li { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.7rem 1rem; }
+.featured { display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin: 2rem 0 0; padding: 1.4rem 1.6rem; border-radius: 18px; background: var(--pine); color: var(--cream); text-decoration: none; }
+.featured h2 { margin: 0.4rem 0 0.3rem; font-size: 1.5rem; color: var(--cream); }
+.featured p { margin: 0; color: var(--mist); max-width: 36rem; }
+.featured .side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
+.featured .price { font-size: 1.6rem; font-weight: 800; color: var(--lime); }
+.featured .go { color: var(--lime); text-decoration: underline; font-weight: 700; }
+.featured.soon { background: #f3f6f1; color: var(--ink); border: 2px dashed var(--sage); }
+.featured.soon h2 { color: var(--ink); }
+.featured.soon p { color: var(--slate); }
+.featured.soon .price { color: var(--pine); }
+.featured.soon .go { color: var(--moss); }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
@@ -178,6 +189,32 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 }
 </style>
 <script src="https://gumroad.com/js/gumroad.js"></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://proskillpacks.github.io/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Shopify store owners",
+   "item": "https://proskillpacks.github.io/for/shopify/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Product SEO Fixer",
+   "item": "https://proskillpacks.github.io/skills/product-seo-fixer/"
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="hero">
@@ -211,6 +248,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <section><h2>Works with</h2><div class="prose"><p>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot. We run our release tests on Claude Sonnet and Opus. Use your assistant&#x27;s strongest model: in our tests, a small, fast model added facts that were not in the source data. The helper scripts need Python 3 (standard library only). Reading a live store needs web access.</p></div></section>
 <section><h2>Install</h2><div class="prose"><ol><li>Unzip the download. It holds the <code>product-seo-fixer</code> folder, ready-made zips for claude.ai in a <code>claude-ai</code> folder, a README and the licence.</li><li>Put the <code>product-seo-fixer</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: Customize, Skills, then the plus button, Create skill, Upload a skill, and upload the zip from the <code>claude-ai</code> folder without unzipping it (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Audit the SEO of https://yourstore.com/products/xyz and give me the fixes&quot;. The skill loads by itself.</li></ol></div></section>
 <section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">$5</span><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/l/product-seo-fixer">Buy this skill</a><a class="btn btn-ghost" href="https://proskillpacks.gumroad.com/l/store-ops-pack">Or get all 6 in the pack, $29</a></div><p>One-time payment. Updates to this version are free. Questions or a refund: reply to your receipt email within 30 days.</p></div></section>
+<section><h2>Related</h2><ul class="links"><li><a href="/skills/agent-ready-quick-check/">Agent-Ready Quick Check</a> (Free): Six checks on how AI shopping agents read your store, compared with 99 stores we audited.</li><li><a href="/skills/agent-ready-store-audit/">Agent-Ready Store Audit</a> ($5): A 0 to 100 score for how AI shopping agents read your store, with the top 7 fixes.</li><li><a href="/skills/shopify-alt-text-writer/">Alt Text Writer</a> (Free): Alt text for every product image, written while looking at the photo, as an import CSV.</li><li>More for Shopify store owners: <a href="/for/shopify/">Shopify store owners</a></li></ul></section>
 </div></main>
 <footer>
   <div class="wrap">
@@ -234,5 +272,8 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <small>Pro Skill Packs. Product names and trademarks belong to their owners. Not affiliated with or endorsed by Shopify Inc.</small>
   </div>
 </footer>
+<!-- analytics:start -->
+<script src="https://cdn.counter.dev/script.js" data-id="a17e3abc-0819-4937-be25-c683543a2ac8" data-utcoffset="1"></script>
+<!-- analytics:end -->
 </body>
 </html>

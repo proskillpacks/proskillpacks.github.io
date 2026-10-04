@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How to use a skill in ChatGPT or any chatbot (paste-in prompt) | Pro Skill Packs</title>
+<title>Use a skill in ChatGPT with a paste-in prompt</title>
 <meta name="description" content="Every skill in our free repo has a prompt.md you paste into a chat. No install, no skills support needed. What it can and cannot do.">
 <link rel="canonical" href="https://proskillpacks.github.io/guides/install-skills-chatgpt-paste-in-prompt/">
 <link rel="icon" href="/assets/avatar.png">
@@ -12,12 +12,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/guides/install-skills-chatgpt-paste-in-prompt/">
-<meta property="og:title" content="How to use a skill in ChatGPT or any chatbot (paste-in prompt)">
+<meta property="og:title" content="Use a skill in ChatGPT with a paste-in prompt">
 <meta property="og:description" content="Every skill in our free repo has a prompt.md you paste into a chat. No install, no skills support needed. What it can and cannot do.">
 <meta property="og:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
-<meta name="twitter:title" content="How to use a skill in ChatGPT or any chatbot (paste-in prompt)">
+<meta name="twitter:title" content="Use a skill in ChatGPT with a paste-in prompt">
 <meta name="twitter:description" content="Every skill in our free repo has a prompt.md you paste into a chat. No install, no skills support needed. What it can and cannot do.">
 <meta name="twitter:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="theme-color" content="#0f3d2e">
@@ -93,6 +93,17 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .card.soon .go { color: var(--moss); text-decoration: underline; }
 .explain ul { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.6rem; max-width: 46rem; }
 .explain li { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.7rem 1rem; }
+.featured { display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin: 2rem 0 0; padding: 1.4rem 1.6rem; border-radius: 18px; background: var(--pine); color: var(--cream); text-decoration: none; }
+.featured h2 { margin: 0.4rem 0 0.3rem; font-size: 1.5rem; color: var(--cream); }
+.featured p { margin: 0; color: var(--mist); max-width: 36rem; }
+.featured .side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
+.featured .price { font-size: 1.6rem; font-weight: 800; color: var(--lime); }
+.featured .go { color: var(--lime); text-decoration: underline; font-weight: 700; }
+.featured.soon { background: #f3f6f1; color: var(--ink); border: 2px dashed var(--sage); }
+.featured.soon h2 { color: var(--ink); }
+.featured.soon p { color: var(--slate); }
+.featured.soon .price { color: var(--pine); }
+.featured.soon .go { color: var(--moss); }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
@@ -169,6 +180,32 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   .hero-filters label:not(.grow) select { min-width: 0; width: 100%; }
 }
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://proskillpacks.github.io/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Guides",
+   "item": "https://proskillpacks.github.io/guides/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "How to use a skill in ChatGPT or any chatbot (paste-in prompt)",
+   "item": "https://proskillpacks.github.io/guides/install-skills-chatgpt-paste-in-prompt/"
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="hero">
@@ -193,7 +230,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <ul><li>Use your assistant&#x27;s strongest model. In our own tests, smaller models were more likely to add facts that were not in the source text.</li><li>Start a new chat for each job so earlier messages do not leak in.</li><li>Keep the answer only if every fact in it traces back to what you pasted.</li></ul>
 <h3>Limits</h3>
 <ul><li>Chatbots can ignore parts of a long prompt. If the answer skips a step, say which step and ask for it again.</li><li>Do not paste anything private into a tool you are not allowed to use it with.</li></ul>
-<p><a href="/guides/how-to-install-agent-skills/">Back to all install guides</a> | <a href="/">Browse all skills in the catalog</a></p></div></section><section class="signup" id="notify">
+<p><a href="/guides/how-to-install-agent-skills/">Back to all install guides</a> | <a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/how-to-install-agent-skills/">How to install Agent Skills in Claude, Codex, Gemini CLI, Cursor and Copilot</a></li><li><a href="/guides/install-skills-claude-ai/">How to install Agent Skills in claude.ai</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Get new free skills by email</h2>
   <p>You get new free skills and new guides as we publish them. One email a week at most, nothing else. Unsubscribe any time.</p>
   <p><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/subscribe" target="_blank" rel="noopener">Subscribe by email</a></p>
@@ -229,5 +266,8 @@ document.querySelectorAll('.prose pre').forEach(function (pre) {
     <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>
 </footer>
+<!-- analytics:start -->
+<script src="https://cdn.counter.dev/script.js" data-id="a17e3abc-0819-4937-be25-c683543a2ac8" data-utcoffset="1"></script>
+<!-- analytics:end -->
 </body>
 </html>

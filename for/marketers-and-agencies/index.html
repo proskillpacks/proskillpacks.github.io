@@ -80,6 +80,17 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .card.soon .go { color: var(--moss); text-decoration: underline; }
 .explain ul { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.6rem; max-width: 46rem; }
 .explain li { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.7rem 1rem; }
+.featured { display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin: 2rem 0 0; padding: 1.4rem 1.6rem; border-radius: 18px; background: var(--pine); color: var(--cream); text-decoration: none; }
+.featured h2 { margin: 0.4rem 0 0.3rem; font-size: 1.5rem; color: var(--cream); }
+.featured p { margin: 0; color: var(--mist); max-width: 36rem; }
+.featured .side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
+.featured .price { font-size: 1.6rem; font-weight: 800; color: var(--lime); }
+.featured .go { color: var(--lime); text-decoration: underline; font-weight: 700; }
+.featured.soon { background: #f3f6f1; color: var(--ink); border: 2px dashed var(--sage); }
+.featured.soon h2 { color: var(--ink); }
+.featured.soon p { color: var(--slate); }
+.featured.soon .price { color: var(--pine); }
+.featured.soon .go { color: var(--moss); }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
@@ -156,6 +167,26 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   .hero-filters label:not(.grow) select { min-width: 0; width: 100%; }
 }
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://proskillpacks.github.io/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Agent Skills for marketers and agencies",
+   "item": "https://proskillpacks.github.io/for/marketers-and-agencies/"
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="hero">
@@ -168,10 +199,10 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <p class="crumbs"><a href="/">All skills</a> / Marketers and agencies</p>
     <h1>Agent Skills for marketers and agencies</h1>
     <p class="lead">Fixes for marketers, SEO freelancers and small agencies who work on client websites: an on-page SEO fix sheet, a local business fix with checked structured data, a landing page copy rewrite and a free AI search readiness check. Give it a page address, or paste the page into ChatGPT, Claude or Gemini, and get fixes built only from facts on the page.</p>
-    <p class="note-light">2 skills: 2 free. 8 arriving this week, not for sale yet.</p>
+    <p class="note-light">2 skills: 2 free. 7 arriving this week, not for sale yet.</p>
   </div>
 </header>
-<main><div class="wrap">
+<main><div class="wrap"><div class="featured soon"><div><span class="tag soontag">Arriving 8 Oct</span><h2>All-Access Bundle</h2><p>37 skills in 11 categories, in one download, and the skills we add later. Not for sale yet; the date is a target.</p></div><div class="side"><span class="price">$49</span><a class="go" href="#notify">Get notified of new skills</a></div></div>
 <section><h2>Free skills</h2><p class="sub">Free and MIT-licensed. Download them together on Gumroad or take them from GitHub.</p><div class="grid"><a class="card" href="/skills/ai-search-readiness-check/" data-id="ai-search-readiness-check" data-role="marketers-and-agencies" data-price="free" data-type="single" data-s="ai search readiness check can chatgpt, perplexity and google read a website? a score out of 100 from 8 checks, the evidence and the fixes in order. marketers and agencies marketers-and-agencies free skill a website url. a 0 to 100 score from 8 checks on whether ai search tools can read the site, the evidence for each check, and a fix list in order. audit and fix">
   <div class="body">
     <div class="tags"><span class="tag free">Free skill</span><span class="tag">Marketers and agencies</span></div>
@@ -189,6 +220,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <div class="foot"><span class="price">Free</span><span class="go">See details</span></div>
   </div>
 </a></div></section>
+<section><h2>Guides</h2><p class="sub">Short how-tos you can do by hand, without any skill.</p><ul class="links"><li><a href="/guides/write-a-google-business-profile-description-and-posts/">How do I write a Google Business Profile description and posts?</a></li><li><a href="/guides/write-a-service-page-for-a-local-business/">How do I write a service page for a local business?</a></li><li><a href="/guides/write-ad-copy-variants-you-can-test/">How to write ad copy variants you can actually test</a></li></ul></section>
 <section><h2>Arriving this week</h2><p class="sub">Not for sale yet. Dates are targets and prices are as planned. Leave your email below and we tell you when they land.</p><div class="grid"><div class="card soon" data-id="landing-page-copy-rewrite" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="landing page copy rewrite a sharper first screen for a landing page, built only from facts on the page, with every unsupported claim flagged. marketers and agencies marketers-and-agencies single skill write copy">
   <div class="body">
     <div class="tags"><span class="tag soontag">Arriving 5 Oct</span><span class="tag">Marketers and agencies</span><span class="tag">Single skill</span></div>
@@ -222,13 +254,6 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <div class="tags"><span class="tag soontag">Arriving 6 Oct</span><span class="tag">Marketers and agencies</span><span class="tag">Pack</span></div>
     <h3>Client Site Fix Kit</h3>
     <p>Five tested fixes for client websites, as prompts and Agent Skills: on-page SEO, local business details and landing page copy, plus a competitor gap brief and an article refresh that are only in the kit.</p>
-    <div class="foot"><span class="price">$49</span><a class="go" href="#notify">Get notified of new skills</a></div>
-  </div>
-</div><div class="card soon" data-id="all-access-bundle" data-role="marketers-and-agencies" data-price="paid" data-type="pack" data-s="all-access bundle 37 tested skills in 11 categories, one download, and the skills we add later. marketers and agencies marketers-and-agencies pack ">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 8 Oct</span><span class="tag">Marketers and agencies</span><span class="tag">Pack</span></div>
-    <h3>All-Access Bundle</h3>
-    <p>37 tested skills in 11 categories, one download, and the skills we add later.</p>
     <div class="foot"><span class="price">$49</span><a class="go" href="#notify">Get notified of new skills</a></div>
   </div>
 </div><div class="card soon" data-id="google-business-profile-kit" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="google business profile kit give it a local business&#x27;s facts. get a profile description within the limit, services, 10 posts, q&amp;a and honest review requests. marketers and agencies marketers-and-agencies single skill write copy local seo">
@@ -275,5 +300,8 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>
 </footer>
+<!-- analytics:start -->
+<script src="https://cdn.counter.dev/script.js" data-id="a17e3abc-0819-4937-be25-c683543a2ac8" data-utcoffset="1"></script>
+<!-- analytics:end -->
 </body>
 </html>

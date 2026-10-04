@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How to clean a messy spreadsheet with an AI assistant | Pro Skill Packs</title>
-<meta name="description" content="A safe routine for cleaning a messy CSV or sheet with an AI assistant: describe the mess, get a rule list, apply it to a copy, and check the totals before you trust it.">
+<title>How to clean a messy spreadsheet with an AI assistant</title>
+<meta name="description" content="A safe routine for cleaning a messy CSV or sheet with an AI assistant: describe the mess, get a rule list, apply it to a copy, and check the totals before">
 <link rel="canonical" href="https://proskillpacks.github.io/guides/clean-messy-spreadsheet-with-ai/">
 <link rel="icon" href="/assets/avatar.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
@@ -13,12 +13,12 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/guides/clean-messy-spreadsheet-with-ai/">
 <meta property="og:title" content="How to clean a messy spreadsheet with an AI assistant">
-<meta property="og:description" content="A safe routine for cleaning a messy CSV or sheet with an AI assistant: describe the mess, get a rule list, apply it to a copy, and check the totals before you trust it.">
+<meta property="og:description" content="A safe routine for cleaning a messy CSV or sheet with an AI assistant: describe the mess, get a rule list, apply it to a copy, and check the totals before">
 <meta property="og:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="How to clean a messy spreadsheet with an AI assistant">
-<meta name="twitter:description" content="A safe routine for cleaning a messy CSV or sheet with an AI assistant: describe the mess, get a rule list, apply it to a copy, and check the totals before you trust it.">
+<meta name="twitter:description" content="A safe routine for cleaning a messy CSV or sheet with an AI assistant: describe the mess, get a rule list, apply it to a copy, and check the totals before">
 <meta name="twitter:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
@@ -93,6 +93,17 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .card.soon .go { color: var(--moss); text-decoration: underline; }
 .explain ul { list-style: none; margin: 1.5rem 0 0; padding: 0; display: grid; gap: 0.6rem; max-width: 46rem; }
 .explain li { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.7rem 1rem; }
+.featured { display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; flex-wrap: wrap; margin: 2rem 0 0; padding: 1.4rem 1.6rem; border-radius: 18px; background: var(--pine); color: var(--cream); text-decoration: none; }
+.featured h2 { margin: 0.4rem 0 0.3rem; font-size: 1.5rem; color: var(--cream); }
+.featured p { margin: 0; color: var(--mist); max-width: 36rem; }
+.featured .side { display: flex; flex-direction: column; align-items: flex-end; gap: 0.3rem; }
+.featured .price { font-size: 1.6rem; font-weight: 800; color: var(--lime); }
+.featured .go { color: var(--lime); text-decoration: underline; font-weight: 700; }
+.featured.soon { background: #f3f6f1; color: var(--ink); border: 2px dashed var(--sage); }
+.featured.soon h2 { color: var(--ink); }
+.featured.soon p { color: var(--slate); }
+.featured.soon .price { color: var(--pine); }
+.featured.soon .go { color: var(--moss); }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
@@ -169,6 +180,32 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   .hero-filters label:not(.grow) select { min-width: 0; width: 100%; }
 }
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://proskillpacks.github.io/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Guides",
+   "item": "https://proskillpacks.github.io/guides/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "How to clean a messy spreadsheet with an AI assistant",
+   "item": "https://proskillpacks.github.io/guides/clean-messy-spreadsheet-with-ai/"
+  }
+ ]
+}
+</script>
 </head>
 <body>
 <header class="hero">
@@ -217,7 +254,7 @@ DATA:
 <ul><li>Count the rows before and after. The difference should equal the duplicates you agreed to remove.</li><li>Compare totals for any number column, such as sum of revenue, before and after. Changes should be explainable from the log.</li><li>Sort each column and look at the first and last values.</li><li>Spot-check 10 rows from the change log against the original.</li><li>Open the &quot;needs review&quot; list and fix those by hand.</li></ul>
 <h3>Limits</h3>
 <ul><li>An assistant can miscount or drop rows in long pastes. That is why you check the counts and totals.</li><li>It does not know your business. It cannot tell which duplicate is the right one or whether a strange value is an error.</li><li>Dates like 03/04/2025 are ambiguous. Tell it whether you use day first or month first.</li><li>A sample may not show every kind of mess. Run the rules on the full sheet and look again.</li><li>For anything financial or legal, keep the original and the change log.</li></ul>
-<p><a href="/">Browse all skills in the catalog</a></p></div></section><section class="signup" id="notify">
+<p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/clean-a-messy-csv-export/">How to clean a messy CSV export without losing data</a></li><li><a href="/guides/summarise-survey-results-without-overclaiming/">How do I summarise survey results without overclaiming?</a></li><li>All skills for people who work in spreadsheets: <a href="/for/data-and-spreadsheets/">Data and spreadsheets</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
   <h2>Get new free skills by email</h2>
   <p>You get new free skills and new guides as we publish them. One email a week at most, nothing else. Unsubscribe any time.</p>
   <p><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/subscribe" target="_blank" rel="noopener">Subscribe by email</a></p>
@@ -253,5 +290,8 @@ document.querySelectorAll('.prose pre').forEach(function (pre) {
     <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>
 </footer>
+<!-- analytics:start -->
+<script src="https://cdn.counter.dev/script.js" data-id="a17e3abc-0819-4937-be25-c683543a2ac8" data-utcoffset="1"></script>
+<!-- analytics:end -->
 </body>
 </html>
