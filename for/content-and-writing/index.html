@@ -103,9 +103,19 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .demorow { display: grid; gap: 1.5rem 2.5rem; grid-template-columns: minmax(0, 40rem) minmax(0, 1fr); align-items: center; margin: 0 0 2.75rem; }
 .demorow h2 { margin-top: 0; }
 @media (max-width: 860px) { .demorow { grid-template-columns: 1fr; } }
+.chead { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem; padding: 0.7rem 1.25rem; background: linear-gradient(135deg, hsl(var(--h) 38% 20%), hsl(var(--h) 34% 28%)); color: var(--cream); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.chead .ck { padding: 0.18rem 0.6rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); }
+.chead .ck.free { background: var(--lime); color: var(--pine); border-color: var(--lime); }
+.chead .ck.pack { background: var(--cream); color: var(--pine); border-color: var(--cream); }
+.chead .ck.soonk { border-style: dashed; }
+.chead .cc { margin-left: auto; opacity: 0.85; }
 .card > img.thumb { aspect-ratio: 16 / 9; border-bottom: 1px solid var(--rule); }
 .demo img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 14px; }
-.demobtn { position: absolute; left: 1rem; bottom: 1rem; font: inherit; font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 999px; border: 0; background: var(--lime); color: var(--pine); cursor: pointer; }
+.demo::before { content: ""; position: absolute; inset: 0; border-radius: 14px; background: rgba(8, 24, 18, 0.38); pointer-events: none; transition: opacity 0.2s; }
+.demo.playing::before { opacity: 0; }
+.demobtn { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 4.5rem; height: 4.5rem; padding: 0; border-radius: 50%; border: 0; background: var(--lime); color: var(--pine); cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,0.35); font-size: 0; }
+.demobtn::after { content: ""; position: absolute; left: 53%; top: 50%; transform: translate(-50%, -50%); border-style: solid; border-width: 0.8rem 0 0.8rem 1.35rem; border-color: transparent transparent transparent var(--pine); }
+.demobtn:hover, .demobtn:focus-visible { transform: translate(-50%, -50%) scale(1.07); }
 .starthere { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 1.75rem 0 1.1rem; align-items: start; }
 .starthere + .sub { margin: 0 0 2.5rem; font-size: 0.98rem; }
 .starthere > div { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.1rem 1.3rem; }
@@ -255,8 +265,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <main><div class="wrap"><div class="featured soon" id="featured"><div><span class="tag soontag">Arriving 8 Oct</span><h2>All-Access Bundle</h2><p>47 skills in 11 categories, in one download, and the skills we add later. Not for sale yet; the date is a target.</p></div><div class="side"><span class="price">$49</span><a class="go" href="#notify">Follow for release</a></div></div>
 
 <section><h2>Free skills</h2><p class="sub">Free and MIT-licensed. Download them together on Gumroad or take them from GitHub.</p><div class="grid"><a class="card" href="/skills/fact-claim-checker/" data-id="fact-claim-checker" data-role="content-and-writing" data-price="free" data-type="single" data-s="fact-claim checker paste a draft before you publish. get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up. content and writing content-and-writing free skill paste a draft before you publish. get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up. check facts">
-  <div class="body">
-    <div class="tags"><span class="tag free">Free skill</span><span class="tag">Writing</span></div>
+  <div class="chead" style="--h:160"><span class="ck free">Free skill</span><span class="cc">Writing</span></div><div class="body">
     <h3>Fact-Claim Checker</h3>
     <p>Paste a draft before you publish. Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.</p>
     <p class="tested">1 real-data run on a public launch post (Claude Sonnet).</p>
@@ -266,36 +275,31 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <section><h2>Free prompts</h2><p class="sub">Paste into ChatGPT, Claude, Gemini or any chatbot. No install.</p><ul class="links"><li><a href="/prompts/fact-claim-checker/">Fact-check a draft: claim checker prompt for any chatbot</a></li></ul></section>
 <section><h2>Guides</h2><p class="sub">Short how-tos you can do by hand, without any skill.</p><ul class="links"><li><a href="/guides/fact-check-claims-in-an-ai-written-draft/">How to fact-check the claims in an AI-written draft</a></li></ul></section>
 <section><h2>Arriving this week</h2><p class="sub">Not for sale yet. Dates are targets and prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon" data-id="voice-matched-draft-editor" data-role="content-and-writing" data-price="paid" data-type="single" data-s="voice-matched draft editor give it two or three things you wrote and a draft. it edits the draft to sound like you, keeps every fact, and flags claims it cannot support. content and writing content-and-writing single skill edit writing">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 5 Oct</span><span class="tag">Writing</span><span class="tag">Single skill</span></div>
+  <div class="chead" style="--h:160"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 5 Oct</span><span class="cc">Writing</span></div><div class="body">
     <h3>Voice-Matched Draft Editor</h3>
     <p>Give it two or three things you wrote and a draft. It edits the draft to sound like you, keeps every fact, and flags claims it cannot support.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="long-post-to-thread-and-summary" data-role="content-and-writing" data-price="paid" data-type="single" data-s="long post to thread and summary paste a long post. you get a summary, takeaways, a thread with every length counted, a network post and exact pull quotes, nothing added. content and writing content-and-writing single skill write copy">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 10 Oct</span><span class="tag">Writing</span><span class="tag">Single skill</span></div>
+  <div class="chead" style="--h:160"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 10 Oct</span><span class="cc">Writing</span></div><div class="body">
     <h3>Long Post to Thread and Summary</h3>
     <p>Paste a long post. You get a summary, takeaways, a thread with every length counted, a network post and exact pull quotes, nothing added.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="newsletter-issue-from-notes" data-role="content-and-writing" data-price="paid" data-type="single" data-s="newsletter issue from notes paste your notes and links. you get one newsletter issue with subject lines, sections and a closing, every fact traced to your notes. content and writing content-and-writing single skill write copy">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 10 Oct</span><span class="tag">Writing</span><span class="tag">Single skill</span></div>
+  <div class="chead" style="--h:160"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 10 Oct</span><span class="cc">Writing</span></div><div class="body">
     <h3>Newsletter Issue from Notes</h3>
     <p>Paste your notes and links. You get one newsletter issue with subject lines, sections and a closing, every fact traced to your notes.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="content-and-writing-pack" data-role="content-and-writing" data-price="paid" data-type="pack" data-s="content and writing pack 4 tested skills for writers, creators and team leads, one download. 36 usd if bought one by one. content and writing content-and-writing pack ">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 11 Oct</span><span class="tag">Writing</span><span class="tag">Pack</span></div>
+  <div class="chead" style="--h:160"><span class="ck pack">Pack</span><span class="ck soonk">Arriving 11 Oct</span><span class="cc">Writing</span></div><div class="body">
     <h3>Content and Writing Pack</h3>
     <p>4 tested skills for writers, creators and team leads, one download. 36 USD if bought one by one.</p>
     <div class="foot"><span class="price">$29</span><a class="go" href="/packs/content-and-writing-pack/">See what is inside</a> <a class="go" href="#notify">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="meeting-notes-to-decisions-and-actions" data-role="content-and-writing" data-price="paid" data-type="single" data-s="meeting notes to decisions and actions paste meeting notes or minutes. you get the decisions, an action table with owner and due date, and the open questions, with a quote from the notes behind every line. content and writing content-and-writing single skill write copy">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 11 Oct</span><span class="tag">Writing</span><span class="tag">Single skill</span></div>
+  <div class="chead" style="--h:160"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 11 Oct</span><span class="cc">Writing</span></div><div class="body">
     <h3>Meeting Notes to Decisions and Actions</h3>
     <p>Paste meeting notes or minutes. You get the decisions, an action table with owner and due date, and the open questions, with a quote from the notes behind every line.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify">Follow for release</a></div>
@@ -321,6 +325,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
         <a href="/guides/">Guides</a>
         <a href="/new/">What's new</a>
         <a href="/changelog/">Changelog</a>
+        <a href="/affiliates/">Affiliates</a>
         <a href="/study/">Study</a>
         <a href="/helpers/">Helpers</a>
         <a href="/about/">About</a>

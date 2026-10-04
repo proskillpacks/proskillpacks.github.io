@@ -103,9 +103,19 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .demorow { display: grid; gap: 1.5rem 2.5rem; grid-template-columns: minmax(0, 40rem) minmax(0, 1fr); align-items: center; margin: 0 0 2.75rem; }
 .demorow h2 { margin-top: 0; }
 @media (max-width: 860px) { .demorow { grid-template-columns: 1fr; } }
+.chead { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem; padding: 0.7rem 1.25rem; background: linear-gradient(135deg, hsl(var(--h) 38% 20%), hsl(var(--h) 34% 28%)); color: var(--cream); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.chead .ck { padding: 0.18rem 0.6rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); }
+.chead .ck.free { background: var(--lime); color: var(--pine); border-color: var(--lime); }
+.chead .ck.pack { background: var(--cream); color: var(--pine); border-color: var(--cream); }
+.chead .ck.soonk { border-style: dashed; }
+.chead .cc { margin-left: auto; opacity: 0.85; }
 .card > img.thumb { aspect-ratio: 16 / 9; border-bottom: 1px solid var(--rule); }
 .demo img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 14px; }
-.demobtn { position: absolute; left: 1rem; bottom: 1rem; font: inherit; font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 999px; border: 0; background: var(--lime); color: var(--pine); cursor: pointer; }
+.demo::before { content: ""; position: absolute; inset: 0; border-radius: 14px; background: rgba(8, 24, 18, 0.38); pointer-events: none; transition: opacity 0.2s; }
+.demo.playing::before { opacity: 0; }
+.demobtn { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 4.5rem; height: 4.5rem; padding: 0; border-radius: 50%; border: 0; background: var(--lime); color: var(--pine); cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,0.35); font-size: 0; }
+.demobtn::after { content: ""; position: absolute; left: 53%; top: 50%; transform: translate(-50%, -50%); border-style: solid; border-width: 0.8rem 0 0.8rem 1.35rem; border-color: transparent transparent transparent var(--pine); }
+.demobtn:hover, .demobtn:focus-visible { transform: translate(-50%, -50%) scale(1.07); }
 .starthere { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 1.75rem 0 1.1rem; align-items: start; }
 .starthere + .sub { margin: 0 0 2.5rem; font-size: 0.98rem; }
 .starthere > div { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.1rem 1.3rem; }
@@ -255,8 +265,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <main><div class="wrap"><div class="featured soon" id="featured"><div><span class="tag soontag">Arriving 8 Oct</span><h2>All-Access Bundle</h2><p>47 skills in 11 categories, in one download, and the skills we add later. Not for sale yet; the date is a target.</p></div><div class="side"><span class="price">$49</span><a class="go" href="#notify">Follow for release</a></div></div>
 
 <section><h2>Free skills</h2><p class="sub">Free and MIT-licensed. Download them together on Gumroad or take them from GitHub.</p><div class="grid"><a class="card" href="/skills/late-payment-chaser-uk/" data-id="late-payment-chaser-uk" data-role="freelancers" data-price="free" data-type="single" data-s="late payment chaser (uk) one unpaid invoice in. the statutory interest and fixed recovery sum worked out with a script, and three reminder emails out. uk business debts only. freelancers and consultants freelancers free skill one unpaid business invoice (amount, invoice date, and the due date if you agreed one). what you can claim under uk late-payment law, with the working and official sources, and three reminder emails to send. money and disputes write copy">
-  <div class="body">
-    <div class="tags"><span class="tag free">Free skill</span><span class="tag">Freelancers</span></div>
+  <div class="chead" style="--h:224"><span class="ck free">Free skill</span><span class="cc">Freelancers</span></div><div class="body">
     <h3>Late Payment Chaser (UK)</h3>
     <p>One unpaid invoice in. The statutory interest and fixed recovery sum worked out with a script, and three reminder emails out. UK business debts only.</p>
     <p class="tested">3 real tests built on the facts of published UK court judgments.</p>
@@ -266,36 +275,31 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <section><h2>Free prompts</h2><p class="sub">Paste into ChatGPT, Claude, Gemini or any chatbot. No install.</p><ul class="links"><li><a href="/prompts/late-payment-chaser-uk/">Late payment interest and chaser email prompt (UK)</a></li></ul></section>
 <section><h2>Guides</h2><p class="sub">Short how-tos you can do by hand, without any skill.</p><ul class="links"><li><a href="/guides/cold-email-from-a-prospects-website/">How to write a cold email from a prospect&#x27;s website</a></li><li><a href="/guides/reply-to-scope-creep-without-burning-the-relationship/">How to reply to scope creep without burning the relationship</a></li></ul></section>
 <section><h2>Arriving this week</h2><p class="sub">Not for sale yet. Dates are targets and prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon" data-id="brief-to-proposal" data-role="freelancers" data-price="paid" data-type="single" data-s="brief to proposal paste a client brief or tender notice and your profile. get a requirement-by-requirement table, a proposal that answers each one, and the gaps to fill. freelancers and consultants freelancers single skill win work">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 7 Oct</span><span class="tag">Freelancers</span><span class="tag">Single skill</span></div>
+  <div class="chead" style="--h:224"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 7 Oct</span><span class="cc">Freelancers</span></div><div class="body">
     <h3>Brief to Proposal</h3>
     <p>Paste a client brief or tender notice and your profile. Get a requirement-by-requirement table, a proposal that answers each one, and the gaps to fill.</p>
     <div class="foot"><span class="price">$5</span><a class="go" href="#notify">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="client-winning-pack" data-role="freelancers" data-price="paid" data-type="pack" data-s="client-winning pack four templates for answering a client brief: brief to proposal, a compliance check, a scope of work and a discovery call brief. freelancers and consultants freelancers pack ">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 7 Oct</span><span class="tag">Freelancers</span><span class="tag">Pack</span></div>
+  <div class="chead" style="--h:224"><span class="ck pack">Pack</span><span class="ck soonk">Arriving 7 Oct</span><span class="cc">Freelancers</span></div><div class="body">
     <h3>Client-Winning Pack</h3>
     <p>Four templates for answering a client brief: brief to proposal, a compliance check, a scope of work and a discovery call brief.</p>
     <div class="foot"><span class="price">$19</span><a class="go" href="/packs/client-winning-pack/">See what is inside</a> <a class="go" href="#notify">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="discovery-call-brief" data-role="freelancers" data-price="paid" data-type="single" data-s="discovery call brief give it a prospect&#x27;s website before a first call. get a one-page brief from their own pages, every fact quoted and linked, plus questions to ask. freelancers and consultants freelancers single skill win work">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 7 Oct</span><span class="tag">Freelancers</span><span class="tag">Single skill</span></div>
+  <div class="chead" style="--h:224"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 7 Oct</span><span class="cc">Freelancers</span></div><div class="body">
     <h3>Discovery Call Brief</h3>
     <p>Give it a prospect&#x27;s website before a first call. Get a one-page brief from their own pages, every fact quoted and linked, plus questions to ask.</p>
     <div class="foot"><span class="price">$5</span><a class="go" href="#notify">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="proposal-compliance-check" data-role="freelancers" data-price="paid" data-type="single" data-s="proposal compliance check paste the brief and your draft. get a 0 to 100 coverage score, each requirement marked met, partly met, missing or breached, and a ranked fix list. freelancers and consultants freelancers single skill win work">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 7 Oct</span><span class="tag">Freelancers</span><span class="tag">Single skill</span></div>
+  <div class="chead" style="--h:224"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 7 Oct</span><span class="cc">Freelancers</span></div><div class="body">
     <h3>Proposal Compliance Check</h3>
     <p>Paste the brief and your draft. Get a 0 to 100 coverage score, each requirement marked met, partly met, missing or breached, and a ranked fix list.</p>
     <div class="foot"><span class="price">$5</span><a class="go" href="#notify">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="scope-of-work-builder" data-role="freelancers" data-price="paid" data-type="single" data-s="scope of work builder paste the brief for a job you have won. get a scope of work with numbered deliverables, exclusions, client inputs, milestones and a payment schedule. freelancers and consultants freelancers single skill win work">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 7 Oct</span><span class="tag">Freelancers</span><span class="tag">Single skill</span></div>
+  <div class="chead" style="--h:224"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 7 Oct</span><span class="cc">Freelancers</span></div><div class="body">
     <h3>Scope of Work Builder</h3>
     <p>Paste the brief for a job you have won. Get a scope of work with numbered deliverables, exclusions, client inputs, milestones and a payment schedule.</p>
     <div class="foot"><span class="price">$5</span><a class="go" href="#notify">Follow for release</a></div>
@@ -321,6 +325,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
         <a href="/guides/">Guides</a>
         <a href="/new/">What's new</a>
         <a href="/changelog/">Changelog</a>
+        <a href="/affiliates/">Affiliates</a>
         <a href="/study/">Study</a>
         <a href="/helpers/">Helpers</a>
         <a href="/about/">About</a>

@@ -103,9 +103,19 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .demorow { display: grid; gap: 1.5rem 2.5rem; grid-template-columns: minmax(0, 40rem) minmax(0, 1fr); align-items: center; margin: 0 0 2.75rem; }
 .demorow h2 { margin-top: 0; }
 @media (max-width: 860px) { .demorow { grid-template-columns: 1fr; } }
+.chead { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem; padding: 0.7rem 1.25rem; background: linear-gradient(135deg, hsl(var(--h) 38% 20%), hsl(var(--h) 34% 28%)); color: var(--cream); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.chead .ck { padding: 0.18rem 0.6rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); }
+.chead .ck.free { background: var(--lime); color: var(--pine); border-color: var(--lime); }
+.chead .ck.pack { background: var(--cream); color: var(--pine); border-color: var(--cream); }
+.chead .ck.soonk { border-style: dashed; }
+.chead .cc { margin-left: auto; opacity: 0.85; }
 .card > img.thumb { aspect-ratio: 16 / 9; border-bottom: 1px solid var(--rule); }
 .demo img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 14px; }
-.demobtn { position: absolute; left: 1rem; bottom: 1rem; font: inherit; font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 999px; border: 0; background: var(--lime); color: var(--pine); cursor: pointer; }
+.demo::before { content: ""; position: absolute; inset: 0; border-radius: 14px; background: rgba(8, 24, 18, 0.38); pointer-events: none; transition: opacity 0.2s; }
+.demo.playing::before { opacity: 0; }
+.demobtn { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 4.5rem; height: 4.5rem; padding: 0; border-radius: 50%; border: 0; background: var(--lime); color: var(--pine); cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,0.35); font-size: 0; }
+.demobtn::after { content: ""; position: absolute; left: 53%; top: 50%; transform: translate(-50%, -50%); border-style: solid; border-width: 0.8rem 0 0.8rem 1.35rem; border-color: transparent transparent transparent var(--pine); }
+.demobtn:hover, .demobtn:focus-visible { transform: translate(-50%, -50%) scale(1.07); }
 .starthere { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 1.75rem 0 1.1rem; align-items: start; }
 .starthere + .sub { margin: 0 0 2.5rem; font-size: 0.98rem; }
 .starthere > div { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.1rem 1.3rem; }
@@ -254,8 +264,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 </header>
 <main><div class="wrap"><div class="featured soon" id="featured"><div><span class="tag soontag">Arriving 8 Oct</span><h2>All-Access Bundle</h2><p>47 skills in 11 categories, in one download, and the skills we add later. Not for sale yet; the date is a target.</p></div><div class="side"><span class="price">$49</span><a class="go" href="#notify">Follow for release</a></div></div>
 <section><h2>Start free</h2><p class="sub">The quickest way to see what a skill does. Free, MIT licence.</p><div class="grid"><a class="card" href="/skills/cold-email-checker/" data-id="cold-email-checker" data-role="sales-and-outreach" data-price="free" data-type="single" data-s="cold email checker give it a cold email draft and the prospect&#x27;s page text. get a verdict, a claims table and a tightened version. free, mit-licensed. sales and outreach sales-and-outreach free skill a cold email draft and the text of the prospect&#x27;s page. it tests every claim about the prospect against that text, flags claims about you that need proof, checks the subject line, the single ask and the length, and lists the commercial email basics from the us ftc&#x27;s can-spam guide that the draft is missing. you get a verdict, a claims table, quoted issues and a tightened version with unsupported claims removed. write copy check">
-  <div class="body">
-    <div class="tags"><span class="tag free">Free skill</span><span class="tag">Sales and outreach</span></div>
+  <div class="chead" style="--h:123"><span class="ck free">Free skill</span><span class="cc">Sales and outreach</span></div><div class="body">
     <h3>Cold Email Checker</h3>
     <p>Give it a cold email draft and the prospect&#x27;s page text. Get a verdict, a claims table and a tightened version. Free, MIT-licensed.</p>
     <p class="tested">1 run on a draft we wrote with common flaws and text from a real public homepage (Claude Sonnet).</p>
@@ -266,43 +275,37 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <section><h2>Free prompts</h2><p class="sub">Paste into ChatGPT, Claude, Gemini or any chatbot. No install.</p><ul class="links"><li><a href="/prompts/cold-email-checker/">Cold email checker prompt for ChatGPT, Claude or Gemini</a></li></ul></section>
 <section><h2>Guides</h2><p class="sub">Short how-tos you can do by hand, without any skill.</p><ul class="links"><li><a href="/guides/follow-up-with-a-client-who-has-gone-quiet/">How do I follow up with a client who has gone quiet?</a></li><li><a href="/guides/write-a-case-study-from-rough-project-notes/">How do I write a case study when I only have rough project notes?</a></li><li><a href="/guides/write-a-quote-for-a-job-from-your-rate-card/">How do I write a quote for a job from my rate card?</a></li></ul></section>
 <section><h2>Arriving this week</h2><p class="sub">Not for sale yet. Dates are targets and prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon" data-id="cold-email-from-a-website" data-role="sales-and-outreach" data-price="paid" data-type="single" data-s="cold email from a website give it a prospect&#x27;s url and what you sell. get a 3-email sequence built on what is actually on their site, with every observation sourced. sales and outreach sales-and-outreach single skill write copy reach out">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 5 Oct</span><span class="tag">Sales and outreach</span><span class="tag">Single skill</span></div>
+  <div class="chead" style="--h:123"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 5 Oct</span><span class="cc">Sales and outreach</span></div><div class="body">
     <h3>Cold Email from a Website</h3>
     <p>Give it a prospect&#x27;s URL and what you sell. Get a 3-email sequence built on what is actually on their site, with every observation sourced.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="scope-creep-reply" data-role="sales-and-outreach" data-price="paid" data-type="single" data-s="scope creep reply paste your agreed scope and the client&#x27;s extra request. get each ask marked in, out or unclear with the scope quoted, a friendly reply and a change-order paragraph. sales and outreach sales-and-outreach single skill write copy client work">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 6 Oct</span><span class="tag">Sales and outreach</span><span class="tag">Single skill</span></div>
+  <div class="chead" style="--h:123"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 6 Oct</span><span class="cc">Sales and outreach</span></div><div class="body">
     <h3>Scope Creep Reply</h3>
     <p>Paste your agreed scope and the client&#x27;s extra request. Get each ask marked in, out or unclear with the scope quoted, a friendly reply and a change-order paragraph.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="case-study-from-project-notes" data-role="sales-and-outreach" data-price="paid" data-type="single" data-s="case study from project notes paste rough project notes and any real numbers. get a one-page case study that uses only those facts, with a fact sheet and an approvals list. sales and outreach sales-and-outreach single skill write copy win work">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 8 Oct</span><span class="tag">Sales and outreach</span><span class="tag">Single skill</span></div>
+  <div class="chead" style="--h:123"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 8 Oct</span><span class="cc">Sales and outreach</span></div><div class="body">
     <h3>Case Study from Project Notes</h3>
     <p>Paste rough project notes and any real numbers. Get a one-page case study that uses only those facts, with a fact sheet and an approvals list.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="follow-up-ladder" data-role="sales-and-outreach" data-price="paid" data-type="single" data-s="follow-up ladder paste a stalled lead&#x27;s history. get four follow-ups with falling pressure, subject lines and send gaps, using only facts from the history. sales and outreach sales-and-outreach single skill write copy client work">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 8 Oct</span><span class="tag">Sales and outreach</span><span class="tag">Single skill</span></div>
+  <div class="chead" style="--h:123"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 8 Oct</span><span class="cc">Sales and outreach</span></div><div class="body">
     <h3>Follow-Up Ladder</h3>
     <p>Paste a stalled lead&#x27;s history. Get four follow-ups with falling pressure, subject lines and send gaps, using only facts from the history.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="quote-and-estimate-builder" data-role="sales-and-outreach" data-price="paid" data-type="single" data-s="quote and estimate builder give it a job and your rate card. get an itemised quote with exact totals from a script; anything unpriced is marked price needed. sales and outreach sales-and-outreach single skill write quotes client work">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 8 Oct</span><span class="tag">Sales and outreach</span><span class="tag">Single skill</span></div>
+  <div class="chead" style="--h:123"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 8 Oct</span><span class="cc">Sales and outreach</span></div><div class="body">
     <h3>Quote and Estimate Builder</h3>
     <p>Give it a job and your rate card. Get an itemised quote with exact totals from a script; anything unpriced is marked PRICE NEEDED.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="sales-and-client-work-pack" data-role="sales-and-outreach" data-price="paid" data-type="pack" data-s="sales and client work pack 5 tested skills for freelancers, consultants and small agencies, one download. 45 usd if bought one by one. sales and outreach sales-and-outreach pack ">
-  <div class="body">
-    <div class="tags"><span class="tag soontag">Arriving 9 Oct</span><span class="tag">Sales and outreach</span><span class="tag">Pack</span></div>
+  <div class="chead" style="--h:123"><span class="ck pack">Pack</span><span class="ck soonk">Arriving 9 Oct</span><span class="cc">Sales and outreach</span></div><div class="body">
     <h3>Sales and Client Work Pack</h3>
     <p>5 tested skills for freelancers, consultants and small agencies, one download. 45 USD if bought one by one.</p>
     <div class="foot"><span class="price">$29</span><a class="go" href="/packs/sales-and-client-work-pack/">See what is inside</a> <a class="go" href="#notify">Follow for release</a></div>
@@ -328,6 +331,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
         <a href="/guides/">Guides</a>
         <a href="/new/">What's new</a>
         <a href="/changelog/">Changelog</a>
+        <a href="/affiliates/">Affiliates</a>
         <a href="/study/">Study</a>
         <a href="/helpers/">Helpers</a>
         <a href="/about/">About</a>

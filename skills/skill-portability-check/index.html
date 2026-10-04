@@ -123,9 +123,19 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .demorow { display: grid; gap: 1.5rem 2.5rem; grid-template-columns: minmax(0, 40rem) minmax(0, 1fr); align-items: center; margin: 0 0 2.75rem; }
 .demorow h2 { margin-top: 0; }
 @media (max-width: 860px) { .demorow { grid-template-columns: 1fr; } }
+.chead { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem; padding: 0.7rem 1.25rem; background: linear-gradient(135deg, hsl(var(--h) 38% 20%), hsl(var(--h) 34% 28%)); color: var(--cream); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.chead .ck { padding: 0.18rem 0.6rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); }
+.chead .ck.free { background: var(--lime); color: var(--pine); border-color: var(--lime); }
+.chead .ck.pack { background: var(--cream); color: var(--pine); border-color: var(--cream); }
+.chead .ck.soonk { border-style: dashed; }
+.chead .cc { margin-left: auto; opacity: 0.85; }
 .card > img.thumb { aspect-ratio: 16 / 9; border-bottom: 1px solid var(--rule); }
 .demo img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 14px; }
-.demobtn { position: absolute; left: 1rem; bottom: 1rem; font: inherit; font-weight: 700; padding: 0.55rem 1.1rem; border-radius: 999px; border: 0; background: var(--lime); color: var(--pine); cursor: pointer; }
+.demo::before { content: ""; position: absolute; inset: 0; border-radius: 14px; background: rgba(8, 24, 18, 0.38); pointer-events: none; transition: opacity 0.2s; }
+.demo.playing::before { opacity: 0; }
+.demobtn { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 4.5rem; height: 4.5rem; padding: 0; border-radius: 50%; border: 0; background: var(--lime); color: var(--pine); cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,0.35); font-size: 0; }
+.demobtn::after { content: ""; position: absolute; left: 53%; top: 50%; transform: translate(-50%, -50%); border-style: solid; border-width: 0.8rem 0 0.8rem 1.35rem; border-color: transparent transparent transparent var(--pine); }
+.demobtn:hover, .demobtn:focus-visible { transform: translate(-50%, -50%) scale(1.07); }
 .starthere { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); margin: 1.75rem 0 1.1rem; align-items: start; }
 .starthere + .sub { margin: 0 0 2.5rem; font-size: 0.98rem; }
 .starthere > div { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.1rem 1.3rem; }
@@ -284,7 +294,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   <div class="box"><b>What you give it</b><p>Point it at a skill folder or a repository of skills.</p></div>
   <div class="box"><b>What you get</b><p>A per-skill table of errors and warnings, and the exact fixes.</p></div>
 </div></section>
-<section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/skill-portability-check-last.png" data-gif="/assets/demos/skill-portability-check.gif" alt="Animated demo of Skill Portability Check on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Skill Portability Check">Play demo</button></figure></section>
+<section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/skill-portability-check-last.png" data-gif="/assets/demos/skill-portability-check.gif" alt="Animated demo of Skill Portability Check on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Skill Portability Check">Play</button></figure></section>
 <section><h2>What it does</h2><div class="prose"><p>A free checker for Agent Skills. Point it at a skill folder or a whole repository of skills and it reports, per SKILL.md, the things that make a skill fail to load or stop it working outside one assistant: frontmatter that strict YAML parsers reject, keys other than name and description, vendor tool names and paths, missing fallbacks, long bodies and broken links. One Python file, standard library only, with a non-zero exit code for CI.</p></div></section>
 <section><h2>Before and after</h2><p class="sub">Real public data, anonymised. Taken from the skill&#x27;s README.</p><div class="prose"><p>Our own public skills repository on 2026-10-04: it had grown to 15 skills, and a new one was skipped by <code>npx skills add proskillpacks/skills --list</code> with a YAML error. The same rule, run over our whole tree of 57 skills, found 7 descriptions with an unquoted colon (now fixed), and the checker&#x27;s other warnings led us to add fallback sentences and remove a vendor tool name.</p>
 <blockquote><p><strong>After (skill output, excerpt):</strong><br>$ python3 scripts/skill_check.py proskillpacks-skills/skills --quiet<br>skill                           errors  warnings  lines  scripts<br>accessibility-quick-audit            0         0     39  -<br>changelog-from-commits               0         0     39  -<br>readme-first-run-check               0         0     39  -<br>agent-ready-quick-check              0         0     64  Python<br>late-payment-chaser-uk               0         0    109  Python<br>...<br>15 skill(s): 0 error(s), 0 warning(s)</p>
@@ -299,7 +309,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <script>
 document.querySelectorAll('.demo').forEach(function (f) {
   var b = f.querySelector('.demobtn'), i = f.querySelector('img');
-  b.addEventListener('click', function () { i.src = i.dataset.gif; b.hidden = true; });
+  b.addEventListener('click', function () { i.src = i.dataset.gif; b.hidden = true; f.classList.add('playing'); });
 });
 </script>
 <footer>
@@ -312,6 +322,7 @@ document.querySelectorAll('.demo').forEach(function (f) {
         <a href="/guides/">Guides</a>
         <a href="/new/">What's new</a>
         <a href="/changelog/">Changelog</a>
+        <a href="/affiliates/">Affiliates</a>
         <a href="/study/">Study</a>
         <a href="/helpers/">Helpers</a>
         <a href="/about/">About</a>
