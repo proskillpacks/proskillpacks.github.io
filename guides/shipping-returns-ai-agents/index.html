@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-GB">
+<html data-from="guide" lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -233,8 +233,8 @@ In the Shopify admin, go to Settings, then Policies. Check that the shipping and
 <p>The full tables and method are in the <a href="../../study/">study report</a>.</p>
 <h2>A free check for your store</h2>
 <p>Our free agent-ready quick check runs six checks on a store URL. One of them reports whether shipping and return terms are in your product structured data, next to the figures above. It is an Agent Skill: a set of instruction files that an AI assistant such as Claude, Codex or Gemini CLI loads. We make it. It tells you what is missing and does not change anything in your store.</p>
-<p><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/l/free-shopify-skills?utm_source=site&amp;utm_medium=guide&amp;utm_campaign=free-shopify-skills" target="_blank" rel="noopener">Get the free skills sampler (21 skills)</a></p>
-<p>The paid <a href="https://proskillpacks.gumroad.com/l/store-ops-pack?utm_source=site&amp;utm_medium=guide&amp;utm_campaign=store-ops-pack" target="_blank" rel="noopener">Store Ops Pack for Shopify store owners</a> ($29, 6 skills) includes a fuller audit that ranks the fixes for your store. Each skill is also sold on its own for $5.</p>
+<p><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/l/free-shopify-skills?utm_source=site&amp;utm_medium=guide&amp;utm_campaign=free-shopify-skills" target="_blank" rel="noopener" data-go="buy/free-shopify-skills">Get the free skills sampler (21 skills)</a></p>
+<p>The paid <a href="https://proskillpacks.gumroad.com/l/store-ops-pack?utm_source=site&amp;utm_medium=guide&amp;utm_campaign=store-ops-pack" target="_blank" rel="noopener" data-go="buy/store-ops-pack">Store Ops Pack for Shopify store owners</a> ($29, 6 skills) includes a fuller audit that ranks the fixes for your store. Each skill is also sold on its own for $5.</p>
 <p class="note">Figures are from our <a href="../../study/">October 2026 study</a> of 100 Shopify stores, 99 of them measurable. The sample was chosen by hand and is not random. More guides are on the <a href="../../guides/">guides page</a>.</p>
     </article>
   </div>
@@ -243,7 +243,7 @@ In the Shopify admin, go to Settings, then Policies. Check that the shipping and
   <p>New free skills and guides appear in all of these as we publish them. Pick whichever you already use.</p>
   <ul class="links">
     <li><a href="/feed.xml">RSS feed</a> for any feed reader</li>
-    <li><a href="https://github.com/proskillpacks/skills" rel="noopener">Watch the free skills repo on GitHub</a></li>
+    <li><a href="/go/install/?from=guide" rel="noopener">Watch the free skills repo on GitHub</a></li>
     <li><a href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=guide&amp;utm_campaign=subscribe" rel="noopener">Follow on Gumroad</a></li>
   </ul>
 </section></div>
@@ -259,7 +259,7 @@ In the Shopify admin, go to Settings, then Policies. Check that the shipping and
         <a href="/guides/">Guides</a>
         <a href="/new/">What's new</a>
         <a href="/changelog/">Changelog</a>
-        <a href="/affiliates/">Affiliates</a>
+        <a href="/go/affiliates/?from=guide">Affiliates</a>
         <a href="/request/">Request a skill</a>
         <a href="/study/">Study</a>
         <a href="/helpers/">Helpers</a>
@@ -269,7 +269,7 @@ In the Shopify admin, go to Settings, then Policies. Check that the shipping and
         <a href="/faq/">FAQ</a>
         <a href="mailto:kaiventura.founder@gmail.com">Contact</a>
         <a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=guide&amp;utm_campaign=store" rel="noopener">Gumroad store</a>
-        <a href="https://github.com/proskillpacks/skills" rel="noopener">GitHub</a>
+        <a href="/go/install/?from=guide" rel="noopener">GitHub</a>
         <a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a>
       </nav>
       <div>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot.</div>
@@ -277,6 +277,14 @@ In the Shopify admin, go to Settings, then Policies. Check that the shipping and
     <small>Pro Skill Packs. Product names and trademarks belong to their owners. Not affiliated with or endorsed by Shopify Inc.</small>
   </div>
 </footer>
+<!-- go:start --><script>(function(){
+var D=document,H=D.documentElement,CID="a17e3abc-0819-4937-be25-c683543a2ac8",F=H.getAttribute('data-from')||'other',q=new URLSearchParams(location.search),S='direct',C='';
+function dnt(){try{return sessionStorage.getItem('doNotTrack')||localStorage.getItem('doNotTrack')}catch(e){return null}}
+try{['utm_source','utm_campaign'].forEach(function(k){var v=q.get(k);if(v)sessionStorage.setItem('psp_'+k,v)});S=sessionStorage.getItem('psp_utm_source')||'direct';C=sessionStorage.getItem('psp_utm_campaign')||''}catch(e){S=q.get('utm_source')||'direct';C=q.get('utm_campaign')||''}
+window.pspTrack=function(a,s){if(!CID||dnt())return;var p='/go/'+a+'/'+(s?s+'/':'')+'?from='+F+'&src='+encodeURIComponent(S)+(C?'&camp='+encodeURIComponent(C):'');try{navigator.sendBeacon('https://t.counter.dev/trackpage',new URLSearchParams({id:CID,page:p}))}catch(e){}};
+D.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-go]');if(!a)return;var g=a.getAttribute('data-go'),i=g.indexOf('/');window.pspTrack(g.slice(0,i),g.slice(i+1))});
+D.addEventListener('copy',function(){if(String(window.getSelection()).indexOf('npx skills add')>=0)window.pspTrack('copy','install')});
+})();</script><!-- go:end -->
 <!-- analytics:start -->
 <script src="https://cdn.counter.dev/script.js" data-id="a17e3abc-0819-4937-be25-c683543a2ac8" data-utcoffset="1"></script>
 <!-- analytics:end -->

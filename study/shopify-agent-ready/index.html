@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head>
+<html data-from="other" lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>State of Agent-Ready Shopify</title>
@@ -181,7 +181,7 @@ ol li,ul li{margin:.35em 0}
     <h2>Get your store checked</h2>
     <p>We'll run the same audit on your store and send you the top fixes, free. Reply to our post on X with your store URL, or check it yourself with our free Agent Skills, which work with any AI assistant that reads SKILL.md (Claude, OpenAI Codex, Gemini CLI, Cursor, GitHub Copilot and others).</p>
     <a class="btn" href="https://x.com/KaiVenturaBuild">Ask for a free audit on X →</a>
-    <a class="btn" href="https://github.com/proskillpacks/shopify-store-skills">Free skills →</a>
+    <a class="btn" href="/go/repo/free-shopify-skills/?from=other">Free skills →</a>
   </div>
 </main>
 
@@ -248,6 +248,14 @@ ol li,ul li{margin:.35em 0}
 </script>
 
 
+<!-- go:start --><script>(function(){
+var D=document,H=D.documentElement,CID="a17e3abc-0819-4937-be25-c683543a2ac8",F=H.getAttribute('data-from')||'other',q=new URLSearchParams(location.search),S='direct',C='';
+function dnt(){try{return sessionStorage.getItem('doNotTrack')||localStorage.getItem('doNotTrack')}catch(e){return null}}
+try{['utm_source','utm_campaign'].forEach(function(k){var v=q.get(k);if(v)sessionStorage.setItem('psp_'+k,v)});S=sessionStorage.getItem('psp_utm_source')||'direct';C=sessionStorage.getItem('psp_utm_campaign')||''}catch(e){S=q.get('utm_source')||'direct';C=q.get('utm_campaign')||''}
+window.pspTrack=function(a,s){if(!CID||dnt())return;var p='/go/'+a+'/'+(s?s+'/':'')+'?from='+F+'&src='+encodeURIComponent(S)+(C?'&camp='+encodeURIComponent(C):'');try{navigator.sendBeacon('https://t.counter.dev/trackpage',new URLSearchParams({id:CID,page:p}))}catch(e){}};
+D.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-go]');if(!a)return;var g=a.getAttribute('data-go'),i=g.indexOf('/');window.pspTrack(g.slice(0,i),g.slice(i+1))});
+D.addEventListener('copy',function(){if(String(window.getSelection()).indexOf('npx skills add')>=0)window.pspTrack('copy','install')});
+})();</script><!-- go:end -->
 <!-- analytics:start -->
 <script src="https://cdn.counter.dev/script.js" data-id="a17e3abc-0819-4937-be25-c683543a2ac8" data-utcoffset="1"></script>
 <!-- analytics:end -->
