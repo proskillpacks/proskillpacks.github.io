@@ -172,7 +172,8 @@ th { background: #eef2ee; }
 .buybox .expect { margin: 0.9rem 0 0; padding-left: 1.1rem; color: var(--slate); font-size: 0.95rem; }
 .buybox .expect li { margin: 0.25rem 0; }
 .buybox p { margin: 0.8rem 0 0; color: var(--slate); font-size: 0.95rem; }
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(16.5rem, 1fr)); gap: 1.25rem; }
+.grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; }
+.grid > * { flex: 1 1 16.5rem; max-width: 24rem; }
 .card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--rule); border-radius: 18px; overflow: hidden; text-decoration: none; }
 a.card:hover, a.card:focus-visible { border-color: var(--pine); box-shadow: 0 10px 30px rgba(15, 61, 46, 0.12); }
 .card > img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
@@ -287,7 +288,8 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .tile b { font-size: 1.1rem; line-height: 1.25; }
 .tile .who { color: var(--slate); font-size: 0.93rem; line-height: 1.4; }
 .tile .n { margin-top: auto; font-size: 0.85rem; font-weight: 700; color: var(--moss); }
-.dgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: 1rem; }
+.dgrid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+.dgrid > * { flex: 1 1 17rem; max-width: 26rem; }
 .dc { display: flex; flex-direction: column; gap: 0.4rem; padding: 1.1rem 1.2rem; min-height: 11.5rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; text-decoration: none; color: var(--ink); }
 .dc:hover, .dc:focus-visible { border-color: var(--pine); }
 .dc-top { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
@@ -311,7 +313,8 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   .tile b { font-size: 1rem; }
   .tile .who { font-size: 0.85rem; }
   .dr-head { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
-  .dgrid { grid-template-columns: 1fr; gap: 0.75rem; }
+  .dgrid { gap: 0.75rem; }
+  .dgrid > * { flex-basis: 100%; max-width: none; }
   .dc { padding: 0.9rem 0.85rem; }
   .dc h3 { font-size: 0.98rem; }
   .dc p { font-size: 0.88rem; }
