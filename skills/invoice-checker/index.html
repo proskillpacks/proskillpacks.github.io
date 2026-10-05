@@ -506,6 +506,15 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .cs .try pre { overflow-x: auto; max-width: 100%; }
 @media (max-width: 640px) { .cs .learn { grid-template-columns: 1fr; } }
 
+.lobar { background: var(--lime); color: var(--deep); font-size: 0.9rem; line-height: 1.35; padding: 0.45rem 2.6rem 0.45rem 1rem; text-align: center; position: relative; }
+.lobar a { color: var(--deep); font-weight: 700; text-decoration: underline; margin-left: 0.4rem; white-space: nowrap; }
+.lobar button { position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--deep); font-size: 1.3rem; line-height: 1; cursor: pointer; padding: 0.2rem 0.5rem; }
+.lob { display: inline-flex; flex-direction: column; align-items: flex-start; vertical-align: top; margin: 0 0.6rem 0.3rem 0; }
+.lob + .refundnote { display: inline-block; vertical-align: top; margin-top: 0.85rem; }
+.lo { display: block; margin: 0.4rem 0 0 0.3rem; font-size: 0.88rem; line-height: 1.3; }
+.lo s { opacity: 0.7; } .lo b { font-weight: 800; }
+@media (max-width: 640px) { .lobar { font-size: 0.82rem; text-align: left; } }
+
 </style>
 <script src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
@@ -536,6 +545,9 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 </script>
 </head>
 <body>
+<!--lo-->
+<div class="lobar" id="lobar"><span>New here: the first 10 buyers get half price. Code FIRST10 is applied when you click Buy.</span> <a href="/all/?paid">See paid skills</a><button type="button" id="lobarx" aria-label="Close this message">&times;</button></div><script>(function(){var b=document.getElementById("lobar");try{if(localStorage.getItem("lobar")==="1"){b.remove();return}}catch(e){}document.getElementById("lobarx").onclick=function(){b.remove();try{localStorage.setItem("lobar","1")}catch(e){}}})()</script>
+<!--/lo-->
 <header class="hero">
   <div class="wrap">
     <div class="brand">

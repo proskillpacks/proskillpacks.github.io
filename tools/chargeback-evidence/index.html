@@ -506,6 +506,15 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .cs .try pre { overflow-x: auto; max-width: 100%; }
 @media (max-width: 640px) { .cs .learn { grid-template-columns: 1fr; } }
 
+.lobar { background: var(--lime); color: var(--deep); font-size: 0.9rem; line-height: 1.35; padding: 0.45rem 2.6rem 0.45rem 1rem; text-align: center; position: relative; }
+.lobar a { color: var(--deep); font-weight: 700; text-decoration: underline; margin-left: 0.4rem; white-space: nowrap; }
+.lobar button { position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--deep); font-size: 1.3rem; line-height: 1; cursor: pointer; padding: 0.2rem 0.5rem; }
+.lob { display: inline-flex; flex-direction: column; align-items: flex-start; vertical-align: top; margin: 0 0.6rem 0.3rem 0; }
+.lob + .refundnote { display: inline-block; vertical-align: top; margin-top: 0.85rem; }
+.lo { display: block; margin: 0.4rem 0 0 0.3rem; font-size: 0.88rem; line-height: 1.3; }
+.lo s { opacity: 0.7; } .lo b { font-weight: 800; }
+@media (max-width: 640px) { .lobar { font-size: 0.82rem; text-align: left; } }
+
 </style>
 <script src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
@@ -542,6 +551,9 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 </script>
 </head>
 <body>
+<!--lo-->
+<div class="lobar" id="lobar"><span>New here: the first 10 buyers get half price. Code FIRST10 is applied when you click Buy.</span> <a href="/all/?paid">See paid skills</a><button type="button" id="lobarx" aria-label="Close this message">&times;</button></div><script>(function(){var b=document.getElementById("lobar");try{if(localStorage.getItem("lobar")==="1"){b.remove();return}}catch(e){}document.getElementById("lobarx").onclick=function(){b.remove();try{localStorage.setItem("lobar","1")}catch(e){}}})()</script>
+<!--/lo-->
 <header class="hero">
   <div class="wrap">
     <div class="brand">
@@ -632,7 +644,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
   <div class="card">
     <h2>Do this from my order details in one go</h2>
     <p>The $5 response kit has a fill-in letter for each reason (Word or Google Docs) with its checklist and a worked example. If you use ChatGPT or a similar assistant, a ready text in the kit also fills the letter in from what you tell it, marks what you still need, and never invents evidence. One time, not per dispute. We make it.<br>One price, $5. No percentage of what you win, no subscription, no surprise charges. <b>Stuck?</b> Email your filled-in letter to <a href="mailto:kaiventura.founder@gmail.com?subject=Draft%20check" data-go="request/draft-check">kaiventura.founder@gmail.com</a> before you submit (remove card numbers and anything you don't want to share). We'll tell you what's missing for your reason, usually within one working day. Free. Not legal advice.</p>
-    <p><a class="btn lime" href="https://proskillpacks.gumroad.com/l/chargeback-response-writer?utm_source=site&amp;utm_medium=chargeback-picker&amp;utm_campaign=chargeback-response-writer" data-go="buy/chargeback-response-writer">Get the $5 response kit</a></p>
+    <p><span class="lob"><a class="btn lime" href="https://proskillpacks.gumroad.com/l/chargeback-response-writer/FIRST10?utm_source=site&amp;utm_medium=chargeback-picker&amp;utm_campaign=chargeback-response-writer" data-go="buy/chargeback-response-writer">Get the $5 response kit</a><span class="lo"><s>$5</s> <b>$2.50</b> for the first 10 buyers</span></span></p>
   </div>
 </section>
 
