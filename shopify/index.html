@@ -351,6 +351,18 @@ footer nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; }
 footer a { color: var(--cream); text-decoration: none; padding: 0.35rem 0; }
 footer a:hover, footer a:focus-visible { color: var(--lime); }
 footer small { display: block; margin-top: 1.25rem; }
+footer.sitefoot { padding: 3rem 0 2rem; }
+.fgrid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2rem 2.5rem; align-items: start; }
+.fbrand .fb { display: flex; align-items: center; gap: 0.7rem; padding: 0; color: var(--lime); font-weight: 800; letter-spacing: 0.06em; font-size: 0.95rem; }
+.fbrand img { border-radius: 8px; }
+.fbrand p { margin: 0.8rem 0 0; max-width: 18rem; line-height: 1.5; }
+footer.sitefoot h2 { margin: 0 0 0.6rem; font-size: 0.8rem; line-height: 1.2; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 800; color: var(--lime); }
+footer.sitefoot nav { display: block; }
+footer.sitefoot ul { list-style: none; margin: 0; padding: 0; }
+footer.sitefoot nav a { display: block; padding: 0.3rem 0; line-height: 1.4; }
+footer.sitefoot small { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--sage); }
+@media (max-width: 56rem) { .fgrid { grid-template-columns: 1fr 1fr; } .fbrand { grid-column: 1 / -1; } }
+@media (max-width: 34rem) { .fgrid { grid-template-columns: 1fr; gap: 1.5rem; } footer.sitefoot nav a { padding: 0.75rem 0; } footer.sitefoot { padding-top: 2.25rem; } }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
@@ -530,31 +542,14 @@ document.querySelectorAll('.demo').forEach(function (f) {
 <section id="paid"><h2>3. Take the jobs off your plate: the Store Ops Pack</h2><div class="buybox"><div class="row"><span class="price">$29</span><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/l/store-ops-pack?utm_source=site&amp;utm_medium=shopify&amp;utm_campaign=store-ops-pack" data-go="buy/store-ops-pack">Buy the Store Ops Pack</a><a class="btn btn-ghost" href="/packs/store-ops-pack/">See what is inside</a></div><p>Six AI helpers in one download, one-time payment. Each is also sold on its own for $5. Each one was tested on real public Shopify stores before release. 30-day refund: reply to your receipt, or write to kaiventura.founder@gmail.com.</p></div><div class="prose"><p>In the download, for each of the six jobs: a guide with a real before and after, a text you paste into ChatGPT or any chatbot (with a printable card), and the files for AI assistants that read skill files. Those technical notes are at the bottom of each product page.</p><h3>The six helpers, with a real before and after</h3><ul class="links"><li><b><a href="/skills/agent-ready-store-audit/">Store Audit</a>, $5</b><br>Before: a well-known coffee brand&#x27;s store looked complete in a browser.<br>After: score 77/100, 6 of 12 shopper questions answered, shipping and returns not found, with the top fixes ranked.</li><li><b><a href="/skills/support-macro-writer/">Support Reply Writer</a>, $5</b><br>Before: a footwear brand&#x27;s refund policy and FAQ disagreed about gift-card refunds.<br>After: the conflict flagged for the owner to settle, and ready-to-import replies for parcels stuck in transit, cancelling after shipping and more.</li><li><b><a href="/skills/chargeback-response-writer/">Chargeback Response Kit for Shopify Payments, with notes for PayPal, Stripe and Klarna</a>, $5</b><br>Before: a merchant sent delivery photos against a fraud dispute and lost.<br>After: a verdict (weak, fight only if cheap), what the bank actually asks, and what to gather instead.</li><li><b><a href="/skills/product-description-rewriter/">Product Description Rewriter</a>, $5</b><br>Before: a menswear cardigan page with a one-line title and a list of spec bullets.<br>After: a clear description, a page title under 60 characters and a two-line summary under 155 characters, the two things that show up in Google search results.</li><li><b><a href="/skills/product-seo-fixer/">Product page tidy-up</a>, $5</b><br>Before: a beauty store with 157 of 159 photos with no description for people who cannot see them, and one set of products copying another&#x27;s Google title.<br>After: a file you can import back into Shopify with a description for each photo and its own title and summary for the set.</li><li><b><a href="/skills/bfcm-campaign-kit/">Black Friday Campaign Kit</a>, $5</b><br>Before: a flat 20% off sitewide, which at a 55% margin needs 57% more units to break even.<br>After: a tiered offer inside the owner&#x27;s 20% cap, leaving out products already 70% off, with a dated calendar, 5 emails and 3 text messages.</li></ul><p class="sub">Each name opens its page with the full example. <a href="/how-we-test/">How we test</a>.</p></div></section>
 <section><div class="prose"><p>Run a blog, newsletter or agency for store owners? You can earn 40% on referred sales: <a href="/go/affiliates/?from=shopify">the affiliate page</a>.</p><p class="sub">Pro Skill Packs is not affiliated with, endorsed by or sponsored by Shopify Inc. Shopify is a trademark of Shopify Inc.</p></div></section>
 </div></main>
-<footer>
+<footer class="sitefoot">
   <div class="wrap">
-    <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers</a><a href="/for/developers/">Developers</a><a href="/for/data-and-spreadsheets/">Spreadsheets</a><a href="/for/careers/">Job hunting</a><a href="/for/sales-and-outreach/">Sales and outreach</a><a href="/for/content-and-writing/">Writing</a><a href="/for/finance-and-admin/">Money and admin</a><a href="/for/customer-support/">Customer support</a></nav>
-    <div class="row">
-      <nav aria-label="Footer">
-        <a href="/">Home</a>
-        <a href="/categories/">Categories</a>
-        <a href="/all/">All products</a>
-        <a href="/free/">Free</a>
-        <a href="/guides/">Guides</a>
-        <a href="/about/">About</a>
-        <a href="mailto:kaiventura.founder@gmail.com">Contact</a>
-        <a href="/new/">What's new</a>
-        <a href="/changelog/">Changelog</a>
-        <a href="/go/affiliates/?from=shopify">Affiliates</a>
-        <a href="/request/">Ask for something</a>
-        <a href="/study/">Research</a>
-        <a href="/how-we-test/">How we test</a>
-        <a href="/works-with/">For people who use AI assistants</a>
-        <a href="/faq/">FAQ</a>
-        <a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=shopify&amp;utm_campaign=store" rel="noopener">Shop</a>
-        <a href="/go/install/?from=shopify" rel="noopener">For developers</a>
-        <a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a>
-      </nav>
-      <div>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. The chargeback kit also has Word letters you can fill in by hand, with no AI.</div>
+    <div class="fgrid">
+      <div class="fbrand"><a class="fb" href="/"><img src="/assets/avatar.png" alt="" width="36" height="36"><span>PRO SKILL PACKS</span></a>
+        <p>Professional skills for ChatGPT, Claude and other AI assistants.</p></div>
+      <nav aria-label="Browse"><h2>Browse</h2><ul><li><a href="/categories/#g-online-stores">Online stores</a></li><li><a href="/categories/#g-developers-and-data">Developers and data</a></li><li><a href="/categories/#g-work-and-careers">Work and careers</a></li><li><a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a></li><li><a href="/categories/#g-money-admin-support">Money, admin and support</a></li><li><a href="/all/">All skills</a></li></ul></nav>
+      <nav aria-label="Learn"><h2>Learn</h2><ul><li><a href="/guides/">Guides</a></li><li><a href="/study/">Research</a></li><li><a href="/free/">Free skills</a></li><li><a href="/how-we-test/">How we test</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/new/">What's new</a></li></ul></nav>
+      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="mailto:kaiventura.founder@gmail.com">Contact</a></li><li><a href="/go/affiliates/?from=shopify">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=shopify&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
     </div>
     <small>Pro Skill Packs. Product names and trademarks belong to their owners. Not affiliated with or endorsed by Shopify Inc.</small>
   </div>

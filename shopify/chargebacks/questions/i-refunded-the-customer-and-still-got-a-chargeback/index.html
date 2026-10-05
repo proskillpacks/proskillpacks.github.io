@@ -281,6 +281,18 @@ footer nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; }
 footer a { color: var(--cream); text-decoration: none; padding: 0.35rem 0; }
 footer a:hover, footer a:focus-visible { color: var(--lime); }
 footer small { display: block; margin-top: 1.25rem; }
+footer.sitefoot { padding: 3rem 0 2rem; }
+.fgrid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2rem 2.5rem; align-items: start; }
+.fbrand .fb { display: flex; align-items: center; gap: 0.7rem; padding: 0; color: var(--lime); font-weight: 800; letter-spacing: 0.06em; font-size: 0.95rem; }
+.fbrand img { border-radius: 8px; }
+.fbrand p { margin: 0.8rem 0 0; max-width: 18rem; line-height: 1.5; }
+footer.sitefoot h2 { margin: 0 0 0.6rem; font-size: 0.8rem; line-height: 1.2; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 800; color: var(--lime); }
+footer.sitefoot nav { display: block; }
+footer.sitefoot ul { list-style: none; margin: 0; padding: 0; }
+footer.sitefoot nav a { display: block; padding: 0.3rem 0; line-height: 1.4; }
+footer.sitefoot small { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--sage); }
+@media (max-width: 56rem) { .fgrid { grid-template-columns: 1fr 1fr; } .fbrand { grid-column: 1 / -1; } }
+@media (max-width: 34rem) { .fgrid { grid-template-columns: 1fr; gap: 1.5rem; } footer.sitefoot nav a { padding: 0.75rem 0; } footer.sitefoot { padding-top: 2.25rem; } }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
@@ -467,31 +479,14 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <section id="faq"><h2>More questions merchants ask</h2><div class="prose"><h3>Why can they file after a refund?</h3><p>Shopify lists it as a known scenario: the refund was issued but has not appeared on their statement yet because of a processing delay.</p><h3>What proves the refund?</h3><p>Per Shopify: the refund transaction record with timestamps, amount and confirmation number, and a bank or processor statement showing when it was processed and that it matches the disputed charge.</p><h3>Can I refund them again to end it?</h3><p>No. Shopify says a payment can&#x27;t be refunded through Shopify after a chargeback has started, and the bank takes the funds automatically.</p><h3>Is a refund different for a PayPal order?</h3><p>Yes. PayPal&#x27;s UK user agreement says a claim is fully resolved only if the refund goes through PayPal, or you provide evidence PayPal accepts that the buyer agreed to another resolution.</p></div></section>
 <section><h2>Other common questions</h2><div class="prose"><ul class="links"><li><a href="/shopify/chargebacks/questions/is-the-chargeback-fee-refunded-if-i-win/">Is the chargeback fee refunded if I win?</a></li><li><a href="/shopify/chargebacks/questions/customer-says-they-withdrew-the-chargeback/">My customer says they withdrew the chargeback. What now?</a></li><li><a href="/shopify/chargebacks/questions/how-long-until-i-hear-back-after-submitting-chargeback-evidence/">How long until I hear back after I submit chargeback evidence?</a></li><li><a href="/shopify/chargebacks/questions/can-i-contact-the-customer-during-a-chargeback/">Can I contact the customer while there is a chargeback open?</a></li><li><a href="/shopify/chargebacks/questions/what-counts-as-proof-of-delivery-for-a-chargeback/">What counts as proof of delivery for a chargeback?</a></li><li><a href="/shopify/chargebacks/questions/i-missed-the-chargeback-due-date/">I missed the chargeback due date. What happens now?</a></li><li><a href="/shopify/chargebacks/questions/chargeback-vs-inquiry-whats-the-difference/">Chargeback versus inquiry: what is the difference?</a></li><li><a href="/shopify/chargebacks/">All chargeback help</a></li></ul><p class="sub">General information from the public sources above, read 4 October 2026. It is not legal advice, and nobody can promise how a bank or payment provider will decide. Rules and fees can change, so check the page on your own dispute. Pro Skill Packs is not affiliated with, endorsed by or sponsored by Shopify Inc., Stripe, PayPal, Klarna or Affirm.</p></div></section>
 </div></main>
-<footer>
+<footer class="sitefoot">
   <div class="wrap">
-    <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers</a><a href="/for/developers/">Developers</a><a href="/for/data-and-spreadsheets/">Spreadsheets</a><a href="/for/careers/">Job hunting</a><a href="/for/sales-and-outreach/">Sales and outreach</a><a href="/for/content-and-writing/">Writing</a><a href="/for/finance-and-admin/">Money and admin</a><a href="/for/customer-support/">Customer support</a></nav>
-    <div class="row">
-      <nav aria-label="Footer">
-        <a href="/">Home</a>
-        <a href="/categories/">Categories</a>
-        <a href="/all/">All products</a>
-        <a href="/free/">Free</a>
-        <a href="/guides/">Guides</a>
-        <a href="/about/">About</a>
-        <a href="mailto:kaiventura.founder@gmail.com">Contact</a>
-        <a href="/new/">What's new</a>
-        <a href="/changelog/">Changelog</a>
-        <a href="/go/affiliates/?from=shopify-chargebacks-q">Affiliates</a>
-        <a href="/request/">Ask for something</a>
-        <a href="/study/">Research</a>
-        <a href="/how-we-test/">How we test</a>
-        <a href="/works-with/">For people who use AI assistants</a>
-        <a href="/faq/">FAQ</a>
-        <a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=shopify-chargebacks-q&amp;utm_campaign=store" rel="noopener">Shop</a>
-        <a href="/go/install/?from=shopify-chargebacks-q" rel="noopener">For developers</a>
-        <a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a>
-      </nav>
-      <div>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. The chargeback kit also has Word letters you can fill in by hand, with no AI.</div>
+    <div class="fgrid">
+      <div class="fbrand"><a class="fb" href="/"><img src="/assets/avatar.png" alt="" width="36" height="36"><span>PRO SKILL PACKS</span></a>
+        <p>Professional skills for ChatGPT, Claude and other AI assistants.</p></div>
+      <nav aria-label="Browse"><h2>Browse</h2><ul><li><a href="/categories/#g-online-stores">Online stores</a></li><li><a href="/categories/#g-developers-and-data">Developers and data</a></li><li><a href="/categories/#g-work-and-careers">Work and careers</a></li><li><a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a></li><li><a href="/categories/#g-money-admin-support">Money, admin and support</a></li><li><a href="/all/">All skills</a></li></ul></nav>
+      <nav aria-label="Learn"><h2>Learn</h2><ul><li><a href="/guides/">Guides</a></li><li><a href="/study/">Research</a></li><li><a href="/free/">Free skills</a></li><li><a href="/how-we-test/">How we test</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/new/">What's new</a></li></ul></nav>
+      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="mailto:kaiventura.founder@gmail.com">Contact</a></li><li><a href="/go/affiliates/?from=shopify-chargebacks-q">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=shopify-chargebacks-q&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
     </div>
     <small>Pro Skill Packs. Product names and trademarks belong to their owners. Not affiliated with or endorsed by Shopify Inc.</small>
   </div>

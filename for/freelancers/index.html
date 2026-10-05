@@ -219,6 +219,18 @@ footer nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; }
 footer a { color: var(--cream); text-decoration: none; padding: 0.35rem 0; }
 footer a:hover, footer a:focus-visible { color: var(--lime); }
 footer small { display: block; margin-top: 1.25rem; }
+footer.sitefoot { padding: 3rem 0 2rem; }
+.fgrid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2rem 2.5rem; align-items: start; }
+.fbrand .fb { display: flex; align-items: center; gap: 0.7rem; padding: 0; color: var(--lime); font-weight: 800; letter-spacing: 0.06em; font-size: 0.95rem; }
+.fbrand img { border-radius: 8px; }
+.fbrand p { margin: 0.8rem 0 0; max-width: 18rem; line-height: 1.5; }
+footer.sitefoot h2 { margin: 0 0 0.6rem; font-size: 0.8rem; line-height: 1.2; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 800; color: var(--lime); }
+footer.sitefoot nav { display: block; }
+footer.sitefoot ul { list-style: none; margin: 0; padding: 0; }
+footer.sitefoot nav a { display: block; padding: 0.3rem 0; line-height: 1.4; }
+footer.sitefoot small { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--sage); }
+@media (max-width: 56rem) { .fgrid { grid-template-columns: 1fr 1fr; } .fbrand { grid-column: 1 / -1; } }
+@media (max-width: 34rem) { .fgrid { grid-template-columns: 1fr; gap: 1.5rem; } footer.sitefoot nav a { padding: 0.75rem 0; } footer.sitefoot { padding-top: 2.25rem; } }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
@@ -431,31 +443,14 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   </ul>
 </section>
 </div></main>
-<footer>
+<footer class="sitefoot">
   <div class="wrap">
-    <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers</a><a href="/for/developers/">Developers</a><a href="/for/data-and-spreadsheets/">Spreadsheets</a><a href="/for/careers/">Job hunting</a><a href="/for/sales-and-outreach/">Sales and outreach</a><a href="/for/content-and-writing/">Writing</a><a href="/for/finance-and-admin/">Money and admin</a><a href="/for/customer-support/">Customer support</a></nav>
-    <div class="row">
-      <nav aria-label="Footer">
-        <a href="/">Home</a>
-        <a href="/categories/">Categories</a>
-        <a href="/all/">All products</a>
-        <a href="/free/">Free</a>
-        <a href="/guides/">Guides</a>
-        <a href="/about/">About</a>
-        <a href="mailto:kaiventura.founder@gmail.com">Contact</a>
-        <a href="/new/">What's new</a>
-        <a href="/changelog/">Changelog</a>
-        <a href="/go/affiliates/?from=category">Affiliates</a>
-        <a href="/request/">Ask for something</a>
-        <a href="/study/">Research</a>
-        <a href="/how-we-test/">How we test</a>
-        <a href="/works-with/">For people who use AI assistants</a>
-        <a href="/faq/">FAQ</a>
-        <a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=category&amp;utm_campaign=store" rel="noopener">Shop</a>
-        <a href="/go/install/?from=category" rel="noopener">For developers</a>
-        <a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a>
-      </nav>
-      <div>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. The chargeback kit also has Word letters you can fill in by hand, with no AI.</div>
+    <div class="fgrid">
+      <div class="fbrand"><a class="fb" href="/"><img src="/assets/avatar.png" alt="" width="36" height="36"><span>PRO SKILL PACKS</span></a>
+        <p>Professional skills for ChatGPT, Claude and other AI assistants.</p></div>
+      <nav aria-label="Browse"><h2>Browse</h2><ul><li><a href="/categories/#g-online-stores">Online stores</a></li><li><a href="/categories/#g-developers-and-data">Developers and data</a></li><li><a href="/categories/#g-work-and-careers">Work and careers</a></li><li><a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a></li><li><a href="/categories/#g-money-admin-support">Money, admin and support</a></li><li><a href="/all/">All skills</a></li></ul></nav>
+      <nav aria-label="Learn"><h2>Learn</h2><ul><li><a href="/guides/">Guides</a></li><li><a href="/study/">Research</a></li><li><a href="/free/">Free skills</a></li><li><a href="/how-we-test/">How we test</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/new/">What's new</a></li></ul></nav>
+      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="mailto:kaiventura.founder@gmail.com">Contact</a></li><li><a href="/go/affiliates/?from=category">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=category&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
     </div>
     <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>

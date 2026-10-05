@@ -232,6 +232,18 @@ footer nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; }
 footer a { color: var(--cream); text-decoration: none; padding: 0.35rem 0; }
 footer a:hover, footer a:focus-visible { color: var(--lime); }
 footer small { display: block; margin-top: 1.25rem; }
+footer.sitefoot { padding: 3rem 0 2rem; }
+.fgrid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2rem 2.5rem; align-items: start; }
+.fbrand .fb { display: flex; align-items: center; gap: 0.7rem; padding: 0; color: var(--lime); font-weight: 800; letter-spacing: 0.06em; font-size: 0.95rem; }
+.fbrand img { border-radius: 8px; }
+.fbrand p { margin: 0.8rem 0 0; max-width: 18rem; line-height: 1.5; }
+footer.sitefoot h2 { margin: 0 0 0.6rem; font-size: 0.8rem; line-height: 1.2; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 800; color: var(--lime); }
+footer.sitefoot nav { display: block; }
+footer.sitefoot ul { list-style: none; margin: 0; padding: 0; }
+footer.sitefoot nav a { display: block; padding: 0.3rem 0; line-height: 1.4; }
+footer.sitefoot small { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--sage); }
+@media (max-width: 56rem) { .fgrid { grid-template-columns: 1fr 1fr; } .fbrand { grid-column: 1 / -1; } }
+@media (max-width: 34rem) { .fgrid { grid-template-columns: 1fr; gap: 1.5rem; } footer.sitefoot nav a { padding: 0.75rem 0; } footer.sitefoot { padding-top: 2.25rem; } }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
@@ -403,31 +415,14 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   </div>
 </header>
 <main><div class="wrap"><section><div class="prose"><ul class="links"><li><a href="/shopify/chargebacks/questions/is-the-chargeback-fee-refunded-if-i-win/"><b>Is the chargeback fee refunded if I win?</b></a><br>Shopify Payments: Shopify&#x27;s help says that if you win the chargeback, the fee is returned to you along with the disputed amount.</li><li><a href="/shopify/chargebacks/questions/customer-says-they-withdrew-the-chargeback/"><b>My customer says they withdrew the chargeback. What now?</b></a><br>Only your customer can drop it. Shopify&#x27;s help says they need to contact their own bank and tell it they want to drop the chargeback.</li><li><a href="/shopify/chargebacks/questions/i-refunded-the-customer-and-still-got-a-chargeback/"><b>I refunded them and they still filed a chargeback. How?</b></a><br>Shopify&#x27;s help lists it as a common scenario for a credit not processed dispute: &quot;The refund was issued, but hasn&#x27;t appeared yet due to a processing delay.&quot;</li><li><a href="/shopify/chargebacks/questions/how-long-until-i-hear-back-after-submitting-chargeback-evidence/"><b>How long until I hear back after I submit chargeback evidence?</b></a><br>Shopify&#x27;s help says the credit card company&#x27;s review &quot;can take up to 75 days after you submit&quot;.</li><li><a href="/shopify/chargebacks/questions/can-i-contact-the-customer-during-a-chargeback/"><b>Can I contact the customer while there is a chargeback open?</b></a><br>Yes. Shopify&#x27;s help says customers are expected to contact you before filing a dispute, and it lists customer communications as evidence.</li><li><a href="/shopify/chargebacks/questions/what-counts-as-proof-of-delivery-for-a-chargeback/"><b>What counts as proof of delivery for a chargeback?</b></a><br>For a physical product Shopify&#x27;s help lists: tracking information (carrier, number, delivery status), delivery confirmation ideally with signature or photo, proof the item went to the address given at checkout, and any delivery notifications sent to the customer.</li><li><a href="/shopify/chargebacks/questions/i-missed-the-chargeback-due-date/"><b>I missed the chargeback due date. What happens now?</b></a><br>Shopify&#x27;s help says: &quot;After the submission deadline has passed, you can&#x27;t submit any further evidence. There are no exceptions to this.&quot;</li><li><a href="/shopify/chargebacks/questions/chargeback-vs-inquiry-whats-the-difference/"><b>Chargeback versus inquiry: what is the difference?</b></a><br>Shopify&#x27;s help says that with a chargeback the bank takes the disputed amount and a chargeback fee from you right away; with an inquiry it does not.</li></ul></div></section><section><div class="prose"><p>Not here? <a href="/shopify/chargebacks/">Pick your reason</a>, use <a href="/tools/chargeback-evidence/" data-go="tool/chargeback-evidence">the evidence picker</a>, or <a href="/shopify/chargebacks/#ask">ask us</a>.</p></div></section></div></main>
-<footer>
+<footer class="sitefoot">
   <div class="wrap">
-    <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers</a><a href="/for/developers/">Developers</a><a href="/for/data-and-spreadsheets/">Spreadsheets</a><a href="/for/careers/">Job hunting</a><a href="/for/sales-and-outreach/">Sales and outreach</a><a href="/for/content-and-writing/">Writing</a><a href="/for/finance-and-admin/">Money and admin</a><a href="/for/customer-support/">Customer support</a></nav>
-    <div class="row">
-      <nav aria-label="Footer">
-        <a href="/">Home</a>
-        <a href="/categories/">Categories</a>
-        <a href="/all/">All products</a>
-        <a href="/free/">Free</a>
-        <a href="/guides/">Guides</a>
-        <a href="/about/">About</a>
-        <a href="mailto:kaiventura.founder@gmail.com">Contact</a>
-        <a href="/new/">What's new</a>
-        <a href="/changelog/">Changelog</a>
-        <a href="/go/affiliates/?from=shopify-chargebacks-q">Affiliates</a>
-        <a href="/request/">Ask for something</a>
-        <a href="/study/">Research</a>
-        <a href="/how-we-test/">How we test</a>
-        <a href="/works-with/">For people who use AI assistants</a>
-        <a href="/faq/">FAQ</a>
-        <a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=shopify-chargebacks-q&amp;utm_campaign=store" rel="noopener">Shop</a>
-        <a href="/go/install/?from=shopify-chargebacks-q" rel="noopener">For developers</a>
-        <a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a>
-      </nav>
-      <div>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. The chargeback kit also has Word letters you can fill in by hand, with no AI.</div>
+    <div class="fgrid">
+      <div class="fbrand"><a class="fb" href="/"><img src="/assets/avatar.png" alt="" width="36" height="36"><span>PRO SKILL PACKS</span></a>
+        <p>Professional skills for ChatGPT, Claude and other AI assistants.</p></div>
+      <nav aria-label="Browse"><h2>Browse</h2><ul><li><a href="/categories/#g-online-stores">Online stores</a></li><li><a href="/categories/#g-developers-and-data">Developers and data</a></li><li><a href="/categories/#g-work-and-careers">Work and careers</a></li><li><a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a></li><li><a href="/categories/#g-money-admin-support">Money, admin and support</a></li><li><a href="/all/">All skills</a></li></ul></nav>
+      <nav aria-label="Learn"><h2>Learn</h2><ul><li><a href="/guides/">Guides</a></li><li><a href="/study/">Research</a></li><li><a href="/free/">Free skills</a></li><li><a href="/how-we-test/">How we test</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/new/">What's new</a></li></ul></nav>
+      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="mailto:kaiventura.founder@gmail.com">Contact</a></li><li><a href="/go/affiliates/?from=shopify-chargebacks-q">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=shopify-chargebacks-q&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
     </div>
     <small>Pro Skill Packs. Product names and trademarks belong to their owners. Not affiliated with or endorsed by Shopify Inc.</small>
   </div>
