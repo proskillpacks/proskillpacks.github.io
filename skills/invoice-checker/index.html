@@ -98,6 +98,8 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .signup h2 { margin: 0 0 0.4rem; font-size: 1.3rem; }
 .signup p { margin: 0 0 0.8rem; }
 .signup ul { margin-bottom: 0; }
+.fgh { margin: 1.75rem 0 0.2rem; font-size: 1.2rem; }
+.fgs { margin: 0 0 0.9rem; }
 .signup label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--slate); margin-bottom: 0.3rem; }
 .signup .row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
 .signup button { cursor: pointer; font: inherit; }
@@ -461,7 +463,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-money-admin-support">Money, admin and support</a> / Invoice Checker</p>
     <h1>Invoice Checker</h1>
     <p class="lead">Give it an invoice. Get the totals recomputed, every difference, missing fields and consistency flags. No tax advice. Free, MIT-licensed.</p>
-    <div class="cta"><a class="btn btn-lime" href="/go/repo/invoice-checker/?from=skill">Get it on GitHub</a></div><p class="note-light">Free, MIT licence, hosted on GitHub. Install the whole free set with npx skills add proskillpacks/skills, or copy this skill&#x27;s folder.</p>
+    <div class="cta"><a class="btn btn-lime" href="/prompts/invoice-checker/">Copy the text for ChatGPT or any chatbot</a> <a class="btn btn-line" href="/go/repo/invoice-checker/?from=skill">Get it on GitHub</a></div><p class="note-light">Free, MIT licence, hosted on GitHub. Install the whole free set with npx skills add proskillpacks/skills, or copy this skill&#x27;s folder.</p>
   </div>
 </header>
 <main><div class="wrap">
@@ -476,7 +478,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 <section><h2>Limits</h2><div class="prose"><ul><li>No tax advice. It does not say what rate applies or what a field requires in your country.</li><li>Without code execution it shows the sums by hand and says they need checking.</li><li>It cannot read an image or a scanned PDF. Give it the text or type in the figures.</li><li>It checks arithmetic and completeness, not whether the work was done or the price is fair.</li></ul></div></section>
 <section><h2>Works with</h2><div class="prose"><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. The recompute script needs Python 3 (standard library only). Without code execution it shows the sums by hand.</p></div></section>
 <section><h2>For people who use AI assistants</h2><div class="prose"><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>invoice-checker</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/finance/invoice-checker).</li><li>Put the <code>invoice-checker</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Check this invoice before I send it: [invoice text].&quot;. The skill loads by itself.</li></ol></div></section>
-<section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">Free</span><a class="btn btn-pine" href="/go/repo/invoice-checker/?from=skill">Get it on GitHub</a></div><p>MIT licence. Use it, change it, share it.</p></div></section>
+<section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">Free</span><a class="btn btn-pine" href="/prompts/invoice-checker/">Copy the text for ChatGPT or any chatbot</a><a class="btn btn-ghost" href="/go/repo/invoice-checker/?from=skill">Get it on GitHub</a></div><p>MIT licence. Use it, change it, share it.</p></div></section>
 <section><h2>Related</h2><ul class="links"><li>Free guide to do it by hand: <a href="/guides/how-to-check-an-invoice-for-mistakes-before-you-send-or-pay-it/">How do I check an invoice for mistakes before I send or pay it?</a></li><li>Free text to paste into ChatGPT or any chatbot: <a href="/prompts/invoice-checker/">Invoice checker prompt for ChatGPT, Claude or Gemini</a></li><li>More for people who run small-business admin: <a href="/for/finance-and-admin/">Finance and small-business admin</a></li></ul></section>
 <p class="sub"><a href="https://github.com/proskillpacks/skills/issues/new?template=report-problem.yml&amp;skill=invoice-checker" rel="noopener">Report a problem with this skill</a> (GitHub, or write to kaiventura.founder@gmail.com).</p>
 </div></main>

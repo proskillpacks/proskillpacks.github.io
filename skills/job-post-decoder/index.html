@@ -98,6 +98,8 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .signup h2 { margin: 0 0 0.4rem; font-size: 1.3rem; }
 .signup p { margin: 0 0 0.8rem; }
 .signup ul { margin-bottom: 0; }
+.fgh { margin: 1.75rem 0 0.2rem; font-size: 1.2rem; }
+.fgs { margin: 0 0 0.9rem; }
 .signup label { display: block; font-size: 0.85rem; font-weight: 700; color: var(--slate); margin-bottom: 0.3rem; }
 .signup .row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
 .signup button { cursor: pointer; font: inherit; }
@@ -461,7 +463,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-work-and-careers">Work and careers</a> / Job Post Decoder</p>
     <h1>Job Post Decoder</h1>
     <p class="lead">Paste a job post. Get what the job is, firm and wish requirements, what is missing and questions for the recruiter. Free, MIT-licensed.</p>
-    <div class="cta"><a class="btn btn-lime" href="/go/repo/job-post-decoder/?from=skill">Get it on GitHub</a></div><p class="note-light">Free, MIT licence, hosted on GitHub. Install the whole free set with npx skills add proskillpacks/skills, or copy this skill&#x27;s folder.</p>
+    <div class="cta"><a class="btn btn-lime" href="/prompts/job-post-decoder/">Copy the text for ChatGPT or any chatbot</a> <a class="btn btn-line" href="/go/repo/job-post-decoder/?from=skill">Get it on GitHub</a></div><p class="note-light">Free, MIT licence, hosted on GitHub. Install the whole free set with npx skills add proskillpacks/skills, or copy this skill&#x27;s folder.</p>
   </div>
 </header>
 <main><div class="wrap">
@@ -476,7 +478,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 <section><h2>Limits</h2><div class="prose"><ul><li>It works only from the post. It cannot tell you what the company is like.</li><li>Phrases it flags are prompts for questions, not proof of anything.</li><li>If the post is cut off, it says so and works with what is there.</li><li>It does not call a post a scam.</li></ul></div></section>
 <section><h2>Works with</h2><div class="prose"><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result.</p></div></section>
 <section><h2>For people who use AI assistants</h2><div class="prose"><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>job-post-decoder</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/careers/job-post-decoder).</li><li>Put the <code>job-post-decoder</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Decode this job post for me. I&#x27;m a ... who wants to move into ...&quot;. The skill loads by itself.</li></ol></div></section>
-<section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">Free</span><a class="btn btn-pine" href="/go/repo/job-post-decoder/?from=skill">Get it on GitHub</a></div><p>MIT licence. Use it, change it, share it.</p></div></section>
+<section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">Free</span><a class="btn btn-pine" href="/prompts/job-post-decoder/">Copy the text for ChatGPT or any chatbot</a><a class="btn btn-ghost" href="/go/repo/job-post-decoder/?from=skill">Get it on GitHub</a></div><p>MIT licence. Use it, change it, share it.</p></div></section>
 <section><h2>Related</h2><ul class="links"><li>Free guide to do it by hand: <a href="/guides/how-to-tell-what-a-job-post-really-asks-for/">How do I tell what a job post really asks for?</a></li><li>Free text to paste into ChatGPT or any chatbot: <a href="/prompts/job-post-decoder/">Job post decoder prompt for ChatGPT, Claude or Gemini</a></li><li><a href="/skills/resume-bullet-rewriter/">Resume Bullet Rewriter</a> ($9): Paste your resume bullets and a job post. Get clearer bullets with every unconfirmed number marked, and a table of what the job asks that you do not yet show.</li><li>More for job seekers: <a href="/for/careers/">Job seekers and careers</a></li></ul></section>
 <p class="sub"><a href="https://github.com/proskillpacks/skills/issues/new?template=report-problem.yml&amp;skill=job-post-decoder" rel="noopener">Report a problem with this skill</a> (GitHub, or write to kaiventura.founder@gmail.com).</p>
 </div></main>
