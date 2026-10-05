@@ -308,6 +308,51 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   .hero-filters label:not(.grow) { width: calc(50% - 0.4rem); }
   .hero-filters label:not(.grow) select { min-width: 0; width: 100%; }
 }
+.sr { position: absolute; left: -9999px; }
+.hsearch { margin: 1.6rem 0 0; max-width: 40rem; }
+.hsearch input { width: 100%; box-sizing: border-box; font: inherit; font-size: 1.1rem; padding: 0.95rem 1.2rem; border-radius: 999px; border: 2px solid transparent; background: #fff; color: var(--ink); }
+.hsearch input:focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }
+.dirhome section { margin: 0 0 3.25rem; }
+.dr-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin: 0 0 1.1rem; }
+.dr-head h2 { margin: 0 0 0.2rem; }
+.dr-head .sub { margin: 0; }
+.seeall { white-space: nowrap; font-weight: 700; color: var(--pine); text-decoration: underline; text-underline-offset: 3px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr)); gap: 1rem; }
+.tile { display: flex; flex-direction: column; gap: 0.35rem; padding: 1.1rem 1.2rem; background: #fff; border: 1px solid var(--rule); border-left: 4px solid var(--pine); border-radius: 14px; text-decoration: none; color: var(--ink); min-height: 8rem; }
+.tile:hover, .tile:focus-visible { border-color: var(--pine); background: #f3f7f4; }
+.tile b { font-size: 1.1rem; line-height: 1.25; }
+.tile .who { color: var(--slate); font-size: 0.93rem; line-height: 1.4; }
+.tile .n { margin-top: auto; font-size: 0.85rem; font-weight: 700; color: var(--moss); }
+.dgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: 1rem; }
+.dc { display: flex; flex-direction: column; gap: 0.4rem; padding: 1.1rem 1.2rem; min-height: 11.5rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; text-decoration: none; color: var(--ink); }
+.dc:hover, .dc:focus-visible { border-color: var(--pine); }
+.dc-top { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
+.dc-free { background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.dc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem; }
+.dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
+.dc .go::after { content: " \2192"; }
+.catsec { margin: 0 0 2.25rem; padding-top: 0.5rem; }
+.catsec h2 a { color: var(--ink); text-decoration: none; }
+.plain { list-style: none; padding: 0; margin: 0 0 0.6rem; columns: 2 20rem; column-gap: 2rem; }
+.plain li { margin: 0 0 0.45rem; break-inside: avoid; }
+.plain a { color: var(--pine); font-weight: 600; }
+.pl { color: var(--slate); font-size: 0.85rem; margin-left: 0.3rem; }
+.dirhome .tiles { margin-bottom: 3rem; }
+.dirhome section.cats .tiles { margin-bottom: 0; }
+@media (max-width: 40rem) {
+  .tiles { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .tile { padding: 0.9rem 0.9rem; min-height: 9.5rem; }
+  .tile b { font-size: 1rem; }
+  .tile .who { font-size: 0.85rem; }
+  .dr-head { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+  .dgrid { grid-template-columns: 1fr; }
+  #free-row .dc:nth-child(n+4), #new-row .dc:nth-child(n+4) { display: none; }
+  .dc { min-height: 0; }
+  .dirhome section { margin-bottom: 2.5rem; }
+}
+
 .doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 0 0 1rem; }
 .door { display: block; background: var(--pine); color: var(--cream); border-radius: 16px; padding: 1.2rem 1.3rem; text-decoration: none; }
 .door b { display: block; font-size: 1.15rem; margin-bottom: 0.3rem; }
@@ -366,7 +411,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
       <a class="name" href="/">PRO SKILL PACKS</a>
-      <nav aria-label="Main"><a href="/work/">Work</a><a href="/">All products</a><a href="/shopify/" aria-current="page">Shopify</a><a href="/free/">Free</a><a href="/guides/">Guides</a></nav>
+      <nav aria-label="Main"><a href="/">Home</a><a href="/categories/" aria-current="page">Categories</a><a href="/free/">Free</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav>
     </div>
     <p class="crumbs"><a href="/shopify/">Shopify stores</a> / <a href="/shopify/chargebacks/">Chargebacks</a> / PayPal</p>
     <h1>A buyer opened a PayPal dispute. How do I respond?</h1>
@@ -413,19 +458,20 @@ document.querySelectorAll('.prose pre').forEach(function (pre) {
     <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers and agencies</a><a href="/for/developers/">Developers</a><a href="/for/data-and-spreadsheets/">Spreadsheets</a><a href="/for/careers/">Careers</a><a href="/for/sales-and-outreach/">Sales and outreach</a><a href="/for/content-and-writing/">Writing</a><a href="/for/finance-and-admin/">Finance and admin</a><a href="/for/customer-support/">Support</a></nav>
     <div class="row">
       <nav aria-label="Footer">
-        <a href="/">All products</a>
-        <a href="/free/">Free downloads</a>
+        <a href="/">Home</a>
+        <a href="/categories/">Categories</a>
+        <a href="/free/">Free</a>
         <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+        <a href="mailto:kaiventura.founder@gmail.com">Contact</a>
         <a href="/new/">What's new</a>
         <a href="/changelog/">Changelog</a>
         <a href="/go/affiliates/?from=shopify-chargebacks-paypal">Affiliates</a>
         <a href="/request/">Ask for something</a>
         <a href="/study/">Research</a>
-        <a href="/about/">About</a>
         <a href="/how-we-test/">How we test</a>
         <a href="/works-with/">For people who use AI assistants</a>
         <a href="/faq/">FAQ</a>
-        <a href="mailto:kaiventura.founder@gmail.com">Contact</a>
         <a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=shopify-chargebacks-paypal&amp;utm_campaign=store" rel="noopener">Shop</a>
         <a href="/go/install/?from=shopify-chargebacks-paypal" rel="noopener">For developers</a>
         <a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a>
