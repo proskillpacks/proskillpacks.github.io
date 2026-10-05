@@ -452,6 +452,24 @@ details.usingai { border: 1px solid var(--rule); border-radius: 12px; background
 details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; }
 .devline { color: var(--slate); font-size: 0.9rem; }
 
+.fb-steps { list-style: none; counter-reset: fb; margin: 1rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.fb-steps li { counter-increment: fb; border: 1px solid var(--rule); border-radius: 12px; background: #fff; padding: 1rem 1.1rem; }
+.fb-steps li::before { content: counter(fb); display: inline-flex; align-items: center; justify-content: center; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--pine); color: var(--lime); font-weight: 800; margin-bottom: 0.5rem; }
+.fb-steps b { display: block; }
+.fb-pick { list-style: none; margin: 0.6rem 0 1.4rem; padding: 0; border: 1px solid var(--rule); border-radius: 12px; background: #fff; overflow: hidden; }
+.fb-pick li { display: grid; grid-template-columns: 1fr 4.5rem 9.5rem; gap: 0.75rem; align-items: center; padding: 0.65rem 1rem; border-top: 1px solid var(--rule); }
+.fb-pick li:first-child { border-top: 0; }
+.fb-pick .nm { font-weight: 700; }
+.fb-pick .pr { color: var(--slate); text-align: right; }
+.fb-pick .ask { text-align: center; white-space: nowrap; font-size: 0.92rem; padding: 0.4rem 0.7rem; }
+.fb-note { max-width: 46rem; }
+@media (max-width: 56rem) { .fb-steps { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) {
+  .fb-steps { grid-template-columns: 1fr; }
+  .fb-pick li { grid-template-columns: 1fr auto; row-gap: 0.4rem; }
+  .fb-pick .ask { grid-column: 1 / -1; }
+}
+
 .doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 0 0 1rem; }
 .door { display: block; background: var(--pine); color: var(--cream); border-radius: 16px; padding: 1.2rem 1.3rem; text-decoration: none; }
 .door b { display: block; font-size: 1.15rem; margin-bottom: 0.3rem; }
@@ -613,7 +631,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 <section id="tools" class="aud-tools"><h2>What the free tool adds</h2><p class="sub">It is free. Start there.</p><div class="wkit wpaid" id="review-reply-drafter"><div class="wk-img wide"><img class="pvimg" src="/assets/demos/review-reply-drafter-last.png" width="1200" height="675" loading="lazy" alt="The finished result of Review Reply Drafter on a real example: reviews go in, a reply for each comes out"></div><div class="wk-txt"><span class="free">Free</span><h3>Review Reply Drafter</h3><p><b>What you give it:</b> One review, a few, a file from your review app, or the address of a public review page.</p><p><b>What you get:</b> A reply for each review, matched to its tone. An unhappy customer gets an apology for what happened, one next step and an invitation to talk privately. It never offers a refund, credit or discount you have not approved: it leaves a gap for you. It flags the reviews that need you first, such as an injury, an allergic reaction, or a legal or chargeback threat.</p><div class="cta"><a class="btn btn-lime" href="/skills/review-reply-drafter/">Open the free Review Reply Drafter</a></div><p class="sub" style="margin:.6rem 0 0"><a href="/prompts/review-reply-drafter/">Or paste the free text into any chatbot</a></p></div></div></section>
 <section id="faq"><h2>Questions people ask</h2><div class="prose"><h3>Should I reply to every negative review?</h3><p>Yes, if you can do it calmly. A short reply shows the next buyer how you treat people. If you are angry, wait a day.</p><h3>How long should the reply be?</h3><p>Three or four sentences. Thank them, say sorry for what happened, give one next step, give a way to reach you.</p><h3>Should I offer a refund in the reply?</h3><p>Only if you have already decided to. Say that you will help, and give the details in a private message.</p><h3>What if the review is not true?</h3><p>Stay polite. Say you cannot find the order and ask them to write to you. Let the facts come out in private.</p><h3>What about a review about an injury or a legal threat?</h3><p>Do not reply on the spot. Decide what to say first, and get advice if you need it.</p></div></section>
 <section><h2>More</h2><div class="prose"><ul class="links"><li><a href="/stores/product-description-template/">Product description template: four you can fill in</a></li><li><a href="/stores/return-policy-template-for-online-store/">Return policy template for an online store: four parts to copy</a></li><li><a href="/stores/">All the store owner pages</a></li></ul></div></section>
-</div></main>
+<section id="more-like-this"><h2>More like this</h2><div class="prose"><ul class="links"><li><a href="/stores/how-to-write-a-refund-email-to-a-customer/">How to write a refund email to a customer: four you can copy</a></li><li><a href="/stores/shipment-delay-email-to-customer/">Shipment delay email to a customer: four you can copy</a></li><li><a href="/stores/how-to-ask-customers-for-reviews/">How to ask customers for reviews: four messages to copy</a></li></ul></div></section></div></main>
 <script>(function(){var T=function(){if(window.pspTrack)window.pspTrack('copy','stores-how-to-respond-to-a-negative-review')};function cp(btn,text,label){if(!navigator.clipboard)return;navigator.clipboard.writeText(text).then(function(){btn.textContent='Copied';setTimeout(function(){btn.textContent=label},1500)})}document.querySelectorAll('.phl li').forEach(function(li){if(!navigator.clipboard)return;var b=document.createElement('button');b.type='button';b.className='copybtn';b.textContent='Copy';b.setAttribute('aria-label','Copy this line');b.onclick=function(){T();cp(b,li.getAttribute('data-t'),'Copy')};li.appendChild(b)});var a=document.getElementById('copyall');if(a){if(!navigator.clipboard){a.style.display='none'}else{a.onclick=function(){T();var t=[];document.querySelectorAll('.phl li').forEach(function(li){t.push(li.getAttribute('data-t'))});cp(a,t.join('\n'),a.getAttribute('data-l'))}}}})();</script>
 <footer class="sitefoot">
   <div class="wrap">
@@ -622,7 +640,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
         <p>Professional skills for ChatGPT, Claude and other AI assistants.</p></div>
       <nav aria-label="Browse"><h2>Browse</h2><ul><li><a href="/categories/#g-online-stores">Online stores</a></li><li><a href="/categories/#g-developers-and-data">Developers and data</a></li><li><a href="/categories/#g-work-and-careers">Work and careers</a></li><li><a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a></li><li><a href="/categories/#g-money-admin-support">Money, admin and support</a></li><li><a href="/all/">All skills</a></li></ul></nav>
       <nav aria-label="Learn"><h2>Learn</h2><ul><li><a href="/guides/">Guides</a></li><li><a href="/study/">Research</a></li><li><a href="/free/">Free skills</a></li><li><a href="/how-we-test/">How we test</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/new/">What's new</a></li></ul></nav>
-      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/about/#terms">Terms and refunds</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/go/affiliates/?from=stores">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=stores&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
+      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/feedback/">Free copy for feedback</a></li><li><a href="/about/#terms">Terms and refunds</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/go/affiliates/?from=stores">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=stores&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
     </div>
     <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>

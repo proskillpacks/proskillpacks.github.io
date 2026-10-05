@@ -460,6 +460,24 @@ details.usingai { border: 1px solid var(--rule); border-radius: 12px; background
 details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; }
 .devline { color: var(--slate); font-size: 0.9rem; }
 
+.fb-steps { list-style: none; counter-reset: fb; margin: 1rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.fb-steps li { counter-increment: fb; border: 1px solid var(--rule); border-radius: 12px; background: #fff; padding: 1rem 1.1rem; }
+.fb-steps li::before { content: counter(fb); display: inline-flex; align-items: center; justify-content: center; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--pine); color: var(--lime); font-weight: 800; margin-bottom: 0.5rem; }
+.fb-steps b { display: block; }
+.fb-pick { list-style: none; margin: 0.6rem 0 1.4rem; padding: 0; border: 1px solid var(--rule); border-radius: 12px; background: #fff; overflow: hidden; }
+.fb-pick li { display: grid; grid-template-columns: 1fr 4.5rem 9.5rem; gap: 0.75rem; align-items: center; padding: 0.65rem 1rem; border-top: 1px solid var(--rule); }
+.fb-pick li:first-child { border-top: 0; }
+.fb-pick .nm { font-weight: 700; }
+.fb-pick .pr { color: var(--slate); text-align: right; }
+.fb-pick .ask { text-align: center; white-space: nowrap; font-size: 0.92rem; padding: 0.4rem 0.7rem; }
+.fb-note { max-width: 46rem; }
+@media (max-width: 56rem) { .fb-steps { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) {
+  .fb-steps { grid-template-columns: 1fr; }
+  .fb-pick li { grid-template-columns: 1fr auto; row-gap: 0.4rem; }
+  .fb-pick .ask { grid-column: 1 / -1; }
+}
+
 .doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 0 0 1rem; }
 .door { display: block; background: var(--pine); color: var(--cream); border-radius: 16px; padding: 1.2rem 1.3rem; text-decoration: none; }
 .door b { display: block; font-size: 1.15rem; margin-bottom: 0.3rem; }
@@ -651,7 +669,7 @@ I can give you my answer by [date].
 <section id="faq"><h2>Questions people ask</h2><div class="prose"><h3>Can I accept a job offer by phone?</h3><p>GOV.UK says an offer and its acceptance can be verbal or in writing. It is wise to follow a phone call with an email that repeats the pay, start date and hours.</p><h3>How long can I take to answer?</h3><p>We found no official rule, so we can&#x27;t give one. Ask for a specific date, politely, as in the second reply. They can say no, and a very long delay may put the offer at risk.</p><h3>Can I ask for more money?</h3><p>Nothing stops you asking, and the third reply is a calm way to do it. They can say no. We can&#x27;t promise any result.</p><h3>What if I accepted and I have changed my mind?</h3><p>GOV.UK says that after accepting an unconditional offer the employer can make you work out any contractual notice or sue for breach of contract. Tell them as soon as you can, and get free advice from Acas if you are unsure.</p><h3>Should I hand in my notice now?</h3><p>GOV.UK says to wait until you have an unconditional offer, because a conditional offer could fall through.</p><h3>What if I panic-accepted and I am not ready?</h3><p>Tell them quickly and honestly, and read the GOV.UK page above. What happens next depends on whether the offer was unconditional. We can&#x27;t advise on your case; the Acas helpline can.</p></div></section>
 <section id="sources"><h2>Sources</h2><div class="prose"><ul class="links"><li><a href="https://www.gov.uk/job-offers-your-rights" rel="noopener">GOV.UK: Job offers, your rights</a>, read 4 October 2026</li><li><a href="https://www.gov.uk/handing-in-your-notice" rel="noopener">GOV.UK: Handing in your notice</a>, read 4 October 2026</li></ul><p class="sub"><b>Not legal advice.</b> This is general information. Rules depend on your contract, your country and, in the US, your state. For advice on your own case, ask the free Acas helpline (UK) or a qualified adviser. Page written and checked on 4 October 2026; official pages can change.</p></div></section>
 <section><h2>More</h2><div class="prose"><ul class="links"><li><a href="/work/resignation-letter/">Resignation letter: a short one to copy, and what notice means</a></li><li><a href="/work/ask-for-a-raise/">How to ask for a raise: the email asking for the meeting</a></li><li><a href="/work/">All the words for hard moments at work</a></li></ul></div></section>
-<section id="more-like-this"><h2>More like this</h2><div class="prose"><ul class="links"><li><a href="/work/after-a-difficult-meeting/">After a difficult meeting with your boss or HR: the follow-up email</a></li><li><a href="/work/flexible-working-request/">Flexible working request: what to put in it</a></li><li><a href="/work/explain-a-gap/">How to explain a gap in your CV, or why you left a job</a></li></ul></div></section></div></main>
+<section id="more-like-this"><h2>More like this</h2><div class="prose"><ul class="links"><li><a href="/work/after-a-difficult-meeting/">After a difficult meeting with your boss or HR: the follow-up email</a></li><li><a href="/work/flexible-working-request/">Flexible working request: what to put in it</a></li><li><a href="/work/two-weeks-notice-email/">Two weeks notice email: four you can copy</a></li></ul></div></section></div></main>
 <script>document.querySelectorAll('.letterbox pre').forEach(function(pre){if(!navigator.clipboard)return;var b=document.createElement('button');b.type='button';b.className='copybtn';b.textContent='Copy letter';b.onclick=function(){if(window.pspTrack)window.pspTrack('copy','work-reply-to-a-job-offer');navigator.clipboard.writeText(pre.querySelector('code').textContent).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy letter'},1500)})};pre.insertBefore(b,pre.firstChild)});</script>
 <footer class="sitefoot">
   <div class="wrap">
@@ -660,7 +678,7 @@ I can give you my answer by [date].
         <p>Professional skills for ChatGPT, Claude and other AI assistants.</p></div>
       <nav aria-label="Browse"><h2>Browse</h2><ul><li><a href="/categories/#g-online-stores">Online stores</a></li><li><a href="/categories/#g-developers-and-data">Developers and data</a></li><li><a href="/categories/#g-work-and-careers">Work and careers</a></li><li><a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a></li><li><a href="/categories/#g-money-admin-support">Money, admin and support</a></li><li><a href="/all/">All skills</a></li></ul></nav>
       <nav aria-label="Learn"><h2>Learn</h2><ul><li><a href="/guides/">Guides</a></li><li><a href="/study/">Research</a></li><li><a href="/free/">Free skills</a></li><li><a href="/how-we-test/">How we test</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/new/">What's new</a></li></ul></nav>
-      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/about/#terms">Terms and refunds</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/go/affiliates/?from=work">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=work&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
+      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/feedback/">Free copy for feedback</a></li><li><a href="/about/#terms">Terms and refunds</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/go/affiliates/?from=work">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=work&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
     </div>
     <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>

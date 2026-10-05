@@ -443,6 +443,24 @@ details.usingai { border: 1px solid var(--rule); border-radius: 12px; background
 details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; }
 .devline { color: var(--slate); font-size: 0.9rem; }
 
+.fb-steps { list-style: none; counter-reset: fb; margin: 1rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.fb-steps li { counter-increment: fb; border: 1px solid var(--rule); border-radius: 12px; background: #fff; padding: 1rem 1.1rem; }
+.fb-steps li::before { content: counter(fb); display: inline-flex; align-items: center; justify-content: center; width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--pine); color: var(--lime); font-weight: 800; margin-bottom: 0.5rem; }
+.fb-steps b { display: block; }
+.fb-pick { list-style: none; margin: 0.6rem 0 1.4rem; padding: 0; border: 1px solid var(--rule); border-radius: 12px; background: #fff; overflow: hidden; }
+.fb-pick li { display: grid; grid-template-columns: 1fr 4.5rem 9.5rem; gap: 0.75rem; align-items: center; padding: 0.65rem 1rem; border-top: 1px solid var(--rule); }
+.fb-pick li:first-child { border-top: 0; }
+.fb-pick .nm { font-weight: 700; }
+.fb-pick .pr { color: var(--slate); text-align: right; }
+.fb-pick .ask { text-align: center; white-space: nowrap; font-size: 0.92rem; padding: 0.4rem 0.7rem; }
+.fb-note { max-width: 46rem; }
+@media (max-width: 56rem) { .fb-steps { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) {
+  .fb-steps { grid-template-columns: 1fr; }
+  .fb-pick li { grid-template-columns: 1fr auto; row-gap: 0.4rem; }
+  .fb-pick .ask { grid-column: 1 / -1; }
+}
+
 .doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 0 0 1rem; }
 .door { display: block; background: var(--pine); color: var(--cream); border-radius: 16px; padding: 1.2rem 1.3rem; text-decoration: none; }
 .door b { display: block; font-size: 1.15rem; margin-bottom: 0.3rem; }
@@ -658,7 +676,7 @@ document.querySelectorAll('.prose pre').forEach(function (pre) {
         <p>Professional skills for ChatGPT, Claude and other AI assistants.</p></div>
       <nav aria-label="Browse"><h2>Browse</h2><ul><li><a href="/categories/#g-online-stores">Online stores</a></li><li><a href="/categories/#g-developers-and-data">Developers and data</a></li><li><a href="/categories/#g-work-and-careers">Work and careers</a></li><li><a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a></li><li><a href="/categories/#g-money-admin-support">Money, admin and support</a></li><li><a href="/all/">All skills</a></li></ul></nav>
       <nav aria-label="Learn"><h2>Learn</h2><ul><li><a href="/guides/">Guides</a></li><li><a href="/study/">Research</a></li><li><a href="/free/">Free skills</a></li><li><a href="/how-we-test/">How we test</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/new/">What's new</a></li></ul></nav>
-      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/about/#terms">Terms and refunds</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/go/affiliates/?from=shopify-chargebacks-product-unacceptable">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=shopify-chargebacks-product-unacceptable&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
+      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/feedback/">Free copy for feedback</a></li><li><a href="/about/#terms">Terms and refunds</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/go/affiliates/?from=shopify-chargebacks-product-unacceptable">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=shopify-chargebacks-product-unacceptable&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
     </div>
     <small>Pro Skill Packs. Product names and trademarks belong to their owners. Not affiliated with or endorsed by Shopify Inc.</small>
   </div>
