@@ -30,21 +30,17 @@
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
- "@type": "Product",
+ "@type": "CreativeWork",
  "name": "Find code changes that have no tests",
  "description": "A diff and its tests in, what is not covered and test cases to add.",
  "url": "https://proskillpacks.github.io/skills/test-gap-finder/",
- "brand": {
-  "@type": "Brand",
-  "name": "Pro Skill Packs"
+ "isAccessibleForFree": true,
+ "publisher": {
+  "@type": "Organization",
+  "name": "Pro Skill Packs",
+  "url": "https://proskillpacks.github.io/"
  },
- "offers": {
-  "@type": "Offer",
-  "price": "0.00",
-  "priceCurrency": "USD",
-  "availability": "https://schema.org/InStock",
-  "url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/test-gap-finder"
- }
+ "image": "https://proskillpacks.github.io/assets/og/01567594ec42.png"
 }
 </script>
 <style>
@@ -977,6 +973,8 @@ details.evb2 > summary .evone { display: block; font-weight: 400; color: var(--s
 details.evb2 > summary::after { content: "Show the test"; display: block; margin-top: 0.3rem; font-size: 0.85rem; font-weight: 700; color: var(--pine); text-decoration: underline; }
 details.evb2[open] > summary::after { content: "Hide the test"; }
 details.evb2[open] > summary { margin-bottom: 0.7rem; }
+.three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; max-width: none; }
+@media (max-width: 56rem) { .three { grid-template-columns: 1fr; } }
 .kitline { margin: 0 0 1rem; }
 @media (min-width: 56.01rem) { .freepg .dgrid.dgrid.dgrid.dgrid.dgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .card p, .card h3 { -webkit-line-clamp: unset; display: block; }
