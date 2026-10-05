@@ -436,11 +436,14 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .subcat h3 a { color: var(--ink); text-decoration: none; }
 .catsec h2 .pl { font-size: 0.9rem; font-weight: 600; }
 @media (max-width: 56rem) { .gtiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } .why3, .steps { grid-template-columns: 1fr; } }
-@media (max-width: 40rem) { .gtiles { grid-template-columns: 1fr; gap: 0.85rem; } .gtile h3, .gtile .who { min-height: 0; } .gtile { padding: 1.1rem; } .stats { gap: 0.3rem 1rem; font-size: 0.88rem; } }
+@media (max-width: 40rem) { .gtiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem; } .gtile { position: relative; padding: 0.9rem 0.8rem; gap: 0.15rem; align-items: flex-start; } .gtile .who, .gtile .gt-list, .gtile .gt-all { display: none; } .gtile .gt-ico { width: 2.3rem; height: 2.3rem; margin-bottom: 0.3rem; } .gtile h3 { font-size: 1.02rem; } .gtile h3 a::after { content: ""; position: absolute; inset: 0; } .gt-n { margin: 0; padding: 0; }
+  .gtile h3, .gtile .who { min-height: 0; } .stats { gap: 0.3rem 1rem; font-size: 0.88rem; } }
 @media (min-width: 56.01rem) { .grid:has(> :nth-child(4):last-child), .grid:has(> :nth-child(7):last-child), .grid:has(> :nth-child(10):last-child), .grid:has(> :nth-child(16):last-child), .grid:has(> :nth-child(19):last-child), .grid:has(> :nth-child(22):last-child), .grid:has(> :nth-child(28):last-child), .grid:has(> :nth-child(31):last-child), .grid:has(> :nth-child(34):last-child), .grid:has(> :nth-child(40):last-child), .grid:has(> :nth-child(43):last-child), .grid:has(> :nth-child(46):last-child), .grid:has(> :nth-child(52):last-child), .grid:has(> :nth-child(55):last-child), .grid:has(> :nth-child(58):last-child), .grid:has(> :nth-child(64):last-child), .grid:has(> :nth-child(67):last-child), .grid:has(> :nth-child(70):last-child), .grid:has(> :nth-child(76):last-child), .grid:has(> :nth-child(79):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (min-width: 56.01rem) { .dgrid:has(> :nth-child(4):last-child), .dgrid:has(> :nth-child(7):last-child), .dgrid:has(> :nth-child(10):last-child), .dgrid:has(> :nth-child(16):last-child), .dgrid:has(> :nth-child(19):last-child), .dgrid:has(> :nth-child(22):last-child), .dgrid:has(> :nth-child(28):last-child), .dgrid:has(> :nth-child(31):last-child), .dgrid:has(> :nth-child(34):last-child), .dgrid:has(> :nth-child(40):last-child), .dgrid:has(> :nth-child(43):last-child), .dgrid:has(> :nth-child(46):last-child), .dgrid:has(> :nth-child(52):last-child), .dgrid:has(> :nth-child(55):last-child), .dgrid:has(> :nth-child(58):last-child), .dgrid:has(> :nth-child(64):last-child), .dgrid:has(> :nth-child(67):last-child), .dgrid:has(> :nth-child(70):last-child), .dgrid:has(> :nth-child(76):last-child), .dgrid:has(> :nth-child(79):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (min-width: 40.01rem) and (max-width: 56rem) { .grid > :nth-child(odd):last-child, .dgrid > :nth-child(odd):last-child { grid-column: 1 / -1; } }
 
+.gtk { margin: 0 0 1.8rem; } .gtk h2 { font-size: 1.05rem; margin: 0 0 0.4rem; } .gtk .prose p { font-size: 0.9rem; color: var(--slate); margin: 0 0 0.5rem; max-width: 52rem; }
+.hero a.alt-link { color: var(--cream); text-decoration: underline; }
 .proofrow { display: flex; flex-wrap: wrap; gap: 1.2rem 2rem; align-items: flex-start; margin: 0 0 2.2rem; }
 .proofrow .pvfig { flex: 0 1 20rem; margin: 0; }
 .proofrow .pvfig img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 10px; }
@@ -580,6 +583,22 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .lo s { opacity: 0.7; } .lo b { font-weight: 800; }
 @media (max-width: 640px) { .lobar { font-size: 0.82rem; text-align: left; } }
 
+.tcard { margin: 0 0 1.6rem; max-width: 52rem; gap: 0.5rem; min-height: 0; }
+.tcard .tc-bridge { margin: 0; font-weight: 700; color: var(--ink); font-size: 1rem; line-height: 1.4; display: block; -webkit-line-clamp: unset; }
+.tcard .tc-name { font-weight: 800; }
+.tcard .tc-price { display: block; font-size: 0.9rem; color: var(--slate); line-height: 1.4; }
+.tcard .tc-act { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; margin-top: 0.2rem; }
+.tcard .tc-see { font-size: 0.92rem; }
+.tbar { display: none; }
+@media (max-width: 640px) {
+  .tbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: flex; align-items: center; gap: 0.6rem; padding: 0.55rem 0.8rem; background: #fff; border-top: 1px solid var(--rule); box-shadow: 0 -2px 8px rgba(0,0,0,0.08); transform: translateY(110%); visibility: hidden; transition: transform 0.2s; }
+  .tbar.on { transform: none; visibility: visible; }
+  .tbar .tb-t { flex: 1; min-width: 0; line-height: 1.25; font-size: 0.85rem; color: var(--slate); }
+  .tbar .tb-t b { display: block; color: var(--ink); font-size: 0.92rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tbar .tb-get { background: var(--lime); color: var(--pine); font-weight: 700; text-decoration: none; padding: 0.55rem 1.1rem; border-radius: 999px; white-space: nowrap; }
+  .tbar .tb-x { background: none; border: 0; font-size: 1.4rem; line-height: 1; color: var(--slate); padding: 0.2rem 0.4rem; cursor: pointer; }
+}
+
 </style>
 <script type="application/ld+json">
 {
@@ -669,11 +688,13 @@ I need to tell you something difficult. I accepted the <span class="br">[JOB TIT
 <span class="br">[ONE TRUE SENTENCE OF REASON, IF YOU WANT TO GIVE ONE.]</span>
 
 <span class="br">[YOUR NAME]</span></span></span></li></ul></section>
+<aside class="card tcard" id="topcard" aria-label="The full product"><p class="tc-bridge">Want all three replies in one file to fill in?</p><div><span class="tc-name">Reply to a job offer</span><span class="tc-price">Free</span></div><div class="tc-act"><a class="btn btn-lime" data-nolo="1" href="/go/work/reply-to-a-job-offer/?from=work-how-to-decline-a-job-offer-politely-top">Get it free</a> <a class="tc-see" href="#reply-to-a-job-offer">See what's inside</a></div></aside>
 <section id="avoid"><h2>What to avoid</h2><div class="prose"><ul><li>Do not ghost them. A clear no, early, is kind. Silence is not.</li><li>Do not give a long reason, or list what was wrong with the offer. A short &quot;it is not the right fit&quot; is enough.</li><li>Do not say &quot;maybe&quot; if you mean no. If you may want to negotiate instead, send a different reply.</li><li>Do not wait. Tell them within a day or two of deciding, so they can offer the job to someone else.</li><li>Do not say bad things about their company or pay. People move, and recruiters remember.</li></ul></div></section>
 <section id="tools" class="aud-tools"><h2>What the free kit adds</h2><p class="sub">It covers saying yes, asking for time and asking for more. For a no, the messages above are what you need.</p><div class="wkit" id="reply-to-a-job-offer"><span class="free">Free</span><h3>Reply to a job offer</h3><p>Three short replies to fill in: say yes, ask for time, or ask for more. <a href="/work/reply-to-a-job-offer/">Read the free guide first</a>.</p><div class="cta"><a class="btn btn-lime" href="/go/work/reply-to-a-job-offer/?from=work">Get it free (sent to your email)</a><p class="sub" style="margin:.5rem 0 0">Free. Gumroad asks for an email to send the files. <a href="/go/work-zip/reply-to-a-job-offer/?from=work">Or download now without email</a>.</p></div></div></section>
 <section id="faq"><h2>Questions people ask</h2><div class="prose"><h3>Should I give a reason for saying no?</h3><p>You do not have to. One true sentence, such as &quot;another role fits my plans better&quot;, is plenty.</p><h3>Is email fine, or should I call?</h3><p>Email is fine for most jobs. If you got to know the person well, a short call first can be kind. Follow it with the email.</p><h3>What if I already accepted?</h3><p>Tell them straight away and apologize once. The sooner they know, the easier it is for them. Check your contract or offer letter, and your start date.</p><h3>Can I keep the door open?</h3><p>Yes. Say you enjoyed meeting them, and mean it. Do not promise to stay in touch unless you will.</p><h3>What if I want a better offer instead?</h3><p>Then do not decline yet. Ask for time or ask for more, as in the free kit above.</p></div></section>
 <section><h2>More</h2><div class="prose"><ul class="links"><li><a href="/work/two-weeks-notice-email/">Two weeks notice email: four you can copy</a></li><li><a href="/work/how-to-ask-for-a-reference/">How to ask for a reference: four messages to copy</a></li><li><a href="/work/">All the words for hard moments at work</a></li></ul></div></section>
 <section id="more-like-this"><h2>More like this</h2><div class="prose"><ul class="links"><li><a href="/work/explain-a-gap/">How to explain a gap in your CV, or why you left a job</a></li><li><a href="/work/ask-for-a-raise/">How to ask for a raise: the email asking for the meeting</a></li></ul></div></section></div></main>
+
 <script>(function(){var T=function(){if(window.pspTrack)window.pspTrack('copy','work-how-to-decline-a-job-offer-politely')};function cp(btn,text,label){if(!navigator.clipboard)return;navigator.clipboard.writeText(text).then(function(){btn.textContent='Copied';setTimeout(function(){btn.textContent=label},1500)})}document.querySelectorAll('.phl li').forEach(function(li){if(!navigator.clipboard)return;var b=document.createElement('button');b.type='button';b.className='copybtn';b.textContent='Copy';b.setAttribute('aria-label','Copy this line');b.onclick=function(){T();cp(b,li.getAttribute('data-t'),'Copy')};li.appendChild(b)});var a=document.getElementById('copyall');if(a){if(!navigator.clipboard){a.style.display='none'}else{a.onclick=function(){T();var t=[];document.querySelectorAll('.phl li').forEach(function(li){t.push(li.getAttribute('data-t'))});cp(a,t.join('\n'),a.getAttribute('data-l'))}}}})();</script>
 <footer class="sitefoot">
   <div class="wrap">
