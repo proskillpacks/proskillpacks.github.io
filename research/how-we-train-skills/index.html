@@ -28,7 +28,7 @@
  "@context": "https://schema.org",
  "@type": "Article",
  "headline": "How we train skills: a case study",
- "description": "How we train a skill instead of writing it by hand: score it on tasks, change it in small steps, keep a change only if the score goes up. One skill so far, Agent Browse, with the numbers, the edit that hurt and what it cost.",
+ "description": "How we train a skill instead of writing it by hand: score it on tasks, change it in small steps, keep a change only if the score goes up. One skill so far, Agent Browse, in versions for two models, with the numbers, the edit that hurt and what it cost.",
  "datePublished": "2026-10-05",
  "mainEntityOfPage": "https://proskillpacks.github.io/research/how-we-train-skills/",
  "publisher": {
@@ -693,7 +693,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     </div>
     <p class="crumbs"><a href="/guides/">Guides</a> / How we train skills: a case study</p>
     <h1>How we train skills: a case study</h1>
-    <p class="lead">One skill of ours was trained like a model: scored on tasks, changed in small steps, kept only when the score went up. The method, the numbers, and what went wrong. Most of our other skills are not trained this way yet.</p>
+    <p class="lead">One skill of ours, in versions for two models, was trained like a model: scored on tasks, changed in small steps, kept only when the score went up. The method, the numbers, and what went wrong. Our other skills are not trained this way yet.</p>
     
   </div>
 </header>
@@ -737,7 +737,53 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <h3>The one edit that hurt</h3>
 <p>The rule was: "Never guess selectors on a page you have not seen." It sounds careful. It made the model take a page snapshot on tasks where guessing already worked, and that cost more than the failures it prevented. It came in the second set of edits. The gate rejected that set. Without the gate, we would have shipped it.</p>
 
-<h2>A second case: the starter example</h2>
+<h2>Part 2: the same skill on a local model</h2>
+<p class="trline"><b>Status: scored on the selection split only. The held-out test is not finished.</b> Those runs were still in progress when we wrote this.</p>
+<p>Part 1 ended on a plain point: a strong model leaves little to train. So we swapped in a weaker one, Qwen3.8-27B, running on a local server and driven by the <code>pi</code> coding agent, and asked how much more the method gives.</p>
+<h3>The setup</h3>
+<div class="table" role="region" tabindex="0" aria-label="Table, scrolls sideways"><table><thead><tr><th>Role</th><th>Part 1</th><th>Part 2</th></tr></thead><tbody><tr><td>Student (does the browsing, never edits the skill)</td><td>Opus 5.5 through <code>claude -p</code></td><td>Qwen3.8-27B on a local OpenAI-compatible server, through <code>pi -p</code></td></tr><tr><td>Optimizer (reads the recordings, writes edits)</td><td>Claude Fable 5.1</td><td>Claude Fable 5.1</td></tr><tr><td>Judge</td><td>A check in the test harness</td><td>The same</td></tr><tr><td>Starting skill</td><td>A 150-word seed</td><td><code>s1</code>, the skill accepted in Part 1</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p>
+<p>The harness is the same one, with the student swapped. Same tasks, prompt, splits and score. Pi forced three differences. It has no turn limit, so each run gets 15 minutes and a timeout scores 0. It cannot block <code>curl</code>, so a run that uses it is scored wrong. And turns are counted as assistant messages, which is close to the Claude figure but not identical.</p>
+<h3>Results on the selection split</h3>
+<p>Runs on a local model are free, so each candidate got 6 runs per task (48 runs) instead of 2.</p>
+<div class="table" role="region" tabindex="0" aria-label="Table, scrolls sideways"><table><thead><tr><th>Skill</th><th>Edits</th><th>Correct</th><th>Score</th><th>Tokens per task</th><th>Turns</th><th>Decision</th></tr></thead><tbody><tr><td>No skill (24 runs)</td><td></td><td>21/24</td><td>0.7887</td><td>68.7k</td><td>13.9</td><td></td></tr><tr><td><code>s1</code> (trained on Opus)</td><td></td><td>47/48</td><td>0.9177</td><td>42.3k</td><td>9.2</td><td>start</td></tr><tr><td><code>q1</code></td><td>4</td><td>43/48</td><td>0.8367</td><td>42.0k</td><td>8.3</td><td>rejected</td></tr><tr><td><code>q2</code></td><td><code>q1</code> with one edit swapped</td><td>48/48</td><td><b>0.9454</b></td><td><b>36.4k</b></td><td>8.5</td><td><b>accepted</b></td></tr><tr><td><code>q3</code></td><td>4 more</td><td>47/48</td><td>0.9215</td><td>39.4k</td><td>8.1</td><td>rejected</td></tr><tr><td><code>q4</code></td><td>2 of the <code>q3</code> edits</td><td>44/48</td><td>0.8542</td><td>47.0k</td><td>9.1</td><td>see note</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p>
+<p class="tnote">About <code>q4</code>: three of its four failures were 15-minute timeouts on the 50-page catalogue crawl, after the practice site began refusing requests under four crawls at once, so that is the site throttling, not the skill. A one-at-a-time re-run is pending.</p>
+<p>For reference, Opus with <code>s1</code> on the same split got 16 of 16, a score of 0.9687, 20.8k tokens and 3.0 turns. The tuned skill brings Qwen level with Opus on accuracy here, but Qwen still needs nearly three times the turns and about 75% more tokens. On the train split <code>q2</code> and <code>s1</code> were level (0.9436 against 0.9484, both 39 of 39), so the selection gain is not confirmed there.</p>
+<h3>What the edits were</h3>
+<p>Kept in <code>q2</code>, all on top of <code>s1</code>:</p>
+<ul>
+<li><b>Never invent what you have not seen.</b> Qwen made up deep addresses that returned 404, and ids and classes that did not exist. The rule: start from the given address, follow the site's own links, and look at the page before writing a selector.</li>
+<li><b>Selector syntax.</b> It kept using a style the tool rejects. The skill now names the one that works.</li>
+<li><b>Longer scripts on stdin.</b> Shell quoting cost two or three turns in several runs.</li>
+<li><b>A paging check.</b> The one recurring wrong answer: Qwen looked for a next-page button with a guessed selector, found nothing, and reported a 26-book category as 20. The rule: compare what you collected with the page's own total.</li>
+<li><b>Do not close the browser early.</b> It closed it before it had read the output it needed.</li>
+</ul>
+<p>Rejected:</p>
+<ul>
+<li><b>"When the output contains the answer, reply at once."</b> It was meant to stop re-checking. It failed the paging task more often.</li>
+<li><b>Retry the page-open command in a loop.</b> It made the 50-page crawl about 50% more expensive.</li>
+<li><b>Custom dropdowns need a different command.</b> Qwen hit this on every run of one train task, but no selection task uses it, so the gate could not reward it.</li>
+<li><b>Always quote selectors, wrap scripts in a function.</b> Both prevent real errors seen in the recordings. Neither moved the selection score.</li>
+</ul>
+<p class="tnote">Edits were gated in bundles, so which edit did what is our reading of the recordings, not a measured effect.</p>
+<h3>What we noticed</h3>
+<ul class="learn">
+<li><b>A skill is tuned to the model that reads it.</b>One rule changed sign. "Never guess selectors on a page you have not seen" was rejected in Part 1, because Opus guessed right and the rule only added a step. Qwen guesses wrong often, and the accepted Qwen skill contains a version of it.</li>
+<li><b>The failures differ in kind.</b>Every kept Opus edit removed waste from runs that already worked. The Qwen edits prevent errors: wrong selector style, broken quoting, a list called complete when it was not.</li>
+<li><b>Most of the value transferred.</b>The Opus-trained skill alone took Qwen from 87.5% to 97.9% correct and cut tokens by 38%, much more than it did for Opus. The Qwen step added a smaller gain. That points to a shared core plus a thin layer for each model.</li>
+<li><b>A skill helps a weaker model more.</b>Training moved Opus's score by 0.025. For Qwen, no skill to tuned skill is 0.157 (0.789 to 0.945), and accuracy went from 87.5% to 100%. The starting points differ, so this is rough.</li>
+<li><b>Noise limits how far you can tune.</b>Three of four Qwen candidates were rejected. The <code>q2</code> margin over <code>s1</code> is one failed run in 48 plus a 14% token saving, and a second batch of <code>s1</code> runs alone scored 0.941.</li>
+<li><b>The test sites were the bottleneck.</b>Qwen answers in under a second per turn. Nearly all the time went on page loads and waits. Four runs at once made the practice sites return errors, so the selection numbers carry that noise.</li>
+</ul>
+<h3>Limits of Part 2</h3>
+<ul>
+<li>The held-out test for Qwen is pending. All the Part 2 figures are on the selection split, the one the gate used to pick the skill.</li>
+<li>The cross-check on Opus was not run: the Qwen skill on Opus. If it made Opus slower than <code>s1</code> does, that would be direct evidence for model-specific tuning. Until then the sign change above rests on two separately gated bundles.</li>
+<li>One local model, one quantisation, one harness. Thinking was left at pi's default.</li>
+<li>The Qwen skill is <code>q2</code> plus the same hand-added Setup section, which did not go through the gate.</li>
+</ul>
+<p><a href="/skills/agent-browse-qwen/">Agent Browse for local models (Qwen)</a> is the free skill. The recordings and every candidate are in <a href="https://github.com/proskillpacks/skillopt-agent-browse/tree/main/training" rel="noopener">the research repo</a>.</p>
+
+<h2>Another case: the starter example</h2>
 <p>To let anyone try this, we built a small loop that needs no browser: <a href="https://github.com/proskillpacks/skillopt-agent-browse/tree/main/starter" rel="noopener">the starter</a>. Its 18 toy tasks ask for a "house style" (date formats, invoice ids, file names) that the task never states. Here the model did not start at 100%, so accuracy itself could be the score. The model was Claude Haiku. One reflection step, one candidate.</p>
 <div class="table" role="region" tabindex="0" aria-label="Table, scrolls sideways"><table><thead><tr><th>Skill given to the model</th><th>Selection (6 tasks, 2 runs)</th><th>Test (6 tasks, 2 runs)</th></tr></thead><tbody><tr><td>No skill</td><td>0 of 6 (one run)</td><td>0 of 12</td></tr><tr><td>Seed: two lines, no rules</td><td>0 of 12</td><td>0 of 12</td></tr><tr><td><b>Trained candidate</b> (215 words, one step)</td><td><b>10 of 12</b>, kept</td><td><b>10 of 12</b></td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p>
 <p class="tnote">The whole run was 84 model runs and one reflection call, about $1.50. A local 27B model (Qwen 3.8 via Ollama) scored 0 of 18 with no skill. The skill trained with Haiku then got 5 of 6 unseen tasks right on that local model, in one run.</p>
@@ -753,14 +799,14 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 
 <div class="status">
 <h2>Where each skill stands today</h2>
-<div class="srow"><span class="tag t1">Trained and gated</span><b>Agent Browse</b><p>Scored on tasks, changed in small steps, kept only on a higher score. This is the only skill that has been through the full loop.</p></div>
+<div class="srow"><span class="tag t1">Trained and gated</span><b>Agent Browse (for Claude Opus) and its variant for Qwen3.8-27B</b><p>This is one skill in two versions. Scored on tasks, changed in small steps, kept only on a higher score. The Opus version has a held-out test. The Qwen version is scored on the selection split so far; its held-out test is pending.</p></div>
 <div class="srow"><span class="tag t2">Tested by hand</span><b>Every other skill</b><p>Run on real examples before release and checked against a written rubric. Not trained or gated. <a href="/how-we-test/">How we test</a>.</p></div>
 <div class="srow"><span class="tag t3">Planned</span><b>Invoice Checker, and Spreadsheet Formula and Cleanup</b><p>Next to be trained and gated. Their output can be scored automatically. No dates.</p></div>
 </div>
 
 <h2>Limits</h2>
 <ul>
-<li>One skill, one model for the full case. We do not know yet whether the Agent Browse result holds for other models.</li>
+<li>One skill, in two versions. The Opus version has a held-out test; the Qwen version does not yet. We do not know whether the result holds for other models.</li>
 <li>The model started at 100% there, so the gains are about cost. The paper reports larger accuracy gains where models start lower.</li>
 <li>Our checks are automatic, so this only works for jobs a program can score. Many skills cannot be scored that way.</li>
 <li>The Setup section of the Agent Browse skill was added by hand, after problems in our test setup. It did not go through the gate.</li>
