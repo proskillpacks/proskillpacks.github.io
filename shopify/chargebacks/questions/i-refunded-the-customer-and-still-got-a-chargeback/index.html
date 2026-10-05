@@ -309,6 +309,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .sr { position: absolute; left: -9999px; }
 .hsearch { margin: 1.6rem 0 0; max-width: 40rem; }
 .hsearch input { width: 100%; box-sizing: border-box; font: inherit; font-size: 1.1rem; padding: 0.95rem 1.2rem; border-radius: 999px; border: 2px solid transparent; background: #fff; color: var(--ink); }
+@media (max-width: 40rem) { .hsearch input { font-size: 0.95rem; padding: 0.85rem 1rem; } }
 .hsearch input:focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }
 .dirhome section { margin: 0 0 3.25rem; }
 .dr-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin: 0 0 1.1rem; }
@@ -331,7 +332,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .dc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem; }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
 .dc .go::after { content: " \2192"; }
-.catsec { margin: 0 0 2.25rem; padding-top: 0.5rem; }
+.catsec { margin: 2.5rem 0 2.25rem; padding-top: 0.5rem; }
 .catsec h2 a { color: var(--ink); text-decoration: none; }
 .plain { list-style: none; padding: 0; margin: 0 0 0.6rem; columns: 2 20rem; column-gap: 2rem; }
 .plain li { margin: 0 0 0.45rem; break-inside: avoid; }
@@ -345,19 +346,45 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   .tile b { font-size: 1rem; }
   .tile .who { font-size: 0.85rem; }
   .dr-head { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
-  .dgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
-  .dc { min-width: 0; }
-  .dc-top { font-size: 0.68rem; letter-spacing: 0.03em; }
-  #free-row .go, #new-row .go, #start-row .go { display: none; }
-  #guides-row .dgrid, #results .dgrid { grid-template-columns: 1fr; }
+  .dgrid { grid-template-columns: 1fr; gap: 0.75rem; }
   .dc { padding: 0.9rem 0.85rem; }
   .dc h3 { font-size: 0.98rem; }
   .dc p { font-size: 0.88rem; }
   .dc .go { font-size: 0.82rem; }
-  #free-row .dc:nth-child(n+5), #new-row .dc:nth-child(n+5), #start-row .dc:nth-child(n+5) { display: none; }
   .dc { min-height: 0; }
   .dirhome section { margin-bottom: 2.5rem; }
 }
+.stats { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; padding: 0; margin: 1.1rem 0 0; color: var(--mist); font-size: 0.95rem; }
+.stats b { color: var(--lime); font-size: 1.05rem; }
+.gtiles { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1.1rem; }
+.gtile { grid-column: span 2; display: flex; flex-direction: column; gap: 0.3rem; background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.4rem 1.4rem 1.2rem; }
+.gtile.wide { grid-column: span 3; }
+.gt-ico { width: 2.9rem; height: 2.9rem; display: flex; align-items: center; justify-content: center; border-radius: 12px; background: #eaf2ed; color: var(--pine); margin-bottom: 0.4rem; }
+.gtile h3 { margin: 0; font-size: 1.2rem; line-height: 1.25; font-weight: 800; }
+.gtile h3 a { color: var(--ink); text-decoration: none; }
+.gtile .who { margin: 0; color: var(--slate); font-size: 0.95rem; line-height: 1.45; }
+.gt-n { margin: 0.2rem 0 0.4rem; font-size: 0.85rem; font-weight: 700; color: var(--moss); }
+.gt-list { list-style: none; margin: 0 0 0.8rem; padding: 0.6rem 0 0; border-top: 1px solid var(--rule); font-size: 0.92rem; }
+.gt-list li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0.15rem 0; }
+.gt-list a { color: var(--pine); text-decoration: none; }
+.gt-list a:hover, .gt-list a:focus-visible { text-decoration: underline; }
+.gt-all { margin-top: auto; font-weight: 700; color: var(--pine); text-decoration: underline; text-underline-offset: 3px; }
+.gt-all::after { content: " \2192"; }
+.why h2, .how h2 { margin-bottom: 1.1rem; }
+.why3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.6rem; }
+.why3 h3 { margin: 0 0 0.3rem; font-size: 1.05rem; font-weight: 800; }
+.why3 p { margin: 0; color: var(--slate); font-size: 0.95rem; line-height: 1.5; }
+.why3 a { color: var(--pine); font-weight: 700; }
+.steps { list-style: none; counter-reset: st; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; padding: 0; margin: 0; }
+.steps li { counter-increment: st; display: flex; flex-direction: column; gap: 0.3rem; padding: 1.2rem 1.3rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; }
+.steps li::before { content: counter(st); width: 2rem; height: 2rem; border-radius: 50%; background: var(--pine); color: var(--lime); font-weight: 800; display: flex; align-items: center; justify-content: center; margin-bottom: 0.3rem; }
+.steps span { color: var(--slate); font-size: 0.95rem; }
+.subcat { margin: 1.4rem 0 0; }
+.subcat h3 { margin: 0 0 0.2rem; font-size: 1.1rem; }
+.subcat h3 a { color: var(--ink); text-decoration: none; }
+.catsec h2 .pl { font-size: 0.9rem; font-weight: 600; }
+@media (max-width: 56rem) { .gtile, .gtile.wide { grid-column: span 3; } .why3, .steps { grid-template-columns: 1fr; } }
+@media (max-width: 40rem) { .gtiles { grid-template-columns: 1fr; gap: 0.85rem; } .gtile, .gtile.wide { grid-column: auto; padding: 1.1rem; } .stats { gap: 0.3rem 1rem; font-size: 0.88rem; } }
 
 .doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 0 0 1rem; }
 .door { display: block; background: var(--pine); color: var(--cream); border-radius: 16px; padding: 1.2rem 1.3rem; text-decoration: none; }
