@@ -375,6 +375,17 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .gt-list li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0.15rem 0; }
 .gt-list a { color: var(--pine); text-decoration: none; }
 .gt-list a:hover, .gt-list a:focus-visible { text-decoration: underline; }
+@media (min-width: 56.01rem) {
+  .hero:has(+ main.dirhome) { padding-bottom: 1.6rem; }
+  .gtiles { gap: 0.8rem; }
+  .gtile { padding: 0.9rem 1.1rem 0.8rem; gap: 0.15rem; }
+  .gt-ico { width: 2.3rem; height: 2.3rem; margin-bottom: 0.1rem; }
+  .gtile h3 { min-height: 0; font-size: 1.1rem; }
+  .gtile .who { min-height: 0; font-size: 0.9rem; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .gt-n { margin-bottom: 0.2rem; }
+  .gt-list { margin-bottom: 0.4rem; padding-top: 0.4rem; font-size: 0.88rem; }
+  .gt-list li { padding: 0.05rem 0; }
+}
 .gt-all { margin-top: auto; font-weight: 700; color: var(--pine); text-decoration: underline; text-underline-offset: 3px; }
 .gt-all::after { content: " \2192"; }
 .why h2, .how h2 { margin-bottom: 1.1rem; }
@@ -405,6 +416,14 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .proofrow .pvfig { flex: 0 1 20rem; margin: 0; }
 .proofrow .pvfig img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 10px; }
 .proofrow .pvfig figcaption { font-size: 0.85rem; color: var(--slate); margin-top: 0.4rem; }
+.pvmore { display: none; }
+@media (max-width: 40rem) {
+  .proofrow .pvfig { flex: 1 1 100%; }
+  .pvcrop { display: block; height: 19rem; overflow: hidden; border: 1px solid var(--rule); border-radius: 10px; }
+  .proofrow .pvfig .pvcrop img { width: 110%; max-width: none; height: auto; border: 0; border-radius: 0; object-fit: cover; object-position: top left; }
+  .proofrow .pvfig .pvr img { width: 190%; margin-left: -84%; }
+  .pvmore { display: inline; font-weight: 700; }
+}
 .trustbox { flex: 1 1 18rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 1.1rem 1.3rem; }
 .trustbox p { margin: 0 0 0.6rem; }
 .trustbox ul { margin: 0; padding-left: 1.1rem; }
@@ -724,7 +743,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
   </div>
 </header>
 <main><div class="wrap">
-<section class="proofrow"><figure class="pvfig"><img src="/assets/chargeback-kit-letter.png" width="1000" height="562" alt="A filled chargeback response letter from the kit"><figcaption>A page of the real file you get.</figcaption></figure><div class="trustbox"><p><b>Who is behind this.</b> Pro Skill Packs is a small independent publisher of ready-made skills and fill-in kits. Every one is run on real examples before release.</p><ul><li><a href="/how-we-test/">How we test</a></li><li>30-day refund, no questions about why</li><li><a href="/contact/">Contact page</a>, or write to kaiventura.founder@gmail.com</li></ul><p class="sub" style="margin:.6rem 0 0">New here? <a href="/feedback/">Ask for a free copy in exchange for honest feedback.</a></p></div></section>
+<section class="proofrow"><figure class="pvfig"><a class="pvcrop pvr" href="/assets/chargeback-kit-letter.png"><img src="/assets/chargeback-kit-letter.png" width="1000" height="562" alt="A filled chargeback response letter from the kit"></a><figcaption>A page of the real file you get. <a class="pvmore" href="/assets/chargeback-kit-letter.png">Tap to see the whole page</a></figcaption></figure><div class="trustbox"><p><b>Who is behind this.</b> Pro Skill Packs is a small independent publisher of ready-made skills and fill-in kits. Every one is run on real examples before release.</p><ul><li><a href="/how-we-test/">How we test</a></li><li>30-day refund, no questions about why</li><li><a href="/contact/">Contact page</a>, or write to kaiventura.founder@gmail.com</li></ul><p class="sub" style="margin:.6rem 0 0">New here? <a href="/feedback/">Ask for a free copy in exchange for honest feedback.</a></p></div></section>
 <section class="gtk"><h2>Good to know</h2><div class="prose"><p>Checkout is on Gumroad. Prices are in US dollars; Gumroad shows your local currency and any VAT in the total before you pay. Check that total in the cart. 30-day refund. Tested on 6 real dispute scenarios from the Shopify Community forum. Every final run scored 9/10 or more, with no invented evidence. Not legal advice, and no response can promise how a bank will decide.</p></div></section>
 <section id="steps"><h2>How to use it</h2><div class="prose"><ol><li>Open START-HERE.pdf. It is one page and tells you which letter to use.</li><li>Find the reason on the chargeback banner of the order in your Shopify admin. Open the Word letter for that reason.</li><li>Fill in the brackets with facts from your own records. Delete any line you cannot back with a file.</li><li>Attach the files on the checklist and send it in Shopify before the due date shown on the chargeback.</li></ol><p class="assure"><b>Stuck?</b> Email your filled-in letter to <a href="mailto:kaiventura.founder@gmail.com?subject=Draft%20check" data-go="request/draft-check">kaiventura.founder@gmail.com</a> before you submit (remove card numbers and anything you don't want to share). We'll tell you what's missing for your reason, usually within one working day. Free. Not legal advice.</p><p class="assure"><b>One price, $5. No percentage of what you win, no subscription, no surprise charges.</b></p></div></section>
 <section id="chatgpt"><h2>If you use ChatGPT or a similar assistant</h2><div class="prose"><p>The download also has a ready text to paste into ChatGPT or a similar assistant. Add your order details and it fills the letter in for you. It never invents evidence: anything you did not tell it shows up as a gap to fill, not as a fact. It never looks at your store, it only uses what you type in. You do not need this to use the letters.</p></div></section>
