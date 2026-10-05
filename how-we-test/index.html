@@ -444,6 +444,38 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .phl .subj { display: block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.9rem; margin: 0 0 0.5rem; }
 .sales-tools .wkit { max-width: 52rem; }
 
+.dc-tr { flex: none; background: var(--pine); color: var(--lime); padding: 0.12rem 0.5rem; border-radius: 999px; font-size: 0.68rem; white-space: nowrap; }
+.dc-top:has(.dc-tr) .dc-cat { display: none; }
+.dc-top .dc-cat { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tr-badge { display: inline-block; background: var(--lime); color: var(--pine); font-weight: 800; font-size: 0.8rem; padding: 0.15rem 0.7rem; border-radius: 999px; }
+.trline { margin: 0 0 0.9rem; } .trline a { color: var(--lime); }
+.cs h2 { margin-top: 2.2rem; }
+.cs .table { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; border: 1px solid var(--rule); border-radius: 10px; background: #fff; margin: 0 0 1.2rem; }
+.cs .table table { min-width: 30rem; margin: 0; }
+.cs .table + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
+.cs .flow { max-width: 30rem; margin: 1.2rem auto 1.6rem; }
+.cs .flow svg { width: 100%; height: auto; display: block; }
+.cs .flow text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+.cs .flowcap { text-align: center; color: var(--slate); font-size: 0.92rem; margin: -0.8rem 0 1.6rem; }
+.cs .learn { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.9rem; padding: 0; list-style: none; margin: 0 0 1rem; }
+.cs .learn li { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.9rem 1.1rem; }
+.cs .learn b { display: block; margin-bottom: 0.2rem; }
+.cs .status { border: 2px solid var(--pine); border-radius: 14px; background: #fff; overflow: hidden; margin: 1rem 0 1.4rem; }
+.cs .status h2 { margin: 0; padding: 0.8rem 1.2rem; background: var(--pine); color: var(--cream); font-size: 1.15rem; }
+.cs .srow { padding: 0.9rem 1.2rem; border-top: 1px solid var(--rule); }
+.cs .srow:first-of-type { border-top: 0; }
+.cs .tag { display: inline-block; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.03em; padding: 0.12rem 0.6rem; border-radius: 999px; margin-right: 0.5rem; }
+.cs .tag.t1 { background: var(--lime); color: var(--pine); }
+.cs .tag.t2 { background: #e6efe9; color: var(--pine); }
+.cs .tag.t3 { background: #fff; border: 1px solid var(--sage); color: var(--slate); }
+.cs .srow p { margin: 0.35rem 0 0; }
+.cs .try { background: var(--cream); border: 1px solid var(--rule); border-radius: 14px; padding: 1.1rem 1.3rem; }
+.cs .try a.btn { text-decoration: none; margin: 0.2rem 0.3rem 0.2rem 0; }
+.cs .try a.btn-pine { color: var(--cream); }
+.cs .try a.btn-ghost { color: var(--pine); }
+.cs .try pre { overflow-x: auto; max-width: 100%; }
+@media (max-width: 640px) { .cs .learn { grid-template-columns: 1fr; } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -484,7 +516,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 <h2>What we do for each skill</h2>
 <ul><li><strong>Two real runs.</strong> Before release, each skill is run twice on public input. The first is a normal case: a public web page, a job post, a CSV, code, commits, a status page. The second is deliberately hard: thin, messy, contradictory, blocked, or full of &quot;I think&quot; and &quot;maybe&quot;. We read both outputs against the source ourselves, fix what is wrong, re-run the fixed skill, and ship. The first example appears on the skill&#x27;s page under Before and after.</li><li><strong>Why two.</strong> On 4 October 2026 we gave 69 skills a second, harder run: 16 had a defect that the first run had missed, most often something marked unsure in the input being stated as fact. All 16 were fixed and re-run. Read it: <a href="/study/retest/">We re-tested 69 skills on harder inputs. 16 failed.</a></li><li><strong>Assistants.</strong> The runs used Claude Sonnet. Some of the older packs were also checked on Claude Opus. The paste-in prompts were not run in ChatGPT or Gemini.</li><li><strong>Script checks, no model.</strong> The Skill Portability Check script (the free tool at /tools/skill-check/) parses each SKILL.md like a strict YAML parser, flags vendor tool names, vendor paths and missing fallbacks, and warns when a skill that writes text for other people never says what to do with unsure input. A release check on every zip looks for a missing README or prompt, leftover placeholders, em dashes, private addresses and vendor-only wording. It records a sha256 of each shipped prompt in a file, so a changed prompt is visible.</li></ul>
 <h2>One skill was trained and gated</h2>
-<p>Most of our skills are tested by hand, on real examples, as described above. One of them, <a href="/skills/agent-browse/">Agent Browse</a>, was also trained and gated: we scored it on a set of tasks and kept only the edits that measurably helped. The write-up is in <a href="/research/training-a-skill/">We trained a skill instead of writing it</a>. We plan to do the same for a few flagship skills where tasks can be scored automatically. The other skills were not trained this way.</p>
+<p>Most of our skills are tested by hand, on real examples, as described above. One of them, <a href="/skills/agent-browse/">Agent Browse</a>, was also trained and gated: we scored it on a set of tasks and kept only the edits that measurably helped. The write-up is the case study <a href="/research/how-we-train-skills/">How we train skills</a>, which also lists where each skill stands today. We plan to do the same for a few flagship skills where tasks can be scored automatically. The other skills were not trained this way.</p>
 <h2>Older packs</h2>
 <p>The Shopify and rental-host packs went through a stricter process: several tests per skill on real public stores or listings, scored by hand against a written rubric, and released only when every test scored 8 out of 10 or more. For the host pack an independent reviewer re-scored some tests, scored the earlier version lower than we did (as low as 6), and every defect it listed as required was fixed.</p>
 <h2>Invented test input</h2>
