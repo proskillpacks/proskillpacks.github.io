@@ -2,6 +2,97 @@
  "generated": "2026-10-05",
  "products": [
   {
+   "id": "spreadsheet-formula-and-cleanup",
+   "title": "Spreadsheet Formula and Cleanup",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "data-and-spreadsheets",
+   "category_name": "Data and spreadsheets",
+   "price_usd": 9,
+   "price_label": "$9",
+   "free": false,
+   "url": "/skills/spreadsheet-formula-and-cleanup/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/spreadsheet-formula-and-cleanup",
+   "summary": "Describe the result you want and paste a few rows. Get a formula that fits your columns, tested on your sample, with the edge cases listed.",
+   "give": "Describe the result you want, paste a few real rows and name your app.",
+   "get": "A formula in your real columns, a test table on your sample, and the edge cases.",
+   "jobs": [
+    "calculate",
+    "clean data"
+   ],
+   "tags": [],
+   "tested": "2 runs on a public CSV (Claude Sonnet). The first run left out the test table, so we made that section mandatory; the second run included it and the numbers matched.",
+   "includes": []
+  },
+  {
+   "id": "resume-bullet-rewriter",
+   "title": "Resume Bullet Rewriter",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "careers",
+   "category_name": "Job seekers and careers",
+   "price_usd": 9,
+   "price_label": "$9",
+   "free": false,
+   "url": "/skills/resume-bullet-rewriter/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/resume-bullet-rewriter",
+   "summary": "Paste your resume bullets and a job post. Get clearer bullets with every unconfirmed number marked, and a table of what the job asks that you do not yet show.",
+   "give": "Paste your resume bullets and a job post.",
+   "get": "Clearer bullets with every missing number marked for you to confirm, and a table of what the job asks that you do not yet show.",
+   "jobs": [
+    "write copy",
+    "job search"
+   ],
+   "tags": [],
+   "tested": "1 real-data run on sample bullets and a public job post (Claude Sonnet). We changed placeholder wording after the run so it never implies a result.",
+   "includes": []
+  },
+  {
+   "id": "cold-email-from-a-website",
+   "title": "Cold Email from a Website",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "sales-and-outreach",
+   "category_name": "Sales and outreach",
+   "price_usd": 9,
+   "price_label": "$9",
+   "free": false,
+   "url": "/skills/cold-email-from-a-website/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/cold-email-from-a-website",
+   "summary": "Give it a prospect's URL and what you sell. Get a 3-email sequence built on what is actually on their site, with every observation sourced.",
+   "give": "A prospect's website and a line on what you sell.",
+   "get": "A three-email sequence and two subject lines, each built on something visible on their site, with the page it came from.",
+   "jobs": [
+    "write copy",
+    "reach out"
+   ],
+   "tags": [],
+   "tested": "1 real-data run on a public software company's website (Claude Sonnet). Output read and checked: every observation traced to a page, no invented claims.",
+   "includes": []
+  },
+  {
+   "id": "voice-matched-draft-editor",
+   "title": "Voice-Matched Draft Editor",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "content-and-writing",
+   "category_name": "Content and writing",
+   "price_usd": 9,
+   "price_label": "$9",
+   "free": false,
+   "url": "/skills/voice-matched-draft-editor/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/voice-matched-draft-editor",
+   "summary": "Give it two or three things you wrote and a draft. It edits the draft to sound like you, keeps every fact, and flags claims it cannot support.",
+   "give": "Two or three things you wrote and a draft.",
+   "get": "The draft edited to sound like you, a list of what changed, and flags on claims it cannot support.",
+   "jobs": [
+    "edit writing"
+   ],
+   "tags": [],
+   "tested": "1 real-data run on public essay samples and a sample draft (Claude Sonnet). The first run overwrote a file in the test folder, so the skill now says never to modify files.",
+   "includes": []
+  },
+  {
    "id": "store-ops-pack",
    "title": "Store Ops Pack",
    "kind": "Pack",
@@ -119,6 +210,52 @@
    "includes": []
   },
   {
+   "id": "invoice-checker",
+   "title": "Invoice Checker",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "finance-and-admin",
+   "category_name": "Finance and small-business admin",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/invoice-checker/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/finance/invoice-checker",
+   "summary": "Give it an invoice. Get the totals recomputed, every difference, missing fields and consistency flags. No tax advice. Free, MIT-licensed.",
+   "give": "An invoice, yours or one you received.",
+   "get": "A small script (Python 3 standard library, exact decimal arithmetic) recomputes every line, the subtotal, the discount, the tax and the total, and lists every difference. It lists common fields that are missing and flags date, currency and rounding problems. It gives no tax advice.",
+   "jobs": [
+    "check",
+    "admin"
+   ],
+   "tags": [],
+   "tested": "1 run on a sample invoice we wrote with planted errors (Claude Sonnet).",
+   "includes": []
+  },
+  {
+   "id": "angry-customer-reply-check",
+   "title": "Angry Customer Reply Check",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "customer-support",
+   "category_name": "Customer support",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/angry-customer-reply-check/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/support/angry-customer-reply-check",
+   "summary": "Give it the complaint, your draft reply and your policy. Get a check of promises, facts and tone, and a repaired draft. Free, MIT-licensed.",
+   "give": "The customer's message, your draft reply and your policy.",
+   "get": "It lists what the customer raised and whether the draft answers it, tests every promise against your policy, checks the facts, flags blame, defensive phrases and empty apologies with your exact words, checks there is a next step, and returns a repaired draft. Open decisions are marked [DECIDE]. It never adds a refund or timeline you did not give it.",
+   "jobs": [
+    "write replies",
+    "check"
+   ],
+   "tags": [],
+   "tested": "1 run on a complaint, draft and policy we wrote (Claude Sonnet).",
+   "includes": []
+  },
+  {
    "id": "csv-profile-and-sanity-check",
    "title": "CSV Profile and Sanity Check",
    "kind": "Free skill",
@@ -207,52 +344,6 @@
    ],
    "tags": [],
    "tested": "1 real-data run on a public launch post (Claude Sonnet). All 17 flagged claims and both internal conflicts were real.",
-   "includes": []
-  },
-  {
-   "id": "invoice-checker",
-   "title": "Invoice Checker",
-   "kind": "Free skill",
-   "type": "free",
-   "category": "finance-and-admin",
-   "category_name": "Finance and small-business admin",
-   "price_usd": 0,
-   "price_label": "Free",
-   "free": true,
-   "url": "/skills/invoice-checker/",
-   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/finance/invoice-checker",
-   "summary": "Give it an invoice. Get the totals recomputed, every difference, missing fields and consistency flags. No tax advice. Free, MIT-licensed.",
-   "give": "An invoice, yours or one you received.",
-   "get": "A small script (Python 3 standard library, exact decimal arithmetic) recomputes every line, the subtotal, the discount, the tax and the total, and lists every difference. It lists common fields that are missing and flags date, currency and rounding problems. It gives no tax advice.",
-   "jobs": [
-    "check",
-    "admin"
-   ],
-   "tags": [],
-   "tested": "1 run on a sample invoice we wrote with planted errors (Claude Sonnet).",
-   "includes": []
-  },
-  {
-   "id": "angry-customer-reply-check",
-   "title": "Angry Customer Reply Check",
-   "kind": "Free skill",
-   "type": "free",
-   "category": "customer-support",
-   "category_name": "Customer support",
-   "price_usd": 0,
-   "price_label": "Free",
-   "free": true,
-   "url": "/skills/angry-customer-reply-check/",
-   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/support/angry-customer-reply-check",
-   "summary": "Give it the complaint, your draft reply and your policy. Get a check of promises, facts and tone, and a repaired draft. Free, MIT-licensed.",
-   "give": "The customer's message, your draft reply and your policy.",
-   "get": "It lists what the customer raised and whether the draft answers it, tests every promise against your policy, checks the facts, flags blame, defensive phrases and empty apologies with your exact words, checks there is a next step, and returns a repaired draft. Open decisions are marked [DECIDE]. It never adds a refund or timeline you did not give it.",
-   "jobs": [
-    "write replies",
-    "check"
-   ],
-   "tags": [],
-   "tested": "1 run on a complaint, draft and policy we wrote (Claude Sonnet).",
    "includes": []
   },
   {
