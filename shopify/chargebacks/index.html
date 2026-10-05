@@ -436,6 +436,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 @media (max-width: 40rem) { .gtiles { grid-template-columns: 1fr; gap: 0.85rem; } .gtile h3, .gtile .who { min-height: 0; } .gtile { padding: 1.1rem; } .stats { gap: 0.3rem 1rem; font-size: 0.88rem; } }
 @media (min-width: 56.01rem) { .grid:has(> :nth-child(4):last-child), .grid:has(> :nth-child(7):last-child), .grid:has(> :nth-child(10):last-child), .grid:has(> :nth-child(16):last-child), .grid:has(> :nth-child(19):last-child), .grid:has(> :nth-child(22):last-child), .grid:has(> :nth-child(28):last-child), .grid:has(> :nth-child(31):last-child), .grid:has(> :nth-child(34):last-child), .grid:has(> :nth-child(40):last-child), .grid:has(> :nth-child(43):last-child), .grid:has(> :nth-child(46):last-child), .grid:has(> :nth-child(52):last-child), .grid:has(> :nth-child(55):last-child), .grid:has(> :nth-child(58):last-child), .grid:has(> :nth-child(64):last-child), .grid:has(> :nth-child(67):last-child), .grid:has(> :nth-child(70):last-child), .grid:has(> :nth-child(76):last-child), .grid:has(> :nth-child(79):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (min-width: 56.01rem) { .dgrid:has(> :nth-child(4):last-child), .dgrid:has(> :nth-child(7):last-child), .dgrid:has(> :nth-child(10):last-child), .dgrid:has(> :nth-child(16):last-child), .dgrid:has(> :nth-child(19):last-child), .dgrid:has(> :nth-child(22):last-child), .dgrid:has(> :nth-child(28):last-child), .dgrid:has(> :nth-child(31):last-child), .dgrid:has(> :nth-child(34):last-child), .dgrid:has(> :nth-child(40):last-child), .dgrid:has(> :nth-child(43):last-child), .dgrid:has(> :nth-child(46):last-child), .dgrid:has(> :nth-child(52):last-child), .dgrid:has(> :nth-child(55):last-child), .dgrid:has(> :nth-child(58):last-child), .dgrid:has(> :nth-child(64):last-child), .dgrid:has(> :nth-child(67):last-child), .dgrid:has(> :nth-child(70):last-child), .dgrid:has(> :nth-child(76):last-child), .dgrid:has(> :nth-child(79):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 40.01rem) and (max-width: 56rem) { .grid > :nth-child(odd):last-child, .dgrid > :nth-child(odd):last-child { grid-column: 1 / -1; } }
 
 .proofrow { display: flex; flex-wrap: wrap; gap: 1.2rem 2rem; align-items: flex-start; margin: 0 0 2.2rem; }
 .proofrow .pvfig { flex: 0 1 20rem; margin: 0; }
@@ -470,6 +471,18 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .region { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; border: 1px solid var(--pine); color: var(--pine); border-radius: 999px; padding: 0.05rem 0.55rem; margin-right: 0.4rem; vertical-align: 0.1em; }
 .quote { border-left: 4px solid var(--lime); padding: 0.1rem 0 0.1rem 1rem; margin: 0.8rem 0; }
 .quote cite { display: block; font-size: 0.9rem; color: var(--slate); font-style: normal; margin-top: 0.3rem; }
+
+.phl { list-style: none; padding: 0; margin: 0 0 1.2rem; max-width: 46rem; }
+.phl li { display: flex; flex-wrap: wrap; gap: 0.5rem 0.8rem; align-items: flex-start; justify-content: space-between; background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.7rem 0.9rem; margin: 0 0 0.5rem; }
+.phl .tx { flex: 1 1 14rem; }
+.phl .lab { display: block; font-size: 0.78rem; font-weight: 700; color: var(--slate); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.1rem; }
+.phl .copybtn, .copyall { float: none; margin: 0; flex: none; }
+.br { background: #fff3a3; border-radius: 3px; padding: 0 0.1em; }
+.pgrp h3 { margin: 1.1rem 0 0.5rem; }
+.avoidbox { max-width: 46rem; background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.9rem 1.2rem; margin: 0.8rem 0 0; }
+.avoidbox p { margin: 0 0 0.5rem; }
+.mgr-two { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.mgr-ft { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; }
 
 </style>
 <script src="https://gumroad.com/js/gumroad.js"></script>

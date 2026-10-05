@@ -637,7 +637,7 @@
   },
   {
    "id": "chargeback-evidence-checklist",
-   "title": "Chargeback Evidence Checklist",
+   "title": "Chargeback Evidence Checklist: PDF and skill",
    "kind": "Free skill",
    "type": "free",
    "category": "shopify",
@@ -647,7 +647,7 @@
    "free": true,
    "url": "/skills/chargeback-evidence-checklist/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/ecommerce/chargeback-evidence-checklist",
-   "summary": "Got a chargeback? The evidence to gather for your dispute reason, what you already have, and where to find each piece in Shopify.",
+   "summary": "Got a chargeback? One printable PDF page for each reason, or paste the skill into a chatbot: the evidence to gather and where to find it in Shopify.",
    "give": "The dispute reason.",
    "get": "The evidence to gather for that reason, what you already have, and where to find each piece in Shopify.",
    "jobs": [
