@@ -469,9 +469,9 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
 @supports (grid-template-rows: subgrid) { @media (min-width: 40.01rem) {   /* phones are one column: plain flex cards */
-  .dgrid > .dc:not(.feat):not(.dg) { display: grid; grid-template-rows: subgrid; grid-row: span 5; row-gap: 0.4rem; align-content: start; }
-  .dgrid > .dc:not(.feat):not(.dg) > .dc-top { grid-row: 1; } .dgrid > .dc:not(.feat):not(.dg) > h3 { grid-row: 2; } .dgrid > .dc:not(.feat):not(.dg) > p { grid-row: 3; }
-  .dgrid > .dc:not(.feat):not(.dg) > .dc-proof { grid-row: 4; } .dgrid > .dc:not(.feat):not(.dg) > .dc-foot { grid-row: 5; align-self: end; }
+  .dgrid > .dc:not(.feat):not(.dg) { display: grid; grid-template-rows: subgrid; grid-row: span 3; row-gap: 0.4rem; align-content: start; }
+  .dgrid > .dc:not(.feat):not(.dg) > h3 { grid-row: 1; } .dgrid > .dc:not(.feat):not(.dg) > p { grid-row: 2; }
+  .dgrid > .dc:not(.feat):not(.dg) > .dc-foot { grid-row: 3; align-self: end; }
 } }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
 .dc .go::after { content: " \2192"; }
@@ -592,6 +592,7 @@ a.v9t:hover, a.v9t:focus-visible { border-color: var(--pine); }
 .v9t .go::after { content: " \2192"; }
 .v9t.dev { background: #f1f4f0; border-style: dashed; }
 .v9t.dev a { color: var(--pine); font-weight: 700; }
+.rulesd summary { cursor: pointer; font-weight: 800; font-size: 1.1rem; padding: 0.6rem 0; }
 .v9dev { margin: 1rem 0 0; font-size: 0.93rem; color: var(--slate); }
 .v9dev a { color: var(--pine); font-weight: 700; }
 .jc { display: flex; flex-direction: column; gap: 0.35rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--ink); }

@@ -406,9 +406,9 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
 @supports (grid-template-rows: subgrid) { @media (min-width: 40.01rem) {   /* phones are one column: plain flex cards */
-  .dgrid > .dc:not(.feat):not(.dg) { display: grid; grid-template-rows: subgrid; grid-row: span 5; row-gap: 0.4rem; align-content: start; }
-  .dgrid > .dc:not(.feat):not(.dg) > .dc-top { grid-row: 1; } .dgrid > .dc:not(.feat):not(.dg) > h3 { grid-row: 2; } .dgrid > .dc:not(.feat):not(.dg) > p { grid-row: 3; }
-  .dgrid > .dc:not(.feat):not(.dg) > .dc-proof { grid-row: 4; } .dgrid > .dc:not(.feat):not(.dg) > .dc-foot { grid-row: 5; align-self: end; }
+  .dgrid > .dc:not(.feat):not(.dg) { display: grid; grid-template-rows: subgrid; grid-row: span 3; row-gap: 0.4rem; align-content: start; }
+  .dgrid > .dc:not(.feat):not(.dg) > h3 { grid-row: 1; } .dgrid > .dc:not(.feat):not(.dg) > p { grid-row: 2; }
+  .dgrid > .dc:not(.feat):not(.dg) > .dc-foot { grid-row: 3; align-self: end; }
 } }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
 .dc .go::after { content: " \2192"; }
@@ -529,6 +529,7 @@ a.v9t:hover, a.v9t:focus-visible { border-color: var(--pine); }
 .v9t .go::after { content: " \2192"; }
 .v9t.dev { background: #f1f4f0; border-style: dashed; }
 .v9t.dev a { color: var(--pine); font-weight: 700; }
+.rulesd summary { cursor: pointer; font-weight: 800; font-size: 1.1rem; padding: 0.6rem 0; }
 .v9dev { margin: 1rem 0 0; font-size: 0.93rem; color: var(--slate); }
 .v9dev a { color: var(--pine); font-weight: 700; }
 .jc { display: flex; flex-direction: column; gap: 0.35rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--ink); }
@@ -1090,7 +1091,7 @@ Here is what I copied from my store:</textarea><p class="sub"><a href="/prompts/
 <section id="ask"><h2>Want me to look at your store?</h2><div class="prose"><p>Send your store address and what you are seeing. We read the public pages of your store and send back one page of findings, free, with no call and no sign-up. We do not need access to your admin, and we cannot promise a day.</p><div class="cta"><a class="btn btn-lime" href="mailto:kaiventura.founder@gmail.com?subject=Please%20look%20at%20my%20Shopify%20store%3A%20traffic%20but%20no%20add%20to%20carts&body=My%20store%20address%3A%20%0A%0AWhat%20is%20happening%3A%20" data-go="request/no-sales">Email your store address</a></div><p class="sub">The email opens with the subject filled in, to kaiventura.founder@gmail.com.</p><p>Kai Ventura, Pro Skill Packs</p></div></section>
 
 
-<section><h2>If you would rather have it done for you</h2><div class="prose"><p>We do not sell a fix for getting more buyers. The Product Description Rewriter improves one thing on the list above, the product page text.</p><ul class="links"><li><b><a href="/skills/product-description-rewriter/">Product Description Rewriter, $5</a></b><br>Before: a menswear cardigan page with a one-line title and a list of spec bullets.<br>After: a clear description, a page title under 60 characters and a two-line summary under 155 characters, the two things that show up in Google search results.<br><span class="lob"><a class="btn btn-lime" href="https://proskillpacks.gumroad.com/l/product-description-rewriter/FIRST10?utm_source=site&amp;utm_medium=shopify-no-sales&amp;utm_campaign=product-description-rewriter" data-go="buy/product-description-rewriter">Buy this, $5</a><span class="lo"><s>$5</s> <b>$2.50</b> for the first 10 buyers. Prices in dollars. Checkout shows your currency, plus VAT where it applies.</span></span></li></ul><p>All six Shopify helpers together are in the <a href="/packs/store-ops-pack/">Store Ops Pack, $29</a>. One-time payment, 30-day refund (reply to your receipt or write to kaiventura.founder@gmail.com).</p><p class="sub">Back to <a href="/shopify/">the Shopify store check</a>. Pro Skill Packs is not affiliated with, endorsed by or sponsored by Shopify Inc.</p></div></section>
+<section><h2>If you would rather have it done for you</h2><div class="prose"><p>We do not sell a fix for getting more buyers. The Product Description Rewriter improves one thing on the list above, the product page text.</p><ul class="links"><li><b><a href="/skills/product-description-rewriter/">Product Description Rewriter, $5</a></b><br>Before: a menswear cardigan page with a one-line title and a list of spec bullets.<br>After: a clear description, a page title under 60 characters and a two-line summary under 155 characters, the two things that show up in Google search results.<br><span class="lob"><a class="btn btn-lime" href="https://proskillpacks.gumroad.com/l/product-description-rewriter/FIRST10?utm_source=site&amp;utm_medium=shopify-no-sales&amp;utm_campaign=product-description-rewriter" data-go="buy/product-description-rewriter">Buy this, $5</a><span class="lo"><s>$5</s> <b>$2.50</b> for the first 10 buyers.</span></span></li></ul><p>All six Shopify helpers together are in the <a href="/packs/store-ops-pack/">Store Ops Pack, $29</a>. One-time payment, 30-day refund (reply to your receipt or write to kaiventura.founder@gmail.com).</p><p class="sub">Back to <a href="/shopify/">the Shopify store check</a>. Pro Skill Packs is not affiliated with, endorsed by or sponsored by Shopify Inc.</p></div></section>
 </div></main>
 <script>
 document.querySelectorAll('.prose pre').forEach(function (pre) {

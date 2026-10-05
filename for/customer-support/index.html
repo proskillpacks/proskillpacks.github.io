@@ -336,9 +336,9 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
 @supports (grid-template-rows: subgrid) { @media (min-width: 40.01rem) {   /* phones are one column: plain flex cards */
-  .dgrid > .dc:not(.feat):not(.dg) { display: grid; grid-template-rows: subgrid; grid-row: span 5; row-gap: 0.4rem; align-content: start; }
-  .dgrid > .dc:not(.feat):not(.dg) > .dc-top { grid-row: 1; } .dgrid > .dc:not(.feat):not(.dg) > h3 { grid-row: 2; } .dgrid > .dc:not(.feat):not(.dg) > p { grid-row: 3; }
-  .dgrid > .dc:not(.feat):not(.dg) > .dc-proof { grid-row: 4; } .dgrid > .dc:not(.feat):not(.dg) > .dc-foot { grid-row: 5; align-self: end; }
+  .dgrid > .dc:not(.feat):not(.dg) { display: grid; grid-template-rows: subgrid; grid-row: span 3; row-gap: 0.4rem; align-content: start; }
+  .dgrid > .dc:not(.feat):not(.dg) > h3 { grid-row: 1; } .dgrid > .dc:not(.feat):not(.dg) > p { grid-row: 2; }
+  .dgrid > .dc:not(.feat):not(.dg) > .dc-foot { grid-row: 3; align-self: end; }
 } }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
 .dc .go::after { content: " \2192"; }
@@ -459,6 +459,7 @@ a.v9t:hover, a.v9t:focus-visible { border-color: var(--pine); }
 .v9t .go::after { content: " \2192"; }
 .v9t.dev { background: #f1f4f0; border-style: dashed; }
 .v9t.dev a { color: var(--pine); font-weight: 700; }
+.rulesd summary { cursor: pointer; font-weight: 800; font-size: 1.1rem; padding: 0.6rem 0; }
 .v9dev { margin: 1rem 0 0; font-size: 0.93rem; color: var(--slate); }
 .v9dev a { color: var(--pine); font-weight: 700; }
 .jc { display: flex; flex-direction: column; gap: 0.35rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--ink); }
@@ -976,7 +977,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
   </div>
 </header>
 <main><div class="wrap">
-<section><h2>Start free</h2><p class="sub">The quickest way to see what a skill does. Free, MIT licence.</p><div class="grid"><a class="dc feat" href="/skills/angry-customer-reply-check/" data-id="angry-customer-reply-check" data-role="customer-support" data-price="free" data-type="single" data-s="angry customer reply check check your reply to an angry customer before you send it. give it the complaint, your draft reply and your policy. get a check of promises, facts and tone, and a repaired draft. free, mit-licensed. customer support customer-support free skill the customer&#x27;s message, your draft reply and your policy. it lists what the customer raised and whether the draft answers it, tests every promise against your policy, checks the facts, flags blame, defensive phrases and empty apologies with your exact words, checks there is a next step, and returns a repaired draft. open decisions are marked [decide]. it never adds a refund or timeline you did not give it. write replies check"><span class="feat-l">Start here</span><span class="dc-top"><span></span><span class="dc-cat">Small business</span></span><h3>Angry Customer Reply Check</h3><p>Check your reply to an angry customer before you send it.</p><span class="dc-proof none">Checked on real input before release</span><span class="dc-foot"><b>Free</b><span class="go">Get it free</span></span></a></div></section>
+<section><h2>Start free</h2><p class="sub">The quickest way to see what a skill does. Free, MIT licence.</p><div class="grid"><a class="dc feat" href="/skills/angry-customer-reply-check/" data-id="angry-customer-reply-check" data-role="customer-support" data-price="free" data-type="single" data-s="angry customer reply check check your reply to an angry customer before you send it. give it the complaint, your draft reply and your policy. get a check of promises, facts and tone, and a repaired draft. free, mit-licensed. customer support customer-support free skill the customer&#x27;s message, your draft reply and your policy. it lists what the customer raised and whether the draft answers it, tests every promise against your policy, checks the facts, flags blame, defensive phrases and empty apologies with your exact words, checks there is a next step, and returns a repaired draft. open decisions are marked [decide]. it never adds a refund or timeline you did not give it. write replies check"><span class="feat-l">Start here</span><h3>Angry Customer Reply Check</h3><p>Check your reply to an angry customer before you send it.</p><span class="dc-foot"><b>Free</b><span class="go"></span></span></a></div></section>
 
 <section><h2>Free prompts</h2><p class="sub">Paste into ChatGPT, Claude, Gemini or any chatbot. No install.</p><ul class="links"><li><a href="/prompts/angry-customer-reply-check/">Angry customer reply checker prompt for any chatbot</a></li></ul></section>
 <section><h2>Guides</h2><p class="sub">Short how-tos you can do by hand, without any skill.</p><ul class="links"><li><a href="/guides/check-a-reply-to-an-angry-customer-before-you-send-it/">How do I check a reply to an angry customer before I send it?</a></li><li><a href="/guides/how-to-decide-a-refund-request-outside-your-policy/">How do I decide a refund request that falls outside my policy?</a></li><li><a href="/guides/how-to-write-support-macros-from-your-refund-policy/">How do I write support macros from my refund policy?</a></li><li><a href="/guides/turn-a-customer-message-into-a-bug-report/">How do I turn a customer message into a bug report?</a></li><li><a href="/guides/write-a-help-article-from-support-tickets/">How do I write a help article from support tickets?</a></li></ul></section>
