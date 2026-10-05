@@ -507,6 +507,118 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 @media (max-width: 56rem) { .gtiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } .why3, .steps { grid-template-columns: 1fr; } }
 @media (max-width: 40rem) { .gtiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.7rem; } .gtile { position: relative; padding: 0.9rem 0.8rem; gap: 0.15rem; align-items: flex-start; } .gtile .who, .gtile .gt-list, .gtile .gt-all { display: none; } .gtile .gt-ico { width: 2.3rem; height: 2.3rem; margin-bottom: 0.3rem; } .gtile h3 { font-size: 1.02rem; } .gtile h3 a::after { content: ""; position: absolute; inset: 0; } .gt-n { margin: 0; padding: 0; }
   .gtile h3, .gtile .who { min-height: 0; } .stats { gap: 0.3rem 1rem; font-size: 0.88rem; margin-top: 0.8rem; } .kitband { padding: 1.1rem; gap: 0.9rem; } .kb-img { order: 2; } .dirhome section.cats { margin-bottom: 1.4rem; } }
+
+.bdg { display: inline-block; flex: none; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.07em; line-height: 1; padding: 0.28rem 0.55rem; border-radius: 999px; text-transform: uppercase; white-space: nowrap; }
+.bg-b { background: var(--pine); color: var(--lime); border: 1px solid var(--pine); }
+.bg-o { background: #fff; color: var(--pine); border: 1.5px solid var(--pine); }
+.bg-t { background: #fff; color: var(--sage); border: 1.5px solid var(--sage); }
+.dc-top > span:first-child:empty { display: block; }
+.dc-proof { font-size: 0.82rem; line-height: 1.4; color: var(--ink); min-height: 2.3em; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.dc-proof.none { color: #7a867f; }
+.dc .dc-cat { text-align: right; margin-left: auto; }
+.dc-top > span:first-child { overflow: visible; }
+.dc-top .dc-cat { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.dc { min-height: 13rem; }
+.psb { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.8rem; margin: 0 0 1rem; max-width: 44rem; }
+.psb-t { color: var(--cream); font-size: 0.95rem; }
+.psb-t.none { color: var(--mist); }
+.psb-l { font-size: 0.85rem; color: var(--mist); }
+.psb-l a { color: var(--lime); }
+.psb .bg-b { background: var(--lime); color: var(--pine); border-color: var(--lime); }
+.psb .bg-o, .psb .bg-t { background: transparent; color: var(--lime); border-color: var(--lime); }
+.v9brand { font-weight: 800; color: var(--cream); max-width: 40rem; margin: 0 0 1.1rem; font-size: 1.05rem; line-height: 1.4; }
+.v9small { color: var(--mist); font-size: 0.92rem; margin: 0.9rem 0 0; max-width: 40rem; }
+.pstrip { margin: 1.4rem 0 2.4rem; }
+.pstrip ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.8rem; }
+.pstrip li { background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 0.9rem 1.1rem; display: flex; flex-direction: column; gap: 0.15rem; }
+.pstrip b { font-size: 1.8rem; line-height: 1.1; color: var(--pine); }
+.pstrip span { color: var(--slate); font-size: 0.88rem; line-height: 1.4; }
+.ps-more { margin: 0.6rem 0 0; font-size: 0.92rem; }
+.ps-more a { color: var(--pine); font-weight: 700; }
+.v9tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }
+.v9t { display: flex; flex-direction: column; gap: 0.3rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--ink); min-height: 9.5rem; }
+a.v9t:hover, a.v9t:focus-visible { border-color: var(--pine); }
+.v9t b { font-size: 1.08rem; line-height: 1.25; }
+.v9t span { color: var(--slate); font-size: 0.92rem; line-height: 1.45; }
+.v9t .go { margin-top: auto; background: none; padding: 0; border-radius: 0; font-style: normal; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
+.v9t .go::after { content: " \2192"; }
+.v9t.dev { background: #f1f4f0; border-style: dashed; }
+.v9t.dev a { color: var(--pine); font-weight: 700; }
+.v9jobs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem; margin-top: 1rem; }
+.jobl { display: flex; flex-direction: column; gap: 0.5rem; background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.85rem 1rem; text-decoration: none; color: var(--ink); min-height: 5.4rem; }
+.jobl:hover, .jobl:focus-visible { border-color: var(--pine); }
+.jl-b { min-height: 1.2rem; display: flex; }
+.jl-t { font-weight: 700; line-height: 1.3; }
+.v9s { margin: 0; }
+.dirhome .v9s input { border: 1px solid var(--rule); }
+.v9feat { display: grid; grid-template-columns: 1.05fr 1fr; gap: 1.5rem 2.25rem; background: #fff; border: 1px solid var(--rule); border-left: 6px solid var(--lime); border-radius: 18px; padding: 1.6rem; }
+.v9feat h2 { margin: 0.7rem 0 0.7rem; }
+.v9feat p { margin: 0 0 0.8rem; color: var(--slate); }
+.v9feat p b { color: var(--ink); }
+.vf-buy { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; margin-top: 1rem; }
+.vf-price { font-weight: 800; font-size: 1.1rem; }
+.vf-price .dcp s { color: var(--slate); font-weight: 400; }
+.vf-see { font-weight: 700; color: var(--pine); }
+.vf-fine { margin: 0.6rem 0 0 !important; font-size: 0.88rem; font-weight: 700; color: var(--pine) !important; }
+.vf-r { background: #f4f7f3; border-radius: 14px; padding: 1.2rem 1.3rem; align-self: start; }
+.vf-r h3 { margin: 0 0 0.5rem; }
+.vf-r table { width: 100%; border-collapse: collapse; margin: 0.4rem 0 0.8rem; font-size: 0.95rem; }
+.vf-r th, .vf-r td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--rule); }
+.vf-r thead th { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--slate); }
+.vf-r tbody td:last-child { font-weight: 800; color: var(--pine); }
+.vf-small { font-size: 0.85rem !important; color: var(--slate); margin: 0 !important; }
+.vf-small a, .vw-note a, .vw-link a { color: var(--pine); font-weight: 700; }
+.v9why { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.6rem; }
+.v9why h2 { margin: 0 0 0.4rem; }
+.vw-lead { margin: 0 0 1rem; color: var(--slate); }
+.chips { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin: 0; }
+.chip { font: inherit; font-weight: 700; font-size: 0.92rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.5rem 0.9rem 0.5rem 0.6rem; border: 1px solid var(--rule); background: #f4f7f3; color: var(--ink); border-radius: 999px; }
+.chip.on, .chip:hover, .chip:focus-visible { border-color: var(--pine); background: var(--pine); color: var(--cream); }
+.cn { display: inline-flex; width: 1.4rem; height: 1.4rem; border-radius: 50%; align-items: center; justify-content: center; background: var(--pine); color: var(--lime); font-size: 0.78rem; }
+.chip.on .cn, .chip:hover .cn { background: var(--lime); color: var(--pine); }
+.chipdef { margin: 0.8rem 0 0; min-height: 1.5em; color: var(--slate); font-size: 0.95rem; }
+.vw-h { margin: 1.5rem 0 0.6rem; font-size: 1.05rem; }
+.bdefs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.9rem; }
+.bdef { background: #f4f7f3; border-radius: 12px; padding: 0.9rem 1rem; }
+.bdef p { margin: 0.5rem 0 0; font-size: 0.92rem; color: var(--slate); line-height: 1.45; }
+.vw-note { margin: 0.8rem 0 0; font-size: 0.92rem; color: var(--slate); }
+.vw-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; margin-top: 1.4rem; }
+.vw-two > div { border: 1px solid var(--rule); border-radius: 12px; padding: 1rem 1.1rem; }
+.vw-two h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+.vw-two p { margin: 0 0 0.6rem; color: var(--slate); font-size: 0.95rem; line-height: 1.5; }
+.vw-link { margin: 1rem 0 0; }
+.v9tell { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2.25rem; background: #fff; border: 1px solid var(--rule); border-left: 6px solid var(--lime); border-radius: 16px; padding: 1.5rem 1.6rem; }
+.v9tell h2 { margin: 0 0 0.5rem; }
+.v9tell p { margin: 0 0 0.7rem; color: var(--slate); }
+.v9tell ol { margin: 0; padding-left: 1.3rem; color: var(--slate); }
+.vt-r .btn { margin: 0.2rem 0 0.8rem; }
+.vr-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem; }
+.vr-links a { display: flex; align-items: center; background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.9rem 1rem; font-weight: 700; color: var(--pine); text-decoration: none; min-height: 4rem; }
+.vr-links a:hover, .vr-links a:focus-visible { border-color: var(--pine); }
+.vr-g { margin: 1.6rem 0 0.7rem; }
+.vr-g h3 { margin: 0; }
+.v9res .dc.dg { min-height: 8rem; }
+.lobar a { white-space: nowrap; }
+@media (max-width: 56rem) {
+  .pstrip ul, .v9tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .v9jobs, .bdefs, .vr-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .v9feat, .v9tell, .vw-two { grid-template-columns: 1fr; }
+}
+@media (max-width: 40rem) {
+  .brand nav { flex-wrap: wrap; overflow: visible; white-space: normal; gap: 0 0.9rem; }
+  .pstrip ul { gap: 0.6rem; }
+  .pstrip li { padding: 0.7rem 0.8rem; }
+  .pstrip b { font-size: 1.45rem; }
+  .pstrip span { font-size: 0.8rem; }
+  .v9tiles { gap: 0.6rem; }
+  .v9t { padding: 0.85rem 0.85rem; min-height: 11rem; }
+  .v9t b { font-size: 1rem; }
+  .v9t span { font-size: 0.85rem; }
+  .v9jobs, .bdefs, .vr-links { grid-template-columns: 1fr; gap: 0.6rem; }
+  .jobl { min-height: 0; }
+  .v9feat, .v9tell, .v9why { padding: 1.1rem; }
+  .dc { min-height: 0; }
+}
 @media (min-width: 56.01rem) { .grid:has(> :nth-child(4):last-child), .grid:has(> :nth-child(7):last-child), .grid:has(> :nth-child(10):last-child), .grid:has(> :nth-child(16):last-child), .grid:has(> :nth-child(19):last-child), .grid:has(> :nth-child(22):last-child), .grid:has(> :nth-child(28):last-child), .grid:has(> :nth-child(31):last-child), .grid:has(> :nth-child(34):last-child), .grid:has(> :nth-child(40):last-child), .grid:has(> :nth-child(43):last-child), .grid:has(> :nth-child(46):last-child), .grid:has(> :nth-child(52):last-child), .grid:has(> :nth-child(55):last-child), .grid:has(> :nth-child(58):last-child), .grid:has(> :nth-child(64):last-child), .grid:has(> :nth-child(67):last-child), .grid:has(> :nth-child(70):last-child), .grid:has(> :nth-child(76):last-child), .grid:has(> :nth-child(79):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (min-width: 56.01rem) { .dgrid:has(> :nth-child(4):last-child), .dgrid:has(> :nth-child(7):last-child), .dgrid:has(> :nth-child(10):last-child), .dgrid:has(> :nth-child(16):last-child), .dgrid:has(> :nth-child(19):last-child), .dgrid:has(> :nth-child(22):last-child), .dgrid:has(> :nth-child(28):last-child), .dgrid:has(> :nth-child(31):last-child), .dgrid:has(> :nth-child(34):last-child), .dgrid:has(> :nth-child(40):last-child), .dgrid:has(> :nth-child(43):last-child), .dgrid:has(> :nth-child(46):last-child), .dgrid:has(> :nth-child(52):last-child), .dgrid:has(> :nth-child(55):last-child), .dgrid:has(> :nth-child(58):last-child), .dgrid:has(> :nth-child(64):last-child), .dgrid:has(> :nth-child(67):last-child), .dgrid:has(> :nth-child(70):last-child), .dgrid:has(> :nth-child(76):last-child), .dgrid:has(> :nth-child(79):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (min-width: 56.01rem) { .grid > .feat, .dgrid > .feat { grid-column: 1 / -1; min-height: 0; } .feat > .feat-l { display: inline-block; align-self: flex-start; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--pine); background: var(--lime); padding: 0.15rem 0.6rem; border-radius: 999px; margin: 0 0 0.35rem; } .feat h3 { font-size: 1.3rem; min-height: 0; -webkit-line-clamp: 2; } .feat > .body { padding-top: 0.2rem; } .feat.dc > .feat-l { margin: 0 0 0.35rem; } .feat > .body > .feat-l { margin-bottom: 0.4rem; } }
@@ -902,7 +1014,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
       <a class="name" href="/">PRO SKILL PACKS</a>
-      <nav aria-label="Main"><a href="/">Home</a><a href="/categories/" aria-current="page">Categories</a><a href="/free/">Free</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav>
+      <nav aria-label="Main"><a href="/#who">Find your job</a><a href="/free/">Free</a><a href="/how-we-test/">Why trust us</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
     </div>
     <p class="crumbs"><a href="/freelance/">Freelancers and small businesses</a> / Late payment letter template UK: 12 letters by days late</p>
     <h1>Late payment letter template UK: 12 letters by days late</h1>
@@ -1077,7 +1189,7 @@ Thank you. I received £[AMOUNT] on [DATE]. [PICK ONE: I have waived the interes
 
 Thank you. I received £<span class="br">[AMOUNT]</span> on <span class="br">[DATE]</span>. <span class="br">[PICK ONE: I have waived the interest. / The interest of £[AMOUNT]</span> is still due and is on the enclosed invoice.] I look forward to working with you again.
 
-<span class="br">[YOUR NAME]</span></span></span></li><li data-t="Invoice [NUMBER]. Amount: £[AMOUNT]. Due: [DATE]. Letters sent: [DATE, HOW SENT] / [DATE, HOW SENT]. Interest rate used: [RATE]%, source and date: [WHERE YOU READ IT]. Daily interest: £[AMOUNT]. Fixed sum added: £[AMOUNT]. Keep this with the letters."><span class="tx"><span class="lab">A note for your own file</span><span class="em">Invoice <span class="br">[NUMBER]</span>. Amount: £<span class="br">[AMOUNT]</span>. Due: <span class="br">[DATE]</span>. Letters sent: <span class="br">[DATE, HOW SENT]</span> / <span class="br">[DATE, HOW SENT]</span>. Interest rate used: <span class="br">[RATE]</span>%, source and date: <span class="br">[WHERE YOU READ IT]</span>. Daily interest: £<span class="br">[AMOUNT]</span>. Fixed sum added: £<span class="br">[AMOUNT]</span>. Keep this with the letters.</span></span></li></ul></div></section><section id="download"><h2>Download these examples</h2><div class="dl"><div class="dlrow"><a class="btn btn-pine" data-nolo href="/go/download/freelance-late-payment-letter-template-uk-docx/">Download as a Word file (free)</a></div><p><a href="/go/download/freelance-late-payment-letter-template-uk-pdf/">Or as a PDF</a></p><p class="sub">The same text as this page, in one file, with the gaps ready to fill in.</p></div></section><section id="avoid"><h2>What to avoid</h2><div class="prose"><ul><li>Threatening court action you do not mean to take, or naming any legal step beyond what GOV.UK says.</li><li>Adding interest for a private customer. The rule is for business customers.</li><li>Charging the fixed sum more than once for the same payment. GOV.UK says once for each payment.</li><li>Quoting the base rate from memory. Use the date and the source on this page.</li><li>Writing about credit files or debt collectors.</li></ul><div class="avoidbox"><p><b>Official pages.</b> Rules differ by country. Not legal advice: check the rules that apply to you.</p><ul><li>GOV.UK: <a href="https://www.gov.uk/late-commercial-payments-interest-debt-recovery" rel="noopener">Late commercial payments: when a payment becomes late</a>. It says: &quot;If you do not agree a payment date, the law says the payment is late 30 days after either: the customer gets the invoice; you deliver the goods or provide the service (if this is later).&quot; Read 5 October 2026.</li><li>GOV.UK: <a href="https://www.gov.uk/late-commercial-payments-interest-debt-recovery/charging-interest-commercial-debt" rel="noopener">Interest on late commercial payments</a>. It says: &quot;The interest you can charge if another business is late paying for goods or a service is &#x27;statutory interest&#x27; - this is 8% plus the Bank of England base rate for business to business transactions. You cannot claim statutory interest if there&#x27;s a different rate of interest in a contract.&quot; Read 5 October 2026.</li><li>GOV.UK: <a href="https://www.gov.uk/late-commercial-payments-interest-debt-recovery/claim-debt-recovery-costs" rel="noopener">Claim debt recovery costs on late payments</a>. The fixed sum is £40 up to £999.99, £70 from £1,000 to £9,999.99 and £100 for £10,000 or more. It says: &quot;You can only charge the business once for each payment.&quot; Read 5 October 2026.</li><li>GOV.UK: <a href="https://www.gov.uk/make-court-claim-for-money" rel="noopener">Make a court claim for money</a>. It says: &quot;You can apply to a county court to claim money you&#x27;re owed by a person or business&quot; and &quot;A mediation service could be quicker and cheaper than going to court.&quot; Read 5 October 2026.</li></ul></div></div></section><div class="card fol" data-fol="page"><p class="fol-t"><b>New free pages by email.</b> A few a month. Unsubscribe any time.</p><a class="btn btn-lime" data-nolo="1" data-go="follow/page" href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=freelance&amp;utm_campaign=subscribe" rel="noopener">Follow</a><p class="fol-s">Handled by Gumroad. See our <a href="/privacy/">privacy page</a>.</p></div>
+<span class="br">[YOUR NAME]</span></span></span></li><li data-t="Invoice [NUMBER]. Amount: £[AMOUNT]. Due: [DATE]. Letters sent: [DATE, HOW SENT] / [DATE, HOW SENT]. Interest rate used: [RATE]%, source and date: [WHERE YOU READ IT]. Daily interest: £[AMOUNT]. Fixed sum added: £[AMOUNT]. Keep this with the letters."><span class="tx"><span class="lab">A note for your own file</span><span class="em">Invoice <span class="br">[NUMBER]</span>. Amount: £<span class="br">[AMOUNT]</span>. Due: <span class="br">[DATE]</span>. Letters sent: <span class="br">[DATE, HOW SENT]</span> / <span class="br">[DATE, HOW SENT]</span>. Interest rate used: <span class="br">[RATE]</span>%, source and date: <span class="br">[WHERE YOU READ IT]</span>. Daily interest: £<span class="br">[AMOUNT]</span>. Fixed sum added: £<span class="br">[AMOUNT]</span>. Keep this with the letters.</span></span></li></ul></div></section><section id="download"><h2>Download these examples</h2><div class="dl"><div class="dlrow"><a class="btn btn-pine" data-nolo href="/go/download/freelance-late-payment-letter-template-uk-docx/">Download as a Word file (free)</a></div><p><a href="/go/download/freelance-late-payment-letter-template-uk-pdf/">Or as a PDF</a></p><p class="sub">The same text as this page, in one file, with the gaps ready to fill in.</p></div></section><section id="avoid"><h2>What to avoid</h2><div class="prose"><ul><li>Threatening court action you do not mean to take, or naming any legal step beyond what GOV.UK says.</li><li>Adding interest for a private customer. The rule is for business customers.</li><li>Charging the fixed sum more than once for the same payment. GOV.UK says once for each payment.</li><li>Quoting the base rate from memory. Use the date and the source on this page.</li><li>Writing about credit files or debt collectors.</li></ul><div class="avoidbox"><p><b>Official pages.</b> Rules differ by country. Not legal advice: check the rules that apply to you.</p><ul><li>GOV.UK: <a href="https://www.gov.uk/late-commercial-payments-interest-debt-recovery" rel="noopener">Late commercial payments: when a payment becomes late</a>. It says: &quot;If you do not agree a payment date, the law says the payment is late 30 days after either: the customer gets the invoice; you deliver the goods or provide the service (if this is later).&quot; Read 5 October 2026.</li><li>GOV.UK: <a href="https://www.gov.uk/late-commercial-payments-interest-debt-recovery/charging-interest-commercial-debt" rel="noopener">Interest on late commercial payments</a>. It says: &quot;The interest you can charge if another business is late paying for goods or a service is &#x27;statutory interest&#x27; - this is 8% plus the Bank of England base rate for business to business transactions. You cannot claim statutory interest if there&#x27;s a different rate of interest in a contract.&quot; Read 5 October 2026.</li><li>GOV.UK: <a href="https://www.gov.uk/late-commercial-payments-interest-debt-recovery/claim-debt-recovery-costs" rel="noopener">Claim debt recovery costs on late payments</a>. The fixed sum is £40 up to £999.99, £70 from £1,000 to £9,999.99 and £100 for £10,000 or more. It says: &quot;You can only charge the business once for each payment.&quot; Read 5 October 2026.</li><li>GOV.UK: <a href="https://www.gov.uk/make-court-claim-for-money" rel="noopener">Make a court claim for money</a>. It says: &quot;You can apply to a county court to claim money you&#x27;re owed by a person or business&quot; and &quot;A mediation service could be quicker and cheaper than going to court.&quot; Read 5 October 2026.</li></ul></div></div></section><div class="card fol" data-fol="page"><p class="fol-t"><b>New free workflows by email.</b> A few a month. Unsubscribe any time.</p><a class="btn btn-lime" data-nolo="1" data-go="follow/page" href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=freelance&amp;utm_campaign=subscribe" rel="noopener">Follow</a><p class="fol-s">Handled by Gumroad. See our <a href="/privacy/">privacy page</a>.</p></div>
 <section id="tools" class="aud-tools"><h2>Let the tool do the sums</h2><p class="sub">It is free. It works out the interest and the fixed sum from your invoice.</p><div class="wkit wpaid" id="late-payment-chaser-uk"><div class="wk-img wide"><img class="pvimg" src="/assets/demos/late-payment-chaser-uk-last.png" width="1200" height="675" loading="lazy" alt="The finished result of Late Payment Chaser (UK) on a real example: an unpaid invoice goes in, the figures and three emails come out" srcset="/assets/demos/late-payment-chaser-uk-last-240.webp 240w, /assets/demos/late-payment-chaser-uk-last-480.webp 480w, /assets/demos/late-payment-chaser-uk-last-900.webp 900w, /assets/demos/late-payment-chaser-uk-last-1200.webp 1200w" sizes="(min-width: 48rem) 900px, 100vw" decoding="async"></div><div class="wk-txt"><span class="free">Free</span><h3>Late Payment Chaser (UK)</h3><p><b>What you give it:</b> The unpaid amount, the invoice date, and the due date if you agreed one.</p><p><b>What you get:</b> What you can claim under UK late-payment law, worked out with a script and shown with official sources, and three reminder emails to send. UK business-to-business debts only. Not legal advice.</p><p class="sub" style="margin:.2rem 0 .7rem">Free. It also works as a paste-in text in a chatbot; there the assistant does the arithmetic, so check its working.</p><div class="cta"><a class="btn btn-lime" href="/skills/late-payment-chaser-uk/">Open the free Late Payment Chaser (UK)</a></div><p class="sub" style="margin:.6rem 0 0"><a href="/prompts/late-payment-chaser-uk/">Or paste the free text into any chatbot</a></p></div></div></section>
 <section id="paa"><h2>What is the difference between a reminder and a final demand?</h2><p>A reminder assumes the invoice slipped. A final demand gives a date and says what you will do next, if you really mean to do it.</p><h2>Can I charge a fixed sum on a late invoice?</h2><p>For a business customer, GOV.UK lists £40, £70 or £100 by size of debt, charged once for each payment.</p><h2>How long before an invoice counts as late?</h2><p>If no date was agreed, GOV.UK says 30 days after the customer gets the invoice or after you deliver, if that is later.</p><h2>Do I need to send a new invoice if I add interest?</h2><p>GOV.UK says to send a new invoice if you decide to add interest to the money you are owed.</p></section><section id="faq"><h2>Questions people ask</h2><div class="prose"><h3>What do I do with the [BRACKETS]?</h3><p>Replace each one with a real fact. If you cannot, delete the line. Never leave a bracket in what you send.</p><h3>How do I write a late payment letter?</h3><p>Facts first: the invoice number, the amount, the due date, how many days late it is, how to pay, and what you ask for by when. Then, if you have decided to add interest, say so and send a new invoice.</p><h3>What is a final demand letter?</h3><p>It is the last letter before you take another step. Name that step only if you really mean to take it. GOV.UK says a county court claim exists, and that mediation may be quicker and cheaper.</p><h3>Can I add interest to a late payment letter?</h3><p>For a business customer, yes. GOV.UK says the rate is 8% plus the Bank of England base rate. The base rate was 3.75% from 18 December 2025 (read 5 October 2026). The calculator page shows which base rate applies to your due date. GOV.UK also lists a fixed sum of £40, £70 or £100 by size of debt, charged once for each payment. You cannot claim statutory interest if a contract sets a different rate. Not legal advice.</p><h3>When is a payment late?</h3><p>If you did not agree a date, GOV.UK says the payment is late 30 days after the customer gets the invoice, or after you deliver the goods or provide the service if that is later.</p><h3>Should I send a letter or an email?</h3><p>The words can be the same. A posted letter helps if you may claim later, because you keep a copy and the date you sent it. That is practical advice, not a legal rule.</p></div></section>
 <section><h2>More</h2><div class="prose"><ul class="links"><li><a href="/freelance/final-request-for-payment-email/">Final request for payment email: 12 examples (2026)</a></li><li><a href="/freelance/past-due-invoice-reminder-email/">Past due invoice reminder email: 12 samples (2026)</a></li><li><a href="/freelance/can-i-charge-interest-on-a-late-payment-uk/">Can I charge interest on a late payment (UK)</a></li><li><a href="/freelance/late-payment-interest-calculator/">Late payment interest calculator</a></li><li><a href="/freelance/late-payment-email-to-a-client/">Late payment email to a client</a></li><li><a href="/freelance/how-to-check-an-invoice-is-correct/">How to check an invoice is correct</a></li><li><a href="/freelance/">All the freelancer pages</a></li></ul></div></section>
@@ -1088,10 +1200,10 @@ Thank you. I received £<span class="br">[AMOUNT]</span> on <span class="br">[DA
   <div class="wrap">
     <div class="fgrid">
       <div class="fbrand"><a class="fb" href="/"><img src="/assets/avatar.png" alt="" width="36" height="36"><span>PRO SKILL PACKS</span></a>
-        <p>Professional skills for ChatGPT, Claude and other AI assistants.</p></div>
-      <nav aria-label="Browse"><h2>Browse</h2><ul><li><a href="/categories/#g-online-stores">Online stores</a></li><li><a href="/categories/#g-developers-and-data">Developers and data</a></li><li><a href="/categories/#g-work-and-careers">Work and careers</a></li><li><a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a></li><li><a href="/categories/#g-money-admin-support">Money, admin and support</a></li><li><a href="/all/">All skills</a></li></ul></nav>
-      <nav aria-label="Learn"><h2>Learn</h2><ul><li><a href="/guides/">Guides</a></li><li><a href="/study/">Research</a></li><li><a href="/free/">Free skills</a></li><li><a href="/how-we-test/">How we test</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/new/">What's new</a></li></ul></nav>
-      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/feedback/">Free copy for feedback</a></li><li><a href="/about/#terms">Terms and refunds</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/go/affiliates/?from=freelance">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=freelance&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
+        <p>Ready-made AI workflows for specific jobs, tested on real tasks.</p><p>Pro Skill Packs makes ready-made AI workflows and fill-in kits for specific jobs.</p></div>
+      <nav aria-label="Who it's for"><h2>Who it's for</h2><ul><li><a href="/stores/">Online sellers</a></li><li><a href="/hosts/">Holiday let hosts</a></li><li><a href="/freelance/">Freelancers and small businesses</a></li><li><a href="/sales/">Salespeople</a></li><li><a href="/recruiters/call-notes-to-screen-note/">Recruiters</a></li><li><a href="/managers/">Managers</a></li><li><a href="/work/">Hard messages at work</a></li><li><a href="/for/developers/">Developers and data</a></li></ul></nav>
+      <nav aria-label="Trust"><h2>Trust</h2><ul><li><a href="/how-we-test/">Why trust us</a></li><li><a href="/study/">Research</a></li><li><a href="/research/how-we-train-skills/">How we train a workflow</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/new/">What's new</a></li></ul></nav>
+      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/request/">Tell us the job</a></li><li><a href="/feedback/">Free copy for feedback</a></li><li><a href="/about/#terms">Terms and refunds</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/go/affiliates/?from=freelance">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=freelance&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
     </div>
     <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>
