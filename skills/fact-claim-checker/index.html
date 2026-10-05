@@ -599,6 +599,42 @@ details.usingai { border: 1px solid var(--rule); border-radius: 12px; background
 details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; }
 .devline { color: var(--slate); font-size: 0.9rem; }
 
+/* product page cleanup: one content width, calm body */
+:root { --pcw: 46rem; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
+.hero.pc .buyb { padding: 1.1rem 1.25rem; }
+.hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+main.prod.pc .wrap > * { max-width: var(--pcw); }
+main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
+main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
+main.prod.pc h2 { margin-top: 0; }
+.pc .rend { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.4rem 1.2rem; margin: 0.6rem 0 1rem; }
+.pc .rend h3 { font-size: 1rem; margin: 1rem 0 0.2rem; }
+.pc .rendcap { margin: 1.2rem 0 0; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--sage); }
+.pc .evh { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.8rem; margin: 0 0 0.9rem; }
+.pc .evh .psb-t { color: var(--ink); font-size: 1rem; font-weight: 600; }
+.pc .evh .psb-t.none { color: var(--slate); font-weight: 400; }
+.pc .evt table { width: 100%; border-collapse: collapse; font-size: 0.95rem; background: #fff; }
+.pc .evt th, .pc .evt td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.pc .evt thead th { font-size: 0.85rem; color: var(--slate); font-weight: 700; }
+.pc .evt tbody th { font-weight: 700; }
+.pc .evcap { font-size: 0.88rem; color: var(--slate); margin: 0.5rem 0 0; }
+.pc .evmore { margin: 0.8rem 0 0; }
+.pc .evmore summary, .pc .faq summary { cursor: pointer; font-weight: 700; }
+.pc .evlink { margin: 0.9rem 0 0; }
+.pc .evlink a { font-weight: 700; }
+.pc .faq details { border-top: 1px solid var(--rule); padding: 0.15rem 0; }
+.pc .faq details:last-child { border-bottom: 1px solid var(--rule); }
+.pc .faq summary { padding: 0.8rem 0; font-size: 1.02rem; }
+.pc .faq details > div { padding: 0 0 0.9rem; }
+.pc .faq details > div > :first-child { margin-top: 0; }
+.pc .faq .tl { font-size: 0.93rem; }
+.pc .faq .tl ul { margin: 0.3rem 0 0.8rem; }
+.pc .endcta { margin: 0 0 var(--pcg, 2.6rem); }
+.pc .rel h2 { margin-top: 0; }
+.pc .rel ul.links { margin-top: 0.5rem; }
+@media (max-width: 40rem) { :root { --pcg: 2rem; } .pc .evt table { font-size: 0.88rem; } .pc .evt th, .pc .evt td { padding: 0.45rem 0.4rem; } .pc .endcta .btn { width: 100%; text-align: center; } .pc .rend { padding: 0.2rem 0.9rem; } }
+
 .rcp .sa { max-width: 52rem; background: #fff; border: 1px solid var(--rule); border-left: 5px solid var(--lime); border-radius: 12px; padding: 0.9rem 1.1rem; margin: 1.2rem 0 1.4rem; }
 .rcp .sa-t { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--slate); margin: 0 0 0.3rem; }
 .rcp .sa-m { font-size: 0.85rem; color: var(--slate); margin: 0.6rem 0 0; }
@@ -940,7 +976,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 </script>
 </head>
 <body>
-<header class="hero">
+<header class="hero pc">
   <div class="wrap">
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
@@ -950,25 +986,19 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a> / Fact-Claim Checker</p>
     <h1>Fact-Claim Checker</h1>
     <p class="lead">Find claims in a draft that need a source.</p>
-    <dl class="ogw"><dt>Who it is for</dt><dd>Writers and marketers who publish under their own name.</dd><dt>What you give it</dt><dd>Your draft.</dd><dt>What you get back</dt><dd>Claims ranked by risk, what would settle each one and safer wording.</dd></dl><div class="buyb"><div class="cta"><a class="btn btn-lime" href="/prompts/fact-claim-checker/">Copy the text for ChatGPT or any chatbot</a></div><p class="note-light alts"><a class="alt-link" href="/go/repo/fact-claim-checker/?from=skill">Get the files from GitHub (for developers)</a></p><p class="ogline">It is a text file you paste into ChatGPT, Claude or any chatbot.</p><p class="note-light">Free, MIT licence, hosted on GitHub. Install the whole free set with npx skills add proskillpacks/skills, or copy this skill&#x27;s folder.</p></div><div class="psb"><span class="psb-t none">Checked on real input before release</span><span class="psb-l"><a href="/how-we-test/#badges">What this means</a></span></div>
+    <dl class="ogw"><dt>Who it is for</dt><dd>Writers and marketers who publish under their own name.</dd><dt>What you give it</dt><dd>Your draft.</dd><dt>What you get back</dt><dd>Claims ranked by risk, what would settle each one and safer wording.</dd></dl><div class="buyb"><div class="cta"><a class="btn btn-lime" href="/prompts/fact-claim-checker/">Copy the text for ChatGPT or any chatbot</a></div><p class="note-light alts"><a class="alt-link" href="/go/repo/fact-claim-checker/?from=skill">Get the files from GitHub (for developers)</a></p><p class="ogline">A text you paste into ChatGPT, Claude or any chatbot.</p><p class="note-light">Free. MIT licence: use it, change it, share it.</p></div>
   </div>
 </header>
-<main class="prod"><div class="wrap">
-<section><details class="ogmore"><summary>More detail on what goes in and what comes out</summary><div class="two">
-  <div class="box"><b>What you give it</b><p>Paste a draft before you publish.</p></div>
-  <div class="box"><b>What you get</b><p>Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.</p></div>
-</div></details></section>
-<section><h2>Before and after</h2><p class="sub">Real public data, anonymised. From a real test run.</p><div class="prose"><p>A public launch post from a small software company, with prices, dates, a user count and a discount, mixed with opinion.</p>
+<main class="prod pc"><div class="wrap">
+<section><h2>Before and after</h2><div class="prose"><p>A public launch post from a small software company, with prices, dates, a user count and a discount, mixed with opinion.</p>
 <blockquote><p><strong>After (real output, excerpt):</strong><br>Claims found: 17. High risk: 6. Medium: 7. Low: 4.<br>&quot;more than 60 people have signed up used Plausible successfully&quot;: a number, and &quot;successfully&quot; is undefined. A typo changes the meaning (&quot;signed up used&quot;).<br>&quot;up to 10k pageviews - $6 / mo&quot; versus later &quot;a small (&lt;10k) tier&quot;: pick one.<br>Safer wording: &quot;More than 60 people have signed up for the beta, and [N] of them have [SOURCE: your definition of &#x27;successfully&#x27;].&quot;</p></blockquote></div></section>
 <section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/fact-claim-checker-last.png" data-gif="/assets/demos/fact-claim-checker.gif" alt="Animated demo of Fact-Claim Checker on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Fact-Claim Checker">Play</button></figure></section>
 <section><h2>What it does</h2><div class="prose"><p>Paste a draft before you publish it. You get a list of the claims that need a source, ranked by risk, with the kind of source that would settle each one, and safer wording for the high-risk ones you cannot back up. It does not tell you what is true. It tells you what to check.</p></div></section>
-<section><h2>The evidence: how it was tested</h2><div class="prose"><p><b>How we tested it.</b></p><p>1 real-data run on a public launch post (Claude Sonnet). All 17 flagged claims and both internal conflicts were real.</p><p>1 real-data run on a public launch post (Claude Sonnet). We read every flagged claim against the source text: all 17 were real claims, and the two conflicts it raised were real. Not yet run on other models. A second, harder run (2026-10-04, Claude Sonnet, a draft full of unsourced boasts and a request to say which are true): it refused to rule on truth and listed what would settle each claim, but its summary said 8 high-risk claims when the table showed 7. We added a rule and re-ran: the counts now match the table.</p><p>Tested on a real example before release. The example is shown in the Before and after section above.</p><p><a href="/how-we-test/">How we test</a>, what we do not do, and which assistants we ran it on.</p></div></section>
+<section class="ev" id="evidence"><h2>The evidence</h2><p>1 real-data run on a public launch post (Claude Sonnet). All 17 flagged claims and both internal conflicts were real.</p><details class="evmore"><summary>More on how it was tested</summary><p>Not yet run on other models. A second, harder run (2026-10-04, Claude Sonnet, a draft full of unsourced boasts and a request to say which are true): it refused to rule on truth and listed what would settle each claim, but its summary said 8 high-risk claims when the table showed 7. We added a rule and re-ran: the counts now match the table.</p></details><p class="evlink"><a href="/how-we-test/">Read the full test</a></p></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It does not look anything up or rule claims true or false.</li><li>It can over-flag low-risk items.</li><li>Not a legal, medical or financial review.</li></ul></div></section>
-<section><h2>Works with</h2><div class="prose"><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. Pasted text only. No code or web access needed.</p></div></section>
-<section><h2>For people who use AI assistants</h2><div class="prose"><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>fact-claim-checker</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker).</li><li>Put the <code>fact-claim-checker</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Fact-check my draft before I publish it.&quot;. The skill loads by itself.</li></ol></div></section>
-<section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">Free</span><a class="btn btn-pine" href="/prompts/fact-claim-checker/">Copy the text for ChatGPT or any chatbot</a><a class="btn btn-ghost" href="/go/repo/fact-claim-checker/?from=skill">Get the files from GitHub (for developers)</a></div><p>MIT licence. Use it, change it, share it.</p></div></section>
-<section><h2>Jobs that go with this</h2><ul class="links"><li>Free guide to do it by hand: <a href="/guides/fact-check-claims-in-an-ai-written-draft/">How to fact-check the claims in an AI-written draft</a></li><li>Free text to paste into ChatGPT or any chatbot: <a href="/prompts/fact-claim-checker/">Fact-check a draft: claim checker prompt for any chatbot</a></li><li><a href="/skills/voice-matched-draft-editor/">Voice-Matched Draft Editor</a> ($9): Edit a draft so it sounds like you wrote it.</li><li>More for people who write for a living: <a href="/for/content-and-writing/">Content and writing</a></li></ul></section>
-<p class="sub"><a href="https://github.com/proskillpacks/skills/issues/new?template=report-problem.yml&amp;skill=fact-claim-checker" rel="noopener">Report a problem</a> (GitHub, or write to kaiventura.founder@gmail.com).</p>
+<section class="faq" id="questions"><h2>Questions</h2><details><summary>Questions or a problem?</summary><div><p>Write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. Pasted text only. No code or web access needed.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>Using it with an AI assistant</b></p><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>fact-claim-checker</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker).</li><li>Put the <code>fact-claim-checker</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Fact-check my draft before I publish it.&quot;. The skill loads by itself.</li></ol></div></div></details></section>
+<section class="endcta"><a class="btn btn-pine" href="/prompts/fact-claim-checker/">Copy the text for ChatGPT or any chatbot</a></section>
+<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/voice-matched-draft-editor/">Voice-Matched Draft Editor</a> ($9): Edit a draft so it sounds like you wrote it.</li><li>Free guide to do it by hand: <a href="/guides/fact-check-claims-in-an-ai-written-draft/">How to fact-check the claims in an AI-written draft</a></li><li>Free text to paste into ChatGPT or any chatbot: <a href="/prompts/fact-claim-checker/">Fact-check a draft: claim checker prompt for any chatbot</a></li></ul></section>
 </div></main>
 <script>
 document.querySelectorAll('.demo').forEach(function (f) {

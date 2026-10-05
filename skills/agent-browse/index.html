@@ -599,6 +599,42 @@ details.usingai { border: 1px solid var(--rule); border-radius: 12px; background
 details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; }
 .devline { color: var(--slate); font-size: 0.9rem; }
 
+/* product page cleanup: one content width, calm body */
+:root { --pcw: 46rem; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
+.hero.pc .buyb { padding: 1.1rem 1.25rem; }
+.hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+main.prod.pc .wrap > * { max-width: var(--pcw); }
+main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
+main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
+main.prod.pc h2 { margin-top: 0; }
+.pc .rend { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.4rem 1.2rem; margin: 0.6rem 0 1rem; }
+.pc .rend h3 { font-size: 1rem; margin: 1rem 0 0.2rem; }
+.pc .rendcap { margin: 1.2rem 0 0; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--sage); }
+.pc .evh { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.8rem; margin: 0 0 0.9rem; }
+.pc .evh .psb-t { color: var(--ink); font-size: 1rem; font-weight: 600; }
+.pc .evh .psb-t.none { color: var(--slate); font-weight: 400; }
+.pc .evt table { width: 100%; border-collapse: collapse; font-size: 0.95rem; background: #fff; }
+.pc .evt th, .pc .evt td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.pc .evt thead th { font-size: 0.85rem; color: var(--slate); font-weight: 700; }
+.pc .evt tbody th { font-weight: 700; }
+.pc .evcap { font-size: 0.88rem; color: var(--slate); margin: 0.5rem 0 0; }
+.pc .evmore { margin: 0.8rem 0 0; }
+.pc .evmore summary, .pc .faq summary { cursor: pointer; font-weight: 700; }
+.pc .evlink { margin: 0.9rem 0 0; }
+.pc .evlink a { font-weight: 700; }
+.pc .faq details { border-top: 1px solid var(--rule); padding: 0.15rem 0; }
+.pc .faq details:last-child { border-bottom: 1px solid var(--rule); }
+.pc .faq summary { padding: 0.8rem 0; font-size: 1.02rem; }
+.pc .faq details > div { padding: 0 0 0.9rem; }
+.pc .faq details > div > :first-child { margin-top: 0; }
+.pc .faq .tl { font-size: 0.93rem; }
+.pc .faq .tl ul { margin: 0.3rem 0 0.8rem; }
+.pc .endcta { margin: 0 0 var(--pcg, 2.6rem); }
+.pc .rel h2 { margin-top: 0; }
+.pc .rel ul.links { margin-top: 0.5rem; }
+@media (max-width: 40rem) { :root { --pcg: 2rem; } .pc .evt table { font-size: 0.88rem; } .pc .evt th, .pc .evt td { padding: 0.45rem 0.4rem; } .pc .endcta .btn { width: 100%; text-align: center; } .pc .rend { padding: 0.2rem 0.9rem; } }
+
 .rcp .sa { max-width: 52rem; background: #fff; border: 1px solid var(--rule); border-left: 5px solid var(--lime); border-radius: 12px; padding: 0.9rem 1.1rem; margin: 1.2rem 0 1.4rem; }
 .rcp .sa-t { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--slate); margin: 0 0 0.3rem; }
 .rcp .sa-m { font-size: 0.85rem; color: var(--slate); margin: 0.6rem 0 0; }
@@ -940,7 +976,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 </script>
 </head>
 <body>
-<header class="hero">
+<header class="hero pc">
   <div class="wrap">
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
@@ -950,25 +986,18 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-developers-and-data">Developers and data</a> / Agent Browse</p>
     <h1>Agent Browse</h1>
     <p class="lead">Get an AI assistant to do a task in a real web browser in fewer steps.</p>
-    <dl class="ogw"><dt>Who it is for</dt><dd>Developers who run an AI assistant with the agent-browser tool.</dd><dt>What you give it</dt><dd>A browsing task and the agent-browser tool.</dd><dt>What you get back</dt><dd>The task done in fewer tool calls: forms, logins, dialogs, uploads and paged data.</dd></dl><div class="buyb"><div class="cta"><a class="btn btn-lime" href="/go/repo/agent-browse/?from=skill">Get the files from GitHub (for developers)</a></div><p class="note-light alts"><a class="alt-link" href="https://github.com/proskillpacks/skillopt-agent-browse" rel="noopener">Read the research</a></p><p class="ogline">It is a text file you add to an AI assistant, or paste into a chat.</p><p class="note-light">Free, MIT licence, hosted on GitHub. Install the whole free set with npx skills add proskillpacks/skills, or copy this skill&#x27;s folder.</p></div><div class="psb"><span class="bdg bg-b" title="Measured against a plain AI request on cases it was not tuned on. The numbers are published.">BENCHMARKED<span class="sr"> badge. Measured against a plain AI request on cases it was not tuned on. The numbers are published.</span></span><span class="psb-t">On 11 unseen tasks: same accuracy, 14% fewer tokens than no skill.</span><span class="psb-l"><a href="/how-we-test/#ev-agent-browse">See the evidence</a> &middot; <a href="/how-we-test/#badges">What this means</a></span></div><p class="ogline">Trained with our full method: <a href="/research/how-we-train-skills/">see the scores</a>.</p>
+    <dl class="ogw"><dt>Who it is for</dt><dd>Developers who run an AI assistant with the agent-browser tool.</dd><dt>What you give it</dt><dd>A browsing task and the agent-browser tool.</dd><dt>What you get back</dt><dd>The task done in fewer tool calls: forms, logins, dialogs, uploads and paged data.</dd></dl><div class="buyb"><div class="cta"><a class="btn btn-lime" href="/go/repo/agent-browse/?from=skill">Get the files from GitHub (for developers)</a></div><p class="note-light alts"><a class="alt-link" href="https://github.com/proskillpacks/skillopt-agent-browse" rel="noopener">Read the research</a></p><p class="ogline">It is a text file you add to an AI assistant, or paste into a chat.</p><p class="note-light">Free. MIT licence: use it, change it, share it.</p></div><p class="ogline">Trained with our full method: <a href="/research/how-we-train-skills/">see the scores</a>.</p>
   </div>
 </header>
-<main class="prod"><div class="wrap">
-<section><details class="ogmore"><summary>More detail on what goes in and what comes out</summary><div class="two">
-  <div class="box"><b>What you give it</b><p>A browsing task and the agent-browser CLI.</p></div>
-  <div class="box"><b>What you get</b><p>The task done in fewer tool calls: forms, logins, dialogs, uploads and paginated data.</p></div>
-</div></details></section>
-<section class="gtk"><h2>Price, refund and checkout</h2><div class="prose"><p class="trline"><span class="tr-badge">Trained and gated</span> <a href="/research/how-we-train-skills/">How we trained it</a></p></div></section>
+<main class="prod pc"><div class="wrap">
 <section><h2>Measured result</h2><p class="sub">Taken from the skill&#x27;s README.</p><div class="prose"><p>On 11 unseen tasks the trained skill was about 14% cheaper per task than no skill (29.4k versus 34.2k weighted tokens), with no change in accuracy: 22 of 22 correct in every condition. Two of the three edit sets we tried made things worse and were rejected by the validation gate.</p></div></section>
 <section><h2>What it does</h2><div class="prose"><p>A skill that teaches an AI assistant to drive a real browser with the <a href="https://github.com/vercel-labs/agent-browser" rel="noopener">agent-browser</a> command line tool in as few tool calls as possible. It covers clicking, filling forms, logging in, hover menus, uploads, drag and drop, JavaScript dialogs, iframes, infinite scroll and pulling data out of rendered or paginated pages.</p>
 <p>We did not write it by hand. It was trained against a set of scored tasks, and only the edits that measurably helped were kept. The method is a scaled-down version of Microsoft&#x27;s SkillOpt paper (<a href="https://arxiv.org/abs/2605.23904" rel="noopener">arXiv 2605.23904</a>). The test harness, every candidate version and all scores are in the research repo: https://github.com/proskillpacks/skillopt-agent-browse</p></div></section>
-<section><h2>The evidence: how it was tested</h2><div class="prose"><p><b>How we tested it.</b></p><p>Trained and scored with Claude Opus 5.5 through the claude CLI and the agent-browser CLI. On 11 unseen tasks (2 runs each) it used 29.4k weighted tokens per task against 34.2k with no skill, with 22 of 22 correct in every condition. Two of three proposed edit sets made things worse and were rejected by the validation gate. One student model and a small task set; the Setup section was added by hand and was not gated.</p><p>Scored on 32 auto-checked tasks, with every candidate version and every run published in the research repo. We did not score it with any other model or assistant.</p><p><a href="/how-we-test/">How we test</a>, what we do not do, and which assistants we ran it on.</p></div></section>
+<section class="ev" id="evidence"><h2>The evidence</h2><p class="evh"><span class="bdg bg-b" title="Measured against a plain AI request on cases it was not tuned on. The numbers are published.">BENCHMARKED<span class="sr"> badge. Measured against a plain AI request on cases it was not tuned on. The numbers are published.</span></span><span class="psb-t">On 11 unseen tasks: same accuracy, 14% fewer tokens than no skill.</span></p><p>Trained and scored with Claude Opus 5.5 through the claude CLI and the agent-browser CLI. On 11 unseen tasks (2 runs each) it used 29.4k weighted tokens per task against 34.2k with no skill, with 22 of 22 correct in every condition. Two of three proposed edit sets made things worse and were rejected by the validation gate. One student model and a small task set; the Setup section was added by hand and was not gated.</p><details class="evmore"><summary>More on how it was tested</summary><p>Scored on 32 auto-checked tasks, with every candidate version and every run published in the research repo. We did not score it with any other model or assistant.</p></details><p class="evlink"><a href="/how-we-test/#ev-agent-browse">Read the full test</a></p></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>One student model (Claude Opus 5.5). Other models are untested.</li><li>A small task set (32 tasks), mostly public practice sites. No real logins, no bot detection.</li><li>The student already solved every task without a skill, so the gain is cost, not accuracy.</li><li>The Setup section of SKILL.md was added by hand and did not go through the validation gate.</li></ul></div></section>
-<section><h2>Works with</h2><div class="prose"><p>Tested with Claude Opus 5.5 through the claude CLI and the agent-browser CLI. The format is the open SKILL.md format, but we have not tested other assistants or models. You need the agent-browser CLI (https://github.com/vercel-labs/agent-browser) and an assistant that can run shell commands.</p></div></section>
-<section><h2>For people who use AI assistants</h2><div class="prose"><ol><li>Install the agent-browser CLI from https://github.com/vercel-labs/agent-browser and check that <code>agent-browser --help</code> runs.</li><li>Copy the <code>agent-browse</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/developers/agent-browse) into <code>.agents/skills/</code> in your project, or into your tool&#x27;s own skills folder (for Claude Code: <code>~/.claude/skills/</code>). <code>npx skills add proskillpacks/skills</code> also works.</li><li>Ask for a browser task in plain words, for example: &quot;Open the page, find the price table and give me the rows.&quot; The skill loads by itself. There is no paste-in prompt for this one, because it needs a shell.</li></ol></div></section>
-<section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">Free</span><a class="btn btn-pine" href="/go/repo/agent-browse/?from=skill">Get the files from GitHub (for developers)</a></div><p>MIT licence. Use it, change it, share it.</p></div></section>
-<section><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/skill-portability-check/">Skill Portability Check</a> (Free): Check that a skill file will load in other AI assistants.</li><li><a href="/skills/test-gap-finder/">Test Gap Finder</a> (Free): Find what a code change leaves untested.</li><li><a href="/skills/accessibility-quick-audit/">Accessibility Quick Audit</a> (Free): Find the accessibility problems on a web page and get the fix for each.</li><li>More for developers: <a href="/for/developers/">Developers</a></li></ul></section>
-<p class="sub"><a href="https://github.com/proskillpacks/skills/issues/new?template=report-problem.yml&amp;skill=agent-browse" rel="noopener">Report a problem</a> (GitHub, or write to kaiventura.founder@gmail.com).</p>
+<section class="faq" id="questions"><h2>Questions</h2><details><summary>Questions or a problem?</summary><div><p>Write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Tested with Claude Opus 5.5 through the claude CLI and the agent-browser CLI. The format is the open SKILL.md format, but we have not tested other assistants or models. You need the agent-browser CLI (https://github.com/vercel-labs/agent-browser) and an assistant that can run shell commands.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>Using it with an AI assistant</b></p><ol><li>Install the agent-browser CLI from https://github.com/vercel-labs/agent-browser and check that <code>agent-browser --help</code> runs.</li><li>Copy the <code>agent-browse</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/developers/agent-browse) into <code>.agents/skills/</code> in your project, or into your tool&#x27;s own skills folder (for Claude Code: <code>~/.claude/skills/</code>). <code>npx skills add proskillpacks/skills</code> also works.</li><li>Ask for a browser task in plain words, for example: &quot;Open the page, find the price table and give me the rows.&quot; The skill loads by itself. There is no paste-in prompt for this one, because it needs a shell.</li></ol></div></div></details></section>
+<section class="endcta"><a class="btn btn-pine" href="/go/repo/agent-browse/?from=skill">Get the files from GitHub (for developers)</a></section>
+<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/skill-portability-check/">Skill Portability Check</a> (Free): Check that a skill file will load in other AI assistants.</li><li><a href="/skills/test-gap-finder/">Test Gap Finder</a> (Free): Find what a code change leaves untested.</li><li><a href="/skills/accessibility-quick-audit/">Accessibility Quick Audit</a> (Free): Find the accessibility problems on a web page and get the fix for each.</li></ul></section>
 </div></main>
 <footer class="sitefoot">
   <div class="wrap">

@@ -599,6 +599,42 @@ details.usingai { border: 1px solid var(--rule); border-radius: 12px; background
 details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; }
 .devline { color: var(--slate); font-size: 0.9rem; }
 
+/* product page cleanup: one content width, calm body */
+:root { --pcw: 46rem; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
+.hero.pc .buyb { padding: 1.1rem 1.25rem; }
+.hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+main.prod.pc .wrap > * { max-width: var(--pcw); }
+main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
+main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
+main.prod.pc h2 { margin-top: 0; }
+.pc .rend { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.4rem 1.2rem; margin: 0.6rem 0 1rem; }
+.pc .rend h3 { font-size: 1rem; margin: 1rem 0 0.2rem; }
+.pc .rendcap { margin: 1.2rem 0 0; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--sage); }
+.pc .evh { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.8rem; margin: 0 0 0.9rem; }
+.pc .evh .psb-t { color: var(--ink); font-size: 1rem; font-weight: 600; }
+.pc .evh .psb-t.none { color: var(--slate); font-weight: 400; }
+.pc .evt table { width: 100%; border-collapse: collapse; font-size: 0.95rem; background: #fff; }
+.pc .evt th, .pc .evt td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.pc .evt thead th { font-size: 0.85rem; color: var(--slate); font-weight: 700; }
+.pc .evt tbody th { font-weight: 700; }
+.pc .evcap { font-size: 0.88rem; color: var(--slate); margin: 0.5rem 0 0; }
+.pc .evmore { margin: 0.8rem 0 0; }
+.pc .evmore summary, .pc .faq summary { cursor: pointer; font-weight: 700; }
+.pc .evlink { margin: 0.9rem 0 0; }
+.pc .evlink a { font-weight: 700; }
+.pc .faq details { border-top: 1px solid var(--rule); padding: 0.15rem 0; }
+.pc .faq details:last-child { border-bottom: 1px solid var(--rule); }
+.pc .faq summary { padding: 0.8rem 0; font-size: 1.02rem; }
+.pc .faq details > div { padding: 0 0 0.9rem; }
+.pc .faq details > div > :first-child { margin-top: 0; }
+.pc .faq .tl { font-size: 0.93rem; }
+.pc .faq .tl ul { margin: 0.3rem 0 0.8rem; }
+.pc .endcta { margin: 0 0 var(--pcg, 2.6rem); }
+.pc .rel h2 { margin-top: 0; }
+.pc .rel ul.links { margin-top: 0.5rem; }
+@media (max-width: 40rem) { :root { --pcg: 2rem; } .pc .evt table { font-size: 0.88rem; } .pc .evt th, .pc .evt td { padding: 0.45rem 0.4rem; } .pc .endcta .btn { width: 100%; text-align: center; } .pc .rend { padding: 0.2rem 0.9rem; } }
+
 .rcp .sa { max-width: 52rem; background: #fff; border: 1px solid var(--rule); border-left: 5px solid var(--lime); border-radius: 12px; padding: 0.9rem 1.1rem; margin: 1.2rem 0 1.4rem; }
 .rcp .sa-t { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--slate); margin: 0 0 0.3rem; }
 .rcp .sa-m { font-size: 0.85rem; color: var(--slate); margin: 0.6rem 0 0; }
@@ -940,7 +976,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 </script>
 </head>
 <body>
-<header class="hero">
+<header class="hero pc">
   <div class="wrap">
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
@@ -950,15 +986,10 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-developers-and-data">Developers and data</a> / Agent Browse for local models (Qwen)</p>
     <h1>Agent Browse for local models (Qwen)</h1>
     <p class="lead">Stop a local Qwen model guessing web addresses while it browses.</p>
-    <dl class="ogw"><dt>Who it is for</dt><dd>Developers who run Qwen or a similar local model as a browsing agent.</dd><dt>What you give it</dt><dd>A browsing task, the agent-browser tool and your local model.</dd><dt>What you get back</dt><dd>The task done in fewer tries. Scored on 8 selection tasks; the held-out test is not finished.</dd></dl><div class="buyb"><div class="cta"><a class="btn btn-lime" href="/go/repo/agent-browse-qwen/?from=skill">Get the files from GitHub (for developers)</a></div><p class="note-light alts"><a class="alt-link" href="https://github.com/proskillpacks/skillopt-agent-browse" rel="noopener">Read the research</a></p><p class="ogline">It is a text file you add to an AI assistant, or paste into a chat.</p><p class="note-light">Free, MIT licence, hosted on GitHub. Install the whole free set with npx skills add proskillpacks/skills, or copy this skill&#x27;s folder.</p></div><div class="psb"><span class="bdg bg-o" title="Improved step by step against a set of test cases, with every score on file.">OPTIMISED<span class="sr"> badge. Improved step by step against a set of test cases, with every score on file.</span></span><span class="psb-t">Improved over 4 gated rounds: 48 of 48 on the selection tasks.</span><span class="psb-l"><a href="/how-we-test/#ev-agent-browse-qwen">See the evidence</a> &middot; <a href="/how-we-test/#badges">What this means</a></span></div><p class="ogline">Trained with our full method: <a href="/research/how-we-train-skills/">see the scores</a>.</p>
+    <dl class="ogw"><dt>Who it is for</dt><dd>Developers who run Qwen or a similar local model as a browsing agent.</dd><dt>What you give it</dt><dd>A browsing task, the agent-browser tool and your local model.</dd><dt>What you get back</dt><dd>The task done in fewer tries. Scored on 8 selection tasks; the held-out test is not finished.</dd></dl><div class="buyb"><div class="cta"><a class="btn btn-lime" href="/go/repo/agent-browse-qwen/?from=skill">Get the files from GitHub (for developers)</a></div><p class="note-light alts"><a class="alt-link" href="https://github.com/proskillpacks/skillopt-agent-browse" rel="noopener">Read the research</a></p><p class="ogline">It is a text file you add to an AI assistant, or paste into a chat.</p><p class="note-light">Free. MIT licence: use it, change it, share it.</p></div><p class="ogline">Trained with our full method: <a href="/research/how-we-train-skills/">see the scores</a>.</p>
   </div>
 </header>
-<main class="prod"><div class="wrap">
-<section><details class="ogmore"><summary>More detail on what goes in and what comes out</summary><div class="two">
-  <div class="box"><b>What you give it</b><p>A browsing task and the agent-browser CLI.</p></div>
-  <div class="box"><b>What you get</b><p>A local model like Qwen3.8-27B stops guessing addresses and selectors, and gets the task done in fewer tries.</p></div>
-</div></details></section>
-<section class="gtk"><h2>Price, refund and checkout</h2><div class="prose"><p class="trline"><span class="tr-badge">Trained and gated</span> <a href="/research/how-we-train-skills/">How we trained it</a></p></div></section>
+<main class="prod pc"><div class="wrap">
 <section><h2>Measured result, selection split</h2><p class="sub">Taken from the research repo&#x27;s README. Held-out test pending.</p><div class="prose"><p>Qwen3.8-27B, driven by the <code>pi</code> coding agent, 8 selection tasks with 6 runs each (48 rollouts per skill). The held-out test is pending: those runs were still in progress when this was written, so there is no unseen-task result yet.</p>
 <div class="table"><table><thead><tr><th>Skill</th><th>Edits</th><th>Correct</th><th>Score</th><th>Tokens per task</th><th>Turns</th><th>Decision</th></tr></thead><tbody><tr><td>No skill (24 rollouts)</td><td></td><td>21/24</td><td>0.7887</td><td>68.7k</td><td>13.9</td><td></td></tr><tr><td><code>s1</code> (Opus-trained)</td><td></td><td>47/48</td><td>0.9177</td><td>42.3k</td><td>9.2</td><td>start</td></tr><tr><td><code>q1</code></td><td>4</td><td>43/48</td><td>0.8367</td><td>42.0k</td><td>8.3</td><td>rejected</td></tr><tr><td><code>q2</code></td><td><code>q1</code> with one edit swapped</td><td>48/48</td><td><strong>0.9454</strong></td><td><strong>36.4k</strong></td><td>8.5</td><td><strong>accepted</strong></td></tr><tr><td><code>q3</code></td><td>4 more</td><td>47/48</td><td>0.9215</td><td>39.4k</td><td>8.1</td><td>rejected</td></tr><tr><td><code>q4</code></td><td>2 of the <code>q3</code> edits</td><td>44/48</td><td>0.8542</td><td>47.0k</td><td>9.1</td><td>see note</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p>
 <p><code>q4</code> note: three of its four failures were 15-minute timeouts on the 50-page catalogue crawl, after the practice site began answering 403 under four concurrent crawls. That is the benchmark throttling, not the skill.</p>
@@ -966,13 +997,11 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <section><h2>What it does</h2><div class="prose"><p>A variant of Agent Browse for Qwen3.8-27B and similar local models that tend to guess selectors and URLs. It teaches an assistant to drive a real browser with the <a href="https://github.com/vercel-labs/agent-browser" rel="noopener">agent-browser</a> command line tool: clicking, filling forms, logging in, hover menus, uploads, JavaScript dialogs, paginated data.</p>
 <p>It was trained the same way as Agent Browse: scored tasks, and only edits that measurably helped were kept. It starts from the skill trained for Claude Opus and adds what the Qwen runs showed: never invent a URL or selector you have not seen, use the CLI&#x27;s own selector syntax, pass longer JavaScript on stdin, check a list against the page&#x27;s own total before calling it complete, and do not close the browser early.</p>
 <p>The test harness, every candidate version (accepted and rejected) and the run data are in the research repo: https://github.com/proskillpacks/skillopt-agent-browse (Part 2 of the write-up).</p></div></section>
-<section><h2>The evidence: how it was tested</h2><div class="prose"><p><b>How we tested it.</b></p><p>Trained and scored with Qwen3.8-27B on a local server, driven by the pi coding agent. On the 8 selection tasks (6 runs each) it got 48 of 48 correct at 36.4k tokens per task, against 21 of 24 at 68.7k with no skill and 47 of 48 at 42.3k with the Claude-trained Agent Browse. These are selection-split figures, the split the gate used to pick it. The held-out test is pending. Three of four tuning attempts were rejected by the gate.</p><p>Scored on the 8 selection tasks with 6 runs each, with every candidate version and run published in the research repo. The held-out test for this version is not finished. We did not score it with any other model.</p><p><a href="/how-we-test/">How we test</a>, what we do not do, and which assistants we ran it on.</p></div></section>
+<section class="ev" id="evidence"><h2>The evidence</h2><p class="evh"><span class="bdg bg-o" title="Improved step by step against a set of test cases, with every score on file.">OPTIMISED<span class="sr"> badge. Improved step by step against a set of test cases, with every score on file.</span></span><span class="psb-t">Improved over 4 gated rounds: 48 of 48 on the selection tasks.</span></p><p>Trained and scored with Qwen3.8-27B on a local server, driven by the pi coding agent. On the 8 selection tasks (6 runs each) it got 48 of 48 correct at 36.4k tokens per task, against 21 of 24 at 68.7k with no skill and 47 of 48 at 42.3k with the Claude-trained Agent Browse. These are selection-split figures, the split the gate used to pick it. The held-out test is pending. Three of four tuning attempts were rejected by the gate.</p><details class="evmore"><summary>More on how it was tested</summary><p>The held-out test for this version is not finished. We did not score it with any other model.</p></details><p class="evlink"><a href="/how-we-test/#ev-agent-browse-qwen">Read the full test</a></p></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>Held-out test pending: the figures are on the selection split, which the gate used to choose this skill.</li><li>The cross-check on Claude Opus was not run.</li><li>One local model, one quantisation, one harness (pi). Other models are untested.</li><li>The selection runs were measured under four-way concurrency and site throttling.</li><li>The Setup section of SKILL.md was added by hand and did not go through the validation gate.</li></ul></div></section>
-<section><h2>Works with</h2><div class="prose"><p>Tested with Qwen3.8-27B on a local OpenAI-compatible server, driven by the pi coding agent, and the agent-browser CLI (https://github.com/vercel-labs/agent-browser). The format is the open SKILL.md format; other assistants and models are untested. You need an assistant that can run shell commands.</p></div></section>
-<section><h2>For people who use AI assistants</h2><div class="prose"><ol><li>Install the agent-browser CLI from https://github.com/vercel-labs/agent-browser and check that <code>agent-browser --help</code> runs.</li><li>Copy the <code>agent-browse-qwen</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/developers/agent-browse-qwen) into <code>.agents/skills/</code> in your project, or into your tool&#x27;s own skills folder.</li><li>Ask for a browser task in plain words, for example: &quot;Open the page, find the price table and give me the rows.&quot; The skill loads by itself. There is no paste-in prompt for this one, because it needs a shell.</li></ol></div></section>
-<section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">Free</span><a class="btn btn-pine" href="/go/repo/agent-browse-qwen/?from=skill">Get the files from GitHub (for developers)</a></div><p>MIT licence. Use it, change it, share it.</p></div></section>
-<section><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/pr-description-and-review-prep/">PR Description and Review Prep</a> (Free): Write a pull request description from your code changes.</li><li><a href="/skills/readme-first-run-check/">README First-Run Check</a> (Free): Find where a project&#x27;s setup guide would trip up a new user.</li><li><a href="/skills/skill-portability-check/">Skill Portability Check</a> (Free): Check that a skill file will load in other AI assistants.</li><li>More for developers: <a href="/for/developers/">Developers</a></li></ul></section>
-<p class="sub"><a href="https://github.com/proskillpacks/skills/issues/new?template=report-problem.yml&amp;skill=agent-browse-qwen" rel="noopener">Report a problem</a> (GitHub, or write to kaiventura.founder@gmail.com).</p>
+<section class="faq" id="questions"><h2>Questions</h2><details><summary>Questions or a problem?</summary><div><p>Write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Tested with Qwen3.8-27B on a local OpenAI-compatible server, driven by the pi coding agent, and the agent-browser CLI (https://github.com/vercel-labs/agent-browser). The format is the open SKILL.md format; other assistants and models are untested. You need an assistant that can run shell commands.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>Using it with an AI assistant</b></p><ol><li>Install the agent-browser CLI from https://github.com/vercel-labs/agent-browser and check that <code>agent-browser --help</code> runs.</li><li>Copy the <code>agent-browse-qwen</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/developers/agent-browse-qwen) into <code>.agents/skills/</code> in your project, or into your tool&#x27;s own skills folder.</li><li>Ask for a browser task in plain words, for example: &quot;Open the page, find the price table and give me the rows.&quot; The skill loads by itself. There is no paste-in prompt for this one, because it needs a shell.</li></ol></div></div></details></section>
+<section class="endcta"><a class="btn btn-pine" href="/go/repo/agent-browse-qwen/?from=skill">Get the files from GitHub (for developers)</a></section>
+<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/pr-description-and-review-prep/">PR Description and Review Prep</a> (Free): Write a pull request description from your code changes.</li><li><a href="/skills/readme-first-run-check/">README First-Run Check</a> (Free): Find where a project&#x27;s setup guide would trip up a new user.</li><li><a href="/skills/skill-portability-check/">Skill Portability Check</a> (Free): Check that a skill file will load in other AI assistants.</li></ul></section>
 </div></main>
 <footer class="sitefoot">
   <div class="wrap">
