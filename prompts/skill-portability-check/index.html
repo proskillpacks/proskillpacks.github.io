@@ -963,6 +963,23 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+.foldl { margin: 0.6rem 0 0; }
+.foldl > summary, details.evb2 > summary { cursor: pointer; font-weight: 700; }
+.foldl > summary { padding: 0.5rem 0; }
+.foldl[open] > summary { margin-bottom: 0.6rem; }
+details.evb2 { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.9rem 1.1rem; margin: 0 0 0.7rem; max-width: var(--tw, 46rem); }
+details.evb2 > summary { list-style: none; }
+details.evb2 > summary::-webkit-details-marker { display: none; }
+details.evb2 > summary h3 { display: inline; margin: 0 0.5rem 0 0; font-size: 1.05rem; }
+details.evb2 > summary .evone { display: block; font-weight: 400; color: var(--slate); margin-top: 0.25rem; font-size: 0.95rem; }
+details.evb2 > summary::after { content: "Show the test"; display: block; margin-top: 0.3rem; font-size: 0.85rem; font-weight: 700; color: var(--pine); text-decoration: underline; }
+details.evb2[open] > summary::after { content: "Hide the test"; }
+details.evb2[open] > summary { margin-bottom: 0.7rem; }
+.kitline { margin: 0 0 1rem; }
+@media (min-width: 56.01rem) { .freepg .dgrid.dgrid.dgrid.dgrid.dgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.card p, .card h3 { -webkit-line-clamp: unset; display: block; }
+.card h3 { min-height: 0; }
+
 @media (min-width: 56.01rem) { .allgrp .dgrid.dgrid.dgrid.dgrid.dgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 /* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
 :root { --tw: 46rem; }
@@ -1037,15 +1054,6 @@ Here is my skill file:</code></pre></div></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It reads files; it cannot tell whether a skill&#x27;s instructions work or whether it triggers.</li><li>Warnings are portability risks, not proof of breakage.</li><li>The vendor pattern lists are not exhaustive.</li></ul></div></section>
 <section><h2>The same job as an installable skill</h2><div class="prose"><p>Check a skill file works across AI tools is also a skill you install once and call in plain words, so you do not paste the prompt each time. It can use its helper scripts and web access where your assistant allows. <a href="/skills/skill-portability-check/">See the skill page</a>, or read <a href="/guides/how-to-install-agent-skills/">how to install skills</a>.</p></div></section>
 <section><h2>More for developers</h2><div class="prose"><p><a href="/for/developers/">See every skill for developers</a>.</p></div></section>
-<section class="signup" id="notify">
-  <h2>New free workflows by email</h2>
-  <p>New free workflows and guides appear in all of these as we publish them. Pick whichever you already use.</p>
-  <ul class="links">
-    <li><a href="/feed.xml">RSS feed</a> for any feed reader</li>
-    <li><a href="/go/install/?from=prompt" rel="noopener">Watch the free skills repo on GitHub</a></li>
-    <li><a href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=prompt&amp;utm_campaign=subscribe" rel="noopener">Follow on Gumroad</a></li>
-  </ul>
-</section>
 </div></main>
 <script>
 document.querySelectorAll('.prose pre').forEach(function (pre) {
@@ -1061,7 +1069,7 @@ document.querySelectorAll('.prose pre').forEach(function (pre) {
     <div class="fgrid">
       <div class="fbrand"><a class="fb" href="/"><img src="/assets/avatar.png" alt="" width="36" height="36"><span>PRO SKILL PACKS</span></a>
         <p>Ready-made AI workflows for specific jobs, tested on real tasks.</p><p>Pro Skill Packs makes ready-made AI workflows and fill-in kits for specific jobs.</p></div>
-      <nav aria-label="Who it's for"><h2>Who it's for</h2><ul><li><a href="/stores/">Online sellers</a></li><li><a href="/hosts/">Holiday let hosts</a></li><li><a href="/freelance/">Freelancers and small businesses</a></li><li><a href="/sales/">Salespeople</a></li><li><a href="/recruiters/call-notes-to-screen-note/">Recruiters</a></li><li><a href="/managers/">Managers</a></li><li><a href="/work/">Hard messages at work</a></li><li><a href="/for/developers/">Developers and data</a></li></ul></nav>
+      <nav aria-label="Who it's for"><h2>Who it's for</h2><ul><li><a href="/stores/">Online sellers</a></li><li><a href="/hosts/">Holiday let hosts</a></li><li><a href="/freelance/">Freelancers and small businesses</a></li><li><a href="/sales/">Salespeople</a></li><li><a href="/recruiters/">Recruiters</a></li><li><a href="/managers/">Managers</a></li><li><a href="/work/">Hard messages at work</a></li><li><a href="/for/developers/">Developers and data</a></li></ul></nav>
       <nav aria-label="Trust"><h2>Trust</h2><ul><li><a href="/how-we-test/">Why trust us</a></li><li><a href="/study/">Research</a></li><li><a href="/research/how-we-train-skills/">How we train a workflow</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/new/">What's new</a></li></ul></nav>
       <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/request/">Tell us the job</a></li><li><a href="/feedback/">Free copy for feedback</a></li><li><a href="/about/#terms">Terms and refunds</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/go/affiliates/?from=prompt">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=prompt&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
     </div>
@@ -1079,5 +1087,5 @@ D.addEventListener('copy',function(){if(String(window.getSelection()).indexOf('n
 <!-- analytics:start -->
 <script async src="https://cdn.counter.dev/script.js" data-id="a17e3abc-0819-4937-be25-c683543a2ac8" data-utcoffset="1"></script>
 <!-- analytics:end -->
-</body>
+<script>(function(){function o(){var h=location.hash.slice(1);if(!h)return;var e=document.getElementById(h);while(e){if(e.tagName=='DETAILS')e.open=true;e=e.parentElement}}o();addEventListener('hashchange',o)})()</script></body>
 </html>
