@@ -262,6 +262,12 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   .hero-filters label:not(.grow) { width: calc(50% - 0.4rem); }
   .hero-filters label:not(.grow) select { min-width: 0; width: 100%; }
 }
+.allline { margin: 1rem 0 0; color: var(--slate); }
+.allline a { color: var(--pine); font-weight: 700; }
+.jump { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.25rem; }
+.jump a { text-decoration: none; padding: 0.4rem 0.9rem; border: 1px solid var(--rule); background: #fff; border-radius: 999px; color: var(--ink); font-size: 0.93rem; }
+.jump a:hover, .jump a:focus-visible { border-color: var(--pine); }
+.jump i { font-style: normal; color: var(--slate); margin-left: 0.2rem; }
 .sr { position: absolute; left: -9999px; }
 .hsearch { margin: 1.6rem 0 0; max-width: 40rem; }
 .hsearch input { width: 100%; box-sizing: border-box; font: inherit; font-size: 1.1rem; padding: 0.95rem 1.2rem; border-radius: 999px; border: 2px solid transparent; background: #fff; color: var(--ink); }
@@ -296,13 +302,21 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .dirhome .tiles { margin-bottom: 3rem; }
 .dirhome section.cats .tiles { margin-bottom: 0; }
 @media (max-width: 40rem) {
-  .tiles { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
   .tile { padding: 0.9rem 0.9rem; min-height: 9.5rem; }
   .tile b { font-size: 1rem; }
   .tile .who { font-size: 0.85rem; }
   .dr-head { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
-  .dgrid { grid-template-columns: 1fr; }
-  #free-row .dc:nth-child(n+4), #new-row .dc:nth-child(n+4) { display: none; }
+  .dgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; }
+  .dc { min-width: 0; }
+  .dc-top { font-size: 0.68rem; letter-spacing: 0.03em; }
+  #free-row .go, #new-row .go, #start-row .go { display: none; }
+  #guides-row .dgrid, #results .dgrid { grid-template-columns: 1fr; }
+  .dc { padding: 0.9rem 0.85rem; }
+  .dc h3 { font-size: 0.98rem; }
+  .dc p { font-size: 0.88rem; }
+  .dc .go { font-size: 0.82rem; }
+  #free-row .dc:nth-child(n+5), #new-row .dc:nth-child(n+5), #start-row .dc:nth-child(n+5) { display: none; }
   .dc { min-height: 0; }
   .dirhome section { margin-bottom: 2.5rem; }
 }
@@ -396,11 +410,12 @@ document.querySelectorAll('.demo').forEach(function (f) {
 </script>
 <footer>
   <div class="wrap">
-    <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers and agencies</a><a href="/for/developers/">Developers</a><a href="/for/data-and-spreadsheets/">Spreadsheets</a><a href="/for/careers/">Careers</a><a href="/for/sales-and-outreach/">Sales and outreach</a><a href="/for/content-and-writing/">Writing</a><a href="/for/finance-and-admin/">Finance and admin</a><a href="/for/customer-support/">Support</a></nav>
+    <nav class="catlinks" aria-label="Categories"><b>Categories</b><a href="/for/shopify/">Shopify stores</a><a href="/for/freelancers/">Freelancers</a><a href="/for/short-term-rental-hosts/">Rental hosts</a><a href="/for/marketers-and-agencies/">Marketers</a><a href="/for/developers/">Developers</a><a href="/for/data-and-spreadsheets/">Spreadsheets</a><a href="/for/careers/">Job hunting</a><a href="/for/sales-and-outreach/">Sales and outreach</a><a href="/for/content-and-writing/">Writing</a><a href="/for/finance-and-admin/">Money and admin</a><a href="/for/customer-support/">Customer support</a></nav>
     <div class="row">
       <nav aria-label="Footer">
         <a href="/">Home</a>
         <a href="/categories/">Categories</a>
+        <a href="/all/">All products</a>
         <a href="/free/">Free</a>
         <a href="/guides/">Guides</a>
         <a href="/about/">About</a>
