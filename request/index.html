@@ -121,6 +121,7 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .chead .ck.soonk { border-style: dashed; }
 .card.soon .chead .cc { display: none; }
 .card.soon .chead { flex-wrap: wrap; }
+.card.soon .foot a.go:not(:last-child) { display: none; }
 .chead .cc { margin-left: auto; opacity: 0.85; min-width: 0; text-align: right; line-height: 1.2; font-size: 0.68rem; }
 .chead .ck { white-space: nowrap; }
 .card > img.thumb { aspect-ratio: 16 / 9; border-bottom: 1px solid var(--rule); }
@@ -323,7 +324,6 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; min-height: 2.73rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
-@media (min-width: 40.01rem) { .dc.dg h3 { min-height: 3.9rem; } }
 .dc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem; }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
 .dc .go::after { content: " \2192"; }
