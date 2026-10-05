@@ -82,7 +82,8 @@ h3 { font-size: 1.1rem; margin: 1.5rem 0 0.4rem; }
 .sub { color: var(--slate); max-width: 44rem; margin: 0 0 1.5rem; }
 .prose { max-width: 44rem; font-size: 1.06rem; line-height: 1.65; }
 .prose p { margin: 0 0 1rem; }
-.prose ul, .prose ol { margin: 0 0 1.1rem; padding-left: 1.3rem; }
+.prose ul, .prose ol { margin: 0 0 1.1rem; padding-left: 1.5rem; }
+.prose ol:has(> li:nth-child(10)) { padding-left: 2.1rem; }
 .prose li { margin-bottom: 0.4rem; }
 .prose a { color: var(--pine); font-weight: 600; }
 blockquote { margin: 0 0 1.2rem; padding: 1rem 1.2rem; background: #fff; border: 1px solid var(--rule); border-left: 4px solid var(--pine); border-radius: 12px; }
@@ -179,6 +180,7 @@ th { background: #eef2ee; }
 .box p { margin: 0; }
 .buybox { background: #fff; border: 2px solid var(--pine); border-radius: 18px; padding: 1.4rem 1.5rem; max-width: 52rem; }
 .buybox .row { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+.buybox .row > .price:has(+ .lob) { display: none; }   /* the price line under the button already shows the price */
 .kitbox { background: #fff; border: 2px solid var(--pine); border-radius: 14px; padding: 1rem 1.2rem; margin: 1.2rem 0; max-width: 52rem; }
 .kitbox img, img.kitimg { display: block; width: 100%; max-width: 40rem; height: auto; border-radius: 10px; margin: 0 0 0.8rem; }
 .kitbox p { margin: 0 0 0.8rem; }
@@ -269,7 +271,7 @@ footer.sitefoot h2 { margin: 0 0 0.6rem; font-size: 0.8rem; line-height: 1.2; le
 footer.sitefoot nav { display: block; }
 footer.sitefoot ul { list-style: none; margin: 0; padding: 0; }
 footer.sitefoot nav a { display: block; padding: 0.3rem 0; line-height: 1.4; }
-.freepg .dc-top .dc-cat { display: none; } .freepg .dc-top { justify-content: flex-start; }
+.freepg .dc-top .dc-cat { display: none; } .freepg .dgrid:not(:has(.bdg)) .dc-top { display: none; } @media (max-width: 40rem) { .freepg .dc-top:not(:has(.bdg)) { display: none; } } .freepg .dc-top { justify-content: flex-start; }
 footer.sitefoot small { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--sage); }
 @media (max-width: 56rem) { .fgrid { grid-template-columns: 1fr 1fr; } .fbrand { grid-column: 1 / -1; } }
 @media (max-width: 34rem) { .fgrid { grid-template-columns: 1fr 1fr; gap: 1.5rem 1rem; } footer.sitefoot nav a { padding: 0.55rem 0; } footer.sitefoot { padding-top: 2.25rem; } }
@@ -313,7 +315,12 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .hsearch input { width: 100%; box-sizing: border-box; font: inherit; font-size: 1.1rem; padding: 0.95rem 1.2rem; border-radius: 999px; border: 2px solid transparent; background: #fff; color: var(--ink); }
 @media (max-width: 40rem) { .hsearch input { font-size: 0.95rem; padding: 0.85rem 1rem; } }
 .hsearch input:focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }
-.dirhome section { margin: 0 0 3.25rem; }
+/* Design rule: one vertical rhythm. Every top-level section on a directory page (home, /all/, /categories/) sits var(--rh) below the one before, including the first one under the hero. */
+:root { --rh: 4.5rem; }
+@media (max-width: 40rem) { :root { --rh: 3rem; } }
+main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
+.dirhome section { margin: 0 0 var(--rh); }
+.dirhome section section { margin: 0; }
 .dr-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin: 0 0 1.1rem; }
 .dr-head h2 { margin: 0 0 0.2rem; }
 .dr-head .sub { margin: 0; }
@@ -339,15 +346,21 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .gtiles + .catsec, .catsec:first-of-type { margin-top: 2.5rem; }
 .dgrid + p.sub, .cta + p.sub, .cta + .sub { margin-top: 1rem; }
 @media (max-width: 56rem) { .dgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.dc { display: flex; flex-direction: column; gap: 0.4rem; padding: 1.1rem 1.2rem; min-height: 11.5rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; text-decoration: none; color: var(--ink); }
+/* Card anatomy (.dc): top row (badge left, audience right, fixed height) / title / outcome / proof / foot (price and link on one baseline, pinned to the bottom). In a .dgrid the five rows are a subgrid, so cards in a row line up at title, body, proof and foot. */
+.dc { display: flex; flex-direction: column; gap: 0.4rem; padding: 1.1rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; text-decoration: none; color: var(--ink); }
 .dc:hover, .dc:focus-visible { border-color: var(--pine); }
-.dc-top { min-height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
+.dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; min-height: 2.73rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; min-height: 2.9em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
-.dc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem; }
+.dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
+@supports (grid-template-rows: subgrid) { @media (min-width: 40.01rem) {   /* phones are one column: plain flex cards */
+  .dgrid > .dc:not(.feat):not(.dg) { display: grid; grid-template-rows: subgrid; grid-row: span 5; row-gap: 0.4rem; align-content: start; }
+  .dgrid > .dc:not(.feat):not(.dg) > .dc-top { grid-row: 1; } .dgrid > .dc:not(.feat):not(.dg) > h3 { grid-row: 2; } .dgrid > .dc:not(.feat):not(.dg) > p { grid-row: 3; }
+  .dgrid > .dc:not(.feat):not(.dg) > .dc-proof { grid-row: 4; } .dgrid > .dc:not(.feat):not(.dg) > .dc-foot { grid-row: 5; align-self: end; }
+} }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
 .dc .go::after { content: " \2192"; }
 .catsec { margin: 2.5rem 0 2.25rem; padding-top: 0.5rem; }
@@ -365,12 +378,11 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   .tile .who { font-size: 0.85rem; }
   .dr-head { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
   .dgrid { grid-template-columns: 1fr; gap: 0.75rem; }
-  .dc { padding: 0.9rem 0.85rem; }
+  .dc { padding: 0.9rem; }
   .dc h3 { font-size: 0.98rem; min-height: 0; }
   .dc p { font-size: 0.88rem; }
   .dc .go { font-size: 0.82rem; }
   .dc { min-height: 0; }
-  .dirhome section { margin-bottom: 2.5rem; }
 }
 .stats { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; padding: 0; margin: 1.1rem 0 0; color: var(--mist); font-size: 0.95rem; }
 .stats b { color: var(--lime); font-size: 1.05rem; }
@@ -387,7 +399,6 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .gt-list a:hover, .gt-list a:focus-visible { text-decoration: underline; }
 @media (min-width: 56.01rem) {
   .hero:has(+ main.dirhome) { padding-bottom: 1.6rem; }
-  main.dirhome { padding-top: 0.9rem; }
   .dirhome .dr-head { margin-bottom: 0.6rem; }
   .dirhome .dr-head .sub { margin-top: 0.1rem; }
   .gtiles { gap: 0.8rem; }
@@ -423,13 +434,28 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .bg-o { background: #fff; color: var(--pine); border: 1.5px solid var(--pine); }
 .bg-t { background: #fff; color: var(--sage); border: 1.5px solid var(--sage); }
 .dc-top > span:first-child:empty { display: block; }
-.dc-proof { font-size: 0.82rem; line-height: 1.4; color: var(--ink); min-height: 2.3em; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.dc-proof { font-size: 0.82rem; line-height: 1.4; color: var(--ink); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc-proof.none { color: #7a867f; }
 .dc .dc-cat { text-align: right; margin-left: auto; }
 .dc-top > span:first-child { overflow: visible; }
 .dc-top .dc-cat { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-.dc { min-height: 13rem; }
+.dc.dg .dc-top { justify-content: flex-start; }
+.dc.dg .dc-cat { margin-left: 0; text-align: left; color: var(--moss); }
 .psb { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.8rem; margin: 0 0 1rem; max-width: 44rem; }
+/* Product hero (polish 5 Oct): crumbs, title, outcome, three rows, ONE buy box, then the badge with its proof line. */
+.buyb { margin: 1.4rem 0 0; padding: 1.2rem 1.3rem; max-width: 44rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; background: rgba(255,255,255,0.05); }
+.buyb .cta, .buyb .lob { margin: 0; }
+.buyb > * + * { margin: 0.5rem 0 0; }
+.buyb > .alts { margin-top: 0.7rem; }
+.buyb .ogline, .buyb .note-light { font-size: 0.88rem; max-width: none; }
+.bb-links { font-size: 0.85rem; color: var(--mist); }
+.bb-links a { color: var(--mist); text-decoration: underline; text-underline-offset: 2px; }
+.buyb + .psb { margin: 1.1rem 0 0; }
+.psb .psb-l { flex-basis: 100%; }
+.buyb + .psb + .evb, .buyb + .evb { margin-top: 1.1rem; }
+/* Product body uses the full content width, like the cards and boxes around it. */
+main.prod .prose, main.prod .sub, main.prod .two, main.prod .buybox { max-width: none; }
+@media (max-width: 40rem) { .buyb { padding: 1rem; } .lob { display: flex; width: 100%; margin-right: 0; } .lob .btn, .vf-buy .btn, .vt-r .btn { width: 100%; text-align: center; } .vf-buy { align-items: stretch; } }
 .psb-t { color: var(--cream); font-size: 0.95rem; }
 .psb-t.none { color: var(--mist); }
 .psb-l { font-size: 0.85rem; color: var(--mist); }
@@ -438,9 +464,9 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .psb .bg-o, .psb .bg-t { background: transparent; color: var(--lime); border-color: var(--lime); }
 .v9brand { font-weight: 800; color: var(--cream); max-width: 40rem; margin: 0 0 1.1rem; font-size: 1.05rem; line-height: 1.4; }
 .v9small { color: var(--mist); font-size: 0.92rem; margin: 0.9rem 0 0; max-width: 40rem; }
-.pstrip { margin: 1.4rem 0 2.4rem; }
+.pstrip, .v9why .pstrip { margin: 1.5rem 0 0; }
 .pstrip ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.8rem; }
-.pstrip li { background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 0.9rem 1.1rem; display: flex; flex-direction: column; gap: 0.15rem; }
+.pstrip li { background: #f4f7f3; border: 0; border-radius: 12px; padding: 0.9rem 1.1rem; display: flex; flex-direction: column; gap: 0.15rem; }
 .pstrip b { font-size: 1.8rem; line-height: 1.1; color: var(--pine); }
 .pstrip span { color: var(--slate); font-size: 0.88rem; line-height: 1.4; }
 .ps-more { margin: 0.6rem 0 0; font-size: 0.92rem; }
@@ -457,20 +483,25 @@ a.v9t:hover, a.v9t:focus-visible { border-color: var(--pine); }
 .v9jobs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem; margin-top: 1rem; }
 .jobl { display: flex; flex-direction: column; gap: 0.5rem; background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.85rem 1rem; text-decoration: none; color: var(--ink); min-height: 5.4rem; }
 .jobl:hover, .jobl:focus-visible { border-color: var(--pine); }
-.jl-b { min-height: 1.2rem; display: flex; }
+.jl-b { display: flex; }
 .jl-t { font-weight: 700; line-height: 1.3; }
-.v9s { margin: 0; }
+.v9s { margin: 0; max-width: none; }
 .dirhome .v9s input { border: 1px solid var(--rule); }
 .v9feat { display: grid; grid-template-columns: 1.05fr 1fr; gap: 1.5rem 2.25rem; background: #fff; border: 1px solid var(--rule); border-left: 6px solid var(--lime); border-radius: 18px; padding: 1.6rem; }
 .v9feat h2 { margin: 0.7rem 0 0.7rem; }
 .v9feat p { margin: 0 0 0.8rem; color: var(--slate); }
 .v9feat p b { color: var(--ink); }
-.vf-buy { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; margin-top: 1rem; }
+.vf-buy { display: flex; flex-direction: column; align-items: flex-start; gap: 0.9rem; margin-top: 1.2rem; }
+.vf-buy .lob { margin: 0; }
 .vf-price { font-weight: 800; font-size: 1.1rem; }
 .vf-price .dcp s { color: var(--slate); font-weight: 400; }
 .vf-see { font-weight: 700; color: var(--pine); }
 .vf-fine { margin: 0.6rem 0 0 !important; font-size: 0.88rem; font-weight: 700; color: var(--pine) !important; }
-.vf-r { background: #f4f7f3; border-radius: 14px; padding: 1.2rem 1.3rem; align-self: start; }
+.vf-r { background: #f4f7f3; border-radius: 14px; padding: 1.2rem 1.3rem; align-self: stretch; display: flex; flex-direction: column; }
+.vf-l { display: flex; flex-direction: column; align-items: flex-start; }
+.vf-l .vf-buy { margin-top: auto; padding-top: 0.4rem; }
+.vf-r .vf-see { margin: 0.8rem 0 0; }
+.vf-r .vf-see a { color: var(--pine); font-weight: 700; }
 .vf-r h3 { margin: 0 0 0.5rem; }
 .vf-r table { width: 100%; border-collapse: collapse; margin: 0.4rem 0 0.8rem; font-size: 0.95rem; }
 .vf-r th, .vf-r td { text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--rule); }
@@ -500,14 +531,13 @@ a.v9t:hover, a.v9t:focus-visible { border-color: var(--pine); }
 .v9tell { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2.25rem; background: #fff; border: 1px solid var(--rule); border-left: 6px solid var(--lime); border-radius: 16px; padding: 1.5rem 1.6rem; }
 .v9tell h2 { margin: 0 0 0.5rem; }
 .v9tell p { margin: 0 0 0.7rem; color: var(--slate); }
-.v9tell ol { margin: 0; padding-left: 1.3rem; color: var(--slate); }
+.v9tell ol { margin: 0; padding: 0; list-style: none; counter-reset: tl; color: var(--slate); }
+.v9tell ol li { counter-increment: tl; position: relative; padding-left: 1.4rem; margin: 0 0 0.25rem; }
+.v9tell ol li::before { content: counter(tl) "."; position: absolute; left: 0; }
 .vt-r .btn { margin: 0.2rem 0 0.8rem; }
 .vr-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem; }
-.vr-links a { display: flex; align-items: center; background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.9rem 1rem; font-weight: 700; color: var(--pine); text-decoration: none; min-height: 4rem; }
+.vr-links a { display: flex; align-items: flex-start; background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 1.1rem; font-weight: 700; color: var(--pine); text-decoration: none; }
 .vr-links a:hover, .vr-links a:focus-visible { border-color: var(--pine); }
-.vr-g { margin: 1.6rem 0 0.7rem; }
-.vr-g h3 { margin: 0; }
-.v9res .dc.dg { min-height: 8rem; }
 .lobar a { white-space: nowrap; }
 .partof { margin: 0.8rem 0 0; font-size: 0.92rem; color: var(--slate); }
 .partof a { color: var(--pine); font-weight: 700; }
@@ -544,10 +574,11 @@ a.v9t:hover, a.v9t:focus-visible { border-color: var(--pine); }
 @media (max-width: 56rem) { .feat > .feat-l { display: none; } }
 @media (min-width: 56.01rem) { .grid.grid.grid[data-cols="3"], .dgrid.dgrid.dgrid[data-cols="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); } .grid.grid.grid[data-cols="4"], .dgrid.dgrid.dgrid[data-cols="4"] { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
-.gtk { margin: 0 0 1.8rem; } .gtk h2 { font-size: 1.05rem; margin: 0 0 0.4rem; } .gtk .prose p { font-size: 0.9rem; color: var(--slate); margin: 0 0 0.5rem; max-width: 52rem; }
+.gtk { margin: 0 0 1.8rem; } .gtk h2 { font-size: 1.05rem; margin: 0 0 0.4rem; } .gtk .prose p { font-size: 0.9rem; color: var(--slate); margin: 0 0 0.5rem; }
 .hero a.alt-link { color: var(--cream); text-decoration: underline; }
 .proofrow { display: flex; flex-wrap: wrap; gap: 1.2rem 2rem; align-items: flex-start; margin: 0 0 2.2rem; }
 .proofrow .pvfig { flex: 0 1 20rem; margin: 0; }
+.proofrow .pvfig:only-child { flex: 1 1 100%; max-width: 62.5rem; }
 .proofrow .pvfig img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 10px; }
 .proofrow .pvfig figcaption { font-size: 0.85rem; color: var(--slate); margin-top: 0.4rem; }
 .pvmore { display: none; }
@@ -804,7 +835,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .lob { display: inline-flex; flex-direction: column; align-items: flex-start; vertical-align: top; margin: 0 0.6rem 0.3rem 0; }
 .lob + .refundnote { display: inline-block; vertical-align: top; margin-top: 0.85rem; }
 @media (max-width: 40rem) { .refundnote { margin-left: 0 !important; } }
-.lo { display: block; margin: 0.4rem 0 0 0.3rem; font-size: 0.88rem; line-height: 1.3; }
+.lo { display: block; margin: 0.45rem 0 0; font-size: 0.88rem; line-height: 1.3; }
 .dcp { font-size: 1rem; } .dcp s { opacity: 0.65; font-size: 0.88em; margin-right: 0.15rem; }
 .lo s { opacity: 0.7; } .lo b { font-weight: 800; }
 .lobar .lo-s { display: none; }
@@ -821,7 +852,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .card.fol .fol-t b { display: block; font-size: 1rem; }
 .card.fol .fol-s { flex-basis: 100%; font-size: 0.82rem; color: var(--slate); }
 .fol .fol-s a { color: inherit; text-decoration: underline; }
-footer .card.fol { margin: 0 0 2rem; background: transparent; border-color: rgba(255,255,255,0.25); color: var(--cream); }
+footer .card.fol { margin: 0 0 2rem; max-width: none; background: transparent; border-color: rgba(255,255,255,0.25); color: var(--cream); }
 footer .card.fol .fol-t, footer .card.fol .fol-t b { color: var(--cream); }
 footer .card.fol .fol-s { color: var(--mist); }
 footer .card.fol .fol-s a { color: var(--cream); display: inline; padding: 0; }
@@ -832,6 +863,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .tcard .tc-act { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; margin-top: 0.2rem; }
 .tcard .tc-see { font-size: 0.92rem; }
 .card.tslim { min-height: 0; flex-direction: row; max-width: 52rem; margin: 0.6rem 0 0.7rem; padding: 0.5rem 0.7rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; color: var(--ink); display: flex; align-items: center; gap: 0.6rem; }
+.card.tslim.fpaid { max-width: none; margin: 1rem 0 0; padding: 0.65rem 0.75rem 0.65rem 1.1rem; }   /* same width as the card grid above it */
 .card.tslim .ts-t { flex: 1; min-width: 0; margin: 0; display: block; -webkit-line-clamp: unset; font-size: 0.85rem; line-height: 1.3; color: var(--ink); }
 .card.tslim .ts-t b { font-weight: 700; color: var(--ink); }
 .card.tslim .ts-t span { color: var(--slate); }
@@ -852,7 +884,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .freepg .fpaid { margin: 0.9rem 0 1.8rem; }
 .freepg .fbundle { margin: 1.2rem 0 0; font-size: 0.95rem; max-width: 52rem; }
 
-.ogw { margin: 1rem 0 0.2rem; max-width: 44rem; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.35rem 1rem; }
+.ogw { margin: 1rem 0 0.2rem; max-width: 44rem; display: grid; grid-template-columns: 11rem 1fr; gap: 0.35rem 1rem; }
 .ogw dt { margin: 0; color: var(--lime); font-weight: 800; font-size: 0.82rem; letter-spacing: 0.02em; text-transform: uppercase; padding-top: 0.15rem; }
 .ogw dd { margin: 0; color: var(--cream); font-size: 0.98rem; line-height: 1.4; }
 .ogline { margin: 0.7rem 0 0; font-size: 0.9rem; color: var(--mist); max-width: 44rem; }
@@ -918,17 +950,15 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-online-stores">Online stores</a> / Product Description Rewriter</p>
     <h1>Product Description Rewriter</h1>
     <p class="lead">Rewrite thin descriptions, ready to paste.</p>
-    <dl class="ogw"><dt>Who it is for</dt><dd>Shopify store owners with weak product text.</dd><dt>What you give it</dt><dd>Your store, a product or a product export file.</dd><dt>What you get back</dt><dd>Clean description HTML, an SEO title and a meta description. Missing facts are flagged.</dd></dl><div class="psb"><span class="bdg bg-b" title="Measured against a plain AI request on cases it was not tuned on. The numbers are published.">BENCHMARKED<span class="sr"> badge. Measured against a plain AI request on cases it was not tuned on. The numbers are published.</span></span><span class="psb-t">One-line request: 1 of 20 right. With it: 20 of 20.</span><span class="psb-l"><a href="/how-we-test/#ev-product-description-rewriter">See the evidence</a> &middot; <a href="/how-we-test/#badges">What this means</a></span></div><div class="cta"><span class="lob"><a class="btn btn-lime" href="https://proskillpacks.gumroad.com/l/product-description-rewriter/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=product-description-rewriter" data-go="buy/product-description-rewriter">Buy this skill, $5</a><span class="lo"><s>$5</s> <b>$2.50</b> for the first 10 buyers. 30-day refund. Prices in dollars. Checkout shows your currency, plus VAT where it applies.</span></span></div><p class="note-light alts"><a class="alt-link" href="https://proskillpacks.gumroad.com/l/store-ops-pack/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=store-ops-pack" data-go="buy/store-ops-pack">Also in the Store Ops Pack, $29</a></p><p class="ogline ogupd">Free updates: when we improve it, you get the new version.</p><div class="evb"><h2>The evidence</h2><p>In our test of 10 invented cases, run twice: typing one line got 1 of 20 fully right; with this skill, 20 of 20. The most common one-line failure was adding claims that were not in the facts we gave (18 of 20), such as &#x27;sturdy&#x27;, &#x27;calming&#x27; and &#x27;puddles&#x27;.</p><div class="table"><table><thead><tr><th></th><th>Strong model</th><th>Cheapest model</th></tr></thead><tbody><tr><th scope="row">Typing one line</th><td>1 of 20</td><td>0 of 20</td></tr><tr><th scope="row">With this skill</th><td>20 of 20</td><td>12 of 20</td></tr><tr><th scope="row">ChatGPT free-tier model (gpt-5.6-luna), 1 run</th><td colspan="2">one line 3 of 10, with this skill 9 of 10</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p><p class="evcap">Outputs fully right. Claude rows: out of 20. ChatGPT row: out of 10.</p><blockquote>A simple, sturdy tote for everyday carrying. Made from cotton canvas in classic navy, it measures 38 x 42 cm, roomy enough for groceries, books, or a laptop</blockquote><p class="evcap">A one-line rewrite. The facts we gave were cotton canvas, navy and 38 x 42 cm. The rest was added.</p><p class="evcap">Cases written by us; Claude models (the cheapest Claude model: 0 of 20 with one line, 12 of 20 with the skill) and ChatGPT&#x27;s free-tier model via the API; a small test; not our full training method.</p><p class="evcap"><a href="/research/how-we-train-skills/#other-skills">How the test was run</a></p></div><p class="ogline">It is a text file you paste into ChatGPT, Claude or any chatbot.</p>
+    <dl class="ogw"><dt>Who it is for</dt><dd>Shopify store owners with weak product text.</dd><dt>What you give it</dt><dd>Your store, a product or a product export file.</dd><dt>What you get back</dt><dd>Clean description HTML, an SEO title and a meta description. Missing facts are flagged.</dd></dl><div class="buyb"><div class="cta"><span class="lob"><a class="btn btn-lime" href="https://proskillpacks.gumroad.com/l/product-description-rewriter/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=product-description-rewriter" data-go="buy/product-description-rewriter">Get it, $5</a><span class="lo"><s>$5</s> <b>$2.50</b> for the first 10 buyers. 30-day refund. Prices in dollars. Checkout shows your currency, plus VAT where it applies.</span></span></div><p class="ogline ogupd">Free updates: when we improve it, you get the new version.</p><p class="note-light alts"><a class="alt-link" href="https://proskillpacks.gumroad.com/l/store-ops-pack/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=store-ops-pack" data-go="buy/store-ops-pack">Also in the Store Ops Pack, $29</a></p><p class="ogline">It is a text file you paste into ChatGPT, Claude or any chatbot.</p><p class="bb-links"><a href="/how-we-test/">Why trust us: every test, case by case</a> &middot; <a href="/contact/">Contact page</a></p></div><div class="psb"><span class="bdg bg-b" title="Measured against a plain AI request on cases it was not tuned on. The numbers are published.">BENCHMARKED<span class="sr"> badge. Measured against a plain AI request on cases it was not tuned on. The numbers are published.</span></span><span class="psb-t">One-line request: 1 of 20 right. With it: 20 of 20.</span><span class="psb-l"><a href="/how-we-test/#ev-product-description-rewriter">See the evidence</a> &middot; <a href="/how-we-test/#badges">What this means</a></span></div><div class="evb"><h2>The evidence</h2><p>In our test of 10 invented cases, run twice: typing one line got 1 of 20 fully right; with this skill, 20 of 20. The most common one-line failure was adding claims that were not in the facts we gave (18 of 20), such as &#x27;sturdy&#x27;, &#x27;calming&#x27; and &#x27;puddles&#x27;.</p><div class="table"><table><thead><tr><th></th><th>Strong model</th><th>Cheapest model</th></tr></thead><tbody><tr><th scope="row">Typing one line</th><td>1 of 20</td><td>0 of 20</td></tr><tr><th scope="row">With this workflow</th><td>20 of 20</td><td>12 of 20</td></tr><tr><th scope="row">ChatGPT free-tier model (gpt-5.6-luna), 1 run</th><td colspan="2">one line 3 of 10, with this skill 9 of 10</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p><p class="evcap">Outputs fully right. Claude rows: out of 20. ChatGPT row: out of 10.</p><blockquote>A simple, sturdy tote for everyday carrying. Made from cotton canvas in classic navy, it measures 38 x 42 cm, roomy enough for groceries, books, or a laptop</blockquote><p class="evcap">A one-line rewrite. The facts we gave were cotton canvas, navy and 38 x 42 cm. The rest was added.</p><p class="evcap">Cases written by us; Claude models (the cheapest Claude model: 0 of 20 with one line, 12 of 20 with the skill) and ChatGPT&#x27;s free-tier model via the API; a small test; not our full training method.</p><p class="evcap"><a href="/research/how-we-train-skills/#other-skills">How the test was run</a></p></div>
   </div>
 </header>
-<main><div class="wrap">
-<section class="proofrow"><figure class="pvfig"><a class="pvcrop" href="/assets/preview/product-description-rewriter.png"><img src="/assets/preview/product-description-rewriter.png" width="900" height="1035" loading="lazy" alt="A real page from Product Description Rewriter: the first page of the file you get" srcset="/assets/preview/product-description-rewriter-240.webp 240w, /assets/preview/product-description-rewriter-480.webp 480w, /assets/preview/product-description-rewriter-900.webp 900w" sizes="200vw" decoding="async"></a><figcaption>A page of the real file you get. <a class="pvmore" href="/assets/preview/product-description-rewriter.png">Tap to see the whole page</a></figcaption></figure><div class="trustbox"><p><b>30-day refund.</b> If it does not do the job, ask and we refund you.</p><ul><li><a href="/how-we-test/">Why trust us: every test, case by case</a></li><li><a href="/contact/">Contact page</a>, or write to kaiventura.founder@gmail.com</li></ul><p class="sub" style="margin:.6rem 0 0">Want to try it on your own work first? <a href="/feedback/">Ask for a free copy and tell us what is wrong with it.</a></p></div></section>
-<section class="gtk"><h2>Price, refund and checkout</h2><div class="prose"><p>Checkout is on Gumroad. Prices are in US dollars; Gumroad shows your local currency and any VAT in the total before you pay. Check that total in the cart. 30-day refund. Works in ChatGPT too: the download includes a paste-in prompt version.</p></div></section>
+<main class="prod"><div class="wrap">
 <section><details class="ogmore"><summary>More detail on what goes in and what comes out</summary><div class="two">
   <div class="box"><b>What you give it</b><p>A product URL, pasted text, a collection, or your product export CSV.</p></div>
   <div class="box"><b>What you get</b><p>Clean Shopify HTML descriptions with an SEO title (≤ 60 characters) and meta description (≤ 155). Bulk runs produce an import CSV.</p></div>
 </div></details></section>
-<section><h2>Before and after</h2><p class="sub">Real store. Taken from the skill&#x27;s README.</p><div class="prose"><p>Store: <strong>a menswear brand</strong> on Shopify (name withheld). Real public product data, used only as an example; we&#x27;re not affiliated. Product and brand names below are replaced with placeholders.</p>
+<section><h2>Before and after</h2><p class="sub">Real store. From a real test run.</p><div class="prose"><p>Store: <strong>a menswear brand</strong> on Shopify (name withheld). Real public product data, used only as an example; we&#x27;re not affiliated. Product and brand names below are replaced with placeholders.</p>
 <p><strong>Before</strong> (opening of the live description, followed by a list of spec bullets):</p>
 <blockquote><p>The [Model] Cardigan in Oatmeal Wool from [Brand]</p></blockquote>
 <p><strong>After</strong> (skill output, test 01):</p>
@@ -937,15 +967,16 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <p>Where each fact came from: &quot;soft, mid-weight, V-neck&quot; from the store&#x27;s own meta description, the specs from the product&#x27;s bullets, the sizes from its variants, and the 21 days from its refund policy. Fit isn&#x27;t stated anywhere, so it&#x27;s flagged instead of guessed. An earlier draft said &quot;reinforced pockets&quot;. The source only says &quot;double layer rib at the pocket opening&quot;, so the skill now refuses that kind of upgrade.</p></div></section>
 <section><h2>What it does</h2><div class="prose"><p>Turns thin or messy Shopify product descriptions into copy you can paste straight in: Shopify-safe HTML (benefit-led intro, scannable bullets, specs, care, a policy link), plus an <strong>SEO title (≤ 60 chars)</strong> and <strong>meta description (≤ 155 chars)</strong>. Every claim comes from your own product data. Anything missing is flagged for you to fill in, never guessed.</p>
 <p><strong>How it differs from Shopify Magic (free, built in):</strong> Magic drafts from the details you type into the editor. This skill reads your live product data and your store&#x27;s existing copy for voice, keeps every fact traceable, flags gaps instead of filling them, writes the SEO fields, and handles a whole collection or an export CSV in one run.</p></div></section>
-<section><h2>The evidence: how it was tested</h2><div class="prose"><p><b>How we tested it.</b></p><p>Tested on 4 real public Shopify stores and one product export CSV. Final scores: 9, 9, 10, 10 and 9 out of 10.</p><p>Tested on a menswear brand, a home-textiles brand, a coffee roaster, an allergy-friendly snack brand (pasted text), and the menswear brand&#x27;s catalog converted to Shopify&#x27;s export format (CSV mode). All are real public Shopify stores. Final scores: 9, 9, 10, 10, 9 out of 10.</p><p>Scored against a written standard on real public stores. A skill in this range ships only when every test scores 8/10 or more.</p><p><a href="/how-we-test/">How we test</a>, what we do not do, and which assistants we ran it on.</p></div></section>
+<section><h2>The evidence: how it was tested</h2><div class="prose"><p><b>How we tested it.</b></p><p>Tested on 4 real public Shopify stores and one product export CSV. Final scores: 9, 9, 10, 10 and 9 out of 10.</p><p>Tested on a menswear brand, a home-textiles brand, a coffee roaster, an allergy-friendly snack brand (pasted text), and the menswear brand&#x27;s catalog converted to Shopify&#x27;s export format (CSV mode). All are real public Shopify stores. Final scores: 9, 9, 10, 10, 9 out of 10.</p><p>Scored against a written standard on real public stores. A workflow in this range ships only when every test scores 8/10 or more.</p><p><a href="/how-we-test/">How we test</a>, what we do not do, and which assistants we ran it on.</p></div></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It needs the store&#x27;s public JSON. Some stores block it; paste the text instead.</li><li>Shopify&#x27;s 2024+ export headers (<code>URL handle</code>, <code>Description</code>, <code>SEO title</code>) are supported by name mapping but haven&#x27;t been tested on a real new-format export yet.</li><li>It writes from what your listing says. If your listing is one line, the result will be short too, and it says what to add.</li></ul></div></section>
 <section><h2>Works with</h2><div class="prose"><p>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot. We run our release tests on Claude Sonnet and Opus. Use your assistant&#x27;s strongest model: in our tests, a small, fast model added facts that were not in the source data. The helper scripts need Python 3 (standard library only). Reading a live store needs web access; otherwise paste the text.</p></div></section>
 <section id="where-to-start"><h2>Where to start</h2><ul class="links"><li><b>Try the free one first.</b> <a href="/skills/agent-ready-quick-check/">Store Quick Check</a>: Six checks of what a shopper and Google can see on your store, compared with 99 other stores.</li><li><b>In the Store Ops Pack.</b> This is one of 6 helpers in the pack, $29. <a href="/packs/store-ops-pack/">See the pack</a>.</li></ul></section>
 <section id="in-download"><h2>What is in the download</h2><p class="sub">Read from the real file.</p><ul class="links"><li><code>LICENSE.txt</code></li><li><code>README.md</code></li><li><code>claude-ai/</code> (1 file: <code>product-description-rewriter.zip</code>)</li><li><code>prompts/</code> (2 files: <code>product-description-rewriter-v1.0-prompts.pdf</code>, <code>product-description-rewriter.md</code>)</li><li><code>product-description-rewriter/</code>, the skill itself:<ul><li><code>SKILL.md</code></li><li><code>README.md</code></li><li><code>references/</code> (1 file)</li><li><code>scripts/</code> (3 files)</li></ul></li></ul></section>
-<section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">$5</span><span class="lob"><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/l/product-description-rewriter/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=product-description-rewriter" data-go="buy/product-description-rewriter">Buy this skill</a><span class="lo"><s>$5</s> <b>$2.50</b> for the first 10 buyers. 30-day refund. Prices in dollars. Checkout shows your currency, plus VAT where it applies.</span></span><span class="lob"><a class="btn btn-ghost" href="https://proskillpacks.gumroad.com/l/store-ops-pack/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=store-ops-pack" data-go="buy/store-ops-pack">Or get all 6 in the pack, $29</a><span class="lo"><s>$29</s> <b>$14.50</b> for the first 10 buyers. 30-day refund. Prices in dollars. Checkout shows your currency, plus VAT where it applies.</span></span></div><ul class="expect"><li><b>You get:</b> a zip file (double-click it to open it) with a guide and a text you paste into ChatGPT or any chatbot.</li><li><b>Checkout:</b> Gumroad opens on this page. Click Add to cart, enter your email and card details, and check the total, with any VAT, before you pay. Prices here are in US dollars.</li><li><b>After you pay:</b> a download page opens right away with the zip file, and Gumroad gives you a receipt there that you can resend. Open it, then paste the text from the prompts folder into ChatGPT and add your details.</li></ul><p>One-time payment. Questions or a refund: reply to your receipt within 30 days, or write to kaiventura.founder@gmail.com.</p></div></section>
+<section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">$5</span><span class="lob"><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/l/product-description-rewriter/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=product-description-rewriter" data-go="buy/product-description-rewriter">Get it, $5</a><span class="lo"><s>$5</s> <b>$2.50</b> for the first 10 buyers. 30-day refund. Prices in dollars. Checkout shows your currency, plus VAT where it applies.</span></span><span class="lob"><a class="btn btn-ghost" href="https://proskillpacks.gumroad.com/l/store-ops-pack/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=store-ops-pack" data-go="buy/store-ops-pack">Or get all 6 in the pack, $29</a><span class="lo"><s>$29</s> <b>$14.50</b> for the first 10 buyers. 30-day refund. Prices in dollars. Checkout shows your currency, plus VAT where it applies.</span></span></div><ul class="expect"><li><b>You get:</b> a zip file (double-click it to open it) with a guide and a text you paste into ChatGPT or any chatbot.</li><li><b>Checkout:</b> Gumroad opens on this page. Click Add to cart, enter your email and card details, and check the total, with any VAT, before you pay. Prices here are in US dollars.</li><li><b>After you pay:</b> a download page opens right away with the zip file, and Gumroad gives you a receipt there that you can resend. Open it, then paste the text from the prompts folder into ChatGPT and add your details.</li></ul><p>One-time payment. Questions: reply to your receipt, or write to kaiventura.founder@gmail.com.</p></div></section>
+<section class="gtk"><h2>Price, refund and checkout</h2><div class="prose"><p>Checkout is on Gumroad. Prices are in US dollars; Gumroad shows your local currency and any VAT in the total before you pay. Check that total in the cart. 30-day refund. Works in ChatGPT too: the download includes a paste-in prompt version.</p></div></section>
 <details class="usingai"><summary>Using it with an AI assistant</summary><div class="prose"><ol><li>Unzip the download. It holds the <code>product-description-rewriter</code> folder, ready-made zips for claude.ai in a <code>claude-ai</code> folder, a README and the licence.</li><li>Put the <code>product-description-rewriter</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: Customize, Skills, then the plus button, Create skill, Upload a skill, and upload the zip from the <code>claude-ai</code> folder without unzipping it (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Rewrite the description for https://yourstore.com/products/xyz&quot;. The skill loads by itself.</li></ol></div></details>
 <section><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/bfcm-campaign-kit/">Black Friday Campaign Kit</a> ($5): Offer maths on your real prices, a dated calendar, 5 emails, 3 text messages and a checklist.</li><li><a href="/skills/chargeback-evidence-checklist/">Chargeback Evidence Checklist</a> (Free): Got a chargeback? The proof to gather for your reason, what you already have, and where to find each piece in Shopify.</li><li><a href="/skills/chargeback-response-writer/">Chargeback Response Kit for Shopify: fill-in letters for each dispute reason</a> ($5): Answer a Shopify chargeback with the right letter for the reason.</li><li>More for Shopify store owners: <a href="/for/shopify/">Shopify store owners</a></li></ul></section>
-<p class="sub"><a href="https://github.com/proskillpacks/skills/issues/new?template=report-problem.yml&amp;skill=product-description-rewriter" rel="noopener">Report a problem with this skill</a> (GitHub, or write to kaiventura.founder@gmail.com).</p>
+<p class="sub"><a href="https://github.com/proskillpacks/skills/issues/new?template=report-problem.yml&amp;skill=product-description-rewriter" rel="noopener">Report a problem</a> (GitHub, or write to kaiventura.founder@gmail.com).</p>
 </div></main>
 <footer class="sitefoot">
   <div class="wrap">
