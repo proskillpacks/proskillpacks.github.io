@@ -161,7 +161,13 @@ pre code { background: none; padding: 0; overflow-wrap: normal; }
 table { border-collapse: collapse; width: 100%; background: #fff; font-size: 0.95rem; }
 th, td { border: 1px solid var(--rule); padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
 th { background: #eef2ee; }
-.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; max-width: 52rem; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; max-width: 44rem; }
+.grid > .card:last-child:nth-child(3n+1) { grid-column: 1 / -1; }
+.grid:has(> .card:nth-child(2):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 56rem) { .grid > .card:last-child:nth-child(3n+1) { grid-column: auto; } .grid > .card:last-child:nth-child(2n+1) { grid-column: 1 / -1; } }
+@media (max-width: 40rem) { .grid > .card:last-child:nth-child(n), .grid > .card:last-child:nth-child(2n+1) { grid-column: auto; } .grid:has(> .card:nth-child(2):last-child) { grid-template-columns: 1fr; } }
+.prose h2 { margin-top: 2rem; }
+.prose h2:first-child { margin-top: 0; }
 .box { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.2rem 1.3rem; }
 .box b { display: block; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--slate); margin-bottom: 0.35rem; }
 .box p { margin: 0; }
@@ -308,6 +314,13 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .kb-txt p.kb-more { margin: 0; }
 .dgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; align-items: stretch; }
 .dgrid > * { min-width: 0; }
+.gtiles + .catsec, .catsec:first-of-type { margin-top: 2.5rem; }
+.dgrid + p.sub, .cta + p.sub, .cta + .sub { margin-top: 1rem; }
+@media (min-width: 56.01rem) { .dgrid:has(> .dc:nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); } .dgrid:has(> .dc:nth-child(4):last-child) > .dc:last-child { grid-column: auto; } }
+.dgrid:has(> .dc:nth-child(2):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.dgrid > .dc:last-child:nth-child(3n+1) { grid-column: 1 / -1; min-height: 0; }
+@media (max-width: 56rem) { .dgrid > .dc:last-child:nth-child(3n+1) { grid-column: auto; } .dgrid > .dc:last-child:nth-child(2n+1) { grid-column: 1 / -1; } }
+@media (max-width: 40rem) { .dgrid > .dc:last-child:nth-child(n) { grid-column: auto; } .dgrid:has(> .dc:nth-child(2):last-child) { grid-template-columns: 1fr; } }
 @media (max-width: 56rem) { .dgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .dc { display: flex; flex-direction: column; gap: 0.4rem; padding: 1.1rem 1.2rem; min-height: 11.5rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; text-decoration: none; color: var(--ink); }
 .dc:hover, .dc:focus-visible { border-color: var(--pine); }
@@ -392,6 +405,8 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .wpaid { display: flex; flex-wrap: wrap; gap: 1.2rem 1.6rem; align-items: flex-start; }
 .wk-img { flex: 0 1 15rem; }
 .wk-txt { flex: 1 1 18rem; }
+.kitlist { columns: 11rem 2; column-gap: 2rem; padding-left: 1.2rem; }
+.kitlist li { break-inside: avoid; margin: 0 0 .3rem; }
 .pvimg { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 8px; }
 .wkit h3 { margin: 0 0 0.3rem; }
 .wkit p { margin: 0 0 0.7rem; }
@@ -448,7 +463,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
   </div>
 </header>
 <main><div class="wrap">
-<section class="proofrow"><figure class="pvfig"><img src="/assets/preview/product-seo-fixer.png" width="900" height="1035" loading="lazy" alt="A real page from Product SEO Fixer: the first page of the file you get"><figcaption>A page of the real file you get.</figcaption></figure><div class="trustbox"><p><b>Who makes this.</b> Pro Skill Packs makes ready-to-use skills, letters and checklists for jobs people find hard. Each one is tried on a real example before it goes on sale.</p><ul><li><a href="/how-we-test/">How we test</a></li><li>30-day refund, no questions about why</li><li><a href="/contact/">Contact us</a> (kaiventura.founder@gmail.com)</li></ul></div></section>
+<section class="proofrow"><figure class="pvfig"><img src="/assets/preview/product-seo-fixer.png" width="900" height="1035" loading="lazy" alt="A real page from Product SEO Fixer: the first page of the file you get"><figcaption>A page of the real file you get.</figcaption></figure><div class="trustbox"><p><b>Who is behind this.</b> Pro Skill Packs is a small independent publisher of ready-made skills and fill-in kits. Every one is run on real examples before release.</p><ul><li><a href="/how-we-test/">How we test</a></li><li>30-day refund, no questions about why</li><li><a href="/contact/">Contact page</a>, or write to kaiventura.founder@gmail.com</li></ul></div></section>
 <section><div class="two">
   <div class="box"><b>What you give it</b><p>A product URL, a collection URL, or your product export CSV.</p></div>
   <div class="box"><b>What you get</b><p>A prioritised SEO fix list with the exact text to paste and where. Collection mode also writes the collection intro and SEO fields; CSV mode returns a re-importable CSV.</p></div>
@@ -460,7 +475,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 <p>Set A got its own SEO title (<code>[Set A] | [Line] 3-Piece Lip Stain &amp; Gloss Set</code>) and a meta naming its own three shades. All 159 alt texts and 5 SEO fixes came in one 6-column CSV. Alt text is built only from real data (product name, linked variant, filename hints), so where the image content is unknown it says &quot;view N&quot; rather than making up a scene.</p>
 <p>Collection example (test 03, a home-textiles brand): the bath collection&#x27;s meta description was the store&#x27;s bedding copy, and the page was <code>noindex</code>. The skill flagged the noindex as probably deliberate and pointed the fixes at the indexable twin page.</p></div></section>
 <section><h2>What it does</h2><div class="prose"><p>Finds the on-page SEO problems you can fix in Shopify admin and hands you the exact text to paste, or a CSV to import. Every finding quotes real data from your store; nothing is generic advice.</p></div></section>
-<section><h2>How it was tested</h2><div class="prose"><p><strong>Tested on 5 real public Shopify stores across all three modes. Final runs scored 9 to 10 out of 10.</strong></p><p>Tested on an apparel brand, a beauty brand, a home-textiles brand and a footwear brand (CSV), all real public Shopify stores. 7 final tests covering all three modes, scored 9, 10, 9, 10, 10, 10, 10 out of 10.</p>
+<section><h2>How it was tested</h2><div class="prose"><p><b>What you can check yourself.</b> The sample result on this page, the list of what is in the file, and the 30-day refund. There are no ratings yet, because nobody has reviewed it yet.</p><p><b>How we tested it.</b></p><p>Tested on 5 real public Shopify stores across all three modes. Final runs scored 9 to 10 out of 10.</p><p>Tested on an apparel brand, a beauty brand, a home-textiles brand and a footwear brand (CSV), all real public Shopify stores. 7 final tests covering all three modes, scored 9, 10, 9, 10, 10, 10, 10 out of 10.</p>
 <p>Update 2026-10-04: collection audits now copy their counts and product lists (empty, thin and duplicate descriptions, missing alt text, word and character counts) from the script output, and collection copy always speaks as the store (we / our). Re-tested on a food brand&#x27;s collection (two runs) and re-run on one earlier collection test and one product test: 10, 9, 9.5 and 9 out of 10, with every count and handle matching the fetched data.</p>
 <p>Update 2026-10-04 (second check): run on a product with almost no description. The first run added benefit wording the product page did not state; the skill now writes only what the source says and a re-run came back clean. One run on one product, not scored.</p><p>The tests ran on real public data, never made-up cases, and were scored against a written rubric. A skill in this range ships only when every test scores 8/10 or more.</p><p><a href="/how-we-test/">How we test</a>, what we do not do, and which assistants we ran it on.</p></div></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It sees server HTML only. Confirm structured data with Google&#x27;s Rich Results Test.</li><li>Image alt text is drafted without seeing the images (from names, variants and filenames). Spot-check a few.</li><li>Shopify&#x27;s 2024+ export headers are supported by name mapping but haven&#x27;t been tested on a real new-format export yet.</li></ul></div></section>

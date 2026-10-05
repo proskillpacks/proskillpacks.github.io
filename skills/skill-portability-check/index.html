@@ -164,7 +164,13 @@ pre code { background: none; padding: 0; overflow-wrap: normal; }
 table { border-collapse: collapse; width: 100%; background: #fff; font-size: 0.95rem; }
 th, td { border: 1px solid var(--rule); padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
 th { background: #eef2ee; }
-.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; max-width: 52rem; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; max-width: 44rem; }
+.grid > .card:last-child:nth-child(3n+1) { grid-column: 1 / -1; }
+.grid:has(> .card:nth-child(2):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 56rem) { .grid > .card:last-child:nth-child(3n+1) { grid-column: auto; } .grid > .card:last-child:nth-child(2n+1) { grid-column: 1 / -1; } }
+@media (max-width: 40rem) { .grid > .card:last-child:nth-child(n), .grid > .card:last-child:nth-child(2n+1) { grid-column: auto; } .grid:has(> .card:nth-child(2):last-child) { grid-template-columns: 1fr; } }
+.prose h2 { margin-top: 2rem; }
+.prose h2:first-child { margin-top: 0; }
 .box { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.2rem 1.3rem; }
 .box b { display: block; font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--slate); margin-bottom: 0.35rem; }
 .box p { margin: 0; }
@@ -311,6 +317,13 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .kb-txt p.kb-more { margin: 0; }
 .dgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; align-items: stretch; }
 .dgrid > * { min-width: 0; }
+.gtiles + .catsec, .catsec:first-of-type { margin-top: 2.5rem; }
+.dgrid + p.sub, .cta + p.sub, .cta + .sub { margin-top: 1rem; }
+@media (min-width: 56.01rem) { .dgrid:has(> .dc:nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); } .dgrid:has(> .dc:nth-child(4):last-child) > .dc:last-child { grid-column: auto; } }
+.dgrid:has(> .dc:nth-child(2):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.dgrid > .dc:last-child:nth-child(3n+1) { grid-column: 1 / -1; min-height: 0; }
+@media (max-width: 56rem) { .dgrid > .dc:last-child:nth-child(3n+1) { grid-column: auto; } .dgrid > .dc:last-child:nth-child(2n+1) { grid-column: 1 / -1; } }
+@media (max-width: 40rem) { .dgrid > .dc:last-child:nth-child(n) { grid-column: auto; } .dgrid:has(> .dc:nth-child(2):last-child) { grid-template-columns: 1fr; } }
 @media (max-width: 56rem) { .dgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .dc { display: flex; flex-direction: column; gap: 0.4rem; padding: 1.1rem 1.2rem; min-height: 11.5rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; text-decoration: none; color: var(--ink); }
 .dc:hover, .dc:focus-visible { border-color: var(--pine); }
@@ -395,6 +408,8 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .wpaid { display: flex; flex-wrap: wrap; gap: 1.2rem 1.6rem; align-items: flex-start; }
 .wk-img { flex: 0 1 15rem; }
 .wk-txt { flex: 1 1 18rem; }
+.kitlist { columns: 11rem 2; column-gap: 2rem; padding-left: 1.2rem; }
+.kitlist li { break-inside: avoid; margin: 0 0 .3rem; }
 .pvimg { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 8px; }
 .wkit h3 { margin: 0 0 0.3rem; }
 .wkit p { margin: 0 0 0.7rem; }
@@ -460,7 +475,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 <p>$ python3 scripts/skill_check.py examples/bad-yaml-colon/SKILL.md<br>ERROR  frontmatter: line 3: description: unquoted &#x27;: &#x27; inside the value (strict YAML reads it as a nested mapping). Quote the value or reword</p></blockquote></div></section>
 <section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/skill-portability-check-last.png" data-gif="/assets/demos/skill-portability-check.gif" alt="Animated demo of Skill Portability Check on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Skill Portability Check">Play</button></figure></section>
 <section><h2>What it does</h2><div class="prose"><p>A free checker for Agent Skills. Point it at a skill folder or a whole repository of skills and it reports, per SKILL.md, the things that make a skill fail to load or stop it working outside one assistant: frontmatter that strict YAML parsers reject, keys other than name and description, vendor tool names and paths, missing fallbacks, long bodies and broken links. One Python file, standard library only, with a non-zero exit code for CI.</p></div></section>
-<section><h2>How it was tested</h2><div class="prose"><p><strong>Run over our own 57 skills and its four fixtures (5 checks pass). It found 7 descriptions our tools had accepted but strict YAML parsers reject, now fixed. The assistant wrapper was not model-tested.</strong></p><p>Tested on a real example before release. The example is shown in the Before and after section above.</p><p><a href="/how-we-test/">How we test</a>, what we do not do, and which assistants we ran it on.</p></div></section>
+<section><h2>How it was tested</h2><div class="prose"><p><b>What you can check yourself.</b> The example on this page, and the files themselves: it is free, so you can open and read all of it first. There are no ratings yet, because nobody has reviewed it yet.</p><p><b>How we tested it.</b></p><p>Run over our own 57 skills and its four fixtures (5 checks pass). It found 7 descriptions our tools had accepted but strict YAML parsers reject, now fixed. The assistant wrapper was not model-tested.</p><p>Tested on a real example before release. The example is shown in the Before and after section above.</p><p><a href="/how-we-test/">How we test</a>, what we do not do, and which assistants we ran it on.</p></div></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It reads files; it cannot tell whether a skill&#x27;s instructions work or whether it triggers.</li><li>Warnings are portability risks, not proof of breakage.</li><li>The vendor pattern lists are not exhaustive.</li></ul></div></section>
 <section><h2>Works with</h2><div class="prose"><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. Python 3 (standard library only). Without a shell, the skill checks a pasted SKILL.md by reading.</p></div></section>
 <section><h2>For people who use AI assistants</h2><div class="prose"><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>skill-portability-check</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/developers/skill-portability-check).</li><li>Put the <code>skill-portability-check</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Check my skills repo for portability problems.&quot;. The skill loads by itself.</li></ol></div></section>
