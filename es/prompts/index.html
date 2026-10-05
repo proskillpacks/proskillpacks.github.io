@@ -529,6 +529,15 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .mgr-two { display: grid; grid-template-columns: 1fr; gap: 1rem; }
 .mgr-ft { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; }
 
+.aud-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; max-width: 68rem; margin: 0 0 1rem; align-items: stretch; }
+.aud-pair .wkit { max-width: none; margin: 0; }
+.aud-pair .wk-txt { flex: 1 1 14rem; }
+.aud-pair .wk-img { flex: 1 1 100%; max-height: 13rem; overflow: hidden; border-radius: 8px; }
+.aud-pair .wkit .cta { display: block; }
+.aud-pair .wkit .refundnote { display: block; margin-top: 0.4rem; }
+.aud-tools .paidline { margin: 0 0 1.2rem; font-size: 0.95rem; max-width: 52rem; }
+@media (max-width: 56rem) { .aud-pair { grid-template-columns: 1fr; } }
+
 .phl .em { display: block; white-space: pre-line; }
 .phl .subj { display: block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.9rem; margin: 0 0 0.5rem; }
 .aud-tools .wkit { max-width: 52rem; }
