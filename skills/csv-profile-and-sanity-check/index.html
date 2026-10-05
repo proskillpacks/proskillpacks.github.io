@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CSV Profile and Sanity Check: skill + paste-in prompt</title>
-<meta name="description" content="Check a CSV file for problems before you rely on it. For anyone who receives data files and needs to trust them. Tested on real examples before release.">
+<meta name="description" content="A CSV file in, a profile of every column and the odd rows flagged. For anyone who receives data files and needs to trust them.">
 
 <link rel="canonical" href="https://proskillpacks.github.io/skills/csv-profile-and-sanity-check/">
 <link rel="icon" href="/assets/avatar.png">
@@ -15,8 +15,8 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/skills/csv-profile-and-sanity-check/">
 <meta property="og:title" content="CSV Profile and Sanity Check: skill + paste-in prompt">
-<meta property="og:description" content="Check a CSV file for problems before you rely on it. For anyone who receives data files and needs to trust them. Tested on real examples before release.">
-<meta property="og:image" content="https://proskillpacks.github.io/assets/og/a41859dca5c8.png">
+<meta property="og:description" content="A CSV file in, a profile of every column and the odd rows flagged. For anyone who receives data files and needs to trust them.">
+<meta property="og:image" content="https://proskillpacks.github.io/assets/og/edcb555d14f8.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="CSV Profile and Sanity Check: Pro Skill Packs">
@@ -24,15 +24,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="CSV Profile and Sanity Check: skill + paste-in prompt">
-<meta name="twitter:description" content="Check a CSV file for problems before you rely on it. For anyone who receives data files and needs to trust them. Tested on real examples before release.">
-<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/a41859dca5c8.png">
+<meta name="twitter:description" content="A CSV file in, a profile of every column and the odd rows flagged. For anyone who receives data files and needs to trust them.">
+<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/edcb555d14f8.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "Product",
  "name": "CSV Profile and Sanity Check",
- "description": "Check a CSV file for problems before you rely on it.",
+ "description": "A CSV file in, a profile of every column and the odd rows flagged.",
  "url": "https://proskillpacks.github.io/skills/csv-profile-and-sanity-check/",
  "brand": {
   "@type": "Brand",
@@ -474,7 +474,7 @@ main.prod .prose, main.prod .sub, main.prod .two, main.prod .buybox { max-width:
 .pstrip span { color: var(--slate); font-size: 0.88rem; line-height: 1.4; }
 .ps-more { margin: 0.6rem 0 0; font-size: 0.92rem; }
 .ps-more a { color: var(--pine); font-weight: 700; }
-.v9tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }
+.v9tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.9rem; }
 .v9t { display: flex; flex-direction: column; gap: 0.3rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--ink); }
 a.v9t:hover, a.v9t:focus-visible { border-color: var(--pine); }
 .v9t b { font-size: 1.08rem; line-height: 1.25; }
@@ -997,7 +997,6 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-developers-and-data">Developers and data</a> / CSV Profile and Sanity Check</p>
     <h1>CSV Profile and Sanity Check</h1>
-    <p class="lead">Check a CSV file for problems before you rely on it.</p>
     <dl class="ogw"><dt>Who it is for</dt><dd>Anyone who receives data files and needs to trust them.</dd><dt>What you give it</dt><dd>A CSV file.</dd><dt>What you get back</dt><dd>A profile of every column, flags and questions for whoever owns the data. It changes nothing.</dd></dl><div class="buyb"><div class="cta"><a class="btn btn-lime" href="/go/repo/csv-profile-and-sanity-check/?from=skill">Get the files from GitHub (for developers)</a></div><p class="ogline">It is a text file you add to an AI assistant, or paste into a chat.</p><p class="note-light">Free. MIT licence: use it, change it, share it.</p></div>
   </div>
 </header>
@@ -1010,7 +1009,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <section><h2>Limits</h2><div class="prose"><ul><li>It reads only. It never edits, sorts or cleans the file.</li><li>A profile cannot tell you whether values are true or whether rows are missing.</li><li>Without code execution it works from the sample you paste and says so. Counts cover only that sample.</li><li>It does not guess what unclear columns mean. It asks.</li></ul></div></section>
 <section class="faq" id="questions"><h2>Questions</h2><details><summary>Questions or a problem?</summary><div><p>Write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. The profile script needs Python 3 (standard library only). Without code execution it profiles a pasted sample.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>Using it with an AI assistant</b></p><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>csv-profile-and-sanity-check</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/data/csv-profile-and-sanity-check).</li><li>Put the <code>csv-profile-and-sanity-check</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Profile this CSV before I use it: [file]. It should contain ...&quot;. The skill loads by itself.</li></ol></div></div></details></section>
 <section class="endcta"><a class="btn btn-pine" href="/go/repo/csv-profile-and-sanity-check/?from=skill">Get the files from GitHub (for developers)</a></section>
-<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/spreadsheet-formula-and-cleanup/">Spreadsheet Formula and Cleanup</a> ($9): Get a spreadsheet formula that works on your own columns.</li><li>Free guide to do it by hand: <a href="/guides/how-to-check-a-csv-file-before-you-use-it/">How do I check a CSV file before I use it?</a></li><li>Free text to paste into ChatGPT or any chatbot: <a href="/prompts/csv-profile-and-sanity-check/">CSV sanity check prompt for ChatGPT or Claude</a></li></ul></section>
+<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/spreadsheet-formula-and-cleanup/">Spreadsheet Formula and Cleanup</a> ($9): The result you want and a few rows in, a formula that works.</li><li>Free guide to do it by hand: <a href="/guides/how-to-check-a-csv-file-before-you-use-it/">How do I check a CSV file before I use it?</a></li><li>Free text to paste into ChatGPT or any chatbot: <a href="/prompts/csv-profile-and-sanity-check/">CSV sanity check prompt for ChatGPT or Claude</a></li></ul></section>
 </div></main>
 <script>
 document.querySelectorAll('.demo').forEach(function (f) {

@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PR Description and Review Prep: skill + paste-in prompt</title>
-<meta name="description" content="Write a pull request description from your code changes. For developers who dislike writing pull requests. Tested on real examples before release.">
+<meta name="description" content="Your branch in, a pull request write-up and test plan. For developers who dislike writing pull requests. 1 real-data run on four public commits (Claude">
 
 <link rel="canonical" href="https://proskillpacks.github.io/skills/pr-description-and-review-prep/">
 <link rel="icon" href="/assets/avatar.png">
@@ -15,8 +15,8 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/skills/pr-description-and-review-prep/">
 <meta property="og:title" content="PR Description and Review Prep: skill + paste-in prompt">
-<meta property="og:description" content="Write a pull request description from your code changes. For developers who dislike writing pull requests. Tested on real examples before release.">
-<meta property="og:image" content="https://proskillpacks.github.io/assets/og/741cc9428f8d.png">
+<meta property="og:description" content="Your branch in, a pull request write-up and test plan. For developers who dislike writing pull requests. 1 real-data run on four public commits (Claude">
+<meta property="og:image" content="https://proskillpacks.github.io/assets/og/28420e06a195.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="PR Description and Review Prep: Pro Skill Packs">
@@ -24,15 +24,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="PR Description and Review Prep: skill + paste-in prompt">
-<meta name="twitter:description" content="Write a pull request description from your code changes. For developers who dislike writing pull requests. Tested on real examples before release.">
-<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/741cc9428f8d.png">
+<meta name="twitter:description" content="Your branch in, a pull request write-up and test plan. For developers who dislike writing pull requests. 1 real-data run on four public commits (Claude">
+<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/28420e06a195.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "Product",
  "name": "PR Description and Review Prep",
- "description": "Write a pull request description from your code changes.",
+ "description": "Your branch in, a pull request write-up and test plan.",
  "url": "https://proskillpacks.github.io/skills/pr-description-and-review-prep/",
  "brand": {
   "@type": "Brand",
@@ -474,7 +474,7 @@ main.prod .prose, main.prod .sub, main.prod .two, main.prod .buybox { max-width:
 .pstrip span { color: var(--slate); font-size: 0.88rem; line-height: 1.4; }
 .ps-more { margin: 0.6rem 0 0; font-size: 0.92rem; }
 .ps-more a { color: var(--pine); font-weight: 700; }
-.v9tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }
+.v9tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.9rem; }
 .v9t { display: flex; flex-direction: column; gap: 0.3rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--ink); }
 a.v9t:hover, a.v9t:focus-visible { border-color: var(--pine); }
 .v9t b { font-size: 1.08rem; line-height: 1.25; }
@@ -997,7 +997,6 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-developers-and-data">Developers and data</a> / PR Description and Review Prep</p>
     <h1>PR Description and Review Prep</h1>
-    <p class="lead">Write a pull request description from your code changes.</p>
     <dl class="ogw"><dt>Who it is for</dt><dd>Developers who dislike writing pull requests.</dd><dt>What you give it</dt><dd>Your branch, or a pasted diff.</dd><dt>What you get back</dt><dd>A title, summary, risk notes, a test plan and the questions a reviewer will ask.</dd></dl><div class="buyb"><div class="cta"><a class="btn btn-lime" href="/go/repo/pr-description-and-review-prep/?from=skill">Get the files from GitHub (for developers)</a></div><p class="ogline">It is a text file you add to an AI assistant, or paste into a chat.</p><p class="note-light">Free. MIT licence: use it, change it, share it.</p></div>
   </div>
 </header>
@@ -1009,7 +1008,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <section><h2>Limits</h2><div class="prose"><ul><li>It only knows the diff and commit messages. The reason for the change comes from you.</li><li>It does not run tests. &quot;How it was tested&quot; says Not stated unless you tell it.</li><li>It does not open the PR. You paste the text.</li><li>Very large diffs: it reads the stat first and then the key files, and says what it skipped.</li></ul></div></section>
 <section class="faq" id="questions"><h2>Questions</h2><details><summary>Questions or a problem?</summary><div><p>Write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. Inside a git repository it runs git itself. Otherwise paste a diff.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>Using it with an AI assistant</b></p><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>pr-description-and-review-prep</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/developers/pr-description-and-review-prep).</li><li>Put the <code>pr-description-and-review-prep</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;I am about to open a PR from this branch into main. Write the PR description.&quot;. The skill loads by itself.</li></ol></div></div></details></section>
 <section class="endcta"><a class="btn btn-pine" href="/go/repo/pr-description-and-review-prep/?from=skill">Get the files from GitHub (for developers)</a></section>
-<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/agent-browse-qwen/">Agent Browse for local models (Qwen)</a> (Free): Stop a local Qwen model guessing web addresses while it browses.</li><li><a href="/skills/changelog-from-commits/">Changelog from Commits</a> (Free): Turn a list of code changes into release notes people can read.</li><li><a href="/skills/readme-first-run-check/">README First-Run Check</a> (Free): Find where a project&#x27;s setup guide would trip up a new user.</li></ul></section>
+<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/agent-browse-qwen/">Agent Browse for local models (Qwen)</a> (Free): A browsing task and your local model in, the task done in fewer tries.</li><li><a href="/skills/changelog-from-commits/">Changelog from Commits</a> (Free): A list of commits in, release notes people can read.</li><li><a href="/skills/readme-first-run-check/">README First-Run Check</a> (Free): Your repository in, each setup step marked OK or broken.</li></ul></section>
 </div></main>
 <footer class="sitefoot">
   <div class="wrap">

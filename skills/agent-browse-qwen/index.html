@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Agent Browse for local models (Qwen): a tuned browsing skill</title>
-<meta name="description" content="Stop a local Qwen model guessing web addresses while it browses. For developers who run Qwen or a similar local model as a browsing agent.">
+<meta name="description" content="A browsing task and your local model in, the task done in fewer tries. For developers who run Qwen or a similar local model as a browsing agent.">
 
 <link rel="canonical" href="https://proskillpacks.github.io/skills/agent-browse-qwen/">
 <link rel="icon" href="/assets/avatar.png">
@@ -15,8 +15,8 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/skills/agent-browse-qwen/">
 <meta property="og:title" content="Agent Browse for local models (Qwen): a tuned browsing skill">
-<meta property="og:description" content="Stop a local Qwen model guessing web addresses while it browses. For developers who run Qwen or a similar local model as a browsing agent.">
-<meta property="og:image" content="https://proskillpacks.github.io/assets/og/ca7218d8bbfb.png">
+<meta property="og:description" content="A browsing task and your local model in, the task done in fewer tries. For developers who run Qwen or a similar local model as a browsing agent.">
+<meta property="og:image" content="https://proskillpacks.github.io/assets/og/649016047231.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Agent Browse for local models (Qwen): Pro Skill Packs">
@@ -24,15 +24,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="Agent Browse for local models (Qwen): a tuned browsing skill">
-<meta name="twitter:description" content="Stop a local Qwen model guessing web addresses while it browses. For developers who run Qwen or a similar local model as a browsing agent.">
-<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/ca7218d8bbfb.png">
+<meta name="twitter:description" content="A browsing task and your local model in, the task done in fewer tries. For developers who run Qwen or a similar local model as a browsing agent.">
+<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/649016047231.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "Product",
  "name": "Agent Browse for local models (Qwen)",
- "description": "Stop a local Qwen model guessing web addresses while it browses.",
+ "description": "A browsing task and your local model in, the task done in fewer tries.",
  "url": "https://proskillpacks.github.io/skills/agent-browse-qwen/",
  "brand": {
   "@type": "Brand",
@@ -474,7 +474,7 @@ main.prod .prose, main.prod .sub, main.prod .two, main.prod .buybox { max-width:
 .pstrip span { color: var(--slate); font-size: 0.88rem; line-height: 1.4; }
 .ps-more { margin: 0.6rem 0 0; font-size: 0.92rem; }
 .ps-more a { color: var(--pine); font-weight: 700; }
-.v9tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }
+.v9tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.9rem; }
 .v9t { display: flex; flex-direction: column; gap: 0.3rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--ink); }
 a.v9t:hover, a.v9t:focus-visible { border-color: var(--pine); }
 .v9t b { font-size: 1.08rem; line-height: 1.25; }
@@ -997,7 +997,6 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-developers-and-data">Developers and data</a> / Agent Browse for local models (Qwen)</p>
     <h1>Agent Browse for local models (Qwen)</h1>
-    <p class="lead">Stop a local Qwen model guessing web addresses while it browses.</p>
     <dl class="ogw"><dt>Who it is for</dt><dd>Developers who run Qwen or a similar local model as a browsing agent.</dd><dt>What you give it</dt><dd>A browsing task, the agent-browser tool and your local model.</dd><dt>What you get back</dt><dd>The task done in fewer tries. Scored on 8 selection tasks; the held-out test is not finished.</dd></dl><div class="buyb"><div class="cta"><a class="btn btn-lime" href="/go/repo/agent-browse-qwen/?from=skill">Get the files from GitHub (for developers)</a></div><p class="note-light alts"><a class="alt-link" href="https://github.com/proskillpacks/skillopt-agent-browse" rel="noopener">Read the research</a></p><p class="ogline">It is a text file you add to an AI assistant, or paste into a chat.</p><p class="note-light">Free. MIT licence: use it, change it, share it.</p></div><p class="ogline">Trained with our full method: <a href="/research/how-we-train-skills/">see the scores</a>.</p>
   </div>
 </header>
@@ -1013,7 +1012,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <section><h2>Limits</h2><div class="prose"><ul><li>Held-out test pending: the figures are on the selection split, which the gate used to choose this skill.</li><li>The cross-check on Claude Opus was not run.</li><li>One local model, one quantisation, one harness (pi). Other models are untested.</li><li>The selection runs were measured under four-way concurrency and site throttling.</li><li>The Setup section of SKILL.md was added by hand and did not go through the validation gate.</li></ul></div></section>
 <section class="faq" id="questions"><h2>Questions</h2><details><summary>Questions or a problem?</summary><div><p>Write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Tested with Qwen3.8-27B on a local OpenAI-compatible server, driven by the pi coding agent, and the agent-browser CLI (https://github.com/vercel-labs/agent-browser). The format is the open SKILL.md format; other assistants and models are untested. You need an assistant that can run shell commands.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>Using it with an AI assistant</b></p><ol><li>Install the agent-browser CLI from https://github.com/vercel-labs/agent-browser and check that <code>agent-browser --help</code> runs.</li><li>Copy the <code>agent-browse-qwen</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/developers/agent-browse-qwen) into <code>.agents/skills/</code> in your project, or into your tool&#x27;s own skills folder.</li><li>Ask for a browser task in plain words, for example: &quot;Open the page, find the price table and give me the rows.&quot; The skill loads by itself. There is no paste-in prompt for this one, because it needs a shell.</li></ol></div></div></details></section>
 <section class="endcta"><a class="btn btn-pine" href="/go/repo/agent-browse-qwen/?from=skill">Get the files from GitHub (for developers)</a></section>
-<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/pr-description-and-review-prep/">PR Description and Review Prep</a> (Free): Write a pull request description from your code changes.</li><li><a href="/skills/readme-first-run-check/">README First-Run Check</a> (Free): Find where a project&#x27;s setup guide would trip up a new user.</li><li><a href="/skills/skill-portability-check/">Skill Portability Check</a> (Free): Check that a skill file will load in other AI assistants.</li></ul></section>
+<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/pr-description-and-review-prep/">PR Description and Review Prep</a> (Free): Your branch in, a pull request write-up and test plan.</li><li><a href="/skills/readme-first-run-check/">README First-Run Check</a> (Free): Your repository in, each setup step marked OK or broken.</li><li><a href="/skills/skill-portability-check/">Skill Portability Check</a> (Free): A skill folder in, errors and warnings with the exact fixes.</li></ul></section>
 </div></main>
 <footer class="sitefoot">
   <div class="wrap">
