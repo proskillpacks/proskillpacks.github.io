@@ -126,7 +126,7 @@
    "free": false,
    "url": "/packs/store-ops-pack/",
    "buy_url": "https://proskillpacks.gumroad.com/l/store-ops-pack",
-   "summary": "Handle weekly Shopify jobs: descriptions, SEO, support, disputes, sales.",
+   "summary": "Handle weekly Shopify jobs: copy, SEO, support, disputes.",
    "give": "",
    "get": "",
    "jobs": [],
@@ -198,7 +198,7 @@
    "free": true,
    "url": "/skills/search-intent-page-brief/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/marketing-seo/search-intent-page-brief",
-   "summary": "Plan a page that matches what searchers want, from pages that rank.",
+   "summary": "Plan a page that matches what searchers want.",
    "give": "A target keyword and the three to five pages that rank for it (URLs, or pasted headings).",
    "get": "It records each page's structure, classifies the search intent from what ranks, builds a coverage table with counts, names the gaps as its own judgement, and drafts an outline, questions to answer and a meta description.",
    "jobs": [
@@ -335,7 +335,7 @@
    "free": true,
    "url": "/skills/cold-email-checker/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/sales/cold-email-checker",
-   "summary": "Check a cold email for claims you cannot back up before you send it.",
+   "summary": "Catch claims you cannot back up in a cold email.",
    "give": "A cold email draft and the text of the prospect's page.",
    "get": "It tests every claim about the prospect against that text, flags claims about you that need proof, checks the subject line, the single ask and the length, and lists the commercial email basics from the US FTC's CAN-SPAM guide that the draft is missing. You get a verdict, a claims table, quoted issues and a tightened version with unsupported claims removed.",
    "jobs": [
@@ -358,7 +358,7 @@
    "free": true,
    "url": "/skills/fact-claim-checker/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker",
-   "summary": "Find the claims in a draft that need a source before you publish.",
+   "summary": "Find claims in a draft that need a source.",
    "give": "Paste a draft before you publish.",
    "get": "Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.",
    "jobs": [
@@ -380,7 +380,7 @@
    "free": true,
    "url": "/skills/review-reply-drafter/",
    "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
-   "summary": "Reply to customer reviews, happy or not, without promising anything.",
+   "summary": "Reply to reviews without promising anything.",
    "give": "Your reviews (pasted, CSV, or a public review page).",
    "get": "A reply for each review, matched to its tone. It never promises refunds you didn't approve, and it flags reviews that need you personally.",
    "jobs": [
@@ -424,7 +424,7 @@
    "free": true,
    "url": "/skills/ai-search-readiness-check/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/marketing-seo/ai-search-readiness-check",
-   "summary": "Check whether ChatGPT, Perplexity and Google can read your website.",
+   "summary": "Check if AI and Google can read your site.",
    "give": "A website URL.",
    "get": "A 0 to 100 score from 8 checks on whether AI search tools can read the site, the evidence for each check, and a fix list in order.",
    "jobs": [
@@ -468,7 +468,7 @@
    "free": false,
    "url": "/skills/support-macro-writer/",
    "buy_url": "https://proskillpacks.gumroad.com/l/support-macro-writer",
-   "summary": "Write ready-to-import support replies from your Shopify policies.",
+   "summary": "Write support replies from your Shopify policies.",
    "give": "Your store URL.",
    "get": "It reads your real refund and shipping policies and writes ready-to-import support replies, starting with the hard cases: stuck in transit, \"delivered\" but not received, address changes, cancellations.",
    "jobs": [
@@ -602,7 +602,7 @@
    "free": true,
    "url": "/skills/shopify-policy-checker/",
    "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
-   "summary": "Find gaps and contradictions in your store's refund and shipping policies.",
+   "summary": "Find gaps in your refund and shipping policies.",
    "give": "Your store URL.",
    "get": "A scored audit of your refund, shipping, privacy, terms and contact policies. It flags missing items and contradictions with your FAQ and banners, and gives fixes you can paste.",
    "jobs": [
@@ -646,7 +646,7 @@
    "free": false,
    "url": "/skills/product-description-rewriter/",
    "buy_url": "https://proskillpacks.gumroad.com/l/product-description-rewriter",
-   "summary": "Rewrite thin Shopify product descriptions so they are ready to paste.",
+   "summary": "Rewrite thin descriptions, ready to paste.",
    "give": "A product URL, pasted text, a collection, or your product export CSV.",
    "get": "Clean Shopify HTML descriptions with an SEO title (≤ 60 characters) and meta description (≤ 155). Bulk runs produce an import CSV.",
    "jobs": [

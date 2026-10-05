@@ -44,14 +44,14 @@
 - [BFCM Campaign Kit](https://proskillpacks.github.io/skills/bfcm-campaign-kit/) ($5): Plan your Black Friday and Cyber Monday sale on your own prices.
 - [Chargeback Evidence Checklist: PDF and skill](https://proskillpacks.github.io/skills/chargeback-evidence-checklist/) (Free): Know what evidence to gather when a customer disputes a payment.
 - [Chargeback Response Kit for Shopify: fill-in letters for each dispute reason](https://proskillpacks.github.io/skills/chargeback-response-writer/) ($5): Answer a Shopify chargeback with the right letter for the reason.
-- [Product Description Rewriter](https://proskillpacks.github.io/skills/product-description-rewriter/) ($5): Rewrite thin Shopify product descriptions so they are ready to paste.
+- [Product Description Rewriter](https://proskillpacks.github.io/skills/product-description-rewriter/) ($5): Rewrite thin descriptions, ready to paste.
 - [Product SEO Fixer](https://proskillpacks.github.io/skills/product-seo-fixer/) ($5): Fix SEO problems in your Shopify products, with text to paste.
 - [Product Title Cleaner](https://proskillpacks.github.io/skills/product-title-cleaner/) (Free): Give every product in your Shopify store the same tidy title pattern.
-- [Review Reply Drafter](https://proskillpacks.github.io/skills/review-reply-drafter/) (Free): Reply to customer reviews, happy or not, without promising anything.
+- [Review Reply Drafter](https://proskillpacks.github.io/skills/review-reply-drafter/) (Free): Reply to reviews without promising anything.
 - [Alt Text Writer](https://proskillpacks.github.io/skills/shopify-alt-text-writer/) (Free): Write alt text for every product image in your Shopify store.
-- [Policy Checker](https://proskillpacks.github.io/skills/shopify-policy-checker/) (Free): Find gaps and contradictions in your store's refund and shipping policies.
-- [Store Ops Pack](https://proskillpacks.github.io/packs/store-ops-pack/) ($29): Handle weekly Shopify jobs: descriptions, SEO, support, disputes, sales.
-- [Support Macro Writer](https://proskillpacks.github.io/skills/support-macro-writer/) ($5): Write ready-to-import support replies from your Shopify policies.
+- [Policy Checker](https://proskillpacks.github.io/skills/shopify-policy-checker/) (Free): Find gaps in your refund and shipping policies.
+- [Store Ops Pack](https://proskillpacks.github.io/packs/store-ops-pack/) ($29): Handle weekly Shopify jobs: copy, SEO, support, disputes.
+- [Support Macro Writer](https://proskillpacks.github.io/skills/support-macro-writer/) ($5): Write support replies from your Shopify policies.
 
 ## Freelancers and consultants
 - [Late Payment Chaser (UK)](https://proskillpacks.github.io/skills/late-payment-chaser-uk/) (Free): Chase a late invoice, from polite nudge to final reminder.
@@ -61,8 +61,8 @@
 - [Listing Rewriter](https://proskillpacks.github.io/skills/listing-rewriter/) ($5): Rewrite your holiday-let listing title and description.
 
 ## Marketers and agencies
-- [AI Search Readiness Check](https://proskillpacks.github.io/skills/ai-search-readiness-check/) (Free): Check whether ChatGPT, Perplexity and Google can read your website.
-- [Search Intent Page Brief](https://proskillpacks.github.io/skills/search-intent-page-brief/) (Free): Plan a page that matches what searchers want, from pages that rank.
+- [AI Search Readiness Check](https://proskillpacks.github.io/skills/ai-search-readiness-check/) (Free): Check if AI and Google can read your site.
+- [Search Intent Page Brief](https://proskillpacks.github.io/skills/search-intent-page-brief/) (Free): Plan a page that matches what searchers want.
 
 ## Developers
 - [Accessibility Quick Audit](https://proskillpacks.github.io/skills/accessibility-quick-audit/) (Free): Find the accessibility problems on a web page and get the fix for each.
@@ -83,11 +83,11 @@
 - [Resume Bullet Rewriter](https://proskillpacks.github.io/skills/resume-bullet-rewriter/) ($9): Rewrite your resume bullets for a specific job.
 
 ## Sales and outreach
-- [Cold Email Checker](https://proskillpacks.github.io/skills/cold-email-checker/) (Free): Check a cold email for claims you cannot back up before you send it.
+- [Cold Email Checker](https://proskillpacks.github.io/skills/cold-email-checker/) (Free): Catch claims you cannot back up in a cold email.
 - [Cold Email from a Website](https://proskillpacks.github.io/skills/cold-email-from-a-website/) ($9): Write a cold email sequence based on what is on the prospect's website.
 
 ## Content and writing
-- [Fact-Claim Checker](https://proskillpacks.github.io/skills/fact-claim-checker/) (Free): Find the claims in a draft that need a source before you publish.
+- [Fact-Claim Checker](https://proskillpacks.github.io/skills/fact-claim-checker/) (Free): Find claims in a draft that need a source.
 - [Voice-Matched Draft Editor](https://proskillpacks.github.io/skills/voice-matched-draft-editor/) ($9): Edit a draft so it sounds like you wrote it.
 
 ## Finance and small-business admin
