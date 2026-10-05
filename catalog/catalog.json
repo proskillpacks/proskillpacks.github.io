@@ -2,6 +2,28 @@
  "generated": "2026-10-05",
  "products": [
   {
+   "id": "agent-browse",
+   "title": "Agent Browse",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "developers",
+   "category_name": "Developers",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/agent-browse/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/agent-browse",
+   "summary": "A browsing skill for the agent-browser CLI, trained against scored tasks instead of hand-written. About 14% cheaper per task than no skill on 11 unseen tasks, same accuracy.",
+   "give": "A browsing task and the agent-browser CLI.",
+   "get": "The task done in fewer tool calls: forms, logins, dialogs, uploads and paginated data.",
+   "jobs": [
+    "review code"
+   ],
+   "tags": [],
+   "tested": "Trained and scored with Claude Opus 5.5 through the claude CLI and the agent-browser CLI. On 11 unseen tasks (2 runs each) it used 29.4k weighted tokens per task against 34.2k with no skill, with 22 of 22 correct in every condition. Two of three proposed edit sets made things worse and were rejected by the validation gate. One student model and a small task set; the Setup section was added by hand and was not gated.",
+   "includes": []
+  },
+  {
    "id": "spreadsheet-formula-and-cleanup",
    "title": "Spreadsheet Formula and Cleanup",
    "kind": "Single skill",
@@ -188,28 +210,6 @@
    "includes": []
   },
   {
-   "id": "test-gap-finder",
-   "title": "Test Gap Finder",
-   "kind": "Free skill",
-   "type": "free",
-   "category": "developers",
-   "category_name": "Developers",
-   "price_usd": 0,
-   "price_label": "Free",
-   "free": true,
-   "url": "/skills/test-gap-finder/",
-   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/test-gap-finder",
-   "summary": "Give it a diff and the tests. Get each behaviour the change adds marked Covered, Not covered or Unknown, and ranked test cases for the gaps.",
-   "give": "A diff and the tests.",
-   "get": "Get each behaviour the change adds marked Covered, Not covered or Unknown, and ranked test cases for the gaps.",
-   "jobs": [
-    "review code"
-   ],
-   "tags": [],
-   "tested": "1 real-data run on a public multi-hunk change in the Express repository (Claude Sonnet). We checked each Covered and Not covered claim against the tests ourselves.",
-   "includes": []
-  },
-  {
    "id": "invoice-checker",
    "title": "Invoice Checker",
    "kind": "Free skill",
@@ -253,6 +253,28 @@
    ],
    "tags": [],
    "tested": "1 run on a complaint, draft and policy we wrote (Claude Sonnet).",
+   "includes": []
+  },
+  {
+   "id": "test-gap-finder",
+   "title": "Test Gap Finder",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "developers",
+   "category_name": "Developers",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/test-gap-finder/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/test-gap-finder",
+   "summary": "Give it a diff and the tests. Get each behaviour the change adds marked Covered, Not covered or Unknown, and ranked test cases for the gaps.",
+   "give": "A diff and the tests.",
+   "get": "Get each behaviour the change adds marked Covered, Not covered or Unknown, and ranked test cases for the gaps.",
+   "jobs": [
+    "review code"
+   ],
+   "tags": [],
+   "tested": "1 real-data run on a public multi-hunk change in the Express repository (Claude Sonnet). We checked each Covered and Not covered claim against the tests ourselves.",
    "includes": []
   },
   {
