@@ -154,6 +154,8 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
+.swipe { display: none; font-size: 0.85rem; color: var(--mist); margin: -0.9rem 0 1.2rem; }
+@media (max-width: 640px) { .swipe:not([hidden]) { display: block; } }
 table { border-collapse: collapse; width: 100%; background: #fff; font-size: 0.95rem; }
 th, td { border: 1px solid var(--rule); padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
 th { background: #eef2ee; }
@@ -444,6 +446,24 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .phl .subj { display: block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.9rem; margin: 0 0 0.5rem; }
 .sales-tools .wkit { max-width: 52rem; }
 
+.phl { list-style: none; padding: 0; margin: 0 0 1.2rem; max-width: 46rem; }
+.phl li { display: flex; flex-wrap: wrap; gap: 0.5rem 0.8rem; align-items: flex-start; justify-content: space-between; background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.7rem 0.9rem; margin: 0 0 0.5rem; }
+.phl .tx { flex: 1 1 14rem; }
+.phl .lab { display: block; font-size: 0.78rem; font-weight: 700; color: var(--slate); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.1rem; }
+.phl .copybtn, .copyall { float: none; margin: 0; flex: none; }
+.br { background: #fff3a3; border-radius: 3px; padding: 0 0.1em; }
+.pgrp h3 { margin: 1.1rem 0 0.5rem; }
+.avoidbox { max-width: 46rem; background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.9rem 1.2rem; margin: 0.8rem 0 0; }
+.avoidbox p { margin: 0 0 0.5rem; }
+.mgr-two { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.mgr-ft { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; }
+
+.phl .em { display: block; white-space: pre-line; }
+.phl .subj { display: block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.9rem; margin: 0 0 0.5rem; }
+.aud-tools .wkit { max-width: 52rem; }
+.aud-tools .wk-img.wide { flex: 0 1 22rem; }
+.aud-tools .wk-txt h3 + p { margin-top: 0.2rem; }
+
 .dc-tr { flex: none; background: var(--pine); color: var(--lime); padding: 0.12rem 0.5rem; border-radius: 999px; font-size: 0.68rem; white-space: nowrap; }
 .dc-top:has(.dc-tr) .dc-cat { display: none; }
 .dc-top .dc-cat { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -452,7 +472,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .cs h2 { margin-top: 2.2rem; }
 .cs .table { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; border: 1px solid var(--rule); border-radius: 10px; background: #fff; margin: 0 0 1.2rem; }
 .cs .table table { min-width: 30rem; margin: 0; }
-.cs .table + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
+.cs .table + .tnote, .cs .swipe + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
 .cs .flow { max-width: 30rem; margin: 1.2rem auto 1.6rem; }
 .cs .flow svg { width: 100%; height: auto; display: block; }
 .cs .flow text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
@@ -542,10 +562,10 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 <p><a href="/skills/agent-browse/">Agent Browse</a> teaches an AI assistant to browse the web with the agent-browser command line tool. We trained it on 32 browsing tasks (13 train, 8 selection, 11 test), using Claude Opus 5.5 as the model doing the work.</p>
 <p>The model got every task right even with no skill. So accuracy gave the gate nothing to measure. We scored cost as well: a wrong answer is 0, a right answer is 0.7 plus up to 0.3 for using fewer tokens.</p>
 <h3>Result 1: training, on the selection tasks (8 tasks, 2 runs each)</h3>
-<div class="table" role="region" tabindex="0" aria-label="Table, scrolls sideways"><table><thead><tr><th>Step</th><th>Edits</th><th>Score</th><th>Tokens per task</th><th>Turns</th><th>Decision</th></tr></thead><tbody><tr><td>0, starting skill</td><td>150 words</td><td>0.9435</td><td>37.7k</td><td>5.2</td><td>start</td></tr><tr><td>1</td><td>4</td><td>0.9687</td><td>20.8k</td><td>3.0</td><td><b>kept</b></td></tr><tr><td>2</td><td>3 more</td><td>0.9644</td><td>23.8k</td><td>3.2</td><td>rejected</td></tr><tr><td>3</td><td>1 more</td><td>0.9632</td><td>24.5k</td><td>3.0</td><td>rejected</td></tr></tbody></table></div>
+<div class="table" role="region" tabindex="0" aria-label="Table, scrolls sideways"><table><thead><tr><th>Step</th><th>Edits</th><th>Score</th><th>Tokens per task</th><th>Turns</th><th>Decision</th></tr></thead><tbody><tr><td>0, starting skill</td><td>150 words</td><td>0.9435</td><td>37.7k</td><td>5.2</td><td>start</td></tr><tr><td>1</td><td>4</td><td>0.9687</td><td>20.8k</td><td>3.0</td><td><b>kept</b></td></tr><tr><td>2</td><td>3 more</td><td>0.9644</td><td>23.8k</td><td>3.2</td><td>rejected</td></tr><tr><td>3</td><td>1 more</td><td>0.9632</td><td>24.5k</td><td>3.0</td><td>rejected</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p>
 <p class="tnote">Every run was correct, so the score differences are all about cost.</p>
 <h3>Result 2: unseen test tasks (11 tasks, 2 runs each)</h3>
-<div class="table" role="region" tabindex="0" aria-label="Table, scrolls sideways"><table><thead><tr><th>Condition</th><th>Correct</th><th>Tokens per task</th><th>Turns per task</th></tr></thead><tbody><tr><td>No skill</td><td>22/22</td><td>34.2k</td><td>5.0</td></tr><tr><td>The tool vendor's own skill</td><td>22/22</td><td>109.4k</td><td>5.5</td></tr><tr><td>Starting skill</td><td>22/22</td><td>33.3k</td><td>5.1</td></tr><tr><td><b>Trained skill</b></td><td>22/22</td><td><b>29.4k</b></td><td><b>4.1</b></td></tr></tbody></table></div>
+<div class="table" role="region" tabindex="0" aria-label="Table, scrolls sideways"><table><thead><tr><th>Condition</th><th>Correct</th><th>Tokens per task</th><th>Turns per task</th></tr></thead><tbody><tr><td>No skill</td><td>22/22</td><td>34.2k</td><td>5.0</td></tr><tr><td>The tool vendor's own skill</td><td>22/22</td><td>109.4k</td><td>5.5</td></tr><tr><td>Starting skill</td><td>22/22</td><td>33.3k</td><td>5.1</td></tr><tr><td><b>Trained skill</b></td><td>22/22</td><td><b>29.4k</b></td><td><b>4.1</b></td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p>
 <p class="tnote">The vendor's skill is about 9k tokens and we put all of it in the prompt, which is harsher than loading it only when needed. The trained skill is about 700 tokens. With two runs per task, the test figures are a guide, not a precise number.</p>
 <h3>The four edits that helped</h3>
 <p>All four removed waste the model could not have known about.</p>
@@ -560,7 +580,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 
 <h2>A second case: the starter example</h2>
 <p>To let anyone try this, we built a small loop that needs no browser: <a href="https://github.com/proskillpacks/skillopt-agent-browse/tree/main/starter" rel="noopener">the starter</a>. Its 18 toy tasks ask for a "house style" (date formats, invoice ids, file names) that the task never states. Here the model did not start at 100%, so accuracy itself could be the score. The model was Claude Haiku. One reflection step, one candidate.</p>
-<div class="table" role="region" tabindex="0" aria-label="Table, scrolls sideways"><table><thead><tr><th>Skill given to the model</th><th>Selection (6 tasks, 2 runs)</th><th>Test (6 tasks, 2 runs)</th></tr></thead><tbody><tr><td>No skill</td><td>0 of 6 (one run)</td><td>0 of 12</td></tr><tr><td>Seed: two lines, no rules</td><td>0 of 12</td><td>0 of 12</td></tr><tr><td><b>Trained candidate</b> (215 words, one step)</td><td><b>10 of 12</b>, kept</td><td><b>10 of 12</b></td></tr></tbody></table></div>
+<div class="table" role="region" tabindex="0" aria-label="Table, scrolls sideways"><table><thead><tr><th>Skill given to the model</th><th>Selection (6 tasks, 2 runs)</th><th>Test (6 tasks, 2 runs)</th></tr></thead><tbody><tr><td>No skill</td><td>0 of 6 (one run)</td><td>0 of 12</td></tr><tr><td>Seed: two lines, no rules</td><td>0 of 12</td><td>0 of 12</td></tr><tr><td><b>Trained candidate</b> (215 words, one step)</td><td><b>10 of 12</b>, kept</td><td><b>10 of 12</b></td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p>
 <p class="tnote">The whole run was 84 model runs and one reflection call, about $1.50. A local 27B model (Qwen 3.8 via Ollama) scored 0 of 18 with no skill. The skill trained with Haiku then got 5 of 6 unseen tasks right on that local model, in one run.</p>
 <p>Read it with care. The seed was too thin to show a climb: it went from nothing to a rule set in one step. The 10 of 12 comes from small numbers, and one task is worth 8 points. Four of the 24 unseen runs still slipped on small details. The tasks are toys. They show that the loop works, not that it works on your job.</p>
 
@@ -608,7 +628,7 @@ python3 run.py --skill none --split sel --tag baseline --model haiku</code></pre
     <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>
 </footer>
-<!-- go:start --><script>(function(){
+<script>(function(){if(!window.matchMedia||!matchMedia('(max-width:640px)').matches)return;document.querySelectorAll('.table').forEach(function(t){if(t.scrollWidth>t.clientWidth+2){var n=t.nextElementSibling;if(n&&n.className=='swipe')n.hidden=false}})})()</script><!-- go:start --><script>(function(){
 var D=document,H=D.documentElement,CID="a17e3abc-0819-4937-be25-c683543a2ac8",F=H.getAttribute('data-from')||'other',q=new URLSearchParams(location.search),S='direct',C='';
 function dnt(){try{return sessionStorage.getItem('doNotTrack')||localStorage.getItem('doNotTrack')}catch(e){return null}}
 try{['utm_source','utm_campaign'].forEach(function(k){var v=q.get(k);if(v)sessionStorage.setItem('psp_'+k,v)});S=sessionStorage.getItem('psp_utm_source')||'direct';C=sessionStorage.getItem('psp_utm_campaign')||''}catch(e){S=q.get('utm_source')||'direct';C=q.get('utm_campaign')||''}

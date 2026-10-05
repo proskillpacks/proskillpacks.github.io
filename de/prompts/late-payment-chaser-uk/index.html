@@ -163,6 +163,8 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
+.swipe { display: none; font-size: 0.85rem; color: var(--mist); margin: -0.9rem 0 1.2rem; }
+@media (max-width: 640px) { .swipe:not([hidden]) { display: block; } }
 table { border-collapse: collapse; width: 100%; background: #fff; font-size: 0.95rem; }
 th, td { border: 1px solid var(--rule); padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
 th { background: #eef2ee; }
@@ -453,6 +455,24 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .phl .subj { display: block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.9rem; margin: 0 0 0.5rem; }
 .sales-tools .wkit { max-width: 52rem; }
 
+.phl { list-style: none; padding: 0; margin: 0 0 1.2rem; max-width: 46rem; }
+.phl li { display: flex; flex-wrap: wrap; gap: 0.5rem 0.8rem; align-items: flex-start; justify-content: space-between; background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.7rem 0.9rem; margin: 0 0 0.5rem; }
+.phl .tx { flex: 1 1 14rem; }
+.phl .lab { display: block; font-size: 0.78rem; font-weight: 700; color: var(--slate); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.1rem; }
+.phl .copybtn, .copyall { float: none; margin: 0; flex: none; }
+.br { background: #fff3a3; border-radius: 3px; padding: 0 0.1em; }
+.pgrp h3 { margin: 1.1rem 0 0.5rem; }
+.avoidbox { max-width: 46rem; background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.9rem 1.2rem; margin: 0.8rem 0 0; }
+.avoidbox p { margin: 0 0 0.5rem; }
+.mgr-two { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.mgr-ft { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; }
+
+.phl .em { display: block; white-space: pre-line; }
+.phl .subj { display: block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.9rem; margin: 0 0 0.5rem; }
+.aud-tools .wkit { max-width: 52rem; }
+.aud-tools .wk-img.wide { flex: 0 1 22rem; }
+.aud-tools .wk-txt h3 + p { margin-top: 0.2rem; }
+
 .dc-tr { flex: none; background: var(--pine); color: var(--lime); padding: 0.12rem 0.5rem; border-radius: 999px; font-size: 0.68rem; white-space: nowrap; }
 .dc-top:has(.dc-tr) .dc-cat { display: none; }
 .dc-top .dc-cat { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -461,7 +481,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .cs h2 { margin-top: 2.2rem; }
 .cs .table { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; border: 1px solid var(--rule); border-radius: 10px; background: #fff; margin: 0 0 1.2rem; }
 .cs .table table { min-width: 30rem; margin: 0; }
-.cs .table + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
+.cs .table + .tnote, .cs .swipe + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
 .cs .flow { max-width: 30rem; margin: 1.2rem auto 1.6rem; }
 .cs .flow svg { width: 100%; height: auto; display: block; }
 .cs .flow text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
@@ -581,7 +601,7 @@ Hier ist meine Rechnung:</code></pre></div></section>
 <blockquote><p><strong>Before:</strong> &quot;A client owes my firm £3,256.58. We sent them the payment application on 31 July 2022 and the final date for payment was 28 August 2022. Today is 30 September 2022 and they still haven&#x27;t paid. What can I charge them for paying late?&quot;</p>
 <p><strong>After (skill output, unedited extract):</strong></p>
 <p><strong>Position on 30 September 2022:</strong> The last day to pay on time was 28 August 2022; interest runs from 29 August 2022 (33 days). Assumes the customer is a business.</p>
-<div class="table"><table><thead><tr><th>Item</th><th>Amount</th><th>Basis</th></tr></thead><tbody><tr><td>Unpaid invoice</td><td>£3,256.58</td><td>your figure</td></tr><tr><td>Interest to 30 Sep 2022 (33 days at 9.25%)</td><td>£27.23</td><td>8% + Bank Rate of 1.25% on 30 June 2022 (Rate of Interest (No. 3) Order 2002, art. 4)</td></tr><tr><td>Fixed sum</td><td>£70.00</td><td>Late Payment of Commercial Debts (Interest) Act 1998, s.5A</td></tr><tr><td><strong>Total today</strong></td><td><strong>£3,353.81</strong></td><td>interest adds £0.83 a day</td></tr></tbody></table></div></blockquote>
+<div class="table"><table><thead><tr><th>Item</th><th>Amount</th><th>Basis</th></tr></thead><tbody><tr><td>Unpaid invoice</td><td>£3,256.58</td><td>your figure</td></tr><tr><td>Interest to 30 Sep 2022 (33 days at 9.25%)</td><td>£27.23</td><td>8% + Bank Rate of 1.25% on 30 June 2022 (Rate of Interest (No. 3) Order 2002, art. 4)</td></tr><tr><td>Fixed sum</td><td>£70.00</td><td>Late Payment of Commercial Debts (Interest) Act 1998, s.5A</td></tr><tr><td><strong>Total today</strong></td><td><strong>£3,353.81</strong></td><td>interest adds £0.83 a day</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p></blockquote>
 <p>The start date and the £70 match what the adjudicator awarded in the real case. The three emails follow in the same answer.</p></div></section>
 <section><h2>Grenzen</h2><div class="prose"><ul><li>Nur Großbritannien und nur Forderungen zwischen Unternehmen. Bei Privatkunden werden keine gesetzlichen Zinsen angesetzt.</li><li>Eine Rechnung auf einmal, einfache Zinsen auf Basis eines 365-Tage-Jahres, keine Teilzahlungen. Das Rechenbeispiel von GOV.UK rundet den Tageswert vor dem Multiplizieren auf den Penny. Deshalb können die Summen um ein paar Pence abweichen.</li><li>Es arbeitet mit den Angaben, die du machst. Stimmen Fälligkeitsdatum oder Betrag nicht, stimmen die Zahlen nicht.</li><li>Nicht abgedeckt sind Regeln für Bauverträge, strittige Forderungen, insolvente Kunden sowie Gerichtsverfahren und Gerichtskosten. Der Prompt weist darauf hin, wenn er so einen Fall erkennt, und hört dort auf.</li><li>Hat dein Vertrag eine eigene Klausel zu Verzugszinsen, nimmt er den Vertragszins und zeigt den gesetzlichen Wert daneben. Eine Klausel verdrängt die gesetzlichen Zinsen nur, wenn sie ein &quot;substantial remedy&quot; ist. Der Prompt weist darauf hin und entscheidet es nicht.</li><li>Ohne vereinbartes Zahlungsdatum laufen die 30 Tage ab dem Zeitpunkt, an dem dein Kunde die Rechnung erhalten hat. Der Prompt nimmt das Rechnungsdatum an, solange du nichts anderes sagst, und sagt das auch.</li><li>Er garantiert nicht, dass du bezahlt wirst. Prüfe das Ergebnis, bevor du etwas verschickst.</li></ul></div></section>
 <section><h2>Mehr</h2><ul class="links"><li><a href="/prompts/late-payment-chaser-uk/" hreflang="en-GB" lang="en-GB">Zur englischen Originalversion (die getestete)</a></li><li><a href="/go/install/?from=prompt" rel="noopener">Kostenloses Repository auf GitHub (MIT-Lizenz)</a></li><li><a href="/skills/late-payment-chaser-uk/" hreflang="en-GB">Dieselbe Aufgabe als installierbarer Skill (auf Englisch)</a></li></ul></section>
@@ -606,7 +626,7 @@ document.querySelectorAll('.prose pre').forEach(function (pre) {
     <small>Pro Skill Packs. Produkt- und Markennamen gehören ihren Inhabern. Diese Seite ist eine Übersetzung; das Original ist auf Englisch.</small>
   </div>
 </footer>
-<!-- go:start --><script>(function(){
+<script>(function(){if(!window.matchMedia||!matchMedia('(max-width:640px)').matches)return;document.querySelectorAll('.table').forEach(function(t){if(t.scrollWidth>t.clientWidth+2){var n=t.nextElementSibling;if(n&&n.className=='swipe')n.hidden=false}})})()</script><!-- go:start --><script>(function(){
 var D=document,H=D.documentElement,CID="a17e3abc-0819-4937-be25-c683543a2ac8",F=H.getAttribute('data-from')||'other',q=new URLSearchParams(location.search),S='direct',C='';
 function dnt(){try{return sessionStorage.getItem('doNotTrack')||localStorage.getItem('doNotTrack')}catch(e){return null}}
 try{['utm_source','utm_campaign'].forEach(function(k){var v=q.get(k);if(v)sessionStorage.setItem('psp_'+k,v)});S=sessionStorage.getItem('psp_utm_source')||'direct';C=sessionStorage.getItem('psp_utm_campaign')||''}catch(e){S=q.get('utm_source')||'direct';C=q.get('utm_campaign')||''}

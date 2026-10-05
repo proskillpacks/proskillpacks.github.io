@@ -157,6 +157,8 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
+.swipe { display: none; font-size: 0.85rem; color: var(--mist); margin: -0.9rem 0 1.2rem; }
+@media (max-width: 640px) { .swipe:not([hidden]) { display: block; } }
 table { border-collapse: collapse; width: 100%; background: #fff; font-size: 0.95rem; }
 th, td { border: 1px solid var(--rule); padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
 th { background: #eef2ee; }
@@ -447,6 +449,24 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .phl .subj { display: block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.9rem; margin: 0 0 0.5rem; }
 .sales-tools .wkit { max-width: 52rem; }
 
+.phl { list-style: none; padding: 0; margin: 0 0 1.2rem; max-width: 46rem; }
+.phl li { display: flex; flex-wrap: wrap; gap: 0.5rem 0.8rem; align-items: flex-start; justify-content: space-between; background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.7rem 0.9rem; margin: 0 0 0.5rem; }
+.phl .tx { flex: 1 1 14rem; }
+.phl .lab { display: block; font-size: 0.78rem; font-weight: 700; color: var(--slate); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.1rem; }
+.phl .copybtn, .copyall { float: none; margin: 0; flex: none; }
+.br { background: #fff3a3; border-radius: 3px; padding: 0 0.1em; }
+.pgrp h3 { margin: 1.1rem 0 0.5rem; }
+.avoidbox { max-width: 46rem; background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.9rem 1.2rem; margin: 0.8rem 0 0; }
+.avoidbox p { margin: 0 0 0.5rem; }
+.mgr-two { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.mgr-ft { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; }
+
+.phl .em { display: block; white-space: pre-line; }
+.phl .subj { display: block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.9rem; margin: 0 0 0.5rem; }
+.aud-tools .wkit { max-width: 52rem; }
+.aud-tools .wk-img.wide { flex: 0 1 22rem; }
+.aud-tools .wk-txt h3 + p { margin-top: 0.2rem; }
+
 .dc-tr { flex: none; background: var(--pine); color: var(--lime); padding: 0.12rem 0.5rem; border-radius: 999px; font-size: 0.68rem; white-space: nowrap; }
 .dc-top:has(.dc-tr) .dc-cat { display: none; }
 .dc-top .dc-cat { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -455,7 +475,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .cs h2 { margin-top: 2.2rem; }
 .cs .table { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; border: 1px solid var(--rule); border-radius: 10px; background: #fff; margin: 0 0 1.2rem; }
 .cs .table table { min-width: 30rem; margin: 0; }
-.cs .table + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
+.cs .table + .tnote, .cs .swipe + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
 .cs .flow { max-width: 30rem; margin: 1.2rem auto 1.6rem; }
 .cs .flow svg { width: 100%; height: auto; display: block; }
 .cs .flow text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
@@ -525,7 +545,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 <p>For each store we read the home page, the product list, one product page, the refund and shipping policy pages, robots.txt and the sitemap, then checked every finding against the page text before counting it.</p>
 <h2>What the owners asked, and what the pages showed</h2>
 <p>Most asked about the things a shopper sees: trust, design, flow, &quot;is anything confusing&quot;. Almost nobody asked about the hidden product details that Google reads. The pages showed a mix, and the shopper-facing gaps were the most common ones that plausibly answer the question.</p>
-<div class="table"><table><thead><tr><th>What we found on the fetched pages</th><th>Stores</th><th>Share</th></tr></thead><tbody><tr><td>No shipping or return details in the hidden product details Google reads</td><td>14 of 15</td><td>93%</td></tr><tr><td>No barcode number (GTIN) in those hidden details</td><td>12 of 15</td><td>80%</td></tr><tr><td>No reviews on the sampled product page (review widget empty, or none installed)</td><td>9 of 15</td><td>60%</td></tr><tr><td>At least one of the first five product descriptions under 80 words</td><td>9 of 15</td><td>60%</td></tr><tr><td>Product photos with no short description for people who cannot see them (alt text) on the sampled page</td><td>9 of 15</td><td>60%</td></tr><tr><td>Google search result problem (two-line summary missing, 320 characters, or a 94 character title)</td><td>7 of 15</td><td>47%</td></tr><tr><td>Reviews visible or app installed, but no star rating in the hidden details Google reads</td><td>4 of 15</td><td>27%</td></tr><tr><td>Shipping or refund policy missing, thin or still template text</td><td>4 of 15</td><td>27%</td></tr><tr><td>Product page with no main heading (H1, the large title at the top)</td><td>2 of 15</td><td>13%</td></tr></tbody></table></div>
+<div class="table"><table><thead><tr><th>What we found on the fetched pages</th><th>Stores</th><th>Share</th></tr></thead><tbody><tr><td>No shipping or return details in the hidden product details Google reads</td><td>14 of 15</td><td>93%</td></tr><tr><td>No barcode number (GTIN) in those hidden details</td><td>12 of 15</td><td>80%</td></tr><tr><td>No reviews on the sampled product page (review widget empty, or none installed)</td><td>9 of 15</td><td>60%</td></tr><tr><td>At least one of the first five product descriptions under 80 words</td><td>9 of 15</td><td>60%</td></tr><tr><td>Product photos with no short description for people who cannot see them (alt text) on the sampled page</td><td>9 of 15</td><td>60%</td></tr><tr><td>Google search result problem (two-line summary missing, 320 characters, or a 94 character title)</td><td>7 of 15</td><td>47%</td></tr><tr><td>Reviews visible or app installed, but no star rating in the hidden details Google reads</td><td>4 of 15</td><td>27%</td></tr><tr><td>Shipping or refund policy missing, thin or still template text</td><td>4 of 15</td><td>27%</td></tr><tr><td>Product page with no main heading (H1, the large title at the top)</td><td>2 of 15</td><td>13%</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p>
 <p>On the shipping and returns point this matches our earlier 100-store audit, where 88% had no shipping or return details in those hidden product details.</p>
 <h2>Examples of what &quot;no reviews&quot; and &quot;unfinished policy&quot; looked like</h2>
 <ul><li>Several stores had a review widget installed that said &quot;be the first to write a review&quot;. Under a price of EUR 85 or USD 117, that empty spot is the first thing a cautious visitor sees.</li><li>One store&#x27;s shipping and refund pages still contained template brackets, such as &quot;Orders are processed within [2-10 business days]&quot;. Shoppers read that as unfinished.</li><li>Three stores had a shipping policy address that returned a not-found page. Two of them did state shipping on the product page itself, which softens it but leaves the footer policy link broken.</li><li>One merchant&#x27;s listed price in their post (EUR 34,90) differed from the product data on the page (EUR 39,95), a gap that matters if the ad or advertorial quotes the old number.</li></ul>
@@ -547,7 +567,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
     <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>
 </footer>
-<!-- go:start --><script>(function(){
+<script>(function(){if(!window.matchMedia||!matchMedia('(max-width:640px)').matches)return;document.querySelectorAll('.table').forEach(function(t){if(t.scrollWidth>t.clientWidth+2){var n=t.nextElementSibling;if(n&&n.className=='swipe')n.hidden=false}})})()</script><!-- go:start --><script>(function(){
 var D=document,H=D.documentElement,CID="a17e3abc-0819-4937-be25-c683543a2ac8",F=H.getAttribute('data-from')||'other',q=new URLSearchParams(location.search),S='direct',C='';
 function dnt(){try{return sessionStorage.getItem('doNotTrack')||localStorage.getItem('doNotTrack')}catch(e){return null}}
 try{['utm_source','utm_campaign'].forEach(function(k){var v=q.get(k);if(v)sessionStorage.setItem('psp_'+k,v)});S=sessionStorage.getItem('psp_utm_source')||'direct';C=sessionStorage.getItem('psp_utm_campaign')||''}catch(e){S=q.get('utm_source')||'direct';C=q.get('utm_campaign')||''}

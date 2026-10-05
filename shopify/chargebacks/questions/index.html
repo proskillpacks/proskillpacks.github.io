@@ -153,6 +153,8 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
+.swipe { display: none; font-size: 0.85rem; color: var(--mist); margin: -0.9rem 0 1.2rem; }
+@media (max-width: 640px) { .swipe:not([hidden]) { display: block; } }
 table { border-collapse: collapse; width: 100%; background: #fff; font-size: 0.95rem; }
 th, td { border: 1px solid var(--rule); padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
 th { background: #eef2ee; }
@@ -443,6 +445,24 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .phl .subj { display: block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.9rem; margin: 0 0 0.5rem; }
 .sales-tools .wkit { max-width: 52rem; }
 
+.phl { list-style: none; padding: 0; margin: 0 0 1.2rem; max-width: 46rem; }
+.phl li { display: flex; flex-wrap: wrap; gap: 0.5rem 0.8rem; align-items: flex-start; justify-content: space-between; background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.7rem 0.9rem; margin: 0 0 0.5rem; }
+.phl .tx { flex: 1 1 14rem; }
+.phl .lab { display: block; font-size: 0.78rem; font-weight: 700; color: var(--slate); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 0.1rem; }
+.phl .copybtn, .copyall { float: none; margin: 0; flex: none; }
+.br { background: #fff3a3; border-radius: 3px; padding: 0 0.1em; }
+.pgrp h3 { margin: 1.1rem 0 0.5rem; }
+.avoidbox { max-width: 46rem; background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.9rem 1.2rem; margin: 0.8rem 0 0; }
+.avoidbox p { margin: 0 0 0.5rem; }
+.mgr-two { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.mgr-ft { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; }
+
+.phl .em { display: block; white-space: pre-line; }
+.phl .subj { display: block; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.9rem; margin: 0 0 0.5rem; }
+.aud-tools .wkit { max-width: 52rem; }
+.aud-tools .wk-img.wide { flex: 0 1 22rem; }
+.aud-tools .wk-txt h3 + p { margin-top: 0.2rem; }
+
 .dc-tr { flex: none; background: var(--pine); color: var(--lime); padding: 0.12rem 0.5rem; border-radius: 999px; font-size: 0.68rem; white-space: nowrap; }
 .dc-top:has(.dc-tr) .dc-cat { display: none; }
 .dc-top .dc-cat { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -451,7 +471,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .cs h2 { margin-top: 2.2rem; }
 .cs .table { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; border: 1px solid var(--rule); border-radius: 10px; background: #fff; margin: 0 0 1.2rem; }
 .cs .table table { min-width: 30rem; margin: 0; }
-.cs .table + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
+.cs .table + .tnote, .cs .swipe + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
 .cs .flow { max-width: 30rem; margin: 1.2rem auto 1.6rem; }
 .cs .flow svg { width: 100%; height: auto; display: block; }
 .cs .flow text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
