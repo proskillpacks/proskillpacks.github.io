@@ -247,6 +247,23 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   .hero-filters label:not(.grow) { width: calc(50% - 0.4rem); }
   .hero-filters label:not(.grow) select { min-width: 0; width: 100%; }
 }
+.doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 0 0 1rem; }
+.door { display: block; background: var(--pine); color: var(--cream); border-radius: 16px; padding: 1.2rem 1.3rem; text-decoration: none; }
+.door b { display: block; font-size: 1.15rem; margin-bottom: 0.3rem; }
+.door span { color: var(--mist); font-size: 0.95rem; }
+.door:hover, .door:focus-visible { background: var(--moss); }
+.wkit { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.1rem 1.3rem; margin: 0 0 1rem; max-width: 52rem; }
+.wkit h3 { margin: 0 0 0.3rem; }
+.wkit p { margin: 0 0 0.7rem; }
+.wkit .free { display: inline-block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--pine); }
+.soonbtn { display: inline-block; border: 1px dashed var(--slate); color: var(--slate); border-radius: 999px; padding: 0.55rem 1.1rem; font-size: 0.95rem; }
+.letterbox { max-width: 46rem; margin: 0 0 1.2rem; }
+.letterbox .lbl { font-weight: 700; margin: 0 0 0.3rem; }
+.letterbox pre { font: inherit; line-height: 1.55; }
+.region { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; border: 1px solid var(--pine); color: var(--pine); border-radius: 999px; padding: 0.05rem 0.55rem; margin-right: 0.4rem; vertical-align: 0.1em; }
+.quote { border-left: 4px solid var(--lime); padding: 0.1rem 0 0.1rem 1rem; margin: 0.8rem 0; }
+.quote cite { display: block; font-size: 0.9rem; color: var(--slate); font-style: normal; margin-top: 0.3rem; }
+
 </style>
 <script type="application/ld+json">
 {
@@ -281,7 +298,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
       <a class="name" href="/">PRO SKILL PACKS</a>
-      <nav aria-label="Main"><a href="/">All products</a><a href="/shopify/">Shopify</a><a href="/free/">Free</a><a href="/guides/">Guides</a></nav>
+      <nav aria-label="Main"><a href="/work/">Work</a><a href="/">All products</a><a href="/shopify/">Shopify</a><a href="/free/">Free</a><a href="/guides/">Guides</a></nav>
     </div>
     <p class="crumbs"><a href="/works-with/">Works with</a> / Gemini CLI</p>
     <h1>Skills for Gemini CLI: free and tested</h1>
