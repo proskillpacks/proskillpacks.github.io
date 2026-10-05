@@ -474,7 +474,7 @@ main.prod .prose, main.prod .sub, main.prod .two, main.prod .buybox { max-width:
 .ps-more { margin: 0.6rem 0 0; font-size: 0.92rem; }
 .ps-more a { color: var(--pine); font-weight: 700; }
 .v9tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.9rem; }
-.v9t { display: flex; flex-direction: column; gap: 0.3rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--ink); min-height: 9.5rem; }
+.v9t { display: flex; flex-direction: column; gap: 0.3rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--ink); }
 a.v9t:hover, a.v9t:focus-visible { border-color: var(--pine); }
 .v9t b { font-size: 1.08rem; line-height: 1.25; }
 .v9t span { color: var(--slate); font-size: 0.92rem; line-height: 1.45; }
@@ -482,6 +482,13 @@ a.v9t:hover, a.v9t:focus-visible { border-color: var(--pine); }
 .v9t .go::after { content: " \2192"; }
 .v9t.dev { background: #f1f4f0; border-style: dashed; }
 .v9t.dev a { color: var(--pine); font-weight: 700; }
+.v9dev { margin: 1rem 0 0; font-size: 0.93rem; color: var(--slate); }
+.v9dev a { color: var(--pine); font-weight: 700; }
+.jc { display: flex; flex-direction: column; gap: 0.35rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 1.1rem 1.2rem; text-decoration: none; color: var(--ink); }
+.jc:hover, .jc:focus-visible { border-color: var(--pine); }
+.jc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; }
+.jc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; }
+.jc-p { margin-top: auto; padding-top: 0.5rem; font-weight: 800; color: var(--pine); }
 .v9jobs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.8rem; margin-top: 1rem; }
 .jobl { display: flex; flex-direction: column; gap: 0.5rem; background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.85rem 1rem; text-decoration: none; color: var(--ink); min-height: 5.4rem; }
 .jobl:hover, .jobl:focus-visible { border-color: var(--pine); }
@@ -499,7 +506,7 @@ a.v9t:hover, a.v9t:focus-visible { border-color: var(--pine); }
 .vf-price .dcp s { color: var(--slate); font-weight: 400; }
 .vf-see { font-weight: 700; color: var(--pine); }
 .vf-fine { margin: 0.6rem 0 0 !important; font-size: 0.88rem; font-weight: 700; color: var(--pine) !important; }
-.vf-r { background: #f4f7f3; border-radius: 14px; padding: 1.2rem 1.3rem; align-self: stretch; display: flex; flex-direction: column; }
+.vf-r { background: #f4f7f3; border-radius: 14px; padding: 1.2rem 1.3rem; align-self: start; display: flex; flex-direction: column; }
 .vf-l { display: flex; flex-direction: column; align-items: flex-start; }
 .vf-l .vf-buy { margin-top: auto; padding-top: 0.4rem; }
 .vf-r .vf-see { margin: 0.8rem 0 0; }
@@ -551,13 +558,17 @@ a.v9t:hover, a.v9t:focus-visible { border-color: var(--pine); }
   .v9feat, .v9tell, .vw-two { grid-template-columns: 1fr; }
 }
 @media (max-width: 40rem) {
-  .brand nav { flex-wrap: wrap; overflow: visible; white-space: normal; gap: 0 0.9rem; }
+  .brand nav { flex-wrap: nowrap; overflow: visible; white-space: nowrap; gap: 0 0.7rem; font-size: 0.88rem; }
+  .brand nav a { padding: 0.7rem 0.1rem; }
+  .hero:has(+ main.dirhome) { padding-bottom: 1.4rem; }
+  .hero:has(+ main.dirhome) h1 { font-size: 1.9rem; margin-bottom: 0.5rem; }
+  .v9tiles { grid-template-columns: 1fr; gap: 0.5rem; }
+  .v9t { min-height: 0; padding: 0.8rem 1rem; }
+  .jc { padding: 0.9rem 1rem; }
   .pstrip ul { gap: 0.6rem; }
   .pstrip li { padding: 0.7rem 0.8rem; }
   .pstrip b { font-size: 1.45rem; }
   .pstrip span { font-size: 0.8rem; }
-  .v9tiles { gap: 0.6rem; }
-  .v9t { padding: 0.85rem 0.85rem; min-height: 11rem; }
   .v9t b { font-size: 1rem; }
   .v9t span { font-size: 0.85rem; }
   .v9jobs, .bdefs, .vr-links { grid-template-columns: 1fr; gap: 0.6rem; }
