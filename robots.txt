@@ -3,3 +3,4 @@ Allow: /
 Disallow: /go/
 
 Sitemap: https://proskillpacks.github.io/sitemap.xml
+Sitemap: https://proskillpacks.github.io/sitemap-pages.xml
