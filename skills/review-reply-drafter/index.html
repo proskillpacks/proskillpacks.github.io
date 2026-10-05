@@ -447,6 +447,18 @@ details.usingai { border: 1px solid var(--rule); border-radius: 12px; background
 details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; }
 .devline { color: var(--slate); font-size: 0.9rem; }
 
+.rcp .sa { max-width: 52rem; background: #fff; border: 1px solid var(--rule); border-left: 5px solid var(--lime); border-radius: 12px; padding: 0.9rem 1.1rem; margin: 1.2rem 0 1.4rem; }
+.rcp .sa-t { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--slate); margin: 0 0 0.3rem; }
+.rcp .sa-m { font-size: 0.85rem; color: var(--slate); margin: 0.6rem 0 0; }
+.rcp .sa .table { margin: 0.4rem 0 0; }
+.rcp .cpbox { position: relative; }
+.rcp .cpbox pre { max-height: 26rem; overflow: auto; font-size: 0.88rem; }
+.rcp .cpbar { display: flex; justify-content: space-between; align-items: center; gap: 0.6rem; margin: 0 0 0.4rem; flex-wrap: wrap; }
+.rcp .cpbar b { font-size: 0.95rem; }
+.rcp .cpbar .copybtn { float: none; margin: 0; }
+.rcp .tag { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--slate); }
+.rcp pre.plain { max-height: 20rem; overflow: auto; font-size: 0.85rem; }
+
 .aa-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.25rem 2rem; align-items: start; margin-top: 1.1rem; }
 .aa-buy .btn { font-size: 1.1rem; padding: 0.85rem 1.7rem; }
 .aa-buy .lob { margin-bottom: 0; }
@@ -732,6 +744,15 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .wkit .ogw dt, .wkit .ogline a { color: var(--pine); }
 .wkit .ogw dd { color: var(--ink); font-size: 0.93rem; }
 .wkit .ogline { color: var(--slate); }
+.evb { background: #fff; color: var(--ink); border-radius: 12px; padding: 0.9rem 1.1rem; margin: 1rem 0 0.4rem; max-width: 44rem; }
+.evb h2 { font-size: 1.05rem; margin: 0 0 0.4rem; color: var(--pine); }
+.evb p { margin: 0 0 0.5rem; font-size: 0.95rem; line-height: 1.45; color: var(--ink); }
+.evb .evcap { font-size: 0.82rem; color: var(--slate); margin: 0 0 0.35rem; }
+.evb .evcap a { color: var(--pine); font-weight: 700; }
+.evb .table { margin: 0.2rem 0 0.2rem; }
+.evb table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
+.evb th, .evb td { text-align: left; padding: 0.3rem 0.5rem; border-bottom: 1px solid var(--rule); color: var(--ink); }
+.evb blockquote { margin: 0.4rem 0 0.2rem; padding: 0.1rem 0 0.1rem 0.8rem; border-left: 3px solid var(--lime); font-size: 0.93rem; color: var(--ink); }
 .methband { margin: 1.4rem 0 0; font-size: 1rem; color: var(--slate); }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
@@ -776,7 +797,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-online-stores">Online stores</a> / Review Reply Drafter</p>
     <h1>Review Reply Drafter</h1>
     <p class="lead">Reply to reviews without promising anything.</p>
-    <dl class="ogw"><dt>Who it is for</dt><dd>Online store owners who answer their own reviews.</dd><dt>What you give it</dt><dd>Your reviews, or a CSV, or a public review page.</dd><dt>What you get back</dt><dd>A reply for each review, matched to its tone, with risky ones flagged for you.</dd></dl><div class="cta"><a class="btn btn-lime" href="/prompts/review-reply-drafter/">Copy the text for ChatGPT or any chatbot</a></div><p class="note-light alts"><a class="alt-link" href="https://proskillpacks.gumroad.com/l/free-shopify-skills?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=free-shopify-skills" data-go="buy/free-shopify-skills">Download free</a> &middot; <a class="alt-link" href="/go/repo/review-reply-drafter/?from=skill" rel="noopener">View on GitHub</a></p><p class="note-light">The download is the free bundle on Gumroad (pay what you want, from $0), which holds a selection of the free skills. All of them are on GitHub under the MIT licence.</p><p class="ogline">It is a text file you paste into ChatGPT, Claude or any chatbot.</p><p class="ogline">Tested on 3 real examples before release. <a href="/how-we-test/">How we test</a>.</p>
+    <dl class="ogw"><dt>Who it is for</dt><dd>Online store owners who answer their own reviews.</dd><dt>What you give it</dt><dd>Your reviews, or a CSV, or a public review page.</dd><dt>What you get back</dt><dd>A reply for each review, matched to its tone, with risky ones flagged for you.</dd></dl><div class="evb"><h2>What we measured</h2><p>In our test of 10 invented cases, run twice: typing one line got 4 of 20 fully right (8 of 20 if you ignore length); with this skill, 20 of 20. The most common one-line failure was a reply far too long for a public review (16 of 20), and 4 of 20 promised a refund nobody had offered.</p><div class="table"><table><thead><tr><th></th><th>Strong model</th><th>Cheapest model</th></tr></thead><tbody><tr><th scope="row">Typing one line</th><td>4 of 20</td><td>0 of 20</td></tr><tr><th scope="row">With this skill</th><td>20 of 20</td><td>19 of 20</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p><p class="evcap">Outputs fully right, out of 20.</p><blockquote>Again, I&#x27;m very sorry, and I hope she&#x27;s feeling much better. - The Bramble Balm team</blockquote><p class="evcap">The end of a one-line reply to a review about a child&#x27;s rash. It ran to 129 words; a public reply should stay under 90.</p><p class="evcap">Cases written by us; Claude models (the cheapest Claude model: 0 of 20 with one line, 19 of 20 with the skill); a small test; not our full training method.</p><p class="evcap"><a href="/research/how-we-train-skills/#other-skills">How the test was run</a></p></div><div class="cta"><a class="btn btn-lime" href="/prompts/review-reply-drafter/">Copy the text for ChatGPT or any chatbot</a></div><p class="note-light alts"><a class="alt-link" href="https://proskillpacks.gumroad.com/l/free-shopify-skills?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=free-shopify-skills" data-go="buy/free-shopify-skills">Download free</a> &middot; <a class="alt-link" href="/go/repo/review-reply-drafter/?from=skill" rel="noopener">View on GitHub</a></p><p class="note-light">The download is the free bundle on Gumroad (pay what you want, from $0), which holds a selection of the free skills. All of them are on GitHub under the MIT licence.</p><p class="ogline">It is a text file you paste into ChatGPT, Claude or any chatbot.</p>
   </div>
 </header>
 <main><div class="wrap">
@@ -820,7 +841,7 @@ document.querySelectorAll('.demo').forEach(function (f) {
     <small>Pro Skill Packs. Product names and trademarks belong to their owners. Not affiliated with or endorsed by Shopify Inc.</small>
   </div>
 </footer>
-<!-- go:start --><script>(function(){
+<script>(function(){if(!window.matchMedia||!matchMedia('(max-width:640px)').matches)return;document.querySelectorAll('.table').forEach(function(t){if(t.scrollWidth>t.clientWidth+2){var n=t.nextElementSibling;if(n&&n.className=='swipe')n.hidden=false}})})()</script><!-- go:start --><script>(function(){
 var D=document,H=D.documentElement,CID="a17e3abc-0819-4937-be25-c683543a2ac8",F=H.getAttribute('data-from')||'other',q=new URLSearchParams(location.search),S='direct',C='';
 function dnt(){try{return sessionStorage.getItem('doNotTrack')||localStorage.getItem('doNotTrack')}catch(e){return null}}
 try{['utm_source','utm_campaign'].forEach(function(k){var v=q.get(k);if(v)sessionStorage.setItem('psp_'+k,v)});S=sessionStorage.getItem('psp_utm_source')||'direct';C=sessionStorage.getItem('psp_utm_campaign')||''}catch(e){S=q.get('utm_source')||'direct';C=q.get('utm_campaign')||''}

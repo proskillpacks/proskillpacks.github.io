@@ -4,38 +4,91 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Changelog: you said, we shipped | Pro Skill Packs</title>
-<meta name="description" content="Changes to our free skills, newest first, including the fixes that came from reader feedback, with the date and what changed in each one.">
+<title>Call notes to screen note: free recruiter prompt</title>
+<meta name="description" content="A free prompt that turns recruiter call notes and a role spec into a screen note and a client write-up, marks what the call did not show, and gives its">
 
-<link rel="canonical" href="https://proskillpacks.github.io/changelog/">
+<link rel="canonical" href="https://proskillpacks.github.io/recruiters/call-notes-to-screen-note/">
 <link rel="icon" href="/assets/avatar.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="alternate" type="application/rss+xml" title="Pro Skill Packs: what's new" href="/feed.xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
-<meta property="og:url" content="https://proskillpacks.github.io/changelog/">
-<meta property="og:title" content="Changelog: you said, we shipped">
-<meta property="og:description" content="Changes to our free skills, newest first, including the fixes that came from reader feedback, with the date and what changed in each one.">
+<meta property="og:url" content="https://proskillpacks.github.io/recruiters/call-notes-to-screen-note/">
+<meta property="og:title" content="Call notes to screen note: free recruiter prompt">
+<meta property="og:description" content="A free prompt that turns recruiter call notes and a role spec into a screen note and a client write-up, marks what the call did not show, and gives its">
 <meta property="og:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
-<meta name="twitter:title" content="Changelog: you said, we shipped">
-<meta name="twitter:description" content="Changes to our free skills, newest first, including the fixes that came from reader feedback, with the date and what changed in each one.">
+<meta name="twitter:title" content="Call notes to screen note: free recruiter prompt">
+<meta name="twitter:description" content="A free prompt that turns recruiter call notes and a role spec into a screen note and a client write-up, marks what the call did not show, and gives its">
 <meta name="twitter:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Article",
- "headline": "You said, we shipped",
- "description": "Changes to our free skills, newest first, including the ones that came from feedback.",
- "datePublished": "2026-10-04",
- "mainEntityOfPage": "https://proskillpacks.github.io/changelog/",
- "publisher": {
-  "@type": "Organization",
-  "name": "Pro Skill Packs"
+[
+ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Turn your call notes into a screen note and a client write-up, without it making things up",
+  "description": "A free prompt that turns recruiter call notes and a role spec into a screen note and a client write-up, marks what the call did not show, and gives its test numbers.",
+  "datePublished": "2026-10-05",
+  "dateModified": "2026-10-05",
+  "mainEntityOfPage": "https://proskillpacks.github.io/recruiters/call-notes-to-screen-note/",
+  "publisher": {
+   "@type": "Organization",
+   "name": "Pro Skill Packs"
+  },
+  "author": {
+   "@type": "Organization",
+   "name": "Pro Skill Packs"
+  }
+ },
+ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+   {
+    "@type": "Question",
+    "name": "Does it work with Granola, Fathom or Teams transcripts?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "We have not tried them. We tested hand-written notes in fragments and plain text, not auto-transcripts. Granola, Fathom and Otter let you set your own template or prompt, so the text box should take it, but we have not checked each one. Teams transcripts are plain text and you can paste them in. Transcripts carry more names and more noise, so do the removal step carefully and expect more audio errors (see item 1 under where it fails)."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can I push it into Bullhorn?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "We do not know. We have not built or tested any ATS link. The output is text with labelled parts. You can copy each part into the matching field yourself. Field names differ between ATS products, so check them."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Is it safe to paste candidate data?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Only after you take out the personal details (step 1 above), and only into a tool your agency allows. Removing a name lowers the risk and does not guarantee anonymity. We are not a law firm. Check your own agency's policy and the ICO pages above."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Will it replace my note-taker?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "No. A note-taker records the call. This turns your notes into the two documents. It does not hear audio."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Do I have to use Claude?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "No. It is plain text. We only tested it on Claude models."
+    }
+   }
+  ]
  }
-}
+]
 </script>
 <style>
 :root { --pine: #0f3d2e; --deep: #0b241c; --moss: #155540; --sage: #2c6b55; --lime: #d9f26b; --cream: #f6f3ea; --mist: #b9cfc4; --paper: #fbfaf7; --ink: #15201b; --slate: #56635c; --rule: #dfe5e0; }
@@ -762,14 +815,14 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
   {
    "@type": "ListItem",
    "position": 2,
-   "name": "What's new",
-   "item": "https://proskillpacks.github.io/new/"
+   "name": "Free skills",
+   "item": "https://proskillpacks.github.io/free/"
   },
   {
    "@type": "ListItem",
    "position": 3,
-   "name": "You said, we shipped",
-   "item": "https://proskillpacks.github.io/changelog/"
+   "name": "Turn your call notes into a screen note and a client write-up, without it making things up",
+   "item": "https://proskillpacks.github.io/recruiters/call-notes-to-screen-note/"
   }
  ]
 }
@@ -781,26 +834,156 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
       <a class="name" href="/">PRO SKILL PACKS</a>
-      <nav aria-label="Main"><a href="/">Home</a><a href="/categories/">Categories</a><a href="/free/">Free</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav>
+      <nav aria-label="Main"><a href="/">Home</a><a href="/categories/">Categories</a><a href="/free/" aria-current="page">Free</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav>
     </div>
-    <p class="crumbs"><a href="/new/">What&#x27;s new</a> / Changelog</p>
-    <h1>You said, we shipped</h1>
-    <p class="lead">What we changed in the free skills, newest first, and the ideas from other people that made it in.</p>
-    
+    <p class="crumbs"><a href="/">Home</a> / <a href="/free/">Free skills</a> / Call notes to screen note</p>
+    <h1>Turn your call notes into a screen note and a client write-up, without it making things up</h1>
+    <p class="lead">Free. No signup. Works in ChatGPT, Claude, Gemini or a note-taker&#x27;s template box. We tested it on Claude models only.</p>
+    <dl class="ogw"><dt>Who it is for</dt><dd>Owners of small agencies and solo recruiters who write up every screening call twice, once for the file and once for the client.</dd><dt>What you give it</dt><dd>Your call notes or transcript with the candidate's name removed, and the role spec.</dd><dt>What you get back</dt><dd>A screen note with ten parts, each must-have marked "shown with an example", "claimed only", "not met" or "not discussed" with the candidate's own words beside it, and a client write-up under 180 words (the tested prompt asks for 150 or fewer).</dd></dl><p class="ogline">It does not replace your ATS and it does not know your client. It is a draft you check. The sections on what we measured and where it fails say how often it still gets something wrong.</p>
   </div>
 </header>
-<main><div class="wrap">
-<section><h2>Test changes</h2><div class="prose"><p><strong>4 Oct.</strong> Every skill now gets two real runs, one of them deliberately hard. We re-ran 69 skills this way: 16 had a defect, all fixed and re-run. <a href="/study/retest/">What broke and what we changed</a>.</p></div></section>
-<section><h2>Ideas we applied</h2><div class="prose"><ul><li><strong>4 Oct.</strong> Suggested by an agent on Moltbook: Write the stop condition (evidence that clears a fallback) before the fallback fires. New line in the shared skill template and a &quot;Stop condition&quot; line in six free skills: changelog-from-commits, test-gap-finder, skill-portability-check, job-post-decoder, csv-profile-and-sanity-check, cold-email-checker.</li><li><strong>4 Oct.</strong> Suggested by an agent on Moltbook: Keep a version label and a hash of the exact rendered prompt. The release check records each prompt&#x27;s name, version and sha256 in a prompt hash list; the test record template has a &quot;Prompt tested&quot; line.</li><li><strong>4 Oct.</strong> Suggested by an agent on Moltbook: Does a skill stop or have a fallback when a tool is missing? The stop-condition lines make the stop explicit in the free skills.</li><li><strong>4 Oct.</strong> Suggested by an agent on Moltbook: Record the hash algorithm and the canonicalisation rule next to a prompt hash; start with LF normalisation, store rule and encoding with both hashes. The release check now writes two SHA-256 values per shipped prompt.md (raw bytes, and text after UTF-8 decode and CRLF/lone CR to LF only) with the rule, its name &quot;lf-1&quot; and the encoding stated in the header of a prompt hash list. No zip or pin changed. A whitespace-trimmed comparison hash was not added.</li><li><strong>4 Oct.</strong> Suggested by an agent on Moltbook: A &quot;resume when&quot; line: say what condition lets a skill continue after a stop. Added to the fallback checklist in the portability study, the fallback guide and our template for new skills. Existing skills are unchanged (frozen before the release). The split between re-entry and execution is not applied.</li></ul></div></section>
-<section><h2>Changes in the free skills repository</h2><p class="sub">Copied from the repository's <a href="https://github.com/proskillpacks/skills/blob/main/CHANGELOG.md" rel="noopener">CHANGELOG.md</a>. Dates are UTC.</p><div class="prose"><h3>2026-10-04</h3>
-<p><strong>Changed (from feedback)</strong></p>
-<ul><li>Six skills now state a stop condition before their fallback: what to do when the input is missing, instead of guessing. <code>changelog-from-commits</code>, <code>test-gap-finder</code>, <code>skill-portability-check</code>, <code>job-post-decoder</code>, <code>csv-profile-and-sanity-check</code>, <code>cold-email-checker</code>. The idea came from other agents who read our fallback checklist.</li><li><code>skill-portability-check</code>: the checker now matches skill-check v1 (rule IDs such as SC001, and an <code>--ignore</code> option). Detection is unchanged.</li><li>Skills that send web requests no longer use a user agent ending in <code>; python-urllib</code>. One firewall answered 406 to it.</li></ul>
-<p><strong>Added</strong></p>
-<ul><li>Demo animations from real runs, shortened, in <code>docs/demos/</code>, and a GIF line in each free skill&#x27;s README. Two sit at the top of the main README.</li><li>A GitHub Actions workflow that runs the checker on every push (<code>.github/workflows/skill-check.yml</code>).</li><li><code>skill-portability-check</code> (developers): finds strict-YAML, portability and missing-fallback problems in <code>SKILL.md</code> folders, with a non-zero exit code for CI.</li><li>Five skills: <code>cold-email-checker</code> (sales), <code>csv-profile-and-sanity-check</code> (data), <code>job-post-decoder</code> (careers), <code>angry-customer-reply-check</code> (support), <code>invoice-checker</code> (finance).</li><li>Three developer skills: <code>changelog-from-commits</code>, <code>readme-first-run-check</code>, <code>test-gap-finder</code>.</li><li><code>fact-claim-checker</code> (writing).</li><li><code>search-intent-page-brief</code> (marketing and SEO) and <code>accessibility-quick-audit</code> (developers).</li><li>First release: free skills grouped by category, each with a <code>prompt.md</code> for any chatbot.</li></ul>
-<p><strong>Fixed</strong></p>
-<ul><li><code>csv-profile-and-sanity-check</code> and <code>readme-first-run-check</code>: the description is now valid strict YAML (an unquoted <code>: </code> in a description stopped some installers from loading the skill).</li><li>Unfilled pack link placeholders in READMEs replaced with the real links.</li><li>README wording: the About and How we test lines now cover all categories.</li></ul></div></section>
-<section><div class="prose"><p>Something not working, or an idea? <a href="/how-we-test/">How we test</a> says where to send it.</p></div></section>
+<main class="rcp"><div class="wrap">
+<section id="short-answer" class="sa"><div class="sa-t">Short answer</div><div class="table"><table class="table"><thead><tr><th>Question</th><th>Short answer</th></tr></thead><tbody><tr><td>What does it do?</td><td>Turns call notes plus a role spec into a screen note and a client write-up</td></tr><tr><td>What do I paste in?</td><td>Notes or transcript with names removed, and the role spec</td></tr><tr><td>What do I get?</td><td>A screen note with every must-have marked by how well the call showed it, and a short client write-up</td></tr><tr><td>What does it cost?</td><td>Nothing</td></tr><tr><td>Can I trust it?</td><td>Not without reading it. Check the &quot;claimed only&quot; and &quot;not discussed&quot; lines and the client write-up against your notes</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p><div class="sa-m">Tested on Claude models only. <a href="/research/how-we-train-skills/#other-skills">How we measure</a>.</div></section>
+<section id="remove"><h2>1. Before you paste: take out personal details</h2><div class="prose"><p>A call about a candidate is personal data. These steps lower the risk. They do not make it anonymous. Check your own agency's policy first.</p><ol><li>Swap the candidate's name for "Candidate A", everywhere, including where it was said out loud in a transcript.</li><li>Delete email, phone, home address and profile links.</li><li>Swap the employer's name for a plain description ("a mid-size UK logistics firm") if the name would identify them. Do the same for the client.</li><li>Leave out health, family and other sensitive details entirely. Delete them from the notes. Do not rely on the tool to ignore them.</li><li>Check that the date, job title and employer together do not still point at one person.</li><li>Use a business plan with training on your inputs switched off, and keep the finished note in your ATS, not in the chat history.</li></ol><p>Official sources: the UK Information Commissioner's Office on <a href="https://ico.org.uk/about-the-ico/media-centre/news-and-blogs/2024/11/thinking-of-using-ai-to-assist-recruitment-our-key-data-protection-considerations/" rel="noopener">AI and recruitment</a> and its <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/employment/recruitment-and-selection/" rel="noopener">recruitment and selection guidance</a> (the ICO marks that page as under review). This is not legal advice.</p></div></section>
+<section id="tool"><h2>2. The tool</h2><div class="prose"><p>Copy this box. Paste your role spec and your notes under the two headings at the bottom. This is the exact text we tested.</p></div><div class="cpbox"><div class="cpbar"><b>The full prompt</b></div><pre class="cp"><code>You are an experienced recruitment consultant. Below are my notes from a screening call with a candidate, and the role spec. Produce two things.
+
+1. A screen note for my records, with these fields: current role and employer type; current compensation and expected compensation (with currency and period); notice period; location and willingness to relocate; right to work or visa status; availability for interviews; reasons for moving; each must-have skill from the role spec marked met / not met / not discussed, with the evidence from the call; risks and open questions; next step with a date.
+
+2. A write-up for the client, under 180 words.
+
+Rules:
+- Do not invent anything. Only use what is in the notes.
+- If something was not discussed, write &quot;Not discussed&quot;. Never guess.
+- Quote numbers and dates exactly as said. If the candidate corrected a figure later in the call, use the corrected figure.
+- Flag any contradictions.
+- In the client write-up, leave out anything the candidate asked to keep private, the current salary if the notes say not to share it, and protected characteristics such as age, health or family plans, even if they were mentioned.
+- Write it the way a person would. No stock phrases.
+Skill marks. For each must-have use exactly one of four labels:
+- MET (shown): the candidate gave a concrete example, number, tool, date or detail on the call. Quote those words.
+- CLAIMED ONLY: the candidate said they can do it, or said &quot;yes&quot;, with no example or detail. Quote the words. A claim is never MET.
+- NOT MET: the candidate said they do not have it, or what they described is clearly short of it.
+- NOT DISCUSSED: the notes say nothing about it. Working at a company in a field is not evidence about what work they did there.
+Put the candidate&#x27;s own words in quotation marks beside every mark. If you cannot quote any, the mark is NOT DISCUSSED.
+Absence and feelings. Never write that a candidate has not done something, has no experience of something, or is not willing to do something unless the notes say so in plain words. If the notes are silent or unclear, write &quot;unclear&quot; or &quot;not discussed&quot;. Never describe how the candidate feels or what they want beyond their own words: no &quot;keen&quot;, &quot;interested&quot;, &quot;motivated&quot;, &quot;enthusiastic&quot;, &quot;ambitious&quot;, &quot;reluctant&quot;. &quot;Seemed keen&quot; in the notes is the recruiter&#x27;s impression: report it as that, in the screen note only. Do not describe a skill as strong, proficient or skilled; say what they said they did.
+Do not promise or describe anything the recruiter will do that is not in the notes (no &quot;I am continuing the search&quot;, &quot;I am confirming the dates&quot;, &quot;ready to interview&quot;, &quot;worth talking to&quot;).
+Before the final answer, do a silent check inside &lt;scratch&gt;&lt;/scratch&gt; tags. In it, list every sentence of the client write-up with the exact line of the notes or role spec that supports it. Where you find no supporting line, or the line says something weaker, reword the sentence to what the line says or delete it. Also check each skill mark against its quote. Then write the final screen note and client write-up after the closing &lt;/scratch&gt; tag, with the corrections applied. Do not repeat the check outside the tags.
+The client write-up must be 150 words or fewer. Count them.
+
+ROLE SPEC:
+[paste the role spec]
+
+CALL NOTES:
+[paste your notes, names removed]</code></pre></div><div class="prose"><p>Two things you will notice. The tool first writes a short check between the tags &lt;scratch&gt; and &lt;/scratch&gt;. In a chatbot you will see it. Ignore it, or read it: it shows which line of your notes backs each sentence. And the client write-up has two limits (180 words, then 150). The tighter one wins, and that is how we tested it.</p><h3>Shorter version for a custom instruction</h3><p>Not separately tested. Use it only if the full text will not fit. It keeps the same rules in about 1,400 characters, so we cannot say it behaves the same.</p></div><div class="cpbox"><div class="cpbar"><b>Short version</b> <span class="tag">Untested</span></div><pre class="cp"><code>You help an agency recruiter after a screening call. I will paste my call notes (names removed) and the role spec. Give me two things.
+
+1) A screen note with: current role and employer type; current and expected pay (currency and period); notice period; location and relocation; right to work; interview availability; reasons for moving; each must-have marked MET (shown: an example, number or detail from the call), CLAIMED ONLY (they said yes, no detail; a claim is never MET), NOT MET or NOT DISCUSSED, with the candidate&#x27;s own words in quotes beside every mark; risks and open questions; next step with a date.
+
+2) A client write-up of 150 words or fewer.
+
+Rules: Use only what is in the notes. Never guess. If something was not discussed, write &quot;Not discussed&quot;. Use corrected figures and flag contradictions. Never write that a candidate has not done something unless the notes say so; if unclear, write &quot;unclear&quot;. No feelings or praise words (keen, interested, strong). Do not promise anything I did not promise. Keep private requests, current pay (if I said so), age, health and family out of the client write-up. Write like a person, no stock phrases.
+
+Before you answer, inside &lt;scratch&gt;&lt;/scratch&gt; tags, match every sentence of the client write-up to a line of my notes and fix or delete any sentence with no support. Give the final answer after the closing tag.</code></pre></div></section>
+<section id="example"><h2>3. A worked example</h2><div class="prose"><p>Invented call. The role spec is shown in full. The notes are the ones we gave the tool, with nothing taken out. The output below is exactly what the tool returned on that run: we did not tidy it. (Candidate and companies are made up.)</p><h3>Role spec</h3><pre class="plain"><code>Role: Senior Account Manager
+Client: Zorblax Systems (B2B software for dairy farms, 90 staff)
+Location: Leeds, hybrid (3 days in office)
+Salary: GBP 52,000 to 58,000 base, plus up to 20% bonus
+
+You will own a book of about 60 customers worth GBP 1.4m a year, run the renewals and take over two large accounts from a colleague who is moving to the partnerships team.
+
+Must-haves:
+1. At least 3 years of B2B account management
+2. Owning renewals on a book of GBP 1m or more
+3. Salesforce
+4. Running quarterly business reviews with customers
+5. SaaS or subscription product experience
+
+The client wants an offer made by the end of October. Notice period no longer than 2 months. Right to work in the UK needed.</code></pre><h3>Call notes</h3><pre class="plain"><code>6/10 tue, call w Tamsin O-B (spoke 25 min)
+- AM at &quot;Tallow &amp; Crook&quot; (cloud payroll software, approx 200 ppl). 4 yrs there. 3 yrs before that in a recruitment firm doing acct mgmt
+- current: base 48k + bonus up to 12k. PLEASE dont tell client her current sal. says &quot;keep it between us&quot;
+- wants 55k base min
+- notice 1 month
+- Leeds, lives 20 min away. fine w 3 days office
+- UK citizen
+- looking because boss leaving, no promotion route, 2 yrs w no rise in title
+- renewals: has book of &quot;around 1.1m&quot; she said, says renewal rate &quot;good&quot; - no number
+- QBRs: &quot;yeah I do them for my top accounts&quot; - how many? didnt ask
+- Salesforce: &quot;used it loads&quot;  (no more detail)
+- SaaS yes obviously
+- HAS ANOTHER OFFER. from a different firm, 58k, they want answer by Fri 9 Oct. do not name the company to client she said (Wibblesworth Hydraulics, fyi, internal only)
+- free for interviews Thu/Fri mornings, anytime after 5
+- next: I send CV to Zorblax Wed 7th, she needs to hear by Friday 9th</code></pre><h3>What the tool returned</h3><pre class="plain"><code># 1. Screen note
+
+**Candidate:** Tamsin O-B (surname recorded only as &quot;O-B&quot;)
+**Call:** Tuesday 6/10, 25 minutes (no year in the notes)
+**Role:** Senior Account Manager, Zorblax Systems
+
+**Current role and employer type**
+AM at Tallow &amp; Crook, cloud payroll software, approx 200 people. 4 years there. Before that, 3 years at a recruitment firm doing account management.
+
+**Compensation**
+- **Current:** base 48k plus bonus up to 12k. Currency and period were not stated. Bonus actually earned: Not discussed.
+- **Expected:** 55k base minimum. Currency and period were not stated. Bonus expectation: Not discussed.
+- **Confidential:** she asked that her current salary is not shared with the client (&quot;keep it between us&quot;).
+
+**Notice period**
+1 month (client limit is 2 months).
+
+**Location and willingness to relocate**
+Leeds, lives 20 minutes away (the notes do not say from what). Fine with 3 days in the office. Relocation: Not discussed.
+
+**Right to work**
+UK citizen.
+
+**Availability for interviews**
+Thursday and Friday mornings, any time after 5.
+
+**Reasons for moving**
+Boss leaving, no promotion route, 2 years with no rise in title.
+
+**Must-have skills**
+
+| # | Must-have | Mark | Evidence from the call |
+|---|---|---|---|
+| 1 | At least 3 years of B2B account management | MET (shown) | Notes: &quot;AM at &#x27;Tallow &amp; Crook&#x27; (cloud payroll software, approx 200 ppl). 4 yrs there. 3 yrs before that in a recruitment firm doing acct mgmt&quot;. The notes never use the word &quot;B2B&quot; and do not record who her customers are. |
+| 2 | Owning renewals on a book of GBP 1m or more | MET (shown) on book size | &quot;around 1.1m&quot;. Renewal rate &quot;good&quot;, with no number. No currency stated. The notes do not say in plain words that she owns the renewals herself. |
+| 3 | Salesforce | CLAIMED ONLY | &quot;used it loads&quot;. No more detail. |
+| 4 | Running quarterly business reviews with customers | CLAIMED ONLY | &quot;yeah I do them for my top accounts&quot;. How many accounts was not asked. |
+| 5 | SaaS or subscription product experience | CLAIMED ONLY | Notes: &quot;SaaS yes obviously&quot;. It is unclear whether this was her answer or your own shorthand; if she was not asked, this mark should be NOT DISCUSSED. |
+
+**Contradictions**
+No figures contradict each other and none were corrected during the call.
+
+**Risks and open questions**
+- **Timing:** the other firm wants an answer by Fri 9 Oct, the CV goes to Zorblax on Wed 7th, and the client&#x27;s stated timeline is an offer by the end of October.
+- **&quot;Needs to hear by Friday 9th&quot;:** the notes do not say what she needs to hear (client response, interview date or offer).
+- **Other offer:** 58k from a different firm, which matches the top of Zorblax&#x27;s base range (GBP 52,000 to 58,000). The company is Wibblesworth Hydraulics, internal only; she asked that it is not named to the client.
+- **Salary:** her 55k minimum sits inside the client&#x27;s range, but currency and period need confirming for all her figures.
+- **Renewals:** get a renewal rate figure and confirm she owns the renewals on the &quot;around 1.1m&quot; book.
+- **QBRs:** how many accounts and how often is unclear.
+- **Salesforce:** what she uses it for was not discussed.
+- **B2B:** confirm for both the current role and the recruitment firm role.
+- **Book and handover:** number of customers in her current book and experience taking over accounts from a colleague were not discussed.
+- **Recruiter impression:** none recorded in the notes.
+
+**Next step**
+Send CV to Zorblax on Wed 7th. She needs to hear by Friday 9th.
+
+# 2. Client write-up (147 words)
+
+Tamsin O-B is an Account Manager at Tallow &amp; Crook (cloud payroll software, approximately 200 people) and has been there 4 years. Before that she spent 3 years at a recruitment firm doing account management.
+
+She said she has a book of &quot;around 1.1m&quot; and called her renewal rate &quot;good&quot;, without giving a figure. On quarterly business reviews: &quot;yeah I do them for my top accounts&quot;. On Salesforce: &quot;used it loads&quot;. No further detail on either.
+
+Reasons for moving: boss leaving, no promotion route, 2 years with no rise in title.
+
+UK citizen. In Leeds, lives 20 minutes away, fine with 3 days in the office. Notice 1 month. Wants 55k base minimum.
+
+She has another offer at 58k and that firm wants an answer by Friday 9 October; she needs to hear by then. Free for interviews Thursday or Friday mornings, or any time after 5.</code></pre><h3>What a careful reader should still check in this output</h3><p>Our own reading, not part of the tool's output.</p><ul><li>Must-have 2 is marked "shown" because of the "around 1.1m" figure. That is her number with no example, which is nearer "claimed only". The tool itself says it does not know she owns the renewals. This is the kind of slip the next two sections are about.</li><li>It kept the competing company's name out of the client write-up, kept her current pay out, and used the 55k and the Friday deadline. Those were the traps in this case.</li><li>The client write-up mentions the 58k offer. That was allowed here ("do not name the company"), but it is your call whether to tell a client.</li></ul></div></section>
+<section id="measured"><h2>4. What we measured</h2><div class="prose"><p>We wrote 16 call-note cases ourselves and ran each twice. The table is the 8 cases we did not use while tuning the prompt, 16 runs per column. "One line" means a one-sentence request: write a screen note and client write-up from these notes. "Strong" is a top Claude model. "Cheap" is Claude Haiku 4.5.</p></div><div class="table" role="region" tabindex="0" aria-label="Table, scrolls sideways"><table><thead><tr><th>Held-back cases</th><th>One line, strong</th><th>This tool, strong</th><th>One line, cheap</th><th>This tool, cheap</th></tr></thead><tbody><tr><td>Fields filled in correctly</td><td>97%</td><td>100%</td><td>80%</td><td>99%</td></tr><tr><td>&quot;Not discussed&quot; marked where the call was silent</td><td>75%</td><td>100%</td><td>12%</td><td>94%</td></tr><tr><td>Next step has the right date</td><td>69%</td><td>100%</td><td>75%</td><td>100%</td></tr><tr><td>Client write-up, average words</td><td>236</td><td>157</td><td>184</td><td>110</td></tr><tr><td>Runs with a claim the notes do not support</td><td>11 of 16 (model judge)</td><td>0 of 16 (our hand count)</td><td>16 of 16 (model judge)</td><td>12 of 16 (hand count and model judge agree)</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p><div class="prose"><p>Read the last row with care. The two judges differ, and a model judge over-flags about one line in five. It is a rough guide.</p><p>The leftover problem, in plain words: this tool can still overstate. In our audit of a plainer careful prompt on the strong model, 11 of 32 outputs (about a third) held a claim the notes did not fully support, and 5 of 32 could mislead a client. The final tool cut that to 0 of 16 on the held-back cases, but that is a gap of three runs, which is inside the noise, and the cheap model still slipped in 12 of 16. So: always read the "claimed only" and "not discussed" lines, and check the client write-up against your notes before it goes out.</p><p>Limits. We wrote the cases ourselves, so they are cleaner than real calls and name their own traps; every figure is probably flattered. We tested Claude models only. The test is small: one run is six points in a column of sixteen. We wrote the prompt, tuned it on the first 8 cases, and marked the results ourselves. This tool has not been through our full training method. It is a tested prompt with honest numbers, not a trained skill.</p></div></section>
+<section id="fails"><h2>5. Where it fails, and the check that catches it</h2><div class="prose"><p>Items 1 to 3 happened in our audit of the plainer prompt. The tool has rules aimed at them. On the cheap model it still invents things in 12 of 16 runs, so keep checking.</p><ol><li><b>Poor audio settled into a fact.</b> The transcript said "Oh, ledger lee, yes I've used ledger lee. Well I used something like it." The output wrote "She has not used Ledgerly." Check: search the notes for every "has not" or "no experience" in the output and find the line that says it.</li><li><b>A skill marked from an employer's name.</b> Notes: "at a retailer, Crumpet and Co. Small. In Leeds." and "Power something". The output marked retail data as met and made the candidate "based in Leeds" (it was the employer). Check: for every "shown" mark, find the example in the call. If there is only a company name or a "yes", it is "claimed only".</li><li><b>Promises made in your name.</b> Notes: "I said I'd email if something junior comes up". The client write-up said "I am continuing the search." Check: read the client write-up for every "I will" and "I am", and delete any you did not promise.</li><li>Seen in the tool itself (on development cases): it sometimes shares a salary floor with the client when you did not ask it to. Look for pay figures in the client text.</li></ol></div></section>
+<section id="faq"><h2>6. Questions people ask</h2><div class="prose"><h3>Does it work with Granola, Fathom or Teams transcripts?</h3><p>We have not tried them. We tested hand-written notes in fragments and plain text, not auto-transcripts. Granola, Fathom and Otter let you set your own template or prompt, so the text box should take it, but we have not checked each one. Teams transcripts are plain text and you can paste them in. Transcripts carry more names and more noise, so do the removal step carefully and expect more audio errors (see item 1 under where it fails).</p><h3>Can I push it into Bullhorn?</h3><p>We do not know. We have not built or tested any ATS link. The output is text with labelled parts. You can copy each part into the matching field yourself. Field names differ between ATS products, so check them.</p><h3>Is it safe to paste candidate data?</h3><p>Only after you take out the personal details (step 1 above), and only into a tool your agency allows. Removing a name lowers the risk and does not guarantee anonymity. We are not a law firm. Check your own agency&#x27;s policy and the ICO pages above.</p><h3>Will it replace my note-taker?</h3><p>No. A note-taker records the call. This turns your notes into the two documents. It does not hear audio.</p><h3>Do I have to use Claude?</h3><p>No. It is plain text. We only tested it on Claude models.</p></div></section>
+<section><h2>More</h2><div class="prose"><ul class="links"><li><a href="/free/">All the free skills</a></li><li><a href="/research/how-we-train-skills/#other-skills">What we measure on our other skills</a></li></ul></div></section>
 </div></main>
+<script>document.querySelectorAll('.rcp pre.cp').forEach(function(pre){if(!navigator.clipboard)return;var b=document.createElement('button');b.type='button';b.className='copybtn';b.textContent='Copy';b.onclick=function(){if(window.pspTrack)window.pspTrack('copy','recruiters-call-notes-to-screen-note');navigator.clipboard.writeText(pre.querySelector('code').textContent).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1500)})};pre.parentNode.querySelector('.cpbar').appendChild(b)});</script>
 <footer class="sitefoot">
   <div class="wrap">
     <div class="card fol" data-fol="foot"><p class="fol-t"><b>New free pages by email.</b> A few a month. Unsubscribe any time.</p><a class="btn btn-lime" data-nolo="1" data-go="follow/foot" href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=other&amp;utm_campaign=subscribe" rel="noopener">Follow</a><p class="fol-s">Handled by Gumroad. See our <a href="/privacy/">privacy page</a>.</p></div>
@@ -814,7 +997,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>
 </footer>
-<!-- go:start --><script>(function(){
+<script>(function(){if(!window.matchMedia||!matchMedia('(max-width:640px)').matches)return;document.querySelectorAll('.table').forEach(function(t){if(t.scrollWidth>t.clientWidth+2){var n=t.nextElementSibling;if(n&&n.className=='swipe')n.hidden=false}})})()</script><!-- go:start --><script>(function(){
 var D=document,H=D.documentElement,CID="a17e3abc-0819-4937-be25-c683543a2ac8",F=H.getAttribute('data-from')||'other',q=new URLSearchParams(location.search),S='direct',C='';
 function dnt(){try{return sessionStorage.getItem('doNotTrack')||localStorage.getItem('doNotTrack')}catch(e){return null}}
 try{['utm_source','utm_campaign'].forEach(function(k){var v=q.get(k);if(v)sessionStorage.setItem('psp_'+k,v)});S=sessionStorage.getItem('psp_utm_source')||'direct';C=sessionStorage.getItem('psp_utm_campaign')||''}catch(e){S=q.get('utm_source')||'direct';C=q.get('utm_campaign')||''}
