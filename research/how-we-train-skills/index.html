@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>How we train skills: a case study | Pro Skill Packs</title>
-<meta name="description" content="How we train a skill instead of writing it by hand: score it on tasks, change it in small steps, keep a change only if the score goes up.">
+<title>How we build and test our skills | Pro Skill Packs</title>
+<meta name="description" content="How we build and test our skills: try a flagship skill on real tasks, score it, change one thing, keep the change only if a held-back test improves.">
 
 <link rel="canonical" href="https://proskillpacks.github.io/research/how-we-train-skills/">
 <link rel="icon" href="/assets/avatar.png">
@@ -14,21 +14,21 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/research/how-we-train-skills/">
-<meta property="og:title" content="How we train skills: a case study">
-<meta property="og:description" content="How we train a skill instead of writing it by hand: score it on tasks, change it in small steps, keep a change only if the score goes up.">
+<meta property="og:title" content="How we build and test our skills">
+<meta property="og:description" content="How we build and test our skills: try a flagship skill on real tasks, score it, change one thing, keep the change only if a held-back test improves.">
 <meta property="og:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
-<meta name="twitter:title" content="How we train skills: a case study">
-<meta name="twitter:description" content="How we train a skill instead of writing it by hand: score it on tasks, change it in small steps, keep a change only if the score goes up.">
+<meta name="twitter:title" content="How we build and test our skills">
+<meta name="twitter:description" content="How we build and test our skills: try a flagship skill on real tasks, score it, change one thing, keep the change only if a held-back test improves.">
 <meta name="twitter:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "Article",
- "headline": "How we train skills: a case study",
- "description": "How we train a skill instead of writing it by hand: score it on tasks, change it in small steps, keep a change only if the score goes up. One skill so far, Agent Browse, in versions for two models, with the numbers, the edit that hurt and what it cost.",
+ "headline": "How we build and test our skills",
+ "description": "How we build and test our skills: try a flagship skill on real tasks, score it, change one thing, keep the change only if a held-back test improves. The nine steps, the real scores, the rule we had to reverse, and which products this covers so far.",
  "datePublished": "2026-10-05",
  "mainEntityOfPage": "https://proskillpacks.github.io/research/how-we-train-skills/",
  "publisher": {
@@ -336,7 +336,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
 .dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; min-height: 2.73rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; min-height: 2.9em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem; }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
@@ -599,6 +599,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .tr-badge { display: inline-block; background: var(--lime); color: var(--pine); font-weight: 800; font-size: 0.8rem; padding: 0.15rem 0.7rem; border-radius: 999px; }
 .trline { margin: 0 0 0.9rem; } .trline a { color: var(--lime); }
 .cs h2 { margin-top: 2.2rem; }
+.cs .nine, .cs .found { padding-left: 1.3rem; max-width: 46rem; } .cs .nine li, .cs .found li { margin: 0 0 0.5rem; }
 .cs .table { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; border: 1px solid var(--rule); border-radius: 10px; background: #fff; margin: 0 0 1.2rem; }
 .cs .table table { min-width: 30rem; margin: 0; }
 .cs .table + .tnote, .cs .swipe + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
@@ -709,6 +710,20 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .freepg .fpaid { margin: 0.9rem 0 1.8rem; }
 .freepg .fbundle { margin: 1.2rem 0 0; font-size: 0.95rem; max-width: 52rem; }
 
+.ogw { margin: 1rem 0 0.2rem; max-width: 44rem; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.35rem 1rem; }
+.ogw dt { margin: 0; color: var(--lime); font-weight: 800; font-size: 0.82rem; letter-spacing: 0.02em; text-transform: uppercase; padding-top: 0.15rem; }
+.ogw dd { margin: 0; color: var(--cream); font-size: 0.98rem; line-height: 1.4; }
+.ogline { margin: 0.7rem 0 0; font-size: 0.9rem; color: var(--mist); max-width: 44rem; }
+.ogline a { color: var(--lime); }
+.ogline + .ogline { margin-top: 0.25rem; }
+.ogmore summary { cursor: pointer; font-weight: 700; color: var(--pine); }
+.wkit .ogw dt, .wkit .ogline a { color: var(--pine); }
+.wkit .ogw dd { color: var(--ink); font-size: 0.93rem; }
+.wkit .ogline { color: var(--slate); }
+.methband { margin: 1.4rem 0 0; font-size: 1rem; color: var(--slate); }
+.methband a { font-weight: 700; color: var(--pine); }
+@media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -730,7 +745,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
   {
    "@type": "ListItem",
    "position": 3,
-   "name": "How we train skills: a case study",
+   "name": "How we build and test our skills",
    "item": "https://proskillpacks.github.io/research/how-we-train-skills/"
   }
  ]
@@ -745,21 +760,47 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
       <a class="name" href="/">PRO SKILL PACKS</a>
       <nav aria-label="Main"><a href="/">Home</a><a href="/categories/">Categories</a><a href="/free/">Free</a><a href="/guides/" aria-current="page">Guides</a><a href="/about/">About</a></nav>
     </div>
-    <p class="crumbs"><a href="/guides/">Guides</a> / How we train skills: a case study</p>
-    <h1>How we train skills: a case study</h1>
-    <p class="lead">One skill of ours, in versions for two models, was trained like a model: scored on tasks, changed in small steps, kept only when the score went up. The method, the numbers, and what went wrong. Our other skills are not trained this way yet.</p>
+    <p class="crumbs"><a href="/guides/">Guides</a> / How we build and test our skills</p>
+    <h1>How we build and test our skills</h1>
+    <p class="lead">Most prompts are written once and never tested. We treat a flagship skill like something to be trained: we try it on real tasks, score it, change one thing, and keep the change only if a held-back test improves. We publish the scores, including the attempts that failed.</p>
     
   </div>
 </header>
 <main><div class="wrap">
 <section><div class="prose cs">
-<p class="sub">Case study. Published 5 October 2026.</p>
+<p class="sub">Published 5 October 2026.</p>
 
-<h2>The problem with hand-written skills</h2>
+<h2>The loop, in nine steps</h2>
+<ol class="nine">
+<li><b>Problem definition.</b> Pick one job and say what a good result looks like.</li>
+<li><b>Representative tasks.</b> Collect real tasks for that job. Split them into train, selection and test.</li>
+<li><b>Baseline.</b> Score the model with no skill, so we know where it starts.</li>
+<li><b>Several candidate versions.</b> Write more than one version of the skill to compare.</li>
+<li><b>Automatic scoring.</b> A program checks every answer, so the score is not our opinion.</li>
+<li><b>Failure analysis.</b> Read the recordings of what went wrong and look for patterns that repeat.</li>
+<li><b>Optimisation.</b> Change a few things at a time, then run again.</li>
+<li><b>Regression test.</b> Check on tasks that did not shape the edit that nothing got worse.</li>
+<li><b>Final benchmark.</b> Run the held-back test tasks once, at the end, and publish the result.</li>
+</ol>
+
+<h2>What it found</h2>
+<ul class="found">
+<li><b>The Opus version of Agent Browse.</b> On 11 unseen tasks (2 runs each), every condition got 22 of 22 right. The trained skill used 29.4k tokens per task, against 34.2k with no skill and 109.4k with the tool vendor's own skill.</li>
+<li><b>The Qwen version.</b> On the selection split (8 tasks, 6 runs each) it got 48 of 48 correct at 36.4k tokens per task, against 21 of 24 at 68.7k with no skill. Its held-out test is not finished.</li>
+<li><b>A rule that had to be reversed.</b> "Never guess selectors on a page you have not seen" was rejected in Part 1, because Opus guessed right and the rule only added a step. Qwen guesses wrong often, and the accepted Qwen skill contains a version of it.</li>
+<li><b>Edit sets that looked sensible and were rejected.</b> Two of three edit sets read well and made things worse. Only a score on unseen tasks told us. For Qwen, three of four candidates were rejected.</li>
+</ul>
+<p>The tables, the edits and the attempts that failed are below.</p>
+
+<h2>Which products this covers</h2>
+<p>Today the full training loop has been run on our flagship browsing skill, Agent Browse, in two versions: one for Claude Opus and one for Qwen3.8-27B. It is where we apply the method first. Our other products are tested on real tasks before release: we run each one on real examples and read the result against what we gave it, and each product page says what its own tests were. The full loop comes to more flagships over time. The recordings, every candidate and a starter you can run are in <a href="https://github.com/proskillpacks/skillopt-agent-browse" rel="noopener">the public repo</a>.</p>
+
+<h2>The technical detail</h2>
+<h3>The problem with hand-written skills</h3>
 <p>Most skills are written by hand. Someone writes advice that sounds sensible, tries it on a few examples, and ships it.</p>
 <p>The trouble is that sensible advice can make results worse. Nothing tells you. The skill reads well, the three examples worked, and the extra cost or the new mistake never shows up. We wanted a way to find out.</p>
 
-<h2>Our method, in six plain steps</h2>
+<h3>How the loop ran in this case: six steps</h3>
 <p>We treat a skill like something you tune. The model stays the same. Only the skill file changes, and only when a score says it should. The method is a small version of Microsoft's SkillOpt paper (<a href="https://arxiv.org/abs/2605.23904" rel="noopener">arXiv 2605.23904</a>).</p>
 <div class="flow"><svg viewBox="0 0 440 380" role="img" aria-labelledby="flowt flowd" xmlns="http://www.w3.org/2000/svg"><title id="flowt">The training loop</title><desc id="flowd">Six steps in order: tasks, rollout, reflect, bounded edit, gate, keep or reject.</desc><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2c6b55"/></marker></defs><rect x="10" y="10" width="180" height="90" rx="14" fill="#0f3d2e"/><circle cx="34" cy="36" r="13" fill="#d9f26b"/><text x="34" y="41" text-anchor="middle" font-size="14" font-weight="800" fill="#0f3d2e">1</text><text x="56" y="42" font-size="17" font-weight="800" fill="#f6f3ea">Tasks</text><text x="26" y="78" font-size="14" fill="#b9cfc4">with a checker</text><rect x="250" y="10" width="180" height="90" rx="14" fill="#0f3d2e"/><circle cx="274" cy="36" r="13" fill="#d9f26b"/><text x="274" y="41" text-anchor="middle" font-size="14" font-weight="800" fill="#0f3d2e">2</text><text x="296" y="42" font-size="17" font-weight="800" fill="#f6f3ea">Rollout</text><text x="266" y="78" font-size="14" fill="#b9cfc4">model does them</text><rect x="10" y="140" width="180" height="90" rx="14" fill="#0f3d2e"/><circle cx="34" cy="166" r="13" fill="#d9f26b"/><text x="34" y="171" text-anchor="middle" font-size="14" font-weight="800" fill="#0f3d2e">3</text><text x="56" y="172" font-size="17" font-weight="800" fill="#f6f3ea">Reflect</text><text x="26" y="208" font-size="14" fill="#b9cfc4">read the failures</text><rect x="250" y="140" width="180" height="90" rx="14" fill="#0f3d2e"/><circle cx="274" cy="166" r="13" fill="#d9f26b"/><text x="274" y="171" text-anchor="middle" font-size="14" font-weight="800" fill="#0f3d2e">4</text><text x="296" y="172" font-size="17" font-weight="800" fill="#f6f3ea">Bounded edit</text><text x="266" y="208" font-size="14" fill="#b9cfc4">a few changes only</text><rect x="10" y="270" width="180" height="90" rx="14" fill="#0f3d2e"/><circle cx="34" cy="296" r="13" fill="#d9f26b"/><text x="34" y="301" text-anchor="middle" font-size="14" font-weight="800" fill="#0f3d2e">5</text><text x="56" y="302" font-size="17" font-weight="800" fill="#f6f3ea">Gate</text><text x="26" y="338" font-size="14" fill="#b9cfc4">score unseen tasks</text><rect x="250" y="270" width="180" height="90" rx="14" fill="#d9f26b"/><circle cx="274" cy="296" r="13" fill="#fff"/><text x="274" y="301" text-anchor="middle" font-size="14" font-weight="800" fill="#0f3d2e">6</text><text x="296" y="302" font-size="17" font-weight="800" fill="#0f3d2e">Keep or reject</text><text x="266" y="338" font-size="14" fill="#0f3d2e">keep only if higher</text><path d="M192 55H246" fill="none" stroke="#2c6b55" stroke-width="3" marker-end="url(#ar)"/><path d="M340 102V121H100V136" fill="none" stroke="#2c6b55" stroke-width="3" marker-end="url(#ar)"/><path d="M192 185H246" fill="none" stroke="#2c6b55" stroke-width="3" marker-end="url(#ar)"/><path d="M340 232V251H100V266" fill="none" stroke="#2c6b55" stroke-width="3" marker-end="url(#ar)"/><path d="M192 315H246" fill="none" stroke="#2c6b55" stroke-width="3" marker-end="url(#ar)"/><text x="220" y="372" font-size="13" fill="#56635c" text-anchor="middle">Kept? The next round starts from the new skill.</text></svg></div>
 <ol>

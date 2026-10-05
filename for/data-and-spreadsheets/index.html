@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Agent Skills for people who work in spreadsheets</title>
-<meta name="description" content="Skills for cleaning, checking and summarising spreadsheet data: messy CSVs, duplicates, odd dates and totals that need to match. Paste a sample or the shee">
+<meta name="description" content="Clean a messy CSV, check a file before you trust it, get a formula that works on your columns and summarise a survey. Paste a sample or the sheet and get s">
 
 <link rel="canonical" href="https://proskillpacks.github.io/for/data-and-spreadsheets/">
 <link rel="icon" href="/assets/avatar.png">
@@ -15,12 +15,12 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/for/data-and-spreadsheets/">
 <meta property="og:title" content="Agent Skills for people who work in spreadsheets">
-<meta property="og:description" content="Skills for cleaning, checking and summarising spreadsheet data: messy CSVs, duplicates, odd dates and totals that need to match. Paste a sample or the shee">
+<meta property="og:description" content="Clean a messy CSV, check a file before you trust it, get a formula that works on your columns and summarise a survey. Paste a sample or the sheet and get s">
 <meta property="og:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="Agent Skills for people who work in spreadsheets">
-<meta name="twitter:description" content="Skills for cleaning, checking and summarising spreadsheet data: messy CSVs, duplicates, odd dates and totals that need to match. Paste a sample or the shee">
+<meta name="twitter:description" content="Clean a messy CSV, check a file before you trust it, get a formula that works on your columns and summarise a survey. Paste a sample or the sheet and get s">
 <meta name="twitter:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="theme-color" content="#0f3d2e">
 <style>
@@ -322,7 +322,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
 .dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; min-height: 2.73rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; min-height: 2.9em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem; }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
@@ -585,6 +585,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .tr-badge { display: inline-block; background: var(--lime); color: var(--pine); font-weight: 800; font-size: 0.8rem; padding: 0.15rem 0.7rem; border-radius: 999px; }
 .trline { margin: 0 0 0.9rem; } .trline a { color: var(--lime); }
 .cs h2 { margin-top: 2.2rem; }
+.cs .nine, .cs .found { padding-left: 1.3rem; max-width: 46rem; } .cs .nine li, .cs .found li { margin: 0 0 0.5rem; }
 .cs .table { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; border: 1px solid var(--rule); border-radius: 10px; background: #fff; margin: 0 0 1.2rem; }
 .cs .table table { min-width: 30rem; margin: 0; }
 .cs .table + .tnote, .cs .swipe + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
@@ -695,6 +696,20 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .freepg .fpaid { margin: 0.9rem 0 1.8rem; }
 .freepg .fbundle { margin: 1.2rem 0 0; font-size: 0.95rem; max-width: 52rem; }
 
+.ogw { margin: 1rem 0 0.2rem; max-width: 44rem; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.35rem 1rem; }
+.ogw dt { margin: 0; color: var(--lime); font-weight: 800; font-size: 0.82rem; letter-spacing: 0.02em; text-transform: uppercase; padding-top: 0.15rem; }
+.ogw dd { margin: 0; color: var(--cream); font-size: 0.98rem; line-height: 1.4; }
+.ogline { margin: 0.7rem 0 0; font-size: 0.9rem; color: var(--mist); max-width: 44rem; }
+.ogline a { color: var(--lime); }
+.ogline + .ogline { margin-top: 0.25rem; }
+.ogmore summary { cursor: pointer; font-weight: 700; color: var(--pine); }
+.wkit .ogw dt, .wkit .ogline a { color: var(--pine); }
+.wkit .ogw dd { color: var(--ink); font-size: 0.93rem; }
+.wkit .ogline { color: var(--slate); }
+.methband { margin: 1.4rem 0 0; font-size: 1rem; color: var(--slate); }
+.methband a { font-weight: 700; color: var(--pine); }
+@media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -733,32 +748,32 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-developers-and-data">Developers and data</a> / Spreadsheets</p>
     <h1>Spreadsheets</h1>
-    <p class="lead">Skills for cleaning, checking and summarising spreadsheet data: messy CSVs, duplicates, odd dates and totals that need to match. Paste a sample or the sheet and get steps or cleaned data with a change log.</p>
+    <p class="lead">Clean a messy CSV, check a file before you trust it, get a formula that works on your columns and summarise a survey. Paste a sample or the sheet and get steps or cleaned data with a change log.</p>
     <p class="note-light">2 skills here: 1 paid and 1 free. Part of Developers and data, 10 skills in all. 3 arriving soon, not for sale yet.</p>
   </div>
 </header>
 <main><div class="wrap">
-<section><h2>Start free</h2><p class="sub">The quickest way to see what a skill does. Free, MIT licence.</p><div class="grid"><a class="dc feat" href="/skills/csv-profile-and-sanity-check/" data-id="csv-profile-and-sanity-check" data-role="data-and-spreadsheets" data-price="free" data-type="single" data-s="csv profile and sanity check give it a csv. get a read-only profile of every column, flags and questions for the data&#x27;s owner. free, mit-licensed. data and spreadsheets data-and-spreadsheets free skill a csv. it runs a small read-only script (python 3 standard library) and reports rows, columns, each column&#x27;s type, blanks, distinct values, ranges, duplicates, mixed formats, stray spaces, case variants and outliers, then lists questions to ask the data&#x27;s owner. without code execution it profiles a pasted sample and says so. analyse data check"><span class="feat-l">Start here</span><span class="dc-top"><span class="dc-cat">Developers and data</span><span class="dc-free">Free</span></span><h3>CSV Profile and Sanity Check</h3><p>Give it a CSV. Get a read-only profile of every column, flags and questions for the data&#x27;s owner. Free, MIT-licensed.</p><span class="dc-foot"><b>Free</b><span class="go">See details</span></span></a></div></section>
+<section><h2>Start free</h2><p class="sub">The quickest way to see what a skill does. Free, MIT licence.</p><div class="grid"><a class="dc feat" href="/skills/csv-profile-and-sanity-check/" data-id="csv-profile-and-sanity-check" data-role="data-and-spreadsheets" data-price="free" data-type="single" data-s="csv profile and sanity check check a csv file for problems before you rely on it. give it a csv. get a read-only profile of every column, flags and questions for the data&#x27;s owner. free, mit-licensed. data and spreadsheets data-and-spreadsheets free skill a csv. it runs a small read-only script (python 3 standard library) and reports rows, columns, each column&#x27;s type, blanks, distinct values, ranges, duplicates, mixed formats, stray spaces, case variants and outliers, then lists questions to ask the data&#x27;s owner. without code execution it profiles a pasted sample and says so. analyse data check"><span class="feat-l">Start here</span><span class="dc-top"><span class="dc-cat">Developers and data</span><span class="dc-free">Free</span></span><h3>CSV Profile and Sanity Check</h3><p>Check a CSV file for problems before you rely on it.</p><span class="dc-foot"><b>Free</b><span class="go">See details</span></span></a></div></section>
 <section id="free-and-paid"><h2>Free and paid</h2><p class="sub">Start with a free skill. The paid ones each do a different job.</p><div class="table"><table class="stack"><thead><tr><th>Skill</th><th>Price</th><th>You give it</th><th>You get</th></tr></thead><tbody><tr><td data-l="Skill"><a href="/skills/csv-profile-and-sanity-check/">CSV Profile and Sanity Check</a></td><td data-l="Price">Free</td><td data-l="You give it">A CSV.</td><td data-l="You get">It runs a small read-only script (Python 3 standard library) and reports rows, columns, each column&#x27;s type, blanks, distinct values, ranges, duplicates, mixed formats, stray spaces, case variants and outliers, then lists questions to ask the data&#x27;s owner. Without code execution it profiles a pasted sample and says so.</td></tr><tr><td data-l="Skill"><a href="/skills/spreadsheet-formula-and-cleanup/">Spreadsheet Formula and Cleanup</a></td><td data-l="Price">$9</td><td data-l="You give it">Describe the result you want, paste a few real rows and name your app.</td><td data-l="You get">A formula in your real columns, a test table on your sample, and the edge cases.</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p></section>
-<section><h2>Single skills</h2><p class="sub">Each paid skill on its own, with its own page and test results.</p><div class="grid"><a class="dc feat" href="/skills/spreadsheet-formula-and-cleanup/" data-id="spreadsheet-formula-and-cleanup" data-role="data-and-spreadsheets" data-price="paid" data-type="single" data-s="spreadsheet formula and cleanup describe the result you want and paste a few rows. get a formula that fits your columns, tested on your sample, with the edge cases listed. data and spreadsheets data-and-spreadsheets single skill describe the result you want, paste a few real rows and name your app. a formula in your real columns, a test table on your sample, and the edge cases. calculate clean data"><span class="feat-l">Start here</span><span class="dc-top"><span class="dc-cat">Developers and data</span></span><h3>Spreadsheet Formula and Cleanup</h3><p>Describe the result you want and paste a few rows. Get a formula that fits your columns, tested on your sample, with the edge cases listed.</p><span class="dc-foot"><span class="dcp"><s>$9</s> <b>$4.50</b></span><span class="go">See details</span></span></a></div></section>
+<section><h2>Single skills</h2><p class="sub">Each paid skill on its own, with its own page and test results.</p><div class="grid"><a class="dc feat" href="/skills/spreadsheet-formula-and-cleanup/" data-id="spreadsheet-formula-and-cleanup" data-role="data-and-spreadsheets" data-price="paid" data-type="single" data-s="spreadsheet formula and cleanup get a spreadsheet formula that works on your own columns. describe the result you want and paste a few rows. get a formula that fits your columns, tested on your sample, with the edge cases listed. data and spreadsheets data-and-spreadsheets single skill describe the result you want, paste a few real rows and name your app. a formula in your real columns, a test table on your sample, and the edge cases. calculate clean data"><span class="feat-l">Start here</span><span class="dc-top"><span class="dc-cat">Developers and data</span></span><h3>Spreadsheet Formula and Cleanup</h3><p>Get a spreadsheet formula that works on your own columns.</p><span class="dc-foot"><span class="dcp"><s>$9</s> <b>$4.50</b></span><span class="go">See details</span></span></a></div></section>
 <section><h2>Free prompts</h2><p class="sub">Paste into ChatGPT, Claude, Gemini or any chatbot. No install.</p><ul class="links"><li><a href="/prompts/csv-profile-and-sanity-check/">CSV sanity check prompt for ChatGPT or Claude</a></li></ul></section>
 <section><h2>Guides</h2><p class="sub">Short how-tos you can do by hand, without any skill.</p><ul class="links"><li><a href="/guides/clean-a-messy-csv-export/">How to clean a messy CSV export without losing data</a></li><li><a href="/guides/clean-messy-spreadsheet-with-ai/">How to clean a messy spreadsheet with an AI assistant</a></li><li><a href="/guides/how-to-check-a-csv-file-before-you-use-it/">How do I check a CSV file before I use it?</a></li><li><a href="/guides/summarise-survey-results-without-overclaiming/">How do I summarise survey results without overclaiming?</a></li></ul></section>
-<section><h2>Arriving soon</h2><p class="sub">Not for sale yet. Prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon" data-id="messy-csv-cleaner" data-role="data-and-spreadsheets" data-price="paid" data-type="single" data-s="messy csv cleaner give it a messy csv. it profiles the file, plans every change with a risk label, applies the safe fixes to a copy and proves the result with before and after counts. data and spreadsheets data-and-spreadsheets single skill clean data">
+<section><h2>Arriving soon</h2><p class="sub">Not for sale yet. Prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon" data-id="messy-csv-cleaner" data-role="data-and-spreadsheets" data-price="paid" data-type="single" data-s="messy csv cleaner clean a messy csv and prove what changed. give it a messy csv. it profiles the file, plans every change with a risk label, applies the safe fixes to a copy and proves the result with before and after counts. data and spreadsheets data-and-spreadsheets single skill clean data">
   <div class="chead" style="--h:86"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Spreadsheets</span></div><div class="body">
     <h3>Messy CSV Cleaner</h3>
-    <p>Give it a messy CSV. It profiles the file, plans every change with a risk label, applies the safe fixes to a copy and proves the result with before and after counts.</p>
+    <p>Clean a messy CSV and prove what changed.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/messy-csv-cleaner">Follow for release</a></div>
   </div>
-</div><div class="card soon" data-id="survey-results-summariser" data-role="data-and-spreadsheets" data-price="paid" data-type="single" data-s="survey results summariser paste a survey export. get counts with the base size, themed open-text answers with quotes, and a plain list of what the data cannot support. data and spreadsheets data-and-spreadsheets single skill analyse data report">
+</div><div class="card soon" data-id="survey-results-summariser" data-role="data-and-spreadsheets" data-price="paid" data-type="single" data-s="survey results summariser turn survey answers into a summary you can stand behind. paste a survey export. get counts with the base size, themed open-text answers with quotes, and a plain list of what the data cannot support. data and spreadsheets data-and-spreadsheets single skill analyse data report">
   <div class="chead" style="--h:86"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Spreadsheets</span></div><div class="body">
     <h3>Survey Results Summariser</h3>
-    <p>Paste a survey export. Get counts with the base size, themed open-text answers with quotes, and a plain list of what the data cannot support.</p>
+    <p>Turn survey answers into a summary you can stand behind.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/survey-results-summariser">Follow for release</a></div>
   </div>
-</div><div class="card soon" data-id="data-and-spreadsheets-pack" data-role="data-and-spreadsheets" data-price="paid" data-type="pack" data-s="data and spreadsheets pack four tools for tables: formulas, cleaning exports, summarising surveys and sorting a bank export into categories. $36 if bought one by one. data and spreadsheets data-and-spreadsheets pack ">
+</div><div class="card soon" data-id="data-and-spreadsheets-pack" data-role="data-and-spreadsheets" data-price="paid" data-type="pack" data-s="data and spreadsheets pack get work done in tables: formulas, clean exports, surveys, spending. four tools for tables: formulas, cleaning exports, summarising surveys and sorting a bank export into categories. $36 if bought one by one. data and spreadsheets data-and-spreadsheets pack ">
   <div class="chead" style="--h:86"><span class="ck pack">Pack</span><span class="ck soonk">Coming soon</span><span class="cc">Spreadsheets</span></div><div class="body">
     <h3>Data and Spreadsheets Pack</h3>
-    <p>Four tools for tables: formulas, cleaning exports, summarising surveys and sorting a bank export into categories. $36 if bought one by one.</p>
+    <p>Get work done in tables: formulas, clean exports, surveys, spending.</p>
     <div class="foot"><span class="price">$29</span><a class="go" href="/packs/data-and-spreadsheets-pack/">See what is inside</a> <a class="go" href="#notify" data-go="follow/data-and-spreadsheets-pack">Follow for release</a></div>
   </div>
 </div></div></section>

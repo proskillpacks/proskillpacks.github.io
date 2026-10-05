@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Content and Writing Pack: 4 skills, one download</title>
-<meta name="description" content="Four tools for writers and team leads: an edit that keeps your voice, a newsletter issue, a thread from a long post and meeting actions.">
+<meta name="description" content="Edit in your voice, write a newsletter, make a thread, list meeting actions. Coming soon.">
 <meta name="robots" content="noindex">
 
 <link rel="canonical" href="https://proskillpacks.github.io/packs/content-and-writing-pack/">
@@ -16,8 +16,8 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/packs/content-and-writing-pack/">
 <meta property="og:title" content="Content and Writing Pack: 4 skills, one download">
-<meta property="og:description" content="Four tools for writers and team leads: an edit that keeps your voice, a newsletter issue, a thread from a long post and meeting actions.">
-<meta property="og:image" content="https://proskillpacks.github.io/assets/og/d4b0d12dcb2c.png">
+<meta property="og:description" content="Edit in your voice, write a newsletter, make a thread, list meeting actions. Coming soon.">
+<meta property="og:image" content="https://proskillpacks.github.io/assets/og/f3023afee9b8.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Content and Writing Pack: Pro Skill Packs">
@@ -25,8 +25,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="Content and Writing Pack: 4 skills, one download">
-<meta name="twitter:description" content="Four tools for writers and team leads: an edit that keeps your voice, a newsletter issue, a thread from a long post and meeting actions.">
-<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/d4b0d12dcb2c.png">
+<meta name="twitter:description" content="Edit in your voice, write a newsletter, make a thread, list meeting actions. Coming soon.">
+<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/f3023afee9b8.png">
 <meta name="theme-color" content="#0f3d2e">
 <style>
 :root { --pine: #0f3d2e; --deep: #0b241c; --moss: #155540; --sage: #2c6b55; --lime: #d9f26b; --cream: #f6f3ea; --mist: #b9cfc4; --paper: #fbfaf7; --ink: #15201b; --slate: #56635c; --rule: #dfe5e0; }
@@ -327,7 +327,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
 .dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; min-height: 2.73rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; min-height: 2.9em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem; }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
@@ -590,6 +590,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .tr-badge { display: inline-block; background: var(--lime); color: var(--pine); font-weight: 800; font-size: 0.8rem; padding: 0.15rem 0.7rem; border-radius: 999px; }
 .trline { margin: 0 0 0.9rem; } .trline a { color: var(--lime); }
 .cs h2 { margin-top: 2.2rem; }
+.cs .nine, .cs .found { padding-left: 1.3rem; max-width: 46rem; } .cs .nine li, .cs .found li { margin: 0 0 0.5rem; }
 .cs .table { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; border: 1px solid var(--rule); border-radius: 10px; background: #fff; margin: 0 0 1.2rem; }
 .cs .table table { min-width: 30rem; margin: 0; }
 .cs .table + .tnote, .cs .swipe + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
@@ -700,6 +701,20 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .freepg .fpaid { margin: 0.9rem 0 1.8rem; }
 .freepg .fbundle { margin: 1.2rem 0 0; font-size: 0.95rem; max-width: 52rem; }
 
+.ogw { margin: 1rem 0 0.2rem; max-width: 44rem; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.35rem 1rem; }
+.ogw dt { margin: 0; color: var(--lime); font-weight: 800; font-size: 0.82rem; letter-spacing: 0.02em; text-transform: uppercase; padding-top: 0.15rem; }
+.ogw dd { margin: 0; color: var(--cream); font-size: 0.98rem; line-height: 1.4; }
+.ogline { margin: 0.7rem 0 0; font-size: 0.9rem; color: var(--mist); max-width: 44rem; }
+.ogline a { color: var(--lime); }
+.ogline + .ogline { margin-top: 0.25rem; }
+.ogmore summary { cursor: pointer; font-weight: 700; color: var(--pine); }
+.wkit .ogw dt, .wkit .ogline a { color: var(--pine); }
+.wkit .ogw dd { color: var(--ink); font-size: 0.93rem; }
+.wkit .ogline { color: var(--slate); }
+.methband { margin: 1.4rem 0 0; font-size: 1rem; color: var(--slate); }
+.methband a { font-weight: 700; color: var(--pine); }
+@media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -738,11 +753,11 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a> / Content and Writing Pack</p>
     <h1>Content and Writing Pack</h1>
-    <p class="lead">Four tools for writers and team leads: an edit that keeps your voice, a newsletter issue, a thread from a long post and meeting actions. $36 if bought one by one.</p>
+    <p class="lead">Edit in your voice, write a newsletter, make a thread, list meeting actions.</p>
     <p class="note-light">Coming soon. Not for sale yet.</p>
   </div>
 </header>
-<main><div class="wrap"><section><h2>What will be in it</h2><p class="sub">Bought one by one, the 4 skills cost $36. The pack is $29, so you save $7.</p><ul class="links"><li><a href="/skills/voice-matched-draft-editor/">Voice-Matched Draft Editor</a>, $9. Give it two or three things you wrote and a draft. It edits the draft to sound like you, keeps every fact, and flags claims it cannot support.</li><li><strong>Newsletter Issue from Notes</strong> (arriving soon), $9. Paste your notes and links. You get one newsletter issue with subject lines, sections and a closing, every fact traced to your notes.</li><li><strong>Long Post to Thread and Summary</strong> (arriving soon), $9. Paste a long post. You get a summary, takeaways, a thread with every length counted, a network post and exact pull quotes, nothing added.</li><li><strong>Meeting Notes to Decisions and Actions</strong> (arriving soon), $9. Paste meeting notes or minutes. You get the decisions, an action table with owner and due date, and the open questions, with a quote from the notes behind every line.</li></ul></section>
+<main><div class="wrap"><section><h2>What will be in it</h2><p class="sub">Bought one by one, the 4 skills cost $36. The pack is $29, so you save $7.</p><ul class="links"><li><a href="/skills/voice-matched-draft-editor/">Voice-Matched Draft Editor</a>, $9. Edit a draft so it sounds like you wrote it.</li><li><strong>Newsletter Issue from Notes</strong> (arriving soon), $9. Turn your weekly notes and links into a newsletter issue.</li><li><strong>Long Post to Thread and Summary</strong> (arriving soon), $9. Turn a long post into a summary, a thread and pull quotes.</li><li><strong>Meeting Notes to Decisions and Actions</strong> (arriving soon), $9. Turn meeting notes into decisions, actions and open questions.</li></ul></section>
 <section class="signup" id="notify">
   <h2>Follow for new free skills</h2>
   <p>New free skills and guides appear in all of these as we publish them. Pick whichever you already use.</p>

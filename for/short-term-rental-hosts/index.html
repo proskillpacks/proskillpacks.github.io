@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Agent Skills for short-term rental hosts | Pro Skill Packs</title>
-<meta name="description" content="Skills for hosts who run 1 to 10 listings themselves: listing copy, a listing audit, replies to guest reviews, house rules and a house manual, photo descri">
+<meta name="description" content="Reply to a bad guest review, rewrite your listing, write calm house rules, describe your photos and see what guests keep raising. For hosts who run 1 to 10">
 
 <link rel="canonical" href="https://proskillpacks.github.io/for/short-term-rental-hosts/">
 <link rel="icon" href="/assets/avatar.png">
@@ -15,12 +15,12 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/for/short-term-rental-hosts/">
 <meta property="og:title" content="Agent Skills for short-term rental hosts">
-<meta property="og:description" content="Skills for hosts who run 1 to 10 listings themselves: listing copy, a listing audit, replies to guest reviews, house rules and a house manual, photo descri">
+<meta property="og:description" content="Reply to a bad guest review, rewrite your listing, write calm house rules, describe your photos and see what guests keep raising. For hosts who run 1 to 10">
 <meta property="og:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="Agent Skills for short-term rental hosts">
-<meta name="twitter:description" content="Skills for hosts who run 1 to 10 listings themselves: listing copy, a listing audit, replies to guest reviews, house rules and a house manual, photo descri">
+<meta name="twitter:description" content="Reply to a bad guest review, rewrite your listing, write calm house rules, describe your photos and see what guests keep raising. For hosts who run 1 to 10">
 <meta name="twitter:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="theme-color" content="#0f3d2e">
 <style>
@@ -322,7 +322,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
 .dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; min-height: 2.73rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; min-height: 2.9em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem; }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
@@ -585,6 +585,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .tr-badge { display: inline-block; background: var(--lime); color: var(--pine); font-weight: 800; font-size: 0.8rem; padding: 0.15rem 0.7rem; border-radius: 999px; }
 .trline { margin: 0 0 0.9rem; } .trline a { color: var(--lime); }
 .cs h2 { margin-top: 2.2rem; }
+.cs .nine, .cs .found { padding-left: 1.3rem; max-width: 46rem; } .cs .nine li, .cs .found li { margin: 0 0 0.5rem; }
 .cs .table { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; border: 1px solid var(--rule); border-radius: 10px; background: #fff; margin: 0 0 1.2rem; }
 .cs .table table { min-width: 30rem; margin: 0; }
 .cs .table + .tnote, .cs .swipe + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
@@ -695,6 +696,20 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .freepg .fpaid { margin: 0.9rem 0 1.8rem; }
 .freepg .fbundle { margin: 1.2rem 0 0; font-size: 0.95rem; max-width: 52rem; }
 
+.ogw { margin: 1rem 0 0.2rem; max-width: 44rem; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.35rem 1rem; }
+.ogw dt { margin: 0; color: var(--lime); font-weight: 800; font-size: 0.82rem; letter-spacing: 0.02em; text-transform: uppercase; padding-top: 0.15rem; }
+.ogw dd { margin: 0; color: var(--cream); font-size: 0.98rem; line-height: 1.4; }
+.ogline { margin: 0.7rem 0 0; font-size: 0.9rem; color: var(--mist); max-width: 44rem; }
+.ogline a { color: var(--lime); }
+.ogline + .ogline { margin-top: 0.25rem; }
+.ogmore summary { cursor: pointer; font-weight: 700; color: var(--pine); }
+.wkit .ogw dt, .wkit .ogline a { color: var(--pine); }
+.wkit .ogw dd { color: var(--ink); font-size: 0.93rem; }
+.wkit .ogline { color: var(--slate); }
+.methband { margin: 1.4rem 0 0; font-size: 1rem; color: var(--slate); }
+.methband a { font-weight: 700; color: var(--pine); }
+@media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -733,43 +748,43 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-online-stores">Online stores</a> / Rental hosts</p>
     <h1>Rental hosts</h1>
-    <p class="lead">Skills for hosts who run 1 to 10 listings themselves: listing copy, a listing audit, replies to guest reviews, house rules and a house manual, photo descriptions and what your reviews keep saying. Paste your listing text, reviews or rules, or give it your photos, and get text you can paste into your listing. The skills add no facts that your text, reviews or photos don&#x27;t show.</p>
+    <p class="lead">Reply to a bad guest review, rewrite your listing, write calm house rules, describe your photos and see what guests keep raising. For hosts who run 1 to 10 listings themselves. Paste your listing text, reviews or rules, or give it your photos.</p>
     <p class="note-light">2 skills here: 2 paid. Part of Online stores, 15 skills in all. 5 arriving soon, not for sale yet.</p>
   </div>
 </header>
 <main><div class="wrap">
 <section><h2>Free examples to copy</h2><p class="sub">Messages to guests, replies to reviews, house rules, a house manual, a sign. Copy them, free.</p><p><a class="btn btn-line" href="/hosts/">Words for holiday let and rental hosts</a></p></section>
 
-<section><h2>The pack</h2><p class="sub">Every paid skill for this role in one download.</p><div class="grid"><a class="dc feat" href="/packs/host-ops-pack/" data-id="host-ops-pack" data-role="short-term-rental-hosts" data-price="paid" data-type="pack" data-s="host ops pack six skills for the listing, review and house-rules jobs of hosts who run their own listings. short-term rental hosts short-term-rental-hosts pack listing rewriter"><span class="feat-l">Start here</span><span class="dc-top"><span class="dc-cat">Online stores</span></span><h3>Host Ops Pack</h3><p>Six skills for the listing, review and house-rules jobs of hosts who run their own listings.</p><span class="dc-foot"><span class="dcp"><s>$29</s> <b>$14.50</b></span><span class="go">See details</span></span></a></div></section>
-<section><h2>Single skills</h2><p class="sub">Each paid skill on its own, with its own page and test results.</p><div class="grid"><a class="dc feat" href="/skills/listing-rewriter/" data-id="listing-rewriter" data-role="short-term-rental-hosts" data-price="paid" data-type="single" data-s="listing rewriter three titles under 50 characters and a description within 500, built only from your own facts. short-term rental hosts short-term-rental-hosts single skill paste your listing title, description and amenities. three titles under 50 characters, a description within 500 characters and the section fields, built only from your own facts, plus a list of anything to confirm. write copy"><span class="feat-l">Start here</span><span class="dc-top"><span class="dc-cat">Online stores</span></span><h3>Listing Rewriter</h3><p>Three titles under 50 characters and a description within 500, built only from your own facts.</p><span class="dc-foot"><span class="dcp"><s>$5</s> <b>$2.50</b></span><span class="go">See details</span></span></a></div></section>
-<section><h2>Arriving soon</h2><p class="sub">Not for sale yet. Prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon" data-id="guest-review-reply" data-role="short-term-rental-hosts" data-price="paid" data-type="single" data-s="guest review reply a public reply that is true as it stands, a private to-do list, and a flag on reviews that need your judgement. short-term rental hosts short-term-rental-hosts single skill reply to customers">
+<section><h2>The pack</h2><p class="sub">Every paid skill for this role in one download.</p><div class="grid"><a class="dc feat" href="/packs/host-ops-pack/" data-id="host-ops-pack" data-role="short-term-rental-hosts" data-price="paid" data-type="pack" data-s="host ops pack run your holiday-let listing: audit, rewrite, reviews and house rules. six skills for the listing, review and house-rules jobs of hosts who run their own listings. short-term rental hosts short-term-rental-hosts pack listing rewriter"><span class="feat-l">Start here</span><span class="dc-top"><span class="dc-cat">Online stores</span></span><h3>Host Ops Pack</h3><p>Run your holiday-let listing: audit, rewrite, reviews and house rules.</p><span class="dc-foot"><span class="dcp"><s>$29</s> <b>$14.50</b></span><span class="go">See details</span></span></a></div></section>
+<section><h2>Single skills</h2><p class="sub">Each paid skill on its own, with its own page and test results.</p><div class="grid"><a class="dc feat" href="/skills/listing-rewriter/" data-id="listing-rewriter" data-role="short-term-rental-hosts" data-price="paid" data-type="single" data-s="listing rewriter rewrite your holiday-let listing title and description. three titles under 50 characters and a description within 500, built only from your own facts. short-term rental hosts short-term-rental-hosts single skill paste your listing title, description and amenities. three titles under 50 characters, a description within 500 characters and the section fields, built only from your own facts, plus a list of anything to confirm. write copy"><span class="feat-l">Start here</span><span class="dc-top"><span class="dc-cat">Online stores</span></span><h3>Listing Rewriter</h3><p>Rewrite your holiday-let listing title and description.</p><span class="dc-foot"><span class="dcp"><s>$5</s> <b>$2.50</b></span><span class="go">See details</span></span></a></div></section>
+<section><h2>Arriving soon</h2><p class="sub">Not for sale yet. Prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon" data-id="guest-review-reply" data-role="short-term-rental-hosts" data-price="paid" data-type="single" data-s="guest review reply reply to a guest&#x27;s bad review without arguing. a public reply that is true as it stands, a private to-do list, and a flag on reviews that need your judgement. short-term rental hosts short-term-rental-hosts single skill reply to customers">
   <div class="chead" style="--h:298"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Rental hosts</span></div><div class="body">
     <h3>Guest Review Reply</h3>
-    <p>A public reply that is true as it stands, a private to-do list, and a flag on reviews that need your judgement.</p>
+    <p>Reply to a guest&#x27;s bad review without arguing.</p>
     <div class="foot"><span class="price">$5</span><a class="go" href="#notify" data-go="follow/guest-review-reply">Follow for release</a></div>
   </div>
-</div><div class="card soon" data-id="house-rules-and-guidebook" data-role="short-term-rental-hosts" data-price="paid" data-type="single" data-s="house rules and guidebook calm house rules and a house manual built only from what you stated, with a list of what is missing. short-term rental hosts short-term-rental-hosts single skill write copy">
+</div><div class="card soon" data-id="house-rules-and-guidebook" data-role="short-term-rental-hosts" data-price="paid" data-type="single" data-s="house rules and guidebook write calm house rules and a house manual for your holiday let. calm house rules and a house manual built only from what you stated, with a list of what is missing. short-term rental hosts short-term-rental-hosts single skill write copy">
   <div class="chead" style="--h:298"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Rental hosts</span></div><div class="body">
     <h3>House Rules and Guidebook</h3>
-    <p>Calm house rules and a house manual built only from what you stated, with a list of what is missing.</p>
+    <p>Write calm house rules and a house manual for your holiday let.</p>
     <div class="foot"><span class="price">$5</span><a class="go" href="#notify" data-go="follow/house-rules-and-guidebook">Follow for release</a></div>
   </div>
-</div><div class="card soon" data-id="listing-audit" data-role="short-term-rental-hosts" data-price="paid" data-type="single" data-s="listing audit a score out of 100 from 16 checks against airbnb&#x27;s published guidance, with a fix list in order of points lost. short-term rental hosts short-term-rental-hosts single skill audit and fix">
+</div><div class="card soon" data-id="listing-audit" data-role="short-term-rental-hosts" data-price="paid" data-type="single" data-s="listing audit score your holiday-let listing against airbnb&#x27;s guidance and fix it. a score out of 100 from 16 checks against airbnb&#x27;s published guidance, with a fix list in order of points lost. short-term rental hosts short-term-rental-hosts single skill audit and fix">
   <div class="chead" style="--h:298"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Rental hosts</span></div><div class="body">
     <h3>Listing Audit</h3>
-    <p>A score out of 100 from 16 checks against Airbnb&#x27;s published guidance, with a fix list in order of points lost.</p>
+    <p>Score your holiday-let listing against Airbnb&#x27;s guidance and fix it.</p>
     <div class="foot"><span class="price">$5</span><a class="go" href="#notify" data-go="follow/listing-audit">Follow for release</a></div>
   </div>
-</div><div class="card soon" data-id="review-insights" data-role="short-term-rental-hosts" data-price="paid" data-type="single" data-s="review insights what guests keep raising, good and bad, with checked counts, exact quotes and a fix list. short-term rental hosts short-term-rental-hosts single skill audit and fix">
+</div><div class="card soon" data-id="review-insights" data-role="short-term-rental-hosts" data-price="paid" data-type="single" data-s="review insights see what guests keep raising in your reviews, good and bad. what guests keep raising, good and bad, with checked counts, exact quotes and a fix list. short-term rental hosts short-term-rental-hosts single skill audit and fix">
   <div class="chead" style="--h:298"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Rental hosts</span></div><div class="body">
     <h3>Review Insights</h3>
-    <p>What guests keep raising, good and bad, with checked counts, exact quotes and a fix list.</p>
+    <p>See what guests keep raising in your reviews, good and bad.</p>
     <div class="foot"><span class="price">$5</span><a class="go" href="#notify" data-go="follow/review-insights">Follow for release</a></div>
   </div>
-</div><div class="card soon" data-id="photo-description-writer" data-role="short-term-rental-hosts" data-price="paid" data-type="single" data-s="photo description writer a visual description for each listing photo, important details first, under 250 characters. short-term rental hosts short-term-rental-hosts single skill write copy">
+</div><div class="card soon" data-id="photo-description-writer" data-role="short-term-rental-hosts" data-price="paid" data-type="single" data-s="photo description writer write a description for each listing photo, with the key details first. a visual description for each listing photo, important details first, under 250 characters. short-term rental hosts short-term-rental-hosts single skill write copy">
   <div class="chead" style="--h:298"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Rental hosts</span></div><div class="body">
     <h3>Photo Description Writer</h3>
-    <p>A visual description for each listing photo, important details first, under 250 characters.</p>
+    <p>Write a description for each listing photo, with the key details first.</p>
     <div class="foot"><span class="price">$5</span><a class="go" href="#notify" data-go="follow/photo-description-writer">Follow for release</a></div>
   </div>
 </div></div></section>

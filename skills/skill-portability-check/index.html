@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Skill Portability Check: skill + paste-in prompt</title>
-<meta name="description" content="A free checker for SKILL.md folders: strict-YAML trap, portable keys, vendor tool names, missing fallbacks, broken links.">
+<meta name="description" content="Check that a skill file will load in other AI assistants. For developers who write or share skill files. Tested on real examples before release.">
 
 <link rel="canonical" href="https://proskillpacks.github.io/skills/skill-portability-check/">
 <link rel="icon" href="/assets/avatar.png">
@@ -15,8 +15,8 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/skills/skill-portability-check/">
 <meta property="og:title" content="Skill Portability Check: skill + paste-in prompt">
-<meta property="og:description" content="A free checker for SKILL.md folders: strict-YAML trap, portable keys, vendor tool names, missing fallbacks, broken links.">
-<meta property="og:image" content="https://proskillpacks.github.io/assets/og/47133ed2084c.png">
+<meta property="og:description" content="Check that a skill file will load in other AI assistants. For developers who write or share skill files. Tested on real examples before release.">
+<meta property="og:image" content="https://proskillpacks.github.io/assets/og/483e3298ba58.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Skill Portability Check: Pro Skill Packs">
@@ -24,15 +24,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="Skill Portability Check: skill + paste-in prompt">
-<meta name="twitter:description" content="A free checker for SKILL.md folders: strict-YAML trap, portable keys, vendor tool names, missing fallbacks, broken links.">
-<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/47133ed2084c.png">
+<meta name="twitter:description" content="Check that a skill file will load in other AI assistants. For developers who write or share skill files. Tested on real examples before release.">
+<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/483e3298ba58.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "Product",
  "name": "Skill Portability Check",
- "description": "A free checker for SKILL.md folders: strict-YAML trap, portable keys, vendor tool names, missing fallbacks, broken links. One Python file, exit code for CI.",
+ "description": "Check that a skill file will load in other AI assistants.",
  "url": "https://proskillpacks.github.io/skills/skill-portability-check/",
  "brand": {
   "@type": "Brand",
@@ -346,7 +346,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
 .dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; min-height: 2.73rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; min-height: 2.9em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem; }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
@@ -609,6 +609,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .tr-badge { display: inline-block; background: var(--lime); color: var(--pine); font-weight: 800; font-size: 0.8rem; padding: 0.15rem 0.7rem; border-radius: 999px; }
 .trline { margin: 0 0 0.9rem; } .trline a { color: var(--lime); }
 .cs h2 { margin-top: 2.2rem; }
+.cs .nine, .cs .found { padding-left: 1.3rem; max-width: 46rem; } .cs .nine li, .cs .found li { margin: 0 0 0.5rem; }
 .cs .table { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; border: 1px solid var(--rule); border-radius: 10px; background: #fff; margin: 0 0 1.2rem; }
 .cs .table table { min-width: 30rem; margin: 0; }
 .cs .table + .tnote, .cs .swipe + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
@@ -719,6 +720,20 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .freepg .fpaid { margin: 0.9rem 0 1.8rem; }
 .freepg .fbundle { margin: 1.2rem 0 0; font-size: 0.95rem; max-width: 52rem; }
 
+.ogw { margin: 1rem 0 0.2rem; max-width: 44rem; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.35rem 1rem; }
+.ogw dt { margin: 0; color: var(--lime); font-weight: 800; font-size: 0.82rem; letter-spacing: 0.02em; text-transform: uppercase; padding-top: 0.15rem; }
+.ogw dd { margin: 0; color: var(--cream); font-size: 0.98rem; line-height: 1.4; }
+.ogline { margin: 0.7rem 0 0; font-size: 0.9rem; color: var(--mist); max-width: 44rem; }
+.ogline a { color: var(--lime); }
+.ogline + .ogline { margin-top: 0.25rem; }
+.ogmore summary { cursor: pointer; font-weight: 700; color: var(--pine); }
+.wkit .ogw dt, .wkit .ogline a { color: var(--pine); }
+.wkit .ogw dd { color: var(--ink); font-size: 0.93rem; }
+.wkit .ogline { color: var(--slate); }
+.methband { margin: 1.4rem 0 0; font-size: 1rem; color: var(--slate); }
+.methband a { font-weight: 700; color: var(--pine); }
+@media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
+
 </style>
 <script defer src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
@@ -758,15 +773,15 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-developers-and-data">Developers and data</a> / Skill Portability Check</p>
     <h1>Skill Portability Check</h1>
-    <p class="lead">A free checker for SKILL.md folders: strict-YAML trap, portable keys, vendor tool names, missing fallbacks, broken links. One Python file, exit code for CI.</p>
-    <div class="cta"><a class="btn btn-lime" href="/go/repo/skill-portability-check/?from=skill">Get the files from GitHub (for developers)</a></div><p class="note-light">Free, MIT licence, hosted on GitHub. Install the whole free set with npx skills add proskillpacks/skills, or copy this skill&#x27;s folder.</p>
+    <p class="lead">Check that a skill file will load in other AI assistants.</p>
+    <dl class="ogw"><dt>Who it is for</dt><dd>Developers who write or share skill files.</dd><dt>What you give it</dt><dd>A skill folder or a repository of skills.</dd><dt>What you get back</dt><dd>A table of errors and warnings per skill, with the exact fixes.</dd></dl><div class="cta"><a class="btn btn-lime" href="/go/repo/skill-portability-check/?from=skill">Get the files from GitHub (for developers)</a></div><p class="note-light">Free, MIT licence, hosted on GitHub. Install the whole free set with npx skills add proskillpacks/skills, or copy this skill&#x27;s folder.</p><p class="ogline">It is a text file you add to an AI assistant, or paste into a chat.</p>
   </div>
 </header>
 <main><div class="wrap">
-<section><div class="two">
+<section><details class="ogmore"><summary>More detail on what goes in and what comes out</summary><div class="two">
   <div class="box"><b>What you give it</b><p>Point it at a skill folder or a repository of skills.</p></div>
   <div class="box"><b>What you get</b><p>A per-skill table of errors and warnings, and the exact fixes.</p></div>
-</div></section>
+</div></details></section>
 <section><h2>Before and after</h2><p class="sub">Real public data, anonymised. Taken from the skill&#x27;s README.</p><div class="prose"><p>Our own public skills repository on 2026-10-04: it had grown to 15 skills, and a new one was skipped by <code>npx skills add proskillpacks/skills --list</code> with a YAML error. The same rule, run over our whole tree of 57 skills, found 7 descriptions with an unquoted colon (now fixed), and the checker&#x27;s other warnings led us to add fallback sentences and remove a vendor tool name.</p>
 <blockquote><p><strong>After (skill output, excerpt):</strong><br>$ python3 scripts/skill_check.py proskillpacks-skills/skills --quiet<br>skill                           errors  warnings  lines  scripts<br>accessibility-quick-audit            0         0     39  -<br>changelog-from-commits               0         0     39  -<br>readme-first-run-check               0         0     39  -<br>agent-ready-quick-check              0         0     64  Python<br>late-payment-chaser-uk               0         0    109  Python<br>...<br>15 skill(s): 0 error(s), 0 warning(s)</p>
 <p>$ python3 scripts/skill_check.py examples/bad-yaml-colon/SKILL.md<br>ERROR  frontmatter: line 3: description: unquoted &#x27;: &#x27; inside the value (strict YAML reads it as a nested mapping). Quote the value or reword</p></blockquote></div></section>
@@ -777,7 +792,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <section><h2>Works with</h2><div class="prose"><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. Python 3 (standard library only). Without a shell, the skill checks a pasted SKILL.md by reading.</p></div></section>
 <section><h2>For people who use AI assistants</h2><div class="prose"><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>skill-portability-check</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/developers/skill-portability-check).</li><li>Put the <code>skill-portability-check</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Check my skills repo for portability problems.&quot;. The skill loads by itself.</li></ol></div></section>
 <section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">Free</span><a class="btn btn-pine" href="/go/repo/skill-portability-check/?from=skill">Get the files from GitHub (for developers)</a></div><p>MIT licence. Use it, change it, share it.</p></div></section>
-<section><h2>Related</h2><ul class="links"><li>Free guide to do it by hand: <a href="/guides/how-to-check-that-your-skill-md-file-will-load-in-other-tools/">How do I check that my SKILL.md file will load in other tools?</a></li><li>Free text to paste into ChatGPT or any chatbot: <a href="/prompts/skill-portability-check/">Check a SKILL.md for portability problems: free prompt</a></li><li><a href="/skills/agent-browse/">Agent Browse</a> (Free): A browsing skill for the agent-browser CLI, trained against scored tasks instead of hand-written. About 14% cheaper per task than no skill on 11 unseen tasks, same accuracy.</li><li><a href="/skills/agent-browse-qwen/">Agent Browse for local models (Qwen)</a> (Free): Agent Browse tuned for Qwen3.8-27B and similar local models that guess selectors and URLs. On the selection split: 48 of 48 correct, against 21 of 24 with no skill. Held-out test pending.</li><li><a href="/skills/changelog-from-commits/">Changelog from Commits</a> (Free): Give it a commit range or a pasted git log. Get a user-facing changelog with the commit behind every line, and the vague commits flagged.</li><li>More for developers: <a href="/for/developers/">Developers</a></li></ul></section>
+<section><h2>Related</h2><ul class="links"><li>Free guide to do it by hand: <a href="/guides/how-to-check-that-your-skill-md-file-will-load-in-other-tools/">How do I check that my SKILL.md file will load in other tools?</a></li><li>Free text to paste into ChatGPT or any chatbot: <a href="/prompts/skill-portability-check/">Check a SKILL.md for portability problems: free prompt</a></li><li><a href="/skills/agent-browse/">Agent Browse</a> (Free): Get an AI assistant to do a task in a real web browser in fewer steps.</li><li><a href="/skills/agent-browse-qwen/">Agent Browse for local models (Qwen)</a> (Free): Stop a local Qwen model guessing web addresses while it browses.</li><li><a href="/skills/changelog-from-commits/">Changelog from Commits</a> (Free): Turn a list of code changes into release notes people can read.</li><li>More for developers: <a href="/for/developers/">Developers</a></li></ul></section>
 <p class="sub"><a href="https://github.com/proskillpacks/skills/issues/new?template=report-problem.yml&amp;skill=skill-portability-check" rel="noopener">Report a problem with this skill</a> (GitHub, or write to kaiventura.founder@gmail.com).</p>
 </div></main>
 <script>

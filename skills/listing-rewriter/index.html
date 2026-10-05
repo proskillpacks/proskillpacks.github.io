@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Listing Rewriter: skill + paste-in prompt | Pro Skill Packs</title>
-<meta name="description" content="Three titles under 50 characters and a description within 500, built only from your own facts. For short-term rental hosts.">
+<meta name="description" content="Rewrite your holiday-let listing title and description. For hosts whose listing reads thin or messy. Tested on 4 real public listings.">
 
 <link rel="canonical" href="https://proskillpacks.github.io/skills/listing-rewriter/">
 <link rel="icon" href="/assets/avatar.png">
@@ -15,8 +15,8 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/skills/listing-rewriter/">
 <meta property="og:title" content="Listing Rewriter: skill + paste-in prompt">
-<meta property="og:description" content="Three titles under 50 characters and a description within 500, built only from your own facts. For short-term rental hosts.">
-<meta property="og:image" content="https://proskillpacks.github.io/assets/og/82b6c5f60021.png">
+<meta property="og:description" content="Rewrite your holiday-let listing title and description. For hosts whose listing reads thin or messy. Tested on 4 real public listings.">
+<meta property="og:image" content="https://proskillpacks.github.io/assets/og/05636d966a3d.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Listing Rewriter: Pro Skill Packs">
@@ -24,15 +24,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="Listing Rewriter: skill + paste-in prompt">
-<meta name="twitter:description" content="Three titles under 50 characters and a description within 500, built only from your own facts. For short-term rental hosts.">
-<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/82b6c5f60021.png">
+<meta name="twitter:description" content="Rewrite your holiday-let listing title and description. For hosts whose listing reads thin or messy. Tested on 4 real public listings.">
+<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/05636d966a3d.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "Product",
  "name": "Listing Rewriter",
- "description": "Three titles under 50 characters and a description within 500, built only from your own facts.",
+ "description": "Rewrite your holiday-let listing title and description.",
  "url": "https://proskillpacks.github.io/skills/listing-rewriter/",
  "brand": {
   "@type": "Brand",
@@ -346,7 +346,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
 .dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; min-height: 2.73rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; min-height: 2.9em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem; }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
@@ -609,6 +609,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .tr-badge { display: inline-block; background: var(--lime); color: var(--pine); font-weight: 800; font-size: 0.8rem; padding: 0.15rem 0.7rem; border-radius: 999px; }
 .trline { margin: 0 0 0.9rem; } .trline a { color: var(--lime); }
 .cs h2 { margin-top: 2.2rem; }
+.cs .nine, .cs .found { padding-left: 1.3rem; max-width: 46rem; } .cs .nine li, .cs .found li { margin: 0 0 0.5rem; }
 .cs .table { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; border: 1px solid var(--rule); border-radius: 10px; background: #fff; margin: 0 0 1.2rem; }
 .cs .table table { min-width: 30rem; margin: 0; }
 .cs .table + .tnote, .cs .swipe + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
@@ -719,6 +720,20 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .freepg .fpaid { margin: 0.9rem 0 1.8rem; }
 .freepg .fbundle { margin: 1.2rem 0 0; font-size: 0.95rem; max-width: 52rem; }
 
+.ogw { margin: 1rem 0 0.2rem; max-width: 44rem; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.35rem 1rem; }
+.ogw dt { margin: 0; color: var(--lime); font-weight: 800; font-size: 0.82rem; letter-spacing: 0.02em; text-transform: uppercase; padding-top: 0.15rem; }
+.ogw dd { margin: 0; color: var(--cream); font-size: 0.98rem; line-height: 1.4; }
+.ogline { margin: 0.7rem 0 0; font-size: 0.9rem; color: var(--mist); max-width: 44rem; }
+.ogline a { color: var(--lime); }
+.ogline + .ogline { margin-top: 0.25rem; }
+.ogmore summary { cursor: pointer; font-weight: 700; color: var(--pine); }
+.wkit .ogw dt, .wkit .ogline a { color: var(--pine); }
+.wkit .ogw dd { color: var(--ink); font-size: 0.93rem; }
+.wkit .ogline { color: var(--slate); }
+.methband { margin: 1.4rem 0 0; font-size: 1rem; color: var(--slate); }
+.methband a { font-weight: 700; color: var(--pine); }
+@media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
+
 </style>
 <script defer src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
@@ -761,17 +776,17 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-online-stores">Online stores</a> / Listing Rewriter</p>
     <h1>Listing Rewriter</h1>
-    <p class="lead">Three titles under 50 characters and a description within 500, built only from your own facts.</p>
-    <div class="cta"><span class="lob"><a class="btn btn-lime" href="https://proskillpacks.gumroad.com/l/listing-rewriter/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=listing-rewriter" data-go="buy/listing-rewriter">Buy this skill, $5</a><span class="lo"><s>$5</s> <b>$2.50</b> for the first 10 buyers. 30-day refund. Prices in dollars. Checkout shows your currency, plus VAT where it applies.</span></span></div><p class="note-light alts"><a class="alt-link" href="https://proskillpacks.gumroad.com/l/host-ops-pack/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=host-ops-pack" data-go="buy/host-ops-pack">Also in the Host Ops Pack, $29</a></p>
+    <p class="lead">Rewrite your holiday-let listing title and description.</p>
+    <dl class="ogw"><dt>Who it is for</dt><dd>Hosts whose listing reads thin or messy.</dd><dt>What you give it</dt><dd>Your title, description and amenities.</dd><dt>What you get back</dt><dd>Three titles under 50 characters and a description within 500, from your own facts.</dd></dl><div class="cta"><span class="lob"><a class="btn btn-lime" href="https://proskillpacks.gumroad.com/l/listing-rewriter/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=listing-rewriter" data-go="buy/listing-rewriter">Buy this skill, $5</a><span class="lo"><s>$5</s> <b>$2.50</b> for the first 10 buyers. 30-day refund. Prices in dollars. Checkout shows your currency, plus VAT where it applies.</span></span></div><p class="note-light alts"><a class="alt-link" href="https://proskillpacks.gumroad.com/l/host-ops-pack/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=host-ops-pack" data-go="buy/host-ops-pack">Also in the Host Ops Pack, $29</a></p><p class="ogline">It is a text file you paste into ChatGPT, Claude or any chatbot.</p><p class="ogline">Tested on 4 real examples before release. <a href="/how-we-test/">How we test</a>.</p>
   </div>
 </header>
 <main><div class="wrap">
 <section class="proofrow"><figure class="pvfig"><a class="pvcrop" href="/assets/preview/listing-rewriter.png"><img src="/assets/preview/listing-rewriter.png" width="900" height="1035" loading="lazy" alt="A real page from Listing Rewriter: the first page of the file you get" srcset="/assets/preview/listing-rewriter-240.webp 240w, /assets/preview/listing-rewriter-480.webp 480w, /assets/preview/listing-rewriter-900.webp 900w" sizes="200vw" decoding="async"></a><figcaption>A page of the real file you get. <a class="pvmore" href="/assets/preview/listing-rewriter.png">Tap to see the whole page</a></figcaption></figure><div class="trustbox"><p><b>Who is behind this.</b> Pro Skill Packs is a small independent publisher of ready-made skills and fill-in kits. Every one is run on real examples before release.</p><ul><li><a href="/how-we-test/">How we test</a></li><li>30-day refund, no questions about why</li><li><a href="/contact/">Contact page</a>, or write to kaiventura.founder@gmail.com</li></ul><p class="sub" style="margin:.6rem 0 0">New here? <a href="/feedback/">Ask for a free copy in exchange for honest feedback.</a></p></div></section>
 <section class="gtk"><h2>Good to know</h2><div class="prose"><p>Checkout is on Gumroad. Prices are in US dollars; Gumroad shows your local currency and any VAT in the total before you pay. Check that total in the cart. 30-day refund. Works in ChatGPT too: the download includes a paste-in prompt version.</p></div></section>
-<section><div class="two">
+<section><details class="ogmore"><summary>More detail on what goes in and what comes out</summary><div class="two">
   <div class="box"><b>What you give it</b><p>Paste your listing title, description and amenities.</p></div>
   <div class="box"><b>What you get</b><p>Three titles under 50 characters, a description within 500 characters and the section fields, built only from your own facts, plus a list of anything to confirm.</p></div>
-</div></section>
+</div></details></section>
 <section><h2>Before and after</h2><p class="sub">Real public data, anonymised. Taken from the skill&#x27;s README.</p><div class="prose"><p>Source: a garden-level guest suite in a US mountain city, from a public open-data snapshot of listings. The title and description were written as an emoji list.</p>
 <blockquote><p><strong>Before:</strong> a title of three words and two bed emoji, and a description of short lines such as &quot;15 min walk to Downtown&quot;, &quot;Uber is super fast&quot; and &quot;Maximum of 2 guests&quot;, each followed by emoji.</p>
 <p><strong>After (skill output, unedited, current version):</strong></p>
@@ -786,9 +801,9 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <section><h2>Works with</h2><div class="prose"><p>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot. We run our release tests on Claude Sonnet and Opus. Use your assistant&#x27;s strongest model: in our tests, a small, fast model added facts that were not in the source data. A small script counts the characters. Without code execution the skill still works, but the counts are not verified.</p></div></section>
 <section id="where-to-start"><h2>Where to start</h2><ul class="links"><li><b>In the Host Ops Pack.</b> This is one of 6 helpers in the pack, $29. <a href="/packs/host-ops-pack/">See the pack</a>.</li></ul></section>
 <section id="in-download"><h2>What is in the download</h2><p class="sub">Read from the real file.</p><ul class="links"><li><code>LICENSE.txt</code></li><li><code>README.md</code></li><li><code>claude-ai/</code> (1 file: <code>listing-rewriter.zip</code>)</li><li><code>prompts/</code> (2 files: <code>listing-rewriter-v1.0-prompts.pdf</code>, <code>listing-rewriter.md</code>)</li><li><code>listing-rewriter/</code>, the skill itself:<ul><li><code>SKILL.md</code></li><li><code>README.md</code></li><li><code>references/</code> (1 file)</li><li><code>scripts/</code> (1 file)</li></ul></li></ul></section>
-<section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">$5</span><span class="lob"><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/l/listing-rewriter/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=listing-rewriter" data-go="buy/listing-rewriter">Buy this skill</a><span class="lo"><s>$5</s> <b>$2.50</b> for the first 10 buyers. 30-day refund. Prices in dollars. Checkout shows your currency, plus VAT where it applies.</span></span><span class="lob"><a class="btn btn-ghost" href="https://proskillpacks.gumroad.com/l/host-ops-pack/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=host-ops-pack" data-go="buy/host-ops-pack">Or get the whole pack, $29</a><span class="lo"><s>$29</s> <b>$14.50</b> for the first 10 buyers. 30-day refund. Prices in dollars. Checkout shows your currency, plus VAT where it applies.</span></span></div><ul class="expect"><li><b>You get:</b> a zip file (double-click it to open it) with a guide and a text you paste into ChatGPT or any chatbot.</li><li><b>Checkout:</b> Gumroad opens on this page. Click Add to cart, enter your email and card details, and check the total, with any VAT, before you pay. Prices here are in US dollars.</li><li><b>After you pay:</b> a download page opens right away with the zip file, and Gumroad gives you a receipt there that you can resend. Open it, then paste the text from the prompts folder into ChatGPT and add your details.</li></ul><p>One-time payment. Updates to this version are free. Questions or a refund: reply to your receipt within 30 days, or write to kaiventura.founder@gmail.com.</p></div></section>
+<section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">$5</span><span class="lob"><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/l/listing-rewriter/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=listing-rewriter" data-go="buy/listing-rewriter">Buy this skill</a><span class="lo"><s>$5</s> <b>$2.50</b> for the first 10 buyers. 30-day refund. Prices in dollars. Checkout shows your currency, plus VAT where it applies.</span></span><span class="lob"><a class="btn btn-ghost" href="https://proskillpacks.gumroad.com/l/host-ops-pack/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=host-ops-pack" data-go="buy/host-ops-pack">Or get the whole pack, $29</a><span class="lo"><s>$29</s> <b>$14.50</b> for the first 10 buyers. 30-day refund. Prices in dollars. Checkout shows your currency, plus VAT where it applies.</span></span></div><ul class="expect"><li><b>You get:</b> a zip file (double-click it to open it) with a guide and a text you paste into ChatGPT or any chatbot.</li><li><b>Checkout:</b> Gumroad opens on this page. Click Add to cart, enter your email and card details, and check the total, with any VAT, before you pay. Prices here are in US dollars.</li><li><b>After you pay:</b> a download page opens right away with the zip file, and Gumroad gives you a receipt there that you can resend. Open it, then paste the text from the prompts folder into ChatGPT and add your details.</li></ul><p>One-time payment. Questions or a refund: reply to your receipt within 30 days, or write to kaiventura.founder@gmail.com.</p></div></section>
 <details class="usingai"><summary>Using it with an AI assistant</summary><div class="prose"><ol><li>Unzip the download. It holds the <code>listing-rewriter</code> folder, ready-made zips for claude.ai in a <code>claude-ai</code> folder, a README and the licence.</li><li>Put the <code>listing-rewriter</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: Customize, Skills, then the plus button, Create skill, Upload a skill, and upload the zip from the <code>claude-ai</code> folder without unzipping it (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Rewrite my Airbnb listing. Here is my title, description and amenities: ...&quot;. The skill loads by itself.</li></ol></div></details>
-<section><h2>Related</h2><ul class="links"><li><a href="/packs/host-ops-pack/">Host Ops Pack</a> ($29): Six skills for the listing, review and house-rules jobs of hosts who run their own listings.</li><li>More for short-term rental hosts: <a href="/for/short-term-rental-hosts/">Short-term rental hosts</a></li></ul></section>
+<section><h2>Related</h2><ul class="links"><li><a href="/packs/host-ops-pack/">Host Ops Pack</a> ($29): Run your holiday-let listing: audit, rewrite, reviews and house rules.</li><li>More for short-term rental hosts: <a href="/for/short-term-rental-hosts/">Short-term rental hosts</a></li></ul></section>
 <p class="sub"><a href="https://github.com/proskillpacks/skills/issues/new?template=report-problem.yml&amp;skill=listing-rewriter" rel="noopener">Report a problem with this skill</a> (GitHub, or write to kaiventura.founder@gmail.com).</p>
 </div></main>
 <footer class="sitefoot">

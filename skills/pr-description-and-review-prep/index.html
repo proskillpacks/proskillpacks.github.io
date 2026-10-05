@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PR Description and Review Prep: skill + paste-in prompt</title>
-<meta name="description" content="Run it on your branch. Get a PR title, summary, risk notes and test plan from the diff, plus the questions a reviewer will ask. Free, MIT-licensed.">
+<meta name="description" content="Write a pull request description from your code changes. For developers who dislike writing pull requests. Tested on real examples before release.">
 
 <link rel="canonical" href="https://proskillpacks.github.io/skills/pr-description-and-review-prep/">
 <link rel="icon" href="/assets/avatar.png">
@@ -15,8 +15,8 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/skills/pr-description-and-review-prep/">
 <meta property="og:title" content="PR Description and Review Prep: skill + paste-in prompt">
-<meta property="og:description" content="Run it on your branch. Get a PR title, summary, risk notes and test plan from the diff, plus the questions a reviewer will ask. Free, MIT-licensed.">
-<meta property="og:image" content="https://proskillpacks.github.io/assets/og/1a20e413f789.png">
+<meta property="og:description" content="Write a pull request description from your code changes. For developers who dislike writing pull requests. Tested on real examples before release.">
+<meta property="og:image" content="https://proskillpacks.github.io/assets/og/741cc9428f8d.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="PR Description and Review Prep: Pro Skill Packs">
@@ -24,15 +24,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="PR Description and Review Prep: skill + paste-in prompt">
-<meta name="twitter:description" content="Run it on your branch. Get a PR title, summary, risk notes and test plan from the diff, plus the questions a reviewer will ask. Free, MIT-licensed.">
-<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/1a20e413f789.png">
+<meta name="twitter:description" content="Write a pull request description from your code changes. For developers who dislike writing pull requests. Tested on real examples before release.">
+<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/741cc9428f8d.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "Product",
  "name": "PR Description and Review Prep",
- "description": "Run it on your branch. Get a PR title, summary, risk notes and test plan from the diff, plus the questions a reviewer will ask. Free, MIT-licensed.",
+ "description": "Write a pull request description from your code changes.",
  "url": "https://proskillpacks.github.io/skills/pr-description-and-review-prep/",
  "brand": {
   "@type": "Brand",
@@ -346,7 +346,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
 .dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; min-height: 2.73rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; min-height: 2.9em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem; }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
@@ -609,6 +609,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .tr-badge { display: inline-block; background: var(--lime); color: var(--pine); font-weight: 800; font-size: 0.8rem; padding: 0.15rem 0.7rem; border-radius: 999px; }
 .trline { margin: 0 0 0.9rem; } .trline a { color: var(--lime); }
 .cs h2 { margin-top: 2.2rem; }
+.cs .nine, .cs .found { padding-left: 1.3rem; max-width: 46rem; } .cs .nine li, .cs .found li { margin: 0 0 0.5rem; }
 .cs .table { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; border: 1px solid var(--rule); border-radius: 10px; background: #fff; margin: 0 0 1.2rem; }
 .cs .table table { min-width: 30rem; margin: 0; }
 .cs .table + .tnote, .cs .swipe + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
@@ -719,6 +720,20 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .freepg .fpaid { margin: 0.9rem 0 1.8rem; }
 .freepg .fbundle { margin: 1.2rem 0 0; font-size: 0.95rem; max-width: 52rem; }
 
+.ogw { margin: 1rem 0 0.2rem; max-width: 44rem; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.35rem 1rem; }
+.ogw dt { margin: 0; color: var(--lime); font-weight: 800; font-size: 0.82rem; letter-spacing: 0.02em; text-transform: uppercase; padding-top: 0.15rem; }
+.ogw dd { margin: 0; color: var(--cream); font-size: 0.98rem; line-height: 1.4; }
+.ogline { margin: 0.7rem 0 0; font-size: 0.9rem; color: var(--mist); max-width: 44rem; }
+.ogline a { color: var(--lime); }
+.ogline + .ogline { margin-top: 0.25rem; }
+.ogmore summary { cursor: pointer; font-weight: 700; color: var(--pine); }
+.wkit .ogw dt, .wkit .ogline a { color: var(--pine); }
+.wkit .ogw dd { color: var(--ink); font-size: 0.93rem; }
+.wkit .ogline { color: var(--slate); }
+.methband { margin: 1.4rem 0 0; font-size: 1rem; color: var(--slate); }
+.methband a { font-weight: 700; color: var(--pine); }
+@media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
+
 </style>
 <script defer src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
@@ -758,15 +773,15 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-developers-and-data">Developers and data</a> / PR Description and Review Prep</p>
     <h1>PR Description and Review Prep</h1>
-    <p class="lead">Run it on your branch. Get a PR title, summary, risk notes and test plan from the diff, plus the questions a reviewer will ask. Free, MIT-licensed.</p>
-    <div class="cta"><a class="btn btn-lime" href="/go/repo/pr-description-and-review-prep/?from=skill">Get the files from GitHub (for developers)</a></div><p class="note-light">Free, MIT licence, hosted on GitHub. Install the whole free set with npx skills add proskillpacks/skills, or copy this skill&#x27;s folder.</p>
+    <p class="lead">Write a pull request description from your code changes.</p>
+    <dl class="ogw"><dt>Who it is for</dt><dd>Developers who dislike writing pull requests.</dd><dt>What you give it</dt><dd>Your branch, or a pasted diff.</dd><dt>What you get back</dt><dd>A title, summary, risk notes, a test plan and the questions a reviewer will ask.</dd></dl><div class="cta"><a class="btn btn-lime" href="/go/repo/pr-description-and-review-prep/?from=skill">Get the files from GitHub (for developers)</a></div><p class="note-light">Free, MIT licence, hosted on GitHub. Install the whole free set with npx skills add proskillpacks/skills, or copy this skill&#x27;s folder.</p><p class="ogline">It is a text file you add to an AI assistant, or paste into a chat.</p><p class="ogline">Tested on 1 real example before release. <a href="/how-we-test/">How we test</a>.</p>
   </div>
 </header>
 <main><div class="wrap">
-<section><div class="two">
+<section><details class="ogmore"><summary>More detail on what goes in and what comes out</summary><div class="two">
   <div class="box"><b>What you give it</b><p>Run it in your repository, or paste a diff.</p></div>
   <div class="box"><b>What you get</b><p>A ready-to-paste PR title and summary, risk notes, a test plan from what is stated, and the questions a reviewer is likely to ask.</p></div>
-</div></section>
+</div></details></section>
 <section><h2>Before and after</h2><p class="sub">Taken from the skill&#x27;s README.</p><div class="prose"><blockquote><p><strong>Before:</strong> A commit-list dump: &quot;fix res.send / bump qs / bump proxy-addr / bump morgan&quot;</p>
 <p><strong>After (skill output, from a real test run):</strong> Test run on four real commits from a public web framework. Output, unedited: &quot;Title: Preserve ETag with Transfer-Encoding in res.send; bump deps&quot;. It grouped the fix and the three dependency bumps separately, noted which bumps were runtime vs dev, said the diff showed no lockfile change, wrote &quot;Why: not stated in the diff&quot;, and caught that the branch it was asked to diff against was behind another branch.</p></blockquote></div></section>
 <section><h2>What it does</h2><div class="prose"><p>Run it in your repository, or paste a diff. It reads the commits and the diff and gives you a ready-to-paste PR: title, summary, changes grouped by purpose, risk and review focus, how it was tested (only what is stated), up to five likely reviewer questions and a list of facts it could not get from the diff. It will not invent a reason, a ticket or a test result.</p></div></section>
@@ -775,7 +790,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <section><h2>Works with</h2><div class="prose"><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. Inside a git repository it runs git itself. Otherwise paste a diff.</p></div></section>
 <section><h2>For people who use AI assistants</h2><div class="prose"><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>pr-description-and-review-prep</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/developers/pr-description-and-review-prep).</li><li>Put the <code>pr-description-and-review-prep</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;I am about to open a PR from this branch into main. Write the PR description.&quot;. The skill loads by itself.</li></ol></div></section>
 <section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">Free</span><a class="btn btn-pine" href="/go/repo/pr-description-and-review-prep/?from=skill">Get the files from GitHub (for developers)</a></div><p>MIT licence. Use it, change it, share it.</p></div></section>
-<section><h2>Related</h2><ul class="links"><li>Free guide to do it by hand: <a href="/guides/write-a-pull-request-description-reviewers-can-use/">How do I write a pull request description reviewers can use?</a></li><li>Free text to paste into ChatGPT or any chatbot: <a href="/prompts/pr-description-and-review-prep/">Pull request description prompt for ChatGPT or Claude</a></li><li><a href="/skills/agent-browse-qwen/">Agent Browse for local models (Qwen)</a> (Free): Agent Browse tuned for Qwen3.8-27B and similar local models that guess selectors and URLs. On the selection split: 48 of 48 correct, against 21 of 24 with no skill. Held-out test pending.</li><li><a href="/skills/changelog-from-commits/">Changelog from Commits</a> (Free): Give it a commit range or a pasted git log. Get a user-facing changelog with the commit behind every line, and the vague commits flagged.</li><li><a href="/skills/readme-first-run-check/">README First-Run Check</a> (Free): Point it at a repo. It follows the README like a new user and checks every step against the repo: OK, BROKEN, MISSING or UNVERIFIED, with evidence and the README edits that fix it.</li><li>More for developers: <a href="/for/developers/">Developers</a></li></ul></section>
+<section><h2>Related</h2><ul class="links"><li>Free guide to do it by hand: <a href="/guides/write-a-pull-request-description-reviewers-can-use/">How do I write a pull request description reviewers can use?</a></li><li>Free text to paste into ChatGPT or any chatbot: <a href="/prompts/pr-description-and-review-prep/">Pull request description prompt for ChatGPT or Claude</a></li><li><a href="/skills/agent-browse-qwen/">Agent Browse for local models (Qwen)</a> (Free): Stop a local Qwen model guessing web addresses while it browses.</li><li><a href="/skills/changelog-from-commits/">Changelog from Commits</a> (Free): Turn a list of code changes into release notes people can read.</li><li><a href="/skills/readme-first-run-check/">README First-Run Check</a> (Free): Find where a project&#x27;s setup guide would trip up a new user.</li><li>More for developers: <a href="/for/developers/">Developers</a></li></ul></section>
 <p class="sub"><a href="https://github.com/proskillpacks/skills/issues/new?template=report-problem.yml&amp;skill=pr-description-and-review-prep" rel="noopener">Report a problem with this skill</a> (GitHub, or write to kaiventura.founder@gmail.com).</p>
 </div></main>
 <footer class="sitefoot">

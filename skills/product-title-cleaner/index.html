@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Product Title Cleaner: skill + paste-in prompt</title>
-<meta name="description" content="One consistent title pattern across the catalogue, as an import CSV of changed rows only. For Shopify store owners. Tested on 3 real public Shopify">
+<meta name="description" content="Give every product in your Shopify store the same tidy title pattern. For Shopify store owners with messy product titles.">
 
 <link rel="canonical" href="https://proskillpacks.github.io/skills/product-title-cleaner/">
 <link rel="icon" href="/assets/avatar.png">
@@ -15,8 +15,8 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/skills/product-title-cleaner/">
 <meta property="og:title" content="Product Title Cleaner: skill + paste-in prompt">
-<meta property="og:description" content="One consistent title pattern across the catalogue, as an import CSV of changed rows only. For Shopify store owners. Tested on 3 real public Shopify">
-<meta property="og:image" content="https://proskillpacks.github.io/assets/og/a06ea94864fa.png">
+<meta property="og:description" content="Give every product in your Shopify store the same tidy title pattern. For Shopify store owners with messy product titles.">
+<meta property="og:image" content="https://proskillpacks.github.io/assets/og/08932fe6e12e.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Product Title Cleaner: Pro Skill Packs">
@@ -24,15 +24,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="Product Title Cleaner: skill + paste-in prompt">
-<meta name="twitter:description" content="One consistent title pattern across the catalogue, as an import CSV of changed rows only. For Shopify store owners. Tested on 3 real public Shopify">
-<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/a06ea94864fa.png">
+<meta name="twitter:description" content="Give every product in your Shopify store the same tidy title pattern. For Shopify store owners with messy product titles.">
+<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/08932fe6e12e.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "Product",
  "name": "Product Title Cleaner",
- "description": "One consistent title pattern across the catalogue, as an import CSV of changed rows only.",
+ "description": "Give every product in your Shopify store the same tidy title pattern.",
  "url": "https://proskillpacks.github.io/skills/product-title-cleaner/",
  "brand": {
   "@type": "Brand",
@@ -346,7 +346,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
 .dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; min-height: 2.73rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; min-height: 2.9em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem; }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
@@ -609,6 +609,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .tr-badge { display: inline-block; background: var(--lime); color: var(--pine); font-weight: 800; font-size: 0.8rem; padding: 0.15rem 0.7rem; border-radius: 999px; }
 .trline { margin: 0 0 0.9rem; } .trline a { color: var(--lime); }
 .cs h2 { margin-top: 2.2rem; }
+.cs .nine, .cs .found { padding-left: 1.3rem; max-width: 46rem; } .cs .nine li, .cs .found li { margin: 0 0 0.5rem; }
 .cs .table { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; border: 1px solid var(--rule); border-radius: 10px; background: #fff; margin: 0 0 1.2rem; }
 .cs .table table { min-width: 30rem; margin: 0; }
 .cs .table + .tnote, .cs .swipe + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
@@ -719,6 +720,20 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .freepg .fpaid { margin: 0.9rem 0 1.8rem; }
 .freepg .fbundle { margin: 1.2rem 0 0; font-size: 0.95rem; max-width: 52rem; }
 
+.ogw { margin: 1rem 0 0.2rem; max-width: 44rem; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.35rem 1rem; }
+.ogw dt { margin: 0; color: var(--lime); font-weight: 800; font-size: 0.82rem; letter-spacing: 0.02em; text-transform: uppercase; padding-top: 0.15rem; }
+.ogw dd { margin: 0; color: var(--cream); font-size: 0.98rem; line-height: 1.4; }
+.ogline { margin: 0.7rem 0 0; font-size: 0.9rem; color: var(--mist); max-width: 44rem; }
+.ogline a { color: var(--lime); }
+.ogline + .ogline { margin-top: 0.25rem; }
+.ogmore summary { cursor: pointer; font-weight: 700; color: var(--pine); }
+.wkit .ogw dt, .wkit .ogline a { color: var(--pine); }
+.wkit .ogw dd { color: var(--ink); font-size: 0.93rem; }
+.wkit .ogline { color: var(--slate); }
+.methband { margin: 1.4rem 0 0; font-size: 1rem; color: var(--slate); }
+.methband a { font-weight: 700; color: var(--pine); }
+@media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
+
 </style>
 <script defer src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
@@ -758,15 +773,15 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-online-stores">Online stores</a> / Product Title Cleaner</p>
     <h1>Product Title Cleaner</h1>
-    <p class="lead">One consistent title pattern across the catalogue, as an import CSV of changed rows only.</p>
-    <div class="cta"><a class="btn btn-lime" href="/prompts/product-title-cleaner/">Copy the text for ChatGPT or any chatbot</a></div><p class="note-light alts"><a class="alt-link" href="https://proskillpacks.gumroad.com/l/free-shopify-skills?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=free-shopify-skills" data-go="buy/free-shopify-skills">Download free</a> &middot; <a class="alt-link" href="/go/repo/product-title-cleaner/?from=skill" rel="noopener">View on GitHub</a></p><p class="note-light">The download is the free bundle on Gumroad (pay what you want, from $0), which holds a selection of the free skills. All of them are on GitHub under the MIT licence.</p>
+    <p class="lead">Give every product in your Shopify store the same tidy title pattern.</p>
+    <dl class="ogw"><dt>Who it is for</dt><dd>Shopify store owners with messy product titles.</dd><dt>What you give it</dt><dd>Your store address or product export file.</dd><dt>What you get back</dt><dd>An import file with only the changed rows.</dd></dl><div class="cta"><a class="btn btn-lime" href="/prompts/product-title-cleaner/">Copy the text for ChatGPT or any chatbot</a></div><p class="note-light alts"><a class="alt-link" href="https://proskillpacks.gumroad.com/l/free-shopify-skills?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=free-shopify-skills" data-go="buy/free-shopify-skills">Download free</a> &middot; <a class="alt-link" href="/go/repo/product-title-cleaner/?from=skill" rel="noopener">View on GitHub</a></p><p class="note-light">The download is the free bundle on Gumroad (pay what you want, from $0), which holds a selection of the free skills. All of them are on GitHub under the MIT licence.</p><p class="ogline">It is a text file you paste into ChatGPT, Claude or any chatbot.</p><p class="ogline">Tested on 3 real examples before release. <a href="/how-we-test/">How we test</a>.</p>
   </div>
 </header>
 <main><div class="wrap">
-<section><div class="two">
+<section><details class="ogmore"><summary>More detail on what goes in and what comes out</summary><div class="two">
   <div class="box"><b>What you give it</b><p>Your store, a collection URL, or a product export CSV.</p></div>
   <div class="box"><b>What you get</b><p>One consistent title pattern across your catalogue, as a <code>URL handle,Title</code> import CSV (changed rows only). It never creates duplicate titles.</p></div>
-</div></section>
+</div></details></section>
 <section><h2>Before and after</h2><p class="sub">Patterns from real tests, 2026-10-03; product names changed so stores can&#x27;t be identified. Taken from the skill&#x27;s README.</p><div class="prose"><div class="table"><table><thead><tr><th>Before</th><th>After</th><th>Why</th></tr></thead><tbody><tr><td><code>Dark Roast, Cold Brew Coffee, Oat Milk</code></td><td><code>Dark Roast Cold Brew Coffee - Oat Milk</code></td><td>one separator</td></tr><tr><td><code>House Blend Coffee (12oz Ground)</code></td><td><code>House Blend Ground Coffee (12 oz)</code></td><td>type before size, unit format</td></tr><tr><td><code>Born To Roam Tee</code></td><td><code>Born to Roam Tee</code></td><td>title case</td></tr><tr><td><code>Ranger Shearling - Brown</code></td><td><code>Ranger Shearling Boot - Brown</code></td><td>product type added (taken from the store&#x27;s own product type, &quot;Boots&quot;)</td></tr><tr><td><code>Studio  x Partner Court Sneaker - Bone</code></td><td><code>Studio x Partner Court Sneaker - Bone</code></td><td>double space</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p>
 <p>On one 147-product coffee and merch catalogue it changed 13 titles and left 134 alone.</p></div></section>
 <section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/product-title-cleaner-last.png" data-gif="/assets/demos/product-title-cleaner.gif" alt="Animated demo of Product Title Cleaner on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async" srcset="/assets/demos/product-title-cleaner-last-240.webp 240w, /assets/demos/product-title-cleaner-last-480.webp 480w, /assets/demos/product-title-cleaner-last-900.webp 900w, /assets/demos/product-title-cleaner-last-1200.webp 1200w" sizes="(min-width: 48rem) 900px, 100vw" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Product Title Cleaner">Play</button></figure></section>

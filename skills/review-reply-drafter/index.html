@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Review Reply Drafter: skill + paste-in prompt</title>
-<meta name="description" content="A reply for every review, matched to its tone, with the risky ones flagged for you. For Shopify store owners. Tested on 3 real public review sets">
+<meta name="description" content="Reply to customer reviews, happy or not, without promising anything. For online store owners who answer their own reviews.">
 
 <link rel="canonical" href="https://proskillpacks.github.io/skills/review-reply-drafter/">
 <link rel="icon" href="/assets/avatar.png">
@@ -15,8 +15,8 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/skills/review-reply-drafter/">
 <meta property="og:title" content="Review Reply Drafter: skill + paste-in prompt">
-<meta property="og:description" content="A reply for every review, matched to its tone, with the risky ones flagged for you. For Shopify store owners. Tested on 3 real public review sets">
-<meta property="og:image" content="https://proskillpacks.github.io/assets/og/eb1441641514.png">
+<meta property="og:description" content="Reply to customer reviews, happy or not, without promising anything. For online store owners who answer their own reviews.">
+<meta property="og:image" content="https://proskillpacks.github.io/assets/og/af18d52b1811.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Review Reply Drafter: Pro Skill Packs">
@@ -24,15 +24,15 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="Review Reply Drafter: skill + paste-in prompt">
-<meta name="twitter:description" content="A reply for every review, matched to its tone, with the risky ones flagged for you. For Shopify store owners. Tested on 3 real public review sets">
-<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/eb1441641514.png">
+<meta name="twitter:description" content="Reply to customer reviews, happy or not, without promising anything. For online store owners who answer their own reviews.">
+<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/af18d52b1811.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "Product",
  "name": "Review Reply Drafter",
- "description": "A reply for every review, matched to its tone, with the risky ones flagged for you.",
+ "description": "Reply to customer reviews, happy or not, without promising anything.",
  "url": "https://proskillpacks.github.io/skills/review-reply-drafter/",
  "brand": {
   "@type": "Brand",
@@ -346,7 +346,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
 .dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; min-height: 2.73rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; min-height: 2.9em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem; }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
@@ -609,6 +609,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .tr-badge { display: inline-block; background: var(--lime); color: var(--pine); font-weight: 800; font-size: 0.8rem; padding: 0.15rem 0.7rem; border-radius: 999px; }
 .trline { margin: 0 0 0.9rem; } .trline a { color: var(--lime); }
 .cs h2 { margin-top: 2.2rem; }
+.cs .nine, .cs .found { padding-left: 1.3rem; max-width: 46rem; } .cs .nine li, .cs .found li { margin: 0 0 0.5rem; }
 .cs .table { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; border: 1px solid var(--rule); border-radius: 10px; background: #fff; margin: 0 0 1.2rem; }
 .cs .table table { min-width: 30rem; margin: 0; }
 .cs .table + .tnote, .cs .swipe + .tnote { color: var(--slate); font-size: 0.9rem; margin-top: -0.6rem; }
@@ -719,6 +720,20 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .freepg .fpaid { margin: 0.9rem 0 1.8rem; }
 .freepg .fbundle { margin: 1.2rem 0 0; font-size: 0.95rem; max-width: 52rem; }
 
+.ogw { margin: 1rem 0 0.2rem; max-width: 44rem; display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.35rem 1rem; }
+.ogw dt { margin: 0; color: var(--lime); font-weight: 800; font-size: 0.82rem; letter-spacing: 0.02em; text-transform: uppercase; padding-top: 0.15rem; }
+.ogw dd { margin: 0; color: var(--cream); font-size: 0.98rem; line-height: 1.4; }
+.ogline { margin: 0.7rem 0 0; font-size: 0.9rem; color: var(--mist); max-width: 44rem; }
+.ogline a { color: var(--lime); }
+.ogline + .ogline { margin-top: 0.25rem; }
+.ogmore summary { cursor: pointer; font-weight: 700; color: var(--pine); }
+.wkit .ogw dt, .wkit .ogline a { color: var(--pine); }
+.wkit .ogw dd { color: var(--ink); font-size: 0.93rem; }
+.wkit .ogline { color: var(--slate); }
+.methband { margin: 1.4rem 0 0; font-size: 1rem; color: var(--slate); }
+.methband a { font-weight: 700; color: var(--pine); }
+@media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
+
 </style>
 <script defer src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
@@ -758,15 +773,15 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-online-stores">Online stores</a> / Review Reply Drafter</p>
     <h1>Review Reply Drafter</h1>
-    <p class="lead">A reply for every review, matched to its tone, with the risky ones flagged for you.</p>
-    <div class="cta"><a class="btn btn-lime" href="/prompts/review-reply-drafter/">Copy the text for ChatGPT or any chatbot</a></div><p class="note-light alts"><a class="alt-link" href="https://proskillpacks.gumroad.com/l/free-shopify-skills?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=free-shopify-skills" data-go="buy/free-shopify-skills">Download free</a> &middot; <a class="alt-link" href="/go/repo/review-reply-drafter/?from=skill" rel="noopener">View on GitHub</a></p><p class="note-light">The download is the free bundle on Gumroad (pay what you want, from $0), which holds a selection of the free skills. All of them are on GitHub under the MIT licence.</p>
+    <p class="lead">Reply to customer reviews, happy or not, without promising anything.</p>
+    <dl class="ogw"><dt>Who it is for</dt><dd>Online store owners who answer their own reviews.</dd><dt>What you give it</dt><dd>Your reviews, or a CSV, or a public review page.</dd><dt>What you get back</dt><dd>A reply for each review, matched to its tone, with risky ones flagged for you.</dd></dl><div class="cta"><a class="btn btn-lime" href="/prompts/review-reply-drafter/">Copy the text for ChatGPT or any chatbot</a></div><p class="note-light alts"><a class="alt-link" href="https://proskillpacks.gumroad.com/l/free-shopify-skills?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=free-shopify-skills" data-go="buy/free-shopify-skills">Download free</a> &middot; <a class="alt-link" href="/go/repo/review-reply-drafter/?from=skill" rel="noopener">View on GitHub</a></p><p class="note-light">The download is the free bundle on Gumroad (pay what you want, from $0), which holds a selection of the free skills. All of them are on GitHub under the MIT licence.</p><p class="ogline">It is a text file you paste into ChatGPT, Claude or any chatbot.</p><p class="ogline">Tested on 3 real examples before release. <a href="/how-we-test/">How we test</a>.</p>
   </div>
 </header>
 <main><div class="wrap">
-<section><div class="two">
+<section><details class="ogmore"><summary>More detail on what goes in and what comes out</summary><div class="two">
   <div class="box"><b>What you give it</b><p>Your reviews (pasted, CSV, or a public review page).</p></div>
   <div class="box"><b>What you get</b><p>A reply for each review, matched to its tone. It never promises refunds you didn&#x27;t approve, and it flags reviews that need you personally.</p></div>
-</div></section>
+</div></details></section>
 <section><h2>Before and after</h2><p class="sub">Real public review, quoted in part. Taken from the skill&#x27;s README.</p><div class="prose"><p>A 2★ Judge.me review of a men&#x27;s cologne from a grooming brand:</p>
 <blockquote><p><strong>Before:</strong> &quot;…1/3 of the product had leaked into the packaging during shipping. Good product. Poor packaging.&quot; <em>(no store reply)</em></p></blockquote>
 <blockquote><p><strong>After (skill output, product name replaced with [Product]):</strong> &quot;A third of the cologne ending up in the packaging is a rough way to meet [Product], and we&#x27;re sorry the shipping overshadowed a scent you liked. Contact us at [support email] and we&#x27;ll [REMEDY: replacement / refund / store credit; owner to choose].&quot;</p></blockquote>
@@ -781,7 +796,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <section><h2>Works with</h2><div class="prose"><p>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot. We run our release tests on Claude Sonnet and Opus. Use your assistant&#x27;s strongest model: in our tests, a small, fast model added facts that were not in the source data. No scripts. It works from reviews you paste, a CSV, or a public review page.</p></div></section>
 <section><h2>For people who use AI assistants</h2><div class="prose"><ol><li>Unzip the free download. It holds the free skill folders, including <code>review-reply-drafter</code>, ready-made zips for claude.ai in a <code>claude-ai</code> folder, and a README. Or copy the folder from GitHub.</li><li>Put the <code>review-reply-drafter</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: Customize, Skills, then the plus button, Create skill, Upload a skill, and upload the zip from the <code>claude-ai</code> folder without unzipping it (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words. The skill loads by itself.</li></ol></div></section>
 <section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">Free</span><a class="btn btn-pine" href="/prompts/review-reply-drafter/">Copy the text for ChatGPT or any chatbot</a><a class="btn btn-ghost" href="https://proskillpacks.gumroad.com/l/free-shopify-skills?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=free-shopify-skills" data-go="buy/free-shopify-skills">Download free</a><a class="btn btn-ghost" href="/packs/store-ops-pack/">See the Store Ops Pack, $29</a></div><p>MIT licence. Use it, change it, share it.</p></div></section>
-<section><h2>Related</h2><ul class="links"><li>Free text to paste into ChatGPT or any chatbot: <a href="/prompts/review-reply-drafter/">Review reply drafter prompt for ChatGPT, Claude or Gemini</a></li><li><a href="/skills/product-seo-fixer/">Product page tidy-up</a> ($5): A fix list in priority order, with the exact text to paste, for one product, a collection or your product export file.</li><li><a href="/skills/product-title-cleaner/">Product Title Cleaner</a> (Free): One consistent title style across your products, as a file you can import with only the changed rows.</li><li><a href="/packs/store-ops-pack/">Store Ops Pack</a> ($29): Six skills for the Shopify jobs that eat the week, in one download.</li><li>More for Shopify store owners: <a href="/for/shopify/">Shopify store owners</a></li></ul></section>
+<section><h2>Related</h2><ul class="links"><li>Free text to paste into ChatGPT or any chatbot: <a href="/prompts/review-reply-drafter/">Review reply drafter prompt for ChatGPT, Claude or Gemini</a></li><li><a href="/skills/product-seo-fixer/">Product page tidy-up</a> ($5): A fix list in priority order, with the exact text to paste, for one product, a collection or your product export file.</li><li><a href="/skills/product-title-cleaner/">Product Title Cleaner</a> (Free): One consistent title style across your products, as a file you can import with only the changed rows.</li><li><a href="/packs/store-ops-pack/">Store Ops Pack</a> ($29): Handle weekly Shopify jobs: descriptions, SEO, support, disputes, sales.</li><li>More for Shopify store owners: <a href="/for/shopify/">Shopify store owners</a></li></ul></section>
 <p class="sub"><a href="https://github.com/proskillpacks/skills/issues/new?template=report-problem.yml&amp;skill=review-reply-drafter" rel="noopener">Report a problem with this skill</a> (GitHub, or write to kaiventura.founder@gmail.com).</p>
 </div></main>
 <script>

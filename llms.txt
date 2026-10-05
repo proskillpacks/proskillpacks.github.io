@@ -39,62 +39,62 @@
 - [Customer support](https://proskillpacks.github.io/for/customer-support/)
 
 ## Shopify store owners
-- [Agent-Ready Quick Check](https://proskillpacks.github.io/skills/agent-ready-quick-check/) (Free): Six checks on how AI shopping agents read your store, compared with 99 stores we audited.
-- [Agent-Ready Store Audit](https://proskillpacks.github.io/skills/agent-ready-store-audit/) ($5): A 0 to 100 score for how AI shopping agents read your store, with the top 7 fixes.
-- [BFCM Campaign Kit](https://proskillpacks.github.io/skills/bfcm-campaign-kit/) ($5): Offer maths on your real prices, a dated calendar, 5 emails, 3 SMS and an ops checklist.
-- [Chargeback Evidence Checklist: PDF and skill](https://proskillpacks.github.io/skills/chargeback-evidence-checklist/) (Free): Got a chargeback? One printable PDF page for each reason, or paste the skill into a chatbot: the evidence to gather and where to find it in Shopify.
-- [Chargeback Response Kit for Shopify: fill-in letters for each dispute reason](https://proskillpacks.github.io/skills/chargeback-response-writer/) ($5): Six fill-in response letters by reason, evidence checklists, worked examples and a Start-here PDF, plus an AI prompt and skill. One price, $5.
-- [Product Description Rewriter](https://proskillpacks.github.io/skills/product-description-rewriter/) ($5): Clean Shopify HTML descriptions with an SEO title and meta description, for one product or a collection.
-- [Product SEO Fixer](https://proskillpacks.github.io/skills/product-seo-fixer/) ($5): A prioritised fix list with the exact text to paste, for a product, a collection or a product export CSV.
-- [Product Title Cleaner](https://proskillpacks.github.io/skills/product-title-cleaner/) (Free): One consistent title pattern across the catalogue, as an import CSV of changed rows only.
-- [Review Reply Drafter](https://proskillpacks.github.io/skills/review-reply-drafter/) (Free): A reply for every review, matched to its tone, with the risky ones flagged for you.
-- [Alt Text Writer](https://proskillpacks.github.io/skills/shopify-alt-text-writer/) (Free): Alt text for every product image, written while looking at the photo, as an import CSV.
-- [Policy Checker](https://proskillpacks.github.io/skills/shopify-policy-checker/) (Free): Policy gaps and contradictions across refund, shipping, privacy and terms, with fixes to paste.
-- [Store Ops Pack](https://proskillpacks.github.io/packs/store-ops-pack/) ($29): Six skills for the Shopify jobs that eat the week, in one download.
-- [Support Macro Writer](https://proskillpacks.github.io/skills/support-macro-writer/) ($5): Ready-to-import replies built from your real shipping and returns policies.
+- [Agent-Ready Quick Check](https://proskillpacks.github.io/skills/agent-ready-quick-check/) (Free): See how AI shopping assistants read your Shopify store, in six checks.
+- [Agent-Ready Store Audit](https://proskillpacks.github.io/skills/agent-ready-store-audit/) ($5): Score how AI shopping assistants read your Shopify store.
+- [BFCM Campaign Kit](https://proskillpacks.github.io/skills/bfcm-campaign-kit/) ($5): Plan your Black Friday and Cyber Monday sale on your own prices.
+- [Chargeback Evidence Checklist: PDF and skill](https://proskillpacks.github.io/skills/chargeback-evidence-checklist/) (Free): Know what evidence to gather when a customer disputes a payment.
+- [Chargeback Response Kit for Shopify: fill-in letters for each dispute reason](https://proskillpacks.github.io/skills/chargeback-response-writer/) ($5): Answer a Shopify chargeback with the right letter for the reason.
+- [Product Description Rewriter](https://proskillpacks.github.io/skills/product-description-rewriter/) ($5): Rewrite thin Shopify product descriptions so they are ready to paste.
+- [Product SEO Fixer](https://proskillpacks.github.io/skills/product-seo-fixer/) ($5): Fix SEO problems in your Shopify products, with text to paste.
+- [Product Title Cleaner](https://proskillpacks.github.io/skills/product-title-cleaner/) (Free): Give every product in your Shopify store the same tidy title pattern.
+- [Review Reply Drafter](https://proskillpacks.github.io/skills/review-reply-drafter/) (Free): Reply to customer reviews, happy or not, without promising anything.
+- [Alt Text Writer](https://proskillpacks.github.io/skills/shopify-alt-text-writer/) (Free): Write alt text for every product image in your Shopify store.
+- [Policy Checker](https://proskillpacks.github.io/skills/shopify-policy-checker/) (Free): Find gaps and contradictions in your store's refund and shipping policies.
+- [Store Ops Pack](https://proskillpacks.github.io/packs/store-ops-pack/) ($29): Handle weekly Shopify jobs: descriptions, SEO, support, disputes, sales.
+- [Support Macro Writer](https://proskillpacks.github.io/skills/support-macro-writer/) ($5): Write ready-to-import support replies from your Shopify policies.
 
 ## Freelancers and consultants
-- [Late Payment Chaser (UK)](https://proskillpacks.github.io/skills/late-payment-chaser-uk/) (Free): One unpaid invoice in. The statutory interest and fixed recovery sum worked out with a script, and three reminder emails out. UK business debts only.
+- [Late Payment Chaser (UK)](https://proskillpacks.github.io/skills/late-payment-chaser-uk/) (Free): Chase a late invoice, from polite nudge to final reminder.
 
 ## Short-term rental hosts
-- [Host Ops Pack](https://proskillpacks.github.io/packs/host-ops-pack/) ($29): Six skills for the listing, review and house-rules jobs of hosts who run their own listings.
-- [Listing Rewriter](https://proskillpacks.github.io/skills/listing-rewriter/) ($5): Three titles under 50 characters and a description within 500, built only from your own facts.
+- [Host Ops Pack](https://proskillpacks.github.io/packs/host-ops-pack/) ($29): Run your holiday-let listing: audit, rewrite, reviews and house rules.
+- [Listing Rewriter](https://proskillpacks.github.io/skills/listing-rewriter/) ($5): Rewrite your holiday-let listing title and description.
 
 ## Marketers and agencies
-- [AI Search Readiness Check](https://proskillpacks.github.io/skills/ai-search-readiness-check/) (Free): Can ChatGPT, Perplexity and Google read a website? A score out of 100 from 8 checks, the evidence and the fixes in order.
-- [Search Intent Page Brief](https://proskillpacks.github.io/skills/search-intent-page-brief/) (Free): Give it a keyword and the pages that rank. Get the search intent, a coverage table, the gaps and an outline. Free, MIT-licensed.
+- [AI Search Readiness Check](https://proskillpacks.github.io/skills/ai-search-readiness-check/) (Free): Check whether ChatGPT, Perplexity and Google can read your website.
+- [Search Intent Page Brief](https://proskillpacks.github.io/skills/search-intent-page-brief/) (Free): Plan a page that matches what searchers want, from pages that rank.
 
 ## Developers
-- [Accessibility Quick Audit](https://proskillpacks.github.io/skills/accessibility-quick-audit/) (Free): Give it a page's HTML or components. Get accessibility issues ranked by impact, with the WCAG criterion, the code and a fix. Free, MIT-licensed.
-- [Agent Browse for local models (Qwen)](https://proskillpacks.github.io/skills/agent-browse-qwen/) (Free): Agent Browse tuned for Qwen3.8-27B and similar local models that guess selectors and URLs. On the selection split: 48 of 48 correct, against 21 of 24 with no skill. Held-out test pending.
-- [Agent Browse](https://proskillpacks.github.io/skills/agent-browse/) (Free): A browsing skill for the agent-browser CLI, trained against scored tasks instead of hand-written. About 14% cheaper per task than no skill on 11 unseen tasks, same accuracy.
-- [Changelog from Commits](https://proskillpacks.github.io/skills/changelog-from-commits/) (Free): Give it a commit range or a pasted git log. Get a user-facing changelog with the commit behind every line, and the vague commits flagged.
-- [PR Description and Review Prep](https://proskillpacks.github.io/skills/pr-description-and-review-prep/) (Free): Run it on your branch. Get a PR title, summary, risk notes and test plan from the diff, plus the questions a reviewer will ask. Free, MIT-licensed.
-- [README First-Run Check](https://proskillpacks.github.io/skills/readme-first-run-check/) (Free): Point it at a repo. It follows the README like a new user and checks every step against the repo: OK, BROKEN, MISSING or UNVERIFIED, with evidence and the README edits that fix it.
-- [Skill Portability Check](https://proskillpacks.github.io/skills/skill-portability-check/) (Free): A free checker for SKILL.md folders: strict-YAML trap, portable keys, vendor tool names, missing fallbacks, broken links. One Python file, exit code for CI.
-- [Test Gap Finder](https://proskillpacks.github.io/skills/test-gap-finder/) (Free): Give it a diff and the tests. Get each behaviour the change adds marked Covered, Not covered or Unknown, and ranked test cases for the gaps.
+- [Accessibility Quick Audit](https://proskillpacks.github.io/skills/accessibility-quick-audit/) (Free): Find the accessibility problems on a web page and get the fix for each.
+- [Agent Browse for local models (Qwen)](https://proskillpacks.github.io/skills/agent-browse-qwen/) (Free): Stop a local Qwen model guessing web addresses while it browses.
+- [Agent Browse](https://proskillpacks.github.io/skills/agent-browse/) (Free): Get an AI assistant to do a task in a real web browser in fewer steps.
+- [Changelog from Commits](https://proskillpacks.github.io/skills/changelog-from-commits/) (Free): Turn a list of code changes into release notes people can read.
+- [PR Description and Review Prep](https://proskillpacks.github.io/skills/pr-description-and-review-prep/) (Free): Write a pull request description from your code changes.
+- [README First-Run Check](https://proskillpacks.github.io/skills/readme-first-run-check/) (Free): Find where a project's setup guide would trip up a new user.
+- [Skill Portability Check](https://proskillpacks.github.io/skills/skill-portability-check/) (Free): Check that a skill file will load in other AI assistants.
+- [Test Gap Finder](https://proskillpacks.github.io/skills/test-gap-finder/) (Free): Find what a code change leaves untested.
 
 ## Data and spreadsheets
-- [CSV Profile and Sanity Check](https://proskillpacks.github.io/skills/csv-profile-and-sanity-check/) (Free): Give it a CSV. Get a read-only profile of every column, flags and questions for the data's owner. Free, MIT-licensed.
-- [Spreadsheet Formula and Cleanup](https://proskillpacks.github.io/skills/spreadsheet-formula-and-cleanup/) ($9): Describe the result you want and paste a few rows. Get a formula that fits your columns, tested on your sample, with the edge cases listed.
+- [CSV Profile and Sanity Check](https://proskillpacks.github.io/skills/csv-profile-and-sanity-check/) (Free): Check a CSV file for problems before you rely on it.
+- [Spreadsheet Formula and Cleanup](https://proskillpacks.github.io/skills/spreadsheet-formula-and-cleanup/) ($9): Get a spreadsheet formula that works on your own columns.
 
 ## Job seekers and careers
-- [Job Post Decoder](https://proskillpacks.github.io/skills/job-post-decoder/) (Free): Paste a job post. Get what the job is, firm and wish requirements, what is missing and questions for the recruiter. Free, MIT-licensed.
-- [Resume Bullet Rewriter](https://proskillpacks.github.io/skills/resume-bullet-rewriter/) ($9): Paste your resume bullets and a job post. Get clearer bullets with every unconfirmed number marked, and a table of what the job asks that you do not yet show.
+- [Job Post Decoder](https://proskillpacks.github.io/skills/job-post-decoder/) (Free): Read a job post for what the job really is and what to ask.
+- [Resume Bullet Rewriter](https://proskillpacks.github.io/skills/resume-bullet-rewriter/) ($9): Rewrite your resume bullets for a specific job.
 
 ## Sales and outreach
-- [Cold Email Checker](https://proskillpacks.github.io/skills/cold-email-checker/) (Free): Give it a cold email draft and the prospect's page text. Get a verdict, a claims table and a tightened version. Free, MIT-licensed.
-- [Cold Email from a Website](https://proskillpacks.github.io/skills/cold-email-from-a-website/) ($9): Give it a prospect's URL and what you sell. Get a 3-email sequence built on what is actually on their site, with every observation sourced.
+- [Cold Email Checker](https://proskillpacks.github.io/skills/cold-email-checker/) (Free): Check a cold email for claims you cannot back up before you send it.
+- [Cold Email from a Website](https://proskillpacks.github.io/skills/cold-email-from-a-website/) ($9): Write a cold email sequence based on what is on the prospect's website.
 
 ## Content and writing
-- [Fact-Claim Checker](https://proskillpacks.github.io/skills/fact-claim-checker/) (Free): Paste a draft before you publish. Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.
-- [Voice-Matched Draft Editor](https://proskillpacks.github.io/skills/voice-matched-draft-editor/) ($9): Give it two or three things you wrote and a draft. It edits the draft to sound like you, keeps every fact, and flags claims it cannot support.
+- [Fact-Claim Checker](https://proskillpacks.github.io/skills/fact-claim-checker/) (Free): Find the claims in a draft that need a source before you publish.
+- [Voice-Matched Draft Editor](https://proskillpacks.github.io/skills/voice-matched-draft-editor/) ($9): Edit a draft so it sounds like you wrote it.
 
 ## Finance and small-business admin
-- [Invoice Checker](https://proskillpacks.github.io/skills/invoice-checker/) (Free): Give it an invoice. Get the totals recomputed, every difference, missing fields and consistency flags. No tax advice. Free, MIT-licensed.
+- [Invoice Checker](https://proskillpacks.github.io/skills/invoice-checker/) (Free): Check an invoice for wrong totals and missing fields before sending.
 
 ## Customer support
-- [Angry Customer Reply Check](https://proskillpacks.github.io/skills/angry-customer-reply-check/) (Free): Give it the complaint, your draft reply and your policy. Get a check of promises, facts and tone, and a repaired draft. Free, MIT-licensed.
+- [Angry Customer Reply Check](https://proskillpacks.github.io/skills/angry-customer-reply-check/) (Free): Check your reply to an angry customer before you send it.
 
 ## Free prompts
 - [Accessibility audit prompt for ChatGPT, Claude or Gemini](https://proskillpacks.github.io/prompts/accessibility-quick-audit/)

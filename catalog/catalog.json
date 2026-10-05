@@ -13,7 +13,7 @@
    "free": true,
    "url": "/skills/agent-browse-qwen/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/agent-browse-qwen",
-   "summary": "Agent Browse tuned for Qwen3.8-27B and similar local models that guess selectors and URLs. On the selection split: 48 of 48 correct, against 21 of 24 with no skill. Held-out test pending.",
+   "summary": "Stop a local Qwen model guessing web addresses while it browses.",
    "give": "A browsing task and the agent-browser CLI.",
    "get": "A local model like Qwen3.8-27B stops guessing addresses and selectors, and gets the task done in fewer tries.",
    "jobs": [
@@ -35,7 +35,7 @@
    "free": false,
    "url": "/skills/spreadsheet-formula-and-cleanup/",
    "buy_url": "https://proskillpacks.gumroad.com/l/spreadsheet-formula-and-cleanup",
-   "summary": "Describe the result you want and paste a few rows. Get a formula that fits your columns, tested on your sample, with the edge cases listed.",
+   "summary": "Get a spreadsheet formula that works on your own columns.",
    "give": "Describe the result you want, paste a few real rows and name your app.",
    "get": "A formula in your real columns, a test table on your sample, and the edge cases.",
    "jobs": [
@@ -58,7 +58,7 @@
    "free": false,
    "url": "/skills/resume-bullet-rewriter/",
    "buy_url": "https://proskillpacks.gumroad.com/l/resume-bullet-rewriter",
-   "summary": "Paste your resume bullets and a job post. Get clearer bullets with every unconfirmed number marked, and a table of what the job asks that you do not yet show.",
+   "summary": "Rewrite your resume bullets for a specific job.",
    "give": "Paste your resume bullets and a job post.",
    "get": "Clearer bullets with every missing number marked for you to confirm, and a table of what the job asks that you do not yet show.",
    "jobs": [
@@ -81,7 +81,7 @@
    "free": false,
    "url": "/skills/cold-email-from-a-website/",
    "buy_url": "https://proskillpacks.gumroad.com/l/cold-email-from-a-website",
-   "summary": "Give it a prospect's URL and what you sell. Get a 3-email sequence built on what is actually on their site, with every observation sourced.",
+   "summary": "Write a cold email sequence based on what is on the prospect's website.",
    "give": "A prospect's website and a line on what you sell.",
    "get": "A three-email sequence and two subject lines, each built on something visible on their site, with the page it came from.",
    "jobs": [
@@ -104,7 +104,7 @@
    "free": false,
    "url": "/skills/voice-matched-draft-editor/",
    "buy_url": "https://proskillpacks.gumroad.com/l/voice-matched-draft-editor",
-   "summary": "Give it two or three things you wrote and a draft. It edits the draft to sound like you, keeps every fact, and flags claims it cannot support.",
+   "summary": "Edit a draft so it sounds like you wrote it.",
    "give": "Two or three things you wrote and a draft.",
    "get": "The draft edited to sound like you, a list of what changed, and flags on claims it cannot support.",
    "jobs": [
@@ -126,7 +126,7 @@
    "free": false,
    "url": "/packs/store-ops-pack/",
    "buy_url": "https://proskillpacks.gumroad.com/l/store-ops-pack",
-   "summary": "Six skills for the Shopify jobs that eat the week, in one download.",
+   "summary": "Handle weekly Shopify jobs: descriptions, SEO, support, disputes, sales.",
    "give": "",
    "get": "",
    "jobs": [],
@@ -153,7 +153,7 @@
    "free": true,
    "url": "/skills/late-payment-chaser-uk/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/freelancers/late-payment-chaser-uk",
-   "summary": "One unpaid invoice in. The statutory interest and fixed recovery sum worked out with a script, and three reminder emails out. UK business debts only.",
+   "summary": "Chase a late invoice, from polite nudge to final reminder.",
    "give": "One unpaid business invoice (amount, invoice date, and the due date if you agreed one).",
    "get": "What you can claim under UK late-payment law, with the working and official sources, and three reminder emails to send.",
    "jobs": [
@@ -176,7 +176,7 @@
    "free": false,
    "url": "/packs/host-ops-pack/",
    "buy_url": "https://proskillpacks.gumroad.com/l/host-ops-pack",
-   "summary": "Six skills for the listing, review and house-rules jobs of hosts who run their own listings.",
+   "summary": "Run your holiday-let listing: audit, rewrite, reviews and house rules.",
    "give": "",
    "get": "",
    "jobs": [],
@@ -198,7 +198,7 @@
    "free": true,
    "url": "/skills/search-intent-page-brief/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/marketing-seo/search-intent-page-brief",
-   "summary": "Give it a keyword and the pages that rank. Get the search intent, a coverage table, the gaps and an outline. Free, MIT-licensed.",
+   "summary": "Plan a page that matches what searchers want, from pages that rank.",
    "give": "A target keyword and the three to five pages that rank for it (URLs, or pasted headings).",
    "get": "It records each page's structure, classifies the search intent from what ranks, builds a coverage table with counts, names the gaps as its own judgement, and drafts an outline, questions to answer and a meta description.",
    "jobs": [
@@ -221,7 +221,7 @@
    "free": true,
    "url": "/skills/invoice-checker/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/finance/invoice-checker",
-   "summary": "Give it an invoice. Get the totals recomputed, every difference, missing fields and consistency flags. No tax advice. Free, MIT-licensed.",
+   "summary": "Check an invoice for wrong totals and missing fields before sending.",
    "give": "An invoice, yours or one you received.",
    "get": "A small script (Python 3 standard library, exact decimal arithmetic) recomputes every line, the subtotal, the discount, the tax and the total, and lists every difference. It lists common fields that are missing and flags date, currency and rounding problems. It gives no tax advice.",
    "jobs": [
@@ -244,7 +244,7 @@
    "free": true,
    "url": "/skills/angry-customer-reply-check/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/support/angry-customer-reply-check",
-   "summary": "Give it the complaint, your draft reply and your policy. Get a check of promises, facts and tone, and a repaired draft. Free, MIT-licensed.",
+   "summary": "Check your reply to an angry customer before you send it.",
    "give": "The customer's message, your draft reply and your policy.",
    "get": "It lists what the customer raised and whether the draft answers it, tests every promise against your policy, checks the facts, flags blame, defensive phrases and empty apologies with your exact words, checks there is a next step, and returns a repaired draft. Open decisions are marked [DECIDE]. It never adds a refund or timeline you did not give it.",
    "jobs": [
@@ -267,7 +267,7 @@
    "free": true,
    "url": "/skills/agent-browse/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/agent-browse",
-   "summary": "A browsing skill for the agent-browser CLI, trained against scored tasks instead of hand-written. About 14% cheaper per task than no skill on 11 unseen tasks, same accuracy.",
+   "summary": "Get an AI assistant to do a task in a real web browser in fewer steps.",
    "give": "A browsing task and the agent-browser CLI.",
    "get": "The task done in fewer tool calls: forms, logins, dialogs, uploads and paginated data.",
    "jobs": [
@@ -289,7 +289,7 @@
    "free": true,
    "url": "/skills/csv-profile-and-sanity-check/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/data/csv-profile-and-sanity-check",
-   "summary": "Give it a CSV. Get a read-only profile of every column, flags and questions for the data's owner. Free, MIT-licensed.",
+   "summary": "Check a CSV file for problems before you rely on it.",
    "give": "A CSV.",
    "get": "It runs a small read-only script (Python 3 standard library) and reports rows, columns, each column's type, blanks, distinct values, ranges, duplicates, mixed formats, stray spaces, case variants and outliers, then lists questions to ask the data's owner. Without code execution it profiles a pasted sample and says so.",
    "jobs": [
@@ -312,7 +312,7 @@
    "free": true,
    "url": "/skills/job-post-decoder/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/careers/job-post-decoder",
-   "summary": "Paste a job post. Get what the job is, firm and wish requirements, what is missing and questions for the recruiter. Free, MIT-licensed.",
+   "summary": "Read a job post for what the job really is and what to ask.",
    "give": "Paste a job post.",
    "get": "It says in plain words what the job is, sorts the requirements into firm, wish and unclear with quotes, lists what the post leaves out (pay, location, hours, team), points out phrases worth a question, and gives you six to eight questions for the recruiter. If you add your background, it says where the fit is strong or weak and what to lead with. It never says anything about the employer beyond the post.",
    "jobs": [
@@ -335,7 +335,7 @@
    "free": true,
    "url": "/skills/cold-email-checker/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/sales/cold-email-checker",
-   "summary": "Give it a cold email draft and the prospect's page text. Get a verdict, a claims table and a tightened version. Free, MIT-licensed.",
+   "summary": "Check a cold email for claims you cannot back up before you send it.",
    "give": "A cold email draft and the text of the prospect's page.",
    "get": "It tests every claim about the prospect against that text, flags claims about you that need proof, checks the subject line, the single ask and the length, and lists the commercial email basics from the US FTC's CAN-SPAM guide that the draft is missing. You get a verdict, a claims table, quoted issues and a tightened version with unsupported claims removed.",
    "jobs": [
@@ -358,7 +358,7 @@
    "free": true,
    "url": "/skills/fact-claim-checker/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker",
-   "summary": "Paste a draft before you publish. Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.",
+   "summary": "Find the claims in a draft that need a source before you publish.",
    "give": "Paste a draft before you publish.",
    "get": "Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.",
    "jobs": [
@@ -380,7 +380,7 @@
    "free": true,
    "url": "/skills/review-reply-drafter/",
    "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
-   "summary": "A reply for every review, matched to its tone, with the risky ones flagged for you.",
+   "summary": "Reply to customer reviews, happy or not, without promising anything.",
    "give": "Your reviews (pasted, CSV, or a public review page).",
    "get": "A reply for each review, matched to its tone. It never promises refunds you didn't approve, and it flags reviews that need you personally.",
    "jobs": [
@@ -402,7 +402,7 @@
    "free": false,
    "url": "/skills/listing-rewriter/",
    "buy_url": "https://proskillpacks.gumroad.com/l/listing-rewriter",
-   "summary": "Three titles under 50 characters and a description within 500, built only from your own facts.",
+   "summary": "Rewrite your holiday-let listing title and description.",
    "give": "Paste your listing title, description and amenities.",
    "get": "Three titles under 50 characters, a description within 500 characters and the section fields, built only from your own facts, plus a list of anything to confirm.",
    "jobs": [
@@ -424,7 +424,7 @@
    "free": true,
    "url": "/skills/ai-search-readiness-check/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/marketing-seo/ai-search-readiness-check",
-   "summary": "Can ChatGPT, Perplexity and Google read a website? A score out of 100 from 8 checks, the evidence and the fixes in order.",
+   "summary": "Check whether ChatGPT, Perplexity and Google can read your website.",
    "give": "A website URL.",
    "get": "A 0 to 100 score from 8 checks on whether AI search tools can read the site, the evidence for each check, and a fix list in order.",
    "jobs": [
@@ -446,7 +446,7 @@
    "free": true,
    "url": "/skills/test-gap-finder/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/test-gap-finder",
-   "summary": "Give it a diff and the tests. Get each behaviour the change adds marked Covered, Not covered or Unknown, and ranked test cases for the gaps.",
+   "summary": "Find what a code change leaves untested.",
    "give": "A diff and the tests.",
    "get": "Get each behaviour the change adds marked Covered, Not covered or Unknown, and ranked test cases for the gaps.",
    "jobs": [
@@ -468,7 +468,7 @@
    "free": false,
    "url": "/skills/support-macro-writer/",
    "buy_url": "https://proskillpacks.gumroad.com/l/support-macro-writer",
-   "summary": "Ready-to-import replies built from your real shipping and returns policies.",
+   "summary": "Write ready-to-import support replies from your Shopify policies.",
    "give": "Your store URL.",
    "get": "It reads your real refund and shipping policies and writes ready-to-import support replies, starting with the hard cases: stuck in transit, \"delivered\" but not received, address changes, cancellations.",
    "jobs": [
@@ -490,7 +490,7 @@
    "free": true,
    "url": "/skills/skill-portability-check/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/skill-portability-check",
-   "summary": "A free checker for SKILL.md folders: strict-YAML trap, portable keys, vendor tool names, missing fallbacks, broken links. One Python file, exit code for CI.",
+   "summary": "Check that a skill file will load in other AI assistants.",
    "give": "Point it at a skill folder or a repository of skills.",
    "get": "A per-skill table of errors and warnings, and the exact fixes.",
    "jobs": [
@@ -512,7 +512,7 @@
    "free": true,
    "url": "/skills/product-title-cleaner/",
    "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
-   "summary": "One consistent title pattern across the catalogue, as an import CSV of changed rows only.",
+   "summary": "Give every product in your Shopify store the same tidy title pattern.",
    "give": "Your store, a collection URL, or a product export CSV.",
    "get": "One consistent title pattern across your catalogue, as a `URL handle,Title` import CSV (changed rows only). It never creates duplicate titles.",
    "jobs": [
@@ -534,7 +534,7 @@
    "free": true,
    "url": "/skills/readme-first-run-check/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/readme-first-run-check",
-   "summary": "Point it at a repo. It follows the README like a new user and checks every step against the repo: OK, BROKEN, MISSING or UNVERIFIED, with evidence and the README edits that fix it.",
+   "summary": "Find where a project's setup guide would trip up a new user.",
    "give": "Point it at a repo.",
    "get": "It follows the README like a new user and checks every step against the repo: OK, BROKEN, MISSING or UNVERIFIED, with evidence and the README edits that fix it.",
    "jobs": [
@@ -556,7 +556,7 @@
    "free": false,
    "url": "/skills/product-seo-fixer/",
    "buy_url": "https://proskillpacks.gumroad.com/l/product-seo-fixer",
-   "summary": "A prioritised fix list with the exact text to paste, for a product, a collection or a product export CSV.",
+   "summary": "Fix SEO problems in your Shopify products, with text to paste.",
    "give": "A product URL, a collection URL, or your product export CSV.",
    "get": "A prioritised SEO fix list with the exact text to paste and where. Collection mode also writes the collection intro and SEO fields; CSV mode returns a re-importable CSV.",
    "jobs": [
@@ -579,7 +579,7 @@
    "free": true,
    "url": "/skills/pr-description-and-review-prep/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/pr-description-and-review-prep",
-   "summary": "Run it on your branch. Get a PR title, summary, risk notes and test plan from the diff, plus the questions a reviewer will ask. Free, MIT-licensed.",
+   "summary": "Write a pull request description from your code changes.",
    "give": "Run it in your repository, or paste a diff.",
    "get": "A ready-to-paste PR title and summary, risk notes, a test plan from what is stated, and the questions a reviewer is likely to ask.",
    "jobs": [
@@ -602,7 +602,7 @@
    "free": true,
    "url": "/skills/shopify-policy-checker/",
    "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
-   "summary": "Policy gaps and contradictions across refund, shipping, privacy and terms, with fixes to paste.",
+   "summary": "Find gaps and contradictions in your store's refund and shipping policies.",
    "give": "Your store URL.",
    "get": "A scored audit of your refund, shipping, privacy, terms and contact policies. It flags missing items and contradictions with your FAQ and banners, and gives fixes you can paste.",
    "jobs": [
@@ -624,7 +624,7 @@
    "free": true,
    "url": "/skills/changelog-from-commits/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/changelog-from-commits",
-   "summary": "Give it a commit range or a pasted git log. Get a user-facing changelog with the commit behind every line, and the vague commits flagged.",
+   "summary": "Turn a list of code changes into release notes people can read.",
    "give": "A commit range or a pasted git log.",
    "get": "Get a user-facing changelog with the commit behind every line, and the vague commits flagged.",
    "jobs": [
@@ -646,7 +646,7 @@
    "free": false,
    "url": "/skills/product-description-rewriter/",
    "buy_url": "https://proskillpacks.gumroad.com/l/product-description-rewriter",
-   "summary": "Clean Shopify HTML descriptions with an SEO title and meta description, for one product or a collection.",
+   "summary": "Rewrite thin Shopify product descriptions so they are ready to paste.",
    "give": "A product URL, pasted text, a collection, or your product export CSV.",
    "get": "Clean Shopify HTML descriptions with an SEO title (≤ 60 characters) and meta description (≤ 155). Bulk runs produce an import CSV.",
    "jobs": [
@@ -668,7 +668,7 @@
    "free": true,
    "url": "/skills/accessibility-quick-audit/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/accessibility-quick-audit",
-   "summary": "Give it a page's HTML or components. Get accessibility issues ranked by impact, with the WCAG criterion, the code and a fix. Free, MIT-licensed.",
+   "summary": "Find the accessibility problems on a web page and get the fix for each.",
    "give": "A URL, pasted HTML or component files.",
    "get": "It checks text alternatives, form labels, link and button names, headings and landmarks, keyboard and focus, ARIA, contrast where the colours are visible, media and zoom.",
    "jobs": [
@@ -691,7 +691,7 @@
    "free": true,
    "url": "/skills/chargeback-evidence-checklist/",
    "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/ecommerce/chargeback-evidence-checklist",
-   "summary": "Got a chargeback? One printable PDF page for each reason, or paste the skill into a chatbot: the evidence to gather and where to find it in Shopify.",
+   "summary": "Know what evidence to gather when a customer disputes a payment.",
    "give": "The dispute reason.",
    "get": "The evidence to gather for that reason, what you already have, and where to find each piece in Shopify.",
    "jobs": [
@@ -713,7 +713,7 @@
    "free": false,
    "url": "/skills/chargeback-response-writer/",
    "buy_url": "https://proskillpacks.gumroad.com/l/chargeback-response-writer",
-   "summary": "Six fill-in response letters by reason, evidence checklists, worked examples and a Start-here PDF, plus an AI prompt and skill. One price, $5.",
+   "summary": "Answer a Shopify chargeback with the right letter for the reason.",
    "give": "The dispute details plus the evidence you actually have.",
    "get": "A response matched to the reason code, a checklist of what to attach, and a list of gaps. It never invents evidence, and it tells you when accepting is cheaper.",
    "jobs": [
@@ -735,7 +735,7 @@
    "free": true,
    "url": "/skills/shopify-alt-text-writer/",
    "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
-   "summary": "Alt text for every product image, written while looking at the photo, as an import CSV.",
+   "summary": "Write alt text for every product image in your Shopify store.",
    "give": "Your store URL, a product URL, or your product export CSV.",
    "get": "Alt text for every product image, written while looking at the photo. Comes as a Shopify import CSV, a review sheet, and a paste-by-hand list for products with variant images.",
    "jobs": [
@@ -757,7 +757,7 @@
    "free": false,
    "url": "/skills/bfcm-campaign-kit/",
    "buy_url": "https://proskillpacks.gumroad.com/l/bfcm-campaign-kit",
-   "summary": "Offer maths on your real prices, a dated calendar, 5 emails, 3 SMS and an ops checklist.",
+   "summary": "Plan your Black Friday and Cyber Monday sale on your own prices.",
    "give": "Your store URL (plus your margin, if you know it).",
    "get": "A Black Friday / Cyber Monday plan: offer maths on your real prices, a dated US/UK calendar, 5 emails, 3 SMS, banners and an ops checklist. No fake urgency.",
    "jobs": [
@@ -779,7 +779,7 @@
    "free": true,
    "url": "/skills/agent-ready-quick-check/",
    "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
-   "summary": "Six checks on how AI shopping agents read your store, compared with 99 stores we audited.",
+   "summary": "See how AI shopping assistants read your Shopify store, in six checks.",
    "give": "Your store URL.",
    "get": "A 6-check scorecard of how well AI shopping agents (ChatGPT, Perplexity, Gemini, Copilot, Claude) can read your store. Each check is compared with 99 Shopify stores we audited in October 2026.",
    "jobs": [
@@ -801,7 +801,7 @@
    "free": false,
    "url": "/skills/agent-ready-store-audit/",
    "buy_url": "https://proskillpacks.gumroad.com/l/agent-ready-store-audit",
-   "summary": "A 0 to 100 score for how AI shopping agents read your store, with the top 7 fixes.",
+   "summary": "Score how AI shopping assistants read your Shopify store.",
    "give": "Your store URL.",
    "get": "A score out of 100 for how well AI shopping agents (ChatGPT, Gemini, Copilot and others) can find, understand and buy from your store, an agent's-eye test of real buyer questions, and a ranked fix list.",
    "jobs": [
