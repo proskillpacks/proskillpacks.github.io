@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Questions and answers | Pro Skill Packs</title>
-<meta name="description" content="Answers on what a skill is, which assistants work, how to use one without a terminal, the licence, refunds, updates and how to contact us.">
+<meta name="description" content="Answers on what a workflow is, which assistants work, how to use one without a terminal, the licence, refunds, updates and how to contact us.">
 
 <link rel="canonical" href="https://proskillpacks.github.io/faq/">
 <link rel="icon" href="/assets/avatar.png">
@@ -15,12 +15,12 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/faq/">
 <meta property="og:title" content="Questions and answers">
-<meta property="og:description" content="Answers on what a skill is, which assistants work, how to use one without a terminal, the licence, refunds, updates and how to contact us.">
+<meta property="og:description" content="Answers on what a workflow is, which assistants work, how to use one without a terminal, the licence, refunds, updates and how to contact us.">
 <meta property="og:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="Questions and answers">
-<meta name="twitter:description" content="Answers on what a skill is, which assistants work, how to use one without a terminal, the licence, refunds, updates and how to contact us.">
+<meta name="twitter:description" content="Answers on what a workflow is, which assistants work, how to use one without a terminal, the licence, refunds, updates and how to contact us.">
 <meta name="twitter:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
@@ -81,7 +81,7 @@
    "name": "Are updates free?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Yes. Updates to the version you bought are free: download the new file again from your Gumroad library. The same goes for the All-Access Bundle once it is on sale: when we add skills to it, the zip in your library is replaced with a newer version at no cost."
+    "text": "Yes. Updates to the version you bought are free: download the new file again from your Gumroad library. The same goes for the all-access bundle once it is on sale: when we add skills to it, the zip in your library is replaced with a newer version at no cost."
    }
   },
   {
@@ -419,7 +419,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -680,6 +680,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -1022,6 +1029,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -1058,12 +1072,12 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     
   </div>
 </header>
-<main><div class="wrap"><section><div class="prose"><h2>What is an Agent Skill?</h2><p>A folder with a plain-text SKILL.md file, in an open format, that tells an AI assistant how to do one job from start to finish. You give it your text or a link and it follows the instructions. Each of our skills also has a prompt.md that you can paste into a chatbot.</p><h2>Which assistants does it work with?</h2><p>Any assistant that reads SKILL.md skills, such as Claude, Codex, Gemini CLI, Cursor and GitHub Copilot, and any chatbot through the paste-in prompt. Our tests ran mostly on Claude Sonnet; each skill page says what it was tested on. A stronger model is less likely to add facts that are not in your text.</p><h2>Can I use it without a terminal?</h2><p>Yes. Open the skill&#x27;s prompt, copy it into ChatGPT, Claude, Gemini or any chatbot, and paste your own material where it says. Our free prompts are at <a href="/prompts/">/prompts/</a>. The prompt version cannot fetch web pages or run scripts, so you paste in the text a skill would have fetched.</p><h2>What is free and what is paid?</h2><p>Free skills are on GitHub under the MIT licence, with a free prompt page for each. Paid skills and packs are sold on Gumroad as one-time payments. Prices are in US dollars; Gumroad shows your local currency and any VAT in the total before you pay. Check that total in the cart.</p><h2>What does the paid licence allow?</h2><p>You may install, use and change the files for your own work, and the output belongs to you. You may not share, resell or publish the files. Agencies that want to use a skill for several clients should contact us for a multi-client licence.</p><h2>What is the refund policy?</h2><p>Our Gumroad product pages state a 30-day money back guarantee: if the skill does not do what the page says, reply to your receipt within 30 days and you get a full refund, no questions and no forms. You can also write to kaiventura.founder@gmail.com.</p><h2>Are updates free?</h2><p>Yes. Updates to the version you bought are free: download the new file again from your Gumroad library. The same goes for the All-Access Bundle once it is on sale: when we add skills to it, the zip in your library is replaced with a newer version at no cost.</p><h2>How are skills tested?</h2><p>Each skill is run on real public examples before release, and we read the output against the source and fix what is wrong. The example is shown on the skill&#x27;s page. Some skills were also scored against a written rubric, and the page says which. Read <a href="/how-we-test/">how we test</a>.</p><h2>Can I ask for a skill you do not have yet?</h2><p>Yes. Use the <a href="/request/">request page</a>. Tell us the job, what you paste in and what you want back. We read every request, but we cannot promise a date or that we will build it.</p><h2>How do I ask a question or report a wrong output?</h2><p>Write to kaiventura.founder@gmail.com, or open an issue on the GitHub repo for a free skill. Include the input you used and what went wrong.</p></div></section><section class="signup" id="notify">
+<main><div class="wrap"><section><div class="prose"><h2>What is an Agent Skill?</h2><p>A folder with a plain-text SKILL.md file, in an open format, that tells an AI assistant how to do one job from start to finish. You give it your text or a link and it follows the instructions. Each of our skills also has a prompt.md that you can paste into a chatbot.</p><h2>Which assistants does it work with?</h2><p>Any assistant that reads SKILL.md skills, such as Claude, Codex, Gemini CLI, Cursor and GitHub Copilot, and any chatbot through the paste-in prompt. Our tests ran mostly on Claude Sonnet; each skill page says what it was tested on. A stronger model is less likely to add facts that are not in your text.</p><h2>Can I use it without a terminal?</h2><p>Yes. Open the workflow&#x27;s prompt, copy it into ChatGPT, Claude, Gemini or any chatbot, and paste your own material where it says. Our free prompts are at <a href="/prompts/">/prompts/</a>. The prompt version cannot fetch web pages or run scripts, so you paste in the text a workflow would have fetched.</p><h2>What is free and what is paid?</h2><p>Free workflows are on GitHub under the MIT licence, with a free prompt page for each. Paid workflows and packs are sold on Gumroad as one-time payments. Prices are in US dollars; Gumroad shows your local currency and any VAT in the total before you pay. Check that total in the cart.</p><h2>What does the paid licence allow?</h2><p>You may install, use and change the files for your own work, and the output belongs to you. You may not share, resell or publish the files. Agencies that want to use a workflow for several clients should contact us for a multi-client licence.</p><h2>What is the refund policy?</h2><p>Our Gumroad product pages state a 30-day money back guarantee: if the workflow does not do what the page says, reply to your receipt within 30 days and you get a full refund, no questions and no forms. You can also write to kaiventura.founder@gmail.com.</p><h2>Are updates free?</h2><p>Yes. Updates to the version you bought are free: download the new file again from your Gumroad library. The same goes for the all-access bundle once it is on sale: when we add workflows to it, the zip in your library is replaced with a newer version at no cost.</p><h2>How are workflows tested?</h2><p>Each workflow is run on real public examples before release, and we read the output against the source and fix what is wrong. The example is shown on the workflow&#x27;s page. Some workflows were also scored against a written rubric, and the page says which. Read <a href="/how-we-test/">how we test</a>.</p><h2>Can I ask for a workflow you do not have yet?</h2><p>Yes. Use the <a href="/request/">request page</a>. Tell us the job, what you paste in and what you want back. We read every request, but we cannot promise a date or that we will build it.</p><h2>How do I ask a question or report a wrong output?</h2><p>Write to kaiventura.founder@gmail.com, or open an issue on the GitHub repo for a free workflow. Include the input you used and what went wrong.</p></div></section><section class="signup" id="notify">
   <h2>New free workflows by email</h2>
   <p>New free workflows and guides appear in all of these as we publish them. Pick whichever you already use.</p>
   <ul class="links">
     <li><a href="/feed.xml">RSS feed</a> for any feed reader</li>
-    <li><a href="/go/install/?from=other" rel="noopener">Watch the free skills repo on GitHub</a></li>
+    <li><a href="/go/install/?from=other" rel="noopener">Watch the free workflows repo on GitHub</a></li>
     <li><a href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=other&amp;utm_campaign=subscribe" rel="noopener">Follow on Gumroad</a></li>
   </ul>
 </section></div></main>

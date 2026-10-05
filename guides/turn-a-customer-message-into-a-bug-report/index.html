@@ -348,7 +348,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -609,6 +609,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -951,6 +958,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -1027,12 +1041,12 @@ MESSAGE:
 <p>Keep the customer&#x27;s original message attached to the ticket, next to your cleaned version. Engineers sometimes spot something in the raw text that the summary lost.</p>
 <h2>Limits</h2>
 <ul><li>It cannot open screenshots or log files unless your chat tool can, and it says when it did not read them.</li><li>It does not find the cause. If the message points to an area, it labels that as a guess.</li><li>It does not file the ticket or send the reply.</li><li>One message at a time. A long thread needs you to pick the key messages first.</li></ul>
-<p><a href="/">Browse all skills in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/check-a-reply-to-an-angry-customer-before-you-send-it/">How do I check a reply to an angry customer before I send it?</a></li><li><a href="/guides/how-to-decide-a-refund-request-outside-your-policy/">How do I decide a refund request that falls outside my policy?</a></li><li><a href="/for/customer-support/">All skills for customer support teams</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
-  <h2>Follow for new free skills</h2>
-  <p>New free skills and guides appear in all of these as we publish them. Pick whichever you already use.</p>
+<p><a href="/">Browse all workflows in the catalog</a></p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/check-a-reply-to-an-angry-customer-before-you-send-it/">How do I check a reply to an angry customer before I send it?</a></li><li><a href="/guides/how-to-decide-a-refund-request-outside-your-policy/">How do I decide a refund request that falls outside my policy?</a></li><li><a href="/for/customer-support/">All workflows for customer support teams</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
+  <h2>Follow for new free workflows</h2>
+  <p>New free workflows and guides appear in all of these as we publish them. Pick whichever you already use.</p>
   <ul class="links">
     <li><a href="/feed.xml">RSS feed</a> for any feed reader</li>
-    <li><a href="/go/install/?from=guide" rel="noopener">Watch the free skills repo on GitHub</a></li>
+    <li><a href="/go/install/?from=guide" rel="noopener">Watch the free workflows repo on GitHub</a></li>
     <li><a href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=guide&amp;utm_campaign=subscribe" rel="noopener">Follow on Gumroad</a></li>
   </ul>
 </section></div></main>

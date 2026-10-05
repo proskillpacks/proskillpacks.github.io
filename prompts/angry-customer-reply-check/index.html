@@ -353,7 +353,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -614,6 +614,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -956,6 +963,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -1022,17 +1036,17 @@ Do this:
 6. Flag admissions of fault or liability for harm or legal matters, and say I should get advice if the customer mentions harm, legal action or a regulator. This is not legal advice.
 
 Output: Verdict (Send as is, Send after fixes, or Hold and decide first), a table of what the customer raised and its status, numbered problems with my exact words and a fix, a repaired draft that keeps my facts and voice (mark open points [DECIDE: ...]), and a list of what needs my decision. Plain short sentences, no em dashes, no exclamation marks.</code></pre></div></section>
-<section><h2>A real example</h2><p class="sub">Taken from the skill's README.</p><div class="prose"><blockquote><p><strong>Before:</strong> Draft: &quot;Unfortunately we regret any inconvenience. As per our policy, delivery times are estimates and not guaranteed, so you should have allowed more time. We will send you a full refund and a free replacement kettle within 24 hours.&quot;</p>
-<p><strong>After (skill output, from a real test run):</strong> Test run on a complaint and a draft we wrote, with a short policy. Verdict, unedited: &quot;Hold and decide first. The draft promises a full refund and a free replacement, and the policy lets a support agent offer neither.&quot; It found the one thing the policy did allow, the 7.99 express refund, which the draft left out, quoted the blame phrases, and wrote a repaired reply with [DECIDE] markers for the refund timing and the team lead&#x27;s approval.</p></blockquote></div></section>
+<section><h2>A real example</h2><p class="sub">Taken from the workflow's README.</p><div class="prose"><blockquote><p><strong>Before:</strong> Draft: &quot;Unfortunately we regret any inconvenience. As per our policy, delivery times are estimates and not guaranteed, so you should have allowed more time. We will send you a full refund and a free replacement kettle within 24 hours.&quot;</p>
+<p><strong>After (workflow output, from a real test run):</strong> Test run on a complaint and a draft we wrote, with a short policy. Verdict, unedited: &quot;Hold and decide first. The draft promises a full refund and a free replacement, and the policy lets a support agent offer neither.&quot; It found the one thing the policy did allow, the 7.99 express refund, which the draft left out, quoted the blame phrases, and wrote a repaired reply with [DECIDE] markers for the refund timing and the team lead&#x27;s approval.</p></blockquote></div></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It checks the draft against the policy you give it. With no policy it marks promises &quot;not checked&quot;.</li><li>It does not decide refunds or know your approvals.</li><li>It does not give legal advice. If a customer mentions harm, legal action or a regulator, get advice.</li><li>It repairs wording. It will not make a bad outcome a good one.</li></ul></div></section>
-<section><h2>The same job as an installable skill</h2><div class="prose"><p>Angry Customer Reply Check is also a skill you install once and call in plain words, so you do not paste the prompt each time. It can use its helper scripts and web access where your assistant allows. <a href="/skills/angry-customer-reply-check/">See the skill page</a>, or read <a href="/guides/how-to-install-agent-skills/">how to install skills</a>.</p></div></section>
-<section><h2>More for customer support teams</h2><div class="prose"><p><a href="/for/customer-support/">See every skill for customer support teams</a>.</p></div></section>
+<section><h2>The same job as an installable workflow</h2><div class="prose"><p>Check your reply to an angry customer before you send it is also a workflow you install once and call in plain words, so you do not paste the prompt each time. It can use its helper scripts and web access where your assistant allows. <a href="/skills/angry-customer-reply-check/">See the workflow page</a>, or read <a href="/guides/how-to-install-agent-skills/">how to install workflows</a>.</p></div></section>
+<section><h2>More for customer support teams</h2><div class="prose"><p><a href="/for/customer-support/">See every workflow for customer support teams</a>.</p></div></section>
 <section class="signup" id="notify">
   <h2>New free workflows by email</h2>
   <p>New free workflows and guides appear in all of these as we publish them. Pick whichever you already use.</p>
   <ul class="links">
     <li><a href="/feed.xml">RSS feed</a> for any feed reader</li>
-    <li><a href="/go/install/?from=prompt" rel="noopener">Watch the free skills repo on GitHub</a></li>
+    <li><a href="/go/install/?from=prompt" rel="noopener">Watch the free workflows repo on GitHub</a></li>
     <li><a href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=prompt&amp;utm_campaign=subscribe" rel="noopener">Follow on Gumroad</a></li>
   </ul>
 </section>

@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chargeback Evidence Checklist | Pro Skill Packs</title>
+<title>Gather the evidence for a chargeback | Pro Skill Packs</title>
 <meta name="description" content="Know what evidence to gather when a customer disputes a payment. For Shopify store owners who just got a chargeback. Tested on real examples before">
 
 <link rel="canonical" href="https://proskillpacks.github.io/skills/chargeback-evidence-checklist/">
@@ -14,12 +14,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/skills/chargeback-evidence-checklist/">
-<meta property="og:title" content="Chargeback Evidence Checklist: PDF and skill: skill + paste-in prompt">
+<meta property="og:title" content="Gather the evidence for a chargeback">
 <meta property="og:description" content="Know what evidence to gather when a customer disputes a payment. For Shopify store owners who just got a chargeback. Tested on real examples before">
 <meta property="og:image" content="https://proskillpacks.github.io/assets/cover-free-chargeback-evidence-checklist.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
-<meta name="twitter:title" content="Chargeback Evidence Checklist: PDF and skill: skill + paste-in prompt">
+<meta name="twitter:title" content="Gather the evidence for a chargeback">
 <meta name="twitter:description" content="Know what evidence to gather when a customer disputes a payment. For Shopify store owners who just got a chargeback. Tested on real examples before">
 <meta name="twitter:image" content="https://proskillpacks.github.io/assets/cover-free-chargeback-evidence-checklist.png">
 <meta name="theme-color" content="#0f3d2e">
@@ -27,7 +27,7 @@
 {
  "@context": "https://schema.org",
  "@type": "Product",
- "name": "Chargeback Evidence Checklist: PDF and skill",
+ "name": "Gather the evidence for a chargeback",
  "description": "The dispute reason in, the evidence to collect and where to find it.",
  "url": "https://proskillpacks.github.io/skills/chargeback-evidence-checklist/",
  "brand": {
@@ -352,7 +352,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -613,6 +613,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -955,6 +962,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script defer src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
@@ -977,7 +991,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
   {
    "@type": "ListItem",
    "position": 3,
-   "name": "Chargeback Evidence Checklist: PDF and skill",
+   "name": "Gather the evidence for a chargeback",
    "item": "https://proskillpacks.github.io/skills/chargeback-evidence-checklist/"
   }
  ]
@@ -992,9 +1006,9 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
       <a class="name" href="/">PRO SKILL PACKS</a>
       <nav aria-label="Main"><a href="/free/">Free</a><a href="/how-we-test/">Why trust us</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
     </div>
-    <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-online-stores">Online stores</a> / Chargeback Evidence Checklist: PDF and skill</p>
-    <h1>Chargeback Evidence Checklist: PDF and skill</h1>
-    <dl class="ogw"><dt>Who it is for</dt><dd>Shopify store owners who just got a chargeback.</dd><dt>What you give it</dt><dd>The dispute reason and what happened.</dd><dt>What you get back</dt><dd>The evidence to collect, what you already have and where to find each piece in Shopify.</dd></dl><div class="buyb"><div class="cta"><a class="btn btn-lime" href="/free/chargeback-checklists/">Get the free PDF checklists</a></div><p class="note-light alts"><a class="alt-link" href="/go/repo/chargeback-evidence-checklist/?from=skill">Get the skill on GitHub</a></p><p class="ogline">A text you paste into ChatGPT, Claude or any chatbot.</p><p class="note-light">Free. MIT licence: use it, change it, share it.</p></div>
+    <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-online-stores">Online stores</a> / Gather the evidence for a chargeback</p>
+    <h1>Gather the evidence for a chargeback</h1>
+    <dl class="ogw"><dt>Who it is for</dt><dd>Shopify store owners who just got a chargeback.</dd><dt>What you give it</dt><dd>The dispute reason and what happened.</dd><dt>What you get back</dt><dd>The evidence to collect, what you already have and where to find each piece in Shopify.</dd></dl><div class="buyb"><div class="cta"><a class="btn btn-lime" href="/free/chargeback-checklists/">Get the free PDF checklists</a></div><p class="note-light alts"><a class="alt-link" href="/go/repo/chargeback-evidence-checklist/?from=skill">Get the workflow on GitHub</a></p><p class="ogline">A text you paste into ChatGPT, Claude or any chatbot.</p><p class="note-light">Free. MIT licence: use it, change it, share it.</p></div>
   </div>
 </header>
 <main class="prod pc"><div class="wrap">
@@ -1005,16 +1019,16 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <div class="table"><table><thead><tr><th>Already refunded?</th><th>The order&#x27;s <strong>timeline</strong></th><th>Check: whether the refund was completed or only started. Shopify&#x27;s &quot;cannot be processed&quot; message suggests it never completed. Shopify can&#x27;t refund once a chargeback is open, so don&#x27;t try again.</th></tr></thead><tbody></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p>
 <p>If the timeline shows no completed refund, your facts match &quot;a refund is owed and wasn&#x27;t paid&quot;, and the reference says to accept. If the timeline shows the refund went through before 2 August, you can fight it as credit already processed.</p></blockquote>
 <p>Then the checklist: your email about the refund is <strong>Have</strong> (you emailed it), the refund record is <strong>Check</strong> on the order timeline, with &quot;upload your own screenshot too if you&#x27;re not sure it&#x27;s there&quot;, and return tracking is ruled out because nothing was delivered.</p></div></section>
-<section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/chargeback-evidence-checklist-last.png" data-gif="/assets/demos/chargeback-evidence-checklist.gif" alt="Animated demo of Chargeback Evidence Checklist: PDF and skill on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async" srcset="/assets/demos/chargeback-evidence-checklist-last-240.webp 240w, /assets/demos/chargeback-evidence-checklist-last-480.webp 480w, /assets/demos/chargeback-evidence-checklist-last-900.webp 900w, /assets/demos/chargeback-evidence-checklist-last-1200.webp 1200w" sizes="(min-width: 48rem) 900px, 100vw" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Chargeback Evidence Checklist: PDF and skill">Play</button></figure></section>
-<section><h2>What it does</h2><div class="prose"><p>Got a chargeback on Shopify Payments? Before you write anything, find out what to collect. Tell this skill the dispute reason and what happened, in your own words. It gives you:</p>
+<section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/chargeback-evidence-checklist-last.png" data-gif="/assets/demos/chargeback-evidence-checklist.gif" alt="Animated demo of Gather the evidence for a chargeback on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async" srcset="/assets/demos/chargeback-evidence-checklist-last-240.webp 240w, /assets/demos/chargeback-evidence-checklist-last-480.webp 480w, /assets/demos/chargeback-evidence-checklist-last-900.webp 900w, /assets/demos/chargeback-evidence-checklist-last-1200.webp 1200w" sizes="(min-width: 48rem) 900px, 100vw" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Gather the evidence for a chargeback">Play</button></figure></section>
+<section><h2>What it does</h2><div class="prose"><p>Got a chargeback on Shopify Payments? Before you write anything, find out what to collect. Tell this workflow the dispute reason and what happened, in your own words. It gives you:</p>
 <ul><li><strong>Five first checks:</strong> chargeback or inquiry, due date, already refunded, Shopify Protect, and whether the customer is right.</li><li><strong>The evidence for your dispute reason</strong>, in the order Shopify recommends (direct proof, customer acknowledgment, policy, supporting context). Each item is marked <strong>Have</strong>, <strong>Get</strong>, <strong>Check</strong> or <strong>Not available</strong> from what you told it.</li><li><strong>Where to find each piece:</strong> the place in your Shopify admin, or outside it (your inbox, the carrier&#x27;s site, your saved listing).</li><li><strong>What Shopify already adds automatically</strong>, so you don&#x27;t upload it twice.</li><li><strong>What to leave out</strong>, because evidence for the wrong question weakens a case.</li><li><strong>The file rules:</strong> PDF, JPEG or PNG, 2 MB per file, 4 MB in total, one file per evidence type.</li><li><strong>When accepting is cheaper</strong>, with the money in one line. No win-rate guesses.</li></ul>
 <p>It&#x27;s built not to invent evidence: if you say &quot;she told me it was an accident&quot; without saying how, it lists her statement as something to <strong>get</strong> in writing, not as something you have. If you don&#x27;t know the dispute reason yet, it tells you where to find it and says which reason your facts point to.</p>
 <p>Covers Fraudulent, Unrecognized, Product not received, Product unacceptable, Credit not processed, Subscription canceled, Duplicate and General. Built from Shopify Help Center pages on chargebacks (read October 2026). If your dispute page says something different, follow your dispute page.</p></div></section>
 <section class="ev" id="evidence"><h2>The evidence</h2><p class="evh"><span class="bdg bg-t" title="Run on at least three real examples and scored against a written standard, with the record on file.">TESTED<span class="sr"> badge. Run on at least three real examples and scored against a written standard, with the record on file.</span></span><span class="psb-t">6 real disputes, scored 9 to 9.5 out of 10.</span></p><p>Tested on 6 real disputes from the Shopify Community forum. Release-version scores: 9, 9, 9.5, 9, 9 and 9.5 out of 10, plus one Opus check at 9. The paste-in prompt scored 8.5 in Claude.</p><p class="evlink"><a href="/how-we-test/#ev-chargeback-evidence-checklist">Read the full test</a></p></section>
-<section><h2>Limits</h2><div class="prose"><ul><li>It doesn&#x27;t write the response. The Chargeback Response Kit does that.</li><li>It doesn&#x27;t predict whether you&#x27;ll win, and it isn&#x27;t legal advice.</li><li>It only knows what you tell it and Shopify&#x27;s published rules; if your dispute page says something different, follow the dispute page.</li></ul></div></section>
-<section class="faq" id="questions"><h2>Questions</h2><details><summary>Questions or a problem?</summary><div><p>Write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot. We run our release tests on Claude Sonnet and Opus. Use your assistant&#x27;s strongest model: in our tests, a small, fast model added facts that were not in the source data. No scripts. Paste the prompt into any chatbot, or install the skill. It works from what you tell it about the dispute.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>Using it with an AI assistant</b></p><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>chargeback-evidence-checklist</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/ecommerce/chargeback-evidence-checklist).</li><li>Put the <code>chargeback-evidence-checklist</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;I got a chargeback with the reason &#x27;product not received&#x27;. What evidence should I gather?&quot;. The skill loads by itself.</li></ol></div></div></details></section>
+<section><h2>Limits</h2><div class="prose"><ul><li>It doesn&#x27;t write the response. The chargeback letter set does that.</li><li>It doesn&#x27;t predict whether you&#x27;ll win, and it isn&#x27;t legal advice.</li><li>It only knows what you tell it and Shopify&#x27;s published rules; if your dispute page says something different, follow the dispute page.</li></ul></div></section>
+<section class="faq" id="questions"><h2>Questions</h2><details><summary>Questions or a problem?</summary><div><p>Write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works in ChatGPT, Claude, Gemini and most other AI assistants: paste in the text, or load the files if your assistant supports them. Setup steps are under For technical users. We run our release tests on Claude Sonnet and Opus. Use your assistant&#x27;s strongest model: in our tests, a small, fast model added facts that were not in the source data. No scripts. Paste the prompt into any chatbot, or install the workflow. It works from what you tell it about the dispute.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>Using it with an AI assistant</b></p><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>chargeback-evidence-checklist</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/ecommerce/chargeback-evidence-checklist).</li><li>Put the <code>chargeback-evidence-checklist</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;I got a chargeback with the reason &#x27;product not received&#x27;. What evidence should I gather?&quot;. The skill loads by itself.</li></ol></div></div></details></section>
 <section class="endcta"><a class="btn btn-pine" href="/free/chargeback-checklists/">Get the free PDF checklists</a></section>
-<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/product-description-rewriter/">Product Description Rewriter</a> ($5): Clearer product descriptions plus the page title and short summary shoppers see in Google, for one product or a whole collection.</li><li><a href="/skills/product-seo-fixer/">Product page tidy-up</a> ($5): A fix list in priority order, with the exact text to paste, for one product, a collection or your product export file.</li><li><a href="/skills/product-title-cleaner/">Product Title Cleaner</a> (Free): One consistent title style across your products, as a file you can import with only the changed rows.</li></ul></section>
+<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/agent-ready-quick-check/">Quick check: can AI shopping assistants read your store?</a> (Free): Six checks of what a shopper and Google can see on your store, compared with 99 other stores.</li><li><a href="/skills/review-reply-drafter/">Reply to reviews without promising what you can&#x27;t give</a> (Free): A reply for every review, matched to its tone, with the risky ones flagged for you.</li><li><a href="/skills/product-description-rewriter/">Rewrite thin product descriptions without made-up claims</a> ($5): Clearer product descriptions plus the page title and short summary shoppers see in Google, for one product or a whole collection.</li></ul></section>
 </div></main>
 <script>
 document.querySelectorAll('.demo').forEach(function (f) {

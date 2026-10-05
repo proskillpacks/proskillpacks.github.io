@@ -331,7 +331,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -592,6 +592,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -934,6 +941,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -973,29 +987,29 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-money-admin-support">Money, admin and support</a> / Money and admin</p>
     <h1>Money and admin</h1>
     <p class="lead">Sort a bank export into expense categories and get the figures ready for whoever does your books. You paste the data and review every line.</p>
-    <p class="note-light">1 skill here: 1 free. Part of Money, admin and support, 3 skills in all. 1 arriving soon, not for sale yet.</p>
+    <p class="note-light">1 workflow here: 1 free. Part of Money, admin and support, 3 workflows in all. 1 arriving soon, not for sale yet.</p>
   </div>
 </header>
 <main><div class="wrap">
 <section><h2>Free examples to copy</h2><p class="sub">Invoice and deposit emails, payment reminders, a statement, the UK interest rules. Copy them, free.</p><p><a class="btn btn-line-d" href="/freelance/">Emails and checks for freelancers and small businesses</a></p></section>
-<section><h2>Start free</h2><p class="sub">The quickest way to see what a skill does. Free, MIT licence.</p><div class="grid"><a class="dc feat" href="/skills/invoice-checker/" data-id="invoice-checker" data-role="finance-and-admin" data-price="free" data-type="single" data-s="invoice checker an invoice in, every difference and missing field listed. give it an invoice. get the totals recomputed, every difference, missing fields and consistency flags. no tax advice. free, mit-licensed. check an invoice for wrong totals and missing fields before sending. finance and small-business admin finance-and-admin free skill an invoice, yours or one you received. a small script (python 3 standard library, exact decimal arithmetic) recomputes every line, the subtotal, the discount, the tax and the total, and lists every difference. it lists common fields that are missing and flags date, currency and rounding problems. it gives no tax advice. check admin"><span class="feat-l">Start here</span><h3>Invoice Checker</h3><p>An invoice in, every difference and missing field listed.</p><span class="dc-foot"><b>Free</b><span class="go"></span></span></a></div></section>
+<section><h2>Start free</h2><p class="sub">The quickest way to see what a workflow does. Free, MIT licence.</p><div class="grid"><a class="dc feat" href="/skills/invoice-checker/" data-id="invoice-checker" data-role="finance-and-admin" data-price="free" data-type="single" data-s="check an invoice before you send or pay it an invoice in, every difference and missing field listed. give it an invoice. get the totals recomputed, every difference, missing fields and consistency flags. no tax advice. free, mit-licensed. check an invoice for wrong totals and missing fields before sending. finance and small-business admin finance-and-admin free skill an invoice, yours or one you received. a small script (python 3 standard library, exact decimal arithmetic) recomputes every line, the subtotal, the discount, the tax and the total, and lists every difference. it lists common fields that are missing and flags date, currency and rounding problems. it gives no tax advice. check admin"><span class="feat-l">Start here</span><h3>Check an invoice before you send or pay it</h3><p>An invoice in, every difference and missing field listed.</p><span class="dc-foot"><b>Free</b><span class="go"></span></span></a></div></section>
 
 <section><h2>Free prompts</h2><p class="sub">Paste into ChatGPT, Claude, Gemini or any chatbot. No install.</p><ul class="links"><li><a href="/prompts/invoice-checker/">Invoice checker prompt for ChatGPT, Claude or Gemini</a></li></ul></section>
-<section><h2>Guides</h2><p class="sub">Short how-tos you can do by hand, without any skill.</p><ul class="links"><li><a href="/guides/how-to-check-an-invoice-for-mistakes-before-you-send-or-pay-it/">How do I check an invoice for mistakes before I send or pay it?</a></li><li><a href="/guides/how-to-sort-a-bank-export-into-categories-for-your-bookkeeping/">How do I sort a bank export into categories for my bookkeeping?</a></li></ul></section>
-<section><h2>Arriving soon</h2><p class="sub">Not for sale yet. Prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon feat" data-id="expense-categoriser" data-role="finance-and-admin" data-price="paid" data-type="single" data-s="expense categoriser a bank or card csv in, sorted expenses and totals that add up. give it a bank or card csv. it groups by merchant, categorises only what is clear, asks about the rest and proves the category totals add up. sort a bank or card export into expense categories you can trust. finance and small-business admin finance-and-admin single skill bookkeeping"><span class="feat-l">Start here</span>
-  <div class="chead" style="--h:234"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Finance and admin</span></div><div class="body">
-    <h3>Expense Categoriser</h3>
+<section><h2>Guides</h2><p class="sub">Short how-tos you can do by hand, without any workflow.</p><ul class="links"><li><a href="/guides/how-to-check-an-invoice-for-mistakes-before-you-send-or-pay-it/">How do I check an invoice for mistakes before I send or pay it?</a></li><li><a href="/guides/how-to-sort-a-bank-export-into-categories-for-your-bookkeeping/">How do I sort a bank export into categories for my bookkeeping?</a></li></ul></section>
+<section><h2>Arriving soon</h2><p class="sub">Not for sale yet. Prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon feat" data-id="expense-categoriser" data-role="finance-and-admin" data-price="paid" data-type="single" data-s="sort a bank export into expense categories a bank or card csv in, sorted expenses and totals that add up. give it a bank or card csv. it groups by merchant, categorises only what is clear, asks about the rest and proves the category totals add up. sort a bank or card export into expense categories you can trust. finance and small-business admin finance-and-admin single skill bookkeeping"><span class="feat-l">Start here</span>
+  <div class="chead" style="--h:234"><span class="ck ">Single workflow</span><span class="ck soonk">Coming soon</span><span class="cc">Finance and admin</span></div><div class="body">
+    <h3>Sort a bank export into expense categories</h3>
     <p>A bank or card CSV in, sorted expenses and totals that add up.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/expense-categoriser">Follow for release</a></div>
   </div>
 </div></div></section>
-<section><h2>Tell us the job</h2><p class="sub">Tell us what you would want a skill to do. <a href="/request/">Ask for it</a>.</p></section>
+<section><h2>Tell us the job</h2><p class="sub">Tell us what you would want a workflow to do. <a href="/request/">Ask for it</a>.</p></section>
 <section class="signup" id="notify">
   <h2>New free workflows by email</h2>
   <p>New free workflows and guides appear in all of these as we publish them. Pick whichever you already use.</p>
   <ul class="links">
     <li><a href="/feed.xml">RSS feed</a> for any feed reader</li>
-    <li><a href="/go/install/?from=category" rel="noopener">Watch the free skills repo on GitHub</a></li>
+    <li><a href="/go/install/?from=category" rel="noopener">Watch the free workflows repo on GitHub</a></li>
     <li><a href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=category&amp;utm_campaign=subscribe" rel="noopener">Follow on Gumroad</a></li>
   </ul>
 </section>

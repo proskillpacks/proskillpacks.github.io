@@ -331,7 +331,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -592,6 +592,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -934,6 +941,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -973,23 +987,23 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-developers-and-data">Developers and data</a> / Spreadsheets</p>
     <h1>Spreadsheets</h1>
     <p class="lead">Clean a messy CSV, check a file before you trust it, get a formula that works on your columns and summarise a survey. Paste a sample or the sheet and get steps or cleaned data with a change log.</p>
-    <p class="note-light">2 skills here: 1 paid and 1 free. Part of Developers and data, 10 skills in all. 3 arriving soon, not for sale yet.</p>
+    <p class="note-light">2 workflows here: 1 paid and 1 free. Part of Developers and data, 10 workflows in all. 3 arriving soon, not for sale yet.</p>
   </div>
 </header>
 <main><div class="wrap">
-<section><h2>Start free</h2><p class="sub">The quickest way to see what a skill does. Free, MIT licence.</p><div class="grid"><a class="dc feat" href="/skills/csv-profile-and-sanity-check/" data-id="csv-profile-and-sanity-check" data-role="data-and-spreadsheets" data-price="free" data-type="single" data-s="csv profile and sanity check a csv file in, a profile of every column and the odd rows flagged. give it a csv. get a read-only profile of every column, flags and questions for the data&#x27;s owner. free, mit-licensed. check a csv file for problems before you rely on it. data and spreadsheets data-and-spreadsheets free skill a csv. it runs a small read-only script (python 3 standard library) and reports rows, columns, each column&#x27;s type, blanks, distinct values, ranges, duplicates, mixed formats, stray spaces, case variants and outliers, then lists questions to ask the data&#x27;s owner. without code execution it profiles a pasted sample and says so. analyse data check"><span class="feat-l">Start here</span><h3>CSV Profile and Sanity Check</h3><p>A CSV file in, a profile of every column and the odd rows flagged.</p><span class="dc-foot"><b>Free</b><span class="go"></span></span></a></div></section>
-<section id="free-and-paid"><h2>Free and paid</h2><p class="sub">Start with a free skill. The paid ones each do a different job.</p><div class="table"><table class="stack"><thead><tr><th>Skill</th><th>Price</th><th>You give it</th><th>You get</th></tr></thead><tbody><tr><td data-l="Skill"><a href="/skills/csv-profile-and-sanity-check/">CSV Profile and Sanity Check</a></td><td data-l="Price">Free</td><td data-l="You give it">A CSV.</td><td data-l="You get">It runs a small read-only script (Python 3 standard library) and reports rows, columns, each column&#x27;s type, blanks, distinct values, ranges, duplicates, mixed formats, stray spaces, case variants and outliers, then lists questions to ask the data&#x27;s owner. Without code execution it profiles a pasted sample and says so.</td></tr><tr><td data-l="Skill"><a href="/skills/spreadsheet-formula-and-cleanup/">Spreadsheet Formula and Cleanup</a></td><td data-l="Price">$9</td><td data-l="You give it">Describe the result you want, paste a few real rows and name your app.</td><td data-l="You get">A formula in your real columns, a test table on your sample, and the edge cases.</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p></section>
-<section><h2>Single skills</h2><p class="sub">Each paid skill on its own, with its own page and test results.</p><div class="grid"><a class="dc feat" href="/skills/spreadsheet-formula-and-cleanup/" data-id="spreadsheet-formula-and-cleanup" data-role="data-and-spreadsheets" data-price="paid" data-type="single" data-s="spreadsheet formula and cleanup the result you want and a few rows in, a formula that works. describe the result you want and paste a few rows. get a formula that fits your columns, tested on your sample, with the edge cases listed. get a spreadsheet formula that works on your own columns. data and spreadsheets data-and-spreadsheets single skill describe the result you want, paste a few real rows and name your app. a formula in your real columns, a test table on your sample, and the edge cases. calculate clean data"><span class="feat-l">Start here</span><h3>Spreadsheet Formula and Cleanup</h3><p>The result you want and a few rows in, a formula that works.</p><span class="dc-foot"><b>$9</b><span class="go"></span></span></a></div></section>
+<section><h2>Start free</h2><p class="sub">The quickest way to see what a workflow does. Free, MIT licence.</p><div class="grid"><a class="dc feat" href="/skills/csv-profile-and-sanity-check/" data-id="csv-profile-and-sanity-check" data-role="data-and-spreadsheets" data-price="free" data-type="single" data-s="check a data file before you rely on it a csv file in, a profile of every column and the odd rows flagged. give it a csv. get a read-only profile of every column, flags and questions for the data&#x27;s owner. free, mit-licensed. check a csv file for problems before you rely on it. data and spreadsheets data-and-spreadsheets free skill a csv. it runs a small read-only script (python 3 standard library) and reports rows, columns, each column&#x27;s type, blanks, distinct values, ranges, duplicates, mixed formats, stray spaces, case variants and outliers, then lists questions to ask the data&#x27;s owner. without code execution it profiles a pasted sample and says so. analyse data check"><span class="feat-l">Start here</span><h3>Check a data file before you rely on it</h3><p>A CSV file in, a profile of every column and the odd rows flagged.</p><span class="dc-foot"><b>Free</b><span class="go"></span></span></a></div></section>
+<section id="free-and-paid"><h2>Free and paid</h2><p class="sub">Start with a free workflow. The paid ones each do a different job.</p><div class="table"><table class="stack"><thead><tr><th>Workflow</th><th>Price</th><th>You give it</th><th>You get</th></tr></thead><tbody><tr><td data-l="Skill"><a href="/skills/csv-profile-and-sanity-check/">Check a data file before you rely on it</a></td><td data-l="Price">Free</td><td data-l="You give it">A CSV.</td><td data-l="You get">It runs a small read-only script (Python 3 standard library) and reports rows, columns, each column&#x27;s type, blanks, distinct values, ranges, duplicates, mixed formats, stray spaces, case variants and outliers, then lists questions to ask the data&#x27;s owner. Without code execution it profiles a pasted sample and says so.</td></tr><tr><td data-l="Skill"><a href="/skills/spreadsheet-formula-and-cleanup/">Get a spreadsheet formula that works on your columns</a></td><td data-l="Price">$9</td><td data-l="You give it">Describe the result you want, paste a few real rows and name your app.</td><td data-l="You get">A formula in your real columns, a test table on your sample, and the edge cases.</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p></section>
+<section><h2>Single workflows</h2><p class="sub">Each paid workflow on its own, with its own page and test results.</p><div class="grid"><a class="dc feat" href="/skills/spreadsheet-formula-and-cleanup/" data-id="spreadsheet-formula-and-cleanup" data-role="data-and-spreadsheets" data-price="paid" data-type="single" data-s="get a spreadsheet formula that works on your columns the result you want and a few rows in, a formula that works. describe the result you want and paste a few rows. get a formula that fits your columns, tested on your sample, with the edge cases listed. get a spreadsheet formula that works on your own columns. data and spreadsheets data-and-spreadsheets single skill describe the result you want, paste a few real rows and name your app. a formula in your real columns, a test table on your sample, and the edge cases. calculate clean data"><span class="feat-l">Start here</span><h3>Get a spreadsheet formula that works on your columns</h3><p>The result you want and a few rows in, a formula that works.</p><span class="dc-foot"><b>$9</b><span class="go"></span></span></a></div></section>
 <section><h2>Free prompts</h2><p class="sub">Paste into ChatGPT, Claude, Gemini or any chatbot. No install.</p><ul class="links"><li><a href="/prompts/csv-profile-and-sanity-check/">CSV sanity check prompt for ChatGPT or Claude</a></li></ul></section>
-<section><h2>Guides</h2><p class="sub">Short how-tos you can do by hand, without any skill.</p><ul class="links"><li><a href="/guides/clean-a-messy-csv-export/">How to clean a messy CSV export without losing data</a></li><li><a href="/guides/clean-messy-spreadsheet-with-ai/">How to clean a messy spreadsheet with an AI assistant</a></li><li><a href="/guides/how-to-check-a-csv-file-before-you-use-it/">How do I check a CSV file before I use it?</a></li><li><a href="/guides/summarise-survey-results-without-overclaiming/">How do I summarise survey results without overclaiming?</a></li></ul></section>
-<section><h2>Arriving soon</h2><p class="sub">Not for sale yet. Prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon" data-id="messy-csv-cleaner" data-role="data-and-spreadsheets" data-price="paid" data-type="single" data-s="messy csv cleaner a messy csv in, a cleaned copy with every change labelled. give it a messy csv. it profiles the file, plans every change with a risk label, applies the safe fixes to a copy and proves the result with before and after counts. clean a messy csv and prove what changed. data and spreadsheets data-and-spreadsheets single skill clean data">
-  <div class="chead" style="--h:86"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Spreadsheets</span></div><div class="body">
-    <h3>Messy CSV Cleaner</h3>
+<section><h2>Guides</h2><p class="sub">Short how-tos you can do by hand, without any workflow.</p><ul class="links"><li><a href="/guides/clean-a-messy-csv-export/">How to clean a messy CSV export without losing data</a></li><li><a href="/guides/clean-messy-spreadsheet-with-ai/">How to clean a messy spreadsheet with an AI assistant</a></li><li><a href="/guides/how-to-check-a-csv-file-before-you-use-it/">How do I check a CSV file before I use it?</a></li><li><a href="/guides/summarise-survey-results-without-overclaiming/">How do I summarise survey results without overclaiming?</a></li></ul></section>
+<section><h2>Arriving soon</h2><p class="sub">Not for sale yet. Prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon" data-id="messy-csv-cleaner" data-role="data-and-spreadsheets" data-price="paid" data-type="single" data-s="clean a messy export and see exactly what changed a messy csv in, a cleaned copy with every change labelled. give it a messy csv. it profiles the file, plans every change with a risk label, applies the safe fixes to a copy and proves the result with before and after counts. clean a messy csv and prove what changed. data and spreadsheets data-and-spreadsheets single skill clean data">
+  <div class="chead" style="--h:86"><span class="ck ">Single workflow</span><span class="ck soonk">Coming soon</span><span class="cc">Spreadsheets</span></div><div class="body">
+    <h3>Clean a messy export and see exactly what changed</h3>
     <p>A messy CSV in, a cleaned copy with every change labelled.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/messy-csv-cleaner">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="survey-results-summariser" data-role="data-and-spreadsheets" data-price="paid" data-type="single" data-s="survey results summariser a survey export in, counts, themes and what the data cannot show. paste a survey export. get counts with the base size, themed open-text answers with quotes, and a plain list of what the data cannot support. turn survey answers into a summary you can stand behind. data and spreadsheets data-and-spreadsheets single skill analyse data report">
-  <div class="chead" style="--h:86"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Spreadsheets</span></div><div class="body">
+  <div class="chead" style="--h:86"><span class="ck ">Single workflow</span><span class="ck soonk">Coming soon</span><span class="cc">Spreadsheets</span></div><div class="body">
     <h3>Survey Results Summariser</h3>
     <p>A survey export in, counts, themes and what the data cannot show.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/survey-results-summariser">Follow for release</a></div>
@@ -1001,13 +1015,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     <div class="foot"><span class="price">$29</span><a class="go" href="/packs/data-and-spreadsheets-pack/">See what is inside</a> <a class="go" href="#notify" data-go="follow/data-and-spreadsheets-pack">Follow for release</a></div>
   </div>
 </div></div></section>
-<section><h2>Tell us the job</h2><p class="sub">Tell us what you would want a skill to do. <a href="/request/">Ask for it</a>.</p></section>
+<section><h2>Tell us the job</h2><p class="sub">Tell us what you would want a workflow to do. <a href="/request/">Ask for it</a>.</p></section>
 <section class="signup" id="notify">
   <h2>New free workflows by email</h2>
   <p>New free workflows and guides appear in all of these as we publish them. Pick whichever you already use.</p>
   <ul class="links">
     <li><a href="/feed.xml">RSS feed</a> for any feed reader</li>
-    <li><a href="/go/install/?from=category" rel="noopener">Watch the free skills repo on GitHub</a></li>
+    <li><a href="/go/install/?from=category" rel="noopener">Watch the free workflows repo on GitHub</a></li>
     <li><a href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=category&amp;utm_campaign=subscribe" rel="noopener">Follow on Gumroad</a></li>
   </ul>
 </section>

@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agent-Ready Store Audit: skill + paste-in prompt</title>
+<title>See how AI shopping assistants read your store</title>
 <meta name="description" content="Score how AI shopping assistants read your Shopify store. For Shopify store owners who want to show up in AI shopping answers.">
 
 <link rel="canonical" href="https://proskillpacks.github.io/skills/agent-ready-store-audit/">
@@ -14,12 +14,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/skills/agent-ready-store-audit/">
-<meta property="og:title" content="Agent-Ready Store Audit: skill + paste-in prompt">
+<meta property="og:title" content="See how AI shopping assistants read your store">
 <meta property="og:description" content="Score how AI shopping assistants read your Shopify store. For Shopify store owners who want to show up in AI shopping answers.">
 <meta property="og:image" content="https://proskillpacks.github.io/assets/cover-agent-ready-store-audit.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
-<meta name="twitter:title" content="Agent-Ready Store Audit: skill + paste-in prompt">
+<meta name="twitter:title" content="See how AI shopping assistants read your store">
 <meta name="twitter:description" content="Score how AI shopping assistants read your Shopify store. For Shopify store owners who want to show up in AI shopping answers.">
 <meta name="twitter:image" content="https://proskillpacks.github.io/assets/cover-agent-ready-store-audit.png">
 <meta name="theme-color" content="#0f3d2e">
@@ -27,7 +27,7 @@
 {
  "@context": "https://schema.org",
  "@type": "Product",
- "name": "Agent-Ready Store Audit",
+ "name": "See how AI shopping assistants read your store",
  "description": "Your store address in, a score out of 100 and the top 7 fixes.",
  "url": "https://proskillpacks.github.io/skills/agent-ready-store-audit/",
  "brand": {
@@ -352,7 +352,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -613,6 +613,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -955,6 +962,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script defer src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
@@ -977,7 +991,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
   {
    "@type": "ListItem",
    "position": 3,
-   "name": "Agent-Ready Store Audit",
+   "name": "See how AI shopping assistants read your store",
    "item": "https://proskillpacks.github.io/skills/agent-ready-store-audit/"
   }
  ]
@@ -995,9 +1009,9 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
       <a class="name" href="/">PRO SKILL PACKS</a>
       <nav aria-label="Main"><a href="/free/">Free</a><a href="/how-we-test/">Why trust us</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
     </div>
-    <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-online-stores">Online stores</a> / Agent-Ready Store Audit</p>
-    <h1>Agent-Ready Store Audit</h1>
-    <dl class="ogw"><dt>Who it is for</dt><dd>Shopify store owners who want to show up in AI shopping answers.</dd><dt>What you give it</dt><dd>Your store address.</dd><dt>What you get back</dt><dd>A 0 to 100 score, buyer questions tried as an AI would, and the top 7 fixes.</dd></dl><div class="buyb"><div class="cta"><span class="lob"><a class="btn btn-lime" href="https://proskillpacks.gumroad.com/l/agent-ready-store-audit/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=agent-ready-store-audit" data-go="buy/agent-ready-store-audit">Get it, $5</a><span class="lo"><s>$5</s> <b>$2.50</b> for the first 10 buyers. 30-day refund.</span></span></div><p class="ogline ogupd">Free updates: when we improve it, you get the new version.</p><p class="note-light alts"><a class="alt-link" href="https://proskillpacks.gumroad.com/l/store-ops-pack/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=store-ops-pack" data-go="buy/store-ops-pack">Also in the Store Ops Pack, $29</a></p><p class="ogline">You get a zip with a short guide and a text you paste into ChatGPT, Claude or any chatbot.</p></div>
+    <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-online-stores">Online stores</a> / See how AI shopping assistants read your store</p>
+    <h1>See how AI shopping assistants read your store</h1>
+    <dl class="ogw"><dt>Who it is for</dt><dd>Shopify store owners who want to show up in AI shopping answers.</dd><dt>What you give it</dt><dd>Your store address.</dd><dt>What you get back</dt><dd>A 0 to 100 score, buyer questions tried as an AI would, and the top 7 fixes.</dd></dl><div class="buyb"><div class="cta"><span class="lob"><a class="btn btn-lime" href="https://proskillpacks.gumroad.com/l/agent-ready-store-audit/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=agent-ready-store-audit" data-go="buy/agent-ready-store-audit">Get it, $5</a><span class="lo"><s>$5</s> <b>$2.50</b> for the first 10 buyers. 30-day refund.</span></span></div><p class="ogline ogupd">Free updates: when we improve it, you get the new version.</p><p class="note-light alts"><a class="alt-link" href="https://proskillpacks.gumroad.com/l/store-ops-pack/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=store-ops-pack" data-go="buy/store-ops-pack">Also in the pack: Handle the weekly jobs in a Shopify store: six workflows, $29</a></p><p class="ogline">You get a zip with a short guide and a text you paste into ChatGPT, Claude or any chatbot.</p></div>
   </div>
 </header>
 <main class="prod pc"><div class="wrap">
@@ -1010,9 +1024,9 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 </div></section>
 <section class="ev" id="evidence"><h2>The evidence</h2><p class="evh"><span class="bdg bg-t" title="Run on at least three real examples and scored against a written standard, with the record on file.">TESTED<span class="sr"> badge. Run on at least three real examples and scored against a written standard, with the record on file.</span></span><span class="psb-t">4 real stores, scored 9 to 9.5 out of 10.</span></p><details class="evmore"><summary>More on how it was tested</summary><p>One early run reported a price mismatch that turned out to be a localization artifact. We fixed the script and added a verification rule before shipping.</p></details><p class="evlink"><a href="/how-we-test/#ev-agent-ready-store-audit">Read the full test</a></p></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It can&#x27;t see whether you&#x27;re opted in to Shopify&#x27;s Agentic Storefronts / Catalog (it tells you where to check), and it can&#x27;t see live checkout behaviour or your actual rankings inside ChatGPT.</li><li>A better score removes reasons for an agent to skip you. It doesn&#x27;t guarantee recommendations or sales.</li></ul></div></section>
-<section class="faq" id="questions"><h2>Questions</h2><details><summary>How do I pay and get the files?</summary><div><p><b>Checkout:</b> Gumroad opens on this page. Click Add to cart, enter your email and card details, and check the total, with any VAT, before you pay. Prices here are in US dollars.</p><p><b>After you pay:</b> a download page opens right away with the zip file, and Gumroad gives you a receipt there that you can resend. Open it, then paste the text from the prompts folder into ChatGPT and add your details.</p></div></details><details><summary>Refunds and contact</summary><div><p>If it does not do the job, ask and we refund you within 30 days. Reply to your receipt, or write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot. We run our release tests on Claude Sonnet and Opus. Use your assistant&#x27;s strongest model: in our tests, a small, fast model added facts that were not in the source data. The check script needs Python 3 (standard library only) and web access. On claude.ai, turn code execution on; without it the skill falls back to a manual audit and marks the score as estimated.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>What is in the zip</b></p><ul class="links"><li><code>LICENSE.txt</code></li><li><code>README.md</code></li><li><code>claude-ai/</code> (1 file: <code>agent-ready-store-audit.zip</code>)</li><li><code>prompts/</code> (2 files: <code>agent-ready-store-audit-v1.0-prompts.pdf</code>, <code>agent-ready-store-audit.md</code>)</li><li><code>agent-ready-store-audit/</code>, the skill itself:<ul><li><code>SKILL.md</code></li><li><code>README.md</code></li><li><code>references/</code> (2 files)</li><li><code>scripts/</code> (1 file)</li></ul></li></ul><p><b>Using it with an AI assistant</b></p><ol><li>Unzip the download. It holds the <code>agent-ready-store-audit</code> folder, ready-made zips for claude.ai in a <code>claude-ai</code> folder, a README and the licence.</li><li>Put the <code>agent-ready-store-audit</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: Customize, Skills, then the plus button, Create skill, Upload a skill, and upload the zip from the <code>claude-ai</code> folder without unzipping it (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Is my store ready for AI shopping agents? It&#x27;s mystore.com&quot;. The skill loads by itself.</li></ol></div></div></details></section>
+<section class="faq" id="questions"><h2>Questions</h2><details><summary>How do I pay and get the files?</summary><div><p><b>Checkout:</b> Gumroad opens on this page. Click Add to cart, enter your email and card details, and check the total, with any VAT, before you pay. Prices here are in US dollars.</p><p><b>After you pay:</b> a download page opens right away with the zip file, and Gumroad gives you a receipt there that you can resend. Open it, then paste the text from the prompts folder into ChatGPT and add your details.</p></div></details><details><summary>Refunds and contact</summary><div><p>If it does not do the job, ask and we refund you within 30 days. Reply to your receipt, or write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works in ChatGPT, Claude, Gemini and most other AI assistants: paste in the text, or load the files if your assistant supports them. Setup steps are under For technical users. We run our release tests on Claude Sonnet and Opus. Use your assistant&#x27;s strongest model: in our tests, a small, fast model added facts that were not in the source data. The check script needs Python 3 (standard library only) and web access. On claude.ai, turn code execution on; without it the workflow falls back to a manual audit and marks the score as estimated.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>What is in the zip</b></p><ul class="links"><li><code>LICENSE.txt</code></li><li><code>README.md</code></li><li><code>claude-ai/</code> (1 file: <code>agent-ready-store-audit.zip</code>)</li><li><code>prompts/</code> (2 files: <code>agent-ready-store-audit-v1.0-prompts.pdf</code>, <code>agent-ready-store-audit.md</code>)</li><li><code>agent-ready-store-audit/</code>, the skill itself:<ul><li><code>SKILL.md</code></li><li><code>README.md</code></li><li><code>references/</code> (2 files)</li><li><code>scripts/</code> (1 file)</li></ul></li></ul><p><b>Using it with an AI assistant</b></p><ol><li>Unzip the download. It holds the <code>agent-ready-store-audit</code> folder, ready-made zips for claude.ai in a <code>claude-ai</code> folder, a README and the licence.</li><li>Put the <code>agent-ready-store-audit</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: Customize, Skills, then the plus button, Create skill, Upload a skill, and upload the zip from the <code>claude-ai</code> folder without unzipping it (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Is my store ready for AI shopping agents? It&#x27;s mystore.com&quot;. The skill loads by itself.</li></ol></div></div></details></section>
 <section class="endcta"><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/l/agent-ready-store-audit/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=agent-ready-store-audit" data-go="buy/agent-ready-store-audit">Get it, $5</a></section>
-<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/agent-ready-quick-check/">Store Quick Check</a> (Free): Six checks of what a shopper and Google can see on your store, compared with 99 other stores.</li><li><a href="/skills/product-seo-fixer/">Product page tidy-up</a> ($5): A fix list in priority order, with the exact text to paste, for one product, a collection or your product export file.</li><li><a href="/skills/product-title-cleaner/">Product Title Cleaner</a> (Free): One consistent title style across your products, as a file you can import with only the changed rows.</li></ul></section>
+<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/shopify-policy-checker/">Check your store policies for gaps and mixed messages</a> (Free): Finds missing or conflicting details in your refund, shipping and privacy pages, and suggests wording.</li><li><a href="/skills/agent-ready-quick-check/">Quick check: can AI shopping assistants read your store?</a> (Free): Six checks of what a shopper and Google can see on your store, compared with 99 other stores.</li><li><a href="/skills/review-reply-drafter/">Reply to reviews without promising what you can&#x27;t give</a> (Free): A reply for every review, matched to its tone, with the risky ones flagged for you.</li></ul></section>
 </div></main>
 <footer class="sitefoot">
   <div class="wrap">

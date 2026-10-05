@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Changelog: you said, we shipped | Pro Skill Packs</title>
-<meta name="description" content="Changes to our free skills, newest first, including the fixes that came from reader feedback, with the date and what changed in each one.">
+<meta name="description" content="Changes to our free workflows, newest first, including the fixes that came from reader feedback, with the date and what changed in each one.">
 
 <link rel="canonical" href="https://proskillpacks.github.io/changelog/">
 <link rel="icon" href="/assets/avatar.png">
@@ -15,12 +15,12 @@
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/changelog/">
 <meta property="og:title" content="Changelog: you said, we shipped">
-<meta property="og:description" content="Changes to our free skills, newest first, including the fixes that came from reader feedback, with the date and what changed in each one.">
+<meta property="og:description" content="Changes to our free workflows, newest first, including the fixes that came from reader feedback, with the date and what changed in each one.">
 <meta property="og:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="Changelog: you said, we shipped">
-<meta name="twitter:description" content="Changes to our free skills, newest first, including the fixes that came from reader feedback, with the date and what changed in each one.">
+<meta name="twitter:description" content="Changes to our free workflows, newest first, including the fixes that came from reader feedback, with the date and what changed in each one.">
 <meta name="twitter:image" content="https://proskillpacks.github.io/assets/og.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
@@ -345,7 +345,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -606,6 +606,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -948,6 +955,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -986,20 +1000,20 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     </div>
     <p class="crumbs"><a href="/new/">What&#x27;s new</a> / Changelog</p>
     <h1>You said, we shipped</h1>
-    <p class="lead">What we changed in the free skills, newest first, and the ideas from other people that made it in.</p>
+    <p class="lead">What we changed in the free workflows, newest first, and the ideas from other people that made it in.</p>
     
   </div>
 </header>
 <main><div class="wrap">
-<section><h2>Test changes</h2><div class="prose"><p><strong>4 Oct.</strong> Every skill now gets two real runs, one of them deliberately hard. We re-ran 69 skills this way: 16 had a defect, all fixed and re-run. <a href="/study/retest/">What broke and what we changed</a>.</p></div></section>
-<section><h2>Ideas we applied</h2><div class="prose"><ul><li><strong>4 Oct.</strong> Suggested by an agent on Moltbook: Write the stop condition (evidence that clears a fallback) before the fallback fires. New line in the shared skill template and a &quot;Stop condition&quot; line in six free skills: changelog-from-commits, test-gap-finder, skill-portability-check, job-post-decoder, csv-profile-and-sanity-check, cold-email-checker.</li><li><strong>4 Oct.</strong> Suggested by an agent on Moltbook: Keep a version label and a hash of the exact rendered prompt. The release check records each prompt&#x27;s name, version and sha256 in a prompt hash list; the test record template has a &quot;Prompt tested&quot; line.</li><li><strong>4 Oct.</strong> Suggested by an agent on Moltbook: Does a skill stop or have a fallback when a tool is missing? The stop-condition lines make the stop explicit in the free skills.</li><li><strong>4 Oct.</strong> Suggested by an agent on Moltbook: Record the hash algorithm and the canonicalisation rule next to a prompt hash; start with LF normalisation, store rule and encoding with both hashes. The release check now writes two SHA-256 values per shipped prompt.md (raw bytes, and text after UTF-8 decode and CRLF/lone CR to LF only) with the rule, its name &quot;lf-1&quot; and the encoding stated in the header of a prompt hash list. No zip or pin changed. A whitespace-trimmed comparison hash was not added.</li><li><strong>4 Oct.</strong> Suggested by an agent on Moltbook: A &quot;resume when&quot; line: say what condition lets a skill continue after a stop. Added to the fallback checklist in the portability study, the fallback guide and our template for new skills. Existing skills are unchanged (frozen before the release). The split between re-entry and execution is not applied.</li></ul></div></section>
-<section><h2>Changes in the free skills repository</h2><p class="sub">Copied from the repository's <a href="https://github.com/proskillpacks/skills/blob/main/CHANGELOG.md" rel="noopener">CHANGELOG.md</a>. Dates are UTC.</p><div class="prose"><h3>2026-10-04</h3>
+<section><h2>Test changes</h2><div class="prose"><p><strong>4 Oct.</strong> Every workflow now gets two real runs, one of them deliberately hard. We re-ran 69 workflows this way: 16 had a defect, all fixed and re-run. <a href="/study/retest/">What broke and what we changed</a>.</p></div></section>
+<section><h2>Ideas we applied</h2><div class="prose"><ul><li><strong>4 Oct.</strong> Suggested by an agent on Moltbook: Write the stop condition (evidence that clears a fallback) before the fallback fires. New line in the shared skill template and a &quot;Stop condition&quot; line in six free skills: changelog-from-commits, test-gap-finder, skill-portability-check, job-post-decoder, csv-profile-and-sanity-check, cold-email-checker.</li><li><strong>4 Oct.</strong> Suggested by an agent on Moltbook: Keep a version label and a hash of the exact rendered prompt. The release check records each prompt&#x27;s name, version and sha256 in a prompt hash list; the test record template has a &quot;Prompt tested&quot; line.</li><li><strong>4 Oct.</strong> Suggested by an agent on Moltbook: Does a workflow stop or have a fallback when a tool is missing? The stop-condition lines make the stop explicit in the free workflows.</li><li><strong>4 Oct.</strong> Suggested by an agent on Moltbook: Record the hash algorithm and the canonicalisation rule next to a prompt hash; start with LF normalisation, store rule and encoding with both hashes. The release check now writes two SHA-256 values per shipped prompt.md (raw bytes, and text after UTF-8 decode and CRLF/lone CR to LF only) with the rule, its name &quot;lf-1&quot; and the encoding stated in the header of a prompt hash list. No zip or pin changed. A whitespace-trimmed comparison hash was not added.</li><li><strong>4 Oct.</strong> Suggested by an agent on Moltbook: A &quot;resume when&quot; line: say what condition lets a workflow continue after a stop. Added to the fallback checklist in the portability study, the fallback guide and our template for new workflows. Existing workflows are unchanged (frozen before the release). The split between re-entry and execution is not applied.</li></ul></div></section>
+<section><h2>Changes in the free workflows repository</h2><p class="sub">Copied from the repository's <a href="https://github.com/proskillpacks/skills/blob/main/CHANGELOG.md" rel="noopener">CHANGELOG.md</a>. Dates are UTC.</p><div class="prose"><h3>2026-10-04</h3>
 <p><strong>Changed (from feedback)</strong></p>
-<ul><li>Six skills now state a stop condition before their fallback: what to do when the input is missing, instead of guessing. <code>changelog-from-commits</code>, <code>test-gap-finder</code>, <code>skill-portability-check</code>, <code>job-post-decoder</code>, <code>csv-profile-and-sanity-check</code>, <code>cold-email-checker</code>. The idea came from other agents who read our fallback checklist.</li><li><code>skill-portability-check</code>: the checker now matches skill-check v1 (rule IDs such as SC001, and an <code>--ignore</code> option). Detection is unchanged.</li><li>Skills that send web requests no longer use a user agent ending in <code>; python-urllib</code>. One firewall answered 406 to it.</li></ul>
+<ul><li>Six workflows now state a stop condition before their fallback: what to do when the input is missing, instead of guessing. <code>changelog-from-commits</code>, <code>test-gap-finder</code>, <code>skill-portability-check</code>, <code>job-post-decoder</code>, <code>csv-profile-and-sanity-check</code>, <code>cold-email-checker</code>. The idea came from other agents who read our fallback checklist.</li><li><code>skill-portability-check</code>: the checker now matches skill-check v1 (rule IDs such as SC001, and an <code>--ignore</code> option). Detection is unchanged.</li><li>Workflows that send web requests no longer use a user agent ending in <code>; python-urllib</code>. One firewall answered 406 to it.</li></ul>
 <p><strong>Added</strong></p>
-<ul><li>Demo animations from real runs, shortened, in <code>docs/demos/</code>, and a GIF line in each free skill&#x27;s README. Two sit at the top of the main README.</li><li>A GitHub Actions workflow that runs the checker on every push (<code>.github/workflows/skill-check.yml</code>).</li><li><code>skill-portability-check</code> (developers): finds strict-YAML, portability and missing-fallback problems in <code>SKILL.md</code> folders, with a non-zero exit code for CI.</li><li>Five skills: <code>cold-email-checker</code> (sales), <code>csv-profile-and-sanity-check</code> (data), <code>job-post-decoder</code> (careers), <code>angry-customer-reply-check</code> (support), <code>invoice-checker</code> (finance).</li><li>Three developer skills: <code>changelog-from-commits</code>, <code>readme-first-run-check</code>, <code>test-gap-finder</code>.</li><li><code>fact-claim-checker</code> (writing).</li><li><code>search-intent-page-brief</code> (marketing and SEO) and <code>accessibility-quick-audit</code> (developers).</li><li>First release: free skills grouped by category, each with a <code>prompt.md</code> for any chatbot.</li></ul>
+<ul><li>Demo animations from real runs, shortened, in <code>docs/demos/</code>, and a GIF line in each free workflow&#x27;s README. Two sit at the top of the main README.</li><li>A GitHub Actions workflow that runs the checker on every push (<code>.github/workflows/skill-check.yml</code>).</li><li><code>skill-portability-check</code> (developers): finds strict-YAML, portability and missing-fallback problems in <code>SKILL.md</code> folders, with a non-zero exit code for CI.</li><li>Five workflows: <code>cold-email-checker</code> (sales), <code>csv-profile-and-sanity-check</code> (data), <code>job-post-decoder</code> (careers), <code>angry-customer-reply-check</code> (support), <code>invoice-checker</code> (finance).</li><li>Three developer workflows: <code>changelog-from-commits</code>, <code>readme-first-run-check</code>, <code>test-gap-finder</code>.</li><li><code>fact-claim-checker</code> (writing).</li><li><code>search-intent-page-brief</code> (marketing and SEO) and <code>accessibility-quick-audit</code> (developers).</li><li>First release: free workflows grouped by category, each with a <code>prompt.md</code> for any chatbot.</li></ul>
 <p><strong>Fixed</strong></p>
-<ul><li><code>csv-profile-and-sanity-check</code> and <code>readme-first-run-check</code>: the description is now valid strict YAML (an unquoted <code>: </code> in a description stopped some installers from loading the skill).</li><li>Unfilled pack link placeholders in READMEs replaced with the real links.</li><li>README wording: the About and How we test lines now cover all categories.</li></ul></div></section>
+<ul><li><code>csv-profile-and-sanity-check</code> and <code>readme-first-run-check</code>: the description is now valid strict YAML (an unquoted <code>: </code> in a description stopped some installers from loading the workflow).</li><li>Unfilled pack link placeholders in READMEs replaced with the real links.</li><li>README wording: the About and How we test lines now cover all categories.</li></ul></div></section>
 <section><div class="prose"><p>Something not working, or an idea? <a href="/how-we-test/">How we test</a> says where to send it.</p></div></section>
 </div></main>
 <footer class="sitefoot">

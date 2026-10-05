@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Product Title Cleaner: skill + paste-in prompt</title>
+<title>Clean up messy product titles | Pro Skill Packs</title>
 <meta name="description" content="Give every product in your Shopify store the same tidy title pattern. For Shopify store owners with messy product titles.">
 
 <link rel="canonical" href="https://proskillpacks.github.io/skills/product-title-cleaner/">
@@ -14,24 +14,24 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/skills/product-title-cleaner/">
-<meta property="og:title" content="Product Title Cleaner: skill + paste-in prompt">
+<meta property="og:title" content="Clean up messy product titles">
 <meta property="og:description" content="Give every product in your Shopify store the same tidy title pattern. For Shopify store owners with messy product titles.">
-<meta property="og:image" content="https://proskillpacks.github.io/assets/og/08932fe6e12e.png">
+<meta property="og:image" content="https://proskillpacks.github.io/assets/og/a4dd3c2844d3.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Product Title Cleaner: Pro Skill Packs">
-<meta name="twitter:image:alt" content="Product Title Cleaner: Pro Skill Packs">
+<meta property="og:image:alt" content="Clean up messy product titles: Pro Skill Packs">
+<meta name="twitter:image:alt" content="Clean up messy product titles: Pro Skill Packs">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
-<meta name="twitter:title" content="Product Title Cleaner: skill + paste-in prompt">
+<meta name="twitter:title" content="Clean up messy product titles">
 <meta name="twitter:description" content="Give every product in your Shopify store the same tidy title pattern. For Shopify store owners with messy product titles.">
-<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/08932fe6e12e.png">
+<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/a4dd3c2844d3.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "Product",
- "name": "Product Title Cleaner",
+ "name": "Clean up messy product titles",
  "description": "Your store in, one tidy title style as an import file.",
  "url": "https://proskillpacks.github.io/skills/product-title-cleaner/",
  "brand": {
@@ -355,7 +355,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -616,6 +616,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -958,6 +965,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script defer src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
@@ -980,7 +994,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
   {
    "@type": "ListItem",
    "position": 3,
-   "name": "Product Title Cleaner",
+   "name": "Clean up messy product titles",
    "item": "https://proskillpacks.github.io/skills/product-title-cleaner/"
   }
  ]
@@ -995,25 +1009,25 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
       <a class="name" href="/">PRO SKILL PACKS</a>
       <nav aria-label="Main"><a href="/free/">Free</a><a href="/how-we-test/">Why trust us</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
     </div>
-    <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-online-stores">Online stores</a> / Product Title Cleaner</p>
-    <h1>Product Title Cleaner</h1>
+    <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-online-stores">Online stores</a> / Clean up messy product titles</p>
+    <h1>Clean up messy product titles</h1>
     <dl class="ogw"><dt>Who it is for</dt><dd>Shopify store owners with messy product titles.</dd><dt>What you give it</dt><dd>Your store address or product export file.</dd><dt>What you get back</dt><dd>An import file with only the changed rows.</dd></dl><div class="buyb"><div class="cta"><a class="btn btn-lime" href="/prompts/product-title-cleaner/">Copy the text for ChatGPT or any chatbot</a></div><p class="note-light alts"><a class="alt-link" href="https://proskillpacks.gumroad.com/l/free-shopify-skills?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=free-shopify-skills" data-go="buy/free-shopify-skills">Download free</a> &middot; <a class="alt-link" href="/go/repo/product-title-cleaner/?from=skill" rel="noopener">View on GitHub</a></p><p class="ogline">You get a zip with a short guide and a text you paste into ChatGPT, Claude or any chatbot.</p><p class="note-light">Free. MIT licence: use it, change it, share it.</p></div>
   </div>
 </header>
 <main class="prod pc"><div class="wrap">
 <section><h2>Before and after</h2><div class="prose"><div class="table"><table><thead><tr><th>Before</th><th>After</th><th>Why</th></tr></thead><tbody><tr><td>Dark Roast, Cold Brew Coffee, Oat Milk</td><td>Dark Roast Cold Brew Coffee - Oat Milk</td><td>one separator</td></tr><tr><td>House Blend Coffee (12oz Ground)</td><td>House Blend Ground Coffee (12 oz)</td><td>type before size, unit format</td></tr><tr><td>Born To Roam Tee</td><td>Born to Roam Tee</td><td>title case</td></tr><tr><td>Ranger Shearling - Brown</td><td>Ranger Shearling Boot - Brown</td><td>product type added (taken from the store&#x27;s own product type, &quot;Boots&quot;)</td></tr><tr><td>Studio  x Partner Court Sneaker - Bone</td><td>Studio x Partner Court Sneaker - Bone</td><td>double space</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p>
 <p>On one 147-product coffee and merch catalogue it changed 13 titles and left 134 alone.</p></div></section>
-<section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/product-title-cleaner-last.png" data-gif="/assets/demos/product-title-cleaner.gif" alt="Animated demo of Product Title Cleaner on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async" srcset="/assets/demos/product-title-cleaner-last-240.webp 240w, /assets/demos/product-title-cleaner-last-480.webp 480w, /assets/demos/product-title-cleaner-last-900.webp 900w, /assets/demos/product-title-cleaner-last-1200.webp 1200w" sizes="(min-width: 48rem) 900px, 100vw" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Product Title Cleaner">Play</button></figure></section>
-<section><h2>What it does</h2><div class="prose"><p>A free skill that gives your whole Shopify catalogue one consistent title pattern and hands you a CSV you can import as is.</p>
+<section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/product-title-cleaner-last.png" data-gif="/assets/demos/product-title-cleaner.gif" alt="Animated demo of Clean up messy product titles on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async" srcset="/assets/demos/product-title-cleaner-last-240.webp 240w, /assets/demos/product-title-cleaner-last-480.webp 480w, /assets/demos/product-title-cleaner-last-900.webp 900w, /assets/demos/product-title-cleaner-last-1200.webp 1200w" sizes="(min-width: 48rem) 900px, 100vw" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Clean up messy product titles">Play</button></figure></section>
+<section><h2>What it does</h2><div class="prose"><p>A free workflow that gives your whole Shopify catalogue one consistent title pattern and hands you a CSV you can import as is.</p>
 <p>It works out the pattern most of your titles already follow. Then it fixes only the titles that break it:</p>
 <ul><li>promo words in titles (<code>NEW</code>, <code>SALE</code>, <code>Last Call</code>, <code>🔥</code>)</li><li>ALL CAPS</li><li>mixed separators (<code>|</code>, <code>,</code>, <code>–</code>)</li><li>sizes that should be variants</li><li>inconsistent units (<code>12oz</code> and <code>12 oz</code>)</li><li>a missing product type</li></ul>
 <p>It leaves your product names, brand styling, trademarks and model numbers alone. It also leaves alone titles that are already fine.</p>
 <p>Give it a store URL, a collection URL, or a product export CSV.</p></div></section>
 <section class="ev" id="evidence"><h2>The evidence</h2><p class="evh"><span class="bdg bg-t" title="Run on at least three real examples and scored against a written standard, with the record on file.">TESTED<span class="sr"> badge. Run on at least three real examples and scored against a written standard, with the record on file.</span></span><span class="psb-t">3 real catalogues, up to 490 products.</span></p><p>Tested on 3 real public Shopify catalogues, up to 490 products. Final scores: 10, 9 and 10 out of 10.</p><p class="evlink"><a href="/how-we-test/#ev-product-title-cleaner">Read the full test</a></p></section>
 <section><h2>Limits</h2><div class="prose"><p>It changes only the product <strong>title</strong>. It doesn&#x27;t write SEO titles, meta descriptions or product descriptions. The paid pack&#x27;s SEO fixer and description rewriter do those.</p></div></section>
-<section class="faq" id="questions"><h2>Questions</h2><details><summary>Refunds and contact</summary><div><p>If it does not do the job, ask and we refund you within 30 days. Reply to your receipt, or write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot. We run our release tests on Claude Sonnet and Opus. Use your assistant&#x27;s strongest model: in our tests, a small, fast model added facts that were not in the source data. The helper scripts need Python 3 (standard library only). Reading a live store needs web access; otherwise attach your product export CSV.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>Using it with an AI assistant</b></p><ol><li>Unzip the free download. It holds the free skill folders, including <code>product-title-cleaner</code>, ready-made zips for claude.ai in a <code>claude-ai</code> folder, and a README. Or copy the folder from GitHub.</li><li>Put the <code>product-title-cleaner</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: Customize, Skills, then the plus button, Create skill, Upload a skill, and upload the zip from the <code>claude-ai</code> folder without unzipping it (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words. The skill loads by itself.</li></ol></div></div></details></section>
+<section class="faq" id="questions"><h2>Questions</h2><details><summary>Refunds and contact</summary><div><p>If it does not do the job, ask and we refund you within 30 days. Reply to your receipt, or write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works in ChatGPT, Claude, Gemini and most other AI assistants: paste in the text, or load the files if your assistant supports them. Setup steps are under For technical users. We run our release tests on Claude Sonnet and Opus. Use your assistant&#x27;s strongest model: in our tests, a small, fast model added facts that were not in the source data. The helper scripts need Python 3 (standard library only). Reading a live store needs web access; otherwise attach your product export CSV.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>Using it with an AI assistant</b></p><ol><li>Unzip the free download. It holds the free skill folders, including <code>product-title-cleaner</code>, ready-made zips for claude.ai in a <code>claude-ai</code> folder, and a README. Or copy the folder from GitHub.</li><li>Put the <code>product-title-cleaner</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: Customize, Skills, then the plus button, Create skill, Upload a skill, and upload the zip from the <code>claude-ai</code> folder without unzipping it (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words. The skill loads by itself.</li></ol></div></div></details></section>
 <section class="endcta"><a class="btn btn-pine" href="/prompts/product-title-cleaner/">Copy the text for ChatGPT or any chatbot</a></section>
-<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/support-macro-writer/">Support Reply Writer</a> ($5): Ready-to-import replies built from your real shipping and returns policies.</li><li><a href="/skills/agent-ready-quick-check/">Store Quick Check</a> (Free): Six checks of what a shopper and Google can see on your store, compared with 99 other stores.</li><li><a href="/skills/agent-ready-store-audit/">Store Audit</a> ($5): A score from 0 to 100 for how well AI shopping tools and Google can read your store, with the top 7 fixes.</li></ul></section>
+<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/support-macro-writer/">Write support replies from your own store policies</a> ($5): Ready-to-import replies built from your real shipping and returns policies.</li><li><a href="/skills/chargeback-response-writer/">Answer a chargeback: the right letter for each reason</a> ($5): The dispute reason and your evidence in, the right letter back.</li><li><a href="/skills/shopify-policy-checker/">Check your store policies for gaps and mixed messages</a> (Free): Finds missing or conflicting details in your refund, shipping and privacy pages, and suggests wording.</li></ul></section>
 </div></main>
 <script>
 document.querySelectorAll('.demo').forEach(function (f) {

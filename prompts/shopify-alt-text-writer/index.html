@@ -353,7 +353,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -614,6 +614,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -956,6 +963,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -1003,7 +1017,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <section><h2>The prompt</h2><div class="prose"><p>Use this in any chatbot (ChatGPT, Claude, Gemini and others). Nothing to install.</p>
 <p><strong>How to use it</strong></p>
 <ol><li>For each product, open <code>https://yourstore.com/products/&lt;product-handle&gt;.json</code> in your browser (the handle is the last part of the product&#x27;s address) and copy the whole page. Or paste the product&#x27;s title, options, and for each image its position, file address and current alt text.</li><li>If your chatbot accepts images, also upload the product photos, in the same order. It writes better alt text when it can see them.</li><li>Copy everything from &quot;COPY FROM HERE&quot; to the end of this file, paste it into a new chat, then paste the product data under it.</li></ol>
-<p>You get alt text for every image (under 125 characters, each one different), a CSV in Shopify&#x27;s import format, and the steps to import it safely. The installed skill fetches products and photos itself with a script; in this version you paste the data, and without photos the alt text is written from the product data and file names, and it says so.</p>
+<p>You get alt text for every image (under 125 characters, each one different), a CSV in Shopify&#x27;s import format, and the steps to import it safely. The installed workflow fetches products and photos itself with a script; in this version you paste the data, and without photos the alt text is written from the product data and file names, and it says so.</p>
 <p><strong>Prefer to write it yourself?</strong> The pattern and rules below are the template.</p><pre><code>COPY FROM HERE
 
 You are writing alt text for a Shopify store&#x27;s product images. Good alt text tells a screen-reader user what the photo shows and names the product the way a shopper would search for it. Work only from the product data and photos given below.
@@ -1031,17 +1045,17 @@ Answer in this shape:
 If no product data is pasted below, ask for it in one line and stop.
 
 Here is my product data:</code></pre></div></section>
-<section><h2>A real example</h2><p class="sub">Real tests, 2026-10-03; store and product names removed. Taken from the skill's README.</p><div class="prose"><div class="table"><table><thead><tr><th>Photo</th><th>Before</th><th>After</th></tr></thead><tbody><tr><td>Flip flop, back (a large DTC footwear brand)</td><td><em>(empty)</em></td><td><code>Back of the dusty pink women&#x27;s flip flop with the brand logo embossed on the heel</code></td></tr><tr><td>Flip flop, sole (same store)</td><td><em>(empty)</em></td><td><code>Sole of the dusty pink women&#x27;s flip flop, with a pattern of concentric oval grooves</code></td></tr><tr><td>Lip stain how-to (a cosmetics brand)</td><td><em>(empty)</em></td><td><code>Peel-off lip stain how-to on a model&#x27;s lips: 1 line with the stain, 2 peel it off, 3 shine with gloss</code></td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p>
+<section><h2>A real example</h2><p class="sub">Real tests, 2026-10-03; store and product names removed. Taken from the workflow's README.</p><div class="prose"><div class="table"><table><thead><tr><th>Photo</th><th>Before</th><th>After</th></tr></thead><tbody><tr><td>Flip flop, back (a large DTC footwear brand)</td><td><em>(empty)</em></td><td><code>Back of the dusty pink women&#x27;s flip flop with the brand logo embossed on the heel</code></td></tr><tr><td>Flip flop, sole (same store)</td><td><em>(empty)</em></td><td><code>Sole of the dusty pink women&#x27;s flip flop, with a pattern of concentric oval grooves</code></td></tr><tr><td>Lip stain how-to (a cosmetics brand)</td><td><em>(empty)</em></td><td><code>Peel-off lip stain how-to on a model&#x27;s lips: 1 line with the stain, 2 peel it off, 3 shine with gloss</code></td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p>
 <p>We checked each &quot;after&quot; against the actual photo.</p></div></section>
-<section><h2>Limits</h2><div class="prose"><ul><li>It describes what it can see and what your product data says. It won&#x27;t invent materials or features.</li><li>Importing alt text by CSV re-imports your images. Test on one product first. For products with variant images (the photo changes per colour), paste the alt text by hand. The skill lists those products for you.</li></ul></div></section>
-<section><h2>The same job as an installable skill</h2><div class="prose"><p>Alt Text Writer is also a skill you install once and call in plain words, so you do not paste the prompt each time. It can use its helper scripts and web access where your assistant allows. <a href="/skills/shopify-alt-text-writer/">See the skill page</a>, or read <a href="/guides/how-to-install-agent-skills/">how to install skills</a>.</p></div></section>
-<section><h2>Related paid skills</h2><ul class="links"><li><a href="/skills/agent-ready-store-audit/">Agent-Ready Store Audit</a> ($5): Your store address in, a score out of 100 and the top 7 fixes.</li><li><a href="/skills/bfcm-campaign-kit/">BFCM Campaign Kit</a> ($5): Your store address in, offer maths, a calendar, emails and texts.</li><li><a href="/skills/chargeback-response-writer/">Chargeback Response Kit for Shopify: fill-in letters for each dispute reason</a> ($5): The dispute reason and your evidence in, the right letter back.</li></ul></section>
+<section><h2>Limits</h2><div class="prose"><ul><li>It describes what it can see and what your product data says. It won&#x27;t invent materials or features.</li><li>Importing alt text by CSV re-imports your images. Test on one product first. For products with variant images (the photo changes per colour), paste the alt text by hand. The workflow lists those products for you.</li></ul></div></section>
+<section><h2>The same job as an installable workflow</h2><div class="prose"><p>Write image descriptions (alt text) for your products is also a workflow you install once and call in plain words, so you do not paste the prompt each time. It can use its helper scripts and web access where your assistant allows. <a href="/skills/shopify-alt-text-writer/">See the workflow page</a>, or read <a href="/guides/how-to-install-agent-skills/">how to install workflows</a>.</p></div></section>
+<section><h2>Related paid workflows</h2><ul class="links"><li><a href="/skills/chargeback-response-writer/">Answer a chargeback: the right letter for each reason</a> ($5): The dispute reason and your evidence in, the right letter back.</li><li><a href="/skills/product-seo-fixer/">Fix the search problems on your product pages</a> ($5): A product or collection in, a fix list with text to paste.</li><li><a href="/packs/store-ops-pack/">Handle the weekly jobs in a Shopify store: six workflows</a> ($29): Your store address in, six tools built from your own store data.</li></ul></section>
 <section class="signup" id="notify">
   <h2>New free workflows by email</h2>
   <p>New free workflows and guides appear in all of these as we publish them. Pick whichever you already use.</p>
   <ul class="links">
     <li><a href="/feed.xml">RSS feed</a> for any feed reader</li>
-    <li><a href="/go/install/?from=prompt" rel="noopener">Watch the free skills repo on GitHub</a></li>
+    <li><a href="/go/install/?from=prompt" rel="noopener">Watch the free workflows repo on GitHub</a></li>
     <li><a href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=prompt&amp;utm_campaign=subscribe" rel="noopener">Follow on Gumroad</a></li>
   </ul>
 </section>

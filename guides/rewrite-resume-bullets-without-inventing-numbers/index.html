@@ -348,7 +348,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -609,6 +609,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -951,6 +958,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -1019,15 +1033,15 @@ MY NOTES:
 <ul><li>A number that appears from nowhere, or one that you gave as &quot;about 20&quot; now shown as exactly 20.</li><li>&quot;Led&quot; where you only took part, or &quot;managed&quot; where you coordinated.</li><li>A tool or software name you did not mention.</li><li>A result stated as caused by you when your notes only say it happened.</li></ul>
 <p>Delete or fix any of these. Then use the &quot;Missing:&quot; lines as a to-do list. If you find the real figure, add it to your notes and run that bullet again.</p>
 <h2>Step 4: tailor for the job, honestly</h2>
-<p>If you pasted the job requirements, check whether the assistant moved the most relevant bullets to the top and used the posting&#x27;s words where they are true for you. Do not keep a skill or keyword you cannot talk about in an interview.</p>
+<p>If you pasted the job requirements, check whether the assistant moved the most relevant bullets to the top and used the posting&#x27;s words where they are true for you. Do not keep a workflow or keyword you cannot talk about in an interview.</p>
 <h2>Limits</h2>
 <ul><li>It can only polish what you tell it. Thin notes make thin bullets.</li><li>It does not know how recruiters or applicant tracking systems in your country read a resume. Keep the format simple and check the posting&#x27;s instructions.</li><li>It cannot verify your facts. You are the one signing the document.</li><li>Some roles and countries expect different resume styles. Ask someone in your field to read it.</li></ul>
-<p><a href="/">Browse all skills in the catalog</a></p><p>Want this as a ready-made skill? <a href="/skills/resume-bullet-rewriter/">Resume Bullet Rewriter</a> ($9) does it in your own assistant.</p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/build-an-interview-scorecard-from-a-job-post/">How do I build an interview scorecard from a job post?</a></li><li><a href="/guides/how-to-answer-tell-me-about-a-time-with-your-own-experience/">How do I answer &quot;tell me about a time when&quot; using my own experience?</a></li><li><a href="/for/careers/">All skills for job seekers</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
-  <h2>Follow for new free skills</h2>
-  <p>New free skills and guides appear in all of these as we publish them. Pick whichever you already use.</p>
+<p><a href="/">Browse all workflows in the catalog</a></p><p>Want this as a ready-made workflow? <a href="/skills/resume-bullet-rewriter/">Rewrite your CV bullets for one job</a> ($9) does it in your own assistant.</p></div></section><section id="related"><h2>Keep reading</h2><ul class="links"><li><a href="/guides/build-an-interview-scorecard-from-a-job-post/">How do I build an interview scorecard from a job post?</a></li><li><a href="/guides/how-to-answer-tell-me-about-a-time-with-your-own-experience/">How do I answer &quot;tell me about a time when&quot; using my own experience?</a></li><li><a href="/for/careers/">All workflows for job seekers</a></li><li><a href="/guides/">All guides</a></li></ul></section><section class="signup" id="notify">
+  <h2>Follow for new free workflows</h2>
+  <p>New free workflows and guides appear in all of these as we publish them. Pick whichever you already use.</p>
   <ul class="links">
     <li><a href="/feed.xml">RSS feed</a> for any feed reader</li>
-    <li><a href="/go/install/?from=guide" rel="noopener">Watch the free skills repo on GitHub</a></li>
+    <li><a href="/go/install/?from=guide" rel="noopener">Watch the free workflows repo on GitHub</a></li>
     <li><a href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=guide&amp;utm_campaign=subscribe" rel="noopener">Follow on Gumroad</a></li>
   </ul>
 </section></div></main>

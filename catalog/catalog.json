@@ -2,8 +2,8 @@
  "generated": "2026-10-05",
  "products": [
   {
-   "id": "agent-browse-qwen",
-   "title": "Agent Browse for local models (Qwen)",
+   "id": "agent-browse",
+   "title": "Browse the web with an AI agent in fewer steps",
    "kind": "Free skill",
    "type": "free",
    "category": "developers",
@@ -11,21 +11,21 @@
    "price_usd": 0,
    "price_label": "Free",
    "free": true,
-   "url": "/skills/agent-browse-qwen/",
-   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/agent-browse-qwen",
-   "summary": "A browsing task and your local model in, the task done in fewer tries.",
+   "url": "/skills/agent-browse/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/agent-browse",
+   "summary": "A browsing task in, the task done in fewer steps.",
    "give": "A browsing task and the agent-browser CLI.",
-   "get": "A local model like Qwen3.8-27B stops guessing addresses and selectors, and gets the task done in fewer tries.",
+   "get": "The task done in fewer tool calls: forms, logins, dialogs, uploads and paginated data.",
    "jobs": [
     "review code"
    ],
    "tags": [],
-   "tested": "Trained and scored with Qwen3.8-27B on a local server, driven by the pi coding agent. On the 8 selection tasks (6 runs each) it got 48 of 48 correct at 36.4k tokens per task, against 21 of 24 at 68.7k with no skill and 47 of 48 at 42.3k with the Claude-trained Agent Browse. These are selection-split figures, the split the gate used to pick it. The held-out test is pending. Three of four tuning attempts were rejected by the gate.",
+   "tested": "Trained and scored with Claude Opus 5.5 through the claude CLI and the agent-browser CLI. On 11 unseen tasks (2 runs each) it used 29.4k weighted tokens per task against 34.2k with no skill, with 22 of 22 correct in every condition. Two of three proposed edit sets made things worse and were rejected by the validation gate. One student model and a small task set; the Setup section was added by hand and was not gated.",
    "includes": []
   },
   {
    "id": "spreadsheet-formula-and-cleanup",
-   "title": "Spreadsheet Formula and Cleanup",
+   "title": "Get a spreadsheet formula that works on your columns",
    "kind": "Single skill",
    "type": "single",
    "category": "data-and-spreadsheets",
@@ -48,7 +48,7 @@
   },
   {
    "id": "resume-bullet-rewriter",
-   "title": "Resume Bullet Rewriter",
+   "title": "Rewrite your CV bullets for one job",
    "kind": "Single skill",
    "type": "single",
    "category": "careers",
@@ -71,7 +71,7 @@
   },
   {
    "id": "cold-email-from-a-website",
-   "title": "Cold Email from a Website",
+   "title": "Write a cold email from a prospect's website",
    "kind": "Single skill",
    "type": "single",
    "category": "sales-and-outreach",
@@ -94,7 +94,7 @@
   },
   {
    "id": "voice-matched-draft-editor",
-   "title": "Voice-Matched Draft Editor",
+   "title": "Edit a draft so it still sounds like you",
    "kind": "Single skill",
    "type": "single",
    "category": "content-and-writing",
@@ -116,7 +116,7 @@
   },
   {
    "id": "store-ops-pack",
-   "title": "Store Ops Pack",
+   "title": "Handle the weekly jobs in a Shopify store: six workflows",
    "kind": "Pack",
    "type": "pack",
    "category": "shopify",
@@ -133,17 +133,17 @@
    "tags": [],
    "tested": "Every skill in the pack was tested on real public Shopify stores or real public merchant cases and scored against a written rubric. Each ships only when every test scores 8/10 or more.",
    "includes": [
-    "Agent-Ready Store Audit",
-    "Support Macro Writer",
-    "Product Description Rewriter",
-    "Product SEO Fixer",
-    "Chargeback Response Kit for Shopify: fill-in letters for each dispute reason",
-    "BFCM Campaign Kit"
+    "See how AI shopping assistants read your store",
+    "Write support replies from your own store policies",
+    "Rewrite thin product descriptions without made-up claims",
+    "Fix the search problems on your product pages",
+    "Answer a chargeback: the right letter for each reason",
+    "Plan your Black Friday sale on your own prices"
    ]
   },
   {
    "id": "late-payment-chaser-uk",
-   "title": "Late Payment Chaser (UK)",
+   "title": "Chase a late invoice (UK), with the interest worked out",
    "kind": "Free skill",
    "type": "free",
    "category": "freelancers",
@@ -166,7 +166,7 @@
   },
   {
    "id": "host-ops-pack",
-   "title": "Host Ops Pack",
+   "title": "Run your holiday let listing: six workflows",
    "kind": "Pack",
    "type": "pack",
    "category": "short-term-rental-hosts",
@@ -183,12 +183,12 @@
    "tags": [],
    "tested": "Each of the six skills has 4 tests on real public data, scored by hand against a written rubric. On the latest Claude Sonnet run of each test, every score is 8.5 or 9 out of 10. An independent reviewer re-scored 12 tests and ran 10 fresh cases from another city; every defect it listed as required is fixed in this version. No host has used the output on a live listing yet.",
    "includes": [
-    "Listing Rewriter"
+    "Rewrite your holiday let listing"
    ]
   },
   {
    "id": "search-intent-page-brief",
-   "title": "Search Intent Page Brief",
+   "title": "Plan a page around what searchers want",
    "kind": "Free skill",
    "type": "free",
    "category": "marketers-and-agencies",
@@ -211,7 +211,7 @@
   },
   {
    "id": "invoice-checker",
-   "title": "Invoice Checker",
+   "title": "Check an invoice before you send or pay it",
    "kind": "Free skill",
    "type": "free",
    "category": "finance-and-admin",
@@ -234,7 +234,7 @@
   },
   {
    "id": "angry-customer-reply-check",
-   "title": "Angry Customer Reply Check",
+   "title": "Check your reply to an angry customer before you send it",
    "kind": "Free skill",
    "type": "free",
    "category": "customer-support",
@@ -256,8 +256,8 @@
    "includes": []
   },
   {
-   "id": "agent-browse",
-   "title": "Agent Browse",
+   "id": "agent-browse-qwen",
+   "title": "Browse the web with a local Qwen model, fewer wrong turns",
    "kind": "Free skill",
    "type": "free",
    "category": "developers",
@@ -265,21 +265,21 @@
    "price_usd": 0,
    "price_label": "Free",
    "free": true,
-   "url": "/skills/agent-browse/",
-   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/agent-browse",
-   "summary": "A browsing task in, the task done in fewer steps.",
+   "url": "/skills/agent-browse-qwen/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/agent-browse-qwen",
+   "summary": "A browsing task and your local model in, the task done in fewer tries.",
    "give": "A browsing task and the agent-browser CLI.",
-   "get": "The task done in fewer tool calls: forms, logins, dialogs, uploads and paginated data.",
+   "get": "A local model like Qwen3.8-27B stops guessing addresses and selectors, and gets the task done in fewer tries.",
    "jobs": [
     "review code"
    ],
    "tags": [],
-   "tested": "Trained and scored with Claude Opus 5.5 through the claude CLI and the agent-browser CLI. On 11 unseen tasks (2 runs each) it used 29.4k weighted tokens per task against 34.2k with no skill, with 22 of 22 correct in every condition. Two of three proposed edit sets made things worse and were rejected by the validation gate. One student model and a small task set; the Setup section was added by hand and was not gated.",
+   "tested": "Trained and scored with Qwen3.8-27B on a local server, driven by the pi coding agent. On the 8 selection tasks (6 runs each) it got 48 of 48 correct at 36.4k tokens per task, against 21 of 24 at 68.7k with no skill and 47 of 48 at 42.3k with the Claude-trained Agent Browse. These are selection-split figures, the split the gate used to pick it. The held-out test is pending. Three of four tuning attempts were rejected by the gate.",
    "includes": []
   },
   {
    "id": "csv-profile-and-sanity-check",
-   "title": "CSV Profile and Sanity Check",
+   "title": "Check a data file before you rely on it",
    "kind": "Free skill",
    "type": "free",
    "category": "data-and-spreadsheets",
@@ -302,7 +302,7 @@
   },
   {
    "id": "job-post-decoder",
-   "title": "Job Post Decoder",
+   "title": "Read a job post for what the job really is",
    "kind": "Free skill",
    "type": "free",
    "category": "careers",
@@ -325,7 +325,7 @@
   },
   {
    "id": "cold-email-checker",
-   "title": "Cold Email Checker",
+   "title": "Check a cold email for claims you can't back up",
    "kind": "Free skill",
    "type": "free",
    "category": "sales-and-outreach",
@@ -348,7 +348,7 @@
   },
   {
    "id": "fact-claim-checker",
-   "title": "Fact-Claim Checker",
+   "title": "Find the claims in a draft that need a source",
    "kind": "Free skill",
    "type": "free",
    "category": "content-and-writing",
@@ -369,8 +369,8 @@
    "includes": []
   },
   {
-   "id": "review-reply-drafter",
-   "title": "Review Reply Drafter",
+   "id": "shopify-alt-text-writer",
+   "title": "Write image descriptions (alt text) for your products",
    "kind": "Free skill",
    "type": "free",
    "category": "shopify",
@@ -378,21 +378,21 @@
    "price_usd": 0,
    "price_label": "Free",
    "free": true,
-   "url": "/skills/review-reply-drafter/",
+   "url": "/skills/shopify-alt-text-writer/",
    "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
-   "summary": "Your reviews in, a reply for each, risky ones flagged.",
-   "give": "Your reviews (pasted, CSV, or a public review page).",
-   "get": "A reply for each review, matched to its tone. It never promises refunds you didn't approve, and it flags reviews that need you personally.",
+   "summary": "Your store in, alt text for every product photo as an import file.",
+   "give": "Your store URL, a product URL, or your product export CSV.",
+   "get": "Alt text for every product image, written while looking at the photo. Comes as a Shopify import CSV, a review sheet, and a paste-by-hand list for products with variant images.",
    "jobs": [
-    "reply to customers"
+    "write copy"
    ],
    "tags": [],
-   "tested": "Tested on 3 real public review sets (Judge.me and Trustpilot). Final runs: 9, 9.5 and 9 out of 10.",
+   "tested": "Tested on 6 real cases from public Shopify stores, including three product export CSVs. Final scores: 10, 10, 9, 10, 9 and 10 out of 10.",
    "includes": []
   },
   {
    "id": "listing-rewriter",
-   "title": "Listing Rewriter",
+   "title": "Rewrite your holiday let listing",
    "kind": "Single skill",
    "type": "single",
    "category": "short-term-rental-hosts",
@@ -414,7 +414,7 @@
   },
   {
    "id": "ai-search-readiness-check",
-   "title": "AI Search Readiness Check",
+   "title": "Check how AI search tools read your website",
    "kind": "Free skill",
    "type": "free",
    "category": "marketers-and-agencies",
@@ -435,141 +435,8 @@
    "includes": []
   },
   {
-   "id": "test-gap-finder",
-   "title": "Test Gap Finder",
-   "kind": "Free skill",
-   "type": "free",
-   "category": "developers",
-   "category_name": "Developers",
-   "price_usd": 0,
-   "price_label": "Free",
-   "free": true,
-   "url": "/skills/test-gap-finder/",
-   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/test-gap-finder",
-   "summary": "A diff and its tests in, what is not covered and test cases to add.",
-   "give": "A diff and the tests.",
-   "get": "Get each behaviour the change adds marked Covered, Not covered or Unknown, and ranked test cases for the gaps.",
-   "jobs": [
-    "review code"
-   ],
-   "tags": [],
-   "tested": "1 real-data run on a public multi-hunk change in the Express repository (Claude Sonnet). We checked each Covered and Not covered claim against the tests ourselves.",
-   "includes": []
-  },
-  {
-   "id": "support-macro-writer",
-   "title": "Support Macro Writer",
-   "kind": "Single skill",
-   "type": "single",
-   "category": "shopify",
-   "category_name": "Shopify store owners",
-   "price_usd": 5,
-   "price_label": "$5",
-   "free": false,
-   "url": "/skills/support-macro-writer/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/support-macro-writer",
-   "summary": "Your store address in, saved replies built from your real policies.",
-   "give": "Your store URL.",
-   "get": "It reads your real refund and shipping policies and writes ready-to-import support replies, starting with the hard cases: stuck in transit, \"delivered\" but not received, address changes, cancellations.",
-   "jobs": [
-    "reply to customers"
-   ],
-   "tags": [],
-   "tested": "Tested on 4 real public Shopify stores with Gorgias, Zendesk, Shopify Inbox and neutral output, scored against a written rubric. Every policy fact in the macros was checked against the stores' own policy text.",
-   "includes": []
-  },
-  {
-   "id": "skill-portability-check",
-   "title": "Skill Portability Check",
-   "kind": "Free skill",
-   "type": "free",
-   "category": "developers",
-   "category_name": "Developers",
-   "price_usd": 0,
-   "price_label": "Free",
-   "free": true,
-   "url": "/skills/skill-portability-check/",
-   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/skill-portability-check",
-   "summary": "A skill folder in, errors and warnings with the exact fixes.",
-   "give": "Point it at a skill folder or a repository of skills.",
-   "get": "A per-skill table of errors and warnings, and the exact fixes.",
-   "jobs": [
-    "review code"
-   ],
-   "tags": [],
-   "tested": "Run over our own 57 skills and its four fixtures (5 checks pass). It found 7 descriptions our tools had accepted but strict YAML parsers reject, now fixed. The assistant wrapper was not model-tested.",
-   "includes": []
-  },
-  {
-   "id": "product-title-cleaner",
-   "title": "Product Title Cleaner",
-   "kind": "Free skill",
-   "type": "free",
-   "category": "shopify",
-   "category_name": "Shopify store owners",
-   "price_usd": 0,
-   "price_label": "Free",
-   "free": true,
-   "url": "/skills/product-title-cleaner/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
-   "summary": "Your store in, one tidy title style as an import file.",
-   "give": "Your store, a collection URL, or a product export CSV.",
-   "get": "One consistent title pattern across your catalogue, as a `URL handle,Title` import CSV (changed rows only). It never creates duplicate titles.",
-   "jobs": [
-    "audit and fix"
-   ],
-   "tags": [],
-   "tested": "Tested on 3 real public Shopify catalogues, up to 490 products. Final scores: 10, 9 and 10 out of 10.",
-   "includes": []
-  },
-  {
-   "id": "readme-first-run-check",
-   "title": "README First-Run Check",
-   "kind": "Free skill",
-   "type": "free",
-   "category": "developers",
-   "category_name": "Developers",
-   "price_usd": 0,
-   "price_label": "Free",
-   "free": true,
-   "url": "/skills/readme-first-run-check/",
-   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/readme-first-run-check",
-   "summary": "Your repository in, each setup step marked OK or broken.",
-   "give": "Point it at a repo.",
-   "get": "It follows the README like a new user and checks every step against the repo: OK, BROKEN, MISSING or UNVERIFIED, with evidence and the README edits that fix it.",
-   "jobs": [
-    "review code"
-   ],
-   "tags": [],
-   "tested": "1 real-data run on a public MDN tutorial repository (Claude Sonnet). The missing start script, the .nvmrc version and the stale Create React App text were all real.",
-   "includes": []
-  },
-  {
-   "id": "product-seo-fixer",
-   "title": "Product SEO Fixer",
-   "kind": "Single skill",
-   "type": "single",
-   "category": "shopify",
-   "category_name": "Shopify store owners",
-   "price_usd": 5,
-   "price_label": "$5",
-   "free": false,
-   "url": "/skills/product-seo-fixer/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/product-seo-fixer",
-   "summary": "A product or collection in, a fix list with text to paste.",
-   "give": "A product URL, a collection URL, or your product export CSV.",
-   "get": "A prioritised SEO fix list with the exact text to paste and where. Collection mode also writes the collection intro and SEO fields; CSV mode returns a re-importable CSV.",
-   "jobs": [
-    "audit and fix",
-    "write copy"
-   ],
-   "tags": [],
-   "tested": "Tested on 5 real public Shopify stores across all three modes. Final runs scored 9 to 10 out of 10.",
-   "includes": []
-  },
-  {
    "id": "pr-description-and-review-prep",
-   "title": "PR Description and Review Prep",
+   "title": "Write a pull request description and review notes",
    "kind": "Free skill",
    "type": "free",
    "category": "developers",
@@ -591,30 +458,30 @@
    "includes": []
   },
   {
-   "id": "shopify-policy-checker",
-   "title": "Policy Checker",
-   "kind": "Free skill",
-   "type": "free",
+   "id": "support-macro-writer",
+   "title": "Write support replies from your own store policies",
+   "kind": "Single skill",
+   "type": "single",
    "category": "shopify",
    "category_name": "Shopify store owners",
-   "price_usd": 0,
-   "price_label": "Free",
-   "free": true,
-   "url": "/skills/shopify-policy-checker/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
-   "summary": "Your store address in, gaps in your policies and wording to paste.",
+   "price_usd": 5,
+   "price_label": "$5",
+   "free": false,
+   "url": "/skills/support-macro-writer/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/support-macro-writer",
+   "summary": "Your store address in, saved replies built from your real policies.",
    "give": "Your store URL.",
-   "get": "A scored audit of your refund, shipping, privacy, terms and contact policies. It flags missing items and contradictions with your FAQ and banners, and gives fixes you can paste.",
+   "get": "It reads your real refund and shipping policies and writes ready-to-import support replies, starting with the hard cases: stuck in transit, \"delivered\" but not received, address changes, cancellations.",
    "jobs": [
-    "audit and fix"
+    "reply to customers"
    ],
    "tags": [],
-   "tested": "Tested on 4 real public Shopify stores. Final scores: 10, 10, 9 and 9 out of 10.",
+   "tested": "Tested on 4 real public Shopify stores with Gorgias, Zendesk, Shopify Inbox and neutral output, scored against a written rubric. Every policy fact in the macros was checked against the stores' own policy text.",
    "includes": []
   },
   {
    "id": "changelog-from-commits",
-   "title": "Changelog from Commits",
+   "title": "Write a changelog from your commits",
    "kind": "Free skill",
    "type": "free",
    "category": "developers",
@@ -635,8 +502,52 @@
    "includes": []
   },
   {
-   "id": "product-description-rewriter",
-   "title": "Product Description Rewriter",
+   "id": "review-reply-drafter",
+   "title": "Reply to reviews without promising what you can't give",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/review-reply-drafter/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
+   "summary": "Your reviews in, a reply for each, risky ones flagged.",
+   "give": "Your reviews (pasted, CSV, or a public review page).",
+   "get": "A reply for each review, matched to its tone. It never promises refunds you didn't approve, and it flags reviews that need you personally.",
+   "jobs": [
+    "reply to customers"
+   ],
+   "tags": [],
+   "tested": "Tested on 3 real public review sets (Judge.me and Trustpilot). Final runs: 9, 9.5 and 9 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "test-gap-finder",
+   "title": "Find code changes that have no tests",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "developers",
+   "category_name": "Developers",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/test-gap-finder/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/test-gap-finder",
+   "summary": "A diff and its tests in, what is not covered and test cases to add.",
+   "give": "A diff and the tests.",
+   "get": "Get each behaviour the change adds marked Covered, Not covered or Unknown, and ranked test cases for the gaps.",
+   "jobs": [
+    "review code"
+   ],
+   "tags": [],
+   "tested": "1 real-data run on a public multi-hunk change in the Express repository (Claude Sonnet). We checked each Covered and Not covered claim against the tests ourselves.",
+   "includes": []
+  },
+  {
+   "id": "agent-ready-store-audit",
+   "title": "See how AI shopping assistants read your store",
    "kind": "Single skill",
    "type": "single",
    "category": "shopify",
@@ -644,21 +555,21 @@
    "price_usd": 5,
    "price_label": "$5",
    "free": false,
-   "url": "/skills/product-description-rewriter/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/product-description-rewriter",
-   "summary": "Your store or a product in, descriptions ready to paste into Shopify.",
-   "give": "A product URL, pasted text, a collection, or your product export CSV.",
-   "get": "Clean Shopify HTML descriptions with an SEO title (≤ 60 characters) and meta description (≤ 155). Bulk runs produce an import CSV.",
+   "url": "/skills/agent-ready-store-audit/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/agent-ready-store-audit",
+   "summary": "Your store address in, a score out of 100 and the top 7 fixes.",
+   "give": "Your store URL.",
+   "get": "A score out of 100 for how well AI shopping agents (ChatGPT, Gemini, Copilot and others) can find, understand and buy from your store, an agent's-eye test of real buyer questions, and a ranked fix list.",
    "jobs": [
-    "write copy"
+    "audit and fix"
    ],
    "tags": [],
-   "tested": "Tested on 4 real public Shopify stores and one product export CSV. Final scores: 9, 9, 10, 10 and 9 out of 10.",
+   "tested": "Tested on 4 real public Shopify stores. Final runs: 9, 9, 9.5 and 9 out of 10.",
    "includes": []
   },
   {
    "id": "accessibility-quick-audit",
-   "title": "Accessibility Quick Audit",
+   "title": "Find accessibility problems on a web page",
    "kind": "Free skill",
    "type": "free",
    "category": "developers",
@@ -680,96 +591,8 @@
    "includes": []
   },
   {
-   "id": "chargeback-evidence-checklist",
-   "title": "Chargeback Evidence Checklist: PDF and skill",
-   "kind": "Free skill",
-   "type": "free",
-   "category": "shopify",
-   "category_name": "Shopify store owners",
-   "price_usd": 0,
-   "price_label": "Free",
-   "free": true,
-   "url": "/skills/chargeback-evidence-checklist/",
-   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/ecommerce/chargeback-evidence-checklist",
-   "summary": "The dispute reason in, the evidence to collect and where to find it.",
-   "give": "The dispute reason.",
-   "get": "The evidence to gather for that reason, what you already have, and where to find each piece in Shopify.",
-   "jobs": [
-    "handle chargebacks"
-   ],
-   "tags": [],
-   "tested": "Tested on 6 real disputes from the Shopify Community forum. Release-version scores: 9, 9, 9.5, 9, 9 and 9.5 out of 10, plus one Opus check at 9. The paste-in prompt scored 8.5 in Claude.",
-   "includes": []
-  },
-  {
-   "id": "chargeback-response-writer",
-   "title": "Chargeback Response Kit for Shopify: fill-in letters for each dispute reason",
-   "kind": "Single skill",
-   "type": "single",
-   "category": "shopify",
-   "category_name": "Shopify store owners",
-   "price_usd": 5,
-   "price_label": "$5",
-   "free": false,
-   "url": "/skills/chargeback-response-writer/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/chargeback-response-writer",
-   "summary": "The dispute reason and your evidence in, the right letter back.",
-   "give": "The dispute details plus the evidence you actually have.",
-   "get": "A response matched to the reason code, a checklist of what to attach, and a list of gaps. It never invents evidence, and it tells you when accepting is cheaper.",
-   "jobs": [
-    "money and disputes"
-   ],
-   "tags": [],
-   "tested": "Tested on 6 real dispute scenarios from the Shopify Community forum. Every final run scored 9/10 or more, with no invented evidence.",
-   "includes": []
-  },
-  {
-   "id": "shopify-alt-text-writer",
-   "title": "Alt Text Writer",
-   "kind": "Free skill",
-   "type": "free",
-   "category": "shopify",
-   "category_name": "Shopify store owners",
-   "price_usd": 0,
-   "price_label": "Free",
-   "free": true,
-   "url": "/skills/shopify-alt-text-writer/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
-   "summary": "Your store in, alt text for every product photo as an import file.",
-   "give": "Your store URL, a product URL, or your product export CSV.",
-   "get": "Alt text for every product image, written while looking at the photo. Comes as a Shopify import CSV, a review sheet, and a paste-by-hand list for products with variant images.",
-   "jobs": [
-    "write copy"
-   ],
-   "tags": [],
-   "tested": "Tested on 6 real cases from public Shopify stores, including three product export CSVs. Final scores: 10, 10, 9, 10, 9 and 10 out of 10.",
-   "includes": []
-  },
-  {
-   "id": "bfcm-campaign-kit",
-   "title": "BFCM Campaign Kit",
-   "kind": "Single skill",
-   "type": "single",
-   "category": "shopify",
-   "category_name": "Shopify store owners",
-   "price_usd": 5,
-   "price_label": "$5",
-   "free": false,
-   "url": "/skills/bfcm-campaign-kit/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/bfcm-campaign-kit",
-   "summary": "Your store address in, offer maths, a calendar, emails and texts.",
-   "give": "Your store URL (plus your margin, if you know it).",
-   "get": "A Black Friday / Cyber Monday plan: offer maths on your real prices, a dated US/UK calendar, 5 emails, 3 SMS, banners and an ops checklist. No fake urgency.",
-   "jobs": [
-    "plan and launch"
-   ],
-   "tags": [],
-   "tested": "Tested on 4 real public Shopify stores (US and UK, low to high price points). Final version: 9/10 on all four.",
-   "includes": []
-  },
-  {
    "id": "agent-ready-quick-check",
-   "title": "Agent-Ready Quick Check",
+   "title": "Quick check: can AI shopping assistants read your store?",
    "kind": "Free skill",
    "type": "free",
    "category": "shopify",
@@ -790,8 +613,30 @@
    "includes": []
   },
   {
-   "id": "agent-ready-store-audit",
-   "title": "Agent-Ready Store Audit",
+   "id": "skill-portability-check",
+   "title": "Check a skill file works across AI tools",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "developers",
+   "category_name": "Developers",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/skill-portability-check/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/skill-portability-check",
+   "summary": "A skill folder in, errors and warnings with the exact fixes.",
+   "give": "Point it at a skill folder or a repository of skills.",
+   "get": "A per-skill table of errors and warnings, and the exact fixes.",
+   "jobs": [
+    "review code"
+   ],
+   "tags": [],
+   "tested": "Run over our own 57 skills and its four fixtures (5 checks pass). It found 7 descriptions our tools had accepted but strict YAML parsers reject, now fixed. The assistant wrapper was not model-tested.",
+   "includes": []
+  },
+  {
+   "id": "product-description-rewriter",
+   "title": "Rewrite thin product descriptions without made-up claims",
    "kind": "Single skill",
    "type": "single",
    "category": "shopify",
@@ -799,16 +644,171 @@
    "price_usd": 5,
    "price_label": "$5",
    "free": false,
-   "url": "/skills/agent-ready-store-audit/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/agent-ready-store-audit",
-   "summary": "Your store address in, a score out of 100 and the top 7 fixes.",
-   "give": "Your store URL.",
-   "get": "A score out of 100 for how well AI shopping agents (ChatGPT, Gemini, Copilot and others) can find, understand and buy from your store, an agent's-eye test of real buyer questions, and a ranked fix list.",
+   "url": "/skills/product-description-rewriter/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/product-description-rewriter",
+   "summary": "Your store or a product in, descriptions ready to paste into Shopify.",
+   "give": "A product URL, pasted text, a collection, or your product export CSV.",
+   "get": "Clean Shopify HTML descriptions with an SEO title (≤ 60 characters) and meta description (≤ 155). Bulk runs produce an import CSV.",
+   "jobs": [
+    "write copy"
+   ],
+   "tags": [],
+   "tested": "Tested on 4 real public Shopify stores and one product export CSV. Final scores: 9, 9, 10, 10 and 9 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "readme-first-run-check",
+   "title": "Check a README works for a first-time user",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "developers",
+   "category_name": "Developers",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/readme-first-run-check/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/readme-first-run-check",
+   "summary": "Your repository in, each setup step marked OK or broken.",
+   "give": "Point it at a repo.",
+   "get": "It follows the README like a new user and checks every step against the repo: OK, BROKEN, MISSING or UNVERIFIED, with evidence and the README edits that fix it.",
+   "jobs": [
+    "review code"
+   ],
+   "tags": [],
+   "tested": "1 real-data run on a public MDN tutorial repository (Claude Sonnet). The missing start script, the .nvmrc version and the stale Create React App text were all real.",
+   "includes": []
+  },
+  {
+   "id": "chargeback-evidence-checklist",
+   "title": "Gather the evidence for a chargeback",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/chargeback-evidence-checklist/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/ecommerce/chargeback-evidence-checklist",
+   "summary": "The dispute reason in, the evidence to collect and where to find it.",
+   "give": "The dispute reason.",
+   "get": "The evidence to gather for that reason, what you already have, and where to find each piece in Shopify.",
+   "jobs": [
+    "handle chargebacks"
+   ],
+   "tags": [],
+   "tested": "Tested on 6 real disputes from the Shopify Community forum. Release-version scores: 9, 9, 9.5, 9, 9 and 9.5 out of 10, plus one Opus check at 9. The paste-in prompt scored 8.5 in Claude.",
+   "includes": []
+  },
+  {
+   "id": "bfcm-campaign-kit",
+   "title": "Plan your Black Friday sale on your own prices",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 5,
+   "price_label": "$5",
+   "free": false,
+   "url": "/skills/bfcm-campaign-kit/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/bfcm-campaign-kit",
+   "summary": "Your store address in, offer maths, a calendar, emails and texts.",
+   "give": "Your store URL (plus your margin, if you know it).",
+   "get": "A Black Friday / Cyber Monday plan: offer maths on your real prices, a dated US/UK calendar, 5 emails, 3 SMS, banners and an ops checklist. No fake urgency.",
+   "jobs": [
+    "plan and launch"
+   ],
+   "tags": [],
+   "tested": "Tested on 4 real public Shopify stores (US and UK, low to high price points). Final version: 9/10 on all four.",
+   "includes": []
+  },
+  {
+   "id": "product-title-cleaner",
+   "title": "Clean up messy product titles",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/product-title-cleaner/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
+   "summary": "Your store in, one tidy title style as an import file.",
+   "give": "Your store, a collection URL, or a product export CSV.",
+   "get": "One consistent title pattern across your catalogue, as a `URL handle,Title` import CSV (changed rows only). It never creates duplicate titles.",
    "jobs": [
     "audit and fix"
    ],
    "tags": [],
-   "tested": "Tested on 4 real public Shopify stores. Final runs: 9, 9, 9.5 and 9 out of 10.",
+   "tested": "Tested on 3 real public Shopify catalogues, up to 490 products. Final scores: 10, 9 and 10 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "product-seo-fixer",
+   "title": "Fix the search problems on your product pages",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 5,
+   "price_label": "$5",
+   "free": false,
+   "url": "/skills/product-seo-fixer/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/product-seo-fixer",
+   "summary": "A product or collection in, a fix list with text to paste.",
+   "give": "A product URL, a collection URL, or your product export CSV.",
+   "get": "A prioritised SEO fix list with the exact text to paste and where. Collection mode also writes the collection intro and SEO fields; CSV mode returns a re-importable CSV.",
+   "jobs": [
+    "audit and fix",
+    "write copy"
+   ],
+   "tags": [],
+   "tested": "Tested on 5 real public Shopify stores across all three modes. Final runs scored 9 to 10 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "shopify-policy-checker",
+   "title": "Check your store policies for gaps and mixed messages",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/shopify-policy-checker/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/free-shopify-skills",
+   "summary": "Your store address in, gaps in your policies and wording to paste.",
+   "give": "Your store URL.",
+   "get": "A scored audit of your refund, shipping, privacy, terms and contact policies. It flags missing items and contradictions with your FAQ and banners, and gives fixes you can paste.",
+   "jobs": [
+    "audit and fix"
+   ],
+   "tags": [],
+   "tested": "Tested on 4 real public Shopify stores. Final scores: 10, 10, 9 and 9 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "chargeback-response-writer",
+   "title": "Answer a chargeback: the right letter for each reason",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "shopify",
+   "category_name": "Shopify store owners",
+   "price_usd": 5,
+   "price_label": "$5",
+   "free": false,
+   "url": "/skills/chargeback-response-writer/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/chargeback-response-writer",
+   "summary": "The dispute reason and your evidence in, the right letter back.",
+   "give": "The dispute details plus the evidence you actually have.",
+   "get": "A response matched to the reason code, a checklist of what to attach, and a list of gaps. It never invents evidence, and it tells you when accepting is cheaper.",
+   "jobs": [
+    "money and disputes"
+   ],
+   "tags": [],
+   "tested": "Tested on 6 real dispute scenarios from the Shopify Community forum. Every final run scored 9/10 or more, with no invented evidence.",
    "includes": []
   }
  ]

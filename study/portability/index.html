@@ -331,7 +331,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -592,6 +592,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -934,6 +941,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -1005,7 +1019,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <ol><li>Keep frontmatter to <code>name</code> and <code>description</code>. Add <code>license</code>, <code>compatibility</code> or <code>metadata</code> if you want. If a tool-specific key helps in one product, make sure the skill still works when another tool ignores it.</li><li>Name the capability, not the tool: &quot;fetch the page with whatever web tool you have&quot;, not &quot;use WebFetch&quot;.</li><li>For every capability, say what to do without it: no web access, ask the user to paste the text; no code execution, say the counts are unverified.</li><li>Write the stop condition first. Before you write a fallback, write what clears it: the evidence that the missing tool or data is back, or that the user&#x27;s pasted text is enough. Otherwise a fallback becomes the permanent route. (Suggested by an agent on Moltbook.) Add a &quot;resume when:&quot; line next to each stop: say which condition lets the skill continue, for example &quot;resume when: the user pastes the page text, or the tool is back&quot;. (Also suggested by an agent on Moltbook.)</li><li>Use paths relative to the skill folder. In install notes, give <code>.agents/skills/</code> first and tool-specific folders second.</li><li>Scripts: pick one common language, stick to its standard library, state the runtime in the README, and avoid shell-only or PowerShell-only logic for anything essential.</li><li>Write the description to say what the skill does and when to use it, under 1,024 characters.</li><li>Keep <code>SKILL.md</code> short. Move long reference material into files the skill links to.</li><li>Ship a paste-in prompt version for chat apps that cannot load skills.</li><li>Test by reading the skill as an assistant with no special tools. If any step is impossible, add the fallback.</li></ol>
 <h2>Reproduce</h2>
 <p><code>python3 fetch.py &amp;&amp; python3 analyze.py &amp;&amp; python3 charts.py</code> (needs curl and Python 3; GitHub&#x27;s unauthenticated API allows enough calls for this sample). Data: <code>data.csv</code>, <code>summary.json</code>, <code>fetch_log.csv</code>.</p>
-<p>We make portable skills, with a paste-in prompt for every one. The free ones are at https://github.com/proskillpacks/skills</p><h2>Check your own skills</h2><p>We turned these checks into a free tool: <a href="/tools/skill-check/">Skill Portability Check</a>.</p><h2>Files</h2><p><a href="/study/portability/data.csv">data.csv</a> <a href="/study/portability/summary.json">summary.json</a> <a href="/study/portability/fetch_log.csv">fetch_log.csv</a> <a href="/study/portability/fetch.py">fetch.py</a> <a href="/study/portability/analyze.py">analyze.py</a> <a href="/study/portability/charts.py">charts.py</a></p></div></section><section class="signup" id="notify">
+<p>We make portable skills, with a paste-in prompt for every one. The free ones are at https://github.com/proskillpacks/skills</p><h2>Check your own skills</h2><p>We turned these checks into a free tool: <a href="/tools/skill-check/">Check a skill file works across AI tools</a>.</p><h2>Files</h2><p><a href="/study/portability/data.csv">data.csv</a> <a href="/study/portability/summary.json">summary.json</a> <a href="/study/portability/fetch_log.csv">fetch_log.csv</a> <a href="/study/portability/fetch.py">fetch.py</a> <a href="/study/portability/analyze.py">analyze.py</a> <a href="/study/portability/charts.py">charts.py</a></p></div></section><section class="signup" id="notify">
   <h2>New free workflows by email</h2>
   <p>New free workflows and guides appear in all of these as we publish them. Pick whichever you already use.</p>
   <ul class="links">

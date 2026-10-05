@@ -348,7 +348,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -609,6 +609,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -951,6 +958,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -1006,7 +1020,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <ol><li><strong>Put real proof on the product page.</strong> Turn on automatic review-request emails after delivery in your reviews app, and send a personal request to your first buyers with a photo prompt. Until real reviews exist, show other real things: sizes, materials, shipping time, return terms. Never fake reviews.</li><li><strong>Finish your shipping and returns text.</strong> In Settings &gt; Policies write real numbers and a carrier, remove any template brackets, and add a one-line shipping and returns note near Add to cart.</li><li><strong>Write descriptions with facts.</strong> Aim for 80+ words covering size or fit, materials, what is in the box, care and who it is for.</li><li><strong>Let Google read your shipping, returns and star ratings.</strong> Shoppers see these on the page, but Google reads a separate hidden copy. In Shopify admin go to Settings, then Policies, and write real numbers. If you use Google Merchant Center (Google&#x27;s free shop listings), enter the same shipping and returns details in its settings. In your reviews app, switch on its option about Google or search results (it may be called rich snippets or structured data). We did not test every theme, so ask your theme&#x27;s support whether it passes these details on.</li><li><strong>Fix the small search basics.</strong> In Shopify admin, under Search engine listing, give your home page a title and a two-line summary (the meta description), and keep each summary under about 155 characters. Add a short description to each product photo (open a product, click a photo, then Edit alt text). Check each product page has one large title at the top (the H1).</li></ol>
 <h2>Limits</h2>
 <ul><li>These owners asked for feedback, so they are not a random sample of stores. 15 is a small number, so read the shares as direction, not rates.</li><li>We read the public pages as first loaded, the public product list and the hidden product details Google reads. Anything that appears only after the page finishes loading, checkout, speed, ads and traffic quality are not visible to us.</li><li>Each count uses one sampled product page (the first product the store lists, or the page the owner linked) and the first five products. A different product may differ, especially for reviews.</li><li>A store with no sales cannot have reviews yet, so &quot;no reviews&quot; is a finding about what a visitor sees, not a fault.</li></ul>
-<p>If you want to run a free check on your own store, the free Store Quick Check we publish does a version of this on your store address.</p><h2>Each question on its own page</h2><ul class="links"><li><a href="/shopify/no-sales/traffic-but-no-add-to-carts/">Why do I get traffic but no add to carts on my Shopify store?</a></li><li><a href="/shopify/no-sales/first-sale-checklist/">I have a Shopify store and no sales yet. What should I check first?</a></li><li><a href="/shopify/no-sales/policy-pages-that-lose-sales/">Could my shipping and return policy pages be why people do not buy?</a></li></ul></div></section></div></main>
+<p>If you want to run a free check on your own store, the free store quick check we publish does a version of this on your store address.</p><h2>Each question on its own page</h2><ul class="links"><li><a href="/shopify/no-sales/traffic-but-no-add-to-carts/">Why do I get traffic but no add to carts on my Shopify store?</a></li><li><a href="/shopify/no-sales/first-sale-checklist/">I have a Shopify store and no sales yet. What should I check first?</a></li><li><a href="/shopify/no-sales/policy-pages-that-lose-sales/">Could my shipping and return policy pages be why people do not buy?</a></li></ul></div></section></div></main>
 <footer class="sitefoot">
   <div class="wrap">
     <div class="card fol" data-fol="foot"><p class="fol-t"><b>New free workflows by email.</b> A few a month. Unsubscribe any time.</p><a class="btn btn-lime" data-nolo="1" data-go="follow/foot" href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=other&amp;utm_campaign=subscribe" rel="noopener">Follow</a><p class="fol-s">Handled by Gumroad. See our <a href="/privacy/">privacy page</a>.</p></div>

@@ -331,7 +331,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -592,6 +592,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -934,6 +941,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -973,37 +987,31 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a> / Marketers</p>
     <h1>Marketers</h1>
     <p class="lead">Fix a client&#x27;s website: check one page&#x27;s SEO, correct local business details, rewrite a landing page and find out whether AI search tools can read the site. Give it a page address, or paste the page, and get fixes built only from facts on the page.</p>
-    <p class="note-light">2 skills here: 2 free. Part of Marketing, sales and writing, 6 skills in all. 8 arriving soon, not for sale yet.</p>
+    <p class="note-light">2 workflows here: 2 free. Part of Marketing, sales and writing, 6 workflows in all. 8 arriving soon, not for sale yet.</p>
   </div>
 </header>
 <main><div class="wrap">
 
-<section><h2>Free skills</h2><p class="sub">Free and MIT-licensed. Download them together on Gumroad or take them from GitHub.</p><div class="grid"><a class="dc" href="/skills/ai-search-readiness-check/" data-b="1" data-id="ai-search-readiness-check" data-role="marketers-and-agencies" data-price="free" data-type="single" data-s="ai search readiness check your website address in, a score out of 100 and fixes in order. can chatgpt, perplexity and google read a website? a score out of 100 from 8 checks, the evidence and the fixes in order. check if ai and google can read your site. marketers and agencies marketers-and-agencies free skill a website url. a 0 to 100 score from 8 checks on whether ai search tools can read the site, the evidence for each check, and a fix list in order. audit and fix"><h3>AI Search Readiness Check</h3><p>Your website address in, a score out of 100 and fixes in order.</p><span class="dc-foot"><b>Free</b><span class="go"></span></span></a><a class="dc" href="/skills/search-intent-page-brief/" data-id="search-intent-page-brief" data-role="marketers-and-agencies" data-price="free" data-type="single" data-s="search intent page brief a keyword in, the search intent and an outline to write from. give it a keyword and the pages that rank. get the search intent, a coverage table, the gaps and an outline. free, mit-licensed. plan a page that matches what searchers want. marketers and agencies marketers-and-agencies free skill a target keyword and the three to five pages that rank for it (urls, or pasted headings). it records each page&#x27;s structure, classifies the search intent from what ranks, builds a coverage table with counts, names the gaps as its own judgement, and drafts an outline, questions to answer and a meta description. plan content research"><h3>Search Intent Page Brief</h3><p>A keyword in, the search intent and an outline to write from.</p><span class="dc-foot"><b>Free</b><span class="go"></span></span></a></div></section>
+<section><h2>Free workflows</h2><p class="sub">Free and MIT-licensed. Download them together on Gumroad or take them from GitHub.</p><div class="grid"><a class="dc" href="/skills/ai-search-readiness-check/" data-b="1" data-id="ai-search-readiness-check" data-role="marketers-and-agencies" data-price="free" data-type="single" data-s="check how ai search tools read your website your website address in, a score out of 100 and fixes in order. can chatgpt, perplexity and google read a website? a score out of 100 from 8 checks, the evidence and the fixes in order. check if ai and google can read your site. marketers and agencies marketers-and-agencies free skill a website url. a 0 to 100 score from 8 checks on whether ai search tools can read the site, the evidence for each check, and a fix list in order. audit and fix"><h3>Check how AI search tools read your website</h3><p>Your website address in, a score out of 100 and fixes in order.</p><span class="dc-foot"><b>Free</b><span class="go"></span></span></a><a class="dc" href="/skills/search-intent-page-brief/" data-id="search-intent-page-brief" data-role="marketers-and-agencies" data-price="free" data-type="single" data-s="plan a page around what searchers want a keyword in, the search intent and an outline to write from. give it a keyword and the pages that rank. get the search intent, a coverage table, the gaps and an outline. free, mit-licensed. plan a page that matches what searchers want. marketers and agencies marketers-and-agencies free skill a target keyword and the three to five pages that rank for it (urls, or pasted headings). it records each page&#x27;s structure, classifies the search intent from what ranks, builds a coverage table with counts, names the gaps as its own judgement, and drafts an outline, questions to answer and a meta description. plan content research"><h3>Plan a page around what searchers want</h3><p>A keyword in, the search intent and an outline to write from.</p><span class="dc-foot"><b>Free</b><span class="go"></span></span></a></div></section>
 <section><h2>Free prompts</h2><p class="sub">Paste into ChatGPT, Claude, Gemini or any chatbot. No install.</p><ul class="links"><li><a href="/prompts/ai-search-readiness-check/">AI search readiness check prompt for any chatbot</a></li><li><a href="/prompts/search-intent-page-brief/">Search intent content brief prompt for any chatbot</a></li></ul></section>
-<section><h2>Guides</h2><p class="sub">Short how-tos you can do by hand, without any skill.</p><ul class="links"><li><a href="/guides/how-to-brief-a-page-from-what-already-ranks-for-your-keyword/">How do I brief a page from what already ranks for my keyword?</a></li><li><a href="/guides/write-a-google-business-profile-description-and-posts/">How do I write a Google Business Profile description and posts?</a></li><li><a href="/guides/write-a-service-page-for-a-local-business/">How do I write a service page for a local business?</a></li><li><a href="/guides/write-ad-copy-variants-you-can-test/">How to write ad copy variants you can actually test</a></li></ul></section>
+<section><h2>Guides</h2><p class="sub">Short how-tos you can do by hand, without any workflow.</p><ul class="links"><li><a href="/guides/how-to-brief-a-page-from-what-already-ranks-for-your-keyword/">How do I brief a page from what already ranks for my keyword?</a></li><li><a href="/guides/write-a-google-business-profile-description-and-posts/">How do I write a Google Business Profile description and posts?</a></li><li><a href="/guides/write-a-service-page-for-a-local-business/">How do I write a service page for a local business?</a></li><li><a href="/guides/write-ad-copy-variants-you-can-test/">How to write ad copy variants you can actually test</a></li></ul></section>
 <section><h2>Arriving soon</h2><p class="sub">Not for sale yet. Prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon" data-id="landing-page-copy-rewrite" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="landing page copy rewrite a landing page address in, a sharper headline and button. a sharper first screen for a landing page, built only from facts on the page, with every unsupported claim flagged. rewrite a landing page&#x27;s first screen from facts the page holds. marketers and agencies marketers-and-agencies single skill write copy">
-  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
+  <div class="chead" style="--h:12"><span class="ck ">Single workflow</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
     <h3>Landing Page Copy Rewrite</h3>
     <p>A landing page address in, a sharper headline and button.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/landing-page-copy-rewrite">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="local-business-fix" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="local business fix a local business site in, name, address and hours checked across pages. name, address, phone and hours compared across a local business site, and localbusiness structured data whose values are checked against the site text. fix a local business&#x27;s details across its site and add its google code. marketers and agencies marketers-and-agencies single skill audit and fix">
-  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
+  <div class="chead" style="--h:12"><span class="ck ">Single workflow</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
     <h3>Local Business Fix</h3>
     <p>A local business site in, name, address and hours checked across pages.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/local-business-fix">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="page-fix-sheet" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="page fix sheet one page address in, pass or fail on 9 checks. one page in: pass, warn or fail on 9 on-page seo checks, and a new title and meta description built from the page&#x27;s own facts, counted to fit. check a page for seo problems and get a new title and description. marketers and agencies marketers-and-agencies single skill audit and fix write copy">
-  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
+  <div class="chead" style="--h:12"><span class="ck ">Single workflow</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
     <h3>Page Fix Sheet</h3>
     <p>One page address in, pass or fail on 9 checks.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/page-fix-sheet">Follow for release</a></div>
-  </div>
-</div><div class="card soon" data-id="ad-copy-variant-grid" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="ad copy variant grid your offer in, a grid of ads that fit the length limits. give it your offer and audience. get 15 google headlines and 4 descriptions, or meta variants, one angle per row, every length counted by a script. write google or meta ad variants that stay inside the length limits. marketers and agencies marketers-and-agencies single skill write copy">
-  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
-    <h3>Ad Copy Variant Grid</h3>
-    <p>Your offer in, a grid of ads that fit the length limits.</p>
-    <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/ad-copy-variant-grid">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="client-site-fix-kit" data-role="marketers-and-agencies" data-price="paid" data-type="pack" data-s="client site fix kit a client page in, five checked fixes to show the client. five fixes for client websites: on-page seo, local business details and landing page copy, plus a competitor gap brief and an article refresh. fix a client&#x27;s website: seo, local details, landing copy, old posts. marketers and agencies marketers-and-agencies pack ">
   <div class="chead" style="--h:12"><span class="ck pack">Pack</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
@@ -1011,14 +1019,20 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     <p>A client page in, five checked fixes to show the client.</p>
     <div class="foot"><span class="price">$49</span><a class="go" href="/packs/client-site-fix-kit/">See what is inside</a> <a class="go" href="#notify" data-go="follow/client-site-fix-kit">Follow for release</a></div>
   </div>
+</div><div class="card soon" data-id="ad-copy-variant-grid" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="write ad variants that fit google and meta limits your offer in, a grid of ads that fit the length limits. give it your offer and audience. get 15 google headlines and 4 descriptions, or meta variants, one angle per row, every length counted by a script. write google or meta ad variants that stay inside the length limits. marketers and agencies marketers-and-agencies single skill write copy">
+  <div class="chead" style="--h:12"><span class="ck ">Single workflow</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
+    <h3>Write ad variants that fit Google and Meta limits</h3>
+    <p>Your offer in, a grid of ads that fit the length limits.</p>
+    <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/ad-copy-variant-grid">Follow for release</a></div>
+  </div>
 </div><div class="card soon" data-id="google-business-profile-kit" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="google business profile kit your business facts in, a description, 10 posts and review requests. give it a local business&#x27;s facts. get a profile description within the limit, services, 10 posts, q&amp;a and honest review requests. fill in a google business profile: description, posts and answers. marketers and agencies marketers-and-agencies single skill write copy local seo">
-  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
+  <div class="chead" style="--h:12"><span class="ck ">Single workflow</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
     <h3>Google Business Profile Kit</h3>
     <p>Your business facts in, a description, 10 posts and review requests.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/google-business-profile-kit">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="local-service-page-writer" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="local service page writer business facts and a place in, a full service page with faq. give it a local business&#x27;s facts, a service and a place. get a full page with title, meta, faq and a structured data block, built only from your facts. write a page for one service in one town. marketers and agencies marketers-and-agencies single skill write copy local seo">
-  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
+  <div class="chead" style="--h:12"><span class="ck ">Single workflow</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
     <h3>Local Service Page Writer</h3>
     <p>Business facts and a place in, a full service page with FAQ.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/local-service-page-writer">Follow for release</a></div>
@@ -1030,13 +1044,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
     <div class="foot"><span class="price">$29</span><a class="go" href="/packs/marketing-and-seo-pack/">See what is inside</a> <a class="go" href="#notify" data-go="follow/marketing-and-seo-pack">Follow for release</a></div>
   </div>
 </div></div></section>
-<section><h2>Tell us the job</h2><p class="sub">Tell us what you would want a skill to do. <a href="/request/">Ask for it</a>.</p></section>
+<section><h2>Tell us the job</h2><p class="sub">Tell us what you would want a workflow to do. <a href="/request/">Ask for it</a>.</p></section>
 <section class="signup" id="notify">
   <h2>New free workflows by email</h2>
   <p>New free workflows and guides appear in all of these as we publish them. Pick whichever you already use.</p>
   <ul class="links">
     <li><a href="/feed.xml">RSS feed</a> for any feed reader</li>
-    <li><a href="/go/install/?from=category" rel="noopener">Watch the free skills repo on GitHub</a></li>
+    <li><a href="/go/install/?from=category" rel="noopener">Watch the free workflows repo on GitHub</a></li>
     <li><a href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=category&amp;utm_campaign=subscribe" rel="noopener">Follow on Gumroad</a></li>
   </ul>
 </section>

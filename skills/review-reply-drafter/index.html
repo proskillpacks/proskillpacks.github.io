@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Review Reply Drafter: skill + paste-in prompt</title>
+<title>Reply to reviews without promising what you can&#x27;t give</title>
 <meta name="description" content="Reply to reviews without promising anything. For online store owners who answer their own reviews. Tested on real examples before release.">
 
 <link rel="canonical" href="https://proskillpacks.github.io/skills/review-reply-drafter/">
@@ -14,24 +14,24 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/skills/review-reply-drafter/">
-<meta property="og:title" content="Review Reply Drafter: skill + paste-in prompt">
+<meta property="og:title" content="Reply to reviews without promising what you can&#x27;t give">
 <meta property="og:description" content="Reply to reviews without promising anything. For online store owners who answer their own reviews. Tested on real examples before release.">
-<meta property="og:image" content="https://proskillpacks.github.io/assets/og/5664475cca68.png">
+<meta property="og:image" content="https://proskillpacks.github.io/assets/og/48821e76f68b.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Review Reply Drafter: Pro Skill Packs">
-<meta name="twitter:image:alt" content="Review Reply Drafter: Pro Skill Packs">
+<meta property="og:image:alt" content="Reply to reviews without promising what you can&#x27;t give: Pro Skill Packs">
+<meta name="twitter:image:alt" content="Reply to reviews without promising what you can&#x27;t give: Pro Skill Packs">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
-<meta name="twitter:title" content="Review Reply Drafter: skill + paste-in prompt">
+<meta name="twitter:title" content="Reply to reviews without promising what you can&#x27;t give">
 <meta name="twitter:description" content="Reply to reviews without promising anything. For online store owners who answer their own reviews. Tested on real examples before release.">
-<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/5664475cca68.png">
+<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/48821e76f68b.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "Product",
- "name": "Review Reply Drafter",
+ "name": "Reply to reviews without promising what you can't give",
  "description": "Your reviews in, a reply for each, risky ones flagged.",
  "url": "https://proskillpacks.github.io/skills/review-reply-drafter/",
  "brand": {
@@ -355,7 +355,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -616,6 +616,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -958,6 +965,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script defer src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
@@ -980,7 +994,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
   {
    "@type": "ListItem",
    "position": 3,
-   "name": "Review Reply Drafter",
+   "name": "Reply to reviews without promising what you can't give",
    "item": "https://proskillpacks.github.io/skills/review-reply-drafter/"
   }
  ]
@@ -995,8 +1009,8 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
       <a class="name" href="/">PRO SKILL PACKS</a>
       <nav aria-label="Main"><a href="/free/">Free</a><a href="/how-we-test/">Why trust us</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
     </div>
-    <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-online-stores">Online stores</a> / Review Reply Drafter</p>
-    <h1>Review Reply Drafter</h1>
+    <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-online-stores">Online stores</a> / Reply to reviews without promising what you can&#x27;t give</p>
+    <h1>Reply to reviews without promising what you can&#x27;t give</h1>
     <dl class="ogw"><dt>Who it is for</dt><dd>Online store owners who answer their own reviews.</dd><dt>What you give it</dt><dd>Your reviews, or a CSV, or a public review page.</dd><dt>What you get back</dt><dd>A reply for each review, matched to its tone, with risky ones flagged for you.</dd></dl><div class="buyb"><div class="cta"><a class="btn btn-lime" href="/prompts/review-reply-drafter/">Copy the text for ChatGPT or any chatbot</a></div><p class="note-light alts"><a class="alt-link" href="https://proskillpacks.gumroad.com/l/free-shopify-skills?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=free-shopify-skills" data-go="buy/free-shopify-skills">Download free</a> &middot; <a class="alt-link" href="/go/repo/review-reply-drafter/?from=skill" rel="noopener">View on GitHub</a></p><p class="ogline">You get a zip with a short guide and a text you paste into ChatGPT, Claude or any chatbot.</p><p class="note-light">Free. MIT licence: use it, change it, share it.</p></div>
   </div>
 </header>
@@ -1006,15 +1020,15 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <blockquote><p><strong>After (real output, product name replaced with [Product]):</strong> &quot;A third of the cologne ending up in the packaging is a rough way to meet [Product], and we&#x27;re sorry the shipping overshadowed a scent you liked. Contact us at [support email] and we&#x27;ll [REMEDY: replacement / refund / store credit; owner to choose].&quot;</p></blockquote>
 <p>In the same 14-review batch, the workflow also:</p>
 <ul><li>caught a 1★ review with glowing text as a probable mis-tap, without asking publicly for a rating change;</li><li>flagged an &quot;opened, unhygienic products&quot; plus &quot;intentional damage&quot; review for the owner instead of arguing in public;</li><li>replied once to a review that had been posted on two products.</li></ul></div></section>
-<section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/review-reply-drafter-last.png" data-gif="/assets/demos/review-reply-drafter.gif" alt="Animated demo of Review Reply Drafter on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async" srcset="/assets/demos/review-reply-drafter-last-240.webp 240w, /assets/demos/review-reply-drafter-last-480.webp 480w, /assets/demos/review-reply-drafter-last-900.webp 900w, /assets/demos/review-reply-drafter-last-1200.webp 1200w" sizes="(min-width: 48rem) 900px, 100vw" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Review Reply Drafter">Play</button></figure></section>
-<section><h2>What it does</h2><div class="prose"><p>A free skill that drafts replies to your store&#x27;s reviews. Paste in reviews from Judge.me, Shopify Product Reviews, Yotpo, Okendo, Google or Trustpilot, and you get back a reply for each one, ready to paste.</p>
+<section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/review-reply-drafter-last.png" data-gif="/assets/demos/review-reply-drafter.gif" alt="Animated demo of Reply to reviews without promising what you can&#x27;t give on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async" srcset="/assets/demos/review-reply-drafter-last-240.webp 240w, /assets/demos/review-reply-drafter-last-480.webp 480w, /assets/demos/review-reply-drafter-last-900.webp 900w, /assets/demos/review-reply-drafter-last-1200.webp 1200w" sizes="(min-width: 48rem) 900px, 100vw" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Reply to reviews without promising what you can&#x27;t give">Play</button></figure></section>
+<section><h2>What it does</h2><div class="prose"><p>A free workflow that drafts replies to your store&#x27;s reviews. Paste in reviews from Judge.me, Shopify Product Reviews, Yotpo, Okendo, Google or Trustpilot, and you get back a reply for each one, ready to paste.</p>
 <ul><li><strong>Happy customers</strong> get thanked for the specific thing they said, not &quot;Thanks for your review!&quot;</li><li><strong>Unhappy customers</strong> get an acknowledgement in their own words, one concrete next step, and an invitation to a private channel.</li><li><strong>It never commits you to anything.</strong> It doesn&#x27;t admit fault or offer refunds, credits or discounts you didn&#x27;t approve. Those go in a <code>[REMEDY …]</code> placeholder for you to decide.</li><li><strong>It flags reviews that need a human</strong>: allergic reaction or injury, contamination, legal threats, chargebacks (&quot;went to my bank&quot;), accusations. Each gets a safe holding reply.</li><li><strong>4 or more reviews</strong> come back as one table, followed by a &quot;Needs a human&quot; list and every placeholder you need to fill in.</li></ul></div></section>
 <section class="ev" id="evidence"><h2>The evidence</h2><p class="evh"><span class="bdg bg-b" title="Measured against a plain AI request on cases it was not tuned on. The numbers are published.">BENCHMARKED<span class="sr"> badge. Measured against a plain AI request on cases it was not tuned on. The numbers are published.</span></span><span class="psb-t">One-line request: 4 of 20 right. With it: 20 of 20.</span></p><div class="evt"><div class="table"><table><thead><tr><th></th><th>Strong Claude model</th><th>Cheapest Claude model</th><th>ChatGPT free</th></tr></thead><tbody><tr><th scope="row">Typing one line</th><td>4 of 20</td><td>0 of 20</td><td>3 of 10</td></tr><tr><th scope="row">With this workflow</th><td>20 of 20</td><td>19 of 20</td><td>10 of 10</td></tr></tbody></table></div><p class="evcap">Cases fully right. Claude: runs out of 20. ChatGPT free: one run, out of 10.</p></div><p>The most common one-line failure was a reply far too long for a public review (16 of 20), and 4 of 20 promised a refund nobody had offered.</p><p class="evcap">Cases written by us. Run on two Claude models and on ChatGPT free. A small test, not our full training method.</p><details class="evmore"><summary>An example of the one-line failure</summary><blockquote>We'd like to look into this properly and make it right, starting with a full refund.</blockquote><p class="evcap">One sentence from a one-line reply to a review about a child's rash. The owner in this case had offered no refund.</p></details><p class="evlink"><a href="/how-we-test/#ev-review-reply-drafter">Read the full test</a></p></section>
 <section><h2>Limits</h2><div class="prose"><p>It won&#x27;t:</p>
 <ul><li>Post anything. You paste the replies yourself.</li><li>Invent policies, restock dates or causes.</li><li>Ask a Trustpilot reviewer to change their rating.</li></ul></div></section>
-<section class="faq" id="questions"><h2>Questions</h2><details><summary>Refunds and contact</summary><div><p>If it does not do the job, ask and we refund you within 30 days. Reply to your receipt, or write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works with any assistant that reads SKILL.md skills (Claude, Codex, Gemini CLI, Cursor and others), plus a paste-in prompt version for ChatGPT or any chatbot. We run our release tests on Claude Sonnet and Opus. Use your assistant&#x27;s strongest model: in our tests, a small, fast model added facts that were not in the source data. No scripts. It works from reviews you paste, a CSV, or a public review page.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>Using it with an AI assistant</b></p><ol><li>Unzip the free download. It holds the free skill folders, including <code>review-reply-drafter</code>, ready-made zips for claude.ai in a <code>claude-ai</code> folder, and a README. Or copy the folder from GitHub.</li><li>Put the <code>review-reply-drafter</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: Customize, Skills, then the plus button, Create skill, Upload a skill, and upload the zip from the <code>claude-ai</code> folder without unzipping it (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words. The skill loads by itself.</li></ol></div></div></details></section>
+<section class="faq" id="questions"><h2>Questions</h2><details><summary>Refunds and contact</summary><div><p>If it does not do the job, ask and we refund you within 30 days. Reply to your receipt, or write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works in ChatGPT, Claude, Gemini and most other AI assistants: paste in the text, or load the files if your assistant supports them. Setup steps are under For technical users. We run our release tests on Claude Sonnet and Opus. Use your assistant&#x27;s strongest model: in our tests, a small, fast model added facts that were not in the source data. No scripts. It works from reviews you paste, a CSV, or a public review page.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>Using it with an AI assistant</b></p><ol><li>Unzip the free download. It holds the free skill folders, including <code>review-reply-drafter</code>, ready-made zips for claude.ai in a <code>claude-ai</code> folder, and a README. Or copy the folder from GitHub.</li><li>Put the <code>review-reply-drafter</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: Customize, Skills, then the plus button, Create skill, Upload a skill, and upload the zip from the <code>claude-ai</code> folder without unzipping it (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words. The skill loads by itself.</li></ol></div></div></details></section>
 <section class="endcta"><a class="btn btn-pine" href="/prompts/review-reply-drafter/">Copy the text for ChatGPT or any chatbot</a></section>
-<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/product-seo-fixer/">Product page tidy-up</a> ($5): A fix list in priority order, with the exact text to paste, for one product, a collection or your product export file.</li><li><a href="/skills/product-title-cleaner/">Product Title Cleaner</a> (Free): One consistent title style across your products, as a file you can import with only the changed rows.</li><li><a href="/packs/store-ops-pack/">Store Ops Pack</a> ($29): Your store address in, six tools built from your own store data.</li></ul></section>
+<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/product-description-rewriter/">Rewrite thin product descriptions without made-up claims</a> ($5): Clearer product descriptions plus the page title and short summary shoppers see in Google, for one product or a whole collection.</li><li><a href="/skills/agent-ready-store-audit/">See how AI shopping assistants read your store</a> ($5): A score from 0 to 100 for how well AI shopping tools and Google can read your store, with the top 7 fixes.</li><li><a href="/skills/shopify-alt-text-writer/">Write image descriptions (alt text) for your products</a> (Free): A short description for every product photo, so shoppers who cannot see the image, and Google, know what it shows. Comes as a file you can import.</li></ul></section>
 </div></main>
 <script>
 document.querySelectorAll('.demo').forEach(function (f) {

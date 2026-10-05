@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Accessibility Quick Audit: skill + paste-in prompt</title>
+<title>Find accessibility problems on a web page | Pro Skill Packs</title>
 <meta name="description" content="Find the accessibility problems on a web page and get the fix for each. For web developers and site owners who need a first accessibility check.">
 
 <link rel="canonical" href="https://proskillpacks.github.io/skills/accessibility-quick-audit/">
@@ -14,24 +14,24 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/skills/accessibility-quick-audit/">
-<meta property="og:title" content="Accessibility Quick Audit: skill + paste-in prompt">
+<meta property="og:title" content="Find accessibility problems on a web page">
 <meta property="og:description" content="Find the accessibility problems on a web page and get the fix for each. For web developers and site owners who need a first accessibility check.">
-<meta property="og:image" content="https://proskillpacks.github.io/assets/og/3fd9af01abfd.png">
+<meta property="og:image" content="https://proskillpacks.github.io/assets/og/39e450f544e9.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Accessibility Quick Audit: Pro Skill Packs">
-<meta name="twitter:image:alt" content="Accessibility Quick Audit: Pro Skill Packs">
+<meta property="og:image:alt" content="Find accessibility problems on a web page: Pro Skill Packs">
+<meta name="twitter:image:alt" content="Find accessibility problems on a web page: Pro Skill Packs">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
-<meta name="twitter:title" content="Accessibility Quick Audit: skill + paste-in prompt">
+<meta name="twitter:title" content="Find accessibility problems on a web page">
 <meta name="twitter:description" content="Find the accessibility problems on a web page and get the fix for each. For web developers and site owners who need a first accessibility check.">
-<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/3fd9af01abfd.png">
+<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/39e450f544e9.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "Product",
- "name": "Accessibility Quick Audit",
+ "name": "Find accessibility problems on a web page",
  "description": "A page address in, a ranked list of problems with a fix for each.",
  "url": "https://proskillpacks.github.io/skills/accessibility-quick-audit/",
  "brand": {
@@ -355,7 +355,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -616,6 +616,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -958,6 +965,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script defer src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
@@ -980,7 +994,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
   {
    "@type": "ListItem",
    "position": 3,
-   "name": "Accessibility Quick Audit",
+   "name": "Find accessibility problems on a web page",
    "item": "https://proskillpacks.github.io/skills/accessibility-quick-audit/"
   }
  ]
@@ -995,8 +1009,8 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
       <a class="name" href="/">PRO SKILL PACKS</a>
       <nav aria-label="Main"><a href="/free/">Free</a><a href="/how-we-test/">Why trust us</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
     </div>
-    <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-developers-and-data">Developers and data</a> / Accessibility Quick Audit</p>
-    <h1>Accessibility Quick Audit</h1>
+    <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-developers-and-data">Developers and data</a> / Find accessibility problems on a web page</p>
+    <h1>Find accessibility problems on a web page</h1>
     <dl class="ogw"><dt>Who it is for</dt><dd>Web developers and site owners who need a first accessibility check.</dd><dt>What you give it</dt><dd>A page address, the page&#x27;s HTML or your component files.</dd><dt>What you get back</dt><dd>Issues ranked by impact, with the code, the WCAG rule and a fix. Things to check by hand are marked.</dd></dl><div class="buyb"><div class="cta"><a class="btn btn-lime" href="/go/repo/accessibility-quick-audit/?from=skill">Get the files from GitHub (for developers)</a></div><p class="ogline">It is a text file you add to an AI assistant, or paste into a chat.</p><p class="note-light">Free. MIT licence: use it, change it, share it.</p></div>
   </div>
 </header>
@@ -1008,7 +1022,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <section><h2>Limits</h2><div class="prose"><ul><li>It reads markup. It does not run a browser, so content added by JavaScript and real focus order are not checked.</li><li>It is not a legal accessibility audit or a conformance statement.</li><li>Alt text quality, reading order and caption accuracy need a human. It lists them with a one-line test for each.</li><li>It computes contrast only where colour values are visible in the code.</li></ul></div></section>
 <section class="faq" id="questions"><h2>Questions</h2><details><summary>Questions or a problem?</summary><div><p>Write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. Reading a URL needs a web fetch tool, otherwise paste the HTML.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>Using it with an AI assistant</b></p><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>accessibility-quick-audit</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/developers/accessibility-quick-audit).</li><li>Put the <code>accessibility-quick-audit</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Audit this page for accessibility, WCAG 2.2 AA: [URL or pasted HTML]&quot;. The skill loads by itself.</li></ol></div></div></details></section>
 <section class="endcta"><a class="btn btn-pine" href="/go/repo/accessibility-quick-audit/?from=skill">Get the files from GitHub (for developers)</a></section>
-<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/changelog-from-commits/">Changelog from Commits</a> (Free): A list of commits in, release notes people can read.</li><li><a href="/skills/pr-description-and-review-prep/">PR Description and Review Prep</a> (Free): Your branch in, a pull request write-up and test plan.</li><li><a href="/skills/readme-first-run-check/">README First-Run Check</a> (Free): Your repository in, each setup step marked OK or broken.</li></ul></section>
+<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/readme-first-run-check/">Check a README works for a first-time user</a> (Free): Your repository in, each setup step marked OK or broken.</li><li><a href="/skills/skill-portability-check/">Check a skill file works across AI tools</a> (Free): A skill folder in, errors and warnings with the exact fixes.</li><li><a href="/skills/test-gap-finder/">Find code changes that have no tests</a> (Free): A diff and its tests in, what is not covered and test cases to add.</li></ul></section>
 </div></main>
 <footer class="sitefoot">
   <div class="wrap">

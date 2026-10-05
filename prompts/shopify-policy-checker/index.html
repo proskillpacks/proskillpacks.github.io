@@ -353,7 +353,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -614,6 +614,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -956,6 +963,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -1003,7 +1017,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <section><h2>The prompt</h2><div class="prose"><p>Use this in any chatbot (ChatGPT, Claude, Gemini and others). Nothing to install.</p>
 <p><strong>How to use it</strong></p>
 <ol><li>Open these pages on your store and copy their text: <code>/policies/refund-policy</code>, <code>/policies/shipping-policy</code>, <code>/policies/contact-information</code>, and any returns, shipping or FAQ page (<code>/pages/...</code>). Also copy any shipping or returns promises from your homepage banner and footer (&quot;Free shipping over $50&quot;, &quot;30-day returns&quot;). The privacy policy and terms of service are optional; add them if you want those checked too. Put the page address above each block of text.</li><li>Copy everything from &quot;COPY FROM HERE&quot; to the end of this file and paste it into a new chat.</li><li>Under it, paste the texts.</li></ol>
-<p>You get a score, the problems ranked by risk (chargebacks, support emails, Google Merchant Center, consumer law), contradictions between your pages quoted side by side, and fixed wording you can paste into Settings &gt; Policies. The installed skill collects all the pages itself with a script; in this version it checks only what you paste, and it says which policies it didn&#x27;t see. Not legal advice.</p>
+<p>You get a score, the problems ranked by risk (chargebacks, support emails, Google Merchant Center, consumer law), contradictions between your pages quoted side by side, and fixed wording you can paste into Settings &gt; Policies. The installed workflow collects all the pages itself with a script; in this version it checks only what you paste, and it says which policies it didn&#x27;t see. Not legal advice.</p>
 <p><strong>Prefer to check by hand?</strong> The checklist below is the template.</p><pre><code>COPY FROM HERE
 
 You are auditing a Shopify store&#x27;s policies. Work only from the texts pasted below. Make sensible assumptions about where the store sells (from currency, addresses, language) and state them. Never invent a number, an address or an email: use a clear blank like &quot;[X] business days&quot; and say what the owner must fill in.
@@ -1043,19 +1057,19 @@ Write fixes in short, plain sentences using &quot;you&quot; and &quot;we&quot;, 
 If no policy text is pasted below, ask for it in one line and stop.
 
 Here are my policies and pages:</code></pre></div></section>
-<section><h2>A real example</h2><p class="sub">Real test, paraphrased so the store can&#x27;t be identified. Taken from the skill's README.</p><div class="prose"><p>From one run on a public men&#x27;s grooming store on 2026-10-03. In the real report, every finding quotes the store&#x27;s own text word for word. Here they&#x27;re paraphrased:</p>
+<section><h2>A real example</h2><p class="sub">Real test, paraphrased so the store can&#x27;t be identified. Taken from the workflow's README.</p><div class="prose"><p>From one run on a public men&#x27;s grooming store on 2026-10-03. In the real report, every finding quotes the store&#x27;s own text word for word. Here they&#x27;re paraphrased:</p>
 <div class="table"><table><thead><tr><th>Found</th><th>Where</th></tr></thead><tbody><tr><td>Another company&#x27;s name left in the class-action waiver (copied from a template)</td><td>Terms of service</td></tr><tr><td>The return window &quot;usually&quot; applies, and depends on the payment processor</td><td>Refund policy</td></tr><tr><td>&quot;No questions asked&quot; on product pages, but the policy excludes items not in original condition</td><td>Product page vs refund policy</td></tr><tr><td>Prepaid return label promised for exchanges in the policy, but for returns too in the FAQ</td><td>Refund policy vs FAQ</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p>
 <p><strong>Before</strong> (paraphrased): refunds are offered &quot;as long as&quot; a third party allows it, &quot;usually&quot; within a set number of days.</p>
 <p><strong>After</strong> (suggested, paste-ready): &quot;You can return any order for a full refund within [N] days of the purchase date. After [N] days, we can offer store credit instead. Store credit [does / does not] expire.&quot;</p></div></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It reads public pages only: policies, common FAQ and returns pages, the homepage and a product page. Text that loads only with JavaScript can be missed.</li><li>It flags common gaps. It is not legal advice; have a lawyer review anything high-stakes.</li></ul></div></section>
-<section><h2>The same job as an installable skill</h2><div class="prose"><p>Policy Checker is also a skill you install once and call in plain words, so you do not paste the prompt each time. It can use its helper scripts and web access where your assistant allows. <a href="/skills/shopify-policy-checker/">See the skill page</a>, or read <a href="/guides/how-to-install-agent-skills/">how to install skills</a>.</p></div></section>
-<section><h2>Related paid skills</h2><ul class="links"><li><a href="/skills/agent-ready-store-audit/">Agent-Ready Store Audit</a> ($5): Your store address in, a score out of 100 and the top 7 fixes.</li><li><a href="/skills/bfcm-campaign-kit/">BFCM Campaign Kit</a> ($5): Your store address in, offer maths, a calendar, emails and texts.</li><li><a href="/skills/chargeback-response-writer/">Chargeback Response Kit for Shopify: fill-in letters for each dispute reason</a> ($5): The dispute reason and your evidence in, the right letter back.</li></ul></section>
+<section><h2>The same job as an installable workflow</h2><div class="prose"><p>Check your store policies for gaps and mixed messages is also a workflow you install once and call in plain words, so you do not paste the prompt each time. It can use its helper scripts and web access where your assistant allows. <a href="/skills/shopify-policy-checker/">See the workflow page</a>, or read <a href="/guides/how-to-install-agent-skills/">how to install workflows</a>.</p></div></section>
+<section><h2>Related paid workflows</h2><ul class="links"><li><a href="/skills/chargeback-response-writer/">Answer a chargeback: the right letter for each reason</a> ($5): The dispute reason and your evidence in, the right letter back.</li><li><a href="/skills/product-seo-fixer/">Fix the search problems on your product pages</a> ($5): A product or collection in, a fix list with text to paste.</li><li><a href="/packs/store-ops-pack/">Handle the weekly jobs in a Shopify store: six workflows</a> ($29): Your store address in, six tools built from your own store data.</li></ul></section>
 <section class="signup" id="notify">
   <h2>New free workflows by email</h2>
   <p>New free workflows and guides appear in all of these as we publish them. Pick whichever you already use.</p>
   <ul class="links">
     <li><a href="/feed.xml">RSS feed</a> for any feed reader</li>
-    <li><a href="/go/install/?from=prompt" rel="noopener">Watch the free skills repo on GitHub</a></li>
+    <li><a href="/go/install/?from=prompt" rel="noopener">Watch the free workflows repo on GitHub</a></li>
     <li><a href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=prompt&amp;utm_campaign=subscribe" rel="noopener">Follow on Gumroad</a></li>
   </ul>
 </section>

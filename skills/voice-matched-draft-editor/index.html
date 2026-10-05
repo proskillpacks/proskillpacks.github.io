@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Voice-Matched Draft Editor: skill + paste-in prompt</title>
+<title>Edit a draft so it still sounds like you | Pro Skill Packs</title>
 <meta name="description" content="Edit a draft so it sounds like you wrote it. For writers and founders who want their own voice kept. Tested on real examples before release.">
 
 <link rel="canonical" href="https://proskillpacks.github.io/skills/voice-matched-draft-editor/">
@@ -14,24 +14,24 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pro Skill Packs">
 <meta property="og:url" content="https://proskillpacks.github.io/skills/voice-matched-draft-editor/">
-<meta property="og:title" content="Voice-Matched Draft Editor: skill + paste-in prompt">
+<meta property="og:title" content="Edit a draft so it still sounds like you">
 <meta property="og:description" content="Edit a draft so it sounds like you wrote it. For writers and founders who want their own voice kept. Tested on real examples before release.">
-<meta property="og:image" content="https://proskillpacks.github.io/assets/og/7799734d2bdd.png">
+<meta property="og:image" content="https://proskillpacks.github.io/assets/og/deef0c066dcb.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Voice-Matched Draft Editor: Pro Skill Packs">
-<meta name="twitter:image:alt" content="Voice-Matched Draft Editor: Pro Skill Packs">
+<meta property="og:image:alt" content="Edit a draft so it still sounds like you: Pro Skill Packs">
+<meta name="twitter:image:alt" content="Edit a draft so it still sounds like you: Pro Skill Packs">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@KaiVenturaBuild">
-<meta name="twitter:title" content="Voice-Matched Draft Editor: skill + paste-in prompt">
+<meta name="twitter:title" content="Edit a draft so it still sounds like you">
 <meta name="twitter:description" content="Edit a draft so it sounds like you wrote it. For writers and founders who want their own voice kept. Tested on real examples before release.">
-<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/7799734d2bdd.png">
+<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/deef0c066dcb.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
  "@type": "Product",
- "name": "Voice-Matched Draft Editor",
+ "name": "Edit a draft so it still sounds like you",
  "description": "Samples of your writing and a draft in, the draft in your voice.",
  "url": "https://proskillpacks.github.io/skills/voice-matched-draft-editor/",
  "brand": {
@@ -355,7 +355,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -616,6 +616,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -958,6 +965,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script defer src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
@@ -980,7 +994,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
   {
    "@type": "ListItem",
    "position": 3,
-   "name": "Voice-Matched Draft Editor",
+   "name": "Edit a draft so it still sounds like you",
    "item": "https://proskillpacks.github.io/skills/voice-matched-draft-editor/"
   }
  ]
@@ -998,8 +1012,8 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
       <a class="name" href="/">PRO SKILL PACKS</a>
       <nav aria-label="Main"><a href="/free/">Free</a><a href="/how-we-test/">Why trust us</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
     </div>
-    <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a> / Voice-Matched Draft Editor</p>
-    <h1>Voice-Matched Draft Editor</h1>
+    <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a> / Edit a draft so it still sounds like you</p>
+    <h1>Edit a draft so it still sounds like you</h1>
     <dl class="ogw"><dt>Who it is for</dt><dd>Writers and founders who want their own voice kept.</dd><dt>What you give it</dt><dd>Two or three things you wrote, and a draft.</dd><dt>What you get back</dt><dd>The draft edited in your voice, a list of changes and flags on claims it cannot support.</dd></dl><div class="buyb"><div class="cta"><span class="lob"><a class="btn btn-lime" href="https://proskillpacks.gumroad.com/l/voice-matched-draft-editor/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=voice-matched-draft-editor" data-go="buy/voice-matched-draft-editor">Get it, $9</a><span class="lo"><s>$9</s> <b>$4.50</b> for the first 10 buyers. 30-day refund.</span></span></div><p class="ogline ogupd">Free updates: when we improve it, you get the new version.</p><p class="ogline">You get a zip with a short guide and a text you paste into ChatGPT, Claude or any chatbot.</p></div>
   </div>
 </header>
@@ -1011,7 +1025,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <section><h2>Limits</h2><div class="prose"><ul><li>Voice quality depends on your samples. Under about 200 words, the read will be rough.</li><li>It does not add facts, examples or sources. Thin paragraphs stay thin and are flagged.</li><li>It does not promise to pass AI detectors. Those tools are unreliable and we do not claim it.</li><li>It edits text you give it. It will not fix an argument that does not hold up.</li></ul></div></section>
 <section class="faq" id="questions"><h2>Questions</h2><details><summary>How do I pay and get the files?</summary><div><p><b>Checkout:</b> Gumroad opens on this page. Click Add to cart, enter your email and card details, and check the total, with any VAT, before you pay. Prices here are in US dollars.</p><p><b>After you pay:</b> a download page opens right away with the zip file, and Gumroad gives you a receipt there that you can resend. Open it and follow the README.</p></div></details><details><summary>Refunds and contact</summary><div><p>If it does not do the job, ask and we refund you within 30 days. Reply to your receipt, or write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>What is in the zip</b></p><ul class="links"><li><code>LICENSE.txt</code></li><li><code>README.md</code></li><li><code>SKILL.md</code></li><li><code>prompt.md</code></li><li><code>voice-matched-draft-editor-prompt-card.pdf</code></li></ul><p><b>Using it with an AI assistant</b></p><ol><li>Unzip the download. It holds the <code>voice-matched-draft-editor</code> folder, a README and the licence.</li><li>Put the <code>voice-matched-draft-editor</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Here are 3 things I wrote and a draft. Edit the draft so it sounds like me.&quot;. The skill loads by itself.</li></ol></div></div></details></section>
 <section class="endcta"><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/l/voice-matched-draft-editor/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=voice-matched-draft-editor" data-go="buy/voice-matched-draft-editor">Get it, $9</a></section>
-<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/fact-claim-checker/">Fact-Claim Checker</a> (Free): Your draft in, claims ranked by risk with safer wording.</li><li>Free guide to do it by hand: <a href="/guides/how-to-edit-a-draft-so-it-sounds-like-you-wrote-it/">How do I edit a draft so it sounds like I wrote it?</a></li></ul></section>
+<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/skills/fact-claim-checker/">Find the claims in a draft that need a source</a> (Free): Your draft in, claims ranked by risk with safer wording.</li><li>Free guide to do it by hand: <a href="/guides/how-to-edit-a-draft-so-it-sounds-like-you-wrote-it/">How do I edit a draft so it sounds like I wrote it?</a></li></ul></section>
 </div></main>
 <footer class="sitefoot">
   <div class="wrap">

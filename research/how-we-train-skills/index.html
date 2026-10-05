@@ -345,7 +345,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top { height: 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--slate); }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
-.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
@@ -606,6 +606,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .buyb { max-width: var(--pcw); }
 .hero.pc .buyb { padding: 1.1rem 1.25rem; }
 .hero.pc .buyb .lo { font-size: 0.92rem; color: var(--cream); }
+@media (min-width: 56rem) {
+  .hero.pc .wrap { display: grid; grid-template-columns: minmax(0, 1fr) 23rem; column-gap: 3.5rem; align-items: start; }
+  .hero.pc .wrap > .brand, .hero.pc .wrap > .crumbs { grid-column: 1 / -1; }
+  .hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw { grid-column: 1; max-width: none; }
+  .hero.pc .wrap > .ogw { margin-top: 1.1rem; }
+  .hero.pc .wrap > .buyb { grid-column: 2; grid-row: 3 / span 3; max-width: none; margin-top: 0.6rem; }
+}
 main.prod.pc .wrap > * { max-width: var(--pcw); }
 main.prod.pc .wrap > section, main.prod.pc .wrap > details { margin: 0 0 var(--pcg, 2.6rem); }
 main.prod.pc .prose, main.prod.pc .sub { max-width: none; }
@@ -948,6 +955,13 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+/* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
+:root { --tw: 46rem; }
+h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
+.wkit, .aud-tools .wkit, .buybox, .kitbox, .tcard, .card.fol, .card.tslim, .sales-tools .wkit, .proofrow .pvfig:only-child { max-width: none; }
+.hero.pc .wrap > h1, .hero.pc .wrap > .lead, .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: none; }
+@media (max-width: 56rem) { .hero.pc .wrap > .ogw, .hero.pc .wrap > .buyb { max-width: var(--tw); } }
+
 </style>
 <script type="application/ld+json">
 {
@@ -1022,7 +1036,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <h2 id="other-skills">What we measure on our other skills</h2>
 <p>We also ran two of our shipped skills against typing one line, on 10 invented cases each, run twice, scored by a script. Nothing was tuned or retrained for this test, so it is not the full method above. The numbers are outputs fully right out of 20.</p>
 <div class="table" role="region" tabindex="0" aria-label="Table, scrolls sideways"><table><thead><tr><th>Skill</th><th>One line, strong model</th><th>With the skill, strong model</th><th>One line, cheapest model</th><th>With the skill, cheapest model</th></tr></thead><tbody><tr><td>Review reply drafter</td><td>4 of 20</td><td>20 of 20</td><td>0 of 20</td><td>19 of 20</td></tr><tr><td>Product description rewriter</td><td>1 of 20</td><td>20 of 20</td><td>0 of 20</td><td>12 of 20</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p>
-<p>One skill we tested did <b>not</b> beat a one-line prompt on our checks: the Late Payment Chaser (UK). On the strong model the one-line email got 18 of 20 fully right and the skill 13 of 20, and on the cheapest model the skill got 1 of 20, with threats and wrong figures. It is being fixed, and we show no comparison for it until it is.</p>
+<p>One skill we tested did <b>not</b> beat a one-line prompt on our checks: the late-invoice chaser. On the strong model the one-line email got 18 of 20 fully right and the skill 13 of 20, and on the cheapest model the skill got 1 of 20, with threats and wrong figures. It is being fixed, and we show no comparison for it until it is.</p>
 <p>What we learned about models, Claude models only, on small invented test sets: a careful prompt on the strongest model is close to the ceiling on the client email (31 of 32 outputs passed every check). On the mid-level models most free users get, the gap is large: for the recruiter note, 9% of outputs passed every check with one line and 59% with a careful prompt (the strongest model: 22% and 62%).</p>
 <p>An example of a free tool with its numbers: <a href="/recruiters/call-notes-to-screen-note/">call notes to a screen note and client write-up</a>.</p>
 
@@ -1044,7 +1058,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 </ol>
 
 <h2>The case: the Agent Browse skill</h2>
-<p><a href="/skills/agent-browse/">Agent Browse</a> teaches an AI assistant to browse the web with the agent-browser command line tool. We trained it on 32 browsing tasks (13 train, 8 selection, 11 test), using Claude Opus 5.5 as the model doing the work.</p>
+<p><a href="/skills/agent-browse/">Browse the web with an AI agent in fewer steps</a> teaches an AI assistant to browse the web with the agent-browser command line tool. We trained it on 32 browsing tasks (13 train, 8 selection, 11 test), using Claude Opus 5.5 as the model doing the work.</p>
 <p>The model got every task right even with no skill. So accuracy gave the gate nothing to measure. We scored cost as well: a wrong answer is 0, a right answer is 0.7 plus up to 0.3 for using fewer tokens.</p>
 <h3>Result 1: training, on the selection tasks (8 tasks, 2 runs each)</h3>
 <div class="table" role="region" tabindex="0" aria-label="Table, scrolls sideways"><table><thead><tr><th>Step</th><th>Edits</th><th>Score</th><th>Tokens per task</th><th>Turns</th><th>Decision</th></tr></thead><tbody><tr><td>0, starting skill</td><td>150 words</td><td>0.9435</td><td>37.7k</td><td>5.2</td><td>start</td></tr><tr><td>1</td><td>4</td><td>0.9687</td><td>20.8k</td><td>3.0</td><td><b>kept</b></td></tr><tr><td>2</td><td>3 more</td><td>0.9644</td><td>23.8k</td><td>3.2</td><td>rejected</td></tr><tr><td>3</td><td>1 more</td><td>0.9632</td><td>24.5k</td><td>3.0</td><td>rejected</td></tr></tbody></table></div><p class="swipe" hidden>Swipe the table to see more.</p>
@@ -1107,7 +1121,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <li>One local model, one quantisation, one harness. Thinking was left at pi's default.</li>
 <li>The Qwen skill is <code>q2</code> plus the same hand-added Setup section, which did not go through the gate.</li>
 </ul>
-<p><a href="/skills/agent-browse-qwen/">Agent Browse for local models (Qwen)</a> is the free skill. The recordings and every candidate are in <a href="https://github.com/proskillpacks/skillopt-agent-browse/tree/main/training" rel="noopener">the research repo</a>.</p>
+<p><a href="/skills/agent-browse-qwen/">Browse the web with a local Qwen model, fewer wrong turns</a> is the free skill. The recordings and every candidate are in <a href="https://github.com/proskillpacks/skillopt-agent-browse/tree/main/training" rel="noopener">the research repo</a>.</p>
 
 <h2>Another case: the starter example</h2>
 <p>To let anyone try this, we built a small loop that needs no browser: <a href="https://github.com/proskillpacks/skillopt-agent-browse/tree/main/starter" rel="noopener">the starter</a>. Its 18 toy tasks ask for a "house style" (date formats, invoice ids, file names) that the task never states. Here the model did not start at 100%, so accuracy itself could be the score. The model was Claude Haiku. One reflection step, one candidate.</p>
