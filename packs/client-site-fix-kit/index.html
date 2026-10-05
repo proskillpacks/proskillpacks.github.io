@@ -960,6 +960,15 @@ details.evb2[open] > summary::after { content: "Hide the test"; }
 details.evb2[open] > summary { margin-bottom: 0.7rem; }
 .three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; max-width: none; }
 @media (max-width: 56rem) { .three { grid-template-columns: 1fr; } }
+@media (max-width: 40rem) {
+  .phl li { flex-direction: column; gap: 0.3rem; }
+  .phl .tx { flex: none; width: 100%; }
+  .phl .copybtn { order: -1; align-self: flex-end; }
+  .card.tslim { flex-direction: column; align-items: stretch; gap: 0.6rem; padding: 0.8rem; }
+  .card.tslim .btn { text-align: center; }
+  .demobtn { left: auto; right: 0.8rem; top: auto; bottom: 0.8rem; transform: none; width: 3.2rem; height: 3.2rem; }
+  .demobtn:hover, .demobtn:focus-visible { transform: scale(1.07); }
+}
 .kitline { margin: 0 0 1rem; }
 @media (min-width: 56.01rem) { .freepg .dgrid.dgrid.dgrid.dgrid.dgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .card p, .card h3 { -webkit-line-clamp: unset; display: block; }
@@ -1014,12 +1023,12 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
     <p class="lead">A client page in, five checked fixes to show the client.</p>
     <p class="note-light">Coming soon. Not for sale yet.</p>
   </div>
-<div class="wrap"><div class="psb"><span class="bdg bg-t" title="Run on at least three real examples and scored against a written standard, with the record on file.">TESTED<span class="sr"> badge. Run on at least three real examples and scored against a written standard, with the record on file.</span></span><span class="psb-t">Five fixes, each tested on 4 to 8 real websites.</span><span class="psb-l"><a href="/how-we-test/#ev-client-site-fix-kit">See the evidence</a> &middot; <a href="/how-we-test/#badges">What this means</a></span></div></div></header>
+<div class="wrap"><div class="psb"><span class="bdg bg-t" title="Run on at least three real examples and scored against a written standard, with the record on file.">TESTED<span class="sr"> badge. Run on at least three real examples and scored against a written standard, with the record on file.</span></span><span class="psb-t">Five fixes, each tested on 4 to 8 real websites.</span><span class="psb-l"><a href="/how-we-test/">See the evidence</a> &middot; <a href="/how-we-test/#badges">What this means</a></span></div></div></header>
 <main><div class="wrap"><section><h2>What will be in it</h2><p class="sub">Bought one by one, the 5 workflows cost $27.</p><ul class="links"><li><strong>Page Fix Sheet</strong> (arriving soon), $9. One page address in, pass or fail on 9 checks.</li><li><strong>Local Business Fix</strong> (arriving soon), $9. A local business site in, name, address and hours checked across pages.</li><li><strong>Landing Page Copy Rewrite</strong> (arriving soon), $9. A landing page address in, a sharper headline and button.</li><li><strong>Competitor Gap Brief</strong> (arriving soon), $0. Your page and competitors&#x27; pages in, the missing topics as a writer&#x27;s brief.</li><li><strong>Update an old blog post</strong> (arriving soon), $0. One blog post in, outdated facts flagged and a new intro.</li></ul></section>
 </div></main>
 <footer class="sitefoot">
   <div class="wrap">
-    <div class="card fol" data-fol="foot"><p class="fol-t"><b>New free workflows by email.</b> A few a month. Unsubscribe any time.</p><a class="btn btn-lime" data-nolo="1" data-go="follow/foot" href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=pack&amp;utm_campaign=subscribe" rel="noopener">Follow</a><p class="fol-s">Handled by Gumroad. See our <a href="/privacy/">privacy page</a>.</p></div>
+    <div class="card fol" id="notify" data-fol="foot"><p class="fol-t"><b>New free workflows by email.</b> A few a month. Unsubscribe any time.</p><a class="btn btn-lime" data-nolo="1" data-go="follow/foot" href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=pack&amp;utm_campaign=subscribe" rel="noopener">Follow</a><p class="fol-s">Handled by Gumroad. See our <a href="/privacy/">privacy page</a>.</p></div>
     <div class="fgrid">
       <div class="fbrand"><a class="fb" href="/"><img src="/assets/avatar.png" alt="" width="36" height="36"><span>PRO SKILL PACKS</span></a>
         <p>Ready-made AI workflows for specific jobs, tested on real tasks.</p><p>Pro Skill Packs makes ready-made AI workflows and fill-in kits for specific jobs.</p></div>

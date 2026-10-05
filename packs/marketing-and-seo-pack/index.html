@@ -960,6 +960,15 @@ details.evb2[open] > summary::after { content: "Hide the test"; }
 details.evb2[open] > summary { margin-bottom: 0.7rem; }
 .three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; max-width: none; }
 @media (max-width: 56rem) { .three { grid-template-columns: 1fr; } }
+@media (max-width: 40rem) {
+  .phl li { flex-direction: column; gap: 0.3rem; }
+  .phl .tx { flex: none; width: 100%; }
+  .phl .copybtn { order: -1; align-self: flex-end; }
+  .card.tslim { flex-direction: column; align-items: stretch; gap: 0.6rem; padding: 0.8rem; }
+  .card.tslim .btn { text-align: center; }
+  .demobtn { left: auto; right: 0.8rem; top: auto; bottom: 0.8rem; transform: none; width: 3.2rem; height: 3.2rem; }
+  .demobtn:hover, .demobtn:focus-visible { transform: scale(1.07); }
+}
 .kitline { margin: 0 0 1rem; }
 @media (min-width: 56.01rem) { .freepg .dgrid.dgrid.dgrid.dgrid.dgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .card p, .card h3 { -webkit-line-clamp: unset; display: block; }
@@ -1019,7 +1028,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
 </div></main>
 <footer class="sitefoot">
   <div class="wrap">
-    <div class="card fol" data-fol="foot"><p class="fol-t"><b>New free workflows by email.</b> A few a month. Unsubscribe any time.</p><a class="btn btn-lime" data-nolo="1" data-go="follow/foot" href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=pack&amp;utm_campaign=subscribe" rel="noopener">Follow</a><p class="fol-s">Handled by Gumroad. See our <a href="/privacy/">privacy page</a>.</p></div>
+    <div class="card fol" id="notify" data-fol="foot"><p class="fol-t"><b>New free workflows by email.</b> A few a month. Unsubscribe any time.</p><a class="btn btn-lime" data-nolo="1" data-go="follow/foot" href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=pack&amp;utm_campaign=subscribe" rel="noopener">Follow</a><p class="fol-s">Handled by Gumroad. See our <a href="/privacy/">privacy page</a>.</p></div>
     <div class="fgrid">
       <div class="fbrand"><a class="fb" href="/"><img src="/assets/avatar.png" alt="" width="36" height="36"><span>PRO SKILL PACKS</span></a>
         <p>Ready-made AI workflows for specific jobs, tested on real tasks.</p><p>Pro Skill Packs makes ready-made AI workflows and fill-in kits for specific jobs.</p></div>
