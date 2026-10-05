@@ -698,6 +698,12 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .tcard .tc-price { display: block; font-size: 0.9rem; color: var(--slate); line-height: 1.4; }
 .tcard .tc-act { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; margin-top: 0.2rem; }
 .tcard .tc-see { font-size: 0.92rem; }
+.card.tslim { min-height: 0; flex-direction: row; max-width: 52rem; margin: 0.6rem 0 0.7rem; padding: 0.5rem 0.7rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; color: var(--ink); display: flex; align-items: center; gap: 0.6rem; }
+.card.tslim .ts-t { flex: 1; min-width: 0; margin: 0; display: block; -webkit-line-clamp: unset; font-size: 0.85rem; line-height: 1.3; color: var(--ink); }
+.card.tslim .ts-t b { font-weight: 700; color: var(--ink); }
+.card.tslim .ts-t span { color: var(--slate); }
+.card.tslim .btn { flex: none; padding: 0.35rem 0.75rem; font-size: 0.82rem; white-space: nowrap; }
+@media (min-width: 641px) { .card.tslim { margin-bottom: 1.3rem; } }
 .tbar { display: none; }
 @media (max-width: 640px) {
   .tcard { flex-direction: column; gap: 0.6rem; }
@@ -711,7 +717,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 }
 
 </style>
-<script src="https://gumroad.com/js/gumroad.js"></script>
+<script defer src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -764,7 +770,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <section class="gtk"><h2>Good to know</h2><div class="prose"><p>Checkout is on Gumroad. Prices are in US dollars; Gumroad shows your local currency and any VAT in the total before you pay. Check that total in the cart. 30-day refund.</p></div></section>
 <section><h2>Before and after</h2><p class="sub">Taken from the skill&#x27;s README.</p><div class="prose"><blockquote><p><strong>Before:</strong> A common reply: a formula with A1:A10 placeholders that you have to translate to your own layout.</p>
 <p><strong>After (skill output, from a real test run):</strong> Test run on 8 rows of a public passenger CSV, Excel 365. Asked for surname, title and average-by-class age fill. Output, unedited: &quot;M2: =LEFT(D2,FIND(\&quot;,\&quot;,D2)-1)&quot; and &quot;O2: =IF(F2=\&quot;\&quot;,ROUND(AVERAGEIFS($F$2:$F$9,$C$2:$C$9,C2),1),F2)&quot;, plus a table of all 8 rows with expected and computed values (row 7: 21.3 = average of the other class-3 ages), and a note that it was recomputed in Python, not run in Excel.</p></blockquote></div></section>
-<section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/spreadsheet-formula-and-cleanup-last.png" data-gif="/assets/demos/spreadsheet-formula-and-cleanup.gif" alt="Animated demo of Spreadsheet Formula and Cleanup on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Spreadsheet Formula and Cleanup">Play</button></figure></section>
+<section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/spreadsheet-formula-and-cleanup-last.png" data-gif="/assets/demos/spreadsheet-formula-and-cleanup.gif" alt="Animated demo of Spreadsheet Formula and Cleanup on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async" srcset="/assets/demos/spreadsheet-formula-and-cleanup-last-240.webp 240w, /assets/demos/spreadsheet-formula-and-cleanup-last-480.webp 480w, /assets/demos/spreadsheet-formula-and-cleanup-last-900.webp 900w, /assets/demos/spreadsheet-formula-and-cleanup-last-1200.webp 1200w" sizes="(min-width: 48rem) 900px, 100vw" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Spreadsheet Formula and Cleanup">Play</button></figure></section>
 <section><h2>What it does</h2><div class="prose"><p>Tell it what you want the sheet to do, paste a few real rows and name your app (Excel 365, older Excel, Google Sheets, LibreOffice). You get a formula in your real columns, a short explanation, a test table on your sample rows, edge cases, and what it could not verify. For messy data it gives numbered cleanup steps that start with making a copy.</p></div></section>
 <section><h2>How it was tested</h2><div class="prose"><p><b>What you can check yourself.</b> The sample result on this page, the list of what is in the file, and the 30-day refund. There are no ratings yet, because nobody has reviewed it yet.</p><p><b>How we tested it.</b></p><p>2 runs on a public CSV (Claude Sonnet). The first run left out the test table, so we made that section mandatory; the second run included it and the numbers matched.</p><p>Tested on a real example before release. The example is shown in the Before and after section above.</p><p><a href="/how-we-test/">How we test</a>, what we do not do, and which assistants we ran it on.</p></div></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It does not open Excel or Sheets. Its test is a recomputation from your sample, and it says so.</li><li>It only knows the rows you show it. Odd values elsewhere in the sheet can still break a formula.</li><li>Some functions need Excel 365 or Google Sheets. It names the limitation and gives a fallback.</li><li>It does not edit your file. You paste the result in.</li></ul></div></section>
@@ -804,7 +810,7 @@ D.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest(
 D.addEventListener('copy',function(){if(String(window.getSelection()).indexOf('npx skills add')>=0)window.pspTrack('copy','install')});
 })();</script><!-- go:end -->
 <!-- analytics:start -->
-<script src="https://cdn.counter.dev/script.js" data-id="a17e3abc-0819-4937-be25-c683543a2ac8" data-utcoffset="1"></script>
+<script async src="https://cdn.counter.dev/script.js" data-id="a17e3abc-0819-4937-be25-c683543a2ac8" data-utcoffset="1"></script>
 <!-- analytics:end -->
 </body>
 </html>

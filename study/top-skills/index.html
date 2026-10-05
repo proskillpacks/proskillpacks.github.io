@@ -674,6 +674,12 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .tcard .tc-price { display: block; font-size: 0.9rem; color: var(--slate); line-height: 1.4; }
 .tcard .tc-act { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; margin-top: 0.2rem; }
 .tcard .tc-see { font-size: 0.92rem; }
+.card.tslim { min-height: 0; flex-direction: row; max-width: 52rem; margin: 0.6rem 0 0.7rem; padding: 0.5rem 0.7rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; color: var(--ink); display: flex; align-items: center; gap: 0.6rem; }
+.card.tslim .ts-t { flex: 1; min-width: 0; margin: 0; display: block; -webkit-line-clamp: unset; font-size: 0.85rem; line-height: 1.3; color: var(--ink); }
+.card.tslim .ts-t b { font-weight: 700; color: var(--ink); }
+.card.tslim .ts-t span { color: var(--slate); }
+.card.tslim .btn { flex: none; padding: 0.35rem 0.75rem; font-size: 0.82rem; white-space: nowrap; }
+@media (min-width: 641px) { .card.tslim { margin-bottom: 1.3rem; } }
 .tbar { display: none; }
 @media (max-width: 640px) {
   .tcard { flex-direction: column; gap: 0.6rem; }
@@ -749,8 +755,8 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <ul><li>100 listed, <strong>71 fetched</strong>, 29 not. Reasons: 27 have a vendor domain as their source rather than a GitHub repo (3 of those skill ids were fetched from a GitHub source, 24 were not); 1 was removed from its repo; 1 has no folder or name that matches. Our portability study fetched 69; the extra 2 here come from matching on the <code>name</code> field.</li><li>Categories and publishers cover all 100. File measures (length, description, scripts) cover the 71.</li><li>98 skills were classified from the name and 2 from the description. None fell outside the rules.</li></ul>
 <h2>Findings</h2>
 <ol><li><strong>Most of the top 100 are connectors and developer tools.</strong> 30 are workspace apps, 22 cloud and vendor platforms, 20 dev workflow (review, testing, planning), 12 image, video and audio generation, 9 agent and browser tooling, 5 UI design, 2 marketing and sales.</li><li><strong>Developer-facing 56, business-facing 32, creative 12.</strong> Of the 32 business-facing, 30 are workspace apps. Marketing and sales is 2 of 100.</li><li><strong>A few publishers hold most of the list.</strong> 14 publishers in total. The top 3 hold 68 skills and 67.9% of the install counts, the top 5 hold 83 skills and 84.1%, and the top 10 hold 96 skills and 96.8%. Two of the identifiers belong to one vendor family; counted together, the top 3 hold 71 skills and 69.9%.</li><li><strong>The head is steep, the body is flat.</strong> Rank 1 has 3,692,279 installs and rank 100 has 460,312, a ratio of 8.0. But 80 of the 100 sit between 500,000 and 1,000,000, the median is 654,433, only 6 are over 1 million and 14 are at or under 500,000. The top 10 hold 18.1% of all installs, the top 20 hold 29.0%, the top 50 hold 59.7%.</li><li><strong>Skills are short.</strong> Median length 108 lines. Of 71: 12 up to 50 lines, 22 of 51 to 100, 23 of 101 to 200, 12 of 201 to 500, 2 over 500 (longest 1,206).</li><li><strong>Descriptions are mid-length, and 29 of 71 never say when to use the skill.</strong> Median 368 characters. 11 up to 150, 19 of 151 to 300, 14 of 301 to 500, 27 of 501 to 1,024, none over 1,024. 42 of 71 contain a &quot;when to use&quot; phrase.</li><li><strong>Most are plain text.</strong> 14 of 71 bundle scripts. By language (a skill can have several): shell 7, PowerShell 7, JavaScript 5, Python 4, TypeScript 1.</li></ol>
-<p><img src="/study/top-skills/chart-jobs.png" alt="What the top 100 skills do" width="900" loading="lazy"></p>
-<p><img src="/study/top-skills/chart-publishers.png" alt="Publishers" width="900" loading="lazy"></p>
+<p><img src="/study/top-skills/chart-jobs.png" alt="What the top 100 skills do" width="900" loading="lazy" srcset="/study/top-skills/chart-jobs-240.webp 240w, /study/top-skills/chart-jobs-480.webp 480w, /study/top-skills/chart-jobs-900.webp 900w, /study/top-skills/chart-jobs-1200.webp 1200w" sizes="(min-width: 48rem) 900px, 100vw" decoding="async" height="526"></p>
+<p><img src="/study/top-skills/chart-publishers.png" alt="Publishers" width="900" loading="lazy" srcset="/study/top-skills/chart-publishers-240.webp 240w, /study/top-skills/chart-publishers-480.webp 480w, /study/top-skills/chart-publishers-900.webp 900w, /study/top-skills/chart-publishers-1200.webp 1200w" sizes="(min-width: 48rem) 900px, 100vw" decoding="async" height="450"></p>
 <h2>Limits</h2>
 <ul><li>The leaderboard counts installs per package, and a package installs many skills at once, so one publisher&#x27;s skills tend to share a number. Read counts as weight on the list, not as separate users.</li><li>A keyword classifier is crude. A skill can fit two categories, the rules are ours, and changing them moves counts. Fix: they are published, and <code>data.csv</code> has the category for every skill.</li><li>Only the top 100 is covered. The leaderboard keeps going below rank 100, so this says nothing about mid-sized skills.</li><li>29 skills could not be read (see Sample). The 24 with a vendor domain as source are all workspace connectors, so the file measures understate that group.</li><li>One snapshot on one day. Install counts change.</li></ul>
 <h2>Gaps we see, for skill authors</h2>
@@ -789,7 +795,7 @@ D.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest(
 D.addEventListener('copy',function(){if(String(window.getSelection()).indexOf('npx skills add')>=0)window.pspTrack('copy','install')});
 })();</script><!-- go:end -->
 <!-- analytics:start -->
-<script src="https://cdn.counter.dev/script.js" data-id="a17e3abc-0819-4937-be25-c683543a2ac8" data-utcoffset="1"></script>
+<script async src="https://cdn.counter.dev/script.js" data-id="a17e3abc-0819-4937-be25-c683543a2ac8" data-utcoffset="1"></script>
 <!-- analytics:end -->
 </body>
 </html>

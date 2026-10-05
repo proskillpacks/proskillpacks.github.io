@@ -695,6 +695,12 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .tcard .tc-price { display: block; font-size: 0.9rem; color: var(--slate); line-height: 1.4; }
 .tcard .tc-act { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem; margin-top: 0.2rem; }
 .tcard .tc-see { font-size: 0.92rem; }
+.card.tslim { min-height: 0; flex-direction: row; max-width: 52rem; margin: 0.6rem 0 0.7rem; padding: 0.5rem 0.7rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; color: var(--ink); display: flex; align-items: center; gap: 0.6rem; }
+.card.tslim .ts-t { flex: 1; min-width: 0; margin: 0; display: block; -webkit-line-clamp: unset; font-size: 0.85rem; line-height: 1.3; color: var(--ink); }
+.card.tslim .ts-t b { font-weight: 700; color: var(--ink); }
+.card.tslim .ts-t span { color: var(--slate); }
+.card.tslim .btn { flex: none; padding: 0.35rem 0.75rem; font-size: 0.82rem; white-space: nowrap; }
+@media (min-width: 641px) { .card.tslim { margin-bottom: 1.3rem; } }
 .tbar { display: none; }
 @media (max-width: 640px) {
   .tcard { flex-direction: column; gap: 0.6rem; }
@@ -708,7 +714,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 }
 
 </style>
-<script src="https://gumroad.com/js/gumroad.js"></script>
+<script defer src="https://gumroad.com/js/gumroad.js"></script>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -754,7 +760,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
   </div>
 </header>
 <main><div class="wrap">
-<section class="proofrow"><figure class="pvfig"><a class="pvcrop pvr" href="/assets/chargeback-kit-letter.png"><img src="/assets/chargeback-kit-letter.png" width="1000" height="562" alt="A filled chargeback response letter from the kit"></a><figcaption>A page of the real file you get. <a class="pvmore" href="/assets/chargeback-kit-letter.png">Tap to see the whole page</a></figcaption></figure><div class="trustbox"><p><b>Who is behind this.</b> Pro Skill Packs is a small independent publisher of ready-made skills and fill-in kits. Every one is run on real examples before release.</p><ul><li><a href="/how-we-test/">How we test</a></li><li>30-day refund, no questions about why</li><li><a href="/contact/">Contact page</a>, or write to kaiventura.founder@gmail.com</li></ul><p class="sub" style="margin:.6rem 0 0">New here? <a href="/feedback/">Ask for a free copy in exchange for honest feedback.</a></p></div></section>
+<section class="proofrow"><figure class="pvfig"><a class="pvcrop pvr" href="/assets/chargeback-kit-letter.png"><img src="/assets/chargeback-kit-letter.png" width="1000" height="562" alt="A filled chargeback response letter from the kit" srcset="/assets/chargeback-kit-letter-240.webp 240w, /assets/chargeback-kit-letter-480.webp 480w, /assets/chargeback-kit-letter-900.webp 900w, /assets/chargeback-kit-letter-1000.webp 1000w" sizes="200vw" decoding="async"></a><figcaption>A page of the real file you get. <a class="pvmore" href="/assets/chargeback-kit-letter.png">Tap to see the whole page</a></figcaption></figure><div class="trustbox"><p><b>Who is behind this.</b> Pro Skill Packs is a small independent publisher of ready-made skills and fill-in kits. Every one is run on real examples before release.</p><ul><li><a href="/how-we-test/">How we test</a></li><li>30-day refund, no questions about why</li><li><a href="/contact/">Contact page</a>, or write to kaiventura.founder@gmail.com</li></ul><p class="sub" style="margin:.6rem 0 0">New here? <a href="/feedback/">Ask for a free copy in exchange for honest feedback.</a></p></div></section>
 <section class="gtk"><h2>Good to know</h2><div class="prose"><p>Checkout is on Gumroad. Prices are in US dollars; Gumroad shows your local currency and any VAT in the total before you pay. Check that total in the cart. 30-day refund. Tested on 6 real dispute scenarios from the Shopify Community forum. Every final run scored 9/10 or more, with no invented evidence. Not legal advice, and no response can promise how a bank will decide.</p></div></section>
 <section id="steps"><h2>How to use it</h2><div class="prose"><ol><li>Open START-HERE.pdf. It is one page and tells you which letter to use.</li><li>Find the reason on the chargeback banner of the order in your Shopify admin. Open the Word letter for that reason.</li><li>Fill in the brackets with facts from your own records. Delete any line you cannot back with a file.</li><li>Attach the files on the checklist and send it in Shopify before the due date shown on the chargeback.</li></ol><p class="assure"><b>Stuck?</b> Email your filled-in letter to <a href="mailto:kaiventura.founder@gmail.com?subject=Draft%20check" data-go="request/draft-check">kaiventura.founder@gmail.com</a> before you submit (remove card numbers and anything you don't want to share). We'll tell you what's missing for your reason, usually within one working day. Free. Not legal advice.</p><p class="assure"><b>One price, $5. No percentage of what you win, no subscription, no surprise charges.</b></p></div></section>
 <section id="chatgpt"><h2>If you use ChatGPT or a similar assistant</h2><div class="prose"><p>The download also has a ready text to paste into ChatGPT or a similar assistant. Add your order details and it fills the letter in for you. It never invents evidence: anything you did not tell it shows up as a gap to fill, not as a fact. It never looks at your store, it only uses what you type in. You do not need this to use the letters.</p></div></section>
@@ -792,7 +798,7 @@ D.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest(
 D.addEventListener('copy',function(){if(String(window.getSelection()).indexOf('npx skills add')>=0)window.pspTrack('copy','install')});
 })();</script><!-- go:end -->
 <!-- analytics:start -->
-<script src="https://cdn.counter.dev/script.js" data-id="a17e3abc-0819-4937-be25-c683543a2ac8" data-utcoffset="1"></script>
+<script async src="https://cdn.counter.dev/script.js" data-id="a17e3abc-0819-4937-be25-c683543a2ac8" data-utcoffset="1"></script>
 <!-- analytics:end -->
 </body>
 </html>
