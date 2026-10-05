@@ -533,7 +533,22 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .lo s { opacity: 0.7; } .lo b { font-weight: 800; }
 @media (max-width: 640px) { .lobar { font-size: 0.82rem; text-align: left; } }
 
-.tcard { margin: 0 0 1.6rem; max-width: 52rem; gap: 0.5rem; min-height: 0; }
+.tcard { margin: 0 0 1.6rem; max-width: 52rem; gap: 1rem; min-height: 0; flex-direction: row; align-items: flex-start; }
+.tcard .tc-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.tcard .tc-th { flex: none; order: 2; width: 96px; height: auto; aspect-ratio: 900 / 1035; border: 1px solid var(--rule); border-radius: 6px; background: #fff; }
+.card.fol { min-height: 0; flex-direction: row; max-width: 52rem; margin: 1.6rem 0 2rem; padding: 0.9rem 1.2rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; color: var(--ink); display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 1.2rem; }
+.card.fol .btn { flex: none; }
+.card.fol p { margin: 0; display: block; -webkit-line-clamp: unset; }
+.card.fol .fol-t { flex: 1 1 18rem; font-size: 0.95rem; line-height: 1.4; }
+.card.fol .fol-t, .card.fol .fol-t b { color: var(--ink); }
+.card.fol .fol-t b { display: block; font-size: 1rem; }
+.card.fol .fol-s { flex-basis: 100%; font-size: 0.82rem; color: var(--slate); }
+.fol .fol-s a { color: inherit; text-decoration: underline; }
+footer .card.fol { margin: 0 0 2rem; background: transparent; border-color: rgba(255,255,255,0.25); color: var(--cream); }
+footer .card.fol .fol-t, footer .card.fol .fol-t b { color: var(--cream); }
+footer .card.fol .fol-s { color: var(--mist); }
+footer .card.fol .fol-s a { color: var(--cream); display: inline; padding: 0; }
+footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .tcard .tc-bridge { margin: 0; font-weight: 700; color: var(--ink); font-size: 1rem; line-height: 1.4; display: block; -webkit-line-clamp: unset; }
 .tcard .tc-name { font-weight: 800; }
 .tcard .tc-price { display: block; font-size: 0.9rem; color: var(--slate); line-height: 1.4; }
@@ -541,6 +556,8 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .tcard .tc-see { font-size: 0.92rem; }
 .tbar { display: none; }
 @media (max-width: 640px) {
+  .tcard { flex-direction: column; gap: 0.6rem; }
+  .tcard .tc-th { order: -1; }
   .tbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: flex; align-items: center; gap: 0.6rem; padding: 0.55rem 0.8rem; background: #fff; border-top: 1px solid var(--rule); box-shadow: 0 -2px 8px rgba(0,0,0,0.08); transform: translateY(110%); visibility: hidden; transition: transform 0.2s; }
   .tbar.on { transform: none; visibility: visible; }
   .tbar .tb-t { flex: 1; min-width: 0; line-height: 1.25; font-size: 0.85rem; color: var(--slate); }
@@ -623,6 +640,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 </div></main>
 <footer class="sitefoot">
   <div class="wrap">
+    <div class="card fol" data-fol="foot"><p class="fol-t"><b>New free pages by email.</b> A few a month. Unsubscribe any time.</p><a class="btn btn-lime" data-nolo="1" data-go="follow/foot" href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=subscribe" rel="noopener">Follow</a><p class="fol-s">Handled by Gumroad. See our <a href="/privacy/">privacy page</a>.</p></div>
     <div class="fgrid">
       <div class="fbrand"><a class="fb" href="/"><img src="/assets/avatar.png" alt="" width="36" height="36"><span>PRO SKILL PACKS</span></a>
         <p>Professional skills for ChatGPT, Claude and other AI assistants.</p></div>

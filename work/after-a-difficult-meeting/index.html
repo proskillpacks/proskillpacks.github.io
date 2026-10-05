@@ -583,7 +583,22 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .lo s { opacity: 0.7; } .lo b { font-weight: 800; }
 @media (max-width: 640px) { .lobar { font-size: 0.82rem; text-align: left; } }
 
-.tcard { margin: 0 0 1.6rem; max-width: 52rem; gap: 0.5rem; min-height: 0; }
+.tcard { margin: 0 0 1.6rem; max-width: 52rem; gap: 1rem; min-height: 0; flex-direction: row; align-items: flex-start; }
+.tcard .tc-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.tcard .tc-th { flex: none; order: 2; width: 96px; height: auto; aspect-ratio: 900 / 1035; border: 1px solid var(--rule); border-radius: 6px; background: #fff; }
+.card.fol { min-height: 0; flex-direction: row; max-width: 52rem; margin: 1.6rem 0 2rem; padding: 0.9rem 1.2rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; color: var(--ink); display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 1.2rem; }
+.card.fol .btn { flex: none; }
+.card.fol p { margin: 0; display: block; -webkit-line-clamp: unset; }
+.card.fol .fol-t { flex: 1 1 18rem; font-size: 0.95rem; line-height: 1.4; }
+.card.fol .fol-t, .card.fol .fol-t b { color: var(--ink); }
+.card.fol .fol-t b { display: block; font-size: 1rem; }
+.card.fol .fol-s { flex-basis: 100%; font-size: 0.82rem; color: var(--slate); }
+.fol .fol-s a { color: inherit; text-decoration: underline; }
+footer .card.fol { margin: 0 0 2rem; background: transparent; border-color: rgba(255,255,255,0.25); color: var(--cream); }
+footer .card.fol .fol-t, footer .card.fol .fol-t b { color: var(--cream); }
+footer .card.fol .fol-s { color: var(--mist); }
+footer .card.fol .fol-s a { color: var(--cream); display: inline; padding: 0; }
+footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .tcard .tc-bridge { margin: 0; font-weight: 700; color: var(--ink); font-size: 1rem; line-height: 1.4; display: block; -webkit-line-clamp: unset; }
 .tcard .tc-name { font-weight: 800; }
 .tcard .tc-price { display: block; font-size: 0.9rem; color: var(--slate); line-height: 1.4; }
@@ -591,6 +606,8 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .tcard .tc-see { font-size: 0.92rem; }
 .tbar { display: none; }
 @media (max-width: 640px) {
+  .tcard { flex-direction: column; gap: 0.6rem; }
+  .tcard .tc-th { order: -1; }
   .tbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: flex; align-items: center; gap: 0.6rem; padding: 0.55rem 0.8rem; background: #fff; border-top: 1px solid var(--rule); box-shadow: 0 -2px 8px rgba(0,0,0,0.08); transform: translateY(110%); visibility: hidden; transition: transform 0.2s; }
   .tbar.on { transform: none; visibility: visible; }
   .tbar .tb-t { flex: 1; min-width: 0; line-height: 1.25; font-size: 0.85rem; color: var(--slate); }
@@ -667,7 +684,7 @@ What I said:
 What was agreed:
 What happens next, and by when:
 Anything I was told in writing or shown:</code></pre></div><p class="sub">Brackets are for your own facts. Delete anything that is not true for you.</p></div></section>
-<aside class="card tcard" id="topcard" aria-label="The full product"><p class="tc-bridge">Want the checklist and the email in one file to fill in?</p><div><span class="tc-name">After a hard talk with your boss or HR: write it down</span><span class="tc-price">Free</span></div><div class="tc-act"><a class="btn btn-lime" data-nolo="1" href="/go/work/after-a-hard-talk-write-it-down/?from=work-after-a-difficult-meeting-top">Get it free</a> <a class="tc-see" href="#more">See what's inside</a></div></aside>
+<aside class="card tcard" id="topcard" aria-label="The full product"><div class="tc-main"><p class="tc-bridge">Want the checklist and the email in one file to fill in?</p><div><span class="tc-name">After a hard talk with your boss or HR: write it down</span><span class="tc-price">Free</span></div><div class="tc-act"><a class="btn btn-lime" data-nolo="1" href="/go/work/after-a-hard-talk-write-it-down/?from=work-after-a-difficult-meeting-top">Get it free</a> <a class="tc-see" href="#more">See what's inside</a></div></div></aside>
 <section id="official"><h2>What we found in the official guidance</h2><div class="prose"><blockquote class="quote"><span class="region">UK</span>Give written notice if you think you&#x27;ll need to refer to it later, for example at an employment tribunal.<cite>GOV.UK, &quot;Handing in your notice&quot; (about resigning, but the idea of having a written record is the same). <a href="https://www.gov.uk/handing-in-your-notice" rel="noopener">Open the page</a>. Read 4 October 2026.</cite></blockquote><p>We read no official page that tells you to write up every meeting, so the email and the note sheet are our own suggestion, not a rule.</p><p><b>When to get advice first:</b> if the meeting was part of a formal process (a warning, a performance plan, a disciplinary or a grievance), or involved bullying, harassment, discrimination or your safety, it may be a legal matter. In the UK the free Acas helpline can explain what happens next (acas.org.uk). In the US see the Equal Employment Opportunity Commission (eeoc.gov) and the Department of Labor (dol.gov). We cannot advise on these.</p><p>We do not draft complaints or legal claims.</p></div></section>
 <section id="more"><h2>What the free tool adds</h2><div class="prose"><p>The free &quot;After a hard talk with your boss or HR: write it down&quot; download is a one-page checklist, this email as a fill-in file and the note sheet. It is free.</p></div><div style="max-width:44rem"><div class="wkit" id="after-a-hard-talk-write-it-down"><span class="free">Free</span><h3>After a hard talk with your boss or HR: write it down</h3><p>A one-page checklist and a fill-in email that records what was said and what was agreed, with a finished example.</p><div class="cta"><a class="btn btn-lime" href="/go/work/after-a-hard-talk-write-it-down/?from=work">Get it free (sent to your email)</a><p class="sub" style="margin:.5rem 0 0">Free. Gumroad asks for an email to send the files. <a href="/go/work-zip/after-a-hard-talk-write-it-down/?from=work">Or download now without email</a>.</p></div></div></div><p class="assure"><b>Send us your letter before you send it.</b> We'll tell you what's unclear or missing, usually within one working day. Free. Not legal advice. Take out names, ID numbers and anything you don't want to share first. <a href="mailto:kaiventura.founder@gmail.com?subject=Draft%20check" data-go="request/work-draft-check-after-a-difficult-meeting">kaiventura.founder@gmail.com</a></p></section>
 <section id="faq"><h2>Questions people ask</h2><div class="prose"><h3>Should I send an email after a meeting with my boss?</h3><p>It can help, because it puts your understanding on record and gives them a chance to correct it. It is our suggestion, not a legal duty. If the meeting was part of a formal process, get advice first.</p><h3>What if my boss says I have misunderstood?</h3><p>That is why the email asks them to correct anything you missed. A reply that corrects you is also useful to have in writing.</p><h3>Is a series of &quot;quick check-ins&quot; about missed expectations a formal process?</h3><p>We can&#x27;t tell you. Ask in writing what the process is, and read your handbook. The Acas helpline (UK) can explain what is normal.</p><h3>Should I go to HR?</h3><p>That depends on your workplace and what happened. Your handbook should say how to raise a problem. For free advice on your options in the UK, contact Acas.</p><h3>What should I not put in the email?</h3><p>Anything you are not sure is true, guesses about why someone did something, and strong feelings. Stick to what was said and agreed.</p></div></section>
@@ -678,6 +695,7 @@ Anything I was told in writing or shown:</code></pre></div><p class="sub">Bracke
 <script>document.querySelectorAll('.letterbox pre').forEach(function(pre){if(!navigator.clipboard)return;var b=document.createElement('button');b.type='button';b.className='copybtn';b.textContent='Copy letter';b.onclick=function(){if(window.pspTrack)window.pspTrack('copy','work-after-a-difficult-meeting');navigator.clipboard.writeText(pre.querySelector('code').textContent).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy letter'},1500)})};pre.insertBefore(b,pre.firstChild)});</script>
 <footer class="sitefoot">
   <div class="wrap">
+    <div class="card fol" data-fol="foot"><p class="fol-t"><b>New free pages by email.</b> A few a month. Unsubscribe any time.</p><a class="btn btn-lime" data-nolo="1" data-go="follow/foot" href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=work&amp;utm_campaign=subscribe" rel="noopener">Follow</a><p class="fol-s">Handled by Gumroad. See our <a href="/privacy/">privacy page</a>.</p></div>
     <div class="fgrid">
       <div class="fbrand"><a class="fb" href="/"><img src="/assets/avatar.png" alt="" width="36" height="36"><span>PRO SKILL PACKS</span></a>
         <p>Professional skills for ChatGPT, Claude and other AI assistants.</p></div>

@@ -521,7 +521,22 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .lo s { opacity: 0.7; } .lo b { font-weight: 800; }
 @media (max-width: 640px) { .lobar { font-size: 0.82rem; text-align: left; } }
 
-.tcard { margin: 0 0 1.6rem; max-width: 52rem; gap: 0.5rem; min-height: 0; }
+.tcard { margin: 0 0 1.6rem; max-width: 52rem; gap: 1rem; min-height: 0; flex-direction: row; align-items: flex-start; }
+.tcard .tc-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.tcard .tc-th { flex: none; order: 2; width: 96px; height: auto; aspect-ratio: 900 / 1035; border: 1px solid var(--rule); border-radius: 6px; background: #fff; }
+.card.fol { min-height: 0; flex-direction: row; max-width: 52rem; margin: 1.6rem 0 2rem; padding: 0.9rem 1.2rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; color: var(--ink); display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 1.2rem; }
+.card.fol .btn { flex: none; }
+.card.fol p { margin: 0; display: block; -webkit-line-clamp: unset; }
+.card.fol .fol-t { flex: 1 1 18rem; font-size: 0.95rem; line-height: 1.4; }
+.card.fol .fol-t, .card.fol .fol-t b { color: var(--ink); }
+.card.fol .fol-t b { display: block; font-size: 1rem; }
+.card.fol .fol-s { flex-basis: 100%; font-size: 0.82rem; color: var(--slate); }
+.fol .fol-s a { color: inherit; text-decoration: underline; }
+footer .card.fol { margin: 0 0 2rem; background: transparent; border-color: rgba(255,255,255,0.25); color: var(--cream); }
+footer .card.fol .fol-t, footer .card.fol .fol-t b { color: var(--cream); }
+footer .card.fol .fol-s { color: var(--mist); }
+footer .card.fol .fol-s a { color: var(--cream); display: inline; padding: 0; }
+footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .tcard .tc-bridge { margin: 0; font-weight: 700; color: var(--ink); font-size: 1rem; line-height: 1.4; display: block; -webkit-line-clamp: unset; }
 .tcard .tc-name { font-weight: 800; }
 .tcard .tc-price { display: block; font-size: 0.9rem; color: var(--slate); line-height: 1.4; }
@@ -529,6 +544,8 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .tcard .tc-see { font-size: 0.92rem; }
 .tbar { display: none; }
 @media (max-width: 640px) {
+  .tcard { flex-direction: column; gap: 0.6rem; }
+  .tcard .tc-th { order: -1; }
   .tbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: flex; align-items: center; gap: 0.6rem; padding: 0.55rem 0.8rem; background: #fff; border-top: 1px solid var(--rule); box-shadow: 0 -2px 8px rgba(0,0,0,0.08); transform: translateY(110%); visibility: hidden; transition: transform 0.2s; }
   .tbar.on { transform: none; visibility: visible; }
   .tbar .tb-t { flex: 1; min-width: 0; line-height: 1.25; font-size: 0.85rem; color: var(--slate); }
@@ -586,6 +603,7 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 <main><div class="wrap"><section><h2>One page for each reason Shopify shows</h2><p class="sub">Open the chargeback in your Shopify admin first: it shows the reason and your due date. Print the page, tick what you have, and attach those files to your response.</p><div class="prose"><ul class="links"><li><a href="/go/checklist/fraudulent/" data-go="checklist/fraudulent"><b>Fraudulent or unrecognized: evidence checklist (PDF, 1 page)</b></a><br>The cardholder says they did not authorize the charge, or do not recognize your store name on their statement. <a href="/shopify/chargebacks/fraudulent/">Read it as a web page</a>.</li><li><a href="/go/checklist/product-not-received/" data-go="checklist/product-not-received"><b>Product not received: evidence checklist (PDF, 1 page)</b></a><br>The customer told their bank they did not receive what they bought. <a href="/shopify/chargebacks/product-not-received/">Read it as a web page</a>.</li><li><a href="/go/checklist/product-unacceptable/" data-go="checklist/product-unacceptable"><b>Product unacceptable or not as described: evidence checklist (PDF, 1 page)</b></a><br>The customer says what arrived was defective, damaged or not as you described it. <a href="/shopify/chargebacks/product-unacceptable/">Read it as a web page</a>.</li><li><a href="/go/checklist/subscription-canceled/" data-go="checklist/subscription-canceled"><b>Subscription canceled: evidence checklist (PDF, 1 page)</b></a><br>The customer says you billed them for a subscription after it should have been canceled, or that they expected a reminder before the charge. <a href="/shopify/chargebacks/subscription-canceled/">Read it as a web page</a>.</li><li><a href="/go/checklist/duplicate/" data-go="checklist/duplicate"><b>Duplicate: evidence checklist (PDF, 1 page)</b></a><br>The customer thinks you charged them twice for the same product or service. <a href="/shopify/chargebacks/duplicate/">Read it as a web page</a>.</li><li><a href="/go/checklist/credit-not-processed/" data-go="checklist/credit-not-processed"><b>Credit not processed: evidence checklist (PDF, 1 page)</b></a><br>The customer says they returned the product or canceled the order and never got their money back. <a href="/shopify/chargebacks/credit-not-processed/">Read it as a web page</a>.</li></ul></div></section><section><h2>What is in each page</h2><div class="prose"><ul><li>What the bank is deciding for that reason, and what to do first.</li><li>The evidence to gather, with the items that matter most marked.</li><li>Mistakes to avoid, and Shopify Help's reminders on the due date: use the date shown on your own chargeback, no edits after you submit, no appeal after the decision.</li><li>Sources with the date we read them. Prices and policies change, so check the date.</li></ul><p>Prefer to click? <a href="/tools/chargeback-evidence/" data-go="tool/chargeback-evidence">The free evidence picker</a> runs in your browser, and <a href="/shopify/chargebacks/">the chargeback hub</a> has the full guides.</p></div></section><section><div class="prose"><p class="sub">General information from Shopify's public help pages. It is not legal advice, and no response can promise how a bank will decide. Pro Skill Packs is not affiliated with, endorsed by or sponsored by Shopify Inc. Free to share unchanged, with the footer on each page.</p></div></section></div></main>
 <footer class="sitefoot">
   <div class="wrap">
+    <div class="card fol" data-fol="foot"><p class="fol-t"><b>New free pages by email.</b> A few a month. Unsubscribe any time.</p><a class="btn btn-lime" data-nolo="1" data-go="follow/foot" href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=free&amp;utm_campaign=subscribe" rel="noopener">Follow</a><p class="fol-s">Handled by Gumroad. See our <a href="/privacy/">privacy page</a>.</p></div>
     <div class="fgrid">
       <div class="fbrand"><a class="fb" href="/"><img src="/assets/avatar.png" alt="" width="36" height="36"><span>PRO SKILL PACKS</span></a>
         <p>Professional skills for ChatGPT, Claude and other AI assistants.</p></div>
