@@ -297,6 +297,16 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .tile b { font-size: 1.1rem; line-height: 1.25; }
 .tile .who { color: var(--slate); font-size: 0.93rem; line-height: 1.4; }
 .tile .n { margin-top: auto; font-size: 0.85rem; font-weight: 700; color: var(--moss); }
+.kitband { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem 2.25rem; background: #fff; border: 1px solid var(--rule); border-left: 6px solid var(--lime); border-radius: 18px; padding: 1.5rem; }
+.kb-img { flex: 1 1 18rem; max-width: 30rem; }
+.kb-img img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 10px; }
+.kb-txt { flex: 1 1 18rem; }
+.kb-tag { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--moss); }
+.kb-txt h2 { margin: 0.3rem 0 0.6rem; }
+.kb-txt p { margin: 0 0 1rem; color: var(--slate); }
+.kb-buy { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; margin-bottom: 0.8rem; }
+.kb-ref { font-weight: 700; color: var(--pine); font-size: 0.92rem; }
+.kb-txt p.kb-more { margin: 0; }
 .dgrid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
 .dgrid > * { flex: 1 1 17rem; max-width: 26rem; }
 .dc { display: flex; flex-direction: column; gap: 0.4rem; padding: 1.1rem 1.2rem; min-height: 11.5rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; text-decoration: none; color: var(--ink); }
@@ -363,12 +373,27 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 @media (max-width: 56rem) { .gtile, .gtile.wide { grid-column: span 3; } .why3, .steps { grid-template-columns: 1fr; } }
 @media (max-width: 40rem) { .gtiles { grid-template-columns: 1fr; gap: 0.85rem; } .gtile, .gtile.wide { grid-column: auto; padding: 1.1rem; } .stats { gap: 0.3rem 1rem; font-size: 0.88rem; } }
 
+.proofrow { display: flex; flex-wrap: wrap; gap: 1.2rem 2rem; align-items: flex-start; margin: 0 0 2.2rem; }
+.proofrow .pvfig { flex: 0 1 20rem; margin: 0; }
+.proofrow .pvfig img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 10px; }
+.proofrow .pvfig figcaption { font-size: 0.85rem; color: var(--slate); margin-top: 0.4rem; }
+.trustbox { flex: 1 1 18rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 1.1rem 1.3rem; }
+.trustbox p { margin: 0 0 0.6rem; }
+.trustbox ul { margin: 0; padding-left: 1.1rem; }
+details.usingai { border: 1px solid var(--rule); border-radius: 12px; background: #fff; padding: 0.2rem 1.1rem; margin: 0 0 2rem; }
+details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; }
+.devline { color: var(--slate); font-size: 0.9rem; }
+
 .doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 0 0 1rem; }
 .door { display: block; background: var(--pine); color: var(--cream); border-radius: 16px; padding: 1.2rem 1.3rem; text-decoration: none; }
 .door b { display: block; font-size: 1.15rem; margin-bottom: 0.3rem; }
 .door span { color: var(--mist); font-size: 0.95rem; }
 .door:hover, .door:focus-visible { background: var(--moss); }
 .wkit { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.1rem 1.3rem; margin: 0 0 1rem; max-width: 52rem; }
+.wpaid { display: flex; flex-wrap: wrap; gap: 1.2rem 1.6rem; align-items: flex-start; }
+.wk-img { flex: 0 1 15rem; }
+.wk-txt { flex: 1 1 18rem; }
+.pvimg { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 8px; }
 .wkit h3 { margin: 0 0 0.3rem; }
 .wkit p { margin: 0 0 0.7rem; }
 .wkit .free { display: inline-block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--pine); }
@@ -424,6 +449,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   </div>
 </header>
 <main><div class="wrap">
+<section class="proofrow"><figure class="pvfig"><img src="/assets/preview/voice-matched-draft-editor.png" width="900" height="1035" loading="lazy" alt="A real page from Voice-Matched Draft Editor: the first page of the file you get"><figcaption>A page of the real file you get.</figcaption></figure><div class="trustbox"><p><b>Who makes this.</b> Pro Skill Packs makes ready-to-use skills, letters and checklists for jobs people find hard. Each one is tried on a real example before it goes on sale.</p><ul><li><a href="/how-we-test/">How we test</a></li><li>30-day refund, no questions about why</li><li><a href="/contact/">Contact us</a> (kaiventura.founder@gmail.com)</li></ul></div></section>
 <section><div class="two">
   <div class="box"><b>What you give it</b><p>Two or three things you wrote and a draft.</p></div>
   <div class="box"><b>What you get</b><p>The draft edited to sound like you, a list of what changed, and flags on claims it cannot support.</p></div>
@@ -434,10 +460,10 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 <section><h2>How it was tested</h2><div class="prose"><p><strong>1 real-data run on public essay samples and a sample draft (Claude Sonnet). The first run overwrote a file in the test folder, so the skill now says never to modify files.</strong></p><p>Tested on a real example before release. The example is shown in the Before and after section above.</p><p><a href="/how-we-test/">How we test</a>, what we do not do, and which assistants we ran it on.</p></div></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>Voice quality depends on your samples. Under about 200 words, the read will be rough.</li><li>It does not add facts, examples or sources. Thin paragraphs stay thin and are flagged.</li><li>It does not promise to pass AI detectors. Those tools are unreliable and we do not claim it.</li><li>It edits text you give it. It will not fix an argument that does not hold up.</li></ul></div></section>
 <section><h2>Works with</h2><div class="prose"><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result.</p></div></section>
-<section><h2>For people who use AI assistants</h2><div class="prose"><ol><li>Unzip the download. It holds the <code>voice-matched-draft-editor</code> folder, a README and the licence.</li><li>Put the <code>voice-matched-draft-editor</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Here are 3 things I wrote and a draft. Edit the draft so it sounds like me.&quot;. The skill loads by itself.</li></ol></div></section>
 <section id="where-to-start"><h2>Where to start</h2><ul class="links"><li><b>Try the free one first.</b> <a href="/skills/fact-claim-checker/">Fact-Claim Checker</a>: Paste a draft before you publish. Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.</li></ul></section>
 <section id="in-download"><h2>What is in the download</h2><p class="sub">Read from the real file.</p><ul class="links"><li><code>LICENSE.txt</code></li><li><code>README.md</code></li><li><code>SKILL.md</code></li><li><code>prompt.md</code></li><li><code>voice-matched-draft-editor-prompt-card.pdf</code></li></ul></section>
 <section><h2>Get it</h2><div class="buybox"><div class="row"><span class="price">$9</span><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/l/voice-matched-draft-editor?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=voice-matched-draft-editor" data-go="buy/voice-matched-draft-editor">Buy this skill</a></div><ul class="expect"><li><b>You get:</b> a zip file (double-click it to open it).</li><li><b>Checkout:</b> Gumroad opens on this page. Click Add to cart, enter your email and card details, and check the total, with any VAT, before you pay. Prices here are in US dollars.</li><li><b>After you pay:</b> a download page opens right away with the zip file, and Gumroad gives you a receipt there that you can resend. Open it and follow the README.</li></ul><p>One-time payment. Updates to this version are free. Questions or a refund: reply to your receipt within 30 days, or write to kaiventura.founder@gmail.com.</p></div></section>
+<details class="usingai"><summary>Using it with an AI assistant</summary><div class="prose"><ol><li>Unzip the download. It holds the <code>voice-matched-draft-editor</code> folder, a README and the licence.</li><li>Put the <code>voice-matched-draft-editor</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install Agent Skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Here are 3 things I wrote and a draft. Edit the draft so it sounds like me.&quot;. The skill loads by itself.</li></ol></div></details>
 <section><h2>Related</h2><ul class="links"><li>Free guide to do it by hand: <a href="/guides/how-to-edit-a-draft-so-it-sounds-like-you-wrote-it/">How do I edit a draft so it sounds like I wrote it?</a></li><li><a href="/skills/fact-claim-checker/">Fact-Claim Checker</a> (Free): Paste a draft before you publish. Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.</li><li>More for people who write for a living: <a href="/for/content-and-writing/">Content and writing</a></li></ul></section>
 <p class="sub"><a href="https://github.com/proskillpacks/skills/issues/new?template=report-problem.yml&amp;skill=voice-matched-draft-editor" rel="noopener">Report a problem with this skill</a> (GitHub, or write to kaiventura.founder@gmail.com).</p>
 </div></main>
@@ -448,7 +474,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
         <p>Professional skills for ChatGPT, Claude and other AI assistants.</p></div>
       <nav aria-label="Browse"><h2>Browse</h2><ul><li><a href="/categories/#g-online-stores">Online stores</a></li><li><a href="/categories/#g-developers-and-data">Developers and data</a></li><li><a href="/categories/#g-work-and-careers">Work and careers</a></li><li><a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a></li><li><a href="/categories/#g-money-admin-support">Money, admin and support</a></li><li><a href="/all/">All skills</a></li></ul></nav>
       <nav aria-label="Learn"><h2>Learn</h2><ul><li><a href="/guides/">Guides</a></li><li><a href="/study/">Research</a></li><li><a href="/free/">Free skills</a></li><li><a href="/how-we-test/">How we test</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/new/">What's new</a></li></ul></nav>
-      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="mailto:kaiventura.founder@gmail.com">Contact</a></li><li><a href="/go/affiliates/?from=skill">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
+      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/go/affiliates/?from=skill">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
     </div>
     <small>Pro Skill Packs. Product names and trademarks belong to their owners.</small>
   </div>

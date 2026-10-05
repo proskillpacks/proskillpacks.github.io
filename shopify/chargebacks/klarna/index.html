@@ -343,6 +343,16 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .tile b { font-size: 1.1rem; line-height: 1.25; }
 .tile .who { color: var(--slate); font-size: 0.93rem; line-height: 1.4; }
 .tile .n { margin-top: auto; font-size: 0.85rem; font-weight: 700; color: var(--moss); }
+.kitband { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem 2.25rem; background: #fff; border: 1px solid var(--rule); border-left: 6px solid var(--lime); border-radius: 18px; padding: 1.5rem; }
+.kb-img { flex: 1 1 18rem; max-width: 30rem; }
+.kb-img img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 10px; }
+.kb-txt { flex: 1 1 18rem; }
+.kb-tag { font-size: 0.75rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--moss); }
+.kb-txt h2 { margin: 0.3rem 0 0.6rem; }
+.kb-txt p { margin: 0 0 1rem; color: var(--slate); }
+.kb-buy { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1rem; margin-bottom: 0.8rem; }
+.kb-ref { font-weight: 700; color: var(--pine); font-size: 0.92rem; }
+.kb-txt p.kb-more { margin: 0; }
 .dgrid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
 .dgrid > * { flex: 1 1 17rem; max-width: 26rem; }
 .dc { display: flex; flex-direction: column; gap: 0.4rem; padding: 1.1rem 1.2rem; min-height: 11.5rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; text-decoration: none; color: var(--ink); }
@@ -409,12 +419,27 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 @media (max-width: 56rem) { .gtile, .gtile.wide { grid-column: span 3; } .why3, .steps { grid-template-columns: 1fr; } }
 @media (max-width: 40rem) { .gtiles { grid-template-columns: 1fr; gap: 0.85rem; } .gtile, .gtile.wide { grid-column: auto; padding: 1.1rem; } .stats { gap: 0.3rem 1rem; font-size: 0.88rem; } }
 
+.proofrow { display: flex; flex-wrap: wrap; gap: 1.2rem 2rem; align-items: flex-start; margin: 0 0 2.2rem; }
+.proofrow .pvfig { flex: 0 1 20rem; margin: 0; }
+.proofrow .pvfig img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 10px; }
+.proofrow .pvfig figcaption { font-size: 0.85rem; color: var(--slate); margin-top: 0.4rem; }
+.trustbox { flex: 1 1 18rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 1.1rem 1.3rem; }
+.trustbox p { margin: 0 0 0.6rem; }
+.trustbox ul { margin: 0; padding-left: 1.1rem; }
+details.usingai { border: 1px solid var(--rule); border-radius: 12px; background: #fff; padding: 0.2rem 1.1rem; margin: 0 0 2rem; }
+details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; }
+.devline { color: var(--slate); font-size: 0.9rem; }
+
 .doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem; margin: 0 0 1rem; }
 .door { display: block; background: var(--pine); color: var(--cream); border-radius: 16px; padding: 1.2rem 1.3rem; text-decoration: none; }
 .door b { display: block; font-size: 1.15rem; margin-bottom: 0.3rem; }
 .door span { color: var(--mist); font-size: 0.95rem; }
 .door:hover, .door:focus-visible { background: var(--moss); }
 .wkit { background: #fff; border: 1px solid var(--rule); border-radius: 16px; padding: 1.1rem 1.3rem; margin: 0 0 1rem; max-width: 52rem; }
+.wpaid { display: flex; flex-wrap: wrap; gap: 1.2rem 1.6rem; align-items: flex-start; }
+.wk-img { flex: 0 1 15rem; }
+.wk-txt { flex: 1 1 18rem; }
+.pvimg { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 8px; }
 .wkit h3 { margin: 0 0 0.3rem; }
 .wkit p { margin: 0 0 0.7rem; }
 .wkit .free { display: inline-block; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--pine); }
@@ -527,7 +552,7 @@ document.querySelectorAll('.prose pre').forEach(function (pre) {
         <p>Professional skills for ChatGPT, Claude and other AI assistants.</p></div>
       <nav aria-label="Browse"><h2>Browse</h2><ul><li><a href="/categories/#g-online-stores">Online stores</a></li><li><a href="/categories/#g-developers-and-data">Developers and data</a></li><li><a href="/categories/#g-work-and-careers">Work and careers</a></li><li><a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a></li><li><a href="/categories/#g-money-admin-support">Money, admin and support</a></li><li><a href="/all/">All skills</a></li></ul></nav>
       <nav aria-label="Learn"><h2>Learn</h2><ul><li><a href="/guides/">Guides</a></li><li><a href="/study/">Research</a></li><li><a href="/free/">Free skills</a></li><li><a href="/how-we-test/">How we test</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/new/">What's new</a></li></ul></nav>
-      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="mailto:kaiventura.founder@gmail.com">Contact</a></li><li><a href="/go/affiliates/?from=shopify-chargebacks-klarna">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=shopify-chargebacks-klarna&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
+      <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/go/affiliates/?from=shopify-chargebacks-klarna">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=shopify-chargebacks-klarna&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
     </div>
     <small>Pro Skill Packs. Product names and trademarks belong to their owners. Not affiliated with or endorsed by Shopify Inc.</small>
   </div>
