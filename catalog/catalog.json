@@ -137,7 +137,7 @@
     "Support Macro Writer",
     "Product Description Rewriter",
     "Product SEO Fixer",
-    "Chargeback Response Kit for Shopify Payments, with notes for PayPal, Stripe and Klarna",
+    "Chargeback Response Kit for Shopify: fill-in letters for each dispute reason",
     "BFCM Campaign Kit"
    ]
   },
@@ -681,7 +681,7 @@
   },
   {
    "id": "chargeback-response-writer",
-   "title": "Chargeback Response Kit for Shopify Payments, with notes for PayPal, Stripe and Klarna",
+   "title": "Chargeback Response Kit for Shopify: fill-in letters for each dispute reason",
    "kind": "Single skill",
    "type": "single",
    "category": "shopify",

@@ -111,6 +111,8 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .chead .ck.free { background: var(--lime); color: var(--pine); border-color: var(--lime); }
 .chead .ck.pack { background: var(--cream); color: var(--pine); border-color: var(--cream); }
 .chead .ck.soonk { border-style: dashed; }
+.card.soon .chead .cc { display: none; }
+.card.soon .chead { flex-wrap: wrap; }
 .chead .cc { margin-left: auto; opacity: 0.85; min-width: 0; text-align: right; line-height: 1.2; font-size: 0.68rem; }
 .chead .ck { white-space: nowrap; }
 .card > img.thumb { aspect-ratio: 16 / 9; border-bottom: 1px solid var(--rule); }
@@ -140,7 +142,7 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
-.swipe { display: none; font-size: 0.85rem; color: var(--mist); margin: -0.9rem 0 1.2rem; }
+.swipe { display: none; font-size: 0.85rem; color: var(--slate); margin: -0.9rem 0 1.2rem; }
 @media (max-width: 640px) { .swipe:not([hidden]) { display: block; } }
 table { border-collapse: collapse; width: 100%; background: #fff; font-size: 0.95rem; }
 th, td { border: 1px solid var(--rule); padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
@@ -243,9 +245,10 @@ footer.sitefoot h2 { margin: 0 0 0.6rem; font-size: 0.8rem; line-height: 1.2; le
 footer.sitefoot nav { display: block; }
 footer.sitefoot ul { list-style: none; margin: 0; padding: 0; }
 footer.sitefoot nav a { display: block; padding: 0.3rem 0; line-height: 1.4; }
+.freepg .dc-top .dc-cat { display: none; } .freepg .dc-top { justify-content: flex-start; }
 footer.sitefoot small { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--sage); }
 @media (max-width: 56rem) { .fgrid { grid-template-columns: 1fr 1fr; } .fbrand { grid-column: 1 / -1; } }
-@media (max-width: 34rem) { .fgrid { grid-template-columns: 1fr; gap: 1.5rem; } footer.sitefoot nav a { padding: 0.75rem 0; } footer.sitefoot { padding-top: 2.25rem; } }
+@media (max-width: 34rem) { .fgrid { grid-template-columns: 1fr 1fr; gap: 1.5rem 1rem; } footer.sitefoot nav a { padding: 0.55rem 0; } footer.sitefoot { padding-top: 2.25rem; } }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
@@ -311,6 +314,8 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
 .dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; min-height: 2.73rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.dc.dg h3 { -webkit-line-clamp: 4; }
+@media (min-width: 40.01rem) { .dc.dg h3 { min-height: 3.9rem; } }
 .dc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem; }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
 .dc .go::after { content: " \2192"; }
@@ -370,6 +375,8 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 @media (min-width: 56.01rem) { .grid:has(> :nth-child(4):last-child), .grid:has(> :nth-child(7):last-child), .grid:has(> :nth-child(10):last-child), .grid:has(> :nth-child(16):last-child), .grid:has(> :nth-child(19):last-child), .grid:has(> :nth-child(22):last-child), .grid:has(> :nth-child(28):last-child), .grid:has(> :nth-child(31):last-child), .grid:has(> :nth-child(34):last-child), .grid:has(> :nth-child(40):last-child), .grid:has(> :nth-child(43):last-child), .grid:has(> :nth-child(46):last-child), .grid:has(> :nth-child(52):last-child), .grid:has(> :nth-child(55):last-child), .grid:has(> :nth-child(58):last-child), .grid:has(> :nth-child(64):last-child), .grid:has(> :nth-child(67):last-child), .grid:has(> :nth-child(70):last-child), .grid:has(> :nth-child(76):last-child), .grid:has(> :nth-child(79):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (min-width: 56.01rem) { .dgrid:has(> :nth-child(4):last-child), .dgrid:has(> :nth-child(7):last-child), .dgrid:has(> :nth-child(10):last-child), .dgrid:has(> :nth-child(16):last-child), .dgrid:has(> :nth-child(19):last-child), .dgrid:has(> :nth-child(22):last-child), .dgrid:has(> :nth-child(28):last-child), .dgrid:has(> :nth-child(31):last-child), .dgrid:has(> :nth-child(34):last-child), .dgrid:has(> :nth-child(40):last-child), .dgrid:has(> :nth-child(43):last-child), .dgrid:has(> :nth-child(46):last-child), .dgrid:has(> :nth-child(52):last-child), .dgrid:has(> :nth-child(55):last-child), .dgrid:has(> :nth-child(58):last-child), .dgrid:has(> :nth-child(64):last-child), .dgrid:has(> :nth-child(67):last-child), .dgrid:has(> :nth-child(70):last-child), .dgrid:has(> :nth-child(76):last-child), .dgrid:has(> :nth-child(79):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (min-width: 40.01rem) and (max-width: 56rem) { .grid > :nth-child(odd):last-child, .dgrid > :nth-child(odd):last-child { grid-column: 1 / -1; } }
+@media (min-width: 56.01rem) { .grid.grid.grid[data-cols="3"], .dgrid.dgrid.dgrid[data-cols="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); } .grid.grid.grid[data-cols="4"], .dgrid.dgrid.dgrid[data-cols="4"] { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 40.01rem) and (max-width: 56rem) { .dgrid > .span2 { grid-column: 1 / -1; } }
 
 .gtk { margin: 0 0 1.8rem; } .gtk h2 { font-size: 1.05rem; margin: 0 0 0.4rem; } .gtk .prose p { font-size: 0.9rem; color: var(--slate); margin: 0 0 0.5rem; max-width: 52rem; }
 .hero a.alt-link { color: var(--cream); text-decoration: underline; }
@@ -561,10 +568,12 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .lobar button { position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--deep); font-size: 1.3rem; line-height: 1; cursor: pointer; padding: 0.2rem 0.5rem; }
 .lob { display: inline-flex; flex-direction: column; align-items: flex-start; vertical-align: top; margin: 0 0.6rem 0.3rem 0; }
 .lob + .refundnote { display: inline-block; vertical-align: top; margin-top: 0.85rem; }
+@media (max-width: 40rem) { .refundnote { margin-left: 0 !important; } }
 .lo { display: block; margin: 0.4rem 0 0 0.3rem; font-size: 0.88rem; line-height: 1.3; }
 .dcp { font-size: 1rem; } .dcp s { opacity: 0.65; font-size: 0.88em; margin-right: 0.15rem; }
 .lo s { opacity: 0.7; } .lo b { font-weight: 800; }
-@media (max-width: 640px) { .lobar { font-size: 0.82rem; text-align: left; } }
+.lobar .lo-s { display: none; }
+@media (max-width: 640px) { .lobar { font-size: 0.82rem; text-align: left; } .lobar .lo-l { display: none; } .lobar .lo-s { display: inline; } }
 
 .tcard { margin: 0 0 1.6rem; max-width: 52rem; gap: 1rem; min-height: 0; flex-direction: row; align-items: flex-start; }
 .tcard .tc-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.5rem; }
@@ -629,7 +638,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 </head>
 <body>
 <!--lo-->
-<div class="lobar" id="lobar"><span>New here: the first 10 buyers get half price. Code FIRST10 is applied when you click Buy.</span> <a href="/all/?paid">See paid skills</a><button type="button" id="lobarx" aria-label="Close this message">&times;</button></div><script>(function(){var b=document.getElementById("lobar");try{if(localStorage.getItem("lobar")==="1"){b.remove();return}}catch(e){}document.getElementById("lobarx").onclick=function(){b.remove();try{localStorage.setItem("lobar","1")}catch(e){}}})()</script>
+<div class="lobar" id="lobar"><span class="lo-l">New here: the first 10 buyers get half price. Code FIRST10 is applied when you click Buy.</span><span class="lo-s">First 10 buyers get half price.</span> <a href="/all/?paid">See paid skills</a><button type="button" id="lobarx" aria-label="Close this message">&times;</button></div><script>(function(){var b=document.getElementById("lobar");try{if(localStorage.getItem("lobar")==="1"){b.remove();return}}catch(e){}document.getElementById("lobarx").onclick=function(){b.remove();try{localStorage.setItem("lobar","1")}catch(e){}}})()</script>
 <!--/lo-->
 <header class="hero">
   <div class="wrap">
@@ -649,50 +658,50 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 <section><h2>Free skills</h2><p class="sub">Free and MIT-licensed. Download them together on Gumroad or take them from GitHub.</p><div class="grid"><a class="dc" href="/skills/ai-search-readiness-check/" data-id="ai-search-readiness-check" data-role="marketers-and-agencies" data-price="free" data-type="single" data-s="ai search readiness check can chatgpt, perplexity and google read a website? a score out of 100 from 8 checks, the evidence and the fixes in order. marketers and agencies marketers-and-agencies free skill a website url. a 0 to 100 score from 8 checks on whether ai search tools can read the site, the evidence for each check, and a fix list in order. audit and fix"><span class="dc-top"><span class="dc-cat">Marketing, sales and writing</span><span class="dc-free">Free</span></span><h3>AI Search Readiness Check</h3><p>Can ChatGPT, Perplexity and Google read a website? A score out of 100 from 8 checks, the evidence and the fixes in order.</p><span class="dc-foot"><b>Free</b><span class="go">See details</span></span></a><a class="dc" href="/skills/search-intent-page-brief/" data-id="search-intent-page-brief" data-role="marketers-and-agencies" data-price="free" data-type="single" data-s="search intent page brief give it a keyword and the pages that rank. get the search intent, a coverage table, the gaps and an outline. free, mit-licensed. marketers and agencies marketers-and-agencies free skill a target keyword and the three to five pages that rank for it (urls, or pasted headings). it records each page&#x27;s structure, classifies the search intent from what ranks, builds a coverage table with counts, names the gaps as its own judgement, and drafts an outline, questions to answer and a meta description. plan content research"><span class="dc-top"><span class="dc-cat">Marketing, sales and writing</span><span class="dc-free">Free</span></span><h3>Search Intent Page Brief</h3><p>Give it a keyword and the pages that rank. Get the search intent, a coverage table, the gaps and an outline. Free, MIT-licensed.</p><span class="dc-foot"><b>Free</b><span class="go">See details</span></span></a></div></section>
 <section><h2>Free prompts</h2><p class="sub">Paste into ChatGPT, Claude, Gemini or any chatbot. No install.</p><ul class="links"><li><a href="/prompts/ai-search-readiness-check/">AI search readiness check prompt for any chatbot</a></li><li><a href="/prompts/search-intent-page-brief/">Search intent content brief prompt for any chatbot</a></li></ul></section>
 <section><h2>Guides</h2><p class="sub">Short how-tos you can do by hand, without any skill.</p><ul class="links"><li><a href="/guides/how-to-brief-a-page-from-what-already-ranks-for-your-keyword/">How do I brief a page from what already ranks for my keyword?</a></li><li><a href="/guides/write-a-google-business-profile-description-and-posts/">How do I write a Google Business Profile description and posts?</a></li><li><a href="/guides/write-a-service-page-for-a-local-business/">How do I write a service page for a local business?</a></li><li><a href="/guides/write-ad-copy-variants-you-can-test/">How to write ad copy variants you can actually test</a></li></ul></section>
-<section><h2>Arriving soon</h2><p class="sub">Not for sale yet. Dates are targets and prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon" data-id="landing-page-copy-rewrite" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="landing page copy rewrite a sharper first screen for a landing page, built only from facts on the page, with every unsupported claim flagged. marketers and agencies marketers-and-agencies single skill write copy">
-  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 5 Oct</span><span class="cc">Marketers and agencies</span></div><div class="body">
+<section><h2>Arriving soon</h2><p class="sub">Not for sale yet. Prices are as planned. Follow below to see when they land.</p><div class="grid"><div class="card soon" data-id="landing-page-copy-rewrite" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="landing page copy rewrite a sharper first screen for a landing page, built only from facts on the page, with every unsupported claim flagged. marketers and agencies marketers-and-agencies single skill write copy">
+  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
     <h3>Landing Page Copy Rewrite</h3>
     <p>A sharper first screen for a landing page, built only from facts on the page, with every unsupported claim flagged.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/landing-page-copy-rewrite">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="local-business-fix" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="local business fix name, address, phone and hours compared across a local business site, and localbusiness structured data whose values are checked against the site text. marketers and agencies marketers-and-agencies single skill audit and fix">
-  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 5 Oct</span><span class="cc">Marketers and agencies</span></div><div class="body">
+  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
     <h3>Local Business Fix</h3>
     <p>Name, address, phone and hours compared across a local business site, and LocalBusiness structured data whose values are checked against the site text.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/local-business-fix">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="page-fix-sheet" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="page fix sheet one page in: pass, warn or fail on 9 on-page seo checks, and a new title and meta description built from the page&#x27;s own facts, counted to fit. marketers and agencies marketers-and-agencies single skill audit and fix write copy">
-  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 5 Oct</span><span class="cc">Marketers and agencies</span></div><div class="body">
+  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
     <h3>Page Fix Sheet</h3>
     <p>One page in: pass, warn or fail on 9 on-page SEO checks, and a new title and meta description built from the page&#x27;s own facts, counted to fit.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/page-fix-sheet">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="ad-copy-variant-grid" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="ad copy variant grid give it your offer and audience. get 15 google headlines and 4 descriptions, or meta variants, one angle per row, every length counted by a script. marketers and agencies marketers-and-agencies single skill write copy">
-  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 6 Oct</span><span class="cc">Marketers and agencies</span></div><div class="body">
+  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
     <h3>Ad Copy Variant Grid</h3>
     <p>Give it your offer and audience. Get 15 Google headlines and 4 descriptions, or Meta variants, one angle per row, every length counted by a script.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/ad-copy-variant-grid">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="client-site-fix-kit" data-role="marketers-and-agencies" data-price="paid" data-type="pack" data-s="client site fix kit five tested fixes for client websites, as prompts and agent skills: on-page seo, local business details and landing page copy, plus a competitor gap brief and an article refresh that are only in the kit. marketers and agencies marketers-and-agencies pack ">
-  <div class="chead" style="--h:12"><span class="ck pack">Pack</span><span class="ck soonk">Arriving 6 Oct</span><span class="cc">Marketers and agencies</span></div><div class="body">
+  <div class="chead" style="--h:12"><span class="ck pack">Pack</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
     <h3>Client Site Fix Kit</h3>
     <p>Five tested fixes for client websites, as prompts and Agent Skills: on-page SEO, local business details and landing page copy, plus a competitor gap brief and an article refresh that are only in the kit.</p>
     <div class="foot"><span class="price">$49</span><a class="go" href="/packs/client-site-fix-kit/">See what is inside</a> <a class="go" href="#notify" data-go="follow/client-site-fix-kit">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="google-business-profile-kit" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="google business profile kit give it a local business&#x27;s facts. get a profile description within the limit, services, 10 posts, q&amp;a and honest review requests. marketers and agencies marketers-and-agencies single skill write copy local seo">
-  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 8 Oct</span><span class="cc">Marketers and agencies</span></div><div class="body">
+  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
     <h3>Google Business Profile Kit</h3>
     <p>Give it a local business&#x27;s facts. Get a profile description within the limit, services, 10 posts, Q&amp;A and honest review requests.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/google-business-profile-kit">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="local-service-page-writer" data-role="marketers-and-agencies" data-price="paid" data-type="single" data-s="local service page writer give it a local business&#x27;s facts, a service and a place. get a full page with title, meta, faq and a structured data block, built only from your facts. marketers and agencies marketers-and-agencies single skill write copy local seo">
-  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Arriving 8 Oct</span><span class="cc">Marketers and agencies</span></div><div class="body">
+  <div class="chead" style="--h:12"><span class="ck ">Single skill</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
     <h3>Local Service Page Writer</h3>
     <p>Give it a local business&#x27;s facts, a service and a place. Get a full page with title, meta, FAQ and a structured data block, built only from your facts.</p>
     <div class="foot"><span class="price">$9</span><a class="go" href="#notify" data-go="follow/local-service-page-writer">Follow for release</a></div>
   </div>
 </div><div class="card soon" data-id="marketing-and-seo-pack" data-role="marketers-and-agencies" data-price="paid" data-type="pack" data-s="marketing and seo pack 6 tested skills for small agencies, freelancers and local businesses, one download. 54 usd if bought one by one. marketers and agencies marketers-and-agencies pack ">
-  <div class="chead" style="--h:12"><span class="ck pack">Pack</span><span class="ck soonk">Arriving 9 Oct</span><span class="cc">Marketers and agencies</span></div><div class="body">
+  <div class="chead" style="--h:12"><span class="ck pack">Pack</span><span class="ck soonk">Coming soon</span><span class="cc">Marketers and agencies</span></div><div class="body">
     <h3>Marketing and SEO Pack</h3>
     <p>6 tested skills for small agencies, freelancers and local businesses, one download. 54 USD if bought one by one.</p>
     <div class="foot"><span class="price">$29</span><a class="go" href="/packs/marketing-and-seo-pack/">See what is inside</a> <a class="go" href="#notify" data-go="follow/marketing-and-seo-pack">Follow for release</a></div>

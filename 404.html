@@ -112,6 +112,8 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .chead .ck.free { background: var(--lime); color: var(--pine); border-color: var(--lime); }
 .chead .ck.pack { background: var(--cream); color: var(--pine); border-color: var(--cream); }
 .chead .ck.soonk { border-style: dashed; }
+.card.soon .chead .cc { display: none; }
+.card.soon .chead { flex-wrap: wrap; }
 .chead .cc { margin-left: auto; opacity: 0.85; min-width: 0; text-align: right; line-height: 1.2; font-size: 0.68rem; }
 .chead .ck { white-space: nowrap; }
 .card > img.thumb { aspect-ratio: 16 / 9; border-bottom: 1px solid var(--rule); }
@@ -141,7 +143,7 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; position: relative; }
 .guidegroup { margin-bottom: 2.25rem; }
 pre code { background: none; padding: 0; overflow-wrap: normal; }
 .table { overflow-x: auto; margin: 0 0 1.2rem; }
-.swipe { display: none; font-size: 0.85rem; color: var(--mist); margin: -0.9rem 0 1.2rem; }
+.swipe { display: none; font-size: 0.85rem; color: var(--slate); margin: -0.9rem 0 1.2rem; }
 @media (max-width: 640px) { .swipe:not([hidden]) { display: block; } }
 table { border-collapse: collapse; width: 100%; background: #fff; font-size: 0.95rem; }
 th, td { border: 1px solid var(--rule); padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
@@ -244,9 +246,10 @@ footer.sitefoot h2 { margin: 0 0 0.6rem; font-size: 0.8rem; line-height: 1.2; le
 footer.sitefoot nav { display: block; }
 footer.sitefoot ul { list-style: none; margin: 0; padding: 0; }
 footer.sitefoot nav a { display: block; padding: 0.3rem 0; line-height: 1.4; }
+.freepg .dc-top .dc-cat { display: none; } .freepg .dc-top { justify-content: flex-start; }
 footer.sitefoot small { margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--sage); }
 @media (max-width: 56rem) { .fgrid { grid-template-columns: 1fr 1fr; } .fbrand { grid-column: 1 / -1; } }
-@media (max-width: 34rem) { .fgrid { grid-template-columns: 1fr; gap: 1.5rem; } footer.sitefoot nav a { padding: 0.75rem 0; } footer.sitefoot { padding-top: 2.25rem; } }
+@media (max-width: 34rem) { .fgrid { grid-template-columns: 1fr 1fr; gap: 1.5rem 1rem; } footer.sitefoot nav a { padding: 0.55rem 0; } footer.sitefoot { padding-top: 2.25rem; } }
 a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; }
 main a:focus-visible, main input:focus-visible, main select:focus-visible { outline-color: var(--pine); }
 [hidden] { display: none !important; }
@@ -312,6 +315,8 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
 .dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; min-height: 2.73rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.dc.dg h3 { -webkit-line-clamp: 4; }
+@media (min-width: 40.01rem) { .dc.dg h3 { min-height: 3.9rem; } }
 .dc-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 0.5rem; }
 .dc .go { background: none; padding: 0; border-radius: 0; font-weight: 700; color: var(--pine); font-size: 0.9rem; }
 .dc .go::after { content: " \2192"; }
@@ -371,6 +376,8 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 @media (min-width: 56.01rem) { .grid:has(> :nth-child(4):last-child), .grid:has(> :nth-child(7):last-child), .grid:has(> :nth-child(10):last-child), .grid:has(> :nth-child(16):last-child), .grid:has(> :nth-child(19):last-child), .grid:has(> :nth-child(22):last-child), .grid:has(> :nth-child(28):last-child), .grid:has(> :nth-child(31):last-child), .grid:has(> :nth-child(34):last-child), .grid:has(> :nth-child(40):last-child), .grid:has(> :nth-child(43):last-child), .grid:has(> :nth-child(46):last-child), .grid:has(> :nth-child(52):last-child), .grid:has(> :nth-child(55):last-child), .grid:has(> :nth-child(58):last-child), .grid:has(> :nth-child(64):last-child), .grid:has(> :nth-child(67):last-child), .grid:has(> :nth-child(70):last-child), .grid:has(> :nth-child(76):last-child), .grid:has(> :nth-child(79):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (min-width: 56.01rem) { .dgrid:has(> :nth-child(4):last-child), .dgrid:has(> :nth-child(7):last-child), .dgrid:has(> :nth-child(10):last-child), .dgrid:has(> :nth-child(16):last-child), .dgrid:has(> :nth-child(19):last-child), .dgrid:has(> :nth-child(22):last-child), .dgrid:has(> :nth-child(28):last-child), .dgrid:has(> :nth-child(31):last-child), .dgrid:has(> :nth-child(34):last-child), .dgrid:has(> :nth-child(40):last-child), .dgrid:has(> :nth-child(43):last-child), .dgrid:has(> :nth-child(46):last-child), .dgrid:has(> :nth-child(52):last-child), .dgrid:has(> :nth-child(55):last-child), .dgrid:has(> :nth-child(58):last-child), .dgrid:has(> :nth-child(64):last-child), .dgrid:has(> :nth-child(67):last-child), .dgrid:has(> :nth-child(70):last-child), .dgrid:has(> :nth-child(76):last-child), .dgrid:has(> :nth-child(79):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (min-width: 40.01rem) and (max-width: 56rem) { .grid > :nth-child(odd):last-child, .dgrid > :nth-child(odd):last-child { grid-column: 1 / -1; } }
+@media (min-width: 56.01rem) { .grid.grid.grid[data-cols="3"], .dgrid.dgrid.dgrid[data-cols="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); } .grid.grid.grid[data-cols="4"], .dgrid.dgrid.dgrid[data-cols="4"] { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 40.01rem) and (max-width: 56rem) { .dgrid > .span2 { grid-column: 1 / -1; } }
 
 .gtk { margin: 0 0 1.8rem; } .gtk h2 { font-size: 1.05rem; margin: 0 0 0.4rem; } .gtk .prose p { font-size: 0.9rem; color: var(--slate); margin: 0 0 0.5rem; max-width: 52rem; }
 .hero a.alt-link { color: var(--cream); text-decoration: underline; }
@@ -562,10 +569,12 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .lobar button { position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--deep); font-size: 1.3rem; line-height: 1; cursor: pointer; padding: 0.2rem 0.5rem; }
 .lob { display: inline-flex; flex-direction: column; align-items: flex-start; vertical-align: top; margin: 0 0.6rem 0.3rem 0; }
 .lob + .refundnote { display: inline-block; vertical-align: top; margin-top: 0.85rem; }
+@media (max-width: 40rem) { .refundnote { margin-left: 0 !important; } }
 .lo { display: block; margin: 0.4rem 0 0 0.3rem; font-size: 0.88rem; line-height: 1.3; }
 .dcp { font-size: 1rem; } .dcp s { opacity: 0.65; font-size: 0.88em; margin-right: 0.15rem; }
 .lo s { opacity: 0.7; } .lo b { font-weight: 800; }
-@media (max-width: 640px) { .lobar { font-size: 0.82rem; text-align: left; } }
+.lobar .lo-s { display: none; }
+@media (max-width: 640px) { .lobar { font-size: 0.82rem; text-align: left; } .lobar .lo-l { display: none; } .lobar .lo-s { display: inline; } }
 
 .tcard { margin: 0 0 1.6rem; max-width: 52rem; gap: 1rem; min-height: 0; flex-direction: row; align-items: flex-start; }
 .tcard .tc-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.5rem; }
@@ -604,22 +613,22 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 </head>
 <body>
 <!--lo-->
-<div class="lobar" id="lobar"><span>New here: the first 10 buyers get half price. Code FIRST10 is applied when you click Buy.</span> <a href="/all/?paid">See paid skills</a><button type="button" id="lobarx" aria-label="Close this message">&times;</button></div><script>(function(){var b=document.getElementById("lobar");try{if(localStorage.getItem("lobar")==="1"){b.remove();return}}catch(e){}document.getElementById("lobarx").onclick=function(){b.remove();try{localStorage.setItem("lobar","1")}catch(e){}}})()</script>
+<div class="lobar" id="lobar"><span class="lo-l">New here: the first 10 buyers get half price. Code FIRST10 is applied when you click Buy.</span><span class="lo-s">First 10 buyers get half price.</span> <a href="/all/?paid">See paid skills</a><button type="button" id="lobarx" aria-label="Close this message">&times;</button></div><script>(function(){var b=document.getElementById("lobar");try{if(localStorage.getItem("lobar")==="1"){b.remove();return}}catch(e){}document.getElementById("lobarx").onclick=function(){b.remove();try{localStorage.setItem("lobar","1")}catch(e){}}})()</script>
 <!--/lo-->
 <header class="hero">
   <div class="wrap">
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
       <a class="name" href="/">PRO SKILL PACKS</a>
-      <nav aria-label="Main"><a href="/" aria-current="page">Home</a><a href="/categories/">Categories</a><a href="/free/">Free</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav>
+      <nav aria-label="Main"><a href="/">Home</a><a href="/categories/">Categories</a><a href="/free/">Free</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav>
     </div>
     
     <h1>Page not found</h1>
-    <p class="lead">That page does not exist, or it moved. Search the catalog, or pick a category.</p>
-    <form class="filters hero-filters" action="/" method="get" role="search"><label class="grow">Search<input name="q" type="search" aria-label="Search skills" placeholder="Search skills: chargeback, listing, proposal, SEO"></label><button class="btn btn-lime" type="submit">Search</button></form>
+    <p class="lead">That page does not exist, or it moved. Search the skills, or pick a category.</p>
+    <form class="filters hero-filters" action="/" method="get" role="search"><label class="grow">Search<input name="q" type="search" aria-label="Search skills" placeholder="Search skills"></label><button class="btn btn-lime" type="submit">Search</button></form>
   </div>
 </header>
-<main><div class="wrap"><section><h2>Browse by category</h2><div class="tiles"><a class="tile" href="/for/shopify/"><b>Shopify store owners</b><span>See the skills</span></a><a class="tile" href="/for/freelancers/"><b>Freelancers and consultants</b><span>See the skills</span></a><a class="tile" href="/for/short-term-rental-hosts/"><b>Short-term rental hosts</b><span>See the skills</span></a><a class="tile" href="/for/marketers-and-agencies/"><b>Marketers and agencies</b><span>See the skills</span></a><a class="tile" href="/for/developers/"><b>Developers</b><span>See the skills</span></a><a class="tile" href="/for/data-and-spreadsheets/"><b>Data and spreadsheets</b><span>See the skills</span></a><a class="tile" href="/for/careers/"><b>Job seekers and careers</b><span>See the skills</span></a><a class="tile" href="/for/sales-and-outreach/"><b>Sales and outreach</b><span>See the skills</span></a><a class="tile" href="/for/content-and-writing/"><b>Content and writing</b><span>See the skills</span></a><a class="tile" href="/for/finance-and-admin/"><b>Finance and small-business admin</b><span>See the skills</span></a><a class="tile" href="/for/customer-support/"><b>Customer support</b><span>See the skills</span></a></div></section><section><h2>Or start here</h2><ul class="links"><li><a href="/">All skills and packs</a></li><li><a href="/free/">Free skills</a></li><li><a href="/prompts/">Free prompts</a></li><li><a href="/guides/">Guides</a></li><li><a href="/faq/">Questions and answers</a></li></ul></section></div></main>
+<main class="dirhome"><div class="wrap"><section><h2>Browse by category</h2><div class="gtiles"><article class="gtile"><div class="gt-ico"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8a3 3 0 016 0"/></svg></div><h3><a href="/categories/#g-online-stores">Online stores</a></h3><p class="who">For people who run a Shopify store or rent out a place.</p><p class="gt-n">15 skills</p><ul class="gt-list"><li><a href="/skills/support-macro-writer/">Support Macro Writer</a></li><li><a href="/skills/listing-rewriter/">Listing Rewriter</a></li><li><a href="/skills/review-reply-drafter/">Review Reply Drafter</a></li></ul><a class="gt-all" href="/categories/#g-online-stores">See all 15</a></article><article class="gtile"><div class="gt-ico"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13 6l-2 12"/></svg></div><h3><a href="/categories/#g-developers-and-data">Developers and data</a></h3><p class="who">For people who write code or work in spreadsheets.</p><p class="gt-n">9 skills</p><ul class="gt-list"><li><a href="/skills/spreadsheet-formula-and-cleanup/">Spreadsheet Formula and Cleanup</a></li><li><a href="/skills/test-gap-finder/">Test Gap Finder</a></li><li><a href="/skills/csv-profile-and-sanity-check/">CSV Profile and Sanity Check</a></li></ul><a class="gt-all" href="/categories/#g-developers-and-data">See all 9</a></article><article class="gtile"><div class="gt-ico"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V6a2 2 0 012-2h2a2 2 0 012 2v2M3 13h18"/></svg></div><h3><a href="/categories/#g-work-and-careers">Work and careers</a></h3><p class="who">For anyone who has to write or say something hard at work, or is job hunting.</p><p class="gt-n">8 skills</p><ul class="gt-list"><li><a href="/skills/resume-bullet-rewriter/">Resume Bullet Rewriter</a></li><li><a href="/work/#resign-well">Resign well</a></li><li><a href="/skills/job-post-decoder/">Job Post Decoder</a></li></ul><a class="gt-all" href="/categories/#g-work-and-careers">See all 8</a></article><article class="gtile"><div class="gt-ico"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1-4L16 5l3 3L8 19l-4 1zM14 7l3 3"/></svg></div><h3><a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a></h3><p class="who">For people who check websites, write cold emails and edit drafts.</p><p class="gt-n">6 skills</p><ul class="gt-list"><li><a href="/skills/voice-matched-draft-editor/">Voice-Matched Draft Editor</a></li><li><a href="/skills/cold-email-from-a-website/">Cold Email from a Website</a></li><li><a href="/skills/search-intent-page-brief/">Search Intent Page Brief</a></li></ul><a class="gt-all" href="/categories/#g-marketing-sales-writing">See all 6</a></article><article class="gtile"><div class="gt-ico"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></div><h3><a href="/categories/#g-money-admin-support">Money, admin and support</a></h3><p class="who">For freelancers and small businesses with invoices, paperwork and customers to answer.</p><p class="gt-n">3 skills</p><ul class="gt-list"><li><a href="/skills/angry-customer-reply-check/">Angry Customer Reply Check</a></li><li><a href="/skills/invoice-checker/">Invoice Checker</a></li><li><a href="/skills/late-payment-chaser-uk/">Late Payment Chaser (UK)</a></li></ul><a class="gt-all" href="/categories/#g-money-admin-support">See all 3</a></article><article class="gtile"><div class="gt-ico"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg></div><h3><a href="/all/">All skills</a></h3><p class="who">See everything in one list, with search.</p><p class="gt-n">41 skills</p><ul class="gt-list"><li>Every skill, free and paid</li></ul><a class="gt-all" href="/all/">See all 41</a></article></div></section><section><h2>Or start here</h2><ul class="links"><li><a href="/all/">All skills</a></li><li><a href="/free/">Free skills</a></li><li><a href="/prompts/">Free prompts</a></li><li><a href="/guides/">Guides</a></li><li><a href="/faq/">Questions and answers</a></li></ul></section></div></main>
 <footer class="sitefoot">
   <div class="wrap">
     <div class="card fol" data-fol="foot"><p class="fol-t"><b>New free pages by email.</b> A few a month. Unsubscribe any time.</p><a class="btn btn-lime" data-nolo="1" data-go="follow/foot" href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=home&amp;utm_campaign=subscribe" rel="noopener">Follow</a><p class="fol-s">Handled by Gumroad. See our <a href="/privacy/">privacy page</a>.</p></div>
