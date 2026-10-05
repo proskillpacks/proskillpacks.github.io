@@ -356,7 +356,7 @@ main.dirhome { padding-top: var(--rh); padding-bottom: 0; }
 .dc-top > span:first-child { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .dc-free { flex: none; background: var(--lime); color: var(--pine); padding: 0.12rem 0.55rem; border-radius: 999px; }
 .dc h3 { margin: 0; font-size: 1.05rem; line-height: 1.3; font-weight: 800; text-wrap: pretty; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dc p { margin: 0; color: var(--slate); font-size: 0.93rem; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
 .dc.dg h3 { -webkit-line-clamp: 4; }
 .dc-foot { margin-top: auto; display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; padding-top: 0.5rem; }
 @supports (grid-template-rows: subgrid) { @media (min-width: 40.01rem) {   /* phones are one column: plain flex cards */
@@ -965,6 +965,7 @@ footer .card.fol .btn { padding: 0.5rem 1.1rem; }
 .methband a { font-weight: 700; color: var(--pine); }
 @media (max-width: 40rem) { .ogw { grid-template-columns: 1fr; gap: 0.1rem; } .ogw dd { margin-bottom: 0.45rem; } }
 
+@media (min-width: 56.01rem) { .allgrp .dgrid.dgrid.dgrid.dgrid.dgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 /* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
 :root { --tw: 46rem; }
 h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand, .v9small, .hsearch { max-width: var(--tw); }
@@ -1011,7 +1012,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-online-stores">Online stores</a> / Write image descriptions (alt text) for your products</p>
     <h1>Write image descriptions (alt text) for your products</h1>
-    <dl class="ogw"><dt>Who it is for</dt><dd>Shopify store owners whose images have no alt text.</dd><dt>What you give it</dt><dd>Your store address, or your product export file.</dd><dt>What you get back</dt><dd>Alt text written while looking at each photo, as an import file.</dd></dl><div class="buyb"><div class="cta"><a class="btn btn-lime" href="/prompts/shopify-alt-text-writer/">Copy the text for ChatGPT or any chatbot</a></div><p class="note-light alts"><a class="alt-link" href="https://proskillpacks.gumroad.com/l/free-shopify-skills?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=free-shopify-skills" data-go="buy/free-shopify-skills">Download free</a> &middot; <a class="alt-link" href="/go/repo/shopify-alt-text-writer/?from=skill" rel="noopener">View on GitHub</a></p><p class="ogline">You get a zip with a short guide and a text you paste into ChatGPT, Claude or any chatbot.</p><p class="note-light">Free. MIT licence: use it, change it, share it.</p></div>
+    <dl class="ogw"><dt>Who it is for</dt><dd>Shopify store owners whose images have no alt text.</dd><dt>What you give it</dt><dd>Your store address, or your product export file.</dd><dt>What you get back</dt><dd>Alt text written while looking at each photo, as a file you can import into Shopify.</dd></dl><div class="buyb"><div class="cta"><a class="btn btn-lime" href="/prompts/shopify-alt-text-writer/">Copy the text for ChatGPT or any chatbot</a></div><p class="note-light alts"><a class="alt-link" href="https://proskillpacks.gumroad.com/l/free-shopify-skills?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=free-shopify-skills" data-go="buy/free-shopify-skills">Download free</a> &middot; <a class="alt-link" href="/go/repo/shopify-alt-text-writer/?from=skill" rel="noopener">View on GitHub</a></p><p class="ogline">You get a zip with a short guide and a text you paste into ChatGPT, Claude or any chatbot.</p><p class="note-light">Free. MIT licence: use it, change it, share it.</p></div>
   </div>
 </header>
 <main class="prod pc"><div class="wrap">
