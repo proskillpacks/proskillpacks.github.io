@@ -634,6 +634,36 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .cs .try pre { overflow-x: auto; max-width: 100%; }
 @media (max-width: 640px) { .cs .learn { grid-template-columns: 1fr; } }
 
+.lpi { background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 1rem 1.1rem; max-width: 52rem; margin: 0 0 1rem; }
+.lpi .flds { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem 1rem; }
+.lpi label { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.88rem; font-weight: 700; color: var(--slate); }
+.lpi label small { font-weight: 400; }
+.lpi input, .lpi select { font: inherit; font-size: 1rem; padding: 0.6rem 0.8rem; border: 1px solid #b9c4bd; border-radius: 10px; background: #fff; color: var(--ink); width: 100%; min-width: 0; box-sizing: border-box; }
+.lpi .lpi-act { display: flex; flex-wrap: wrap; gap: 0.5rem 0.8rem; align-items: center; margin-top: 0.8rem; }
+.lpi button.btn, .lpi-out button.btn, .lpi-para button.btn { font: inherit; font-weight: 700; font-size: 1rem; cursor: pointer; border: 0; }
+.lpi .lpi-err { color: #9a1b1b; font-weight: 700; margin: 0.8rem 0 0; }
+.lpi-out { max-width: 52rem; }
+.lpi-out dl { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0; margin: 0 0 1rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
+.lpi-out dt, .lpi-out dd { margin: 0; padding: 0.6rem 1rem; border-top: 1px solid var(--rule); }
+.lpi-out dt:first-of-type, .lpi-out dt:first-of-type + dd { border-top: 0; }
+.lpi-out dd { font-weight: 700; text-align: right; white-space: nowrap; }
+.lpi-out dt small { display: block; font-weight: 400; color: var(--slate); }
+.lpi-out dt.big, .lpi-out dd.big { background: #eef7e0; font-size: 1.1rem; }
+.lpi-out ol.sums { background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 0.8rem 1rem 0.8rem 2.2rem; margin: 0 0 1rem; }
+.lpi-out ol.sums li { margin: 0.2rem 0; }
+.lpi-out .note { background: #fff8d6; border-radius: 10px; padding: 0.7rem 1rem; margin: 0 0 1rem; }
+.lpi-out .note p { margin: 0 0 0.4rem; }
+.lpi-para { background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 0.9rem 1rem; margin: 0 0 1rem; }
+.lpi-para p { margin: 0 0 0.7rem; }
+.lpi-quote { border-left: 4px solid var(--lime); padding: 0.1rem 0 0.1rem 0.9rem; margin: 0.6rem 0; color: var(--ink); }
+.fnd .flds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.fnd-count { max-width: 52rem; font-weight: 700; margin: 0.8rem 0; }
+.phl li[hidden] { display: none; }
+@media (max-width: 34rem) {
+  .lpi .flds, .fnd .flds { grid-template-columns: 1fr; }
+  .lpi-out dd { white-space: normal; }
+}
+
 .lobar { background: var(--lime); color: var(--deep); font-size: 0.9rem; line-height: 1.35; padding: 0.45rem 2.6rem 0.45rem 1rem; text-align: center; position: relative; }
 .lobar a { color: var(--deep); font-weight: 700; text-decoration: underline; margin-left: 0.4rem; white-space: nowrap; }
 .lobar button { position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--deep); font-size: 1.3rem; line-height: 1; cursor: pointer; padding: 0.2rem 0.5rem; }
@@ -799,7 +829,7 @@ If you would like to talk, call me on <span class="br">[PHONE]</span>.
 <section id="tools" class="aud-tools"><h2>What the free tool adds</h2><p class="sub">It is free. Start there if your customer is a UK business.</p><div class="wkit wpaid" id="late-payment-chaser-uk"><div class="wk-img wide"><img class="pvimg" src="/assets/demos/late-payment-chaser-uk-last.png" width="1200" height="675" loading="lazy" alt="The finished result of Late Payment Chaser (UK) on a real example: an unpaid invoice goes in, the figures and three emails come out"></div><div class="wk-txt"><span class="free">Free</span><h3>Late Payment Chaser (UK)</h3><p><b>What you give it:</b> The unpaid amount, the invoice date, and the due date if you agreed one.</p><p><b>What you get:</b> What you can claim under UK late-payment law, worked out with a script and shown with official sources, and three reminder emails to send. UK business-to-business debts only. Not legal advice.</p><p class="sub" style="margin:.2rem 0 .7rem">Free. It also works as a paste-in text in a chatbot; there the assistant does the arithmetic, so check its working.</p><div class="cta"><a class="btn btn-lime" href="/skills/late-payment-chaser-uk/">Open the free Late Payment Chaser (UK)</a></div><p class="sub" style="margin:.6rem 0 0"><a href="/prompts/late-payment-chaser-uk/">Or paste the free text into any chatbot</a></p></div></div></section>
 <section id="faq"><h2>Questions people ask</h2><div class="prose"><h3>When should I send the first reminder?</h3><p>A day or two after the due date is common. No rule stops you from sending it sooner, but a friendly note is enough to start.</p><h3>Can I charge interest on a late invoice?</h3><p>In the UK, GOV.UK says you can claim interest and debt recovery costs if another business is late paying for goods or a service. Check whether your contract sets its own rate. Not legal advice.</p><h3>How much is the fixed sum?</h3><p>GOV.UK lists £40 for debts up to £999.99, £70 for £1,000 to £9,999.99 and £100 for £10,000 or more. You can charge it once for each payment.</p><h3>When is an invoice late if we agreed no date?</h3><p>GOV.UK says the payment is late 30 days after the customer gets the invoice, or after you deliver the goods or provide the service, whichever is later.</p><h3>Does this apply to a private customer?</h3><p>The Act covers business-to-business debts. If your customer is a private person, use emails 1, 2 and 4, with no interest and no mention of the Act.</p></div></section>
 <section><h2>More</h2><div class="prose"><ul class="links"><li><a href="/freelance/polite-payment-reminder-email/">Polite payment reminder email: five you can copy</a></li><li><a href="/freelance/how-to-check-an-invoice-is-correct/">How to check an invoice is correct: a checklist</a></li><li><a href="/freelance/">All the freelancer pages</a></li></ul></div></section>
-</div></main>
+<section id="more-like-this"><h2>More like this</h2><div class="prose"><ul class="links"><li><a href="/freelance/late-payment-interest-calculator/">UK late payment interest calculator: what you can charge on an overdue invoice</a></li></ul></div></section></div></main>
 
 <script>(function(){var T=function(){if(window.pspTrack)window.pspTrack('copy','freelance-late-payment-reminder-email')};function cp(btn,text,label){if(!navigator.clipboard)return;navigator.clipboard.writeText(text).then(function(){btn.textContent='Copied';setTimeout(function(){btn.textContent=label},1500)})}document.querySelectorAll('.phl li').forEach(function(li){if(!navigator.clipboard)return;var b=document.createElement('button');b.type='button';b.className='copybtn';b.textContent='Copy';b.setAttribute('aria-label','Copy this line');b.onclick=function(){T();cp(b,li.getAttribute('data-t'),'Copy')};li.appendChild(b)});var a=document.getElementById('copyall');if(a){if(!navigator.clipboard){a.style.display='none'}else{a.onclick=function(){T();var t=[];document.querySelectorAll('.phl li').forEach(function(li){t.push(li.getAttribute('data-t'))});cp(a,t.join('\n'),a.getAttribute('data-l'))}}}})();</script>
 <footer class="sitefoot">

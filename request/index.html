@@ -571,6 +571,36 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .cs .try pre { overflow-x: auto; max-width: 100%; }
 @media (max-width: 640px) { .cs .learn { grid-template-columns: 1fr; } }
 
+.lpi { background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 1rem 1.1rem; max-width: 52rem; margin: 0 0 1rem; }
+.lpi .flds { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem 1rem; }
+.lpi label { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.88rem; font-weight: 700; color: var(--slate); }
+.lpi label small { font-weight: 400; }
+.lpi input, .lpi select { font: inherit; font-size: 1rem; padding: 0.6rem 0.8rem; border: 1px solid #b9c4bd; border-radius: 10px; background: #fff; color: var(--ink); width: 100%; min-width: 0; box-sizing: border-box; }
+.lpi .lpi-act { display: flex; flex-wrap: wrap; gap: 0.5rem 0.8rem; align-items: center; margin-top: 0.8rem; }
+.lpi button.btn, .lpi-out button.btn, .lpi-para button.btn { font: inherit; font-weight: 700; font-size: 1rem; cursor: pointer; border: 0; }
+.lpi .lpi-err { color: #9a1b1b; font-weight: 700; margin: 0.8rem 0 0; }
+.lpi-out { max-width: 52rem; }
+.lpi-out dl { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0; margin: 0 0 1rem; background: #fff; border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
+.lpi-out dt, .lpi-out dd { margin: 0; padding: 0.6rem 1rem; border-top: 1px solid var(--rule); }
+.lpi-out dt:first-of-type, .lpi-out dt:first-of-type + dd { border-top: 0; }
+.lpi-out dd { font-weight: 700; text-align: right; white-space: nowrap; }
+.lpi-out dt small { display: block; font-weight: 400; color: var(--slate); }
+.lpi-out dt.big, .lpi-out dd.big { background: #eef7e0; font-size: 1.1rem; }
+.lpi-out ol.sums { background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 0.8rem 1rem 0.8rem 2.2rem; margin: 0 0 1rem; }
+.lpi-out ol.sums li { margin: 0.2rem 0; }
+.lpi-out .note { background: #fff8d6; border-radius: 10px; padding: 0.7rem 1rem; margin: 0 0 1rem; }
+.lpi-out .note p { margin: 0 0 0.4rem; }
+.lpi-para { background: #fff; border: 1px solid var(--rule); border-radius: 14px; padding: 0.9rem 1rem; margin: 0 0 1rem; }
+.lpi-para p { margin: 0 0 0.7rem; }
+.lpi-quote { border-left: 4px solid var(--lime); padding: 0.1rem 0 0.1rem 0.9rem; margin: 0.6rem 0; color: var(--ink); }
+.fnd .flds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.fnd-count { max-width: 52rem; font-weight: 700; margin: 0.8rem 0; }
+.phl li[hidden] { display: none; }
+@media (max-width: 34rem) {
+  .lpi .flds, .fnd .flds { grid-template-columns: 1fr; }
+  .lpi-out dd { white-space: normal; }
+}
+
 .lobar { background: var(--lime); color: var(--deep); font-size: 0.9rem; line-height: 1.35; padding: 0.45rem 2.6rem 0.45rem 1rem; text-align: center; position: relative; }
 .lobar a { color: var(--deep); font-weight: 700; text-decoration: underline; margin-left: 0.4rem; white-space: nowrap; }
 .lobar button { position: absolute; right: 0.5rem; top: 50%; transform: translateY(-50%); background: none; border: 0; color: var(--deep); font-size: 1.3rem; line-height: 1; cursor: pointer; padding: 0.2rem 0.5rem; }
