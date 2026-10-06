@@ -1075,6 +1075,24 @@ details.evb2[open] > summary { margin-bottom: 0.7rem; }
 .card p, .card h3 { -webkit-line-clamp: unset; display: block; }
 .card h3 { min-height: 0; }
 
+.hero.pc .outc { font-size: 1.18rem; line-height: 1.45; margin: 0.4rem 0 0; color: var(--cream); font-weight: 600; max-width: var(--pcw); }
+@media (min-width: 56rem) { .hero.pc .wrap > .outc { grid-column: 1; max-width: none; }
+  .hero.pc .wrap:has(> .outc) { grid-template-rows: auto auto auto auto auto 1fr; }
+  .hero.pc .wrap:has(> .outc) > .buyb { grid-row: 3 / 7; } }
+.hero.pc .buyb .lo, .hero.pc .buyb .ogupd { font-weight: 700; }
+.hero.pc .buyb .pcsure { margin: 0.9rem 0 0; font-size: 0.93rem; line-height: 1.45; color: var(--cream); }
+.hero.pc .buyb .pcsure b { color: #fff; }
+.hero.pc .buyb .pch { margin: 1rem 0 0.3rem; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase; color: var(--cream); }
+.hero.pc .buyb ol.pcsteps { margin: 0; padding-left: 1.2rem; font-size: 0.93rem; line-height: 1.45; color: var(--cream); }
+.hero.pc .buyb ol.pcsteps li { margin: 0 0 0.25rem; }
+.hero.pc .buyb .pcprice { margin: 0.9rem 0 0; font-size: 0.88rem; line-height: 1.45; color: var(--cream); opacity: 0.92; }
+.pc .ba2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 0.8rem 0 0.6rem; }
+.pc .ba2 > div { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 0.3rem 1.1rem 0.5rem; }
+.pc .ba2 h3 { font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--sage); margin: 0.9rem 0 0.3rem; }
+.pc .ba2 p, .pc .ba2 li { font-size: 0.95rem; }
+.pc .ba2 ul { padding-left: 1.1rem; }
+@media (max-width: 40rem) { .pc .ba2 { grid-template-columns: 1fr; } }
+
 @media (min-width: 56.01rem) { .allgrp .dgrid.dgrid.dgrid.dgrid.dgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 /* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
 :root { --tw: 46rem; }
@@ -1125,11 +1143,12 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a> / Follow-up email and CRM note from your call notes</p>
     <h1>Follow-up email and CRM note from your call notes</h1>
-    <dl class="ogw"><dt>Who it is for</dt><dd>Salespeople who write their own follow-ups after calls.</dd><dt>What you give it</dt><dd>Your call notes.</dd><dt>What you get back</dt><dd>The follow-up email, a 4-line CRM note and a list of what is still unknown. Only what was said and agreed.</dd></dl><div class="buyb"><div class="cta"><span class="lob"><a class="btn btn-lime" href="https://proskillpacks.gumroad.com/l/after-call-follow-up/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=after-call-follow-up" data-go="buy/after-call-follow-up">Get it, $19</a><span class="lo"><s>$19</s> <b>$9.50</b> for the first 10 buyers. 30-day refund.</span></span></div><p class="ogline ogupd">Free updates: when we improve it, you get the new version.</p><p class="ogline">You get a zip with a short guide and a text you paste into ChatGPT, Claude or any chatbot.</p></div>
+    <p class="outc">A follow-up email and a CRM note written only from your call notes, with what is still unknown listed and what was only half-agreed left out.</p>
+    <dl class="ogw"><dt>Who it is for</dt><dd>Salespeople who write their own follow-ups after calls.</dd><dt>What you give it</dt><dd>Your call notes.</dd><dt>What you get back</dt><dd>The follow-up email, a 4-line CRM note and a list of what is still unknown. Only what was said and agreed.</dd></dl><div class="buyb"><div class="cta"><span class="lob"><a class="btn btn-lime" href="https://proskillpacks.gumroad.com/l/after-call-follow-up/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=after-call-follow-up" data-go="buy/after-call-follow-up">Get it, $19</a><span class="lo"><s>$19</s> <b>$9.50</b> for the first 10 buyers. 30-day refund.</span></span></div><p class="ogline ogupd">Free updates: when we improve it, you get the new version.</p><p class="pcsure"><b>Will it make things up?</b> It writes only from your notes. Unsure details are marked for you to confirm, not guessed. Tested on 2 call notes we wrote ourselves, not yet on a real seller's notes.</p><p class="pcsure"><b>Why not just ask ChatGPT?</b> On our harder notes, ChatGPT's free model offered a pilot nobody agreed, promised a case study and added a currency the notes never gave. A call recorder works from the recording. This works only from the notes you give it.</p><p class="pch">How to use it in 3 steps</p><ol class="pcsteps"><li>Write your call notes the way you normally do.</li><li>Paste them in with the text from the zip.</li><li>Read the email and the check before sending list, then send.</li></ol><p class="pcprice">$19 once, no monthly fee. Fathom's free plan records and summarises calls (their pricing page). This writes the email and the CRM note from your own notes, and lists what is still unknown.</p><p class="ogline">You get a zip with a short guide and a text you paste into ChatGPT, Claude or any chatbot.</p></div>
   </div>
 </header>
 <main class="prod pc"><div class="wrap">
-<section><h2>Before and after</h2><div class="prose"><p>Case B is our harder test, notes we wrote to look like real ones: rambling, a half-agreed pilot (&quot;maybe, let me think&quot;), a Thursday call that &quot;might work&quot;, a competitor mention, an unsure budget (&quot;ish 5k a year? I don&#x27;t know&quot;) and a case study the seller was not sure was approved.</p>
+<section><h2>Before and after</h2><div class="prose"><p>Our harder test notes: a half-agreed pilot, an unsure budget (&quot;5k a year? I don&#x27;t know&quot;) and a case study the seller was not sure was approved.</p>
 <p><strong>Before: ChatGPT&#x27;s free model, asked only &quot;write a follow-up email and a CRM note from these call notes&quot;:</strong></p>
 <blockquote><p>&quot;As discussed, we can support Fenwick &amp; Cole with: ... A potential pilot for the finance team ... Reporting to help demonstrate progress ahead of your upcoming compliance audit ... I&#x27;ll also check with our marketing team regarding the logistics-sector case study and send it over once I&#x27;ve confirmed it is approved for sharing.&quot;</p>
 <p>CRM note: &quot;Lorraine mentioned approximately <strong>£5,000 per year</strong>&quot;.</p></blockquote>
