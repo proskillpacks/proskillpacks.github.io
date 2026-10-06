@@ -281,7 +281,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 [hidden] { display: none !important; }
 @media (max-width: 40rem) {
   .brand nav a, footer a { padding: 0.7rem 0.25rem; }
-  .brand nav { margin-left: 0; width: 100%; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; gap: 0.2rem 1rem; scrollbar-width: none; }
+  .brand nav { margin-left: 0; width: 100%; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; gap: 0.2rem 0.85rem; scrollbar-width: none; font-size: 0.92rem; }
   .brand nav::-webkit-scrollbar { display: none; }
   .chips a { padding: 0.65rem 1rem; }
 }
@@ -303,6 +303,17 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   .hero-filters label:not(.grow) { width: calc(50% - 0.4rem); }
   .hero-filters label:not(.grow) select { min-width: 0; width: 100%; }
 }
+.frow { display: inline-flex; gap: 0.4rem; margin: 0 0.8rem 0 0; }
+.allbtn { margin: 1.1rem 0 0; }
+.heroall { margin: -0.6rem 0 1.2rem; font-size: 0.92rem; }
+.heroall a { color: var(--lime); font-weight: 700; }
+.getit .dgrid { margin-top: 0.9rem; }
+.fstart { margin: 1.1rem 0 0; padding: 0.8rem 1rem; background: #f4f7f3; border-radius: 12px; }
+.fstart h3 { margin: 0 0 0.4rem; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--moss); }
+.fstart ul { list-style: none; margin: 0; padding: 0; columns: 2 20rem; column-gap: 2rem; }
+.fstart li { margin: 0 0 0.3rem; break-inside: avoid; font-size: 0.9rem; line-height: 1.4; color: var(--slate); }
+.fstart a { color: var(--pine); font-weight: 600; }
+.fstart .fs-a { color: var(--ink); }
 .allline { margin: 1rem 0 0; color: var(--slate); }
 .allline a { color: var(--pine); font-weight: 700; }
 .jump { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.25rem; }
@@ -1102,7 +1113,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
       <a class="name" href="/">PRO SKILL PACKS</a>
-      <nav aria-label="Main"><a href="/free/">Free</a><a href="/how-we-test/">Why trust us</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
+      <nav aria-label="Main"><a href="/all/">All jobs</a><a href="/free/">Free</a><a href="/how-we-test/">Trust</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/prompts/">Prompts</a></p>
     <h1>Cold email checker prompt for ChatGPT, Claude or Gemini</h1>
@@ -1138,7 +1149,7 @@ Output: Verdict (Send as is, Send after fixes, or Do not send, with the main rea
 <p><strong>After (workflow output, from a real test run):</strong> Test run on a draft we wrote with common flaws, against text from a real public software homepage. Verdict, unedited: &quot;Do not send. The email claims results you can&#x27;t prove, says the prospect launched something last week when their page doesn&#x27;t say so, and makes four asks.&quot; It marked the launch claim Unsupported, the results claim Needs proof, flagged &quot;Re:&quot; on a first message, listed the missing postal address, opt-out and ad disclosure, and returned a tightened version with [CONFIRM] markers.</p></blockquote></div></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It checks claims against the text you give it. Without the page text it marks them &quot;not checked&quot;.</li><li>The legal list comes from one US guide and is not legal advice. It does not say whether a law applies to you. Rules in other countries differ.</li><li>It does not find addresses, check deliverability or send anything.</li><li>It cannot know whether your proof is true. You confirm it.</li></ul></div></section>
 <section><h2>The same job as an installable workflow</h2><div class="prose"><p>Check a cold email for claims you can&#x27;t back up is also a workflow you install once and call in plain words, so you do not paste the prompt each time. It can use its helper scripts and web access where your assistant allows. <a href="/skills/cold-email-checker/">See the workflow page</a>, or read <a href="/guides/how-to-install-agent-skills/">how to install workflows</a>.</p></div></section>
-<section><h2>Related paid workflows</h2><ul class="links"><li><a href="/skills/after-call-follow-up/">After-Call Follow-Up</a> ($19): Turn your sales call notes into the follow-up you would actually send.</li><li><a href="/skills/cold-email-from-a-website/">Write a cold email from a prospect&#x27;s website</a> ($9): A prospect&#x27;s website in, three emails built on what is on their site.</li></ul></section>
+<section><h2>Related paid workflows</h2><ul class="links"><li><a href="/skills/follow-up-ladder/">Follow up a lead that went quiet</a> ($9): A stalled lead&#x27;s history in, four follow-ups with falling pressure.</li><li><a href="/skills/after-call-follow-up/">Follow-up email and CRM note from your call notes</a> ($19): Turn your sales call notes into the follow-up you would actually send.</li><li><a href="/skills/cold-email-from-a-website/">Write a cold email from a prospect&#x27;s website</a> ($9): A prospect&#x27;s website in, three emails built on what is on their site.</li></ul></section>
 </div></main>
 <script>
 document.querySelectorAll('.prose pre').forEach(function (pre) {

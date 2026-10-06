@@ -2,8 +2,31 @@
  "generated": "2026-10-06",
  "products": [
   {
+   "id": "client-winning-pack",
+   "title": "Win a client job, from brief to scope",
+   "kind": "Pack",
+   "type": "pack",
+   "category": "freelancers",
+   "category_name": "Freelancers and consultants",
+   "price_usd": 19,
+   "price_label": "$19",
+   "free": false,
+   "url": "/packs/client-winning-pack/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/client-winning-pack",
+   "summary": "A client brief in, a proposal, a compliance check, a scope of work and a call brief out. Tested on real public tenders.",
+   "give": "",
+   "get": "",
+   "jobs": [],
+   "tags": [],
+   "tested": "The four prompts were each tested once, pasted into Claude Sonnet with no tools, on real public data: brief-to-proposal 8.5, proposal-compliance-check 8, scope-of-work-builder 8 and discovery-call-brief 8.5 out of 10. They have not been tested in ChatGPT or Gemini.",
+   "includes": [
+    "Write a scope of work before you start",
+    "Prepare for a first call from the prospect's website"
+   ]
+  },
+  {
    "id": "guest-review-reply",
-   "title": "Guest Review Reply: calm public replies to bad reviews",
+   "title": "Reply to a bad guest review without making it worse",
    "kind": "Single skill",
    "type": "single",
    "category": "short-term-rental-hosts",
@@ -25,7 +48,7 @@
   },
   {
    "id": "recruiter-bd-brief",
-   "title": "Recruiter BD Brief",
+   "title": "Company brief and first email for recruiters",
    "kind": "Single skill",
    "type": "single",
    "category": "careers",
@@ -47,26 +70,26 @@
    "includes": []
   },
   {
-   "id": "after-call-follow-up",
-   "title": "After-Call Follow-Up",
+   "id": "quote-and-estimate-builder",
+   "title": "Write a quote from your own prices",
    "kind": "Single skill",
    "type": "single",
    "category": "sales-and-outreach",
    "category_name": "Sales and outreach",
-   "price_usd": 19,
-   "price_label": "$19",
+   "price_usd": 9,
+   "price_label": "$9",
    "free": false,
-   "url": "/skills/after-call-follow-up/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/after-call-follow-up",
-   "summary": "Turn your sales call notes into the follow-up you would actually send.",
-   "give": "Paste your notes from a sales call.",
-   "get": "A follow-up email written the way you would send it, a 4-line CRM note and a short list of what is still unknown. The email says only what was said and agreed.",
+   "url": "/skills/quote-and-estimate-builder/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/quote-and-estimate-builder",
+   "summary": "A job and your rates in, an itemised quote with exact totals.",
+   "give": "A job and your own rate card.",
+   "get": "An itemised quote with exact totals from a script, and anything your rate card does not price is marked PRICE NEEDED.",
    "jobs": [
-    "reach out",
+    "write quotes",
     "client work"
    ],
    "tags": [],
-   "tested": "2 call notes we wrote ourselves (one clean, one rambling with a half-agreed pilot, a competitor and an unsure budget), run on Claude Sonnet as a skill and on ChatGPT's free model (gpt-5.6-luna) as a paste-in prompt. Every output read against the notes. Early wording slipped on the free model (a named competitor, a mixed-up promise, a benefit claim) and was tightened; the final prompt was read clean on both cases. Not yet run on real sellers' notes.",
+   "tested": "1 real-data run on a rate card and job we wrote (Claude Sonnet); totals checked by hand and correct.",
    "includes": []
   },
   {
@@ -115,29 +138,6 @@
     "Answer a chargeback: the right letter for each reason",
     "Plan your Black Friday sale on your own prices"
    ]
-  },
-  {
-   "id": "late-payment-chaser-uk",
-   "title": "Chase a late invoice (UK), with the interest worked out",
-   "kind": "Free skill",
-   "type": "free",
-   "category": "freelancers",
-   "category_name": "Freelancers and consultants",
-   "price_usd": 0,
-   "price_label": "Free",
-   "free": true,
-   "url": "/skills/late-payment-chaser-uk/",
-   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/freelancers/late-payment-chaser-uk",
-   "summary": "An invoice date and amount in, the interest you can claim and reminder emails.",
-   "give": "One unpaid business invoice (amount, invoice date, and the due date if you agreed one).",
-   "get": "What you can claim under UK late-payment law, with the working and official sources, and three reminder emails to send.",
-   "jobs": [
-    "money and disputes",
-    "write copy"
-   ],
-   "tags": [],
-   "tested": "3 real tests built on the facts of published UK court judgments. Figures checked by hand against the script and the judgment.",
-   "includes": []
   },
   {
    "id": "search-intent-page-brief",
@@ -254,6 +254,29 @@
    "includes": []
   },
   {
+   "id": "late-payment-chaser-uk",
+   "title": "Chase a late invoice (UK), with the interest worked out",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "freelancers",
+   "category_name": "Freelancers and consultants",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/late-payment-chaser-uk/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/freelancers/late-payment-chaser-uk",
+   "summary": "An invoice date and amount in, the interest you can claim and reminder emails.",
+   "give": "One unpaid business invoice (amount, invoice date, and the due date if you agreed one).",
+   "get": "What you can claim under UK late-payment law, with the working and official sources, and three reminder emails to send.",
+   "jobs": [
+    "money and disputes",
+    "write copy"
+   ],
+   "tags": [],
+   "tested": "3 real tests built on the facts of published UK court judgments. Figures checked by hand against the script and the judgment.",
+   "includes": []
+  },
+  {
    "id": "host-ops-pack",
    "title": "Run your holiday let listing: six workflows",
    "kind": "Pack",
@@ -273,7 +296,7 @@
    "tested": "Each of the six skills has 4 tests on real public data, scored by hand against a written rubric. On the latest Claude Sonnet run of each test, every score is 8.5 or 9 out of 10. An independent reviewer re-scored 12 tests and ran 10 fresh cases from another city; every defect it listed as required is fixed in this version. No host has used the output on a live listing yet.",
    "includes": [
     "Rewrite your holiday let listing",
-    "Guest Review Reply: calm public replies to bad reviews"
+    "Reply to a bad guest review without making it worse"
    ]
   },
   {
@@ -389,6 +412,28 @@
    "includes": []
   },
   {
+   "id": "scope-of-work-builder",
+   "title": "Write a scope of work before you start",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "freelancers",
+   "category_name": "Freelancers and consultants",
+   "price_usd": 5,
+   "price_label": "$5",
+   "free": false,
+   "url": "/skills/scope-of-work-builder/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/scope-of-work-builder",
+   "summary": "A client brief in, deliverables, milestones and a payment schedule.",
+   "give": "Paste the brief for a job you have won.",
+   "get": "A ten-section scope of work: numbered deliverables with a test for when each is done, what is out of scope, milestones, revisions, fees and changes, with every open point listed as a decision. It is not a contract.",
+   "jobs": [
+    "win work"
+   ],
+   "tags": [],
+   "tested": "Tested on 4 real cases from public UK tender notices: a college website rebuild with 13 work items, a museum digital installation, a thin brand strategy brief with no stated value, and a research tender whose invitation to tender was not provided.",
+   "includes": []
+  },
+  {
    "id": "listing-rewriter",
    "title": "Rewrite your holiday let listing",
    "kind": "Single skill",
@@ -412,7 +457,7 @@
   },
   {
    "id": "candidate-submission-write-up",
-   "title": "Candidate Submission Write-up",
+   "title": "Client write-up from a CV and your call notes",
    "kind": "Single skill",
    "type": "single",
    "category": "careers",
@@ -434,26 +479,26 @@
    "includes": []
   },
   {
-   "id": "cold-email-from-a-website",
-   "title": "Write a cold email from a prospect's website",
+   "id": "after-call-follow-up",
+   "title": "Follow-up email and CRM note from your call notes",
    "kind": "Single skill",
    "type": "single",
    "category": "sales-and-outreach",
    "category_name": "Sales and outreach",
-   "price_usd": 9,
-   "price_label": "$9",
+   "price_usd": 19,
+   "price_label": "$19",
    "free": false,
-   "url": "/skills/cold-email-from-a-website/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/cold-email-from-a-website",
-   "summary": "A prospect's website in, three emails built on what is on their site.",
-   "give": "A prospect's website and a line on what you sell.",
-   "get": "A three-email sequence and two subject lines, each built on something visible on their site, with the page it came from.",
+   "url": "/skills/after-call-follow-up/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/after-call-follow-up",
+   "summary": "Turn your sales call notes into the follow-up you would actually send.",
+   "give": "Paste your notes from a sales call.",
+   "get": "A follow-up email written the way you would send it, a 4-line CRM note and a short list of what is still unknown. The email says only what was said and agreed.",
    "jobs": [
-    "write copy",
-    "reach out"
+    "reach out",
+    "client work"
    ],
    "tags": [],
-   "tested": "1 real-data run on a public software company's website (Claude Sonnet). Output read and checked: every observation traced to a page, no invented claims.",
+   "tested": "2 call notes we wrote ourselves (one clean, one rambling with a half-agreed pilot, a competitor and an unsure budget), run on Claude Sonnet as a skill and on ChatGPT's free model (gpt-5.6-luna) as a paste-in prompt. Every output read against the notes. Early wording slipped on the free model (a named competitor, a mixed-up promise, a benefit claim) and was tightened; the final prompt was read clean on both cases. Not yet run on real sellers' notes.",
    "includes": []
   },
   {
@@ -502,6 +547,51 @@
    "includes": []
   },
   {
+   "id": "discovery-call-brief",
+   "title": "Prepare for a first call from the prospect's website",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "freelancers",
+   "category_name": "Freelancers and consultants",
+   "price_usd": 5,
+   "price_label": "$5",
+   "free": false,
+   "url": "/skills/discovery-call-brief/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/discovery-call-brief",
+   "summary": "A prospect's website in, a one-page brief and questions to ask.",
+   "give": "A prospect's website before a first call.",
+   "get": "One page from their own public pages: who they are, what they say they are doing now, the people they name, what the pages don't say, and up to six questions. Every fact has a short quote and its link.",
+   "jobs": [
+    "win work"
+   ],
+   "tags": [],
+   "tested": "Tested on 4 real public websites: a museum and gallery trust, a well-known UK manufacturer (to check it uses only what the pages say), a college group whose site did not respond (it gave no facts, only questions and a request to paste the about page) and a health and care regulator.",
+   "includes": []
+  },
+  {
+   "id": "follow-up-ladder",
+   "title": "Follow up a lead that went quiet",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "sales-and-outreach",
+   "category_name": "Sales and outreach",
+   "price_usd": 9,
+   "price_label": "$9",
+   "free": false,
+   "url": "/skills/follow-up-ladder/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/follow-up-ladder",
+   "summary": "A stalled lead's history in, four follow-ups with falling pressure.",
+   "give": "Paste the history of a stalled lead.",
+   "get": "Four follow-ups with decreasing pressure, subject lines and send gaps, using only facts from the history.",
+   "jobs": [
+    "write copy",
+    "client work"
+   ],
+   "tags": [],
+   "tested": "1 run on a thread we wrote ourselves (Claude Sonnet); nothing invented, no false urgency. Not yet run on a real thread.",
+   "includes": []
+  },
+  {
    "id": "changelog-from-commits",
    "title": "Write a changelog from your commits",
    "kind": "Free skill",
@@ -543,6 +633,29 @@
    ],
    "tags": [],
    "tested": "Tested on 3 real public review sets (Judge.me and Trustpilot). Final runs: 9, 9.5 and 9 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "cold-email-from-a-website",
+   "title": "Write a cold email from a prospect's website",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "sales-and-outreach",
+   "category_name": "Sales and outreach",
+   "price_usd": 9,
+   "price_label": "$9",
+   "free": false,
+   "url": "/skills/cold-email-from-a-website/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/cold-email-from-a-website",
+   "summary": "A prospect's website in, three emails built on what is on their site.",
+   "give": "A prospect's website and a line on what you sell.",
+   "get": "A three-email sequence and two subject lines, each built on something visible on their site, with the page it came from.",
+   "jobs": [
+    "write copy",
+    "reach out"
+   ],
+   "tags": [],
+   "tested": "1 real-data run on a public software company's website (Claude Sonnet). Output read and checked: every observation traced to a page, no invented claims.",
    "includes": []
   },
   {

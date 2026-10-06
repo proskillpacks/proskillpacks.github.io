@@ -279,7 +279,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 [hidden] { display: none !important; }
 @media (max-width: 40rem) {
   .brand nav a, footer a { padding: 0.7rem 0.25rem; }
-  .brand nav { margin-left: 0; width: 100%; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; gap: 0.2rem 1rem; scrollbar-width: none; }
+  .brand nav { margin-left: 0; width: 100%; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; gap: 0.2rem 0.85rem; scrollbar-width: none; font-size: 0.92rem; }
   .brand nav::-webkit-scrollbar { display: none; }
   .chips a { padding: 0.65rem 1rem; }
 }
@@ -301,6 +301,17 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   .hero-filters label:not(.grow) { width: calc(50% - 0.4rem); }
   .hero-filters label:not(.grow) select { min-width: 0; width: 100%; }
 }
+.frow { display: inline-flex; gap: 0.4rem; margin: 0 0.8rem 0 0; }
+.allbtn { margin: 1.1rem 0 0; }
+.heroall { margin: -0.6rem 0 1.2rem; font-size: 0.92rem; }
+.heroall a { color: var(--lime); font-weight: 700; }
+.getit .dgrid { margin-top: 0.9rem; }
+.fstart { margin: 1.1rem 0 0; padding: 0.8rem 1rem; background: #f4f7f3; border-radius: 12px; }
+.fstart h3 { margin: 0 0 0.4rem; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--moss); }
+.fstart ul { list-style: none; margin: 0; padding: 0; columns: 2 20rem; column-gap: 2rem; }
+.fstart li { margin: 0 0 0.3rem; break-inside: avoid; font-size: 0.9rem; line-height: 1.4; color: var(--slate); }
+.fstart a { color: var(--pine); font-weight: 600; }
+.fstart .fs-a { color: var(--ink); }
 .allline { margin: 1rem 0 0; color: var(--slate); }
 .allline a { color: var(--pine); font-weight: 700; }
 .jump { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.25rem; }
@@ -1101,7 +1112,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
       <a class="name" href="/">PRO SKILL PACKS</a>
-      <nav aria-label="Main"><a href="/free/">Free</a><a href="/how-we-test/">Why trust us</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
+      <nav aria-label="Main"><a href="/all/">All jobs</a><a href="/free/">Free</a><a href="/how-we-test/">Trust</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-marketing-sales-writing">Marketing, sales and writing</a> / Check a cold email for claims you can&#x27;t back up</p>
     <h1>Check a cold email for claims you can&#x27;t back up</h1>
@@ -1117,7 +1128,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
 <section><h2>Limits</h2><div class="prose"><ul><li>It checks claims against the text you give it. Without the page text it marks them &quot;not checked&quot;.</li><li>The legal list comes from one US guide and is not legal advice. It does not say whether a law applies to you. Rules in other countries differ.</li><li>It does not find addresses, check deliverability or send anything.</li><li>It cannot know whether your proof is true. You confirm it.</li></ul></div></section>
 <section class="faq" id="questions"><h2>Questions</h2><details><summary>Questions or a problem?</summary><div><p>Write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. Gets a draft and page text. Checking against a page needs a web tool or pasted text.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>Using it with an AI assistant</b></p><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>cold-email-checker</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/sales/cold-email-checker).</li><li>Put the <code>cold-email-checker</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Check my cold email draft before I send it. Here is the draft and the prospect&#x27;s page text.&quot;. The skill loads by itself.</li></ol></div></div></details></section>
 <section class="endcta"><a class="btn btn-pine" href="/prompts/cold-email-checker/">Copy the text for ChatGPT or any chatbot</a></section>
-<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/sales/cold-email-template-b2b/">Cold email template for B2B</a> and <a href="/sales/follow-up-email-after-no-response/">follow-up email after no response</a></li><li><a href="/skills/cold-email-from-a-website/">Write a cold email from a prospect&#x27;s website</a> ($9): A prospect&#x27;s website in, three emails built on what is on their site.</li><li><a href="/skills/after-call-follow-up/">After-Call Follow-Up</a> ($19): Turn your sales call notes into the follow-up you would actually send.</li></ul></section>
+<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/sales/cold-email-template-b2b/">Cold email template for B2B</a> and <a href="/sales/follow-up-email-after-no-response/">follow-up email after no response</a></li><li><a href="/skills/after-call-follow-up/">Follow-up email and CRM note from your call notes</a> ($19): Turn your sales call notes into the follow-up you would actually send.</li><li><a href="/skills/cold-email-from-a-website/">Write a cold email from a prospect&#x27;s website</a> ($9): A prospect&#x27;s website in, three emails built on what is on their site.</li></ul></section>
 </div></main>
 <script>
 document.querySelectorAll('.demo').forEach(function (f) {

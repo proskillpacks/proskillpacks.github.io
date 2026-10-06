@@ -354,7 +354,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 [hidden] { display: none !important; }
 @media (max-width: 40rem) {
   .brand nav a, footer a { padding: 0.7rem 0.25rem; }
-  .brand nav { margin-left: 0; width: 100%; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; gap: 0.2rem 1rem; scrollbar-width: none; }
+  .brand nav { margin-left: 0; width: 100%; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; gap: 0.2rem 0.85rem; scrollbar-width: none; font-size: 0.92rem; }
   .brand nav::-webkit-scrollbar { display: none; }
   .chips a { padding: 0.65rem 1rem; }
 }
@@ -376,6 +376,17 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   .hero-filters label:not(.grow) { width: calc(50% - 0.4rem); }
   .hero-filters label:not(.grow) select { min-width: 0; width: 100%; }
 }
+.frow { display: inline-flex; gap: 0.4rem; margin: 0 0.8rem 0 0; }
+.allbtn { margin: 1.1rem 0 0; }
+.heroall { margin: -0.6rem 0 1.2rem; font-size: 0.92rem; }
+.heroall a { color: var(--lime); font-weight: 700; }
+.getit .dgrid { margin-top: 0.9rem; }
+.fstart { margin: 1.1rem 0 0; padding: 0.8rem 1rem; background: #f4f7f3; border-radius: 12px; }
+.fstart h3 { margin: 0 0 0.4rem; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--moss); }
+.fstart ul { list-style: none; margin: 0; padding: 0; columns: 2 20rem; column-gap: 2rem; }
+.fstart li { margin: 0 0 0.3rem; break-inside: avoid; font-size: 0.9rem; line-height: 1.4; color: var(--slate); }
+.fstart a { color: var(--pine); font-weight: 600; }
+.fstart .fs-a { color: var(--ink); }
 .allline { margin: 1rem 0 0; color: var(--slate); }
 .allline a { color: var(--pine); font-weight: 700; }
 .jump { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.25rem; }
@@ -1202,7 +1213,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
       <a class="name" href="/">PRO SKILL PACKS</a>
-      <nav aria-label="Main"><a href="/free/">Free</a><a href="/how-we-test/">Why trust us</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
+      <nav aria-label="Main"><a href="/all/">All jobs</a><a href="/free/">Free</a><a href="/how-we-test/">Trust</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
     </div>
     <p class="crumbs"><a href="/sales/">Sales emails</a> / Sales breakup email: 9 you can copy, by situation (2026)</p>
     <h1>Sales breakup email: 9 you can copy, by situation (2026)</h1>

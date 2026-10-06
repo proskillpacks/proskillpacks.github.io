@@ -281,7 +281,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 [hidden] { display: none !important; }
 @media (max-width: 40rem) {
   .brand nav a, footer a { padding: 0.7rem 0.25rem; }
-  .brand nav { margin-left: 0; width: 100%; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; gap: 0.2rem 1rem; scrollbar-width: none; }
+  .brand nav { margin-left: 0; width: 100%; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; gap: 0.2rem 0.85rem; scrollbar-width: none; font-size: 0.92rem; }
   .brand nav::-webkit-scrollbar { display: none; }
   .chips a { padding: 0.65rem 1rem; }
 }
@@ -303,6 +303,17 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   .hero-filters label:not(.grow) { width: calc(50% - 0.4rem); }
   .hero-filters label:not(.grow) select { min-width: 0; width: 100%; }
 }
+.frow { display: inline-flex; gap: 0.4rem; margin: 0 0.8rem 0 0; }
+.allbtn { margin: 1.1rem 0 0; }
+.heroall { margin: -0.6rem 0 1.2rem; font-size: 0.92rem; }
+.heroall a { color: var(--lime); font-weight: 700; }
+.getit .dgrid { margin-top: 0.9rem; }
+.fstart { margin: 1.1rem 0 0; padding: 0.8rem 1rem; background: #f4f7f3; border-radius: 12px; }
+.fstart h3 { margin: 0 0 0.4rem; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--moss); }
+.fstart ul { list-style: none; margin: 0; padding: 0; columns: 2 20rem; column-gap: 2rem; }
+.fstart li { margin: 0 0 0.3rem; break-inside: avoid; font-size: 0.9rem; line-height: 1.4; color: var(--slate); }
+.fstart a { color: var(--pine); font-weight: 600; }
+.fstart .fs-a { color: var(--ink); }
 .allline { margin: 1rem 0 0; color: var(--slate); }
 .allline a { color: var(--pine); font-weight: 700; }
 .jump { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.25rem; }
@@ -1102,7 +1113,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
       <a class="name" href="/">PRO SKILL PACKS</a>
-      <nav aria-label="Main"><a href="/free/">Free</a><a href="/how-we-test/">Why trust us</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
+      <nav aria-label="Main"><a href="/all/">All jobs</a><a href="/free/">Free</a><a href="/how-we-test/">Trust</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/prompts/">Prompts</a></p>
     <h1>Late payment interest and chaser email prompt (UK)</h1>
@@ -1174,7 +1185,7 @@ Here is my invoice:</code></pre></div></section>
 <p>The start date and the £70 match what the adjudicator awarded in the real case. The three emails follow in the same answer.</p></div></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>UK only, and business-to-business debts only. It does not apply statutory interest to consumer clients.</li><li>One invoice at a time, simple interest on a 365-day year, no part payments. GOV.UK&#x27;s own worked example rounds the daily figure to the penny before multiplying, so its totals can differ from the script&#x27;s by a few pence.</li><li>It works from the facts you give it. If the due date or the amount is wrong, the figures are wrong.</li><li>It does not cover construction-contract payment rules, disputed debts, insolvent customers, court procedure or fees. It says so when it sees one of these and stops there.</li><li>If your contract has its own late-payment clause, it uses your contract rate and shows the statutory figure beside it. A clause displaces statutory interest only if it is a &quot;substantial remedy&quot;; the workflow flags this and does not decide it.</li><li>With no agreed payment date, the 30 days run from when your client received the invoice. The workflow assumes the invoice date unless you tell it otherwise, and says so.</li><li>It doesn&#x27;t guarantee you will be paid. You review the output before sending anything.</li></ul></div></section>
 <section><h2>The same job as an installable workflow</h2><div class="prose"><p>Chase a late invoice (UK), with the interest worked out is also a workflow you install once and call in plain words, so you do not paste the prompt each time. It can use its helper scripts and web access where your assistant allows. <a href="/skills/late-payment-chaser-uk/">See the workflow page</a>, or read <a href="/guides/how-to-install-agent-skills/">how to install workflows</a>.</p></div></section>
-<section><h2>More for freelancers and consultants</h2><div class="prose"><p><a href="/for/freelancers/">See every workflow for freelancers and consultants</a>.</p></div></section>
+<section><h2>Related paid workflows</h2><ul class="links"><li><a href="/skills/discovery-call-brief/">Prepare for a first call from the prospect&#x27;s website</a> ($5): A prospect&#x27;s website in, a one-page brief and questions to ask.</li><li><a href="/packs/client-winning-pack/">Win a client job, from brief to scope</a> ($19): A client brief in, a proposal, a compliance check, a scope of work and a call brief out. Tested on real public tenders.</li><li><a href="/skills/scope-of-work-builder/">Write a scope of work before you start</a> ($5): A client brief in, deliverables, milestones and a payment schedule.</li></ul></section>
 </div></main>
 <script>
 document.querySelectorAll('.prose pre').forEach(function (pre) {

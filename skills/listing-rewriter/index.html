@@ -285,7 +285,7 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 [hidden] { display: none !important; }
 @media (max-width: 40rem) {
   .brand nav a, footer a { padding: 0.7rem 0.25rem; }
-  .brand nav { margin-left: 0; width: 100%; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; gap: 0.2rem 1rem; scrollbar-width: none; }
+  .brand nav { margin-left: 0; width: 100%; flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; gap: 0.2rem 0.85rem; scrollbar-width: none; font-size: 0.92rem; }
   .brand nav::-webkit-scrollbar { display: none; }
   .chips a { padding: 0.65rem 1rem; }
 }
@@ -307,6 +307,17 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
   .hero-filters label:not(.grow) { width: calc(50% - 0.4rem); }
   .hero-filters label:not(.grow) select { min-width: 0; width: 100%; }
 }
+.frow { display: inline-flex; gap: 0.4rem; margin: 0 0.8rem 0 0; }
+.allbtn { margin: 1.1rem 0 0; }
+.heroall { margin: -0.6rem 0 1.2rem; font-size: 0.92rem; }
+.heroall a { color: var(--lime); font-weight: 700; }
+.getit .dgrid { margin-top: 0.9rem; }
+.fstart { margin: 1.1rem 0 0; padding: 0.8rem 1rem; background: #f4f7f3; border-radius: 12px; }
+.fstart h3 { margin: 0 0 0.4rem; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--moss); }
+.fstart ul { list-style: none; margin: 0; padding: 0; columns: 2 20rem; column-gap: 2rem; }
+.fstart li { margin: 0 0 0.3rem; break-inside: avoid; font-size: 0.9rem; line-height: 1.4; color: var(--slate); }
+.fstart a { color: var(--pine); font-weight: 600; }
+.fstart .fs-a { color: var(--ink); }
 .allline { margin: 1rem 0 0; color: var(--slate); }
 .allline a { color: var(--pine); font-weight: 700; }
 .jump { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.25rem; }
@@ -1110,7 +1121,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
       <a class="name" href="/">PRO SKILL PACKS</a>
-      <nav aria-label="Main"><a href="/free/">Free</a><a href="/how-we-test/">Why trust us</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
+      <nav aria-label="Main"><a href="/all/">All jobs</a><a href="/free/">Free</a><a href="/how-we-test/">Trust</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/categories/#g-online-stores">Online stores</a> / Rewrite your holiday let listing</p>
     <h1>Rewrite your holiday let listing</h1>
@@ -1130,7 +1141,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
 <section><h2>Limits</h2><div class="prose"><ul><li>It works from the text you paste. It does not open your listing, see your photos or know your neighbourhood.</li><li>The title guidance and field names follow Airbnb&#x27;s public host pages as read on 4 October 2026. The 500-character description limit comes from channel-manager documentation and hosts, not from an Airbnb help page. If your editor shows a different limit, follow your editor.</li><li>Its choice of one title over another is a judgement. It has no data on what guests search for and does not claim any.</li><li>It gives no advice on pricing, permits, tax or insurance.</li><li>It does not guarantee results. Read the output before you use it.</li></ul></div></section>
 <section class="faq" id="questions"><h2>Questions</h2><details><summary>How do I pay and get the files?</summary><div><p><b>Checkout:</b> Gumroad opens on this page. Click Add to cart, enter your email and card details, and check the total, with any VAT, before you pay. Prices here are in US dollars.</p><p><b>After you pay:</b> a download page opens right away with the zip file, and Gumroad gives you a receipt there that you can resend. Open it, then paste the text from the prompts folder into ChatGPT and add your details.</p></div></details><details><summary>Refunds and contact</summary><div><p>If it does not do the job, ask and we refund you within 30 days. Reply to your receipt, or write to <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works in ChatGPT, Claude, Gemini and most other AI assistants: paste in the text, or load the files if your assistant supports them. Setup steps are under For technical users. We run our release tests on Claude Sonnet and Opus. Use your assistant&#x27;s strongest model: in our tests, a small, fast model added facts that were not in the source data. A small script counts the characters. Without code execution the workflow still works, but the counts are not verified.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>What is in the zip</b></p><ul class="links"><li><code>LICENSE.txt</code></li><li><code>README.md</code></li><li><code>claude-ai/</code> (1 file: <code>listing-rewriter.zip</code>)</li><li><code>prompts/</code> (2 files: <code>listing-rewriter-v1.0-prompts.pdf</code>, <code>listing-rewriter.md</code>)</li><li><code>listing-rewriter/</code>, the skill itself:<ul><li><code>SKILL.md</code></li><li><code>README.md</code></li><li><code>references/</code> (1 file)</li><li><code>scripts/</code> (1 file)</li></ul></li></ul><p><b>Using it with an AI assistant</b></p><ol><li>Unzip the download. It holds the <code>listing-rewriter</code> folder, ready-made zips for claude.ai in a <code>claude-ai</code> folder, a README and the licence.</li><li>Put the <code>listing-rewriter</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: Customize, Skills, then the plus button, Create skill, Upload a skill, and upload the zip from the <code>claude-ai</code> folder without unzipping it (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Rewrite my Airbnb listing. Here is my title, description and amenities: ...&quot;. The skill loads by itself.</li></ol></div></div></details></section>
 <section class="endcta"><a class="btn btn-pine" href="https://proskillpacks.gumroad.com/l/listing-rewriter/FIRST10?utm_source=site&amp;utm_medium=skill&amp;utm_campaign=listing-rewriter" data-go="buy/listing-rewriter">Get it, $5</a></section>
-<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/packs/host-ops-pack/">Run your holiday let listing: six workflows</a> ($29): Your listing and reviews in, six tools built from your own facts.</li><li><a href="/skills/guest-review-reply/">Guest Review Reply: calm public replies to bad reviews</a> ($15): A guest review in, a true public reply and a private to-do list.</li></ul></section>
+<section class="rel"><h2>Jobs that go with this</h2><ul class="links"><li><a href="/packs/host-ops-pack/">Run your holiday let listing: six workflows</a> ($29): Your listing and reviews in, six tools built from your own facts.</li><li><a href="/skills/guest-review-reply/">Reply to a bad guest review without making it worse</a> ($15): A guest review in, a true public reply and a private to-do list.</li></ul></section>
 </div></main>
 <footer class="sitefoot">
   <div class="wrap">
