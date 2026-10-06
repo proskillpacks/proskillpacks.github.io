@@ -1088,6 +1088,16 @@ details.evb2[open] > summary { margin-bottom: 0.7rem; }
 @media (max-width: 40rem) { .pc .ba2 { grid-template-columns: 1fr; } }
 
 .seewhat { margin: 1.5rem 0; }
+.privnote { background: #f4f7f3; border: 1px solid var(--rule); border-radius: 10px; padding: 0.7rem 1rem; margin: 0 0 0.8rem; max-width: 46rem; }
+.byline { font-size: 0.9rem; color: var(--slate); margin: 0.3rem 0 1rem; }
+.plainline { font-size: 0.92rem; margin: 0.5rem 0; font-weight: 600; }
+.proofline { font-size: 0.92rem; margin: 0.6rem 0; }
+.v9tiles.v9f { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.v9more { margin: 0.9rem 0 0; }
+.v9more summary { cursor: pointer; font-weight: 800; padding: 0.4rem 0; }
+.v9more .v9tiles { margin-top: 0.7rem; }
+@media (max-width: 56rem) { .v9tiles.v9f { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 40rem) { .v9tiles.v9f { grid-template-columns: 1fr; } }
 .seewhat details { border: 2px solid var(--pine); border-radius: 12px; margin: 0.6rem 0; background: #fff; }
 .seewhat summary { cursor: pointer; padding: 0.8rem 1rem; font-weight: 800; }
 .seewhat .exin { padding: 0 1rem 1rem; }
@@ -1111,6 +1121,12 @@ details.evb2[open] > summary { margin-bottom: 0.7rem; }
 .wkit.fstarter .btn { padding: 0.4rem 1rem; font-size: 0.9rem; background: none; border: 2px solid var(--pine); color: var(--pine); }
 .wkit.fstarter .btn:hover, .wkit.fstarter .btn:focus-visible { background: var(--pine); color: var(--cream); }
 @media (max-width: 40rem) { .wkit.fstarter .cta .btn { width: auto; } }
+
+.hsamp { border: 1px solid var(--rule); border-radius: 10px; padding: 0.2rem 1rem; margin: 0.8rem 0; background: #fff; }
+.hsamp summary { cursor: pointer; font-weight: 800; padding: 0.6rem 0; }
+.hero .byline, .hero .plainline { color: var(--cream); opacity: 1; }
+.hero .byline a { color: var(--cream); }
+.simple { margin: 0 0 0.9rem; max-width: 46rem; }
 
 @media (min-width: 56.01rem) { .allgrp .dgrid.dgrid.dgrid.dgrid.dgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 /* two content widths site-wide: the text column (46rem) and the grid (the .wrap width) */
@@ -1152,70 +1168,84 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
     </div>
     
     <h1>Recruiters: write up the call in minutes.</h1>
-    <p class="lead">Client write-up from a CV and your call notes, $19. Company brief and first email, $19. Plus a free screen-note tool.</p><p class="heroall"><a href="/all/">See all jobs</a></p>
+    <p class="lead">Write-ups, company briefs and follow-ups: all three for $39. Plus a free screen-note tool.</p><p class="heroall"><a href="/all/">See all jobs</a></p>
     
   </div>
 </header>
-<main><div class="wrap"><section id="getit" class="getit"><h2>Get it done for you</h2><p class="sub">Tested on call notes and company websites. One price each, 30-day refund.</p><div class="dgrid"><div class="dc bundle"><h3>Recruiter desk: all three for $39, save $18</h3><p>The client write-up, the company brief with a first email, and the follow-up with a CRM note. Three tools for the jobs you do every week, bought together. 30-day refund, free updates.</p><a class="bgo" href="https://proskillpacks.gumroad.com/l/recruiter-desk/FIRST10?utm_source=site&amp;utm_medium=hub&amp;utm_campaign=recruiter-desk" data-go="buy/recruiter-desk">Get all three, $39</a></div><a class="dc" href="/skills/candidate-submission-write-up/" data-f="0" data-s="client write-up from a cv and your call notes write the client submission for a candidate, claiming only what the call showed. paste the job spec, the cv and your call notes (names removed). get the client write-up: every must-have marked shown, claimed, not met or not discussed with its source line, pay and notice as stated, and one honest concern. write the client submission for a candidate, claiming only what the call showed. job hunting hire write docs"><h3>Client write-up from a CV and your call notes</h3><p>CV, call notes and job spec in, a client-ready submission out. Every claim tied to its source, a pay ask above the band flagged, your internal notes kept out.</p><span class="dc-foot"><span class="go">Get it, $19</span></span></a><a class="dc" href="/skills/recruiter-bd-brief/" data-f="0" data-s="company brief and first email for recruiters get a one-page brief on a company and a short first email to its hiring manager. give it a company and the desk you place. get a one-page brief from pages it actually opened, every line linked or marked not found, then a short first email to the hiring manager with one real fact and one small offer. get a one-page brief on a company and a short first email to its hiring manager. job hunting sell research"><h3>Company brief and first email for recruiters</h3><p>Get a one-page brief on a company and a short first email to its hiring manager.</p><span class="dc-foot"><span class="go">Get it, $19</span></span></a></div></section>
-<section id="seewhat" class="seewhat"><h2>See what you get</h2><p class="sub">Three real outputs from our tests. Open one to read it. Each ran once on the model named, with the tool pasted into the chat.</p><details><summary>A client write-up</summary><div class="exin"><p class="exlab"><strong>From our test on an invented case.</strong> Input: a CV, messy call notes and a job spec for an invented candidate. Ran on ChatGPT&#x27;s free model (GPT-5.6 Luna). Part 3, the notes for you only, is cut for length. Copied as it came out, not edited.</p><pre>PART 1. CLIENT SUBMISSION
+<main><div class="wrap"><section id="getit" class="getit"><h2>Ready-made tools</h2><p class="sub">Ready-made instructions you paste into ChatGPT or Claude. Not software, nothing to install. One price each, 30-day refund.</p><p class="byline">Made by Pro Skill Packs. Questions or refunds: <a href="mailto:kaiventura.founder@gmail.com">kaiventura.founder@gmail.com</a>, reply within a day.</p><div class="dgrid"><div class="dc bundle"><h3>Recruiter bundle: 3 tools for $39, save $18</h3><p>The client write-up, the company brief with a first email, and the follow-up with a CRM note. Three tools for the jobs you do every week, bought together. 30-day refund, free updates.</p><a class="bgo" href="https://proskillpacks.gumroad.com/l/recruiter-desk/FIRST10?utm_source=site&amp;utm_medium=hub&amp;utm_campaign=recruiter-desk" data-go="buy/recruiter-desk">Get all three, $39</a></div><a class="dc" href="/skills/candidate-submission-write-up/" data-f="0" data-s="client write-up from a cv and your call notes write the client submission for a candidate, claiming only what the call showed. paste the job spec, the cv and your call notes (names removed). get the client write-up: every must-have marked shown, claimed, not met or not discussed with its source line, pay and notice as stated, and one honest concern. write the client submission for a candidate, claiming only what the call showed. job hunting hire write docs"><h3>Client write-up from a CV and your call notes</h3><p>CV, call notes and job spec in, a client-ready submission out. Every claim tied to its source, a pay ask above the band flagged, your internal notes kept out.</p><span class="dc-foot"><span class="go">Get it, $19</span></span></a><a class="dc" href="/skills/recruiter-bd-brief/" data-f="0" data-s="company brief and first email for recruiters get a one-page brief on a company and a short first email to its hiring manager. give it a company and the desk you place. get a one-page brief from pages it actually opened, every line linked or marked not found, then a short first email to the hiring manager with one real fact and one small offer. get a one-page brief on a company and a short first email to its hiring manager. job hunting sell research"><h3>Company brief and first email for recruiters</h3><p>Get a one-page brief on a company and a short first email to its hiring manager.</p><span class="dc-foot"><span class="go">Get it, $19</span></span></a></div></section>
+<section id="seewhat" class="seewhat"><h2>See what you get</h2><p class="privnote"><b>Privacy.</b> Nothing is uploaded to us. You use your own ChatGPT or Claude account. Follow your firm's AI and data policy. You can use initials instead of names.</p><p class="sub">Real outputs from our tests. Open one to read it. Each write-up marks every must-have SHOWN (the call backed it), CLAIMED (only the CV says so) or NOT DISCUSSED, so you never oversell a candidate to a client.</p><details><summary>From call notes and a CV to a client-ready write-up</summary><div class="exin"><p class="exlab"><strong>From our test on an invented case: a good-fit finance manager. The input was a CV, messy call notes and a job spec.</strong> Copied as it came out, not edited.</p><pre>**PART 1. CLIENT SUBMISSION**
 
-Headline fit: 1 of 5 must-haves SHOWN on the call. Enterprise-customer experience for customers with 1,000+ employees is NOT DISCUSSED ON THE CALL.
+**Headline fit:** 3 of 4 must-haves shown on the call. The main gap is the GBP 20m revenue must-have, which rests on the CV only.
 
-Must-haves:
-1. At least 3 years leading a customer success team of 5 or more: CLAIMED. “Led global customer success organisation of 14” [CV]; “my CS team proper is 6, 3 CSMs and 3 senior” [call]
-2. Owned net revenue retention for an ARR book of GBP 5m or more: CLAIMED. “I look after the mid-market book, about 6m of it” [call]; “Led global customer success organisation of 14, GBP 18m ARR portfolio” [CV]
-3. Gainsight or a comparable CS platform: SHOWN. “yes, we&#x27;ve had it two years, I was the main person who set it up” [call]
-4. Experience with enterprise customers (1,000+ employees): NOT DISCUSSED ON THE CALL (CV claims: “Executive sponsor programme for enterprise accounts”) [CV]
-5. Has handled a churn-risk escalation at executive level: CLAIMED. “I have escalated a few” [call]
+**Must-haves**
+1. Qualified accountant (ACA, ACCA or CIMA): SHOWN. &quot;ACCA, qualified 2018, confirmed&quot; [call]
+2. Month-end close and management accounts in a business with revenue of GBP 20m or more: CLAIMED. &quot;turnover GBP 34m&quot; [CV]
+3. Line management of at least 2 people: SHOWN. &quot;2 direct (AP, credit control)&quot;, &quot;I do their reviews and hiring input&quot; [call]
+4. Sage 200 or similar mid-market ERP: SHOWN. &quot;I led the move from Sage 50, went live Jan 2022, did the data mapping myself&quot; [call]
 
-Pay and notice: Expected pay is “100 to 110”, with “I would not move for less than 95”; currency and period not stated. Notice is “3 months, contractual” and “Could probably buy out some of it but it depends”. The client’s band is GBP 85,000 base, plus 15% bonus (fixed, not negotiable at this stage). The expected figure cannot be placed inside, above or below the band because currency and period not stated.
+**Pay and notice**
+- Expected package: &quot;62 to 65&quot;. Currency and period not stated.
+- Client band: GBP 60,000 to 65,000 base, no bonus.
+- The expected figures sit inside the band only if they mean thousands of pounds a year. The candidate did not say that.
+- Current package, which the candidate agreed to share: &quot;58k base, no bonus&quot;. Currency and period not stated.
+- Notice: 3 months. The candidate said &quot;maybe 2&quot; if the new employer pushes, but &quot;not promised&quot;. The client&#x27;s limit is 3 months.
 
-Availability: Interview: any evening or lunchtime Tuesday. Starting: 3 months contractual; buyout may be possible, depending on circumstances.
+**Availability**
+- Interview: &quot;Tues and Thurs after 4pm, any day in week of 19th except Wed&quot;.
+- Start: after the notice above.
 
-One concern: The stated 3-month notice exceeds the client’s maximum of 2 months, and any buyout is uncertain.
+**One concern:** the GBP 20m revenue must-have is only on the CV (turnover GBP 34m). The turnover was not confirmed on the call.
 
-PART 2. CANDIDATE SUMMARY
+**PART 2. CANDIDATE SUMMARY**
 
-- Director of Customer Success at a UK workflow software company since 2022.
-- CS team proper is 6: 3 CSMs and 3 senior.
-- Looks after about 6m of the mid-market book.
-- Stated NRR was 112 last year, subject to checking.
-- Set up Gainsight and has escalated a few issues at executive level.
-- Expected pay is “100 to 110”; minimum “95”. Notice is 3 months contractual.
-[cut for length]</pre></div></details><details><summary>A company brief and first email</summary><div class="exin"><p class="exlab"><strong>From our test using Starling Bank&#x27;s public website (the recruiter and notes are invented). Ran on ChatGPT&#x27;s free model.</strong> Input: six public pages of the bank, pasted in, and an invented recruiter (Sam Hart, Northgate Search). The middle and the notes for you only are cut for length. Copied as it came out, not edited.</p><pre># BD brief: Starling Bank, for finance roles, London
-Read on 6 October 2026: 6 pages pasted. No dated news announcement, specific open role, or hiring-manager name was found.
+Facts I am sending the client. Please correct anything wrong:
+- ACCA, qualified 2018.
+- Month-end close at day 5, and you build the management accounts pack.
+- Two direct reports (AP, credit control). You do their reviews and hiring input.
+- You led the Sage 50 to Sage 200 move, live Jan 2022.
+- Expecting &quot;62 to 65&quot;. Current &quot;58k base, no bonus&quot;.
+- Notice 3 months, maybe 2, not promised.
+- Interview: Tues and Thurs after 4pm, or any day in the week of 19th except Wed.
+[cut for length]</pre><p class="exlab">Part 3, the checks for you only, and the model&#x27;s scratch notes before Part 1 are cut. Test notes: Claude Sonnet, final version, one run.</p></div></details><details><summary>From a company&#x27;s website to a brief and a first email</summary><div class="exin"><p class="exlab"><strong>From our test using Starling Bank&#x27;s public website. The recruiter, Sam Hart of Northgate Search, is invented.</strong> Copied as it came out, not edited.</p><pre># BD brief: Starling Bank, for finance roles, London
+Opened 6 pages on 2026-10-06: starlingbank.com. The jobs list and the newsroom were not in the text I had.
 
 ## What they do
-- Starling provides personal, business, joint and multi-currency accounts through one app. “Personal, business, joint and multi-currency accounts – plus banking for kids. All from a single, powerful app.” (https://www.starlingbank.com/about/)
-- Starling describes itself as a digital bank with over four million accounts. “Over four million accounts (and four account types!).” (https://www.starlingbank.com/about/)
+- Starling runs four UK offices and no branches. &quot;Four offices in London, Cardiff, Southampton and Manchester. Still zero branches.&quot; (https://www.starlingbank.com/about/)
+- It sells its banking technology to other firms. &quot;Got a great product? Build it on our best-in-class banking technology.&quot; (https://www.starlingbank.com/about/)
 
 ## Recent news (last 12 months, dated)
-- Not found in the pages pasted.
+- Not found on the pages opened. A Newsroom link appears on the home page but was not opened.
 
 ## Open roles and hiring signals
-- No open roles are listed in the pasted careers page. “Browse our current openings below.” (https://www.starlingbank.com/careers/)
+- No open roles appear in the text of https://www.starlingbank.com/careers/. The page has a &quot;See all jobs&quot; link, but the listing was not in the text.
+- Careers page lists London and Manchester and says more locations are coming. &quot;The list is growing so keep your eyes peeled for new locations coming soon!&quot; (https://www.starlingbank.com/careers/)
 
 ## Who the hiring manager might be
-- Not found; check the careers page. (https://www.starlingbank.com/careers/)
+- Not found. The tax strategy page names the roles &quot;Group CFO&quot; and &quot;Group Head of Tax&quot; but no people (https://www.starlingbank.com/about/our-tax-strategy/). Check the Leadership page linked from https://www.starlingbank.com/about/, which I did not open.
 
 ## Angles for your desk (my reading, not their words)
-- Its multiple account types may create finance hiring needs across different product areas.
-- Its four offices could matter for London-based finance searches.
-- Its careers page may indicate ongoing recruitment, although specific roles are not shown.
-[cut for length]
+- The careers page names a finance function, &quot;the people that do the all important risk, compliance and finance stuff&quot;, and lists London, so a London finance search partner may be relevant. (https://www.starlingbank.com/careers/)
+- &quot;New locations coming soon&quot; could mean more hiring ahead, but the page gives no roles or numbers.
+
+## Before you write
+- Whether any finance roles are open now, since the jobs list was not in the text.
+- Who owns finance hiring. No person is named.
+- Whether the Newsroom has a recent announcement to use as a hook.
+
+Sources opened: https://www.starlingbank.com, /careers/, /about/, /about/gender-equality/, /about/ethics-statement/, /about/our-tax-strategy/. Facts are quoted from the pages above on the date above; open the link before you rely on one.
 
 ## First email (draft, you decide whether to send)
-
-**Subject: Starling careers in London**
+**Subject:** Finance hiring in London at Starling
 
 Hi [first name],
 
-Starling says it has “Four offices in London, Cardiff, Southampton and Manchester” (https://www.starlingbank.com/about/).
+Your careers page lists London as a location and mentions &quot;the people that do the all important risk, compliance and finance stuff&quot;.
 
-I’m Sam Hart at Northgate Search, placing finance roles in London. I can send a short outline of how I would run that search by reply. If this is not relevant, no reply needed.
+I&#x27;m Sam Hart, Northgate Search, placing finance roles in London. If you are hiring in finance there, I can send a short outline of how I would run that search, by reply. If it isn&#x27;t useful, no need to reply.
 
-Best,  
-Sam</pre></div></details><details><summary>A follow-up email and CRM note</summary><div class="exin"><p class="exlab"><strong>From our test on an invented case.</strong> Input: messy call notes from an invented seller (Dev Anand) after a call with an invented customer. Ran on ChatGPT&#x27;s free model (GPT-5.6 Luna). The open questions and checks are cut for length. Copied as it came out, not edited.</p><pre>EMAIL
+Sam Hart
+Northgate Search
+[cut for length]</pre><p class="exlab">The notes for you only are cut. Where the pages do not say, the brief says so instead of guessing. Test notes: Claude Sonnet, one run.</p></div></details><details><summary>A follow-up email and CRM note, from a sales call</summary><div class="exin"><p class="exlab"><strong>This one is from a sales call, with invented call notes from a seller (Dev Anand). The same tool works after a client call.</strong> Copied as it came out, not edited.</p><pre>EMAIL
 
 Subject: Follow-up on phishing simulations
 
@@ -1234,14 +1264,14 @@ Lorraine from Fenwick &amp; Cole is evaluating cybersecurity training and asked 
 After an August phishing incident led to a fake invoice payment: “never again.”  
 Dev to send follow-up email; Lorraine to check the managing partner’s diary; no meeting date agreed.  
 Managing partner, approval threshold, budget, and case-study approval are unclear.
-[cut for length]</pre></div></details></section>
+[cut for length]</pre><p class="exlab">The open questions and checks are cut for length. Test notes: ChatGPT&#x27;s free model, one run.</p></div></details></section>
 <section id="tool"><div class="wkit fstarter" id="screen-note"><span class="free">Free starter</span><h3>Turn call notes into a screen note</h3><p>Screening-call notes in, a quick internal screen note out. For the client-ready submission, see the paid write-up above.</p><div class="cta"><a class="btn btn-line-d" href="/recruiters/call-notes-to-screen-note/">Open the free tool</a></div></div></section><section id="followups"><h2>Follow-ups</h2><p class="sub">Short answers with messages to copy.</p><div class="grid"><a class="card" href="/recruiters/chasing-client-feedback-after-submitting-a-candidate/"><div class="body"><h3>Chasing client feedback</h3><p>Agree a date when you submit, chase on it, and ask for a clear yes or no. Three messages.</p><div class="foot"><span class="go">Open</span></div></div></a><a class="card" href="/recruiters/follow-up-with-a-candidate-who-went-quiet/"><div class="body"><h3>A candidate who went quiet</h3><p>Check your side first, then make it easy to say no. Two tries, then close.</p><div class="foot"><span class="go">Open</span></div></div></a><a class="card" href="/recruiters/keeping-not-now-clients-warm/"><div class="body"><h3>Keeping &quot;not now&quot; clients warm</h3><p>Write down why and the date they gave, give them something each time, ask one question.</p><div class="foot"><span class="go">Open</span></div></div></a><a class="card" href="/recruiters/keeping-in-touch-with-candidates-you-did-not-place/"><div class="body"><h3>Candidates you did not place</h3><p>Keep the people you would call again, write why, and check in once a quarter.</p><div class="foot"><span class="go">Open</span></div></div></a></div></section><section id="chase"><div class="wkit fstarter"><span class="free">Free starter</span><h3>See who to chase today</h3><p>Candidates and clients waiting on feedback, in. Who to chase today and why, out, with the next date for the rest. Runs in your browser; nothing is sent.</p><div class="cta"><a class="btn btn-line-d" href="/tools/who-to-chase-today/">Open the free tool</a></div></div></section></div></main>
 <footer class="sitefoot">
   <div class="wrap">
     <div class="card fol" id="notify" data-fol="foot"><p class="fol-t"><b>New free workflows by email.</b> A few a month. Unsubscribe any time.</p><a class="btn btn-lime" data-nolo="1" data-go="follow/foot" href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=other&amp;utm_campaign=subscribe" rel="noopener">Follow</a><p class="fol-s">Handled by Gumroad. See our <a href="/privacy/">privacy page</a>.</p></div>
     <div class="fgrid">
       <div class="fbrand"><a class="fb" href="/"><img src="/assets/avatar.png" alt="" width="36" height="36"><span>PRO SKILL PACKS</span></a>
-        <p>Ready-made AI workflows for specific jobs, tested on real tasks.</p><p>Pro Skill Packs makes ready-made AI workflows and fill-in kits for specific jobs.</p></div>
+        <p>Ready-made instructions you paste into ChatGPT or Claude, for specific jobs.</p><p>Pro Skill Packs makes ready-made instructions and fill-in kits for specific jobs.</p></div>
       <nav aria-label="Who it's for"><h2>Who it's for</h2><ul><li><a href="/stores/">Online sellers</a></li><li><a href="/hosts/">Holiday let hosts</a></li><li><a href="/freelance/">Freelancers and small businesses</a></li><li><a href="/sales/">Salespeople</a></li><li><a href="/recruiters/">Recruiters</a></li><li><a href="/estate-agents/">Estate agents</a></li><li><a href="/managers/">Managers</a></li><li><a href="/work/">Hard messages at work</a></li><li><a href="/for/developers/">Developers and data</a></li></ul></nav>
       <nav aria-label="Trust"><h2>Trust</h2><ul><li><a href="/how-we-test/">Why trust us</a></li><li><a href="/study/">Research</a></li><li><a href="/research/how-we-train-skills/">How we train a workflow</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/new/">What's new</a></li></ul></nav>
       <nav aria-label="Company"><h2>Company</h2><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/request/">Tell us the job</a></li><li><a href="/feedback/">Free copy for feedback</a></li><li><a href="/about/#terms">Terms and refunds</a></li><li><a href="/privacy/">Privacy</a></li><li><a href="/go/affiliates/?from=other">Affiliates</a></li><li><a href="https://proskillpacks.gumroad.com?utm_source=site&amp;utm_medium=other&amp;utm_campaign=store" rel="noopener">Shop</a></li><li><a href="https://x.com/KaiVenturaBuild" rel="noopener">X</a></li></ul></nav>
