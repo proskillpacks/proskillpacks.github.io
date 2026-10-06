@@ -45,13 +45,11 @@
 - [Gather the evidence for a chargeback](https://proskillpacks.github.io/skills/chargeback-evidence-checklist/) (Free): The dispute reason in, the evidence to collect and where to find it.
 - [Answer a chargeback: the right letter for each reason](https://proskillpacks.github.io/skills/chargeback-response-writer/) ($5): The dispute reason and your evidence in, the right letter back.
 - [Rewrite thin product descriptions without made-up claims](https://proskillpacks.github.io/skills/product-description-rewriter/) ($5): Your store or a product in, descriptions ready to paste into Shopify.
-- [Fix the search problems on your product pages](https://proskillpacks.github.io/skills/product-seo-fixer/) ($5): A product or collection in, a fix list with text to paste.
 - [Clean up messy product titles](https://proskillpacks.github.io/skills/product-title-cleaner/) (Free): Your store in, one tidy title style as an import file.
 - [Reply to reviews without promising what you can't give](https://proskillpacks.github.io/skills/review-reply-drafter/) (Free): Your reviews in, a reply for each, risky ones flagged.
 - [Write image descriptions (alt text) for your products](https://proskillpacks.github.io/skills/shopify-alt-text-writer/) (Free): Your store in, alt text for every product photo as an import file.
 - [Check your store policies for gaps and mixed messages](https://proskillpacks.github.io/skills/shopify-policy-checker/) (Free): Your store address in, gaps in your policies and wording to paste.
 - [Handle the weekly jobs in a Shopify store: six workflows](https://proskillpacks.github.io/packs/store-ops-pack/) ($29): Your store address in, six tools built from your own store data.
-- [Write support replies from your own store policies](https://proskillpacks.github.io/skills/support-macro-writer/) ($5): Your store address in, saved replies built from your real policies.
 
 ## Freelancers and consultants
 - [Chase a late invoice (UK), with the interest worked out](https://proskillpacks.github.io/skills/late-payment-chaser-uk/) (Free): An invoice date and amount in, the interest you can claim and reminder emails.
@@ -76,11 +74,9 @@
 
 ## Data and spreadsheets
 - [Check a data file before you rely on it](https://proskillpacks.github.io/skills/csv-profile-and-sanity-check/) (Free): A CSV file in, a profile of every column and the odd rows flagged.
-- [Get a spreadsheet formula that works on your columns](https://proskillpacks.github.io/skills/spreadsheet-formula-and-cleanup/) ($9): The result you want and a few rows in, a formula that works.
 
 ## Job seekers and careers
 - [Read a job post for what the job really is](https://proskillpacks.github.io/skills/job-post-decoder/) (Free): A job post in, what is firm, what is wishful and what to ask.
-- [Rewrite your CV bullets for one job](https://proskillpacks.github.io/skills/resume-bullet-rewriter/) ($9): Your resume bullets and a job post in, clearer bullets, nothing invented.
 
 ## Sales and outreach
 - [Check a cold email for claims you can't back up](https://proskillpacks.github.io/skills/cold-email-checker/) (Free): Your draft in, a verdict and a version without unsupported claims.
@@ -88,7 +84,6 @@
 
 ## Content and writing
 - [Find the claims in a draft that need a source](https://proskillpacks.github.io/skills/fact-claim-checker/) (Free): Your draft in, claims ranked by risk with safer wording.
-- [Edit a draft so it still sounds like you](https://proskillpacks.github.io/skills/voice-matched-draft-editor/) ($9): Samples of your writing and a draft in, the draft in your voice.
 
 ## Finance and small-business admin
 - [Check an invoice before you send or pay it](https://proskillpacks.github.io/skills/invoice-checker/) (Free): An invoice in, every difference and missing field listed.

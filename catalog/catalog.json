@@ -24,52 +24,6 @@
    "includes": []
   },
   {
-   "id": "spreadsheet-formula-and-cleanup",
-   "title": "Get a spreadsheet formula that works on your columns",
-   "kind": "Single skill",
-   "type": "single",
-   "category": "data-and-spreadsheets",
-   "category_name": "Data and spreadsheets",
-   "price_usd": 9,
-   "price_label": "$9",
-   "free": false,
-   "url": "/skills/spreadsheet-formula-and-cleanup/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/spreadsheet-formula-and-cleanup",
-   "summary": "The result you want and a few rows in, a formula that works.",
-   "give": "Describe the result you want, paste a few real rows and name your app.",
-   "get": "A formula in your real columns, a test table on your sample, and the edge cases.",
-   "jobs": [
-    "calculate",
-    "clean data"
-   ],
-   "tags": [],
-   "tested": "2 runs on a public CSV (Claude Sonnet). The first run left out the test table, so we made that section mandatory; the second run included it and the numbers matched.",
-   "includes": []
-  },
-  {
-   "id": "resume-bullet-rewriter",
-   "title": "Rewrite your CV bullets for one job",
-   "kind": "Single skill",
-   "type": "single",
-   "category": "careers",
-   "category_name": "Job seekers and careers",
-   "price_usd": 9,
-   "price_label": "$9",
-   "free": false,
-   "url": "/skills/resume-bullet-rewriter/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/resume-bullet-rewriter",
-   "summary": "Your resume bullets and a job post in, clearer bullets, nothing invented.",
-   "give": "Paste your resume bullets and a job post.",
-   "get": "Clearer bullets with every missing number marked for you to confirm, and a table of what the job asks that you do not yet show.",
-   "jobs": [
-    "write copy",
-    "job search"
-   ],
-   "tags": [],
-   "tested": "1 real-data run on sample bullets and a public job post (Claude Sonnet). We changed placeholder wording after the run so it never implies a result.",
-   "includes": []
-  },
-  {
    "id": "cold-email-from-a-website",
    "title": "Write a cold email from a prospect's website",
    "kind": "Single skill",
@@ -93,28 +47,6 @@
    "includes": []
   },
   {
-   "id": "voice-matched-draft-editor",
-   "title": "Edit a draft so it still sounds like you",
-   "kind": "Single skill",
-   "type": "single",
-   "category": "content-and-writing",
-   "category_name": "Content and writing",
-   "price_usd": 9,
-   "price_label": "$9",
-   "free": false,
-   "url": "/skills/voice-matched-draft-editor/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/voice-matched-draft-editor",
-   "summary": "Samples of your writing and a draft in, the draft in your voice.",
-   "give": "Two or three things you wrote and a draft.",
-   "get": "The draft edited to sound like you, a list of what changed, and flags on claims it cannot support.",
-   "jobs": [
-    "edit writing"
-   ],
-   "tags": [],
-   "tested": "1 real-data run on public essay samples and a sample draft (Claude Sonnet). The first run overwrote a file in the test folder, so the skill now says never to modify files.",
-   "includes": []
-  },
-  {
    "id": "store-ops-pack",
    "title": "Handle the weekly jobs in a Shopify store: six workflows",
    "kind": "Pack",
@@ -134,9 +66,7 @@
    "tested": "Every skill in the pack was tested on real public Shopify stores or real public merchant cases and scored against a written rubric. Each ships only when every test scores 8/10 or more.",
    "includes": [
     "See how AI shopping assistants read your store",
-    "Write support replies from your own store policies",
     "Rewrite thin product descriptions without made-up claims",
-    "Fix the search problems on your product pages",
     "Answer a chargeback: the right letter for each reason",
     "Plan your Black Friday sale on your own prices"
    ]
@@ -210,6 +140,74 @@
    "includes": []
   },
   {
+   "id": "csv-profile-and-sanity-check",
+   "title": "Check a data file before you rely on it",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "data-and-spreadsheets",
+   "category_name": "Data and spreadsheets",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/csv-profile-and-sanity-check/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/data/csv-profile-and-sanity-check",
+   "summary": "A CSV file in, a profile of every column and the odd rows flagged.",
+   "give": "A CSV.",
+   "get": "It runs a small read-only script (Python 3 standard library) and reports rows, columns, each column's type, blanks, distinct values, ranges, duplicates, mixed formats, stray spaces, case variants and outliers, then lists questions to ask the data's owner. Without code execution it profiles a pasted sample and says so.",
+   "jobs": [
+    "analyse data",
+    "check"
+   ],
+   "tags": [],
+   "tested": "1 run on a real public CSV (Claude Sonnet) with the script.",
+   "includes": []
+  },
+  {
+   "id": "job-post-decoder",
+   "title": "Read a job post for what the job really is",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "careers",
+   "category_name": "Job seekers and careers",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/job-post-decoder/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/careers/job-post-decoder",
+   "summary": "A job post in, what is firm, what is wishful and what to ask.",
+   "give": "Paste a job post.",
+   "get": "It says in plain words what the job is, sorts the requirements into firm, wish and unclear with quotes, lists what the post leaves out (pay, location, hours, team), points out phrases worth a question, and gives you six to eight questions for the recruiter. If you add your background, it says where the fit is strong or weak and what to lead with. It never says anything about the employer beyond the post.",
+   "jobs": [
+    "job search",
+    "check"
+   ],
+   "tags": [],
+   "tested": "1 run on a real public job post (Claude Sonnet).",
+   "includes": []
+  },
+  {
+   "id": "fact-claim-checker",
+   "title": "Find the claims in a draft that need a source",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "content-and-writing",
+   "category_name": "Content and writing",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/fact-claim-checker/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker",
+   "summary": "Your draft in, claims ranked by risk with safer wording.",
+   "give": "Paste a draft before you publish.",
+   "get": "Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.",
+   "jobs": [
+    "check facts"
+   ],
+   "tags": [],
+   "tested": "1 real-data run on a public launch post (Claude Sonnet). All 17 flagged claims and both internal conflicts were real.",
+   "includes": []
+  },
+  {
    "id": "invoice-checker",
    "title": "Check an invoice before you send or pay it",
    "kind": "Free skill",
@@ -278,52 +276,6 @@
    "includes": []
   },
   {
-   "id": "csv-profile-and-sanity-check",
-   "title": "Check a data file before you rely on it",
-   "kind": "Free skill",
-   "type": "free",
-   "category": "data-and-spreadsheets",
-   "category_name": "Data and spreadsheets",
-   "price_usd": 0,
-   "price_label": "Free",
-   "free": true,
-   "url": "/skills/csv-profile-and-sanity-check/",
-   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/data/csv-profile-and-sanity-check",
-   "summary": "A CSV file in, a profile of every column and the odd rows flagged.",
-   "give": "A CSV.",
-   "get": "It runs a small read-only script (Python 3 standard library) and reports rows, columns, each column's type, blanks, distinct values, ranges, duplicates, mixed formats, stray spaces, case variants and outliers, then lists questions to ask the data's owner. Without code execution it profiles a pasted sample and says so.",
-   "jobs": [
-    "analyse data",
-    "check"
-   ],
-   "tags": [],
-   "tested": "1 run on a real public CSV (Claude Sonnet) with the script.",
-   "includes": []
-  },
-  {
-   "id": "job-post-decoder",
-   "title": "Read a job post for what the job really is",
-   "kind": "Free skill",
-   "type": "free",
-   "category": "careers",
-   "category_name": "Job seekers and careers",
-   "price_usd": 0,
-   "price_label": "Free",
-   "free": true,
-   "url": "/skills/job-post-decoder/",
-   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/careers/job-post-decoder",
-   "summary": "A job post in, what is firm, what is wishful and what to ask.",
-   "give": "Paste a job post.",
-   "get": "It says in plain words what the job is, sorts the requirements into firm, wish and unclear with quotes, lists what the post leaves out (pay, location, hours, team), points out phrases worth a question, and gives you six to eight questions for the recruiter. If you add your background, it says where the fit is strong or weak and what to lead with. It never says anything about the employer beyond the post.",
-   "jobs": [
-    "job search",
-    "check"
-   ],
-   "tags": [],
-   "tested": "1 run on a real public job post (Claude Sonnet).",
-   "includes": []
-  },
-  {
    "id": "cold-email-checker",
    "title": "Check a cold email for claims you can't back up",
    "kind": "Free skill",
@@ -344,28 +296,6 @@
    ],
    "tags": [],
    "tested": "1 run on a draft we wrote with common flaws and text from a real public homepage (Claude Sonnet).",
-   "includes": []
-  },
-  {
-   "id": "fact-claim-checker",
-   "title": "Find the claims in a draft that need a source",
-   "kind": "Free skill",
-   "type": "free",
-   "category": "content-and-writing",
-   "category_name": "Content and writing",
-   "price_usd": 0,
-   "price_label": "Free",
-   "free": true,
-   "url": "/skills/fact-claim-checker/",
-   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker",
-   "summary": "Your draft in, claims ranked by risk with safer wording.",
-   "give": "Paste a draft before you publish.",
-   "get": "Get the claims that need a source, ranked by risk, what would settle each, and safer wording for the ones you cannot back up.",
-   "jobs": [
-    "check facts"
-   ],
-   "tags": [],
-   "tested": "1 real-data run on a public launch post (Claude Sonnet). All 17 flagged claims and both internal conflicts were real.",
    "includes": []
   },
   {
@@ -458,8 +388,8 @@
    "includes": []
   },
   {
-   "id": "support-macro-writer",
-   "title": "Write support replies from your own store policies",
+   "id": "agent-ready-store-audit",
+   "title": "See how AI shopping assistants read your store",
    "kind": "Single skill",
    "type": "single",
    "category": "shopify",
@@ -467,16 +397,16 @@
    "price_usd": 5,
    "price_label": "$5",
    "free": false,
-   "url": "/skills/support-macro-writer/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/support-macro-writer",
-   "summary": "Your store address in, saved replies built from your real policies.",
+   "url": "/skills/agent-ready-store-audit/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/agent-ready-store-audit",
+   "summary": "Your store address in, a score out of 100 and the top 7 fixes.",
    "give": "Your store URL.",
-   "get": "It reads your real refund and shipping policies and writes ready-to-import support replies, starting with the hard cases: stuck in transit, \"delivered\" but not received, address changes, cancellations.",
+   "get": "A score out of 100 for how well AI shopping agents (ChatGPT, Gemini, Copilot and others) can find, understand and buy from your store, an agent's-eye test of real buyer questions, and a ranked fix list.",
    "jobs": [
-    "reply to customers"
+    "audit and fix"
    ],
    "tags": [],
-   "tested": "Tested on 4 real public Shopify stores with Gorgias, Zendesk, Shopify Inbox and neutral output, scored against a written rubric. Every policy fact in the macros was checked against the stores' own policy text.",
+   "tested": "Tested on 4 real public Shopify stores. Final runs: 9, 9, 9.5 and 9 out of 10.",
    "includes": []
   },
   {
@@ -546,8 +476,8 @@
    "includes": []
   },
   {
-   "id": "agent-ready-store-audit",
-   "title": "See how AI shopping assistants read your store",
+   "id": "product-description-rewriter",
+   "title": "Rewrite thin product descriptions without made-up claims",
    "kind": "Single skill",
    "type": "single",
    "category": "shopify",
@@ -555,16 +485,16 @@
    "price_usd": 5,
    "price_label": "$5",
    "free": false,
-   "url": "/skills/agent-ready-store-audit/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/agent-ready-store-audit",
-   "summary": "Your store address in, a score out of 100 and the top 7 fixes.",
-   "give": "Your store URL.",
-   "get": "A score out of 100 for how well AI shopping agents (ChatGPT, Gemini, Copilot and others) can find, understand and buy from your store, an agent's-eye test of real buyer questions, and a ranked fix list.",
+   "url": "/skills/product-description-rewriter/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/product-description-rewriter",
+   "summary": "Your store or a product in, descriptions ready to paste into Shopify.",
+   "give": "A product URL, pasted text, a collection, or your product export CSV.",
+   "get": "Clean Shopify HTML descriptions with an SEO title (≤ 60 characters) and meta description (≤ 155). Bulk runs produce an import CSV.",
    "jobs": [
-    "audit and fix"
+    "write copy"
    ],
    "tags": [],
-   "tested": "Tested on 4 real public Shopify stores. Final runs: 9, 9, 9.5 and 9 out of 10.",
+   "tested": "Tested on 4 real public Shopify stores and one product export CSV. Final scores: 9, 9, 10, 10 and 9 out of 10.",
    "includes": []
   },
   {
@@ -635,8 +565,8 @@
    "includes": []
   },
   {
-   "id": "product-description-rewriter",
-   "title": "Rewrite thin product descriptions without made-up claims",
+   "id": "bfcm-campaign-kit",
+   "title": "Plan your Black Friday sale on your own prices",
    "kind": "Single skill",
    "type": "single",
    "category": "shopify",
@@ -644,16 +574,16 @@
    "price_usd": 5,
    "price_label": "$5",
    "free": false,
-   "url": "/skills/product-description-rewriter/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/product-description-rewriter",
-   "summary": "Your store or a product in, descriptions ready to paste into Shopify.",
-   "give": "A product URL, pasted text, a collection, or your product export CSV.",
-   "get": "Clean Shopify HTML descriptions with an SEO title (≤ 60 characters) and meta description (≤ 155). Bulk runs produce an import CSV.",
+   "url": "/skills/bfcm-campaign-kit/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/bfcm-campaign-kit",
+   "summary": "Your store address in, offer maths, a calendar, emails and texts.",
+   "give": "Your store URL (plus your margin, if you know it).",
+   "get": "A Black Friday / Cyber Monday plan: offer maths on your real prices, a dated US/UK calendar, 5 emails, 3 SMS, banners and an ops checklist. No fake urgency.",
    "jobs": [
-    "write copy"
+    "plan and launch"
    ],
    "tags": [],
-   "tested": "Tested on 4 real public Shopify stores and one product export CSV. Final scores: 9, 9, 10, 10 and 9 out of 10.",
+   "tested": "Tested on 4 real public Shopify stores (US and UK, low to high price points). Final version: 9/10 on all four.",
    "includes": []
   },
   {
@@ -701,8 +631,8 @@
    "includes": []
   },
   {
-   "id": "bfcm-campaign-kit",
-   "title": "Plan your Black Friday sale on your own prices",
+   "id": "chargeback-response-writer",
+   "title": "Answer a chargeback: the right letter for each reason",
    "kind": "Single skill",
    "type": "single",
    "category": "shopify",
@@ -710,16 +640,16 @@
    "price_usd": 5,
    "price_label": "$5",
    "free": false,
-   "url": "/skills/bfcm-campaign-kit/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/bfcm-campaign-kit",
-   "summary": "Your store address in, offer maths, a calendar, emails and texts.",
-   "give": "Your store URL (plus your margin, if you know it).",
-   "get": "A Black Friday / Cyber Monday plan: offer maths on your real prices, a dated US/UK calendar, 5 emails, 3 SMS, banners and an ops checklist. No fake urgency.",
+   "url": "/skills/chargeback-response-writer/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/chargeback-response-writer",
+   "summary": "The dispute reason and your evidence in, the right letter back.",
+   "give": "The dispute details plus the evidence you actually have.",
+   "get": "A response matched to the reason code, a checklist of what to attach, and a list of gaps. It never invents evidence, and it tells you when accepting is cheaper.",
    "jobs": [
-    "plan and launch"
+    "money and disputes"
    ],
    "tags": [],
-   "tested": "Tested on 4 real public Shopify stores (US and UK, low to high price points). Final version: 9/10 on all four.",
+   "tested": "Tested on 6 real dispute scenarios from the Shopify Community forum. Every final run scored 9/10 or more, with no invented evidence.",
    "includes": []
   },
   {
@@ -745,29 +675,6 @@
    "includes": []
   },
   {
-   "id": "product-seo-fixer",
-   "title": "Fix the search problems on your product pages",
-   "kind": "Single skill",
-   "type": "single",
-   "category": "shopify",
-   "category_name": "Shopify store owners",
-   "price_usd": 5,
-   "price_label": "$5",
-   "free": false,
-   "url": "/skills/product-seo-fixer/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/product-seo-fixer",
-   "summary": "A product or collection in, a fix list with text to paste.",
-   "give": "A product URL, a collection URL, or your product export CSV.",
-   "get": "A prioritised SEO fix list with the exact text to paste and where. Collection mode also writes the collection intro and SEO fields; CSV mode returns a re-importable CSV.",
-   "jobs": [
-    "audit and fix",
-    "write copy"
-   ],
-   "tags": [],
-   "tested": "Tested on 5 real public Shopify stores across all three modes. Final runs scored 9 to 10 out of 10.",
-   "includes": []
-  },
-  {
    "id": "shopify-policy-checker",
    "title": "Check your store policies for gaps and mixed messages",
    "kind": "Free skill",
@@ -787,28 +694,6 @@
    ],
    "tags": [],
    "tested": "Tested on 4 real public Shopify stores. Final scores: 10, 10, 9 and 9 out of 10.",
-   "includes": []
-  },
-  {
-   "id": "chargeback-response-writer",
-   "title": "Answer a chargeback: the right letter for each reason",
-   "kind": "Single skill",
-   "type": "single",
-   "category": "shopify",
-   "category_name": "Shopify store owners",
-   "price_usd": 5,
-   "price_label": "$5",
-   "free": false,
-   "url": "/skills/chargeback-response-writer/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/chargeback-response-writer",
-   "summary": "The dispute reason and your evidence in, the right letter back.",
-   "give": "The dispute details plus the evidence you actually have.",
-   "get": "A response matched to the reason code, a checklist of what to attach, and a list of gaps. It never invents evidence, and it tells you when accepting is cheaper.",
-   "jobs": [
-    "money and disputes"
-   ],
-   "tags": [],
-   "tested": "Tested on 6 real dispute scenarios from the Shopify Community forum. Every final run scored 9/10 or more, with no invented evidence.",
    "includes": []
   }
  ]
