@@ -16,7 +16,7 @@
 <meta property="og:url" content="https://proskillpacks.github.io/skills/csv-profile-and-sanity-check/">
 <meta property="og:title" content="Check a data file before you rely on it">
 <meta property="og:description" content="Check a CSV file for problems before you rely on it. For anyone who receives data files and needs to trust them. Tested on real examples before release.">
-<meta property="og:image" content="https://proskillpacks.github.io/assets/og/a96d8087b8a0.png">
+<meta property="og:image" content="https://proskillpacks.github.io/assets/og/1577ec724afa.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Check a data file before you rely on it: Pro Skill Packs">
@@ -25,7 +25,7 @@
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="Check a data file before you rely on it">
 <meta name="twitter:description" content="Check a CSV file for problems before you rely on it. For anyone who receives data files and needs to trust them. Tested on real examples before release.">
-<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/a96d8087b8a0.png">
+<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/1577ec724afa.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
 {
@@ -40,7 +40,7 @@
   "name": "Pro Skill Packs",
   "url": "https://proskillpacks.github.io/"
  },
- "image": "https://proskillpacks.github.io/assets/og/a96d8087b8a0.png"
+ "image": "https://proskillpacks.github.io/assets/og/1577ec724afa.png"
 }
 </script>
 <style>
@@ -1042,7 +1042,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
 <main class="prod pc"><div class="wrap">
 <section><h2>Before and after</h2><div class="prose"><blockquote><p><strong>Before:</strong> Opening a 891-row export and scrolling for a few minutes to see if it looks fine.</p>
 <p><strong>After (real output, from a real test run):</strong> Test run on a public 891-row passenger CSV. It reported 19% blank in Age (177 rows) and 77% blank in Cabin, 15 zero fares, 53 high fare outliers, a Ticket column that should be read as text, trailing spaces in names and 2 blank Embarked values, named the two rows, and asked the owner eight questions, such as whether Fare is per person or per ticket. It changed nothing in the file.</p></blockquote></div></section>
-<section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/csv-profile-and-sanity-check-last.png" data-gif="/assets/demos/csv-profile-and-sanity-check.gif" alt="Animated demo of Check a data file before you rely on it on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async" srcset="/assets/demos/csv-profile-and-sanity-check-last-240.webp 240w, /assets/demos/csv-profile-and-sanity-check-last-480.webp 480w, /assets/demos/csv-profile-and-sanity-check-last-900.webp 900w, /assets/demos/csv-profile-and-sanity-check-last-1200.webp 1200w" sizes="(min-width: 48rem) 900px, 100vw" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Check a data file before you rely on it">Play</button></figure></section>
+<section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/csv-profile-and-sanity-check-last.png" data-gif="/assets/demos/csv-profile-and-sanity-check.gif" alt="Animated demo of Check a data file before you rely on it on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Check a data file before you rely on it">Play</button></figure></section>
 <section><h2>What it does</h2><div class="prose"><p>Give it a CSV. It runs a small read-only script (Python 3 standard library) and reports rows, columns, each column&#x27;s type, blanks, distinct values, ranges, duplicates, mixed formats, stray spaces, case variants and outliers, then lists questions to ask the data&#x27;s owner. Without code execution it profiles a pasted sample and says so.</p></div></section>
 <section class="ev" id="evidence"><h2>The evidence</h2><p>1 run on a real public CSV (Claude Sonnet) with the script.</p><p class="evlink"><a href="/how-we-test/">Read the full test</a></p></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It reads only. It never edits, sorts or cleans the file.</li><li>A profile cannot tell you whether values are true or whether rows are missing.</li><li>Without code execution it works from the sample you paste and says so. Counts cover only that sample.</li><li>It does not guess what unclear columns mean. It asks.</li></ul></div></section>

@@ -16,7 +16,7 @@
 <meta property="og:url" content="https://proskillpacks.github.io/skills/fact-claim-checker/">
 <meta property="og:title" content="Find the claims in a draft that need a source">
 <meta property="og:description" content="Find claims in a draft that need a source. For writers and marketers who publish under their own name. 1 real-data run on a public launch post (Claude">
-<meta property="og:image" content="https://proskillpacks.github.io/assets/og/dabd73bce803.png">
+<meta property="og:image" content="https://proskillpacks.github.io/assets/og/30782eac8673.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Find the claims in a draft that need a source: Pro Skill Packs">
@@ -25,7 +25,7 @@
 <meta name="twitter:site" content="@KaiVenturaBuild">
 <meta name="twitter:title" content="Find the claims in a draft that need a source">
 <meta name="twitter:description" content="Find claims in a draft that need a source. For writers and marketers who publish under their own name. 1 real-data run on a public launch post (Claude">
-<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/dabd73bce803.png">
+<meta name="twitter:image" content="https://proskillpacks.github.io/assets/og/30782eac8673.png">
 <meta name="theme-color" content="#0f3d2e">
 <script type="application/ld+json">
 {
@@ -40,7 +40,7 @@
   "name": "Pro Skill Packs",
   "url": "https://proskillpacks.github.io/"
  },
- "image": "https://proskillpacks.github.io/assets/og/dabd73bce803.png"
+ "image": "https://proskillpacks.github.io/assets/og/30782eac8673.png"
 }
 </script>
 <style>
@@ -1042,7 +1042,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
 <main class="prod pc"><div class="wrap">
 <section><h2>Before and after</h2><div class="prose"><p>A public launch post from a small software company, with prices, dates, a user count and a discount, mixed with opinion.</p>
 <blockquote><p><strong>After (real output, excerpt):</strong><br>Claims found: 17. High risk: 6. Medium: 7. Low: 4.<br>&quot;more than 60 people have signed up used Plausible successfully&quot;: a number, and &quot;successfully&quot; is undefined. A typo changes the meaning (&quot;signed up used&quot;).<br>&quot;up to 10k pageviews - $6 / mo&quot; versus later &quot;a small (&lt;10k) tier&quot;: pick one.<br>Safer wording: &quot;More than 60 people have signed up for the beta, and [N] of them have [SOURCE: your definition of &#x27;successfully&#x27;].&quot;</p></blockquote></div></section>
-<section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/fact-claim-checker-last.png" data-gif="/assets/demos/fact-claim-checker.gif" alt="Animated demo of Find the claims in a draft that need a source on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Find the claims in a draft that need a source">Play</button></figure></section>
+<section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/fact-claim-checker-last.png" data-gif="/assets/demos/fact-claim-checker.gif" alt="Animated demo of Find the claims in a draft that need a source on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async" srcset="/assets/demos/fact-claim-checker-last-240.webp 240w, /assets/demos/fact-claim-checker-last-480.webp 480w, /assets/demos/fact-claim-checker-last-900.webp 900w, /assets/demos/fact-claim-checker-last-1200.webp 1200w" sizes="(min-width: 48rem) 900px, 100vw" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Find the claims in a draft that need a source">Play</button></figure></section>
 <section><h2>What it does</h2><div class="prose"><p>Paste a draft before you publish it. You get a list of the claims that need a source, ranked by risk, with the kind of source that would settle each one, and safer wording for the high-risk ones you cannot back up. It does not tell you what is true. It tells you what to check.</p></div></section>
 <section class="ev" id="evidence"><h2>The evidence</h2><p>1 real-data run on a public launch post (Claude Sonnet). All 17 flagged claims and both internal conflicts were real.</p><details class="evmore"><summary>More on how it was tested</summary><p>Not yet run on other models. A second, harder run (2026-10-04, Claude Sonnet, a draft full of unsourced boasts and a request to say which are true): it refused to rule on truth and listed what would settle each claim, but its summary said 8 high-risk claims when the table showed 7. We added a rule and re-ran: the counts now match the table.</p></details><p class="evlink"><a href="/how-we-test/">Read the full test</a></p></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It does not look anything up or rule claims true or false.</li><li>It can over-flag low-risk items.</li><li>Not a legal, medical or financial review.</li></ul></div></section>
