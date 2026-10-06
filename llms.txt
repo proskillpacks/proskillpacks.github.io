@@ -55,6 +55,7 @@
 - [Chase a late invoice (UK), with the interest worked out](https://proskillpacks.github.io/skills/late-payment-chaser-uk/) (Free): An invoice date and amount in, the interest you can claim and reminder emails.
 
 ## Short-term rental hosts
+- [Guest Review Reply: calm public replies to bad reviews](https://proskillpacks.github.io/skills/guest-review-reply/) ($15): A guest review in, a true public reply and a private to-do list.
 - [Run your holiday let listing: six workflows](https://proskillpacks.github.io/packs/host-ops-pack/) ($29): Your listing and reviews in, six tools built from your own facts.
 - [Rewrite your holiday let listing](https://proskillpacks.github.io/skills/listing-rewriter/) ($5): Your listing text in, three titles and a description from your own facts.
 
@@ -76,9 +77,11 @@
 - [Check a data file before you rely on it](https://proskillpacks.github.io/skills/csv-profile-and-sanity-check/) (Free): A CSV file in, a profile of every column and the odd rows flagged.
 
 ## Job seekers and careers
+- [Candidate Submission Write-up](https://proskillpacks.github.io/skills/candidate-submission-write-up/) ($19): Write the client submission for a candidate, claiming only what the call showed.
 - [Read a job post for what the job really is](https://proskillpacks.github.io/skills/job-post-decoder/) (Free): A job post in, what is firm, what is wishful and what to ask.
 
 ## Sales and outreach
+- [After-Call Follow-Up](https://proskillpacks.github.io/skills/after-call-follow-up/) ($19): Turn your sales call notes into the follow-up you would actually send.
 - [Check a cold email for claims you can't back up](https://proskillpacks.github.io/skills/cold-email-checker/) (Free): Your draft in, a verdict and a version without unsupported claims.
 - [Write a cold email from a prospect's website](https://proskillpacks.github.io/skills/cold-email-from-a-website/) ($9): A prospect's website in, three emails built on what is on their site.
 

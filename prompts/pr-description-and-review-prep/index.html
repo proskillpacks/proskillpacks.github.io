@@ -1114,6 +1114,8 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
 <section><h2>What you need</h2><div class="prose"><p>Run it in your repository, or paste a diff. In this prompt version you paste the text yourself. The steps are under "How to use it" below.</p></div></section>
 <section><h2>The prompt</h2><div class="prose"><p>Works in ChatGPT, Claude, Gemini or any chatbot. Get your diff with <code>git diff main...HEAD</code> (use your base branch) and paste it where marked. For very large diffs, paste <code>git diff --stat</code> plus the files that matter most.</p><pre><code>Write the pull request text from the diff below. Use only what the diff and my notes show.
 
+Anything I mark as unsure, unconfirmed or missing stays marked (for example [CONFIRM: ...]) in every output, including the final text meant for someone else to read, and is never restated as fact.
+
 Why this change (if you know): [reason, ticket link, or &quot;not sure&quot;]
 Tests I ran (if any): [or &quot;none yet&quot;]
 Diff: [paste here]

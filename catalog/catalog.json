@@ -2,6 +2,74 @@
  "generated": "2026-10-06",
  "products": [
   {
+   "id": "guest-review-reply",
+   "title": "Guest Review Reply: calm public replies to bad reviews",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "short-term-rental-hosts",
+   "category_name": "Short-term rental hosts",
+   "price_usd": 15,
+   "price_label": "$15",
+   "free": false,
+   "url": "/skills/guest-review-reply/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/guest-review-reply",
+   "summary": "A guest review in, a true public reply and a private to-do list.",
+   "give": "Paste a guest review and what you know about what happened.",
+   "get": "A short public reply that a future guest reads as calm and fair, a private message to the guest where it helps, a note on what to fix, and a flag on any review that needs your judgement first.",
+   "jobs": [
+    "reply to customers"
+   ],
+   "tags": [],
+   "tested": "Tested 6 Oct 2026 on 2 invented reviews (mixed on Vrbo; harsh and partly unfair on Booking.com with a refund demand): clean on Claude Sonnet after one fix; on ChatGPT's free model two mild flaws remain. Small test; earlier version scored 8.5 to 9 on 4 real public reviews.",
+   "includes": []
+  },
+  {
+   "id": "candidate-submission-write-up",
+   "title": "Candidate Submission Write-up",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "careers",
+   "category_name": "Job seekers and careers",
+   "price_usd": 19,
+   "price_label": "$19",
+   "free": false,
+   "url": "/skills/candidate-submission-write-up/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/candidate-submission-write-up",
+   "summary": "Write the client submission for a candidate, claiming only what the call showed.",
+   "give": "Paste the client's job spec, the candidate's CV and your screening-call notes with the name removed.",
+   "get": "A client write-up with a headline fit, each must-have marked SHOWN, CLAIMED, NOT MET or NOT DISCUSSED with the quoted source line, pay and notice exactly as stated, availability and one honest concern, plus a short summary for the candidate and a check list for you. Works as a SKILL.md and as a paste-in prompt for ChatGPT.",
+   "jobs": [
+    "hire",
+    "write docs"
+   ],
+   "tags": [],
+   "tested": "2 invented cases (one clean, one with a CV that claims more than the call showed), each run on Claude Sonnet and gpt-5.6-luna, every output read against its sources. Fixed once and re-run. Not tested on real client work.",
+   "includes": []
+  },
+  {
+   "id": "after-call-follow-up",
+   "title": "After-Call Follow-Up",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "sales-and-outreach",
+   "category_name": "Sales and outreach",
+   "price_usd": 19,
+   "price_label": "$19",
+   "free": false,
+   "url": "/skills/after-call-follow-up/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/after-call-follow-up",
+   "summary": "Turn your sales call notes into the follow-up you would actually send.",
+   "give": "Paste your notes from a sales call.",
+   "get": "A follow-up email written the way you would send it, a 4-line CRM note and a short list of what is still unknown. The email says only what was said and agreed.",
+   "jobs": [
+    "reach out",
+    "client work"
+   ],
+   "tags": [],
+   "tested": "2 call notes we wrote ourselves (one clean, one rambling with a half-agreed pilot, a competitor and an unsure budget), run on Claude Sonnet as a skill and on ChatGPT's free model (gpt-5.6-luna) as a paste-in prompt. Every output read against the notes. Early wording slipped on the free model (a named competitor, a mixed-up promise, a benefit claim) and was tightened; the final prompt was read clean on both cases. Not yet run on real sellers' notes.",
+   "includes": []
+  },
+  {
    "id": "agent-browse",
    "title": "Browse the web with an AI agent in fewer steps",
    "kind": "Free skill",
@@ -21,29 +89,6 @@
    ],
    "tags": [],
    "tested": "Trained and scored with Claude Opus 5.5 through the claude CLI and the agent-browser CLI. On 11 unseen tasks (2 runs each) it used 29.4k weighted tokens per task against 34.2k with no skill, with 22 of 22 correct in every condition. Two of three proposed edit sets made things worse and were rejected by the validation gate. One student model and a small task set; the Setup section was added by hand and was not gated.",
-   "includes": []
-  },
-  {
-   "id": "cold-email-from-a-website",
-   "title": "Write a cold email from a prospect's website",
-   "kind": "Single skill",
-   "type": "single",
-   "category": "sales-and-outreach",
-   "category_name": "Sales and outreach",
-   "price_usd": 9,
-   "price_label": "$9",
-   "free": false,
-   "url": "/skills/cold-email-from-a-website/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/cold-email-from-a-website",
-   "summary": "A prospect's website in, three emails built on what is on their site.",
-   "give": "A prospect's website and a line on what you sell.",
-   "get": "A three-email sequence and two subject lines, each built on something visible on their site, with the page it came from.",
-   "jobs": [
-    "write copy",
-    "reach out"
-   ],
-   "tags": [],
-   "tested": "1 real-data run on a public software company's website (Claude Sonnet). Output read and checked: every observation traced to a page, no invented claims.",
    "includes": []
   },
   {
@@ -95,28 +140,6 @@
    "includes": []
   },
   {
-   "id": "host-ops-pack",
-   "title": "Run your holiday let listing: six workflows",
-   "kind": "Pack",
-   "type": "pack",
-   "category": "short-term-rental-hosts",
-   "category_name": "Short-term rental hosts",
-   "price_usd": 29,
-   "price_label": "$29",
-   "free": false,
-   "url": "/packs/host-ops-pack/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/host-ops-pack",
-   "summary": "Your listing and reviews in, six tools built from your own facts.",
-   "give": "",
-   "get": "",
-   "jobs": [],
-   "tags": [],
-   "tested": "Each of the six skills has 4 tests on real public data, scored by hand against a written rubric. On the latest Claude Sonnet run of each test, every score is 8.5 or 9 out of 10. An independent reviewer re-scored 12 tests and ran 10 fresh cases from another city; every defect it listed as required is fixed in this version. No host has used the output on a live listing yet.",
-   "includes": [
-    "Rewrite your holiday let listing"
-   ]
-  },
-  {
    "id": "search-intent-page-brief",
    "title": "Plan a page around what searchers want",
    "kind": "Free skill",
@@ -160,29 +183,6 @@
    ],
    "tags": [],
    "tested": "1 run on a real public CSV (Claude Sonnet) with the script.",
-   "includes": []
-  },
-  {
-   "id": "job-post-decoder",
-   "title": "Read a job post for what the job really is",
-   "kind": "Free skill",
-   "type": "free",
-   "category": "careers",
-   "category_name": "Job seekers and careers",
-   "price_usd": 0,
-   "price_label": "Free",
-   "free": true,
-   "url": "/skills/job-post-decoder/",
-   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/careers/job-post-decoder",
-   "summary": "A job post in, what is firm, what is wishful and what to ask.",
-   "give": "Paste a job post.",
-   "get": "It says in plain words what the job is, sorts the requirements into firm, wish and unclear with quotes, lists what the post leaves out (pay, location, hours, team), points out phrases worth a question, and gives you six to eight questions for the recruiter. If you add your background, it says where the fit is strong or weak and what to lead with. It never says anything about the employer beyond the post.",
-   "jobs": [
-    "job search",
-    "check"
-   ],
-   "tags": [],
-   "tested": "1 run on a real public job post (Claude Sonnet).",
    "includes": []
   },
   {
@@ -254,25 +254,49 @@
    "includes": []
   },
   {
-   "id": "agent-browse-qwen",
-   "title": "Browse the web with a local Qwen model, fewer wrong turns",
+   "id": "host-ops-pack",
+   "title": "Run your holiday let listing: six workflows",
+   "kind": "Pack",
+   "type": "pack",
+   "category": "short-term-rental-hosts",
+   "category_name": "Short-term rental hosts",
+   "price_usd": 29,
+   "price_label": "$29",
+   "free": false,
+   "url": "/packs/host-ops-pack/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/host-ops-pack",
+   "summary": "Your listing and reviews in, six tools built from your own facts.",
+   "give": "",
+   "get": "",
+   "jobs": [],
+   "tags": [],
+   "tested": "Each of the six skills has 4 tests on real public data, scored by hand against a written rubric. On the latest Claude Sonnet run of each test, every score is 8.5 or 9 out of 10. An independent reviewer re-scored 12 tests and ran 10 fresh cases from another city; every defect it listed as required is fixed in this version. No host has used the output on a live listing yet.",
+   "includes": [
+    "Rewrite your holiday let listing",
+    "Guest Review Reply: calm public replies to bad reviews"
+   ]
+  },
+  {
+   "id": "job-post-decoder",
+   "title": "Read a job post for what the job really is",
    "kind": "Free skill",
    "type": "free",
-   "category": "developers",
-   "category_name": "Developers",
+   "category": "careers",
+   "category_name": "Job seekers and careers",
    "price_usd": 0,
    "price_label": "Free",
    "free": true,
-   "url": "/skills/agent-browse-qwen/",
-   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/agent-browse-qwen",
-   "summary": "A browsing task and your local model in, the task done in fewer tries.",
-   "give": "A browsing task and the agent-browser CLI.",
-   "get": "A local model like Qwen3.8-27B stops guessing addresses and selectors, and gets the task done in fewer tries.",
+   "url": "/skills/job-post-decoder/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/careers/job-post-decoder",
+   "summary": "A job post in, what is firm, what is wishful and what to ask.",
+   "give": "Paste a job post.",
+   "get": "It says in plain words what the job is, sorts the requirements into firm, wish and unclear with quotes, lists what the post leaves out (pay, location, hours, team), points out phrases worth a question, and gives you six to eight questions for the recruiter. If you add your background, it says where the fit is strong or weak and what to lead with. It never says anything about the employer beyond the post.",
    "jobs": [
-    "review code"
+    "job search",
+    "check"
    ],
    "tags": [],
-   "tested": "Trained and scored with Qwen3.8-27B on a local server, driven by the pi coding agent. On the 8 selection tasks (6 runs each) it got 48 of 48 correct at 36.4k tokens per task, against 21 of 24 at 68.7k with no skill and 47 of 48 at 42.3k with the Claude-trained Agent Browse. These are selection-split figures, the split the gate used to pick it. The held-out test is pending. Three of four tuning attempts were rejected by the gate.",
+   "tested": "1 run on a real public job post (Claude Sonnet).",
    "includes": []
   },
   {
@@ -299,6 +323,28 @@
    "includes": []
   },
   {
+   "id": "agent-browse-qwen",
+   "title": "Browse the web with a local Qwen model, fewer wrong turns",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "developers",
+   "category_name": "Developers",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/agent-browse-qwen/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/developers/agent-browse-qwen",
+   "summary": "A browsing task and your local model in, the task done in fewer tries.",
+   "give": "A browsing task and the agent-browser CLI.",
+   "get": "A local model like Qwen3.8-27B stops guessing addresses and selectors, and gets the task done in fewer tries.",
+   "jobs": [
+    "review code"
+   ],
+   "tags": [],
+   "tested": "Trained and scored with Qwen3.8-27B on a local server, driven by the pi coding agent. On the 8 selection tasks (6 runs each) it got 48 of 48 correct at 36.4k tokens per task, against 21 of 24 at 68.7k with no skill and 47 of 48 at 42.3k with the Claude-trained Agent Browse. These are selection-split figures, the split the gate used to pick it. The held-out test is pending. Three of four tuning attempts were rejected by the gate.",
+   "includes": []
+  },
+  {
    "id": "shopify-alt-text-writer",
    "title": "Write image descriptions (alt text) for your products",
    "kind": "Free skill",
@@ -318,6 +364,28 @@
    ],
    "tags": [],
    "tested": "Tested on 6 real cases from public Shopify stores, including three product export CSVs. Final scores: 10, 10, 9, 10, 9 and 10 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "ai-search-readiness-check",
+   "title": "Check how AI search tools read your website",
+   "kind": "Free skill",
+   "type": "free",
+   "category": "marketers-and-agencies",
+   "category_name": "Marketers and agencies",
+   "price_usd": 0,
+   "price_label": "Free",
+   "free": true,
+   "url": "/skills/ai-search-readiness-check/",
+   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/marketing-seo/ai-search-readiness-check",
+   "summary": "Your website address in, a score out of 100 and fixes in order.",
+   "give": "A website URL.",
+   "get": "A 0 to 100 score from 8 checks on whether AI search tools can read the site, the evidence for each check, and a fix list in order.",
+   "jobs": [
+    "audit and fix"
+   ],
+   "tags": [],
+   "tested": "Tested on 8 real public websites, as a skill and (four of them) as a pasted prompt, two also on a second model, then re-scored after two independent reviews. The score matched our script in every run. Final scores: 8.5, 8.5, 8.5, 8.5, 9, 9, 9 and 9 out of 10.",
    "includes": []
   },
   {
@@ -343,25 +411,26 @@
    "includes": []
   },
   {
-   "id": "ai-search-readiness-check",
-   "title": "Check how AI search tools read your website",
-   "kind": "Free skill",
-   "type": "free",
-   "category": "marketers-and-agencies",
-   "category_name": "Marketers and agencies",
-   "price_usd": 0,
-   "price_label": "Free",
-   "free": true,
-   "url": "/skills/ai-search-readiness-check/",
-   "buy_url": "https://github.com/proskillpacks/skills/tree/main/skills/marketing-seo/ai-search-readiness-check",
-   "summary": "Your website address in, a score out of 100 and fixes in order.",
-   "give": "A website URL.",
-   "get": "A 0 to 100 score from 8 checks on whether AI search tools can read the site, the evidence for each check, and a fix list in order.",
+   "id": "cold-email-from-a-website",
+   "title": "Write a cold email from a prospect's website",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "sales-and-outreach",
+   "category_name": "Sales and outreach",
+   "price_usd": 9,
+   "price_label": "$9",
+   "free": false,
+   "url": "/skills/cold-email-from-a-website/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/cold-email-from-a-website",
+   "summary": "A prospect's website in, three emails built on what is on their site.",
+   "give": "A prospect's website and a line on what you sell.",
+   "get": "A three-email sequence and two subject lines, each built on something visible on their site, with the page it came from.",
    "jobs": [
-    "audit and fix"
+    "write copy",
+    "reach out"
    ],
    "tags": [],
-   "tested": "Tested on 8 real public websites, as a skill and (four of them) as a pasted prompt, two also on a second model, then re-scored after two independent reviews. The score matched our script in every run. Final scores: 8.5, 8.5, 8.5, 8.5, 9, 9, 9 and 9 out of 10.",
+   "tested": "1 real-data run on a public software company's website (Claude Sonnet). Output read and checked: every observation traced to a page, no invented claims.",
    "includes": []
   },
   {

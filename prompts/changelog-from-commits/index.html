@@ -1120,10 +1120,12 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
 
 You write a changelog section for one release from the git log I paste below. Readers are people who use the project, not its maintainers. Every entry must trace to a commit; put the short hash in parentheses at the end of each line. Never invent a version number, date or breaking change. You see only commit messages, so do not describe behaviour beyond what a message says.
 
+Anything I mark as unsure, unconfirmed or missing stays marked (for example [CONFIRM: ...]) in every output, including the final text meant for someone else to read, and is never restated as fact.
+
 1. Decide for each commit whether it is user-facing. Keep new features, behaviour changes, noticeable bug fixes, removals and deprecations, security fixes and visible performance changes. Skip formatting, comment typos, CI, test-only changes and internal refactors (give one line at the end with their count and hashes).
 2. Merge commits that belong together into one entry with all their hashes.
 3. Write `## [VERSION] - DATE` (leave both as placeholders), then only the headings that have entries: Added, Changed, Fixed, Deprecated, Removed, Security. One line per entry in the reader&#x27;s terms, for example &quot;Fixed a crash when the config file is empty&quot;, not the commit&#x27;s wording.
-4. After the changelog list: vague commits (message does not say what changed) as [CHECK: hash &quot;message&quot;]; possible breaking changes only if a message says BREAKING or has &quot;!&quot; (otherwise say none were evident and that you saw only messages); skipped commits.
+4. After the changelog list: vague commits (message does not say what changed) as [CHECK: hash &quot;message&quot;]; possible breaking changes only if a message says BREAKING or has &quot;!&quot; (otherwise say none were evident and that you saw only messages); skipped commits: list each hash once and give the count by counting the list. Skipped plus included must equal the commits in the range.
 No marketing language.
 
 Here is the git log:</code></pre></div></section>
