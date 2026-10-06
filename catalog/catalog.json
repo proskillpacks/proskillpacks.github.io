@@ -467,15 +467,15 @@
    "free": false,
    "url": "/skills/candidate-submission-write-up/",
    "buy_url": "https://proskillpacks.gumroad.com/l/candidate-submission-write-up",
-   "summary": "Write the client submission for a candidate, claiming only what the call showed.",
+   "summary": "Write the client submission for a candidate, with each must-have marked shown on the call or claimed on the CV.",
    "give": "Paste the client's job spec, the candidate's CV and your screening-call notes with the name removed.",
-   "get": "A client write-up with a headline fit, each must-have marked SHOWN, CLAIMED, NOT MET or NOT DISCUSSED with the quoted source line, pay and notice exactly as stated, availability and one honest concern, plus a short summary for the candidate and a check list for you. Works as a SKILL.md and as a paste-in prompt for ChatGPT.",
+   "get": "A client write-up with a headline fit, each must-have marked SHOWN on the call, CLAIMED on the CV, NOT MET or NOT DISCUSSED with a quoted source line, pay and notice exactly as stated, availability and one honest concern, plus a short summary for the candidate and a check list for you. Works as a SKILL.md and as a paste-in prompt for ChatGPT. Read it before it goes to a client.",
    "jobs": [
     "hire",
     "write docs"
    ],
    "tags": [],
-   "tested": "2 invented cases (one clean, one with a CV that claims more than the call showed), each run on Claude Sonnet and gpt-5.6-luna, every output read against its sources. Fixed once and re-run. Not tested on real client work.",
+   "tested": "2 invented cases (one clean, one with a CV that claims more than the call showed), each run on Claude Sonnet and gpt-5.6-luna, every output read against its sources. A later free ChatGPT run on the harder case mislabelled one must-have, so the rules are being tightened and re-tested. Not tested on real client work.",
    "includes": []
   },
   {
