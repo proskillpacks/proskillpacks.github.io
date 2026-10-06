@@ -475,7 +475,7 @@
     "write docs"
    ],
    "tags": [],
-   "tested": "2 invented cases (one clean, one with a CV that claims more than the call showed), each run on Claude Sonnet and gpt-5.6-luna, every output read against its sources. A later free ChatGPT run on the harder case mislabelled one must-have, so the rules are being tightened and re-tested. Not tested on real client work.",
+   "tested": "2 invented cases (one clean, one with a CV that claims more than the call showed), each on Claude Sonnet and gpt-5.6-luna, every output read against its sources. A later free ChatGPT run mislabelled one must-have, so we tightened the rules and re-ran 3 cases on gpt-5.6-luna, the model behind ChatGPT's free version, and read every label against the sources: no slip. Small test on invented cases, not real client work. Read it before it goes to a client.",
    "includes": []
   },
   {
