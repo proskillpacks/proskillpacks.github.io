@@ -80,9 +80,7 @@
 - [Check a data file before you rely on it](https://proskillpacks.github.io/skills/csv-profile-and-sanity-check/) (Free): A CSV file in, a profile of every column and the odd rows flagged.
 
 ## Job seekers and careers
-- [Client write-up from a CV and your call notes](https://proskillpacks.github.io/skills/candidate-submission-write-up/) ($19): Write the client submission for a candidate, with each must-have marked shown on the call or claimed on the CV.
 - [Read a job post for what the job really is](https://proskillpacks.github.io/skills/job-post-decoder/) (Free): A job post in, what is firm, what is wishful and what to ask.
-- [Company brief and first email for recruiters](https://proskillpacks.github.io/skills/recruiter-bd-brief/) ($19): Get a one-page brief on a company and a short first email to its hiring manager.
 
 ## Sales and outreach
 - [Follow-up email and CRM note from your call notes](https://proskillpacks.github.io/skills/after-call-follow-up/) ($19): Turn your sales call notes into the follow-up you would actually send.
