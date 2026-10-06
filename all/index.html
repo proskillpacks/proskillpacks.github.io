@@ -1202,7 +1202,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
     cards.forEach(function (c) { var ok = words.every(function (w) { return c.dataset.s.indexOf(w) !== -1; }) && (!mode || (mode === 'badge' ? c.dataset.b === '1' : (mode === 'free') === (c.dataset.f === '1'))); c.hidden = !ok; if (ok) n++; });
     grps.forEach(function (g) {
       var vis = Array.prototype.slice.call(g.querySelectorAll('.dc:not([hidden])')), gr = g.querySelector('.dgrid'), pl = g.querySelector('.pl');
-      g.hidden = !g.querySelector('.dc:not([hidden]), .fstart li:not([hidden])');
+      g.hidden = g.querySelector('.dc, .fstart li') ? !g.querySelector('.dc:not([hidden]), .fstart li:not([hidden])') : (words.length > 0 || mode !== '');   // a group with no card shows its rebuild line until someone searches or filters
       var fs = g.querySelector('.fstart'); if (fs) fs.hidden = !fs.querySelector('li:not([hidden])');
       if (gr) gr.setAttribute('data-cols', (vis.length > 1 && vis.length % 3 === 1 && vis.length % 4 !== 1) ? '4' : '3');
       Array.prototype.forEach.call(g.querySelectorAll('.dc.feat'), function (c) { c.classList.remove('feat'); c.style.order = ''; var l = c.querySelector('.feat-l'); if (l) l.remove(); });
