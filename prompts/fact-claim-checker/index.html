@@ -1148,6 +1148,8 @@ details.evb2[open] > summary { margin-bottom: 0.7rem; }
 .nfbox .ogw { margin: 0.6rem 0 0.9rem; }
 .nfpaid { margin: 0 0 2rem; }
 .nfpaid h2 { margin: 0 0 0.6rem; font-size: 1.1rem; }
+.sitenav .ns, .brand nav .ns { display: none; }
+@media (max-width: 40rem) { .brand nav .nl, .sitenav .nl { display: none; } .brand nav .ns, .sitenav .ns { display: inline; } .brand nav { overflow-x: visible; gap: 0.2rem 0.9rem; } }
 .refundnote { margin-left: 0.6rem; font-size: 0.9rem; }
 
 @media (min-width: 56.01rem) { .allgrp .dgrid.dgrid.dgrid.dgrid.dgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
@@ -1192,7 +1194,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
     <div class="brand">
       <a href="/"><img src="/assets/avatar.png" alt="Pro Skill Packs logo" width="44" height="44"></a>
       <a class="name" href="/">PRO SKILL PACKS</a>
-      <nav aria-label="Main"><a href="/all/">All jobs</a><a href="/free/">Free samples</a><a href="/how-we-test/">Trust</a><a href="/study/">Research</a><a href="/request/">Tell us the job</a></nav>
+      <nav aria-label="Main"><a href="/all/"><span class="nl">All jobs</span><span class="ns">Jobs</span></a><a href="/free/"><span class="nl">Free samples</span><span class="ns">Free</span></a><a href="/how-we-test/">Trust</a><a href="/study/">Research</a><a href="/request/"><span class="nl">Tell us the job</span><span class="ns">Ask us</span></a></nav>
     </div>
     <p class="crumbs"><a href="/">Home</a> / <a href="/prompts/">Prompts</a></p>
     <h1>Fact-check a draft: claim checker prompt for any chatbot</h1>
