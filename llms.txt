@@ -58,7 +58,7 @@
 - [Write a scope of work before you start](https://proskillpacks.github.io/skills/scope-of-work-builder/) ($5): A client brief in, deliverables, milestones and a payment schedule.
 
 ## Short-term rental hosts
-- [Reply to a bad guest review without making it worse](https://proskillpacks.github.io/skills/guest-review-reply/) ($15): A guest review in, a true public reply and a private to-do list.
+- [Reply to a bad guest review without making it worse](https://proskillpacks.github.io/skills/guest-review-reply/) ($15): A guest review in, a true public reply, a private message and a to-do list.
 - [Run your holiday let listing: six workflows](https://proskillpacks.github.io/packs/host-ops-pack/) ($29): Your listing and reviews in, six tools built from your own facts.
 - [Rewrite your holiday let listing](https://proskillpacks.github.io/skills/listing-rewriter/) ($5): Your listing text in, three titles and a description from your own facts.
 
