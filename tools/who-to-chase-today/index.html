@@ -754,6 +754,9 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .ct-out li.done { opacity: 0.65; border-left-color: #b9c4bd; }
 .ct-out li.done b { text-decoration: line-through; }
 .ct-out .bm { margin-top: 0.8rem; }
+.ct-paid { background: #fff; border: 2px solid var(--pine); border-radius: 14px; padding: 0.9rem 1.1rem; margin: 1.2rem 0 0; max-width: 52rem; }
+.ct-paid p { margin: 0 0 0.7rem; }
+.ct-paid .cta { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; align-items: center; }
 .ct-next { background: #eef7e0; border: 1px solid #cfe3a6; border-radius: 14px; padding: 1.1rem 1.2rem; margin: 1.6rem 0 0; max-width: 52rem; }
 .ct-next h2 { margin: 0 0 0.4rem; font-size: 1.3rem; }
 .ct-next p { margin: 0 0 0.8rem; }
@@ -1235,6 +1238,9 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
 </script>
 </head>
 <body>
+<!--lo-->
+<div class="lobar" id="lobar"><span class="lo-l">First 10 buyers pay half.</span><span class="lo-s">First 10 buyers pay half.</span> <a href="/all/?paid">See paid workflows</a><button type="button" id="lobarx" aria-label="Close this message">&times;</button></div><script>(function(){var b=document.getElementById("lobar");try{if(localStorage.getItem("lobar")==="1"){b.remove();return}}catch(e){}document.getElementById("lobarx").onclick=function(){b.remove();try{localStorage.setItem("lobar","1")}catch(e){}}})()</script>
+<!--/lo-->
 <header class="hero">
   <div class="wrap">
     <div class="brand">
@@ -1290,6 +1296,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
 <p class="hint">Nothing you type leaves your browser. It is not sent or counted. It is saved on this device only if you tick Keep my list on this device. There is no AI in this tool.</p>
 <div class="ct-out" id="ct-out" aria-live="polite" hidden></div>
 </section>
+<aside class="ct-paid"><p><b>Know who to chase? Get the messages written:</b> the Follow-Up Ladder writes four messages for a lead that went quiet.</p><div class="cta"><a class="btn btn-lime" href="https://proskillpacks.gumroad.com/l/client-desk/FIRST10?utm_source=site&amp;utm_medium=other&amp;utm_campaign=client-desk" data-go="buy/client-desk">Client desk, 6 tools, $29</a><a href="https://proskillpacks.gumroad.com/l/follow-up-ladder/FIRST10?utm_source=site&amp;utm_medium=other&amp;utm_campaign=follow-up-ladder" data-go="buy/follow-up-ladder">Just the Follow-Up Ladder, $9</a></div></aside>
 <section id="next"><div class="ct-next"><h2>Want the full desk?</h2>
 <p><b>Get the full desk free:</b> the spreadsheet for Excel or Google Sheets that keeps the history of who you chased and what you said, plus a prompt that drafts each message from your notes.</p>
 <div class="cta"><a class="btn btn-lime" href="/go/buy/follow-up-desk/">Get the full desk free</a><a href="/free/follow-up-desk/">What is in it</a></div></div></section>
@@ -1315,6 +1322,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
 <p><b>Limits.</b> Public holidays count as working days. The page does not read your notes: you say who promised what. It keeps your list only if you tick Keep my list on this device, and only in that browser. It does not keep the history of what you sent. The spreadsheet does.</p></div></section>
 <section id="faq"><h2>Questions people ask</h2><div class="prose fdp"><details class="faq"><summary>Does anything I type leave my browser?</summary><p>No. The list is worked out by a script that runs on this page. Nothing is sent to us or anyone else. If you tick Keep my list on this device, a copy is saved in this browser on this device only, and Forget my list deletes it. If you do not tick it, nothing is saved and the list is gone when you close the tab. The site counts page visits with counter.dev; it does not see what you type.</p></details><details class="faq"><summary>Will it remember my list tomorrow?</summary><p>Only if you ask it to. Tick Keep my list on this device and the list is saved in this browser, on this device, and shown again the next time you open the page. Tick Done today on a person you have chased and their last contact becomes today, so tomorrow&#x27;s list is right without editing. Forget my list removes the saved copy.</p></details><details class="faq"><summary>Can I move my list into the spreadsheet?</summary><p>Yes. Download my list as CSV gives you the columns of the Chase list tab in the follow-up desk spreadsheet, with dates written as 2026-10-07 so Excel and Google Sheets read them.</p></details><details class="faq"><summary>Do I need AI for this?</summary><p>No. There is no AI in this tool. It follows fixed rules, so the same list gives the same answer every day.</p></details><details class="faq"><summary>What date formats work?</summary><p>7 Oct, 7 October 2026, 2026-10-07, 7/10/2026 (day first) and 7.10.26. A date without a year gets this year. If a date cannot be read, the row goes under Fix these first.</p></details><details class="faq"><summary>How does it decide who to chase?</summary><p>In this order: someone you must not contact is never chased. A date you set (not before the 20th) keeps them off the list until then. What you owe them comes first. Then what they promised, once the date has passed with nothing since. Then a date you set that has come. Last, people who have been quiet longer than the wait for their stage.</p></details><details class="faq"><summary>What are the waits?</summary><p>The number of working days of silence before someone comes up, for each stage. Pick your work under Your rules and the usual waits are filled in. Change any of them, add your own stages, or count calendar days instead.</p></details><details class="faq"><summary>Why is someone not on the list?</summary><p>Each person in Not yet shows the next date and the reason. People left alone on purpose (do not contact, closed deals, stages you never chase) are listed under Left alone.</p></details></div></section>
 <section><h2>More</h2><div class="prose"><ul class="links"><li><a href="/free/follow-up-desk/">The follow-up desk: what is in it and how it was tested</a></li><li><a href="/sales/">Sales emails you can copy</a></li><li><a href="/recruiters/">For recruiters</a></li></ul></div></section>
+<aside class="ct-paid"><p><b>Know who to chase? Get the messages written:</b> the Follow-Up Ladder writes four messages for a lead that went quiet.</p><div class="cta"><a class="btn btn-lime" href="https://proskillpacks.gumroad.com/l/client-desk/FIRST10?utm_source=site&amp;utm_medium=other&amp;utm_campaign=client-desk" data-go="buy/client-desk">Client desk, 6 tools, $29</a><a href="https://proskillpacks.gumroad.com/l/follow-up-ladder/FIRST10?utm_source=site&amp;utm_medium=other&amp;utm_campaign=follow-up-ladder" data-go="buy/follow-up-ladder">Just the Follow-Up Ladder, $9</a></div></aside>
 </div></main>
 <script>/* Who to chase today: the same rules as the follow-up desk spreadsheet (products/follow-up-desk/build/build_sheets.py), in plain JavaScript.
    Shared by the page and by chase_test.js. Dates are whole days since 1 Jan 1970 (UTC), so no time zone can shift a day.
