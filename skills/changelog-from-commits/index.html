@@ -319,6 +319,8 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .jump a:hover, .jump a:focus-visible { border-color: var(--pine); }
 .jump button.tog { font: inherit; font-size: 0.93rem; cursor: pointer; padding: 0.4rem 0.9rem; border: 1px solid var(--pine); background: #fff; color: var(--pine); border-radius: 999px; }
 .jump button.tog[aria-pressed="true"] { background: var(--pine); color: var(--cream); }
+@media (max-width: 40rem) { .jump { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 0.2rem; margin-right: -16px; padding-right: 16px; }
+  .jump::-webkit-scrollbar { display: none; } .jump > a, .jump > .frow { flex: none; white-space: nowrap; } }
 .jump i { font-style: normal; color: var(--slate); margin-left: 0.2rem; }
 .sr { position: absolute; left: -9999px; }
 .hsearch { margin: 1.6rem 0 0; max-width: 40rem; }
@@ -1093,14 +1095,18 @@ details.evb2[open] > summary { margin-bottom: 0.7rem; }
 .pc .ba2 ul { padding-left: 1.1rem; }
 @media (max-width: 40rem) { .pc .ba2 { grid-template-columns: 1fr; } }
 
-.srun { margin: 0 0 2.2rem; } .srun .sr-fig { margin: 0.6rem 0 0.8rem; max-width: 720px; }
+.srun { margin: 0 0 2.2rem; } .srun .sr-fig { margin: 0.6rem 0 0.8rem; max-width: 520px; } .srun .sr-box { position: relative; }
+.srun .sr-play { position: absolute; left: 50%; top: 0.7rem; transform: translateX(-50%); white-space: nowrap; font: inherit; font-weight: 700; cursor: pointer; padding: 0.55rem 1.1rem; border-radius: 999px; border: 0; background: var(--lime); color: var(--pine); box-shadow: 0 2px 8px rgba(0,0,0,.3); }
 .srun .sr-fig img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 10px; }
 .srun .sr-fig figcaption { font-size: 0.88rem; color: var(--slate); margin-top: 0.4rem; }
 .srun details.sr-full { max-width: 720px; margin: 0.4rem 0 0; }
 .srun details.sr-full summary { cursor: pointer; font-weight: 700; }
 .srun .sr-txt { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.95rem; line-height: 1.5; background: #fff; border: 1px solid var(--rule); border-radius: 10px; padding: 0.9rem 1.1rem; margin-top: 0.5rem; }
-.srsm { margin: 1rem 0 0.4rem; max-width: 360px; } .srsm img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 8px; }
-.srsm a.srl { display: inline-block; margin-top: 0.3rem; font-weight: 700; }
+.srsm { margin: 0.8rem 0 0.2rem; } .srsm a.srl { font-weight: 700; }
+
+.gtk2 { margin: 0 0 2.2rem; } .gtk2 .prose p { max-width: 46rem; }
+.hero.pc .buyb .pcsure.proofline { margin: 0.9rem 0 0; }
+.hero.pc .buyb { padding-bottom: 1.1rem; }
 
 .seewhat { margin: 1.5rem 0; }
 .privnote { background: #f4f7f3; border: 1px solid var(--rule); border-radius: 10px; padding: 0.7rem 1rem; margin: 0 0 0.8rem; max-width: 46rem; }
@@ -1219,7 +1225,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
 <p>[CHECK: 98bd4cd &quot;deps: proxy-addr@^2.0.8 (#7474)&quot;] The message gives no reason for the bump.<br>Skipped commits: 11</p></blockquote></div></section>
 <section><h2>See it run</h2><figure class="demo"><img src="/assets/demos/changelog-from-commits-last.png" data-gif="/assets/demos/changelog-from-commits.gif" alt="Animated demo of Write a changelog from your commits on a real example: the input goes in and the finished result appears. The still shows the final result." width="1200" height="675" loading="lazy" decoding="async"><button type="button" class="demobtn" aria-label="Play the demo animation for Write a changelog from your commits">Play</button></figure></section>
 <section><h2>What it does</h2><div class="prose"><p>Give it a commit range in a repo, or paste <code>git log</code> output. You get a changelog section in Keep a Changelog style, written for the people who use the project, with the commit hash behind every line. Vague commits and possible breaking changes are flagged instead of guessed.</p></div></section>
-<section class="ev" id="evidence"><h2>The evidence</h2><p>1 real-data run on the public Express repository (Claude Sonnet, 15 commits). Every entry matched a commit message; the one vague commit was flagged.</p><details class="evmore"><summary>More on how it was tested</summary><p>We checked each entry against the commit bodies: the CVE ids and the body-parser behaviour change are in the messages, nothing was invented, and the one vague commit was flagged.</p></details><p class="evlink"><a href="/how-we-test/">Read the full test</a></p></section>
+<section class="ev" id="evidence"><h2>The evidence</h2><p>1 real-data run on the public Express repository (Claude, 15 commits). Every entry matched a commit message; the one vague commit was flagged.</p><details class="evmore"><summary>More on how it was tested</summary><p>We checked each entry against the commit bodies: the CVE ids and the body-parser behaviour change are in the messages, nothing was invented, and the one vague commit was flagged.</p></details><p class="evlink"><a href="/how-we-test/">Read the full test</a></p></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It sees commit messages, and diffs only when it can.</li><li>Breaking changes only from evidence.</li><li>It writes text; it does not tag or publish.</li></ul></div></section>
 <section class="faq" id="questions"><h2>Questions</h2><details><summary>Questions or a problem?</summary><div><p>Use <a href="/contact/">the contact page</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result. A repo with git, or pasted <code>git log</code> output.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>Using it with an AI assistant</b></p><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>changelog-from-commits</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/developers/changelog-from-commits).</li><li>Put the <code>changelog-from-commits</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Write the changelog for everything since the last tag.&quot;. The skill loads by itself.</li></ol></div></div></details></section>
 <section class="endcta"><a class="btn btn-pine" href="/go/repo/changelog-from-commits/?from=skill">Get the files from GitHub (for developers)</a></section>

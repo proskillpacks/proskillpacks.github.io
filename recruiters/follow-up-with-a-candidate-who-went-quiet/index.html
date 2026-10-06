@@ -358,6 +358,8 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .jump a:hover, .jump a:focus-visible { border-color: var(--pine); }
 .jump button.tog { font: inherit; font-size: 0.93rem; cursor: pointer; padding: 0.4rem 0.9rem; border: 1px solid var(--pine); background: #fff; color: var(--pine); border-radius: 999px; }
 .jump button.tog[aria-pressed="true"] { background: var(--pine); color: var(--cream); }
+@media (max-width: 40rem) { .jump { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 0.2rem; margin-right: -16px; padding-right: 16px; }
+  .jump::-webkit-scrollbar { display: none; } .jump > a, .jump > .frow { flex: none; white-space: nowrap; } }
 .jump i { font-style: normal; color: var(--slate); margin-left: 0.2rem; }
 .sr { position: absolute; left: -9999px; }
 .hsearch { margin: 1.6rem 0 0; max-width: 40rem; }
@@ -1132,14 +1134,18 @@ details.evb2[open] > summary { margin-bottom: 0.7rem; }
 .pc .ba2 ul { padding-left: 1.1rem; }
 @media (max-width: 40rem) { .pc .ba2 { grid-template-columns: 1fr; } }
 
-.srun { margin: 0 0 2.2rem; } .srun .sr-fig { margin: 0.6rem 0 0.8rem; max-width: 720px; }
+.srun { margin: 0 0 2.2rem; } .srun .sr-fig { margin: 0.6rem 0 0.8rem; max-width: 520px; } .srun .sr-box { position: relative; }
+.srun .sr-play { position: absolute; left: 50%; top: 0.7rem; transform: translateX(-50%); white-space: nowrap; font: inherit; font-weight: 700; cursor: pointer; padding: 0.55rem 1.1rem; border-radius: 999px; border: 0; background: var(--lime); color: var(--pine); box-shadow: 0 2px 8px rgba(0,0,0,.3); }
 .srun .sr-fig img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 10px; }
 .srun .sr-fig figcaption { font-size: 0.88rem; color: var(--slate); margin-top: 0.4rem; }
 .srun details.sr-full { max-width: 720px; margin: 0.4rem 0 0; }
 .srun details.sr-full summary { cursor: pointer; font-weight: 700; }
 .srun .sr-txt { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.95rem; line-height: 1.5; background: #fff; border: 1px solid var(--rule); border-radius: 10px; padding: 0.9rem 1.1rem; margin-top: 0.5rem; }
-.srsm { margin: 1rem 0 0.4rem; max-width: 360px; } .srsm img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 8px; }
-.srsm a.srl { display: inline-block; margin-top: 0.3rem; font-weight: 700; }
+.srsm { margin: 0.8rem 0 0.2rem; } .srsm a.srl { font-weight: 700; }
+
+.gtk2 { margin: 0 0 2.2rem; } .gtk2 .prose p { max-width: 46rem; }
+.hero.pc .buyb .pcsure.proofline { margin: 0.9rem 0 0; }
+.hero.pc .buyb { padding-bottom: 1.1rem; }
 
 .seewhat { margin: 1.5rem 0; }
 .privnote { background: #f4f7f3; border: 1px solid var(--rule); border-radius: 10px; padding: 0.7rem 1rem; margin: 0 0 0.8rem; max-width: 46rem; }
@@ -1297,7 +1303,7 @@ I will close your application for <span class="br">[ROLE]</span> for now so I am
 <span class="br">[YOUR NAME]</span></span></span></li></ul></section>
 <section id="timing"><h2>When to send them</h2><div class="prose"><ul><li>A candidate in a live stage (submitted, interview booked, interviewed) is due 3 working days after the last contact.</li><li>Two tries, then close. Add a date to reopen if it is a candidate you want to keep.</li><li>For anyone mid-process, a fixed rhythm helps: one recruiter says candidates in interview get an update on set days of the week, whether or not there is news.</li></ul></div></section>
 <section id="avoid"><h2>What to avoid</h2><div class="prose"><ul><li>Chasing without news. Give them something true.</li><li>Writing &quot;just checking in&quot; with no question.</li><li>Making them feel guilty for being quiet.</li><li>Using a message that sounds like a template. Replies drop when it does.</li><li>Keeping going after two tries. It reads as pressure.</li></ul></div></section><div class="card fol" data-fol="page"><p class="fol-t"><b>New free workflows by email.</b> A few a month. Unsubscribe any time.</p><a class="btn btn-lime" data-nolo="1" data-go="follow/page" href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=other&amp;utm_campaign=subscribe" rel="noopener">Follow</a><p class="fol-s">Handled by Gumroad. See our <a href="/privacy/">privacy page</a>.</p></div>
-<section id="try"><h2>Want the messages written for you?</h2><div class="wkit nfbox"><span class="free">$19</span><h3>Follow-up email and CRM note from your call notes</h3><dl class="ogw tl3"><dt>The problem:</dt><dd>After a sales call I have to write the follow-up and the CRM note, and I am never sure exactly what was agreed.</dd><dt>How you use it:</dt><dd>Paste the text from the zip into ChatGPT or Claude, then add your call notes.</dd><dt>What you get back:</dt><dd>A follow-up email, a 4-line CRM note and a list of what is still unknown, using only what was said and agreed.</dd></dl><div class="cta"><a class="btn btn-lime" href="/skills/after-call-follow-up/">See what you get, $19</a> <b class="refundnote">30-day refund</b></div></div></section>
+<section id="try"><h2>Want the messages written for you?</h2><div class="wkit nfbox"><span class="free">$19</span><h3>Follow-up email and CRM note from your call notes</h3><dl class="ogw tl3"><dt>The problem:</dt><dd>After a sales call I have to write the follow-up and the CRM note, and I am never sure exactly what was agreed.</dd><dt>What you get back:</dt><dd>A follow-up email, a 4-line CRM note and a list of what is still unknown, using only what was said and agreed.</dd></dl><div class="cta"><a class="btn btn-lime" href="/skills/after-call-follow-up/">See what you get, $19</a> <b class="refundnote">30-day refund</b></div></div></section>
 <section id="faq"><h2>Questions people ask</h2><div class="prose"><h3>How long should I wait before chasing a candidate?</h3><p>Three working days of silence in a live process is a sensible gap. That is our advice.</p><h3>What if they have taken another job?</h3><p>Say congratulations, ask nothing more, and note the date. They may be a future client or a future candidate.</p><h3>Should I call them?</h3><p>Only if they have used phone with you. A text or email they can answer on their own time works better for someone who has a job.</p><h3>When do I stop?</h3><p>After two tries, send a closing note. If the role is live and they matter, set a date to try once more.</p></div></section>
 <section><h2>More</h2><div class="prose"><ul class="links"><li><a href="/recruiters/chasing-client-feedback-after-submitting-a-candidate/">Chasing client feedback after submitting a candidate</a></li><li><a href="/recruiters/keeping-not-now-clients-warm/">Keeping &quot;not now&quot; clients warm</a></li><li><a href="/recruiters/">Recruiters: all the pages</a></li></ul></div></section>
 <section id="related"><h2>Related pages</h2><div class="prose"><ul class="links"><li><a href="/recruiters/keeping-not-now-clients-warm/">Keeping &quot;not now&quot; clients warm without pestering them</a></li><li><a href="/recruiters/keeping-in-touch-with-candidates-you-did-not-place/">How to keep in touch with candidates you did not place</a></li><li><a href="/recruiters/chasing-client-feedback-after-submitting-a-candidate/">Recruiter follow up after submitting a candidate: chasing client feedback</a></li><li><a href="/recruiters/">All pages: Recruiters</a></li><li><a href="/guides/">Free templates and guides</a></li><li><a href="/free/">Free samples</a></li></ul></div></section></div></main>

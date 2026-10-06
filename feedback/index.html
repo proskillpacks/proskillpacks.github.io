@@ -349,6 +349,8 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .jump a:hover, .jump a:focus-visible { border-color: var(--pine); }
 .jump button.tog { font: inherit; font-size: 0.93rem; cursor: pointer; padding: 0.4rem 0.9rem; border: 1px solid var(--pine); background: #fff; color: var(--pine); border-radius: 999px; }
 .jump button.tog[aria-pressed="true"] { background: var(--pine); color: var(--cream); }
+@media (max-width: 40rem) { .jump { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 0.2rem; margin-right: -16px; padding-right: 16px; }
+  .jump::-webkit-scrollbar { display: none; } .jump > a, .jump > .frow { flex: none; white-space: nowrap; } }
 .jump i { font-style: normal; color: var(--slate); margin-left: 0.2rem; }
 .sr { position: absolute; left: -9999px; }
 .hsearch { margin: 1.6rem 0 0; max-width: 40rem; }
@@ -1123,14 +1125,18 @@ details.evb2[open] > summary { margin-bottom: 0.7rem; }
 .pc .ba2 ul { padding-left: 1.1rem; }
 @media (max-width: 40rem) { .pc .ba2 { grid-template-columns: 1fr; } }
 
-.srun { margin: 0 0 2.2rem; } .srun .sr-fig { margin: 0.6rem 0 0.8rem; max-width: 720px; }
+.srun { margin: 0 0 2.2rem; } .srun .sr-fig { margin: 0.6rem 0 0.8rem; max-width: 520px; } .srun .sr-box { position: relative; }
+.srun .sr-play { position: absolute; left: 50%; top: 0.7rem; transform: translateX(-50%); white-space: nowrap; font: inherit; font-weight: 700; cursor: pointer; padding: 0.55rem 1.1rem; border-radius: 999px; border: 0; background: var(--lime); color: var(--pine); box-shadow: 0 2px 8px rgba(0,0,0,.3); }
 .srun .sr-fig img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 10px; }
 .srun .sr-fig figcaption { font-size: 0.88rem; color: var(--slate); margin-top: 0.4rem; }
 .srun details.sr-full { max-width: 720px; margin: 0.4rem 0 0; }
 .srun details.sr-full summary { cursor: pointer; font-weight: 700; }
 .srun .sr-txt { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.95rem; line-height: 1.5; background: #fff; border: 1px solid var(--rule); border-radius: 10px; padding: 0.9rem 1.1rem; margin-top: 0.5rem; }
-.srsm { margin: 1rem 0 0.4rem; max-width: 360px; } .srsm img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 8px; }
-.srsm a.srl { display: inline-block; margin-top: 0.3rem; font-weight: 700; }
+.srsm { margin: 0.8rem 0 0.2rem; } .srsm a.srl { font-weight: 700; }
+
+.gtk2 { margin: 0 0 2.2rem; } .gtk2 .prose p { max-width: 46rem; }
+.hero.pc .buyb .pcsure.proofline { margin: 0.9rem 0 0; }
+.hero.pc .buyb { padding-bottom: 1.1rem; }
 
 .seewhat { margin: 1.5rem 0; }
 .privnote { background: #f4f7f3; border: 1px solid var(--rule); border-radius: 10px; padding: 0.7rem 1rem; margin: 0 0 0.8rem; max-width: 46rem; }

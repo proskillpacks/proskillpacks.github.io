@@ -358,6 +358,8 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .jump a:hover, .jump a:focus-visible { border-color: var(--pine); }
 .jump button.tog { font: inherit; font-size: 0.93rem; cursor: pointer; padding: 0.4rem 0.9rem; border: 1px solid var(--pine); background: #fff; color: var(--pine); border-radius: 999px; }
 .jump button.tog[aria-pressed="true"] { background: var(--pine); color: var(--cream); }
+@media (max-width: 40rem) { .jump { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 0.2rem; margin-right: -16px; padding-right: 16px; }
+  .jump::-webkit-scrollbar { display: none; } .jump > a, .jump > .frow { flex: none; white-space: nowrap; } }
 .jump i { font-style: normal; color: var(--slate); margin-left: 0.2rem; }
 .sr { position: absolute; left: -9999px; }
 .hsearch { margin: 1.6rem 0 0; max-width: 40rem; }
@@ -1132,14 +1134,18 @@ details.evb2[open] > summary { margin-bottom: 0.7rem; }
 .pc .ba2 ul { padding-left: 1.1rem; }
 @media (max-width: 40rem) { .pc .ba2 { grid-template-columns: 1fr; } }
 
-.srun { margin: 0 0 2.2rem; } .srun .sr-fig { margin: 0.6rem 0 0.8rem; max-width: 720px; }
+.srun { margin: 0 0 2.2rem; } .srun .sr-fig { margin: 0.6rem 0 0.8rem; max-width: 520px; } .srun .sr-box { position: relative; }
+.srun .sr-play { position: absolute; left: 50%; top: 0.7rem; transform: translateX(-50%); white-space: nowrap; font: inherit; font-weight: 700; cursor: pointer; padding: 0.55rem 1.1rem; border-radius: 999px; border: 0; background: var(--lime); color: var(--pine); box-shadow: 0 2px 8px rgba(0,0,0,.3); }
 .srun .sr-fig img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 10px; }
 .srun .sr-fig figcaption { font-size: 0.88rem; color: var(--slate); margin-top: 0.4rem; }
 .srun details.sr-full { max-width: 720px; margin: 0.4rem 0 0; }
 .srun details.sr-full summary { cursor: pointer; font-weight: 700; }
 .srun .sr-txt { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.95rem; line-height: 1.5; background: #fff; border: 1px solid var(--rule); border-radius: 10px; padding: 0.9rem 1.1rem; margin-top: 0.5rem; }
-.srsm { margin: 1rem 0 0.4rem; max-width: 360px; } .srsm img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 8px; }
-.srsm a.srl { display: inline-block; margin-top: 0.3rem; font-weight: 700; }
+.srsm { margin: 0.8rem 0 0.2rem; } .srsm a.srl { font-weight: 700; }
+
+.gtk2 { margin: 0 0 2.2rem; } .gtk2 .prose p { max-width: 46rem; }
+.hero.pc .buyb .pcsure.proofline { margin: 0.9rem 0 0; }
+.hero.pc .buyb { padding-bottom: 1.1rem; }
 
 .seewhat { margin: 1.5rem 0; }
 .privnote { background: #f4f7f3; border: 1px solid var(--rule); border-radius: 10px; padding: 0.7rem 1rem; margin: 0 0 0.8rem; max-width: 46rem; }
@@ -1291,7 +1297,7 @@ If you ever want to know what <span class="br">[ADDRESS]</span> would fetch now,
 <span class="br">[YOUR NAME]</span></span></span></li></ul></section>
 <section id="timing"><h2>When to send them</h2><div class="prose"><ul><li>Set a past client to &quot;due&quot; 90 days after the last time you spoke. Count calendar days, not working days.</li><li>An anniversary message counts as a contact, so the next one is 90 days after it, not 90 days after the sale.</li><li>If they ask you not to message them, mark them and stop. A reply counts as the start of the next 90 days.</li></ul></div></section>
 <section id="avoid"><h2>What to avoid</h2><div class="prose"><ul><li>Asking &quot;are you ready to sell?&quot; or &quot;are you thinking of moving?&quot;.</li><li>Sending the same wording each quarter. They will see it.</li><li>Quoting a price or a sale you have not checked.</li><li>Writing to someone who asked you to stop.</li><li>Mass-messaging with a first name inserted. If you could not say it to them in person, do not send it.</li></ul><p class="sub">Marketing messages follow rules on consent that differ by country. A message about their own home is not the same as a promotion, but check the rules where you work. Not legal advice.</p></div></section><div class="card fol" data-fol="page"><p class="fol-t"><b>New free workflows by email.</b> A few a month. Unsubscribe any time.</p><a class="btn btn-lime" data-nolo="1" data-go="follow/page" href="https://proskillpacks.gumroad.com/subscribe?utm_source=site&amp;utm_medium=other&amp;utm_campaign=subscribe" rel="noopener">Follow</a><p class="fol-s">Handled by Gumroad. See our <a href="/privacy/">privacy page</a>.</p></div>
-<section id="try"><h2>Want the messages written for you?</h2><div class="wkit nfbox"><span class="free">$9</span><h3>Follow up a lead that went quiet</h3><dl class="ogw tl3"><dt>The problem:</dt><dd>I sent a proposal and the lead has gone quiet.</dd><dt>How you use it:</dt><dd>Paste the text from the zip into ChatGPT or Claude, then add the history of the lead.</dd><dt>What you get back:</dt><dd>Four follow-ups with falling pressure, subject lines and the gaps between sends.</dd></dl><div class="cta"><a class="btn btn-lime" href="/skills/follow-up-ladder/">See what you get, $9</a> <b class="refundnote">30-day refund</b></div></div></section>
+<section id="try"><h2>Want the messages written for you?</h2><div class="wkit nfbox"><span class="free">$9</span><h3>Follow up a lead that went quiet</h3><dl class="ogw tl3"><dt>The problem:</dt><dd>I sent a proposal and the lead has gone quiet.</dd><dt>What you get back:</dt><dd>Four follow-ups with falling pressure, subject lines and the gaps between sends.</dd></dl><div class="cta"><a class="btn btn-lime" href="/skills/follow-up-ladder/">See what you get, $9</a> <b class="refundnote">30-day refund</b></div></div></section>
 <section id="faq"><h2>Questions people ask</h2><div class="prose"><h3>How often should I contact past clients?</h3><p>About every three months is a sensible rhythm. That is our advice, not a rule. Agents on r/realtors describe everything from a monthly card to a task that fires after a month of silence. We use 90 days as the default because it is a rhythm you can keep. Pick what you will actually keep up.</p><h3>Is it OK to text them?</h3><p>If they texted you or gave you their number to use, yes. Use the channel they used with you. Check the consent rules where you work for anything that reads as a promotion.</p><h3>What if I never wrote notes about them?</h3><p>Start with the next conversation. For old clients, use what is on the file: the date of completion and the address are enough for an anniversary message.</p><h3>What do I say if I have nothing to say?</h3><p>Say nothing. Wait for a real reason, such as the anniversary. A message with no reason is the salesy one.</p></div></section>
 <section><h2>More</h2><div class="prose"><ul class="links"><li><a href="/estate-agents/staying-in-touch-with-old-leads/">Staying in touch with old leads</a></li><li><a href="/estate-agents/follow-up-after-valuation-or-viewing-no-reply/">Follow up after a valuation or viewing</a></li><li><a href="/sales/a-simple-follow-up-system-without-a-crm/">A simple follow-up system without a CRM</a></li><li><a href="/estate-agents/">Estate agents: all the pages</a></li></ul></div></section>
 <section id="related"><h2>Related pages</h2><div class="prose"><ul class="links"><li><a href="/estate-agents/follow-up-after-valuation-or-viewing-no-reply/">Follow up after a valuation or viewing with no reply: what to send</a></li><li><a href="/estate-agents/staying-in-touch-with-old-leads/">Staying in touch with old leads: what to say after months of silence</a></li><li><a href="/estate-agents/lead-follow-up-schedule/">Estate agent lead follow-up schedule: what to send and when</a></li><li><a href="/estate-agents/">All pages: Estate agents</a></li><li><a href="/guides/">Free templates and guides</a></li><li><a href="/free/">Free samples</a></li></ul></div></section></div></main>

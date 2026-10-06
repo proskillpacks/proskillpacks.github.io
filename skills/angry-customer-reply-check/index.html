@@ -319,6 +319,8 @@ main a:focus-visible, main input:focus-visible, main select:focus-visible { outl
 .jump a:hover, .jump a:focus-visible { border-color: var(--pine); }
 .jump button.tog { font: inherit; font-size: 0.93rem; cursor: pointer; padding: 0.4rem 0.9rem; border: 1px solid var(--pine); background: #fff; color: var(--pine); border-radius: 999px; }
 .jump button.tog[aria-pressed="true"] { background: var(--pine); color: var(--cream); }
+@media (max-width: 40rem) { .jump { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 0.2rem; margin-right: -16px; padding-right: 16px; }
+  .jump::-webkit-scrollbar { display: none; } .jump > a, .jump > .frow { flex: none; white-space: nowrap; } }
 .jump i { font-style: normal; color: var(--slate); margin-left: 0.2rem; }
 .sr { position: absolute; left: -9999px; }
 .hsearch { margin: 1.6rem 0 0; max-width: 40rem; }
@@ -1093,14 +1095,18 @@ details.evb2[open] > summary { margin-bottom: 0.7rem; }
 .pc .ba2 ul { padding-left: 1.1rem; }
 @media (max-width: 40rem) { .pc .ba2 { grid-template-columns: 1fr; } }
 
-.srun { margin: 0 0 2.2rem; } .srun .sr-fig { margin: 0.6rem 0 0.8rem; max-width: 720px; }
+.srun { margin: 0 0 2.2rem; } .srun .sr-fig { margin: 0.6rem 0 0.8rem; max-width: 520px; } .srun .sr-box { position: relative; }
+.srun .sr-play { position: absolute; left: 50%; top: 0.7rem; transform: translateX(-50%); white-space: nowrap; font: inherit; font-weight: 700; cursor: pointer; padding: 0.55rem 1.1rem; border-radius: 999px; border: 0; background: var(--lime); color: var(--pine); box-shadow: 0 2px 8px rgba(0,0,0,.3); }
 .srun .sr-fig img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 10px; }
 .srun .sr-fig figcaption { font-size: 0.88rem; color: var(--slate); margin-top: 0.4rem; }
 .srun details.sr-full { max-width: 720px; margin: 0.4rem 0 0; }
 .srun details.sr-full summary { cursor: pointer; font-weight: 700; }
 .srun .sr-txt { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.95rem; line-height: 1.5; background: #fff; border: 1px solid var(--rule); border-radius: 10px; padding: 0.9rem 1.1rem; margin-top: 0.5rem; }
-.srsm { margin: 1rem 0 0.4rem; max-width: 360px; } .srsm img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 8px; }
-.srsm a.srl { display: inline-block; margin-top: 0.3rem; font-weight: 700; }
+.srsm { margin: 0.8rem 0 0.2rem; } .srsm a.srl { font-weight: 700; }
+
+.gtk2 { margin: 0 0 2.2rem; } .gtk2 .prose p { max-width: 46rem; }
+.hero.pc .buyb .pcsure.proofline { margin: 0.9rem 0 0; }
+.hero.pc .buyb { padding-bottom: 1.1rem; }
 
 .seewhat { margin: 1.5rem 0; }
 .privnote { background: #f4f7f3; border: 1px solid var(--rule); border-radius: 10px; padding: 0.7rem 1rem; margin: 0 0 0.8rem; max-width: 46rem; }
@@ -1213,7 +1219,7 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
 <section><h2>Before and after</h2><div class="prose"><blockquote><p><strong>Before:</strong> Draft: &quot;Unfortunately we regret any inconvenience. As per our policy, delivery times are estimates and not guaranteed, so you should have allowed more time. We will send you a full refund and a free replacement kettle within 24 hours.&quot;</p>
 <p><strong>After (real output, from a real test run):</strong> Test run on a complaint and a draft we wrote, with a short policy. Verdict, unedited: &quot;Hold and decide first. The draft promises a full refund and a free replacement, and the policy lets a support agent offer neither.&quot; It found the one thing the policy did allow, the 7.99 express refund, which the draft left out, quoted the blame phrases, and wrote a repaired reply with [DECIDE] markers for the refund timing and the team lead&#x27;s approval.</p></blockquote></div></section>
 <section><h2>What it does</h2><div class="prose"><p>Give it the customer&#x27;s message, your draft reply and your policy. It lists what the customer raised and whether the draft answers it, tests every promise against your policy, checks the facts, flags blame, defensive phrases and empty apologies with your exact words, checks there is a next step, and returns a repaired draft. Open decisions are marked [DECIDE]. It never adds a refund or timeline you did not give it.</p></div></section>
-<section class="ev" id="evidence"><h2>The evidence</h2><p>1 run on a complaint, draft and policy we wrote (Claude Sonnet).</p><p class="evlink"><a href="/how-we-test/">Read the full test</a></p></section>
+<section class="ev" id="evidence"><h2>The evidence</h2><p>1 run on a complaint, draft and policy we wrote (Claude).</p><p class="evlink"><a href="/how-we-test/">Read the full test</a></p></section>
 <section><h2>Limits</h2><div class="prose"><ul><li>It checks the draft against the policy you give it. With no policy it marks promises &quot;not checked&quot;.</li><li>It does not decide refunds or know your approvals.</li><li>It does not give legal advice. If a customer mentions harm, legal action or a regulator, get advice.</li><li>It repairs wording. It will not make a bad outcome a good one.</li></ul></div></section>
 <section class="faq" id="questions"><h2>Questions</h2><details><summary>Questions or a problem?</summary><div><p>Use <a href="/contact/">the contact page</a>.</p><p><a href="/contact/">Contact page</a></p></div></details><details><summary>Which assistants does it work with?</summary><div><p>Works in ChatGPT or any chatbot: you paste in your details and it writes the result.</p></div></details><details><summary>For technical users</summary><div><div class="tl"><p><b>Using it with an AI assistant</b></p><ol><li>Run <code>npx skills add proskillpacks/skills</code> in your project and pick this skill. Or copy the <code>angry-customer-reply-check</code> folder from GitHub (https://github.com/proskillpacks/skills/tree/main/skills/support/angry-customer-reply-check).</li><li>Put the <code>angry-customer-reply-check</code> folder where your assistant looks for skills. The generic path is <code>.agents/skills/</code> (or <code>npx skills add</code> from a folder). Tool-specific paths:<ul><li>Claude Code: <code>~/.claude/skills/</code> (or <code>.claude/skills/</code> inside one project)</li><li>OpenAI Codex, Gemini CLI, Cursor and others: <code>.agents/skills/</code> or the skills folder their docs name</li><li>claude.ai: zip the skill folder yourself, then Customize, Skills, the plus button, Create skill, Upload a skill (code execution must be on in Settings, Capabilities)</li><li>ChatGPT or any chatbot: open the skill&#x27;s <code>prompt.md</code>, paste it into the chat, then paste your own text or link</li><li>Steps for each tool, with links to its official docs: <a href="/guides/how-to-install-agent-skills/">how to install skills</a></li></ul></li><li>Ask for the job in plain words, for example: &quot;Check my draft reply to this customer complaint. My policy is below.&quot;. The skill loads by itself.</li></ol></div></div></details></section>
 <section class="endcta"><a class="btn btn-pine" href="/prompts/angry-customer-reply-check/">Copy the text for ChatGPT or any chatbot</a></section>
