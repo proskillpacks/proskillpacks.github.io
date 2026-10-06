@@ -59,7 +59,7 @@
 
 ## Short-term rental hosts
 - [Reply to a bad guest review without making it worse](https://proskillpacks.github.io/skills/guest-review-reply/) ($15): A guest review in, a true public reply, a private message and a to-do list.
-- [Run your holiday let listing: six workflows](https://proskillpacks.github.io/packs/host-ops-pack/) ($29): Your listing and reviews in, six tools built from your own facts.
+- [Host desk: all six tools](https://proskillpacks.github.io/packs/host-ops-pack/) ($29): Your listing and reviews in, six tools built from your own facts.
 - [Rewrite your holiday let listing](https://proskillpacks.github.io/skills/listing-rewriter/) ($5): Your listing text in, three titles and a description from your own facts.
 
 ## Marketers and agencies
