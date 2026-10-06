@@ -79,6 +79,7 @@
 ## Job seekers and careers
 - [Candidate Submission Write-up](https://proskillpacks.github.io/skills/candidate-submission-write-up/) ($19): Write the client submission for a candidate, claiming only what the call showed.
 - [Read a job post for what the job really is](https://proskillpacks.github.io/skills/job-post-decoder/) (Free): A job post in, what is firm, what is wishful and what to ask.
+- [Recruiter BD Brief](https://proskillpacks.github.io/skills/recruiter-bd-brief/) ($19): Get a one-page brief on a company and a short first email to its hiring manager.
 
 ## Sales and outreach
 - [After-Call Follow-Up](https://proskillpacks.github.io/skills/after-call-follow-up/) ($19): Turn your sales call notes into the follow-up you would actually send.

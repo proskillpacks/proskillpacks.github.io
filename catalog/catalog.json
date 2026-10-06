@@ -24,8 +24,8 @@
    "includes": []
   },
   {
-   "id": "candidate-submission-write-up",
-   "title": "Candidate Submission Write-up",
+   "id": "recruiter-bd-brief",
+   "title": "Recruiter BD Brief",
    "kind": "Single skill",
    "type": "single",
    "category": "careers",
@@ -33,17 +33,17 @@
    "price_usd": 19,
    "price_label": "$19",
    "free": false,
-   "url": "/skills/candidate-submission-write-up/",
-   "buy_url": "https://proskillpacks.gumroad.com/l/candidate-submission-write-up",
-   "summary": "Write the client submission for a candidate, claiming only what the call showed.",
-   "give": "Paste the client's job spec, the candidate's CV and your screening-call notes with the name removed.",
-   "get": "A client write-up with a headline fit, each must-have marked SHOWN, CLAIMED, NOT MET or NOT DISCUSSED with the quoted source line, pay and notice exactly as stated, availability and one honest concern, plus a short summary for the candidate and a check list for you. Works as a SKILL.md and as a paste-in prompt for ChatGPT.",
+   "url": "/skills/recruiter-bd-brief/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/recruiter-bd-brief",
+   "summary": "Get a one-page brief on a company and a short first email to its hiring manager.",
+   "give": "A company and the desk you place, for example finance roles in Manchester.",
+   "get": "A one-page brief built from pages it actually opened: what they do, recent news, open roles and hiring signals, the hiring manager only if a page names one, and what to find out before you write. Every line has a quote and a link, or says not found. Then a first email of 80 words or fewer that cites one real fact and offers one low-pressure thing.",
    "jobs": [
-    "hire",
-    "write docs"
+    "sell",
+    "research"
    ],
    "tags": [],
-   "tested": "2 invented cases (one clean, one with a CV that claims more than the call showed), each run on Claude Sonnet and gpt-5.6-luna, every output read against its sources. Fixed once and re-run. Not tested on real client work.",
+   "tested": "2 real public company sites (one clear, one small firm with a thin site), each run on Claude Sonnet and gpt-5.6-luna with the page text pasted in, every quote checked word for word against the pages. Fixed once and re-run. Not tested on live browsing in ChatGPT, and no email has been sent to a real hiring manager.",
    "includes": []
   },
   {
@@ -408,6 +408,29 @@
    ],
    "tags": [],
    "tested": "Tested on 4 real public listings. Final Claude Sonnet scores: 9, 8.5, 9 and 8.5 out of 10.",
+   "includes": []
+  },
+  {
+   "id": "candidate-submission-write-up",
+   "title": "Candidate Submission Write-up",
+   "kind": "Single skill",
+   "type": "single",
+   "category": "careers",
+   "category_name": "Job seekers and careers",
+   "price_usd": 19,
+   "price_label": "$19",
+   "free": false,
+   "url": "/skills/candidate-submission-write-up/",
+   "buy_url": "https://proskillpacks.gumroad.com/l/candidate-submission-write-up",
+   "summary": "Write the client submission for a candidate, claiming only what the call showed.",
+   "give": "Paste the client's job spec, the candidate's CV and your screening-call notes with the name removed.",
+   "get": "A client write-up with a headline fit, each must-have marked SHOWN, CLAIMED, NOT MET or NOT DISCUSSED with the quoted source line, pay and notice exactly as stated, availability and one honest concern, plus a short summary for the candidate and a check list for you. Works as a SKILL.md and as a paste-in prompt for ChatGPT.",
+   "jobs": [
+    "hire",
+    "write docs"
+   ],
+   "tags": [],
+   "tested": "2 invented cases (one clean, one with a CV that claims more than the call showed), each run on Claude Sonnet and gpt-5.6-luna, every output read against its sources. Fixed once and re-run. Not tested on real client work.",
    "includes": []
   },
   {
