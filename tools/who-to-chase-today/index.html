@@ -51,7 +51,23 @@
     "name": "Does anything I type leave my browser?",
     "acceptedAnswer": {
      "@type": "Answer",
-     "text": "No. The list is worked out by a script that runs on this page. Nothing is sent to us or anyone else, nothing is saved, and when you close the tab it is gone. The site counts page visits with counter.dev; it does not see what you type."
+     "text": "No. The list is worked out by a script that runs on this page. Nothing is sent to us or anyone else. If you tick Keep my list on this device, a copy is saved in this browser on this device only, and Forget my list deletes it. If you do not tick it, nothing is saved and the list is gone when you close the tab. The site counts page visits with counter.dev; it does not see what you type."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Will it remember my list tomorrow?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Only if you ask it to. Tick Keep my list on this device and the list is saved in this browser, on this device, and shown again the next time you open the page. Tick Done today on a person you have chased and their last contact becomes today, so tomorrow's list is right without editing. Forget my list removes the saved copy."
+    }
+   },
+   {
+    "@type": "Question",
+    "name": "Can I move my list into the spreadsheet?",
+    "acceptedAnswer": {
+     "@type": "Answer",
+     "text": "Yes. Download my list as CSV gives you the columns of the Chase list tab in the follow-up desk spreadsheet, with dates written as 2026-10-07 so Excel and Google Sheets read them."
     }
    },
    {
@@ -716,6 +732,13 @@ details.usingai summary { cursor: pointer; font-weight: 800; padding: 0.8rem 0; 
 .ct-out li .nx { font-weight: 700; }
 .ct-out .none { color: var(--slate); }
 .ct-out .acts { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0.8rem 0 0; }
+.ct .keep { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; align-items: center; margin: 0.9rem 0 1rem; }
+.ct .keep .chk { font-size: 0.95rem; font-weight: 700; color: var(--ink); }
+.ct .keep small { flex-basis: 100%; color: var(--slate); font-size: 0.86rem; }
+.ct-out li .dn { margin: 0.5rem 0 0; font-size: 0.9rem; }
+.ct-out li.done { opacity: 0.65; border-left-color: #b9c4bd; }
+.ct-out li.done b { text-decoration: line-through; }
+.ct-out .bm { margin-top: 0.8rem; }
 .ct-next { background: #eef7e0; border: 1px solid #cfe3a6; border-radius: 14px; padding: 1.1rem 1.2rem; margin: 1.6rem 0 0; max-width: 52rem; }
 .ct-next h2 { margin: 0 0 0.4rem; font-size: 1.3rem; }
 .ct-next p { margin: 0 0 0.8rem; }
@@ -1169,9 +1192,11 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
 <p class="sub">Try a sample first, or paste your own.</p>
 <div class="ct-samples"><span>Sample list:</span><button type="button" class="btn btn-lime sm" data-sample="agent">Estate agent</button><button type="button" class="btn btn-lime sm" data-sample="recruiter">Recruiter</button><button type="button" class="btn btn-lime sm" data-sample="sales">Sales</button><button type="button" class="btn btn-line-d sm" id="ct-clear">Clear</button></div>
 <p class="hint" id="ct-sampnote" hidden></p>
-<div class="ct-card">
+<div class="ct-card" id="ct-card">
 <label for="ct-text">One person per row. Paste from Excel or Google Sheets, or type with commas.</label>
 <textarea id="ct-text" spellcheck="false" placeholder="Name, Stage, Last contact, Who owes, What was promised, By when&#10;Margaret Ellison, Past client, 14 Jun 2026&#10;Liam Doran, Lead, 2 Oct, Me, comparable lettings figures, 5 Oct"></textarea>
+<div class="keep"><label class="chk"><input type="checkbox" id="ct-keep"> Keep my list on this device</label><button type="button" class="btn btn-line-d sm" id="ct-forget">Forget my list</button>
+<small id="ct-keepnote" role="status">Saved in this browser only, on this device. Nothing is sent anywhere. Off unless you tick it.</small></div>
 <details><summary>Which columns?</summary><p class="hint">With headings in the first row, I match them by name (Name, Stage, Last contact, Who owes, What was promised, By when, Don't chase before, Do not contact). Without headings, I read the columns in that order. Only the name, the stage and the last contact date matter to start with.</p>
 <p class="hint"><b>Who owes</b>: Me (you owe them something), Them (they promised something) or Booked (a call or meeting is in the diary). <b>Don't chase before</b>: for "call me after the 30th". <b>Do not contact</b>: type Y and they never show up. Dates: 7 Oct, 7 October 2026, 2026-10-07 or 7/10/2026 (day first).</p></details>
 <details><summary>Add one person by hand</summary>
@@ -1201,11 +1226,11 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
 <p class="err" id="ct-err" role="alert" hidden></p>
 </div>
 <noscript><p class="note-light">This tool needs JavaScript. The rules it follows are written out below.</p></noscript>
-<p class="hint">Nothing you type leaves your browser. It is not sent, saved or counted. There is no AI in this tool.</p>
+<p class="hint">Nothing you type leaves your browser. It is not sent or counted. It is saved on this device only if you tick Keep my list on this device. There is no AI in this tool.</p>
 <div class="ct-out" id="ct-out" aria-live="polite" hidden></div>
 </section>
-<section id="next"><div class="ct-next"><h2>Want it to remember?</h2>
-<p><b>Get the full desk free:</b> the spreadsheet for Excel or Google Sheets that remembers who you chased, plus a prompt that drafts each message from your notes.</p>
+<section id="next"><div class="ct-next"><h2>Want the full desk?</h2>
+<p><b>Get the full desk free:</b> the spreadsheet for Excel or Google Sheets that keeps the history of who you chased and what you said, plus a prompt that drafts each message from your notes.</p>
 <div class="cta"><a class="btn btn-lime" href="/go/buy/follow-up-desk/">Get the full desk free</a><a href="/free/follow-up-desk/">What is in it</a></div></div></section>
 <section id="rules"><h2>How it decides</h2><div class="prose">
 <p>The same rules as the follow-up desk spreadsheet, checked against it on nine example lists. First match wins, top to bottom:</p>
@@ -1226,8 +1251,8 @@ h1, .lead, .sub, .prose, .assure, .fb-note, .two, .ogline, .psb, .evb, .v9brand,
 <p>What to write once someone is due: <a href="/estate-agents/follow-up-with-past-clients-without-being-salesy/">past clients</a>, <a href="/estate-agents/staying-in-touch-with-old-leads/">old leads</a>, <a href="/recruiters/chasing-client-feedback-after-submitting-a-candidate/">client feedback after a submission</a>, <a href="/recruiters/follow-up-with-a-candidate-who-went-quiet/">a quiet candidate</a>, <a href="/sales/following-up-on-a-quote-with-no-reply/">a quote with no reply</a>.</p></div></section>
 <section id="tested"><h2>Checked against nine lists</h2><div class="prose"><p>We took nine made-up but realistic lists (three each for sales, recruiting and estate agency, 44 people who were due in all). This page and the spreadsheet were given the same lists. Both found all 44, chased nobody wrongly, and gave the same order and the same reason for each person.</p>
 <p>The rules were built from those same lists, so this shows the page does what the sheet does, not that the rules will fit your list. Nobody outside our own testing has used it yet.</p>
-<p><b>Limits.</b> Public holidays count as working days. The page does not read your notes: you say who promised what. It does not remember anything once you close the tab. The spreadsheet does.</p></div></section>
-<section id="faq"><h2>Questions people ask</h2><div class="prose fdp"><details class="faq"><summary>Does anything I type leave my browser?</summary><p>No. The list is worked out by a script that runs on this page. Nothing is sent to us or anyone else, nothing is saved, and when you close the tab it is gone. The site counts page visits with counter.dev; it does not see what you type.</p></details><details class="faq"><summary>Do I need AI for this?</summary><p>No. There is no AI in this tool. It follows fixed rules, so the same list gives the same answer every day.</p></details><details class="faq"><summary>What date formats work?</summary><p>7 Oct, 7 October 2026, 2026-10-07, 7/10/2026 (day first) and 7.10.26. A date without a year gets this year. If a date cannot be read, the row goes under Fix these first.</p></details><details class="faq"><summary>How does it decide who to chase?</summary><p>In this order: someone you must not contact is never chased. A date you set (not before the 20th) keeps them off the list until then. What you owe them comes first. Then what they promised, once the date has passed with nothing since. Then a date you set that has come. Last, people who have been quiet longer than the wait for their stage.</p></details><details class="faq"><summary>What are the waits?</summary><p>The number of working days of silence before someone comes up, for each stage. Pick your work under Your rules and the usual waits are filled in. Change any of them, add your own stages, or count calendar days instead.</p></details><details class="faq"><summary>Why is someone not on the list?</summary><p>Each person in Not yet shows the next date and the reason. People left alone on purpose (do not contact, closed deals, stages you never chase) are listed under Left alone.</p></details></div></section>
+<p><b>Limits.</b> Public holidays count as working days. The page does not read your notes: you say who promised what. It keeps your list only if you tick Keep my list on this device, and only in that browser. It does not keep the history of what you sent. The spreadsheet does.</p></div></section>
+<section id="faq"><h2>Questions people ask</h2><div class="prose fdp"><details class="faq"><summary>Does anything I type leave my browser?</summary><p>No. The list is worked out by a script that runs on this page. Nothing is sent to us or anyone else. If you tick Keep my list on this device, a copy is saved in this browser on this device only, and Forget my list deletes it. If you do not tick it, nothing is saved and the list is gone when you close the tab. The site counts page visits with counter.dev; it does not see what you type.</p></details><details class="faq"><summary>Will it remember my list tomorrow?</summary><p>Only if you ask it to. Tick Keep my list on this device and the list is saved in this browser, on this device, and shown again the next time you open the page. Tick Done today on a person you have chased and their last contact becomes today, so tomorrow&#x27;s list is right without editing. Forget my list removes the saved copy.</p></details><details class="faq"><summary>Can I move my list into the spreadsheet?</summary><p>Yes. Download my list as CSV gives you the columns of the Chase list tab in the follow-up desk spreadsheet, with dates written as 2026-10-07 so Excel and Google Sheets read them.</p></details><details class="faq"><summary>Do I need AI for this?</summary><p>No. There is no AI in this tool. It follows fixed rules, so the same list gives the same answer every day.</p></details><details class="faq"><summary>What date formats work?</summary><p>7 Oct, 7 October 2026, 2026-10-07, 7/10/2026 (day first) and 7.10.26. A date without a year gets this year. If a date cannot be read, the row goes under Fix these first.</p></details><details class="faq"><summary>How does it decide who to chase?</summary><p>In this order: someone you must not contact is never chased. A date you set (not before the 20th) keeps them off the list until then. What you owe them comes first. Then what they promised, once the date has passed with nothing since. Then a date you set that has come. Last, people who have been quiet longer than the wait for their stage.</p></details><details class="faq"><summary>What are the waits?</summary><p>The number of working days of silence before someone comes up, for each stage. Pick your work under Your rules and the usual waits are filled in. Change any of them, add your own stages, or count calendar days instead.</p></details><details class="faq"><summary>Why is someone not on the list?</summary><p>Each person in Not yet shows the next date and the reason. People left alone on purpose (do not contact, closed deals, stages you never chase) are listed under Left alone.</p></details></div></section>
 <section><h2>More</h2><div class="prose"><ul class="links"><li><a href="/free/follow-up-desk/">The follow-up desk: what is in it and how it was tested</a></li><li><a href="/sales/">Sales emails you can copy</a></li><li><a href="/recruiters/">For recruiters</a></li></ul></div></section>
 </div></main>
 <script>/* Who to chase today: the same rules as the follow-up desk spreadsheet (products/follow-up-desk/build/build_sheets.py), in plain JavaScript.
@@ -1433,7 +1458,7 @@ var CHASE = (function () {
   var POSITIONAL = ['name', 'stage', 'last', 'owes', 'promise', 'by', 'hold', 'dnc', 'who', 'chases'];
 
   function parseText(text) {
-    var lines = String(text || '').split(/\r?\n/).filter(function (l) { return l.replace(/\s/g, '') !== ''; });
+    var lines = String(text || '').replace(/^\ufeff/, '').split(/\r?\n/).filter(function (l) { return l.replace(/\s/g, '') !== ''; });
     if (!lines.length) return { rows: [], header: false, columns: [] };
     var sep = lines[0].indexOf('\t') >= 0 || lines.some(function (l) { return l.indexOf('\t') >= 0; }) ? '\t'
       : (lines[0].indexOf('|') >= 0 ? '|' : (lines[0].indexOf(',') >= 0 ? ',' : (lines[0].indexOf(';') >= 0 ? ';' : ',')));
@@ -1450,11 +1475,69 @@ var CHASE = (function () {
       g.forEach(function (cell, i) { if (cols[i]) r[cols[i]] = cell; });
       rows.push(r);
     });
-    return { rows: rows, header: header, columns: cols };
+    return { rows: rows, header: header, columns: cols, grid: grid, sep: sep };
+  }
+
+  /* ---- editing the pasted text in place (the "Done today" tick) */
+  var LABEL = { name: 'Name', stage: 'Stage', last: 'Last contact', owes: 'Who owes', promise: 'What was promised', by: 'By when', hold: "Don't chase before", dnc: 'Do not contact', who: 'Who or what', chases: 'Chases so far' };
+  function joinLine(cells, sep) {
+    if (sep === '\t') return cells.join('\t');
+    if (sep === '|') return cells.join(' | ');
+    return cells.map(function (c) { return (c.indexOf('"') >= 0 || c.indexOf('\n') >= 0 || c.indexOf(sep) >= 0) ? '"' + c.replace(/"/g, '""') + '"' : c; }).join(sep);
+  }
+  /* Sets cells of data row `index` (0 = first person) in the pasted text. changes: {field: value}. Returns {text, old:{field: previous value}}.
+     A field with no column yet gets one: its usual place when there are no headings, or a new column at the end (with a heading) when there are. */
+  function editRow(text, index, changes) {
+    var P = parseText(text), grid = P.grid, cols = P.columns.slice(), off = P.header ? 1 : 0, g = grid[index + off], old = {};
+    if (!g) return { text: text, old: old };
+    Object.keys(changes).forEach(function (f) {
+      var i = cols.indexOf(f);
+      if (i < 0) {
+        if (P.header) { i = cols.length; cols.push(f); while (grid[0].length < i) grid[0].push(''); grid[0][i] = LABEL[f] || f; }
+        else i = POSITIONAL.indexOf(f);
+      }
+      while (g.length <= i) g.push('');
+      old[f] = g[i]; g[i] = changes[f];
+    });
+    return { text: grid.map(function (r) { return joinLine(r, P.sep); }).join('\n'), old: old };
+  }
+  /* What "Done today" changes for a row that came up as `code`: last contact becomes today (written the way the list already writes dates);
+     what you owed is cleared (you did it); a chase is counted for people who were quiet or late, if the list counts chases or stops after N. */
+  function doneChanges(row, code, today, countChases) {
+    var ch = {}, iso8601 = /^\d{4}-\d{2}-\d{2}/.test(String(row.last || '').trim());
+    ch.last = iso8601 ? iso(today) : fmt(today, true);
+    if (code === 'IOWE') { ch.owes = ''; ch.promise = ''; ch.by = ''; }
+    if ((code === 'SILENT' || code === 'THEYOWE') && countChases) { var n = parseInt(row.chases, 10); ch.chases = String((isNaN(n) ? 0 : n) + 1); }
+    return ch;
+  }
+  function markDone(text, index, code, today, countChases) {
+    var P = parseText(text), row = P.rows[index];
+    if (!row) return { text: text, old: {} };
+    return editRow(text, index, doneChanges(row, code, today, countChases));
+  }
+
+  /* ---- CSV in the column order of the desk spreadsheet's Chase list (columns A to O) */
+  var SHEET_HEAD = {
+    sales: ['Contact', 'Company and deal'], recruiter: ['Candidate or client', 'Role and company'], agent: ['Name', 'Property or history'], other: ['Name', 'Who or what']
+  };
+  var SHEET_REST = ['Stage', 'Last contact', 'Who owes? (Me / Them / Booked)', 'What was promised or booked', 'By when', "Don't chase before", 'Chases so far',
+    'Message to (who gets it)', 'How to reach (channel, time)', 'Notes', 'Do not contact? (Y)', 'Last message sent (date)', 'Last message (what it said)'];
+  function csvCell(v) { v = String(v == null ? '' : v); return /[",\r\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v; }
+  function toSheetCsv(rows, presetKey, today) {
+    var h = SHEET_HEAD[presetKey] || SHEET_HEAD.other, head = [h[0], h[1]].concat(SHEET_REST);
+    var day = function (raw, kind) { var r = dateFor(raw, today, kind); return r.bad ? String(raw).trim() : (r.v === null ? '' : iso(r.v)); };
+    var out = [head.map(csvCell).join(',')];
+    rows.forEach(function (r) {
+      if (!String(r.name || '').replace(/\s/g, '')) return;
+      var dnc = String(r.dnc || '').replace(/^\s+|\s+$/g, '').toUpperCase().charAt(0) === 'Y' ? 'Y' : '';
+      var ch = parseInt(r.chases, 10);
+      out.push([r.name, r.who, r.stage, day(r.last, 'past'), normOwes(r.owes), r.promise, day(r.by, 'future'), day(r.hold, 'future'), isNaN(ch) ? '' : ch, '', '', '', dnc, '', ''].map(csvCell).join(','));
+    });
+    return out.join('\r\n') + '\r\n';
   }
 
   return { PRESETS: PRESETS, parseDate: parseDate, dateFor: dateFor, networkdays: networkdays, workday: workday, fmt: fmt, fmtLong: fmtLong, iso: iso, ymd: ymd,
-    judge: judge, run: run, makeSettings: makeSettings, parseText: parseText, guessField: guessField, POSITIONAL: POSITIONAL };
+    judge: judge, run: run, editRow: editRow, markDone: markDone, doneChanges: doneChanges, toSheetCsv: toSheetCsv, makeSettings: makeSettings, parseText: parseText, guessField: guessField, POSITIONAL: POSITIONAL };
 })();
 if (typeof module !== 'undefined') module.exports = CHASE;
 
@@ -1474,20 +1557,30 @@ function readSet(){
   return {unit:UNIT.value,other:o,stop:isNaN(st)?null:st,waits:w};
 }
 function todayNum(){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(TODAY.value||'');return m?C.ymd(+m[1],+m[2]-1,+m[3]):null}
-function card(r,cls,extra){return '<li class="'+cls+'"><b>'+esc(r.name)+'</b>'+(r.stage?'<span class="stg">'+esc(r.stage)+'</span>':'')+extra+(r.who?'<p class="who">'+esc(r.who)+'</p>':'')+'</li>'}
-var lastText='';
+function card(r,cls,extra,done){return '<li class="'+cls+'"><b>'+esc(r.name)+'</b>'+(r.stage?'<span class="stg">'+esc(r.stage)+'</span>':'')+extra+(r.who?'<p class="who">'+esc(r.who)+'</p>':'')+(done?'<p class="dn"><label class="chk"><input type="checkbox" data-i="'+r.index+'" data-c="'+r.code+'"> <span>Done today</span></label></p>':'')+'</li>'}
+var lastText='',lastT=null,undo={},isSample=false,KEEP=$('ct-keep'),KN=$('ct-keepnote'),KEY='psp-chase-list-v1';
+function store(){try{return window.localStorage}catch(e){return null}}
+function keepNote(t){KN.textContent=t}
+function waitsNow(){var L=[];[].forEach.call(WB.querySelectorAll('tr'),function(tr){var i=tr.querySelectorAll('input');L.push([i[0].value,i[1].value])});return L}
+function save(){var s=store();if(!s||!KEEP.checked||isSample)return;
+  try{s.setItem(KEY,JSON.stringify({text:TXT.value,preset:PRE.value,unit:UNIT.value,other:OTHER.value,stop:STOP.value,waits:waitsNow(),saved:localToday()}))}
+  catch(e){KEEP.checked=false;keepNote('This browser would not let me save the list, so nothing is kept.')}}
+function loadSaved(){var s=store();if(!s)return null;try{var v=JSON.parse(s.getItem(KEY)||'null');return v&&typeof v.text==='string'?v:null}catch(e){return null}}
+function restore(v){PRE.value=C.PRESETS[v.preset]?v.preset:'agent';applyPreset(PRE.value);
+  if(v.unit==='working days'||v.unit==='calendar days')UNIT.value=v.unit;if(v.other)OTHER.value=v.other;STOP.value=v.stop||'';
+  if(v.waits&&v.waits.length){WB.innerHTML='';v.waits.forEach(function(w){waitRow(w[0],w[1])});stageList()}TXT.value=v.text}
 function run(){
   ERR.hidden=true;var t=todayNum();
   if(t===null){ERR.textContent="I cannot read today's date. Pick it in the box.";ERR.hidden=false;OUT.hidden=true;return}
   var P=C.parseText(TXT.value);
   if(!P.rows.length){ERR.textContent='Add at least one person: paste your list, type one in, or try a sample list.';ERR.hidden=false;OUT.hidden=true;return}
-  var R=C.run(P.rows,readSet(),t),h='';
+  var R=C.run(P.rows,readSet(),t),h='';lastT=t;undo={};
   var cols=P.columns.filter(function(c){return c}).map(function(c){return NAMES[c]});
   h+='<p class="sum">'+esc(C.fmtLong(t))+': '+R.today.length+' to chase, '+R.fix.length+' to fix first, '+R.notyet.length+' not yet.</p>';
   h+='<p class="sub">I read '+R.all.length+' '+(R.all.length===1?'person':'people')+(P.header?' using your headings':' with no headings, so in this order')+': '+esc(cols.join(', '))+'.</p>';
   h+='<h3>Chase today ('+R.today.length+')</h3>';
   if(R.today.length){h+='<p class="sub">What you owe comes first, then what they owe, then dates you set, then people gone quiet.</p><ol>';
-    R.today.forEach(function(r,i){h+=card(r,'today','<p>'+esc(r.why)+'</p>')});h+='</ol>'}
+    R.today.forEach(function(r,i){h+=card(r,'today','<p>'+esc(r.why)+'</p>',true)});h+='</ol><p class="sub" id="ct-donenote" hidden>Ticked people now have today as their last contact in your list above. Press the button again to see the list without them.</p>'}
   else h+='<p class="none">Nobody is due today.</p>';
   h+='<h3>Fix these first ('+R.fix.length+')</h3>';
   if(R.fix.length){h+='<p class="sub">The rules cannot time these until the date is there. Add it, then press the button again.</p><ul>';
@@ -1498,17 +1591,23 @@ function run(){
   else h+='<p class="none">Nobody is waiting on a date.</p>';
   if(R.left.length){h+='<details><summary>Left alone on purpose ('+R.left.length+')</summary><ul style="margin-top:0.6rem">';R.left.forEach(function(r){h+=card(r,'','<p>'+esc(r.why)+'</p>')});h+='</ul></details>'}
   lastText='Chase today, '+C.fmtLong(t)+'\n'+(R.today.length?R.today.map(function(r,i){return (i+1)+'. '+r.name+': '+r.why}).join('\n'):'Nobody is due today.');
-  if(navigator.clipboard&&R.today.length)h+='<div class="acts"><button type="button" class="btn btn-pine sm" id="ct-copy">Copy the chase list</button></div>';
+  h+='<div class="acts">'+(navigator.clipboard&&R.today.length?'<button type="button" class="btn btn-pine sm" id="ct-copy">Copy the chase list</button>':'')+'<button type="button" class="btn btn-line-d sm" id="ct-csv">Download my list as CSV</button></div>';
+  h+='<p class="hint">The CSV has the columns of the Chase list tab in the follow-up desk spreadsheet, so you can paste it in at A2.</p>';
+  h+='<p class="hint bm"><b>Bookmark this page to check every morning</b> (Ctrl+D, or Cmd+D on a Mac).'+(KEEP.checked?'':' Tick Keep my list on this device first, and your list will be waiting.')+'</p>';
   OUT.innerHTML=h;OUT.hidden=false;
+  var cv=$('ct-csv');cv.onclick=function(){T('csv');var P2=C.parseText(TXT.value),csv='\ufeff'+C.toSheetCsv(P2.rows,PRE.value,lastT),a=document.createElement('a');
+    a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));a.download='my-follow-up-list-'+localToday()+'.csv';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},500)};
   var c=$('ct-copy');if(c)c.onclick=function(){T('copy');navigator.clipboard.writeText(lastText).then(function(){c.textContent='Copied';setTimeout(function(){c.textContent='Copy the chase list'},1500)})};
 }
-function sample(k){var s=SAMPLES[k];PRE.value=s.preset;applyPreset(s.preset);TODAY.value=s.today;TXT.value=s.text;T('sample-'+k);run();
-  var n=$('ct-sampnote');n.textContent='Sample list. Today is set to '+C.fmtLong(todayNumOf(s.today))+' so the dates line up. Change it in the box below.';n.hidden=false;OUT.scrollIntoView({behavior:'smooth',block:'start'})}
+function sample(k,quiet){var s=SAMPLES[k];PRE.value=s.preset;applyPreset(s.preset);TODAY.value=s.today;TXT.value=s.text;isSample=true;
+  var n=$('ct-sampnote');n.textContent='Sample list. Today is set to '+C.fmtLong(todayNumOf(s.today))+' so the dates line up. Change it in the box below.';n.hidden=false;
+  if(KEEP.checked)keepNote('This is a sample, so it is not saved. Your kept list is untouched until you paste or type your own.');
+  if(quiet)return;T('sample-'+k);run();OUT.scrollIntoView({behavior:'smooth',block:'start'})}
 function todayNumOf(s){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(s);return C.ymd(+m[1],+m[2]-1,+m[3])}
 [].forEach.call(document.querySelectorAll('[data-sample]'),function(b){b.onclick=function(){sample(b.getAttribute('data-sample'))}});
-$('ct-clear').onclick=function(){TXT.value='';OUT.hidden=true;ERR.hidden=true;$('ct-sampnote').hidden=true;TODAY.value=localToday();TXT.focus()};
+$('ct-clear').onclick=function(){TXT.value='';isSample=false;save();OUT.hidden=true;ERR.hidden=true;$('ct-sampnote').hidden=true;TODAY.value=localToday();TXT.focus()};
 $('ct-go').onclick=function(){T('run');$('ct-sampnote').hidden=true;run()};
-PRE.onchange=function(){applyPreset(PRE.value);if(!OUT.hidden)run()};
+PRE.onchange=function(){applyPreset(PRE.value);save();if(!OUT.hidden)run()};
 $('ct-addstage').onclick=function(){waitRow('','5');WB.lastChild.querySelector('input').focus()};
 WB.addEventListener('input',stageList);
 $('ct-add').onclick=function(){
@@ -1524,7 +1623,30 @@ $('ct-add').onclick=function(){
   else TXT.value=TXT.value.replace(/\s+$/,'')+'\n'+line;
   ['f-name','f-stage','f-last','f-promise','f-by','f-hold'].forEach(function(i){$(i).value=''});$('f-owes').value='';$('f-dnc').checked=false;$('f-name').focus();T('add');run();
 };
+TXT.addEventListener('input',function(){var was=isSample;isSample=false;if(was&&KEEP.checked)keepNote('Kept in this browser on this device. Nothing is sent anywhere.');[].forEach.call(OUT.querySelectorAll('input[data-i]'),function(b){b.disabled=true});save()});
+$('ct-card').addEventListener('change',save);$('ct-card').addEventListener('input',function(e){if(e.target!==TXT)save()});
+OUT.addEventListener('change',function(ev){var b=ev.target;if(!b.getAttribute||b.getAttribute('data-i')===null)return;
+  var i=+b.getAttribute('data-i'),li=b.parentNode.parentNode.parentNode,sp=b.parentNode.querySelector('span'),dn=$('ct-donenote');
+  if(b.checked){var cc=readSet().stop!==null||C.parseText(TXT.value).columns.indexOf('chases')>=0,d=C.markDone(TXT.value,i,b.getAttribute('data-c'),lastT,cc);
+    undo[i]=d.old;TXT.value=d.text;li.classList.add('done');sp.textContent='Done today: last contact is now '+C.fmt(lastT,true)+'. Untick to undo.';if(dn)dn.hidden=false;T('done')}
+  else if(undo[i]){TXT.value=C.editRow(TXT.value,i,undo[i]).text;delete undo[i];li.classList.remove('done');sp.textContent='Done today';if(dn&&!OUT.querySelector('li.done'))dn.hidden=true}
+  save()});
+KEEP.onchange=function(){var s=store();
+  if(KEEP.checked){if(!s){KEEP.checked=false;keepNote('This browser does not allow saving here, so nothing is kept.');return}
+    if(isSample){keepNote('This is a sample, so nothing is saved yet. Paste or type your own list and it is kept.');return}
+    save();if(KEEP.checked)keepNote('Kept in this browser on this device. Nothing is sent anywhere. Next time you open this page, your list is here.');T('keep-on')}
+  else{try{s&&s.removeItem(KEY)}catch(e){}keepNote('Not kept. Nothing is saved on this device.');T('keep-off')}};
+$('ct-forget').onclick=function(){var s=store();try{s&&s.removeItem(KEY)}catch(e){}KEEP.checked=false;TXT.value='';isSample=false;OUT.hidden=true;ERR.hidden=true;$('ct-sampnote').hidden=true;
+  keepNote('Forgotten. Your list is deleted from this device and cleared from this page.');T('forget')};
 TODAY.value=localToday();PRE.value='agent';applyPreset('agent');
+var FOR={'estate-agents':['agent','for estate agents','For estate agents. Your past clients and old leads, and who to ring today. A sample list is loaded: replace it with yours.'],
+  'recruiters':['recruiter','for recruiters','For recruiters. Candidates and clients waiting on feedback, and who to chase today. A sample list is loaded: replace it with yours.'],
+  'sales':['sales','for people who sell','For people who sell. Deals and prospects gone quiet, and who to chase today. A sample list is loaded: replace it with yours.']};
+var fm=/[?&]for=([a-z-]+)/.exec(location.search),pf=fm&&FOR[fm[1]],sv=loadSaved();
+if(pf){var h1=document.querySelector('h1'),ld=document.querySelector('.lead'),sb=document.querySelector('#tool > .sub');
+  if(h1)h1.textContent=h1.textContent+' '+pf[1];document.title=document.title.replace('follow-up list','follow-up list '+pf[1]);if(sb)sb.textContent=pf[2]}
+if(sv){KEEP.checked=true;restore(sv);keepNote('Your kept list is back (saved '+(sv.saved||'earlier')+'). It never left this browser.');if(sv.text.replace(/\s/g,''))run()}
+else if(pf){sample(SAMPLES[pf[0]]?pf[0]:'agent',true)}
 })();
 </script>
 <footer class="sitefoot">
